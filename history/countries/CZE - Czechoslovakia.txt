@@ -1,0 +1,26 @@
+﻿capital = 9
+add_ideas={Neutral}
+
+recruit_character = CZE_edvard_benesh
+
+
+
+
+
+
+set_research_slots = 3
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1935.5.19"
+	election_frequency = 60
+	elections_allowed = yes
+}
+
+set_popularities = {
+	democratic = 65
+	neutrality = 20
+	fascism = 5
+	communism = 10
+}
+

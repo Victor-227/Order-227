@@ -1,0 +1,14 @@
+
+state={
+	id=267
+	name="STATE_267" # Kabul
+	manpower = 1
+	
+	state_category = pastoral
+	
+	history={}
+
+	provinces={
+		7916 7984 10737 10852 12769 
+	}
+}

@@ -1,0 +1,18 @@
+
+state={
+	id=1002
+	name="STATE_1002" 
+	manpower = 221318
+	resources={
+	}
+	state_category = rural
+	
+
+	history={}
+
+	provinces={
+		8031 1963 10828
+	}
+
+	local_supplies=0.0 
+}

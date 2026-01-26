@@ -1,0 +1,30 @@
+focus_tree = {
+	id = neutral_countries
+	
+	country = {
+		factor = 0
+        modifier = {
+            add= 2000
+            OR={tag=BLT
+                tag=IRE
+				tag=FIN 
+				tag=SWE
+				tag=DEN 
+				tag=AUS
+				tag=NOR
+				tag=POL
+				tag=CZE
+				tag=YUG
+				tag=POR
+				tag=ALB 
+				tag=GRE
+				tag=HOL
+				tag=BEL
+				tag=CHI
+            }
+        }
+	}
+	
+	default = no
+	reset_on_civilwar = no
+}

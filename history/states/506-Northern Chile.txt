@@ -1,0 +1,13 @@
+state = {
+	id = 506
+	name = "STATE_506" # Antofagasta
+	manpower = 1
+	
+	state_category = pastoral
+
+	history = {}
+
+	provinces = {
+		5146 5171 12994 13301 13302 13304
+	}
+}
