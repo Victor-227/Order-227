@@ -7,7 +7,7 @@ state = {
 
 	resources = {
 
-		coal = 8 #initial distribution
+ #initial distribution
 	}
 	
 	history = {

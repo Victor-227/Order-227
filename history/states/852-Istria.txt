@@ -7,7 +7,7 @@ state = {
 	state_category = town 
 
 	resources = {
-		coal = 2 #initial distribution
+ #initial distribution
 	}
 
 	history = {

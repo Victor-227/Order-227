@@ -1076,10 +1076,6 @@ focus_tree = {
 					type = industrial_complex
 					level = 3
 					instant_build = yes
-				}
-				add_resource = {
-					type = coal
-					amount = 8
 				}	
 			}
 		}
@@ -1099,10 +1095,6 @@ focus_tree = {
 					type = industrial_complex
 					level = 3
 					instant_build = yes
-				}
-				add_resource = {
-					type = coal
-					amount = 8
 				}	
 				set_state_flag = CAN_alberta_coal_towns_IC
 			}

@@ -4,7 +4,7 @@ state={
 	manpower = 474600
 
 	resources = {
-		coal = 1 #initial distribution
+ #initial distribution
 	}
 	
 	state_category = rural

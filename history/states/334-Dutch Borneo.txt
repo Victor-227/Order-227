@@ -7,7 +7,7 @@ state = {
 	resources = {
 		rubber = 75 # was: 138
 		oil = 5 # was: 10
-		coal = 2 #initial distribution
+ #initial distribution
 	}
 	
 	state_category = rural
