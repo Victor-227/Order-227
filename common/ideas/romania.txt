@@ -82,8 +82,8 @@ ideas = {
 			}
 
 			modifier = {
-				production_speed_bunker_factor = 0.2
-				production_speed_coastal_bunker_factor = 0.2
+				production_speed_arms_factory_factor = 0.10
+				army_defence_factor = 0.04
 			}
 		}
 
@@ -143,17 +143,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				OR = {
-					AND = {
-						POL = { has_country_flag = attempted_royal_takeover_in_ROM }
-						NOT = { has_government = neutrality }
-						has_country_flag = POL_non_michael_romania
-					}
-					AND = {
-						POL = { NOT = { has_country_flag = attempted_royal_takeover_in_ROM } }
-						has_government = neutrality
-					}
-				}			
+				
 			}
 
 			modifier = {
@@ -172,17 +162,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				OR = {
-					AND = {
-						POL = { has_country_flag = attempted_royal_takeover_in_ROM }
-						NOT = { has_government = neutrality }
-						has_country_flag = POL_non_michael_romania
-					}
-					AND = {
-						POL = { NOT = { has_country_flag = attempted_royal_takeover_in_ROM } }
-						has_government = neutrality
-					}
-				}
+				
 			}
 
 			modifier = {
@@ -201,17 +181,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				OR = {
-					AND = {
-						POL = { has_country_flag = attempted_royal_takeover_in_ROM }
-						NOT = { has_government = neutrality }
-						has_country_flag = POL_non_michael_romania
-					}
-					AND = {
-						POL = { NOT = { has_country_flag = attempted_royal_takeover_in_ROM } }
-						has_government = neutrality
-					}
-				}
+				
 			}
 
 			modifier = {
@@ -230,17 +200,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				OR = {
-					AND = {
-						POL = { has_country_flag = attempted_royal_takeover_in_ROM }
-						NOT = { has_government = neutrality }
-						has_country_flag = POL_non_michael_romania
-					}
-					AND = {
-						POL = { NOT = { has_country_flag = attempted_royal_takeover_in_ROM } }
-						has_government = neutrality
-					}
-				}			
+					
 			}
 
 			modifier = {
@@ -259,17 +219,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				OR = {
-					AND = {
-						POL = { has_country_flag = attempted_royal_takeover_in_ROM }
-						NOT = { has_government = neutrality }
-						has_country_flag = POL_non_michael_romania
-					}
-					AND = {
-						POL = { NOT = { has_country_flag = attempted_royal_takeover_in_ROM } }
-						has_government = neutrality
-					}
-				}
+				
 			}
 
 			modifier = {
@@ -287,22 +237,11 @@ ideas = {
 				original_tag = ROM
 			}
 
-			allowed_civil_war = {
-				OR = {
-					AND = {
-						POL = { has_country_flag = attempted_royal_takeover_in_ROM }
-						NOT = { has_government = neutrality }
-						has_country_flag = POL_non_michael_romania
-					}
-					AND = {
-						POL = { NOT = { has_country_flag = attempted_royal_takeover_in_ROM } }
-						has_government = neutrality
-					}
-				}
-			}
 			
 			modifier = {
-				neutrality_drift = 0.02
+				industrial_capacity_factory = 0.10
+				industrial_capacity_dockyard = 0.10
+				production_factory_max_efficiency_factor = 0.1
 			}
 		}
 
@@ -358,6 +297,7 @@ ideas = {
 			modifier = {
 				army_morale_factor = 0.1
 				conscription = 0.02
+				war_support_factor = 0.05
 			}
 		}
 
@@ -411,8 +351,10 @@ ideas = {
 			}
 			
 			modifier = {				
-				resistance_damage_to_garrison = -0.1
+				stability_weekly = 0.003
 				foreign_subversive_activites = -0.4
+				neutrality_drift = 0.01
+				
 			}
 		}
 
@@ -429,10 +371,11 @@ ideas = {
 			}
 			
 			modifier = {				
-				resistance_damage_to_garrison = -0.2 
+				war_support_factor = 0.10
 				foreign_subversive_activites = -0.2
-				army_core_attack_factor = 0.05
-				army_core_defence_factor = 0.05
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			
 			}
 		}
 
@@ -452,6 +395,9 @@ ideas = {
 			
 			modifier = {
 				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				stability_factor = 0.1
+				ideology
 			}
 		}
 
@@ -813,7 +759,9 @@ ideas = {
 
 			}
 			modifier = {
-				consumer_goods_factor = -0.15
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_factory_start_efficiency_factor = 0.10
 			}
 		}
 		
