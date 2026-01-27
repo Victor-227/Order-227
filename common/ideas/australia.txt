@@ -1,6 +1,10 @@
 ideas = {
 
 	country = {
+		AST_research_speed = {allowed = {always = yes}removal_cost = -1
+		picture = generic_air_bonus
+		modifier{research_speed_factor = 0.1}}
+	
 		AST_tank_bonus = {
 
 			allowed = {
@@ -24,22 +28,22 @@ ideas = {
 		}
 		AST_standard_gauge_railway = {
 
-			allowed = {
-				always = no
-			}
+    allowed = {
+        always = yes
+    }
 
-			allowed_civil_war = {
-				always = yes
-			}
+    allowed_civil_war = {
+        always = yes
+    }
 
-			removal_cost = -1
+    removal_cost = -1
+    
+    picture = generic_build_infrastructure
 
-			picture = generic_build_infrastructure
-
-			modifier = {
-				production_speed_rail_way_factor = 0.1
-			}
-		}
+    modifier = {
+        production_speed_infrastructure_factor = 0.1
+    }
+}
 		AST_great_depression_1 = {
 
 			allowed = {
@@ -223,12 +227,16 @@ ideas = {
 
 			picture = generic_production_bonus
 
-			modifier = {
-				conversion_cost_civ_to_mil_factor= -0.2
-			}
+			
 			
 			equipment_bonus = {
 				infantry_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+			equipment_bonus = {
+				artillery = {
 					build_cost_ic = -0.1
 					instant = yes
 				}
@@ -251,8 +259,7 @@ ideas = {
 			picture = ast_volunteer_defence_corps
 
 			modifier = {
-				drift_defence_factor = 0.25
-				foreign_subversive_activites = -0.50
+				conscription = 0.02
 			}
 		}
 
@@ -275,9 +282,7 @@ ideas = {
 			}
 
 			modifier = {
-				send_volunteer_divisions_required = -1
-				send_volunteers_tension = -0.5
-				send_volunteer_size = 1
+				experience_gain_army_factor = 0.15
 			}
 		}
 
@@ -296,9 +301,8 @@ ideas = {
 			picture = ast_classify_aliens
 
 			modifier = {
-				drift_defence_factor = 0.25
-				foreign_subversive_activites = -0.25
-				stability_factor = -0.05
+				
+				stability_factor = 0.10
 			}
 		}
 
