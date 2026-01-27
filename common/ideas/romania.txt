@@ -397,7 +397,6 @@ ideas = {
 				industrial_capacity_factory = 0.05
 				industrial_capacity_dockyard = 0.05
 				stability_factor = 0.1
-				ideology
 			}
 		}
 
@@ -408,9 +407,14 @@ ideas = {
 			allowed = {
 				original_tag = ROM
 			}
+
+			allowed_civil_war = {
+				has_government = democratic 
+			}				
+
 			
 			modifier = {
-				stability_factor = 0.15
+                stability_factor=0.15
 			}
 		}
 
@@ -764,8 +768,9 @@ ideas = {
 				production_factory_start_efficiency_factor = 0.10
 			}
 		}
+	}	
 		
-	}
+	
 	
 	tank_manufacturer = { 
 		
@@ -797,7 +802,7 @@ ideas = {
 				# heavily armored light tanks 7TP, weak vs air ,diesel powered
 			}
 		}
-
+	
 		ROM_leonidas_works = {
 			
 			picture = generic_tank_manufacturer_3
@@ -841,7 +846,8 @@ ideas = {
 				equipment_conversion_speed = 0.1
 			}
 		}
-	}
+	}	
+	
 
 	industrial_concern = {
 		
@@ -861,9 +867,7 @@ ideas = {
 			}
 			
 			traits = { industrial_concern }
-		}
-
-				
+		}	
 	}
 
 	naval_manufacturer = { 			
@@ -892,6 +896,7 @@ ideas = {
 			modifier = {
 			}
 		}
+	
 
 		ROM_coastal_defense_navy_designer = {
 			
@@ -968,7 +973,8 @@ ideas = {
 			modifier = {
 			}
 		}
-	}
+	}	
+	
 
 	materiel_manufacturer = {
 		
@@ -1157,6 +1163,7 @@ ideas = {
 				factor = 1
 			}
 		}
+	   	
 
 		ROM_iar = {
 			
