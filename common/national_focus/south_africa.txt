@@ -1,4 +1,4 @@
-﻿focus_tree = {
+focus_tree = {
 	id = south_african_focus
 	
 	country = {
@@ -60,8 +60,9 @@
 	focus = {
 		id = SAF_war_measures_act
 		icon = GFX_goal_generic_demand_territory
-		x = 1
-		y = 0
+		prerequisite = {focus = SAF_support_the_policy_of_appeasement focus = SAF_abandon_westminster}
+		x = 4
+		y = 1
 
 		cost = 10
 
@@ -71,8 +72,9 @@
 
 		available = {
 			OR = {
-				threat > 0.2
-				NOT = { has_government = democratic }
+				threat > 0.30
+				
+				
 			}
 		}
 		
@@ -80,25 +82,25 @@
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		cancel_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = yes
 	
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			add_political_power = 120
+			add_ideas = partial_economic_mobilisation
 		}
 	}
 
 	focus = {
 		id = SAF_emergency_workers
 		icon = GFX_goal_generic_production
-		prerequisite = { focus = SAF_war_measures_act }
-		x = -1
-		y = 1
+		prerequisite = { focus = SAF_support_the_policy_of_appeasement }
+		x = -4
+		y = 0
 		relative_position_id = SAF_war_measures_act
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -124,8 +126,8 @@
 	focus = {
 		id = SAF_cape_garrison_artillery
 		icon = GFX_goal_generic_fortify_city
-		prerequisite = { focus = SAF_emergency_workers }
-		x = -1
+		prerequisite = { focus = SAF_police_windhoek }
+		x = 0
 		y = 2
 		relative_position_id = SAF_war_measures_act
 
@@ -178,9 +180,11 @@
 	focus = {
 		id = SAF_reconstitute_the_cape_corps
 		icon = GFX_goal_generic_allies_build_infantry
-		prerequisite = { focus = SAF_cape_garrison_artillery}
-		x = -1
-		y = 4
+		prerequisite = { focus = SAF_cape_garrison_artillery }
+		prerequisite = {focus = SAF_support_nazification_of_south_west_africa}
+		
+		x = 1
+		y = 3
 		relative_position_id = SAF_war_measures_act
 
 		cost = 10
@@ -212,10 +216,10 @@
 	focus = {
 		id = SAF_expand_the_cape_corps
 		icon = GFX_goal_generic_demand_territory
-		prerequisite = { focus = SAF_reconstitute_the_cape_corps }
-		mutually_exclusive = { focus = SAF_outlaw_strikes }
-		x = 0
-		y = 5
+		prerequisite = { focus = SAF_suppress_the_stormjaers }
+	
+		x = -4
+		y = 3
 		relative_position_id = SAF_war_measures_act
 
 		cost = 10
@@ -244,10 +248,10 @@
 	focus = {
 		id = SAF_outlaw_strikes
 		icon = GFX_goal_generic_consumer_goods
-		prerequisite = { focus = SAF_work_for_all_poor }
-		mutually_exclusive = { focus = SAF_expand_the_cape_corps }
-		x = 2
-		y = 5
+		prerequisite = { focus = SAF_cape_garrison_artillery}
+		prerequisite = {focus = SAF_suppress_the_stormjaers}
+		x = -1
+		y = 3
 		relative_position_id = SAF_war_measures_act
 
 		cost = 10
@@ -286,10 +290,10 @@
 		id = SAF_support_the_policy_of_appeasement
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
 		mutually_exclusive = { focus = SAF_abandon_westminster }
-		x = 5
+		x = 0
 		y = 0
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -322,13 +326,12 @@
 	focus = {
 		id = SAF_csir
 		icon = GFX_goal_tfv_generic_tech_sharing
-		prerequisite = { focus = SAF_war_measures_act }
 		prerequisite = { focus = SAF_support_the_policy_of_appeasement }
-		x = -3
+		x = -2
 		y = 1
 		relative_position_id = SAF_support_the_policy_of_appeasement
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -348,6 +351,10 @@
         search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
+	    	add_ideas = {
+				SAF_University_of_cape
+				
+		}
 			SAF = {
    				modify_tech_sharing_bonus = {
          			id = commonwealth_research
@@ -360,9 +367,9 @@
 	focus = {
 		id = SAF_police_windhoek
 		icon = GFX_goal_generic_political_pressure
-		prerequisite = { focus = SAF_support_the_policy_of_appeasement }
-		x = -1
-		y = 1
+		prerequisite = { focus = SAF_war_measures_act}
+		x = 4
+		y = 2
 		relative_position_id = SAF_support_the_policy_of_appeasement
 
 		cost = 10
@@ -387,7 +394,7 @@
 		completion_reward = {			
 			swap_ideas = {
 				remove_idea = SAF_ossewabrandwag
-				add_idea = SAF_ossewabrandwag_2
+				
 			}
 			remove_opinion_modifier = { target = ENG modifier = SAF_anti_british_sentiment }
 		}
@@ -397,7 +404,7 @@
 		id = SAF_joint_air_training_scheme
 		icon = GFX_goal_generic_air_fighter2
 		prerequisite = { focus = SAF_csir }
-		x = -3
+		x = -2
 		y = 2
 		relative_position_id = SAF_support_the_policy_of_appeasement
 
@@ -420,7 +427,9 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = SAF_joint_air_training_scheme
+			complete_special_project = {
+				project = sp:sp_air_helicopter
+			}
 		}
 	}
 
@@ -428,11 +437,11 @@
 		id = SAF_desert_equipment
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = SAF_joint_air_training_scheme }
-		x = -4
+		x = -2
 		y = 3
 		relative_position_id = SAF_support_the_policy_of_appeasement
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -458,13 +467,13 @@
 	focus = {
 		id = SAF_suppress_the_stormjaers
 		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = SAF_joint_air_training_scheme }
-		prerequisite = { focus = SAF_police_windhoek }
-		x = -2
+		prerequisite = { focus = SAF_voortrekker_monument }
+	
+		x = 0
 		y = 3
 		relative_position_id = SAF_support_the_policy_of_appeasement
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2
@@ -491,10 +500,10 @@
 	focus = {
 		id = SAF_secure_interests_in_africa
 		icon = GFX_goal_tfv_saf_secure_interests_in_africa
-		prerequisite = { focus = SAF_suppress_the_stormjaers }
-		prerequisite = { focus = SAF_desert_equipment }
-		x = -3
-		y = 4
+		prerequisite = { focus = SAF_expand_the_cape_corps}
+		prerequisite = { focus = SAF_work_for_all_poor}
+		x = -1
+		y = 5
 		relative_position_id = SAF_support_the_policy_of_appeasement
 
 		cost = 10
@@ -503,11 +512,11 @@
 			factor = 0
 		}
 
-		available = {
-			NOT = { has_war_with = ENG }
-			ENG = { is_puppet = no }
-
+			available = {
+			date > 1939.1.1
+			has_war = yes
 		}
+		
 		
 		bypass = {
 
@@ -519,9 +528,12 @@
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
-		ENG = { custom_effect_tooltip = needs_approval 
-				country_event = tfv_south_africa.1
-				}
+
+
+				542 = { transfer_state_to = SAF }
+				545 = { transfer_state_to = SAF }
+				981 = { transfer_state_to = SAF }
+				771 = { transfer_state_to = SAF }
 		}
 	}
 
@@ -532,9 +544,9 @@
 	focus = {
 		id = SAF_native_laws_amendment_act
 		icon = GFX_goal_generic_forceful_treaty
-		prerequisite = { focus = SAF_police_windhoek focus = SAF_support_the_afrikaner_broederbond }
-		x = 0
-		y = 2
+		prerequisite = { focus = SAF_abandon_westminster}
+		x = 10
+		y = 1
 		relative_position_id = SAF_support_the_policy_of_appeasement
 
 		cost = 10
@@ -565,11 +577,11 @@
 		id = SAF_work_for_all_poor
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = SAF_native_laws_amendment_act }
-		x = 0
+		x = -2
 		y = 4
 		relative_position_id = SAF_support_the_policy_of_appeasement
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -589,11 +601,8 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = SAF_cheap_labor_1
-				add_idea = SAF_cheap_labor_2
+				add_ideas = SAF_cheap_labor_2
 			}
-		}
 	}
 
 	############################
@@ -604,7 +613,7 @@
 		id = SAF_abandon_westminster
 		icon = GFX_goal_tfv_sever_ties_with_uk
 		mutually_exclusive = { focus = SAF_support_the_policy_of_appeasement }
-		x = 10
+		x = 8
 		y = 0
 
 		cost = 10
@@ -667,7 +676,7 @@
 		}
 
 		available = {
-			NOT = { has_country_flag = britain_enforced_our_loyalty }
+		
 		}
 		
 		bypass = {
@@ -743,9 +752,9 @@
 	focus = {
 		id = SAF_celebrate_the_great_trek
 		icon = GFX_goal_generic_demand_territory
-		prerequisite = { focus = SAF_support_the_afrikaner_broederbond }
-		x = 1
-		y = 2
+		prerequisite = { focus = SAF_support_the_afrikaner_broederbond focus = SAF_native_laws_amendment_act }
+		x = 2
+		y = 1
 		relative_position_id = SAF_support_the_afrikaner_broederbond
 
 		cost = 10
@@ -775,12 +784,12 @@
 	focus = {
 		id = SAF_voortrekker_monument
 		icon = GFX_goal_generic_national_unity
-		prerequisite = { focus = SAF_native_laws_amendment_act focus = SAF_support_ossewabrandwag }
-		x = -1
+		prerequisite = { focus = SAF_emergency_workers }
+		x = 0
 		y = 2
-		relative_position_id = SAF_support_the_afrikaner_broederbond
+		relative_position_id = SAF_support_the_policy_of_appeasement
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -807,9 +816,9 @@
 		id = SAF_support_nazification_of_south_west_africa
 		icon = GFX_goal_generic_attack_allies
 		prerequisite = { focus = SAF_support_ossewabrandwag }
-		mutually_exclusive = { focus = SAF_south_africa_first }
+		
 		x = 0
-		y = 3
+		y = 2
 		relative_position_id = SAF_support_the_afrikaner_broederbond
 
 		cost = 10
@@ -823,15 +832,7 @@
 		}
 
 		available = {
-			fascism > 0.20
-			if = {
-				limit = { not = { has_government = fascism } }
-				compare_autonomy_state > autonomy_colony
-			}
-			if = {
-				limit = { has_government = fascism  }
-				compare_autonomy_state > autonomy_reichsprotectorate
-			}
+
 			controls_state = 541
 			controls_state = 893
 			controls_state = 894
@@ -915,9 +916,9 @@
 		id = SAF_south_africa_first
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = SAF_celebrate_the_great_trek }
-		mutually_exclusive = { focus = SAF_support_nazification_of_south_west_africa }
+		
 		x = 2
-		y = 3
+		y = 2
 		relative_position_id = SAF_support_the_afrikaner_broederbond
 
 		cost = 10
@@ -983,7 +984,8 @@
 	focus = {
 		id = SAF_support_the_german_coup
 		icon = GFX_goal_tfv_saf_support_german_coup
-		prerequisite = { focus = SAF_support_nazification_of_south_west_africa }
+		prerequisite = { focus = SAF_commemorate_the_battle_of_blood_river }
+		prerequisite = { focus = SAF_reclaim_boer_colonies }
 		x = 1
 		y = 4
 		relative_position_id = SAF_support_the_afrikaner_broederbond
@@ -1085,8 +1087,8 @@
 		id = SAF_reclaim_boer_colonies
 		icon = GFX_goal_generic_major_war
 		prerequisite = { focus = SAF_south_africa_first }
-		x = 3
-		y = 4
+		x = 2
+		y = 3
 		relative_position_id = SAF_support_the_afrikaner_broederbond
 
 		cost = 10
@@ -1121,9 +1123,8 @@
 		id = SAF_commemorate_the_battle_of_blood_river
 		icon = GFX_goal_generic_secret_weapon
 		prerequisite = { focus = SAF_support_nazification_of_south_west_africa }
-		prerequisite = { focus = SAF_voortrekker_monument }
-		x = -1
-		y = 4
+		x = 0
+		y = 3
 		relative_position_id = SAF_support_the_afrikaner_broederbond
 
 		cost = 10
@@ -1154,141 +1155,6 @@
 		}
 	}
 
-	focus = {
-		id = SAF_german_scientists
-		icon = GFX_goal_tfv_generic_tech_sharing
-		prerequisite = { focus = SAF_support_the_german_coup }
-		x = -2
-		y = 5
-		relative_position_id = SAF_support_the_afrikaner_broederbond
-		available = {
-			GER = { has_government = fascism }
-		}
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 4
-		}
-
-		available = {
-			
-			is_in_faction_with = GER
-			NOT = { has_country_flag = britain_enforced_our_loyalty }
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-        search_filters = { FOCUS_FILTER_RESEARCH }
-		
-		completion_reward = {
-			GER = { add_to_tech_sharing_group = axis_research }
-			add_to_tech_sharing_group = axis_research
-		}
-	}
-
-	focus = {
-		id = SAF_a_king_for_our_people
-		icon = GFX_goal_generic_propaganda
-		prerequisite = { focus = SAF_support_the_german_coup focus = SAF_south_africa_first }
-		x = 2
-		y = 5
-		relative_position_id = SAF_support_the_afrikaner_broederbond
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			custom_trigger_tooltip = {
-				NOT  = { ENG = { has_idea = ENG_king_edward } }
-				NOT = { ENG = { has_idea = ENG_king_edward_fascism } }
-				NOT = { ENG = { has_completed_focus = ENG_the_kings_party } }
-				ENG = { has_country_flag = ENG_king_died }
-				tooltip = SAF_a_king_for_our_people_trigger_tt					
-			}
-			NOT = { has_country_flag = britain_enforced_our_loyalty }
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-        search_filters = { FOCUS_FILTER_STABILITY }
-
-		completion_reward = {
-			add_ideas = SAF_king_edward
-		}
-	}
-
-
-	focus = {
-		id = SAF_support_axis_interests
-		icon = GFX_goal_generic_construct_infrastructure
-		prerequisite = { focus = SAF_support_the_german_coup }
-		x = 0
-		y = 5
-		relative_position_id = SAF_support_the_afrikaner_broederbond
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			controls_state = 542
-			controls_state = 545
-			controls_state = 546
-			NOT = { has_country_flag = britain_enforced_our_loyalty }
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-        search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-			custom_effect_tooltip = SAF_support_axis_interests_effect_tt
-			every_state = {
-				limit = {
-					is_controlled_by = ROOT
-					OR = {
-						state = 542
-						state = 545
-						state = 546
-						state = 540
-						state = 544
-						state = 896
-						state = 897
-						state = 295
-						state = 538
-						state = 718
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-	}
 
 	############################
 	### GO COMMUNIST SECTION ###
@@ -1297,13 +1163,13 @@
 	focus = {
 		id = SAF_anti_colonialist_crusade
 		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
-		prerequisite = { focus = SAF_burn_the_kings_portraits }
+		prerequisite = { focus = SAF_outlaw_strikes focus = SAF_reconstitute_the_cape_corps}
 		mutually_exclusive = { focus = SAF_join_comintern }
-		x = 2
-		y = 10
+		x = 4
+		y = 5
 		relative_position_id = SAF_support_the_policy_of_appeasement
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 34
@@ -1318,8 +1184,8 @@
 		}
 
 		available = {
-			is_subject = no
-			NOT = { has_country_flag = britain_enforced_our_loyalty }
+			date > 1940.1.1
+			has_war = yes
 		}
 		
 		bypass = {
@@ -1336,20 +1202,10 @@
         search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 
 		completion_reward = {
-			add_war_support = 0.1
-			ENG = { 
-					remove_from_faction = SAF
-					add_opinion_modifier = { target = SAF modifier = SAF_anti_colonialist_crusaders }
-			 }
-			FRA = { 
-			 		add_opinion_modifier = { target = SAF modifier = SAF_anti_colonialist_crusaders } 
-			 }
-			BEL = { 
-			 		add_opinion_modifier = { target = SAF modifier = SAF_anti_colonialist_crusaders } 
-			 }
-			POR = { 
-			 		add_opinion_modifier = { target = SAF modifier = SAF_anti_colonialist_crusaders } 
-			 }
+			add_war_support = 0.15
+          add_timed_idea = {idea = SAF_sweep_out_vermin 
+		  days = 180
+		  } 
 		}
 	}
 
@@ -1482,7 +1338,7 @@
 			add_tech_bonus = {
 				name = SAF_expand_the_mining_industry
 				bonus = 1.0
-				uses = 1
+				uses = 3
 				technology = excavation1
 				technology = excavation2
 				technology = excavation3
@@ -1532,7 +1388,7 @@
 	focus = {
 		id = SAF_infrastructure_effort
 		icon = GFX_goal_generic_construct_infrastructure
-		prerequisite = { focus = SAF_heavy_engineering focus = SAF_expand_the_mining_industry }
+		prerequisite = { focus = SAF_the_cape_defense_institute focus = SAF_heavy_engineering focus = SAF_expand_the_mining_industry }
 		x = 0
 		y = 2
 		relative_position_id = SAF_south_african_railways
@@ -1711,7 +1567,7 @@
 		y = 4
 		relative_position_id = SAF_south_african_railways
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -1760,7 +1616,7 @@
 		y = 4
 		relative_position_id = SAF_south_african_railways
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 15
@@ -2011,7 +1867,7 @@
 	focus = {
 		id = SAF__south_african_military_college
 		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = SAF_improve_the_three_oh_three focus = SAF_q_services_corps }
+		prerequisite = { focus = SAF_improve_the_three_oh_three focus = SAF_south_african_special_forces focus = SAF_equipment_effort}
 		x = 0
 		y = 6
 		relative_position_id = SAF_special_service_battalion
@@ -2195,7 +2051,7 @@
 	focus = {
 		id = SAF_south_african_special_forces
 		icon = GFX_goal_generic_special_forces
-		prerequisite = { focus = SAF_equipment_effort focus = SAF_sa_engineer_corps }
+		prerequisite = { focus = SAF_sa_engineer_corps }
 		x = 1
 		y = 5
 		relative_position_id = SAF_special_service_battalion
@@ -2234,7 +2090,7 @@
 	focus = {
 		id = SAF_armor_effort
 		icon = GFX_goal_generic_army_tanks
-		prerequisite = { focus = SAF_special_service_battalion focus = SAF_mechanization_effort }
+		prerequisite = { focus = SAF_special_service_battalion focus = SAF_mechanization_effort focus = SAF_q_services_corps}
 		x = 0
 		y = 2
 		relative_position_id = SAF_special_service_battalion
