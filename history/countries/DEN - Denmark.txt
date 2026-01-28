@@ -1,0 +1,22 @@
+﻿capital = 37
+add_ideas= {ai_nation_that_has_war}
+set_research_slots = 3
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	gw_artillery=1
+}	
+oob = "DEN_1936"
+set_politics = {
+		ruling_party = democratic
+		last_election = "1935.10.22"
+		election_frequency = 42
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = DEN_democratic_popularity
+		fascism = DEN_fascism_popularity
+		communism = DEN_communism_popularity
+		neutrality = DEN_neutrality_popularity
+}
+recruit_character = DEN_thorvald_stauning

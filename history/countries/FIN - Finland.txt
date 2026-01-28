@@ -1,0 +1,18 @@
+﻿capital = 111
+add_ideas= {ai_nation}
+recruit_character = FIN_pehr_evind_svinhufvud
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1931.3.2" #Represents Presidential elections (Country leader is President of the Republic, not Prime Minister)
+	election_frequency = 72
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 15
+	fascism = 19
+	communism = 1
+	neutrality = 65
+}
+set_research_slots = 3
+
+

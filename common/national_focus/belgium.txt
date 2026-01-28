@@ -7485,10 +7485,6 @@ focus = {
 					type = steel
 					amount = 8
 				}
-				add_resource = {
-					type = coal
-					amount = 18
-				}
 			}
 			add_tech_bonus = {
 				name = BEL_revive_coal_mining

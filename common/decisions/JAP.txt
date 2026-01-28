@@ -4507,125 +4507,7 @@ prospect_for_resources = {
 		}
 	}
 
-	# Develop Tunguska Coal Deposits
-	JAP_develop_tunguska_coal_deposits = { #516
-		icon = coal
-
-		highlight_states = {
- 			highlight_state_targets = {
-				state = 516
-			} 
-		}
-
-		allowed = {
-			original_tag = JAP
-		}
-
-		available = {
-			516 = {  }
-			has_tech = excavation1
-		}
-
-		visible = {
-			OR = {
-				has_completed_focus = JAP_establish_the_northern_resource_area
-				has_completed_focus = JAP_sea_establish_the_northern_resource_area
-				has_completed_focus = JAP_transformation_of_nature
-			}
-			516 = {
-				NOT = {
-					has_state_flag = tunguska_coal_developed
-				}
-			}
-		}
-
-		fire_only_once = no
-
-		cancel_trigger = {
-			516 = {  }
-		}
-
-		cost = 25
-		days_remove = 60
-
-		modifier = {
-			civilian_factory_use = 3
-		}
-
-		ai_will_do = {
-			base = 10
-		}
-
-		remove_effect = {
-			516 = {
-				add_resource = {
-					type = coal
-					amount = 26
-				}
-				set_state_flag = tunguska_coal_developed
-			}
-		}
-	}
-
-	# Develop Irkutsk Coal Deposits
-	JAP_develop_irkutsk_coal_deposits = { #566
-		icon = coal
-
-		highlight_states = {
- 			highlight_state_targets = {
-				state = 566
-			} 
-		}
-
-		allowed = {
-			original_tag = JAP
-		}
-
-		available = {
-			566 = {  }
-			has_tech = excavation1
-		}
-
-		visible = {
-			OR = {
-				has_completed_focus = JAP_establish_the_northern_resource_area
-				has_completed_focus = JAP_sea_establish_the_northern_resource_area
-				has_completed_focus = JAP_transformation_of_nature
-			}
-			566 = {
-				NOT = {
-					has_state_flag = irkutsk_coal_developed
-				}
-			}
-		}
-
-		fire_only_once = no
-
-		cancel_trigger = {
-			566 = {  }
-		}
-
-		cost = 25
-		days_remove = 60
-
-		modifier = {
-			civilian_factory_use = 3
-		}
-
-		ai_will_do = {
-			base = 10
-		}
-
-		remove_effect = {
-			566 = {
-				add_resource = {
-					type = coal
-					amount = 20
-				}
-				set_state_flag = irkutsk_coal_developed
-			}
-		}
-	}
+	
 
 
  ##  ##  #  # ### #  # ### ###  #  #     ###  ###  ##  ##  #  # ###   ##  ###      ##  ###  ###  ##  
@@ -14523,10 +14405,7 @@ JAP_west_pacific_treaty_org_allied_trade_cat = {
 								resource = chromium
 								amount > 14
 							}
-							has_resources_amount = {
-								resource = coal
-								amount > 14
-							}
+
 						}
 					}
 				}
@@ -14561,10 +14440,7 @@ JAP_west_pacific_treaty_org_allied_trade_cat = {
 								resource = chromium
 								amount > 24
 							}
-							has_resources_amount = {
-								resource = coal
-								amount > 24
-							}
+
 						}
 					}
 				}
@@ -14627,11 +14503,6 @@ JAP_west_pacific_treaty_org_allied_trade_cat = {
 						}
 						has_resources_amount = {
 							resource = chromium
-							amount > 9
-							delivered = yes
-						}
-						has_resources_amount = {
-							resource = coal
 							amount > 9
 							delivered = yes
 						}

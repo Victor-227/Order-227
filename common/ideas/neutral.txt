@@ -1,12 +1,22 @@
 ideas = {
     hidden_ideas = {
-        Neutral = {
+        ai_nation = {
+            name = "AI Nation"
             allowed = { always = yes }
             modifier={production_speed_buildings_factor = -1.0
-            consumer_goods_factor = 1.0
+            consumer_goods_expected_value = 1.0
             industrial_capacity_factory = -10.0
             research_speed_factor = -10.0
             conscription = -1.0
+            training_time_factor = 10.0}
+        }
+        ai_nation_that_has_war = {
+            name = "AI Nation With Troops"
+            allowed = { always = yes }
+            modifier={production_speed_buildings_factor = -1.0
+            consumer_goods_expected_value = 1.0
+            industrial_capacity_factory = -10.0
+            research_speed_factor = -10.0
             training_time_factor = 10.0}
         }
     }

@@ -4407,7 +4407,6 @@ focus_tree = {
 				JAP_add_or_modify_early_industrialization = yes
 				add_to_variable = { JAP_industry_consumer_goods_factor = -0.1 tooltip = consumer_goods_factor_tt }
 				add_to_variable = { JAP_industry_factory_energy_consumption = -0.05 tooltip = factory_energy_consumption_tt }
-				add_to_variable = { JAP_industry_local_resources_coal_factor = 0.05 tooltip = local_resources_coal_factor_tt }
 				add_to_variable = { JAP_industry_industrial_capacity_factory = 0.05 tooltip = industrial_capacity_factory_tt }
 			}
 
@@ -10881,16 +10880,16 @@ focus_tree = {
 				factor = 0 
 				OR = {
 					1036 = {
-						is_controlled_by_ROOT_or_subject = yes
+						
 					}
 					1037 = {
-						is_controlled_by_ROOT_or_subject = yes
+						
 					}
 					327 = {
-						is_controlled_by_ROOT_or_subject = yes
+						
 					}
 					285 = {
-						is_controlled_by_ROOT_or_subject = yes
+						
 					}
 				}
 			}
@@ -11870,12 +11869,7 @@ focus_tree = {
 					amount = 8
 				}
 			}
-			614 = {
-				add_resource = {
-					type = coal
-					amount = 12
-				}
-			}
+
 			602 = {
 				add_resource = {
 					type = tungsten
@@ -20980,12 +20974,7 @@ focus_tree = {
 					amount = 8
 				}
 			}
-			614 = {
-				add_resource = {
-					type = coal
-					amount = 12
-				}
-			}
+			
 			602 = {
 				add_resource = {
 					type = tungsten
@@ -24354,12 +24343,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			528 = {
-				add_resource = {
-					type = coal
-					amount = 25
-				}	
-			}	
+			
 			
 		}
 	}
@@ -25779,7 +25763,6 @@ focus_tree = {
 			JAP_add_or_modify_early_industrialization = yes
 
 			add_to_variable = { JAP_industry_factory_energy_consumption = -0.1 tooltip = factory_energy_consumption_tt }
-			add_to_variable = { JAP_industry_local_resources_coal_factor = 0.05 tooltip = local_resources_coal_factor_tt }
 		}
 
 	}
@@ -26279,12 +26262,7 @@ focus_tree = {
 			}
 		
 		
-			has_resources_in_collection = {
-				collection = collection:country_and_all_subjects
-				resource = coal
-				amount > 199
-				extracted = yes
-			}
+
 			
 		}
 
@@ -26793,10 +26771,7 @@ focus_tree = {
 					type = steel
 					amount = 6
 				}
-				add_resource = {
-					type = Coal
-					amount = 6
-				}
+				
 			}
 
 			IF = {

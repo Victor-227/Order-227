@@ -1,0 +1,22 @@
+﻿capital = 112
+add_ideas= {ai_nation}
+recruit_character = POR_antonio_de_oliveira_salazar
+
+
+set_research_slots = 3
+
+
+
+set_convoys = 50
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1933.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	fascism = 10
+	communism = 10
+	neutrality = 60
+	democratic = 20
+}
