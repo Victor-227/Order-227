@@ -1644,7 +1644,7 @@
 		y = 2
 		relative_position_id = AST_establish_advisory_war_council
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2075,7 +2075,7 @@
 		x = 25
 		y = 0
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2116,7 +2116,7 @@
 		completion_reward = {			
 			modify_tech_sharing_bonus = {
  				id = commonwealth_research
- 				bonus = 0.03
+ 				bonus = 0.05
 			}
 			ENG = {
 				add_opinion_modifier = {
@@ -2135,7 +2135,7 @@
 		x = -1
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2198,7 +2198,7 @@
 		y = 1
 		relative_position_id = AST_support_the_policy_of_appeasement
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 0.2
@@ -2254,7 +2254,7 @@
 		y = 2
 		relative_position_id = AST_support_the_policy_of_appeasement
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2281,10 +2281,7 @@
 
 		completion_reward = {
 			add_political_power = 120
-			add_autonomy_ratio = {
-				value = 0.1
-				localization = AST_adopt_westminster
-			}
+			
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = AST_arthur_calwell
 		}
@@ -2298,7 +2295,7 @@
 		y = 3
 		relative_position_id = AST_support_the_policy_of_appeasement
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -2342,7 +2339,7 @@
 		y = 3
 		relative_position_id = AST_support_the_policy_of_appeasement
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2360,10 +2357,10 @@
 					is_in_faction_with = ENG
 				}
 			}
-			336 = {
+			523 = {
 				controller = { is_in_faction_with = ROOT }
 			}
-			333 = {
+			979 = {
 				controller = { is_in_faction_with = ROOT }
 			}
 		}
@@ -2378,80 +2375,60 @@
 		search_filters = {  }
 
 		completion_reward = {
-			336 = {
+			523 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = 4329
+					level = 2
+					instant_build = yes
+				}
 				add_building_construction = {
 					type = air_base
-					level = 2
+					level = 7
 					instant_build = yes
 				}
 
 				#Fortify entire coastline
-				add_building_construction = {
-					type = bunker
-					province = {
-						all_provinces = yes
-						limit_to_coastal = yes
-					}
-					level = 2
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = coastal_bunker
-					province = {
-						all_provinces = yes
-						limit_to_coastal = yes
-					}
-					level = 2
-					instant_build = yes
-				}
+				
+				
 
 				#border inland bunker
 				add_building_construction = {
 					type = bunker
-					province = 4310
+					province = 4329
 					level = 2
 					instant_build = yes
 				}
 
 				#Extra fort on naval bases
-				add_building_construction = {
-					type = bunker
-					province = {
-						all_provinces = yes
-						limit_to_naval_base = yes
-					}
-					level = 2
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = coastal_bunker
-					province = {
-						all_provinces = yes
-						limit_to_naval_base = yes
-					}
-					level = 2
-					instant_build = yes
-				}
+				
 
 			}
 
-			333 = {
-				#Fortify entire coastline
+			979 = {
 				add_building_construction = {
 					type = bunker
-					province = {
-						all_provinces = yes
-						limit_to_coastal = yes
-					}
+					province = 12240
 					level = 2
 					instant_build = yes
 				}
 				add_building_construction = {
 					type = coastal_bunker
-					province = {
-						all_provinces = yes
-						limit_to_coastal = yes
-					}
+					province = 12240
+					level = 2
+					instant_build = yes
+				}
+
+				#Fortify entire coastline
+				add_building_construction = {
+					type = bunker
+					province = 12237
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					province = 12237
 					level = 2
 					instant_build = yes
 				}
@@ -2459,19 +2436,13 @@
 				#Extra fort on naval bases
 				add_building_construction = {
 					type = bunker
-					province = {
-						all_provinces = yes
-						limit_to_naval_base = yes
-					}
+					province = 12154
 					level = 2
 					instant_build = yes
 				}
 				add_building_construction = {
 					type = coastal_bunker
-					province = {
-						all_provinces = yes
-						limit_to_naval_base = yes
-					}
+					province = 12154
 					level = 2
 					instant_build = yes
 				}
@@ -2487,7 +2458,7 @@
 		y = 4
 		relative_position_id = AST_support_the_policy_of_appeasement
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2525,7 +2496,7 @@
 		y = 4
 		relative_position_id = AST_support_the_policy_of_appeasement
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1

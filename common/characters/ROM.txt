@@ -63,7 +63,11 @@ characters={
 				original_tag = ROM
 			}
 			traits = {
-				prince_of_terror 
+				man_of_steel 
+			}
+
+			available = {
+				has_completed_focus = ROM_empower_the_minister
 			}
 		}
 
@@ -110,7 +114,26 @@ characters={
 				large="GFX_Portrait_romania_petre_dumitrescu"
 				small="GFX_idea_ROM_petre_dumitrescu"
 			}
+			civilian={
+				large="GFX_Portrait_romania_petre_dumitrescu"
+			}
 		}
+		
+		advisor={
+			slot = army_chief
+			idea_token = ROM_petre_dumitrescu
+			allowed = {
+				original_tag = ROM
+			}
+			traits = {
+				army_chief_organizational_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
 		field_marshal={
 			traits={ logistics_wizard offensive_doctrine }
 			skill=4
@@ -234,8 +257,9 @@ characters={
 			}
 			civilian={
 				large="GFX_Portrait_romania_ion_antonescu"
-			}
+			}	
 		}
+
 		advisor={
 			slot = army_chief
 			idea_token = ROM_ion_antonescu
@@ -249,12 +273,16 @@ characters={
 			ai_will_do = {
 				factor = 1.000
 			}
+			available = {
+				has_completed_focus = ROM_appoint_german_friendly_government
+			}
 		}
+
 		
 		field_marshal={
-			traits={ brilliant_strategist }
+			traits={ brilliant_strategist organizer }
 			skill=5
-			attack_skill=7
+			attack_skill=6
 			defense_skill=4
 			planning_skill=4
 			logistics_skill=5

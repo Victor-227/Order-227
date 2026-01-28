@@ -360,6 +360,32 @@ ideas = {
 
 		ROM_iron_guard = {
 
+			picture = ROM_iron_guard
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+
+			}
+			
+			modifier = {			
+				political_power_gain = -0.20	
+				stability_weekly = -0.001
+				war_support_factor = 0.05
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			
+			}
+		}
+
+		ROM_iron_guard_2 = {
+
+			picture = ROM_iron_guard
+
 			removal_cost = -1
 			
 			allowed = {
@@ -371,8 +397,56 @@ ideas = {
 			}
 			
 			modifier = {				
+				political_power_gain = -0.1
+				stability_weekly = -0.001
 				war_support_factor = 0.10
-				foreign_subversive_activites = -0.2
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			
+			}
+		}
+
+		ROM_iron_guard_3 = {
+
+			picture = ROM_iron_guard
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+
+			}
+			
+			modifier = {				
+				political_power_gain = -0.3
+				war_support_factor = -0.15
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				stability_weekly = -0.003
+			
+			}
+		}
+
+		ROM_iron_guard_4 = {
+
+			picture = ROM_iron_guard
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+
+			}
+			
+			modifier = {				
+				political_power_gain = -0.5
+				war_support_factor = 0.5
 				army_core_attack_factor = 0.1
 				army_core_defence_factor = 0.1
 			

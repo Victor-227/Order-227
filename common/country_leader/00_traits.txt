@@ -8096,7 +8096,7 @@ leader_traits = {
 
 		resistance_damage_to_garrison = -0.25
 		fascism_drift = 0.1
-		army_attack_factor = 0.05
+		army_attack_factor = 0.08
 
 		ai_will_do = {
 			factor = 1
@@ -17628,5 +17628,9 @@ leader_traits = {
 			}
 		}
 	}
-
+	#Calinescu
+	man_of_steel = {
+		random = no
+		sprite = 13
+	}
 }

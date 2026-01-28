@@ -1638,5 +1638,10 @@ technologies = {
 				}
 			}
 		}
-	}	
+	}
+	fuel_refining = {}
+	fuel_refining2 = {}
+	fuel_refining3 = {}
+	oil_processing = {}
+	improved_oil_processing = {}	
 }
