@@ -63,13 +63,40 @@ ideas = {
 		picture=generic_goods_red_bonus
 		modifier = {
 			production_factory_start_efficiency_factor = 0.15
-		}}	
+		}
+		}	
 		FRA_growth= {
 			allowed={always=yes}
 			removal_cost=-1
 			picture=generic_goods_red_bonus
 			modifier={
 			production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+		FRA_foreign_guest_workers_1 = {
+			allowed={always=yes}
+			removal_cost = -1
+			picture=generic_goods_red_bonus
+			modifier = {
+				production_factory_max_efficiency_factor = 0.02
+			}
+		}
+		FRA_political_unity_1 = {
+			allowed={always=yes}
+			removal_cost = -1
+			picture=generic_goods_red_bonus
+			modifier = {
+                industrial_capacity_factory = 0.03
+				industrial_capacity_dockyard = 0.03
+			}
+		}
+		FRA_form_the_provisional_government_of_the_republic_2 = {
+			allowed={always=yes}
+			removal_cost = -1
+			picture=generic_goods_red_bonus
+			modifier = {
+              	army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
 			}
 		}
 		FRA_full_employment = {
@@ -431,7 +458,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.02
+				production_factory_efficiency_gain_factor = 0.05
 			}
 		}
 		FRA_constitutional_revision = {
@@ -1388,8 +1416,48 @@ ideas = {
 			picture = generic_wall_line
 			
 			modifier = {
-				max_planning = 0.25
+				max_planning = 0.1
 				planning_speed = -0.25
+			}
+		}
+		FRA_protected_by_the_maginot_line_1 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					OR = {
+						AND = {
+							has_government = democratic
+							GER = {
+								has_government = democratic
+							}
+						}
+						AND = {
+							has_government = communism
+							GER = {
+								has_government = communism
+							}
+						}
+						AND = {	
+							has_government = fascism
+							GER = {
+								has_government = fascism
+							}
+						}
+					}
+				}
+			}
+
+			removal_cost = -1
+
+			picture = generic_wall_line
+			
+			modifier = {
+				max_planning = 0.15
+				planning_speed = -0.15
 			}
 		}
 
