@@ -10146,7 +10146,7 @@ leader_traits = {
 		random = no
 		sprite = 13
 		production_speed_buildings_factor = 0.05
-		consumer_goods_factor = -0.1
+		consumer_goods_expected_value = -0.02
 	}
 
 	HUN_scholary_politician = {
