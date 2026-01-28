@@ -131,7 +131,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = SAF_war_measures_act
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -161,7 +161,7 @@ focus_tree = {
 						all_provinces = yes
 						limit_to_coastal = yes
 					}
-					level = 2
+					level = 5
 					instant_build = yes
 				}
 				add_building_construction = {
@@ -170,7 +170,7 @@ focus_tree = {
 						all_provinces = yes							
 						limit_to_naval_base = yes
 					}
-					level = 2
+					level = 5
 					instant_build = yes
 				}
 			}
@@ -181,13 +181,13 @@ focus_tree = {
 		id = SAF_reconstitute_the_cape_corps
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = SAF_cape_garrison_artillery }
-		prerequisite = {focus = SAF_support_nazification_of_south_west_africa}
+		prerequisite = {focus = SAF_suppress_the_stormjaers}
 		
-		x = 1
+		x = -1
 		y = 3
 		relative_position_id = SAF_war_measures_act
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -241,20 +241,29 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_MANPOWER }
 		completion_reward = {
-			remove_ideas = SAF_history_of_segregation_2
+			random_owned_controlled_state = {
+			 prioritize = {275}
+
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes 
+			}
+			}
 		}
 	}
 
 	focus = {
 		id = SAF_outlaw_strikes
 		icon = GFX_goal_generic_consumer_goods
-		prerequisite = { focus = SAF_cape_garrison_artillery}
-		prerequisite = {focus = SAF_suppress_the_stormjaers}
-		x = -1
+		prerequisite = {focus = SAF_cape_garrison_artillery}
+		prerequisite = {focus = SAF_nazi}
+		x = 1
 		y = 3
 		relative_position_id = SAF_war_measures_act
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -274,12 +283,10 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = SAF_cheap_labor_2
-				add_idea = SAF_cheap_labor_3
+				add_ideas = SAF_cheap_labor_3
 			}
-		}
 	}
+	
 
 
 	############################
@@ -319,7 +326,9 @@ focus_tree = {
 		available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		add_political_power = 120
+		add_political_power = 100
+		add_country_leader_trait = national_integralist
+
 		}
 	}
 
@@ -372,7 +381,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = SAF_support_the_policy_of_appeasement
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2
@@ -391,11 +400,8 @@ focus_tree = {
 		available_if_capitulated = no
         search_filters = { FOCUS_FILTER_POLITICAL }
 
-		completion_reward = {			
-			swap_ideas = {
-				remove_idea = SAF_ossewabrandwag
-				
-			}
+		completion_reward = {
+			add_war_support = 0.15									
 			remove_opinion_modifier = { target = ENG modifier = SAF_anti_british_sentiment }
 		}
 	}
@@ -500,10 +506,10 @@ focus_tree = {
 	focus = {
 		id = SAF_secure_interests_in_africa
 		icon = GFX_goal_tfv_saf_secure_interests_in_africa
-		prerequisite = { focus = SAF_expand_the_cape_corps}
-		prerequisite = { focus = SAF_work_for_all_poor}
+		prerequisite = { focus = SAF_civ_eco1}
+		prerequisite = { focus = SAF_Bolster_civilian_economy}
 		x = -1
-		y = 5
+		y = 6
 		relative_position_id = SAF_support_the_policy_of_appeasement
 
 		cost = 10
@@ -514,7 +520,6 @@ focus_tree = {
 
 			available = {
 			date > 1939.1.1
-			has_war = yes
 		}
 		
 		
@@ -528,7 +533,23 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
-
+			random_owned_controlled_state = {
+				prioritize = {275}
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = industrial_complex
+					level = 6
+					instant_build = yes
+				}
+				set_state_flag = SAF_expand_the_mining_industry_IC
+			}
 
 				542 = { transfer_state_to = SAF }
 				545 = { transfer_state_to = SAF }
@@ -616,7 +637,7 @@ focus_tree = {
 		x = 8
 		y = 0
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 0.5
@@ -635,7 +656,6 @@ focus_tree = {
 		}
 
 		available = {
-			NOT = { has_country_flag = britain_enforced_our_loyalty }
 		}
 		
 		bypass = {
@@ -647,16 +667,26 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_TFV_AUTONOMY}
 
-		completion_reward = {
-			add_timed_idea = { idea = SAF_abandon_westminster days = 1095 }
-		}
+        		completion_reward = {
+        set_politics = {
+        ruling_party = fascism}
+
+		set_popularities = {
+	    democratic = 0
+	    neutrality = 0
+	    fascism = 100
+	    communism = 0
+    }
+	}
+	
+
+
 	}
 
 	focus = {
 		id = SAF_support_the_afrikaner_broederbond
 		icon = GFX_goal_support_fascism
 		prerequisite = { focus = SAF_abandon_westminster }
-		mutually_exclusive = { focus = SAF_empower_the_workers }
 		x = 0
 		y = 1
 		relative_position_id = SAF_abandon_westminster
@@ -689,10 +719,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = SAF_abandon_westminster
-				add_idea = SAF_abandon_westminster_fascism
-			}
+		add_political_power = 150
+		add_country_leader_trait = sins_of_the_father
 		}
 	}
 
@@ -704,32 +732,14 @@ focus_tree = {
 		y = 1
 		relative_position_id = SAF_support_the_afrikaner_broederbond
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
 		}
 
-		available = {
-			OR = {
-				is_subject = no
-				if = {
-					limit = { NOT = { has_government = fascism } }
-					AND = {
-						has_autonomy_state = autonomy_dominion
-						compare_autonomy_progress_ratio > 0.65
-					}
-				}
-				if = {
-					limit = { has_government = fascism } 
-					AND = {
-						has_autonomy_state = autonomy_satellite
-						compare_autonomy_progress_ratio > 0.65
-					}
-				}
-			}
-			NOT = { has_country_flag = britain_enforced_our_loyalty }
-		}
+
+		
 		
 		bypass = {
 
@@ -741,7 +751,7 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_INDUSTRY }
 		
 		completion_reward = {
-			army_experience = 15
+			army_experience = 150
 			swap_ideas = {
 				remove_idea = SAF_ossewabrandwag
 				add_idea = SAF_ossewabrandwag_fascism
@@ -757,14 +767,13 @@ focus_tree = {
 		y = 1
 		relative_position_id = SAF_support_the_afrikaner_broederbond
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
 		}
 
 		available = {
-			NOT = { has_country_flag = britain_enforced_our_loyalty }
 		}
 		
 		bypass = {
@@ -777,7 +786,7 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_POLITICAL }
 		
 		completion_reward = {
-			add_political_power = 120
+        add_war_support = 0.15
 		}
 	}
 
@@ -817,11 +826,11 @@ focus_tree = {
 		icon = GFX_goal_generic_attack_allies
 		prerequisite = { focus = SAF_support_ossewabrandwag }
 		
-		x = 0
-		y = 2
+		x = 2
+		y = 4
 		relative_position_id = SAF_support_the_afrikaner_broederbond
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 0.45
@@ -831,14 +840,7 @@ focus_tree = {
 			}
 		}
 
-		available = {
 
-			controls_state = 541
-			controls_state = 893
-			controls_state = 894
-			controls_state = 895
-			NOT = { has_country_flag = britain_enforced_our_loyalty }
-		}
 		
 		bypass = {
 
@@ -851,17 +853,13 @@ focus_tree = {
 		
 		completion_reward = {
 			541 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 4
 					instant_build = yes
 				}
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
+
 				add_building_construction = {
 					type = bunker
 					province = {
@@ -921,7 +919,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = SAF_support_the_afrikaner_broederbond
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 0.75
@@ -931,28 +929,7 @@ focus_tree = {
 			}
 		}
 
-		available = {
-			OR = {
-				is_subject = no
-				if = {
-					limit = { NOT = { has_government = fascism } }
-					AND = {
-						has_autonomy_state = autonomy_dominion
-						compare_autonomy_progress_ratio > 0.75
-					}
-				}
-				if = {
-					limit = { has_government = fascism } 
-					AND = {
-						has_autonomy_state = autonomy_satellite
-						compare_autonomy_progress_ratio > 0.75
-					}
-				}
-			}
-			NOT = { has_war_together_with = ENG }
-			NOT = { has_country_flag = britain_enforced_our_loyalty }
-		}
-		
+
 		bypass = {
 
 		}
@@ -963,31 +940,35 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_TFV_AUTONOMY}
 		
 		completion_reward = {
-			if = {
+			add_war_support = 0.10
+			random_owned_controlled_state = {
+				prioritize = {275}
 				limit = {
-					is_subject = yes
-				}
-				OVERLORD = {
-					set_autonomy = {
-						target = SAF
-						autonomy_state = autonomy_free
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
 					}
 				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = SAF_armament_effort_AF
 			}
-			ENG = { remove_from_faction = ROOT }
-			set_rule = { can_create_factions = yes }
-			add_political_power = 70
-			add_stability = 0.1
 		}
+
 	}
 
 	focus = {
 		id = SAF_support_the_german_coup
-		icon = GFX_goal_tfv_saf_support_german_coup
-		prerequisite = { focus = SAF_commemorate_the_battle_of_blood_river }
-		prerequisite = { focus = SAF_reclaim_boer_colonies }
+		icon = GFX_focus_GER_mittelafrika
+		prerequisite = { focus = SAF_fascist1 }
+		prerequisite = { focus = SAF_support_nazification_of_south_west_africa }
 		x = 1
-		y = 4
+		y = 5
 		relative_position_id = SAF_support_the_afrikaner_broederbond
 
 		cost = 10
@@ -996,103 +977,50 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-			fascism > 0.25
-			controls_state = 541
-			OR = {
-				is_subject = no
-				if = {
-					limit = { NOT = { has_government = fascism } }
-					AND = {
-						has_autonomy_state = autonomy_dominion
-						compare_autonomy_progress_ratio > 0.80
-					}
-				}
-				if = {
-					limit = { has_government = fascism } 
-					AND = {
-						has_autonomy_state = autonomy_satellite
-						compare_autonomy_progress_ratio > 0.80
-					}
-				}
-			}
-			NOT = { has_country_flag = britain_enforced_our_loyalty }
-		}
-		
-		bypass = {
-			has_government = fascism
-		}
+
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
         search_filters = { FOCUS_FILTER_POLITICAL }
 
-		complete_tooltip = {
-			set_capital = { state = 541 }
-			start_civil_war = {
-				ruling_party = fascism
-				ideology = democratic
-				size = 0.75
-				capital = 681
-				states = { 681 275 719 }
-			}
 
-		}
 
 		completion_reward = {
-			custom_effect_tooltip = SAF_civil_war_tt
-			hidden_effect = {
-				set_capital = { state = 541 }
-				start_civil_war = {
-					ruling_party = fascism
-					ideology = democratic
-					size = 0.45
-					capital = 681
-					states = { 681 275 719 }
-				}
-				random_other_country = {
-					limit = {
-						original_tag = SAF
-						has_government = democratic
-					}
-					load_oob = "SAF_D_civil_war"
-					set_equipment_fraction = 0.7
-					add_popularity = {
-						ideology = democratic
-						popularity = 0.35
+			random_owned_controlled_state = {
+				prioritize = {275}
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
 					}
 				}
-				news_event = { hours = 6 id = news.262 }
-				
-				load_oob = "SAF_F_civil_war"
-				set_equipment_fraction = 0.8
-				
-				add_popularity = {
-					ideology = fascism
-					popularity = 1
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = arms_factory
+					level = 5
+					instant_build = yes
 				}
-				random_country = {
-					limit = {
-						original_tag = GER
-						has_government = fascism
-					}
-					set_country_flag = saf_fascist_uprising # Affects GER ai_strategy
-				}
+				set_state_flag = SAF_expand_the_mining_industry_IC
 			}
+
+				542 = { transfer_state_to = SAF }
+				545 = { transfer_state_to = SAF }
+				981 = { transfer_state_to = SAF }
+				771 = { transfer_state_to = SAF }
 		}
 	}
 
 	focus = {
 		id = SAF_reclaim_boer_colonies
-		icon = GFX_goal_generic_major_war
+		icon = GFX_focus_attack_italy
 		prerequisite = { focus = SAF_south_africa_first }
 		x = 2
 		y = 3
 		relative_position_id = SAF_support_the_afrikaner_broederbond
 
-		cost = 10
-
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -1110,33 +1038,29 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			create_wargoal = {
-				type = take_state_focus
-				target = ENG
-				expire = 0
-				generator = { 542 545 }
-			}
+            add_war_support = 0.10
+			add_ideas = SAF_Reclaim_what_is_ours
+         
+
+
+
 		}
 	}
 
 	focus = {
 		id = SAF_commemorate_the_battle_of_blood_river
 		icon = GFX_goal_generic_secret_weapon
-		prerequisite = { focus = SAF_support_nazification_of_south_west_africa }
+		prerequisite = { focus = SAF_nazi}
 		x = 0
 		y = 3
 		relative_position_id = SAF_support_the_afrikaner_broederbond
 
-		cost = 10
-
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 
-		available = {
-			NOT = { has_country_flag = britain_enforced_our_loyalty }
-		}
-		
+
 		bypass = {
 
 		}
@@ -1147,12 +1071,8 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL FOCUS_FILTER_TFV_AUTONOMY}
 		
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = SAF_voortrekker_monument
-				add_idea = SAF_voortrekker_monument_2
+				add_ideas = SAF_voortrekker_monument_2
 			}
-
-		}
 	}
 
 
@@ -1164,7 +1084,7 @@ focus_tree = {
 		id = SAF_anti_colonialist_crusade
 		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
 		prerequisite = { focus = SAF_outlaw_strikes focus = SAF_reconstitute_the_cape_corps}
-		mutually_exclusive = { focus = SAF_join_comintern }
+
 		x = 4
 		y = 5
 		relative_position_id = SAF_support_the_policy_of_appeasement
@@ -1203,7 +1123,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_war_support = 0.15
-          add_timed_idea = {idea = SAF_sweep_out_vermin 
+          add_timed_idea = {idea = SAF_sweep_out_vermin
 		  days = 180
 		  } 
 		}
@@ -1220,7 +1140,7 @@ focus_tree = {
 	focus = {
 		id = SAF_south_african_railways
 		icon = GFX_goal_generic_construct_infrastructure
-		x = 20
+		x = 15
 		y = 0
 
 		cost = 10
@@ -1753,7 +1673,7 @@ focus_tree = {
 	focus = {
 		id = SAF_special_service_battalion
 		icon = GFX_goal_generic_army_doctrines
-		x = 26
+		x = 20
 		y = 0
 
 		cost = 5
@@ -1939,7 +1859,7 @@ focus_tree = {
 	focus = {
 		id = SAF_sa_engineer_corps
 		icon = GFX_goal_generic_allies_build_infantry
-		prerequisite = { focus = SAF_q_services_corps focus = SAF__south_african_military_college }
+		prerequisite = { focus = SAF_q_services_corps }
 		x = 1
 		y = 3
 		relative_position_id = SAF_special_service_battalion
@@ -2144,7 +2064,7 @@ focus_tree = {
 		id = SAF_expand_the_simons_town_base
 		icon = GFX_goal_generic_construct_naval_dockyard
 	
-		x = 30
+		x = 23
 		y = 0
 		
 
@@ -2180,5 +2100,104 @@ focus_tree = {
 				}	
 			}
 		}
+	}
+		focus = {
+		id = SAF_civ_eco1
+		icon = GFX_focus_GER_kdf_wagen
+		prerequisite = { focus = SAF_work_for_all_poor }
+		x = -2
+		y = 5
+
+		cost = 5
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+
+		completion_reward = {
+
+		add_ideas = saf_industry
+
+		}
+
+
+
+
+	}
+		focus = {
+		id = SAF_nazi
+		icon = GFX_focus_generic_reorient_production 
+		prerequisite = { focus = SAF_support_ossewabrandwag }
+		x = 8
+		y = 3
+
+		cost = 5
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+
+		completion_reward = {
+         add_ideas = EcoBase1
+		}
+
+
+
+
+	}
+		focus = {
+		id = SAF_fascist1
+		icon = GFX_focus_generic_mass_production
+		prerequisite = { focus = SAF_commemorate_the_battle_of_blood_river }
+		x = 8
+		y = 5
+
+		cost = 5
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+
+		completion_reward = {
+        add_ideas = EcoGrowth
+		}
+
+
+
+
+	}
+	focus = {
+		id = SAF_Bolster_civilian_economy
+		icon = GFX_focus_generic_price_controls 
+		prerequisite = { focus = SAF_expand_the_cape_corps }
+		x = 0
+		y = 5
+
+		cost = 5
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+
+		completion_reward = {
+			random_owned_controlled_state = {
+			 prioritize = {275}
+
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes 
+			}
+			}
+		}
+
+
+
+
 	}
 }		
