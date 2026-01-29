@@ -17631,5 +17631,30 @@ leader_traits = {
 	man_of_steel = {
 		random = no
 		sprite = 13
+
+		political_power_gain = 0.2
+		stability_weekly = 0.003
+		consumer_goods_expected_value = -0.03
+
+	}
+	#Calinescu leader
+	ROM_man_of_steel_2 = {
+		random = no
+		
+		stability_weekly = 0.003
+		consumer_goods_expected_value = -0.1
+		neutrality_drift = 0.2
+		
+
+	}
+	#Sima 
+	iron_guard_leader = {
+		random = no
+		sprite = 13
+
+		stability_factor = -0.25
+		production_speed_arms_factory_factor = 0.30
+		military_factory_donations = 10
+
 	}
 }

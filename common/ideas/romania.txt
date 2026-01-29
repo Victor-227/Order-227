@@ -87,6 +87,25 @@ ideas = {
 			}
 		}
 
+		ROM_agrarian_development = {
+
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				production_factory_start_efficiency_factor = 0.06
+			}
+		}
+
 		ROM_flexible_foreign_policy = {
 
 			picture = generic_flexible_foreign_policy
@@ -239,9 +258,8 @@ ideas = {
 
 			
 			modifier = {
-				industrial_capacity_factory = 0.10
-				industrial_capacity_dockyard = 0.10
-				production_factory_max_efficiency_factor = 0.1
+				stability_factor = 0.05
+				production_factory_max_efficiency_factor = 0.06
 			}
 		}
 
@@ -265,6 +283,17 @@ ideas = {
 			}
 		}
 
+		ROM_use_polish_gold
+
+		
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_expected_value = -0.05
+			}
+		
+
 		ROM_the_sentinel_of_the_motherland = {
 
 			removal_cost = -1
@@ -279,6 +308,7 @@ ideas = {
 
 			modifier = {
 				conscription = 0.01
+				neutrality_drift = 0.1
 			}
 		}
 
@@ -295,9 +325,27 @@ ideas = {
 			}			
 
 			modifier = {
-				army_morale_factor = 0.1
 				conscription = 0.02
-				war_support_factor = 0.05
+				neutrality_drift = 0.1
+			}
+		}
+		
+		ROM_the_sentinel_of_the_motherland_3 = {
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+
+			}			
+
+			modifier = {
+				conscription = 0.02
+				neutrality_drift = 0.1
+				army_morale_factor = 0.1
 			}
 		}
 
@@ -314,8 +362,8 @@ ideas = {
 			}
 			
 			modifier = {
-				consumer_goods_factor = 0.30
-				political_power_gain = -0.25
+				consumer_goods_expected_value = 0.05
+				political_power_gain = -0.50
 			}
 		}
 
@@ -333,6 +381,7 @@ ideas = {
 			
 			modifier = {
 				stability_factor = 0.05
+				war_support_factor = 0.05
 			}
 		}
 
@@ -351,9 +400,9 @@ ideas = {
 			}
 			
 			modifier = {				
-				stability_weekly = 0.003
-				foreign_subversive_activites = -0.4
-				neutrality_drift = 0.01
+				stability_weekly = 0.001
+				enemy_operative_capture_chance_factor = 0.4
+				operative_slot = 1
 				
 			}
 		}
@@ -453,6 +502,16 @@ ideas = {
 			}
 		}
 
+		ROM_legionary_integration = {
+
+			removal_cost = -1
+
+			modifier = {
+				experience_loss_factor = -0.1
+				breakthrough_factor = 0.1
+			}
+		}
+
 		ROM_constitutional_guarantees = {
 
 			picture = generic_constitutional_guarantees
@@ -468,9 +527,35 @@ ideas = {
 			}
 			
 			modifier = {
+				stability_factor = 0.1
+			}
+		}
+
+		ROM_industrial_reforms = {
+
+			removal_cost = -1
+
+			allowed = {
+				original_tag = ROM
+			}
+
+			modifier = {
+				production_speed_buildings_factor = 0.1
 				industrial_capacity_factory = 0.05
 				industrial_capacity_dockyard = 0.05
-				stability_factor = 0.1
+			}
+		}
+
+		ROM_greater_romania = {
+
+			allowed = {
+				original_tag = ROM
+			}
+
+			modifier = {
+				war_support_factor = 0.05
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
 			}
 		}
 
@@ -488,7 +573,7 @@ ideas = {
 
 			
 			modifier = {
-                stability_factor=0.15
+                stability_factor = 0.15
 			}
 		}
 
@@ -825,8 +910,10 @@ ideas = {
 			}
 		}
 		
-		ROM_national_christian_party_in_power = {
+		ROM_national_christian_party_1 = {
+
 			picture = generic_production_bonus
+
 			removal_cost = -1
 			
 			allowed = {
@@ -837,9 +924,7 @@ ideas = {
 
 			}
 			modifier = {
-				industrial_capacity_factory = 0.05
-				industrial_capacity_dockyard = 0.05
-				production_factory_start_efficiency_factor = 0.10
+				consumer_goods_expected_value = -0.05
 			}
 		}
 	}	

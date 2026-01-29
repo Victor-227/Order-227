@@ -889,11 +889,6 @@ focus_tree = {
 				ruling_party = neutrality
 				elections_allowed = no
 			}
-			set_political_party = {
-				ideology = neutrality
-				popularity = 55
-			}
-			remove_ideas = neutrality_idea
 			add_ideas = ROM_iron_guard
 		}		
 	}
@@ -941,7 +936,7 @@ focus_tree = {
 		}
 
 		available = {
-			
+			date > 1937.1.1
 		}
 
 		bypass = {
@@ -976,12 +971,17 @@ focus_tree = {
 		cost = 5 
 
 		completion_reward = {
-
+			add_popularity = {
+				popularity = 0.1
+				ideology = neutrality
+			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = ROM_armand_calinescu
 		}
 	}
 
 	focus = {
-		id = ROM_calinescu_reforms
+		id = ROM_reform_industry
 		prerequisite = { focus = ROM_empower_the_minister }
 		x = 2
 		y = 1
@@ -990,21 +990,54 @@ focus_tree = {
 		cost = 5 
 
 		completion_reward = {
-
+			add_ideas = ROM_industrial_reforms
 		}
 	}
 
 	focus = {
-		id = ROM_curtail_iron_guard
-		prerequisite = { focus = ROM_calinescu_reforms }
+		id = ROM_repurpose_royal_treasury
+		prerequisite = { focus = ROM_reform_industry }
 		x = 0
 		y = 1
-		relative_position_id = ROM_calinescu_reforms
+		relative_position_id = ROM_reform_industry
 
-		cost = 5 
+		cost = 10 
 
 		completion_reward = {
-
+			random_owned_controlled_state = {
+				prioritize = { 46 }
+				limit = {
+					ROOT = { has_full_control_of_state = PREV } 
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 79 }
+				limit = {
+					ROOT = { has_full_control_of_state = PREV } 
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -1012,10 +1045,10 @@ focus_tree = {
 	focus = {
 		id = ROM_militarize_the_sentinels
 		icon = GFX_focus_generic_monarchist_sentiment
-		prerequisite = { focus = ROM_his_majestys_loyal_government }
-		x = -2
+		prerequisite = { focus = ROM_expand_the_sentinels }
+		x = 0
 		y = 1
-		relative_position_id = ROM_his_majestys_loyal_government
+		relative_position_id = ROM_expand_the_sentinels
 
 		cost = 5
 
@@ -1034,8 +1067,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_MANPOWER }
 		completion_reward = {
 			swap_ideas = {
-				add_idea = ROM_the_sentinel_of_the_motherland_2
-				remove_idea = ROM_the_sentinel_of_the_motherland
+				add_idea = ROM_the_sentinel_of_the_motherland_3
+				remove_idea = ROM_the_sentinel_of_the_motherland_2
 			}			
 		}
 	}
@@ -1043,10 +1076,10 @@ focus_tree = {
 	focus = {
 		id = ROM_expand_the_sentinels
 		
-		prerequisite = { focus = ROM_militarize_the_sentinels }
-		x = -1
+		prerequisite = { focus = ROM_empower_the_minister }
+		x = -2
 		y = 1
-		relative_position_id = ROM_militarize_the_sentinels
+		relative_position_id = ROM_empower_the_minister
 
 		cost = 5
 
@@ -1061,19 +1094,12 @@ focus_tree = {
 		bypass = {
 
 		}
-	}
-
-	focus = {
-		id = ROM_indoctrination
-		prerequisite = { focus = ROM_militarize_the_sentinels }
-		x = 1
-		y = 1
-		relative_position_id = ROM_militarize_the_sentinels
-
-		cost = 5 
 
 		completion_reward = {
-
+			swap_ideas = {
+				add_idea = ROM_the_sentinel_of_the_motherland_2
+				remove_idea = ROM_the_sentinel_of_the_motherland
+			}			
 		}
 	}
 
@@ -1093,7 +1119,7 @@ focus_tree = {
 		}
 
 		available = {
-			
+			date > 1939.1.1
 		}
 
 		bypass = {
@@ -1102,39 +1128,59 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			random_owned_controlled_state = {
-				prioritize = { 46 }
-				limit = {
-					ROOT = { has_full_control_of_state = PREV } 
-					free_building_slots = {
-						building = industrial_complex
-						size > 2
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 4
-				add_building_construction = {
-					type = industrial_complex
-					level = 4
-					instant_build = yes
-				}
-			}
+			
 			swap_ideas = {
 				add_idea = ROM_king_carol_ii_handled
 				remove_idea = ROM_king_carol_ii_hedonist
 			}
-			remove_country_leader_trait = hedonist
+			ROM_armand_calinescu = { 
+				add_country_leader_role = {
+					country_leader = {
+						expire = "1965.1.1"
+						ideology = despotism
+
+						traits = {
+							ROM_man_of_steel_2
+						}
+					}
+					promote_leader = yes
+				}
+			}
+			remove_ideas = ROM_armand_calinescu
 		}
 	}
 
 	focus = {
-		id = ROM_calinescu_assassinated
+		id = ROM_polish_gold
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		prerequisite = { focus = ROM_all_parties_must_end }
+		x = -1
+		y = 1
+		relative_position_id = ROM_all_parties_must_end
+
+		cost = 5
+
+		available = {
+			has_war_with = POL
+		}
+
+		completion_reward = {
+			add_timed_idea = { idea = ROM_use_polish_gold days = 180 }
+		}
+	}
+
+	focus = {
+		id = ROM_placeholder
 		prerequisite = { focus = ROM_all_parties_must_end }
 		x = 1
 		y = 1
 		relative_position_id = ROM_all_parties_must_end
 
 		cost = 0
+
+		available = {
+			date > 1941.1.1 
+		}
 
 		completion_reward = {
 
@@ -1203,11 +1249,11 @@ focus_tree = {
 	focus = { 
 		id = ROM_crack_down_on_extremism
 		icon = GFX_goal_generic_political_pressure
-		prerequisite = { focus = ROM_flexible_foreign_policy }
+		prerequisite = { focus = ROM_empower_the_minister }
 
-		x = -2
+		x = 0
 		y = 1
-		relative_position_id = ROM_flexible_foreign_policy
+		relative_position_id = ROM_empower_the_minister
 
 		cost = 5
 
@@ -1224,7 +1270,11 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			add_popularity = {
+				popularity = 0.1
+				ideology = neutrality 
+			}
+			add_stability = 0.05
 		}
 	}
 	
@@ -1244,7 +1294,7 @@ focus_tree = {
 		}
 
 		available = {
-			is_subject = no
+			date > 1937.1.1
 		}
 
 		bypass = {
@@ -1257,16 +1307,21 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = ROM_flexible_foreign_policy
+			add_political_power = 120
+			add_popularity = {
+				popularity = 0.1
+				ideology = fascism
+			}
 		}
 	}
 
 	focus = {
 		id = ROM_securitate
 		icon = GFX_focus_generic_whispers 
-		prerequisite = { focus = ROM_his_majestys_loyal_government }
-		x = 2
+		prerequisite = { focus = ROM_trade_treaty_with_germany }
+		x = 1
 		y = 1
-		relative_position_id = ROM_his_majestys_loyal_government
+		relative_position_id = ROM_trade_treaty_with_germany
 
 		cost = 5
 
@@ -1290,7 +1345,7 @@ focus_tree = {
 	focus = {
 		id = ROM_destroy_the_iron_guard
 		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
-		prerequisite = { focus = ROM_calinescu_assassinated focus = ROM_jilava_massacre }
+		prerequisite = { focus = ROM_placeholder focus = ROM_jilava_massacre }
 		x = 0
 		y = 9
 		relative_position_id = ROM_institute_royal_dictatorship
@@ -1300,10 +1355,14 @@ focus_tree = {
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = ROM_iron_guard_3
-				add_ideas = ROM_iron_guard_4 #placeholder
+				add_idea = ROM_greater_romania 
 			}
-		
-			stability_factor = 0.25
+
+			add_stability = 0.25
+			if = {
+				#rename to greater romania if fascist
+			}
+			retire_character = ROM_horia_sima
 		}
 	}
 
@@ -1317,6 +1376,9 @@ focus_tree = {
 
 		cost = 5 
 
+		available = {
+			has_war_with = SOV
+		}
 	}
 
 
@@ -1346,7 +1408,7 @@ focus_tree = {
 		completion_reward = {
 
 			add_popularity = {
-				popularity = 0.15
+				popularity = 0.1
 				ideology = fascism
 			}
 
@@ -1354,11 +1416,49 @@ focus_tree = {
 			custom_effect_tooltip = CHL_skip_one_line_tt
 
 			unlock_decision_category_tooltip = ROM_change_sides
-			unlock_decision_tooltip = ROM_change_sides_to_axis
 
 			custom_effect_tooltip = available_chief_of_army
 			show_ideas_tooltip = ROM_ion_antonescu
 
+		}
+	}
+
+	focus = {
+		id = ROM_national_christian_party 
+		
+		prerequisite = { focus = ROM_appoint_german_friendly_government }
+		x = 2
+		y = 1
+		relative_position_id = ROM_appoint_german_friendly_government
+
+		cost = 5
+
+		completion_reward = {
+			add_ideas = ROM_national_christian_party_1
+		}
+	}
+
+	focus = {
+		id = ROM_develop_the_countryside
+		
+		prerequisite = { focus = ROM_national_christian_party }
+		x = 0
+		y = 1
+		relative_position_id = ROM_national_christian_party
+
+		cost = 10
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 79 }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_ideas = ROM_agrarian_development
 		}
 	}
 
@@ -1394,16 +1494,17 @@ focus_tree = {
 	}
 
 	focus = {
-		id = ROM_remove_opposition
-		prerequisite = { focus = ROM_iron_guard }
+		id = ROM_horia_sima
+		prerequisite = { focus = ROM_iron_guard_integration }
 		x = 0
 		y = 1
-		relative_position_id = ROM_iron_guard
+		relative_position_id = ROM_iron_guard_integration
 
 		cost = 5 
 
 		completion_reward = {
-			
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = ROM_horia_sima
 		}
 	}
 
@@ -1427,17 +1528,18 @@ focus_tree = {
 				add_political_power = 150
 				}
 			}
+			add_country_leader_trait = ROM_king_carol_ii_weak
 		}
 	}
 
 
 	focus = {
-		id = ROM_iron_guard
+		id = ROM_iron_guard_integration
 		icon = GFX_goal_generic_political_pressure
-		prerequisite = { focus = ROM_crack_down_on_extremism }
-		x = 0
+		prerequisite = { focus = ROM_appoint_german_friendly_government }
+		x = -2
 		y = 1
-		relative_position_id = ROM_crack_down_on_extremism
+		relative_position_id = ROM_appoint_german_friendly_government
 
 		cost = 10
 
@@ -1457,7 +1559,8 @@ focus_tree = {
 			swap_ideas = {
 				add_idea = ROM_iron_guard_2
 				remove_idea = ROM_iron_guard
-			}			
+			}		
+			add_ideas = ROM_legionary_integration	
 		}
 	}
 
@@ -1478,7 +1581,7 @@ focus_tree = {
 		}
 
 		available = {
-			
+			date > 1939.1.1
 		}
 
 		bypass = {
@@ -1492,17 +1595,10 @@ focus_tree = {
 				ruling_party = fascism
 				elections_allowed = no
 			}
-
-			add_popularity = {
-				popularity = 0.2
-				ideology = fascism
-			}
-				
-			
 				
 			remove_idea = ROM_king_carol_ii_hedonist
 		
-
+			add_timed_idea = { idea = ROM_king_carol_emptied_accounts days = 180 }
 			
 			hidden_effect = {
 				news_event = { id = news.323 days = 1 }
@@ -1526,6 +1622,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			add_political_power = 150
 		}
 	}
 
@@ -1539,7 +1636,7 @@ focus_tree = {
 		cost = 5 
 
 		completion_reward = {
-			add_idea = ROM_figurehead_king_michael
+			add_ideas = ROM_figurehead_king_michael
 		}
 	}
 
@@ -1551,6 +1648,14 @@ focus_tree = {
 		relative_position_id = ROM_force_abdication
 
 		cost = 0
+
+		available = {
+			date > 1941.1.1 
+		}
+
+		bypass = {
+
+		}
 
 		completion_reward = {
 			swap_ideas = {
@@ -1621,10 +1726,10 @@ focus_tree = {
 	focus = {
 		id = ROM_constitutional_guarantees
 		icon = GFX_focus_hol_the_foundations_of_defense
-		prerequisite = { focus = ROM_empower_the_minister }
+		prerequisite = { focus = ROM_crack_down_on_extremism }
 		x = 0
-		y = 2
-		relative_position_id = ROM_empower_the_minister
+		y = 1
+		relative_position_id = ROM_crack_down_on_extremism
 
 		cost = 5
 

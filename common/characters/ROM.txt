@@ -75,6 +75,9 @@ characters={
 			ideology=centrism
 			expire="1965.1.1.1"
 			id=-1
+			traits = {
+				ROM_man_of_steel_2
+			}
 		}
 	}
 
@@ -85,11 +88,19 @@ characters={
 				large="GFX_Portrait_romania_octavian_goga"
 			}
 		}
-		country_leader={
-			ideology=fascism_ideology
-			traits={ anti_democrat }
-			expire="1965.1.1.1"
-			id=-1
+		advisor={
+			slot = political_advisor
+			idea_token = ROM_octavian_goga
+			allowed = {
+				original_tag = ROM
+			}
+			traits = {
+				poet
+			}
+
+			available = {
+				has_completed_focus = ROM_national_christian_party
+			}
 		}
 	}
 
@@ -267,7 +278,7 @@ characters={
 				original_tag = ROM
 			}
 			traits = {
-				army_chief_offensive_2
+				army_chief_offensive_3
 			}
 			cost = 100
 			ai_will_do = {
@@ -591,7 +602,7 @@ characters={
 				original_tag = ROM
 			}
 			traits = {
-				silent_workhorse 
+				popular_figurehead
 			}
 		}
 	}
@@ -630,7 +641,7 @@ characters={
 				original_tag = ROM
 			}
 			traits = {
-				backroom_backstabber 
+				technocrat
 			}
 			ai_will_do = {
 				factor = 0.000
@@ -675,4 +686,23 @@ characters={
 			}
 		}
 	}
+	ROM_horia_sima={
+		name=ROM_horia_sima
+		portraits={
+			army={
+				small="GFX_idea_ROM_horia_sima"
+			}
+		}
+			advisor={
+			slot = political_advisor
+			idea_token = ROM_horia_sima
+			available = {
+				has_completed_focus = ROM_horia_sima
+			}
+			traits = {
+				iron_guard_leader
+			}
+		}
+	}
 }
+

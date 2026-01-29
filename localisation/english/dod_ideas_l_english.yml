@@ -1,4 +1,11 @@
 ﻿l_english:
+ ROM_use_polish_gold:0 "Polish Gold"
+ ROM_legionary_integration:0 "Integrate Legionary Elements Into the Army"
+ ROM_agrarian_development:0 "Agrarian Development"
+ ROM_national_christian_party_1:0 "National Christian Party"
+ ROM_national_christian_party_desc:0 "The writer Octavian Goga holds strong influence over our nation through his National Christian party. Born from influence gained as the Agrarian party, it has strong ties with rural communities. A reorganization of our cabinet could bring his influence into play in our favor."
+ ROM_industrial_reforms:0 "Industrial Reforms"
+ ROM_the_sentinel_of_the_motherland_3:0 "The Sentinel of the Motherland"
  ROM_iron_guard:0 "Iron Guard"
  ROM_iron_guard_desc:0 "The Legion of the Archangel Michael, otherwise known as the Iron Guard, was a Romanian far-right religious paramilitary and political organization that was active from 1927 to 1941, when it was destroyed by Marshal Ion Antonescu after a failed coup. Founded in 1927 by Corneliu Zelea Codreanu, the Legion would be primarily a political movement until 1930, when Codreanu formed the Iron Guard, a paramilitary branch of the Legion, whose name would eventually come to refer to the Legion itself."
  ROM_iron_guard_2:0 "Iron Guard"
