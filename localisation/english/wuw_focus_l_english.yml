@@ -394,21 +394,12 @@
  wuw_HUN_pass_statute_xix: "Pass Statute XIX"
  wuw_HUN_pass_statute_xix_desc: "Seeing as [ROOT.GetLeader] is ailing, it would be beneficial to pass Statute XIX regarding establishing of a National Council when the Regent seat is vacant, allowing us for the creation of an Országtanács that will pick out a new regent once our current one has passed away. Some may see this as attempted dynasty-founding, but we are okay with that."
 
- wuw_HUN_restrict_voting_rights: "Restrict Voting Rights"
- wuw_HUN_restrict_voting_rights_desc: "In order to properly put a stop to the growing communist and left-wing democratic influence, it will be necessary to restrict the voting rights, making the requirements harsher and ensuring that only those who have our country's best in mind are allowed to take part in the elections."
-
  wuw_HUN_renounce_the_treaty_of_trianon: "Renounce the Treaty of Trianon"
  wuw_HUN_renounce_the_treaty_of_trianon_desc: "The injustice forced upon our nation at the end of the Great War, ripping away two-thirds of our once-great nation's territory and population, rivals that of the disgrace visited upon Germany in the Treaty of Versailles, and it must be undone."
-
- wuw_HUN_renew_the_rome_protocols: "Renew the Rome Protocols"
- wuw_HUN_renew_the_rome_protocols_desc: "In light of [GER.GetNameDef]'s continuing revisionism, we must renew the Rome Protocols drawn up and signed in 1934. The agreements would serve not only to further isolate the [GER.GetAdjective] and [YUG.GetAdjective] threats, but also as a possible precursor to an actual alliance."
 
  wuw_HUN_join_the_axis: "Join the Axis"
  wuw_HUN_join_the_axis_desc: "As our economy is already so reliant on the Germans, it is only logical that we shall follow them in war. We will send them a request for formal entry into the Axis alliance."
  HUN_can_not_trust_germany_again_flag: "Germany Exploited us for their own personal gain"
-
- wuw_HUN_an_alliance_with_italy: "Alliance With [ITA.GetNameDef]"
- wuw_HUN_an_alliance_with_italy_desc: "The initial overtures towards an alliance that were made in the Rome Protocols can now be expanded upon. We will send a delegation to Italy to discuss a binding agreement for extensive military co-operation, both defensively and offensively."
 
  wuw_HUN_joint_aluminum_mining_company: "Joint Aluminum Mining Company"
  wuw_HUN_joint_aluminum_mining_company_desc: "As aluminum is an integral part of the modern war industry, we could easily obtain [GER.GetAdjective] support to expand the mines in the north of our country."
@@ -425,9 +416,6 @@
  wuw_HUN_seek_german_contracts: "Seek [GER.GetAdjective] Contracts"
  wuw_HUN_seek_german_contracts_desc: "Our industries are growing once again, but if we are to be able to produce all the equipment we need, it would prove beneficial to contract [GER.GetAdjective] architects and construction firms to construct new facilities."
 
- wuw_HUN_license_fiat_tankettes: "Fiat Tankettes"
- wuw_HUN_license_fiat_tankettes_desc: "In order to strengthen our military industry and expand our recon battalions, it would prove wise to cooperate with the [ITA.GetAdjective] vehicle company Fiat to produce light tanks and tankettes for our new mechanized groups."
-
  wuw_HUN_strenghten_the_order_of_vitez: "Bolster the Order of Vitéz"
  wuw_HUN_strenghten_the_order_of_vitez_desc: "The order of merit which was founded in 1920, the Vitézi Rend, is currently led by His Serene Highness Miklós Horthy. He could as such direct more funds and men towards the commanders who are a apart of the order, in order to strengthen them as best as possible."
 
@@ -439,6 +427,9 @@
 
  wuw_HUN_outlaw_the_party_of_national_will: "Outlaw the Party of National Will"
  wuw_HUN_outlaw_the_party_of_national_will_desc: "The national socialist Party of National Will led by Ferenc Szálasi is a threat to our current rule, as they are more popular with the [GER.GetAdjective] Nazis and dislike our current leader's almost absolute rule."
+
+ HUN_the_regent_supreme: "The Regent Supreme"
+ HUN_the_regent_supreme_desc: "W.I.P."
 
  wuw_HUN_carrying_on_arpads_legacy: "Carrying on Árpád's Legacy"
  wuw_HUN_carrying_on_arpads_legacy_desc: "The great Árpád, head of the confederation of the Magyar tribes at the turn of the 9th and 10th centuries is a big inspiration for [ROOT.GetLeader], and his dynasty carried on for a long time, making [ROOT.GetnameDef] the best it could be. We should take a page out of his book and follow his example."
@@ -460,9 +451,6 @@
 
  wuw_HUN_invite_german_investors: "Invite [GER.GetAdjective] Investors"
  wuw_HUN_invite_german_investors_desc: "As already established in our prior trade deals, only [GER.GetAdjective]s and [ROOT.GetAdjective]s are allowed to prospect in our country at the current moment. Therefore, it would at the very least be wise to take advantage of this and invite investors to our country."
-
- wuw_HUN_protect_austria: "Protect [AUS.GetNameDef]"
- wuw_HUN_protect_austria_desc: "To further stand against [GER.GetNameDef] we must resist their open ambitions for unification with [AUS.GetNameDef]. We can grant them a guarantee, giving the current government the political strength they need to hopefully stand up to pro-[GER.GetAdjective] elements, provided they hand us Burgenland back."
 
  wuw_HUN_proclaim_greater_hungary: "Proclaim Greater Hungary"
  wuw_HUN_proclaim_greater_hungary_desc: "Having regained the territory we were due, the size of our country has increased to our historical borders. We may now in full confidence proclaim the formation of Greater Hungary to the world, and set our eyes on new targets."
@@ -502,9 +490,6 @@
 
  wuw_HUN_a_mobile_army: "A Mobile Army"
  wuw_HUN_a_mobile_army_desc: "As our army cannot beat any world powers in terms of sheer numbers of men in the army, we should focus on technological superiority. Armor and other land based vehicles that can punch through and encircle enemy units are the future of warfare, and we must embrace that fact."
-
- wuw_HUN_elect_a_fascist_king: "Elect a Fascist King"
- wuw_HUN_elect_a_fascist_king_desc: "Our nation needs a powerful leader to steer it through the coming turbulent years. Our ruler must be one that the people can look up to, and our enemies can fear."
 
  wuw_HUN_joint_oil_exploitation_company: "Joint Oil Exploitation Company"
  wuw_HUN_joint_oil_exploitation_company_desc: "With the prospect of possible oil fields in our territory, we have attracted foreign attention. Friendly powers are eager to support our oil industry with their technical know-how, and this would be a lucrative opportunity to learn from their advances."
@@ -552,9 +537,6 @@
 
  wuw_HUN_wherever_the_cross_points: "Wherever the Cross Points"
  wuw_HUN_wherever_the_cross_points_desc: "As per the symbol of our movement, the arrow cross, Hungary has to reclaim its birthright, and expand in every direction that the arrows point towards. The time has come, to reclaim that which is rightfully ours!"
-
- wuw_HUN_the_war_on_atheism: "The War on Atheism"
- wuw_HUN_the_war_on_atheism_desc: "In recent ages, people have begun to forget about God. The ever-growing scourge of atheism will keep on spreading, unless we strike at its core. We must bring down the communists now, lest this heresy continue forever."
 
  wuw_HUN_heirs_of_the_huns: "Heirs of the Huns"
  wuw_HUN_heirs_of_the_huns_desc: "There are many different ideas regarding where our people come from, including being Finno-Ugric, or being Turkic. While any of these may be true to a degree, it must be reinforced that we are the true heirs of the Huns, and that we will bring destruction to any who oppose us."

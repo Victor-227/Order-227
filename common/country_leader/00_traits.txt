@@ -9920,10 +9920,9 @@ leader_traits = {
 	HUN_the_regent_3 = {
 		random = no
 		sprite = 13
-		stability_factor = 0.05
+		stability_factor = 0.1
 		war_support_factor = 0.1
 		neutrality_drift = 0.02
-		justify_war_goal_time = -0.1
 	}
 
 	HUN_the_regent_undermined = {

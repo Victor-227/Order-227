@@ -266,7 +266,7 @@ ideas = {
 
 			modifier = {
 				political_power_factor = -0.15
-				consumer_goods_factor = -0.1
+				consumer_goods_expected_value = -0.1
 				production_speed_buildings_factor = 0.05
 				fascism_drift = 0.01
 				custom_modifier_tooltip = HUN_gombos_trade_treaty_arms_market_tt
@@ -804,7 +804,7 @@ ideas = {
 			picture = generic_production_bonus
 
 			modifier = {
-				production_speed_industrial_complex_factor = 0.2
+				production_speed_industrial_complex_factor = 0.3
 				political_power_factor = -0.15
 				stability_factor = -0.10
 				war_support_factor = -0.10
@@ -1050,7 +1050,6 @@ ideas = {
 
 			modifier = {
 				political_power_factor = 0.1
-				conscription = 0.01
 			}
 		}
 
@@ -1069,7 +1068,6 @@ ideas = {
 				political_power_factor = 0.15
 				war_support_factor = 0.05
 				stability_factor = 0.05
-				conscription = 0.01
 				political_advisor_cost_factor = -0.25
 			}
 		}
@@ -2037,11 +2035,12 @@ ideas = {
 			}
 			
 			modifier = {
+				political_power_factor = -0.05
 				production_speed_infrastructure_factor = 0.1
 				production_speed_industrial_complex_factor = 0.1
 				production_speed_supply_node_factor = 0.15
 				production_speed_rail_way_factor = 0.1
-				research_speed_factor = 0.15
+				research_speed_factor = 0.10
 			}
 		}
 

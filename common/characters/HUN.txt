@@ -2922,132 +2922,6 @@ characters = {
 		}
 	}
 
-	HUN_laszlo_rajk = {
-		instance = {
-			allowed = {
-				NOT = {
-					has_dlc = "Gotterdammerung"
-				}
-			}
-
-			name = HUN_laszlo_rajk
-
-			portraits = {
-				army = {
-					small = "GFX_idea_HUN_laszlo_rajk"
-				}
-			}
-
-			advisor = {
-
-				slot = political_advisor
-
-				idea_token = HUN_laszlo_rajk
-
-				allowed = {
-					original_tag = HUN
-				}
-
-				available = {
-					IF = {
-						limit = {
-							has_dlc = "Man the Guns"
-						}
-						NOT = {
-							has_autonomy_state = autonomy_supervised_state
-						}
-					}
-				}
-
-				traits = {
-					communist_revolutionary 
-				}
-
-				ai_will_do = {
-					base = 0
-					modifier = {
-						add = 100
-						OR = {
-							has_country_flag = HUN_AI_RANDOM_COMMUNIST
-							has_game_rule = {
-								rule = HUN_ai_behavior
-								option = COMMUNIST
-							}
-						}
-					}
-				}
-
-			}
-
-		}
-		instance = {
-			allowed = {
-				has_dlc = "Gotterdammerung"
-			}
-
-			name = HUN_laszlo_rajk
-
-			portraits = {
-				army = {
-					small = "GFX_idea_HUN_laszlo_rajk"
-				}
-			}
-
-			advisor = {
-
-				slot = political_advisor
-
-				idea_token = HUN_laszlo_rajk
-
-				allowed = {
-					original_tag = HUN
-				}
-
-				visible = {
-					NOT = {
-						OR = {
-							has_completed_focus = wuw_HUN_end_the_regency
-							has_completed_focus = wuw_HUN_continue_the_regency
-						}
-					}
-				}
-
-				available = {
-					IF = {
-						limit = {
-							has_dlc = "Man the Guns"
-						}
-						NOT = {
-							has_autonomy_state = autonomy_supervised_state
-						}
-					}
-					has_completed_focus = wuw_HUN_elections_in_the_revolutionary_council
-				}
-
-				traits = {
-					marxist_philosopher 
-				}
-
-				ai_will_do = {
-					base = 0
-					modifier = {
-						add = 100
-						OR = {
-							has_country_flag = HUN_AI_RANDOM_COMMUNIST
-							has_game_rule = {
-								rule = HUN_ai_behavior
-								option = COMMUNIST
-							}
-						}
-					}
-				}
-				
-			}
-
-		}
-
-	}
-
 	HUN_jozsef_szell = {
 
 		name = HUN_jozsef_szell
@@ -3211,55 +3085,6 @@ characters = {
 
 			traits = {
 				HUN_moderate_lawyer
-			}
-
-			ai_will_do = {
-				base = 1
-			}
-
-		}
-
-	}
-
-	HUN_erno_gero = {
-
-		name = HUN_erno_gero
-
-		portraits = {
-			civilian = {
-				small = "GFX_portrait_HUN_erno_gero_small"
-			}
-		}
-
-		advisor = {
-
-			slot = political_advisor
-
-			idea_token = HUN_erno_gero
-
-			allowed = {
-				original_tag = HUN
-				has_dlc = "La Resistance"
-			}
-
-			visible = {
-				NOT = {
-					OR = {
-						has_completed_focus = wuw_HUN_restore_the_socialist_federative_republic
-						has_completed_focus = wuw_HUN_establish_the_second_republic
-						has_completed_focus = wuw_HUN_continue_the_regency
-						has_completed_focus = wuw_HUN_end_the_regency
-					}
-				}
-			}
-
-			available = {
-				has_government = communism 
-				has_completed_focus = wuw_HUN_join_the_comintern
-			}
-
-			traits = {
-				HUN_stalinist_agent
 			}
 
 			ai_will_do = {
@@ -3485,51 +3310,6 @@ characters = {
 
 	}
 
-	HUN_sandor_garbai = {
-
-		name = HUN_sandor_garbai
-
-		portraits = {
-			civilian = {
-				small = "GFX_portrait_HUN_sandor_garbai_small"
-			}
-		}
-
-		advisor = {
-
-			slot = political_advisor
-
-			idea_token = HUN_sandor_garbai
-
-			allowed = {
-				original_tag = HUN
-			}
-
-			visible = {
-				NOT = {
-					OR = {
-						has_completed_focus = wuw_HUN_continue_the_regency
-						has_completed_focus = wuw_HUN_end_the_regency
-					}
-				}
-			}
-
-			available = {
-				has_government = communism
-			}
-
-			traits = {
-				socialist_economist
-			}
-
-			ai_will_do = {
-				base = 3
-			}
-
-		}
-
-	}
-
 	HUN_jozsef_kelen = {
 
 		name = HUN_jozsef_kelen
@@ -3650,7 +3430,6 @@ characters = {
 			}
 
 			available = {
-				has_intelligence_agency  = yes 
 				NOT = {
 					has_government = communism
 				}
@@ -3658,56 +3437,6 @@ characters = {
 
 			traits = {
 				HUN_military_intelligence_officer
-			}
-
-			ai_will_do = {
-				base = 1
-			}
-
-		}
-
-	}
-
-	HUN_imre_nagy = {
-
-		name = HUN_imre_nagy
-
-		portraits = {
-			civilian = {
-				small = "GFX_portrait_HUN_imre_nagy_small"
-			}
-		}
-
-		advisor = {
-
-			slot = political_advisor
-
-			idea_token = HUN_imre_nagy
-
-			allowed = {
-				original_tag = HUN
-			}
-
-			visible = {
-				NOT = {
-					OR = {
-						has_completed_focus = wuw_HUN_continue_the_regency
-						has_completed_focus = wuw_HUN_end_the_regency
-					}
-				}
-			}
-
-			available = {
-				NOT = {
-					OR = {
-						has_government = neutrality
-						has_government = fascism
-					}
-				}
-			}
-
-			traits = {
-				HUN_internationalist_marxist
 			}
 
 			ai_will_do = {
