@@ -519,7 +519,6 @@ focus_tree = {
 		}
 
 			available = {
-			date > 1939.1.1
 		}
 		
 		
@@ -551,10 +550,21 @@ focus_tree = {
 				set_state_flag = SAF_expand_the_mining_industry_IC
 			}
 
-				542 = { transfer_state_to = SAF }
-				545 = { transfer_state_to = SAF }
-				981 = { transfer_state_to = SAF }
-				771 = { transfer_state_to = SAF }
+				transfer_state = 542
+				transfer_state = 545
+				transfer_state = 981
+				transfer_state = 771
+				transfer_state = 889
+				transfer_state = 546
+				transfer_state = 905
+				transfer_state = 903
+				transfer_state = 547
+				transfer_state = 904
+				transfer_state = 548
+				transfer_state = 889
+				transfer_state = 769
+				transfer_state = 768
+				transfer_state = 770
 		}
 	}
 
@@ -632,7 +642,7 @@ focus_tree = {
 
 	focus = {
 		id = SAF_abandon_westminster
-		icon = GFX_goal_tfv_sever_ties_with_uk
+		icon = GFX_focus_usa_recruit_the_free_corps
 		mutually_exclusive = { focus = SAF_support_the_policy_of_appeasement }
 		x = 8
 		y = 0
@@ -965,10 +975,10 @@ focus_tree = {
 	focus = {
 		id = SAF_support_the_german_coup
 		icon = GFX_focus_GER_mittelafrika
-		prerequisite = { focus = SAF_fascist1 }
-		prerequisite = { focus = SAF_support_nazification_of_south_west_africa }
+		prerequisite = { focus = SAF_steal_everything }
+		prerequisite = { focus = SAF_mercenary_army }
 		x = 1
-		y = 5
+		y = 6
 		relative_position_id = SAF_support_the_afrikaner_broederbond
 
 		cost = 10
@@ -1005,10 +1015,22 @@ focus_tree = {
 				set_state_flag = SAF_expand_the_mining_industry_IC
 			}
 
-				542 = { transfer_state_to = SAF }
-				545 = { transfer_state_to = SAF }
-				981 = { transfer_state_to = SAF }
-				771 = { transfer_state_to = SAF }
+				transfer_state = 542
+				transfer_state = 545
+				transfer_state = 981
+				transfer_state = 771
+				transfer_state = 889
+				transfer_state = 546
+				transfer_state = 905
+				transfer_state = 903
+				transfer_state = 547
+				transfer_state = 904
+				transfer_state = 548
+				transfer_state = 889
+				transfer_state = 769
+				transfer_state = 768
+				transfer_state = 770
+				
 		}
 	}
 
@@ -1624,46 +1646,6 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = SAF_defense_collaboration_initiative
-		icon = GFX_goal_generic_scientific_exchange
-		prerequisite = { focus = SAF_fund_the_university_of_south_africa }
-		x = 0
-		y = 6
-		relative_position_id = SAF_south_african_railways
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 25
-		}
-
-		available = {
-			is_subject = yes
-			has_war = yes
-			is_in_faction = yes
-			OR = {
-				num_of_factories > 50
-				any_other_country = {
-					is_in_faction_with = ROOT
-					num_of_factories > 50
-				}
-			}
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-        search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-			add_research_slot = 1
-		}
-	}
 
 
 	############################
@@ -2164,10 +2146,6 @@ focus_tree = {
 		completion_reward = {
         add_ideas = EcoGrowth
 		}
-
-
-
-
 	}
 	focus = {
 		id = SAF_Bolster_civilian_economy
@@ -2195,9 +2173,42 @@ focus_tree = {
 			}
 			}
 		}
+	}
+			focus = {
+		id = SAF_steal_everything
+		icon = GFX_focus_FIN_motti_tactics
+		prerequisite = { focus = SAF_fascist1 }
+		x = 8
+		y = 6
+
+		cost = 5
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
 
 
+		completion_reward = {
+        add_ideas = Steal_everything
+		}
+	}
+
+			focus = {
+		id = SAF_mercenary_army
+		icon = GFX_focus_GER_afrikakorps
+		prerequisite = { focus = SAF_support_nazification_of_south_west_africa }
+		x = 10
+		y = 6
+
+		cost = 5
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
 
 
+		completion_reward = {
+        add_ideas = SAF_desert_equipment
+		}
 	}
 }		

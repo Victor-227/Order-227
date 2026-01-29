@@ -2523,12 +2523,10 @@
 			transfer_state = 718
 			transfer_state = 890
 			transfer_state = 888
-			transfer_state = 889
-			ENG= {
-				transfer_state=768
-			    transfer_state=769
+
+
 			}
-		}
+		
 	}
 
 
