@@ -185,7 +185,7 @@ ideas = {
 			}
 
 			modifier = {
-				consumer_goods_factor = 0.4
+				consumer_goods_expected_value = 0.1
 			}
 		}
 
@@ -204,7 +204,7 @@ ideas = {
 			}
 
 			modifier = {
-				industrial_capacity_factory = -0.25
+				industrial_capacity_factory = -0.20
 			}
 		}
 
@@ -223,7 +223,7 @@ ideas = {
 			}
 
 			modifier = {
-				production_factory_efficiency_gain_factor = -0.05
+				industrial_capacity_factory = -0.05
 			}
 		}
 
@@ -242,7 +242,7 @@ ideas = {
 			}
 
 			modifier = {
-				consumer_goods_factor = 0.06
+				consumer_goods_expected_value = 0.03
 			}
 		}
 
@@ -283,16 +283,15 @@ ideas = {
 			}
 		}
 
-		ROM_use_polish_gold
+		ROM_use_polish_gold = {
 
-		
 
 			removal_cost = -1
 
 			modifier = {
 				consumer_goods_expected_value = -0.05
 			}
-		
+		}
 
 		ROM_the_sentinel_of_the_motherland = {
 
@@ -494,8 +493,9 @@ ideas = {
 			}
 			
 			modifier = {				
-				political_power_gain = -0.5
-				war_support_factor = 0.5
+				political_power_gain = -0.1
+				war_support_factor = 0.1
+				war_support_weekly = 0.001
 				army_core_attack_factor = 0.1
 				army_core_defence_factor = 0.1
 			
@@ -1440,4 +1440,20 @@ ideas = {
 			}
 		}
 	}
+	ROM_king_carol_ii_hedonist_1 = {
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+				
+			}
+
+			modifier = {
+				
+			}
+		}
 }
