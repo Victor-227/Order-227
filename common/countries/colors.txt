@@ -64,8 +64,8 @@ ITA = {
 	color_ui = rgb { 87 165 82 }
 }
 ROM = {
-	color = rgb { 215 196 72 }
-	color_ui = rgb { 255 255 120 }
+	color = rgb { 230 190 0  }
+	color_ui = rgb { 230 190 0  }
 }
 YUG = {
 	color = rgb { 72 73 126 }
@@ -112,8 +112,8 @@ IRE = {
 	color_ui = rgb { 104 207 117 }
 }
 HUN = {
-	color = rgb { 249 126 98 }
-	color_ui = rgb { 255 164 127 }
+	color = rgb { 152  85  92 }
+	color_ui = rgb { 152  85  92 }
 }
 AFG = {
 	color = rgb { 64 160 167 }
@@ -183,9 +183,9 @@ IRQ = {
 	color = rgb { 178 114 99 }
 	color_ui = rgb { 231 148 129 }
 }
-JAP = {
-	color = hsv { 0.05 0.3 1 }
-	color_ui = hsv { 0.05 0.25 1.2 }
+JAP = {	
+	color = rgb { 255 255 255 } 
+	color_ui = rgb { 255 255 255 }
 }
 LIB = {
 	color = rgb { 152 130 191 }
@@ -224,8 +224,8 @@ PRU = {
 	color_ui = rgb { 255 246 255 }
 }
 SAF = {
-	color = rgb { 195 107 160 }
-	color_ui = rgb { 198 169 248 }
+	color = rgb { 156 156 156 }
+	color_ui = rgb { 156 156 156 }
 }
 SAU = {
 	color = rgb { 171 190 152 }
@@ -256,8 +256,8 @@ YUN = {
 	color_ui = rgb { 222 247 198 }
 }
 USA = {
-	color = rgb { 20 133 237 }
-	color_ui = rgb { 87 160 255 }
+	color = rgb {  1 84 160 }
+	color_ui = rgb {  1 84 160 }
 }
 MON = {
 	#color = HSV { 0.1 0.15 0.4 }
@@ -301,8 +301,8 @@ SLO = {
 	color_ui = rgb { 255 255 255 }
 }
 RAJ = {
-	color = rgb { 226  135  40 }
-	color_ui = rgb { 226  135  40 }
+	color = rgb { 240 133 30 }
+	color_ui = rgb { 240 133 30 }
 }
 
 CRO = {
