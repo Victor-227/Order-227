@@ -1,6 +1,47 @@
 ideas = {
 
 	country = {
+		commonwealth_ties = {
+
+			name = commonwealth_ties
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				political_advisor_cost_factor = -0.25
+				trade_laws_cost_factor = -0.25
+				mobilization_laws_cost_factor = -0.25
+				economy_cost_factor = -0.25
+			}
+
+			picture = eng_guided_by_britain
+			
+			removal_cost = -1	
+
+		}
+		commonwealth_imperial_army = {
+
+			picture = generic_army_war_college
+
+			removal_cost = -1
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+
+			}
+			
+			modifier = {
+				experience_gain_army_factor = 0.1
+			}
+		}
 		george_v = {
 			
 			allowed = {
@@ -474,11 +515,34 @@ ideas = {
 			}
 
 			modifier = {
-				political_advisor_cost_factor = -0.25
-				trade_laws_cost_factor = -0.25
-				mobilization_laws_cost_factor = -0.25
-				economy_cost_factor = -0.25
-				autonomy_gain = 1
+				industrial_capacity_factory = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				production_speed_buildings_factor = 0.15
+			}
+
+			picture = eng_guided_by_britain
+			
+			removal_cost = -1	
+
+		}
+		
+	    ENG_guided_by_britain_3 = {
+
+			name = ENG_guided_by_britain
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				industrial_capacity_factory = 0.15
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.05
 			}
 
 			picture = eng_guided_by_britain
@@ -1274,11 +1338,7 @@ ideas = {
 			modifier = {
 				neutrality_drift = 0.1
 				political_power_factor = 0.15
-				generate_wargoal_tension = -0.5
-				lend_lease_tension = -0.4
-				send_volunteers_tension = -0.4
-				guarantee_tension = -0.4
-				drift_defence_factor = 0.3
+				stability_factor = -0.1
 			}
 
 			picture = eng_the_kings_party
