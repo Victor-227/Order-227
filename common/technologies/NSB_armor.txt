@@ -64,6 +64,14 @@ technologies = {
 			wet_ammo_storage
 			smoke_launchers
 			expanded_fuel_tank
+			tank_small_cannon
+			secondary_turret_small_cannon
+			tank_high_velocity_cannon
+			tank_heavy_cannon
+			tank_medium_cannon
+			squeezebore_adaptor
+			tank_anti_air_cannon
+			tank_auto_cannon
 		}
 		enable_subunits = {
 			light_armor
@@ -565,6 +573,11 @@ technologies = {
 			medium_tank_aa_chassis_1
 		}
 
+		enable_equipment_modules = {
+			tank_small_cannon_2
+			tank_close_support_gun
+		}
+
 		enable_subunits = {
 			medium_armor
 		}
@@ -697,6 +710,17 @@ technologies = {
 			medium_tank_destroyer_chassis_2
 			medium_tank_artillery_chassis_2
 			medium_tank_aa_chassis_2
+		}
+		
+		enable_equipment_modules = {
+			tank_auto_cannon_2
+			tank_medium_cannon_2
+			tank_high_velocity_cannon_2
+			tank_heavy_cannon_2
+			tank_medium_howitzer
+			tank_rocket_launcher
+			tank_anti_air_cannon_2
+			auto_loader
 		}
 
 		path = {
@@ -852,6 +876,15 @@ technologies = {
 			medium_tank_destroyer_chassis_3
 			medium_tank_artillery_chassis_3
 			medium_tank_aa_chassis_3
+		}
+
+		enable_equipment_modules = {
+			tank_high_velocity_cannon_3
+			tank_heavy_cannon_3
+			tank_medium_howitzer_2
+			tank_heavy_howitzer
+			tank_rocket_launcher_2
+			tank_anti_air_cannon_3
 		}
 
 		path = {
@@ -1291,6 +1324,14 @@ technologies = {
 
 		enable_equipment_modules = {
 			tank_super_heavy_cannon
+			lc_medium_cannon_turret #Module for Land Cruiser
+			lc_assault_gun #Module for Land Cruiser
+			lc_rocket_launcher #Module for Land Cruiser
+			lc_high_velocity_cannon_turret #Module for Land Cruiser
+			lc_heavy_high_velocity_cannons #Module for Land Cruiser
+			lc_light_anti_air_battery #Module for Land Cruiser
+			lc_heavy_anti_air_battery #Module for Land Cruiser
+			lc_heavy_anti_air_platform #Module for Land Cruiser
 		}
 
 		research_cost = 3

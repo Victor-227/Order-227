@@ -4322,7 +4322,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ENG_steady_as_she_goes
 
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -4344,148 +4344,14 @@ focus_tree = {
 				add_faction_goal = faction_goal_imperial_glory
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
-
-			# Singapore
-			1021 = {
-				if = {
-					limit = {
-						OR = {
-							is_controlled_by = ROOT
-							AND = {
-								is_controlled_by = MAL
-								MAL = { is_in_faction_with = ROOT }
-							}
-						}
-					}
+			random_owned_controlled_state = {
+					prioritize = {126}
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
-						type = air_base
+						type = arms_factory
 						level = 2
-						instant_build = yes
 					}
-					# Singapore
-					add_building_construction = {
-						type = naval_base
-						level = 2
-						province = 12299
-						instant_build = yes
-					}
-				}								
-			}
-			# Egypt
-			446 = {
-				if = {
-					limit = {
-						OR = {
-							is_controlled_by = ROOT
-							AND = {
-								is_controlled_by = EGY
-								EGY = { is_in_faction_with = ROOT }
-							}
-						}
-					}
-					add_building_construction = {
-						type = air_base
-						level = 2
-						instant_build = yes
-					}
-				}								
-			}
-			447 = {
-				if = {
-					limit = {
-						OR = {
-							is_controlled_by = ROOT
-							AND = {
-								is_controlled_by = EGY
-								EGY = { is_in_faction_with = ROOT }
-							}
-						}
-					}
-					# Alexandria
-					add_building_construction = {
-						type = naval_base
-						level = 2
-						province = 4076
-						instant_build = yes
-					}
-				}								
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			# Nova Scotia
-			464 = {
-				if = {
-					limit = {
-						OR = {
-							is_controlled_by = ROOT
-							AND = {
-								is_controlled_by = CAN
-								CAN = { is_in_faction_with = ROOT }
-							}
-						}
-					}
-					add_building_construction = {
-						type = air_base
-						level = 2
-						instant_build = yes
-					}
-					# Halifax
-					add_building_construction = {
-						type = naval_base
-						level = 2
-						province = 7361
-						instant_build = yes
-					}
-				}								
-			}
-			# Malta
-			116 = {
-				if = {
-					limit = {
-						OR = {
-							is_controlled_by = ROOT
-							AND = {
-								is_controlled_by = MLT
-								MLT = { is_in_faction_with = ROOT }
-							}
-						}
-					}
-					add_building_construction = {
-						type = air_base
-						level = 1
-						instant_build = yes
-					}
-				}								
-			}
-			# Gibraltar
-			118 = {
-				if = {
-					limit = {
-						is_controlled_by = ROOT
-						free_building_slots = {
-							building = bunker
-							size > 0
-							province = 4135
-						}
-					}
-					add_building_construction = {
-						type = bunker
-						level = 1
-						province = 4135
-						instant_build = yes
-					}
-				}								
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					mark_focus_tree_layout_dirty = yes
 				}
-			}
 		}
 	}
 
@@ -4502,12 +4368,12 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = ENG_global_defense
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
 		completion_reward = {
-			add_stability = -0.10
+			add_stability = -0.05
 			remove_ideas = ENG_the_war_to_end_all_wars
 		}
 	}
@@ -4516,23 +4382,8 @@ focus_tree = {
 		id = ENG_motion_of_no_confidence
 		prerequisite = { focus = ENG_global_defense }
 		available = { 
-			has_country_leader =  {
-				character = ENG_neville_chamberlain
-				ruling_only = yes
-			}
 		}
 		bypass = {
-			OR = {
-				has_country_leader =  {
-					character = ENG_winston_churchill
-					ruling_only = yes
-				}
-				has_country_leader =  {
-					name = "Lord Edward Halifax"
-					ruling_only = yes
-				}
-				NOT = {	has_character = ENG_winston_churchill } #MM: GoE content if he is transferred to India via event chain triggered by focus RAJ_the_jewel_becomes_the_crown
-			}
 		}
 
 		continue_if_invalid = yes
@@ -4541,13 +4392,13 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = ENG_global_defense
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 
 		completion_reward = {
-			add_stability = -0.10
+			add_stability = -0.05
 			country_event = { id = mtg_britain.22 }
 		}
 	}
@@ -4557,7 +4408,6 @@ focus_tree = {
 		prerequisite = { focus = ENG_every_man_will_do_his_duty }
 		prerequisite = { focus = ENG_motion_of_no_confidence }
 		available = { 
-			is_subject = no
 		}
 
 		continue_if_invalid = yes
@@ -4571,13 +4421,7 @@ focus_tree = {
 			factor = 1
 		}	
 		completion_reward = {
-			add_stability = -0.10
-			custom_effect_tooltip = ENG_no_further_appeasement_tt
-			hidden_effect = {
-				set_rule = { can_declare_war_on_same_ideology = yes }
-				set_rule = { can_puppet = yes }
-			}
-			set_rule = { can_send_volunteers = yes }
+			add_ideas =  {partial_economic_mobilisation}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = ENG_no_further_appeasement_idea
 			hidden_effect = { news_event = { id = mtg_news.16 days = 1 } }
