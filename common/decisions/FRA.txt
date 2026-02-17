@@ -1590,59 +1590,7 @@ economy_decisions = {
 	}
 }
 political_actions = {
-	FRA_rally_the_leagues = {
-		available = { }
-
-		visible = { 
-			 
-			NOT = { has_government = fascism }
-		}
-
-		days_re_enable = 60
-
-		complete_effect = {
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.05
-			}
-			add_popularity = {
-				ideology = neutrality
-				popularity = 0.05
-			}
-			add_stability = -0.03
-		}
-		ai_will_do = {
-			factor = 5
-			modifier = {
-				has_stability < 0.3
-				factor = 0
-			}
-		}
-	}
-	FRA_unleash_la_cagoule = {
-		available = { }
-
-		visible = { 
-			 
-			NOT = { has_government = fascism }
-		}
-		days_re_enable = 30
-		complete_effect = {
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.1
-			}
-			add_stability = -0.075
-		}
-		cost = 25
-		ai_will_do = {
-			factor = 5
-			modifier = {
-				has_stability < 0.3
-				factor = 0
-			}
-		}
-	}
+	
 }
 VIC_concessions_to_the_germans = {
 	VIC_basing_rights = {

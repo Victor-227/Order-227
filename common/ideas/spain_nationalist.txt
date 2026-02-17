@@ -22,6 +22,229 @@ ideas = {
 
 	country = {
 
+		SPA_infra_slop= {
+
+		name = SPA_alcazar
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+             production_speed_infrastructure_factor = 0.10
+
+
+
+			}
+
+			rule = { can_decline_call_to_war = yes }
+
+		}
+
+		SPA_Larraz_plan3 = {
+
+		name = SPA_Larraz_plan
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+               production_speed_arms_factory_factor = 0.125
+			   industrial_capacity_factory = 0.05
+			production_factory_start_efficiency_factor = 0.025
+
+
+			}
+
+			rule = { can_decline_call_to_war = yes }
+
+		}
+
+		SPA_Central_Planning = {
+
+		name = SPA_Central_Planning
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+               production_lack_of_resource_penalty_factor = -0.10	
+				consumer_goods_expected_value = -0.025
+			}
+
+			rule = { can_decline_call_to_war = yes }
+
+		}
+
+		SPA_Larraz_plan2 = {
+
+		name = SPA_Larraz_plan
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+               production_speed_arms_factory_factor = 0.1
+				consumer_goods_expected_value = 0.05
+			}
+
+			rule = { can_decline_call_to_war = yes }
+
+		}
+		SPA_mil_industry_1 = {
+
+		name = German_engineers
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_factory_efficiency_gain_factor = 0.075
+				production_factory_start_efficiency_factor = 0.05
+
+			}
+
+			rule = { can_decline_call_to_war = yes }
+
+		}
+
+		SPA_Larraz_plan = {
+
+		name = SPA_Larraz_plan
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+				production_speed_buildings_factor = -0.05
+				consumer_goods_expected_value = 0.1
+			}
+
+			rule = { can_decline_call_to_war = yes }
+
+		}
+
+	    SPA_Sweat_and_tears = {
+		Name = Sweat_and_tears
+
+		picture = GFX_focus_ARG_women_in_industry
+
+		allowed = {original_tag = SPR }
+
+		allowed_civil_war = {always = yes}
+
+
+		Modifier = { 
+			industrial_capacity_factory = 0.075
+			production_factory_max_efficiency_factor = 0.10
+			production_speed_buildings_factor = 0.10
+			
+
+
+
+		}
+		}
+
+		SPA_INDUSTRY_BUFF_1 = {
+		Name = Right_to_work
+
+		picture = GFX_focus_ARG_women_in_industry
+
+		allowed = {original_tag = SPR }
+
+		allowed_civil_war = {always = yes}
+
+
+		Modifier = { 
+			industrial_capacity_factory = 0.05
+            production_speed_buildings_factor = 0.05
+			production_factory_max_efficiency_factor = 0.10
+
+
+		}
+		}
+		SPA_left_cg = {
+			name = Stable_economy
+			
+			picture = GFX_focus_ARG_women_in_industry
+
+			allowed = {original_tag = SPR }
+
+			allowed_civil_war = {always = yes}
+
+			modifier = {
+				consumer_goods_expected_value = -0.075
+			}
+		}
+
 		SPA_death_before_surrender = {
 
 			name = SPR_death_before_surrender
