@@ -26,12 +26,6 @@ ideas = {
 				consumer_goods_expected_value = -0.05
 			}
 		}
-		FRA_immigration = {
-			allowed ={always= yes}
-			removal_cost = -1
-			picture = generic_army_war_college
-			modifier = {production_speed_buildings_factor = 0.10}
-		}	
 		FRA_french_union1={allowed={always=yes}
 		removal_cost=-1
 		picture=generic_goods_red_bonus
@@ -63,6 +57,7 @@ ideas = {
 		picture=generic_goods_red_bonus
 		modifier = {
 			production_factory_start_efficiency_factor = 0.15
+			consumer_goods_expected_value = 0.025
 		}
 		}	
 		FRA_growth= {
@@ -335,7 +330,7 @@ ideas = {
 
 			}
 		}
-		FRA_expanded_citizenship = {
+		FRA_expanded_citizenship_1 = {
 			picture = generic_army_war_college
 			allowed = {
 				original_tag = FRA
@@ -351,6 +346,26 @@ ideas = {
 			modifier = {
 				industrial_capacity_factory = 0.05
 				industrial_capacity_dockyard = 0.05
+			}
+		}
+		FRA_expanded_citizenship_2 = {
+			picture = generic_army_war_college
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_speed_buildings_factor = 0.10
+				non_core_manpower = 0.1
 			}
 		}
 		FRA_france_undividable = {

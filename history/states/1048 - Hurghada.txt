@@ -1,0 +1,22 @@
+state=
+{
+	id=1048
+	name="STATE_1048" # Arabian Desert
+	manpower = 1018
+	
+	state_category = wasteland
+	
+	history = {
+		owner = ENG
+		buildings = {
+			infrastructure = 1
+		}
+
+		add_core_of = KUR
+	}
+	provinces={
+		4068 4910 5069 7156 12889 
+	}
+
+	local_supplies=0.0 
+}

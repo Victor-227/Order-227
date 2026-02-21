@@ -9975,7 +9975,7 @@
 9974;131;42;139;land;true;plains;6
 9975;131;45;54;land;true;urban;6
 9976;131;45;99;land;false;mountain;5
-9977;131;45;204;land;false;desert;5
+9977;192;204;87;land;false;desert;5
 9978;131;48;19;land;true;plains;6
 9979;131;48;64;land;true;urban;1
 9980;131;48;169;land;true;plains;5
@@ -10124,7 +10124,7 @@
 10123;131;201;159;land;true;hills;5
 10124;131;204;74;land;true;plains;6
 10125;131;204;224;land;true;urban;6
-10126;131;207;39;land;true;mountain;5
+10126;131;207;39;land;true;hills;5
 10127;131;210;4;land;false;desert;5
 10128;131;210;154;land;true;mountain;6
 10129;131;210;209;land;false;plains;6
@@ -13380,6 +13380,13 @@
 13379;211;179;5;land;false;forest;6
 13380;39;26;34;land;false;mountain;6
 13381;183;231;3;land;false;mountain;6
-13382;183;231;4;land;false;hills;5
+13382;183;231;4;land;false;hills;5   #new provinces start with this one
 13383;183;231;5;land;false;desert;5
 13384;183;231;6;land;false;desert;5
+13385;237;21;65;land;false;desert;5
+13386;167;169;221;land;false;desert;5
+13387;167;169;121;land;false;desert;5
+13388;145;64;95;land;false;desert;5
+13389;142;139;51;land;false;desert;5
+13390;142;55;61;land;false;desert;5
+13391;88;142;69;land;false;desert;5
