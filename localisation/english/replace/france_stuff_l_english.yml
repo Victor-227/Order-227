@@ -22,4 +22,4 @@
  FRA_form_the_national_committee_1:0 "Form the National Committee"
  FRA_continue_the_fight_1:0 "Continue the Fight"
  FRA_tank_focus1:0 "US Arms Purchases"
- test_tt:0 "Remove §YInefficient Economy§ , §Wwhich grants \n£factory_output_texticon  Factory Output:§ §R-20.00%§ \n§W£dockyard_output_texticon  Dockyard Output:§ §R -20.00%§ §W.§"
+ test_tt:0 "Remove §YInefficient Economy§ , §Wwhich grants \n£factory_output_texticon  Factory Output:§ §R-20.00%§ \n§W£dockyard_output_texticon  Dockyard Output:§ §R -20.00%§ §W.                §"

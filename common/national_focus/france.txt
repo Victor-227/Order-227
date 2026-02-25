@@ -1454,7 +1454,7 @@
 		completion_reward = {
 			custom_effect_tooltip = test_tt
 			hidden_effect = {
-				remove_ideas = { FRA_inefficient_economy_2 }
+				remove_ideas = { FRA_inefficient_economy_1 }
 			}
 		}
 	}
@@ -2324,18 +2324,10 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
-		complete_tooltip = {
-			if = {
-				limit = { has_idea = FRA_inefficient_economy_1 }
-				remove_ideas = {  FRA_inefficient_economy_2
-				}
-			}
-			
-		}
 		completion_reward = {
-			if = {
-				limit = { has_idea = FRA_inefficient_economy_2 }
-				remove_ideas = {FRA_inefficient_economy_2}
+			custom_effect_tooltip = test_tt
+			hidden_effect = {
+				remove_ideas = { FRA_inefficient_economy_1 }
 			}
 		}
 	}
