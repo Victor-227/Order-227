@@ -51,6 +51,9 @@ country_event = {
 			set_country_flag = edward_viii_married_wallis_simpson
 		}
 		name = mtg_britain.5.a
+		trigger = {
+            NOT = { has_completed_focus = ENG_steady_as_she_goes }
+        }
 		add_popularity = { ideology = neutrality popularity = 0.05 }
 		add_stability = 0.05
 		add_political_power = 50

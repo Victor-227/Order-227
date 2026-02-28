@@ -1,6 +1,167 @@
 ideas = {
 
 	country = {
+		ENG_the_kings_path_war = {
+
+			name = ENG_the_kings_path_war
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+				has_government = neutrality
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_factory_start_efficiency_factor = 0.05
+                production_factory_efficiency_gain_factor = 0.05
+				line_change_production_efficiency_factor = 0.05
+				global_building_slots_factor = 0.05
+			}
+
+			picture = eng_the_kings_party
+			
+			removal_cost = -1
+		}
+		ENG_containment_path_war_idea = {
+
+			name = ENG_containment_path_war_idea
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+				has_government = neutrality
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				industrial_capacity_factory= 0.04
+				industrial_capacity_dockyard = 0.04
+				production_speed_arms_factory_factor = 0.05
+				global_building_slots_factor = 0.03
+			}
+
+			picture = eng_the_kings_party
+			
+			removal_cost = -1
+		}
+		ENG_peace_time_construction_1 = {
+
+			name = ENG_peace_time_construction
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.1
+				production_factory_start_efficiency_factor = -0.1
+				production_speed_buildings_factor = 0.1
+				production_speed_arms_factory_factor = -0.15
+				conversion_cost_civ_to_mil_factor = 0.3
+			}
+
+			picture = eng_the_kings_party
+			
+			removal_cost = -1
+		}
+		ENG_peace_time_construction_2 = {
+
+			name = ENG_peace_time_construction
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.1
+				production_factory_start_efficiency_factor = -0.1
+				production_speed_buildings_factor = 0.2
+				production_speed_arms_factory_factor = -0.3
+				conversion_cost_civ_to_mil_factor = 0.3
+			}
+
+			picture = eng_the_kings_party
+			
+			removal_cost = -1
+		}
+		ENG_peace_time_construction_3 = {
+
+			name = ENG_peace_time_construction_1
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.05
+				production_factory_start_efficiency_factor = -0.05
+				production_speed_buildings_factor = 0.2
+				production_speed_arms_factory_factor = -0.3
+				conversion_cost_civ_to_mil_factor = 0.3
+			}
+
+			picture = eng_the_kings_party
+			
+			removal_cost = -1
+		}
+		ENG_appeasement_path_war_idea = {
+
+			name = ENG_appeasement_path_war_idea
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+				has_government = neutrality
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_expected_value = -0.03
+				production_factory_max_efficiency_factor = 0.02
+				global_building_slots_factor = 0.1
+			}
+
+			picture = eng_the_kings_party
+			
+			removal_cost = -1
+		}
 		commonwealth_ties = {
 
 			name = commonwealth_ties
@@ -39,7 +200,8 @@ ideas = {
 			}
 			
 			modifier = {
-				experience_gain_army_factor = 0.1
+				experience_gain_army_factor = 0.075
+				command_power_gain_mult = 0.1
 			}
 		}
 		george_v = {
@@ -168,6 +330,7 @@ ideas = {
 						
 			modifier = {
 				conscription_factor = -0.30
+				war_support_factor = -0.05
 				#conscription = -0.006
 			}
 		}
@@ -625,7 +788,7 @@ ideas = {
 
 		}
 
-		ENG_no_further_appeasement_idea = {
+		ENG_no_further_appeasement_idea_1 = {
 
 			name = ENG_no_further_appeasement
 
@@ -638,17 +801,40 @@ ideas = {
 			}
 
 			modifier = {
-				generate_wargoal_tension = -0.65
-				join_faction_tension = -0.50
-				lend_lease_tension = -0.25
-				send_volunteers_tension = -0.25
-				guarantee_tension = -0.10
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = -0.1
+				conversion_cost_civ_to_mil_factor = -0.3
+				conversion_cost_mil_to_civ_factor = 0.3
+				political_power_gain = -0.2
 			}
 
 			picture = FRA_scw_intervention_nationalists_focus
 			
 			removal_cost = -1	
+		}
+		ENG_no_further_appeasement_idea_2 = {
 
+			name = ENG_no_further_appeasement_idea_2
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_speed_arms_factory_factor = 0.2
+				production_speed_industrial_complex_factor = -0.2
+				conversion_cost_civ_to_mil_factor = -0.3
+				conversion_cost_mil_to_civ_factor = 0.3
+				political_power_gain = -0.2
+			}
+
+			picture = FRA_scw_intervention_nationalists_focus
+			
+			removal_cost = -1	
 		}
 
 		ENG_maintaining_imperial_integrity_idea = {
@@ -664,7 +850,7 @@ ideas = {
 			}
 
 			modifier = {
-				autonomy_gain = -0.5
+				overlord_trade_cost_factor = -0.1
 			}
 
 			picture = generic_pp_unity_bonus
@@ -685,8 +871,8 @@ ideas = {
 			}
 
 			modifier = {
-				production_speed_arms_factory_factor = 0.1
-				industrial_capacity_factory = 0.05
+				local_resources_factor = 0.1
+				line_change_production_efficiency_factor = 0.1
 			}
 
 			picture = generic_production_bonus
@@ -1339,6 +1525,7 @@ ideas = {
 				neutrality_drift = 0.1
 				political_power_factor = 0.15
 				stability_factor = -0.1
+				war_support_factor = -0.05
 			}
 
 			picture = eng_the_kings_party

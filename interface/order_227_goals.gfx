@@ -1,0 +1,46 @@
+spriteTypes = {
+    SpriteType = {
+        name = "king_path_war" 
+        texturefile = "gfx/interface/goals/advanced_industry.dds"
+    }
+    SpriteType = {
+        name = "appeasement_path_war" 
+        texturefile = "gfx/interface/goals/stonks.dds"
+    }
+    SpriteType = {
+        name = "containment_path_war" 
+        texturefile = "gfx/interface/goals/supply.dds"
+    }
+    SpriteType = {
+        name = "ENG_war_focus" 
+        texturefile = "gfx/interface/goals/industrial_mob.dds"
+    }
+    SpriteType = {
+        name = "god_save_king" 
+        texturefile = "gfx/interface/goals/ENG_Edward.dds"
+    }
+    SpriteType = {
+        name = "free_housing" 
+        texturefile = "gfx/interface/goals/housing_boom.dds"
+    }
+    SpriteType = {
+        name = "containment" 
+        texturefile = "gfx/interface/goals/containment.dds"
+    }
+    SpriteType = {
+        name = "appeasement" 
+        texturefile = "gfx/interface/goals/ENG_appeasement.dds"
+    }
+    SpriteType = {
+        name = "GFX_goal_ENG_steady" 
+        texturefile = "gfx/interface/goals/Focus_ENG_Steady_as_She_Goes.dds"
+    }
+    SpriteType = {
+        name = "peace" 
+        texturefile = "gfx/interface/goals/generic_banking_legislation.dds"
+    }
+    SpriteType = {
+        name = "infra_effort" 
+        texturefile = "gfx/interface/goals/ENG_improve_INS_airbases.dds"
+    }
+}

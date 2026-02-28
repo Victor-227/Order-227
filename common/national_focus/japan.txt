@@ -11457,8 +11457,7 @@ focus_tree = {
              
 			 annex_country= {
 				target= CHI
-			 }
-			
+			}
 		}
 	}
 
