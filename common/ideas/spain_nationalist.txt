@@ -21,6 +21,1036 @@ ideas = {
 	}
 
 	country = {
+				SPA_soldados_flexibles2= {
+
+		name = SPA_soldados_flexibles
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			attrition = -0.10
+            snow_attrition = -0.20
+			acclimatization_cold_climate_gain_factor = 0.15
+			}
+
+			rule = { can_decline_call_to_war = yes }
+
+		}
+							SPA_Bash_skull = {
+
+		name = SPA_Bash
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+	
+		targeted_modifier = {
+         tag = SOV
+         attack_bonus_against = 0.1
+     }	
+
+			
+
+			rule = { can_decline_call_to_war = yes }
+
+		}
+			SPA_SUPREME_WIN = {
+
+		name = SPA_EASTWIN
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+	    modifier = {
+        army_attack_factor = 0.10
+		army_defence_factor = 0.10
+		production_factory_start_efficiency_factor = 0.15
+		production_factory_max_efficiency_factor = 0.30
+		industrial_capacity_factory = 0.15
+		consumer_goods_expected_value = -0.40
+		
+
+		}
+            
+			
+
+			rule = { can_decline_call_to_war = yes }
+
+		}
+	SPA_EAST_WIN = {
+
+		name = SPA_EASTWIN
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+	    modifier = {
+        army_attack_factor = 0.05
+		army_defence_factor = 0.05
+		production_factory_start_efficiency_factor = 0.05
+		production_factory_max_efficiency_factor = 0.10
+		industrial_capacity_factory = 0.05
+		
+
+		}
+            
+			
+
+			rule = { can_decline_call_to_war = yes }
+
+		}
+		SPA_WEST_WIN = {
+
+		name = SPA_WESTWIN
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+	    modifier = {
+        army_attack_factor = 0.05
+		army_defence_factor = 0.05
+		production_factory_start_efficiency_factor = 0.05
+		production_factory_max_efficiency_factor = 0.10
+		industrial_capacity_factory = 0.05
+		
+
+		}
+            
+			
+
+			rule = { can_decline_call_to_war = yes }
+
+		}
+																		SPA_Operacion_Lince5 = {
+
+		name = SPA_Operacion_Lince4
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+	    modifier = {
+        army_core_attack_factor = 0.25
+		army_core_defence_factor = 0.25
+		stability_weekly = 0.040
+		
+
+		}
+            
+			
+
+			rule = { can_decline_call_to_war = yes }
+
+		}
+																SPA_Operacion_Lince4 = {
+
+		name = SPA_Operacion_Lince4
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+	    modifier = {
+        army_core_attack_factor = 0.05
+		army_core_defence_factor = 0.05
+		stability_weekly = 0.035
+		
+
+		}
+            
+			
+
+			rule = { can_decline_call_to_war = yes }
+
+		}
+														SPA_Operacion_Lince3 = {
+
+		name = SPA_Operacion_Lince3
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+	    modifier = {
+        army_core_attack_factor = -0.15
+		army_core_defence_factor = -0.15
+		stability_weekly = 0.020
+		
+
+		}
+            
+			
+
+			rule = { can_decline_call_to_war = yes }
+
+		}
+												SPA_Operacion_Lince2 = {
+
+		name = SPA_Operacion_Lince2
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+	    modifier = {
+        army_core_attack_factor = -0.35
+		army_core_defence_factor = -0.35
+		stability_weekly = 0.015
+		
+
+		}
+            
+			
+
+			rule = { can_decline_call_to_war = yes }
+
+		}
+					SPA_africa_gamble = {
+
+		name = SPA_carlist_recovery
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+	
+		targeted_modifier = {
+         tag = ENG
+         attack_bonus_against = 0.075
+     }	
+	    targeted_modifier = {
+        tag = USA
+        attack_bonus_against = 0.075
+     }
+	 	    targeted_modifier = {
+        tag = RAJ
+        attack_bonus_against = 0.075
+     }
+	 	    targeted_modifier = {
+        tag = SAF
+        attack_bonus_against = 0.075
+     }
+	 	    targeted_modifier = {
+        tag = CAN
+        attack_bonus_against = 0.075
+     }
+	 	    targeted_modifier = {
+        tag = FRA
+        attack_bonus_against = 0.075
+     }
+	 	    targeted_modifier = {
+        tag = ASU
+        attack_bonus_against = 0.075
+     }
+            
+			
+
+			rule = { can_decline_call_to_war = yes }
+
+		}
+										SPA_Operacion_Lince = {
+
+		name = SPA_Operacion_Lince
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+	    modifier = {
+        army_core_attack_factor = -0.50
+		army_core_defence_factor = -0.50
+		
+
+		}
+            
+			
+
+			rule = { can_decline_call_to_war = yes }
+
+		}
+		SPA_EXTRACTION= {
+
+		name = SPA_EXTRACTION
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+             local_resources_factor = 0.1
+			 consumer_goods_expected_value = -0.05
+
+
+
+			}
+
+			rule = { can_decline_call_to_war = yes }
+
+		}
+		SPA_TRADE_GER= {
+
+		name = SPA_alcazar
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+             production_speed_infrastructure_factor = 0.10
+			 consumer_goods_expected_value = -0.05
+
+
+
+			}
+
+			rule = { can_decline_call_to_war = yes }
+
+		}
+								SPA_Economic_cannibalism_3 = {
+
+		name = SPA_Economic_cannibalism
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+	    modifier = {
+        stability_weekly = -0.0030
+		
+
+		}
+            
+			
+
+			rule = { can_decline_call_to_war = yes }
+
+		}
+						SPA_Economic_cannibalism_2 = {
+
+		name = SPA_Economic_cannibalism
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+	    modifier = {
+        stability_weekly = -0.0020
+		
+
+		}
+            
+			
+
+			rule = { can_decline_call_to_war = yes }
+
+		}
+						SPA_MILITARIZATION = {
+
+		name = SPA_MILITARIZATION
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+	    modifier = {
+        production_speed_arms_factory_factor = 0.15
+		
+
+		}
+            
+			
+
+			rule = { can_decline_call_to_war = yes }
+
+		}
+				SPA_Economic_cannibalism = {
+
+		name = SPA_Economic_cannibalism
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+	    modifier = {
+        stability_weekly = -0.0015
+		add_war_suport = 0.01
+
+		}
+            
+			
+
+			rule = { can_decline_call_to_war = yes }
+
+		}
+		
+		SPA_Sancta_Hispania = {
+
+		name = SPA_Sancta_Hispania
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+	    modifier = {
+         industrial_capacity_factory = 0.05
+		 production_factory_efficiency_gain_factor = 0.10
+		 production_factory_max_efficiency_factor = 0.10
+		 consumer_goods_expected_value = -0.10
+		}
+            
+			
+
+			rule = { can_decline_call_to_war = yes }
+
+		}
+
+
+
+
+
+
+
+			SPA_KILL_ANGLOS = {
+
+		name = SPA_carlist_recovery
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+	
+		targeted_modifier = {
+         tag = ENG
+         attack_bonus_against = 0.10
+     }	
+	    targeted_modifier = {
+        tag = USA
+        attack_bonus_against = 0.10
+     }
+            
+			
+
+			rule = { can_decline_call_to_war = yes }
+
+		}
+	SPA_gibraltar = {
+
+		name = SPA_carlist_recovery
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+            naval_invasion_prep_speed = 0.5
+			naval_invasion_capacity = 15
+			naval_invasion_penalty = -0.05
+			}
+
+			rule = { can_decline_call_to_war = yes }
+
+		}
+
+				SPA_carlist_recovery_3 = {
+
+		name = SPA_carlist_recovery
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				industrial_capacity_dockyard = -1.50
+				production_speed_buildings_factor = -0.05
+				consumer_goods_expected_value = 0.20
+			}
+
+			rule = { can_decline_call_to_war = yes }
+
+		}
+				SPA_german_advisors= {
+
+		name = SPA_german_advisors
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+		    experience_gain_army_unit_factor = 0.05
+			experience_gain_factor = 0.1
+			}
+
+			rule = { can_decline_call_to_war = yes }
+
+		}
+		SPA_carlist_recovery_2= {
+
+		name = SPA_carlist_recovery
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				industrial_capacity_factory = -0.10
+				industrial_capacity_dockyard = -1.50
+				production_speed_buildings_factor = -0.15
+				consumer_goods_expected_value = 0.25
+			}
+
+			rule = { can_decline_call_to_war = yes }
+
+		}
+							SPA_domestic_lockin= {
+
+		name = SPA_domestic_lockin
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			    industrial_capacity_factory = 0.05
+				production_factory_max_efficiency_factor = 0.10
+			}
+
+			rule = { can_decline_call_to_war = yes }
+
+		}
+					SPA_portuguese_aid= {
+
+		name = SPA_portuguese_aid
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_expected_value = -0.075
+				production_factory_max_efficiency_factor = 0.05
+			}
+
+			rule = { can_decline_call_to_war = yes }
+
+		}
+			SPA_milagro_1= {
+
+		name = SPA_milagro
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+                production_speed_arms_factory_factor = 0.30
+				industrial_capacity_factory = 0.05
+				consumer_goods_expected_value = -0.05
+			}
+
+			rule = { can_decline_call_to_war = yes }
+
+		}
+				SPA_carlist_recovery= {
+
+		name = SPA_carlist_recovery
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+            	ai_get_ally_desire_factor = -300
+				ai_join_ally_desire_factor = -300
+				join_faction_tension = 0.5
+				industrial_capacity_factory = -0.15
+				industrial_capacity_dockyard = -1.75
+				production_speed_buildings_factor = -0.30
+				consumer_goods_expected_value = 0.30
+			}
+
+			rule = { can_decline_call_to_war = yes }
+
+		}
+		SPA_soldados_flexibles= {
+
+		name = SPA_soldados_flexibles
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			attrition = -0.10
+            heat_attrition = -0.20
+			acclimatization_hot_climate_gain_factor = 0.15
+			acclimatization_cold_climate_gain_factor = 0.05
+			}
+
+			rule = { can_decline_call_to_war = yes }
+
+		}
+
+			SPA_Carlist_juntas_locked_in = {
+
+		name = SPA_Carlist_juntas_locked_in
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			army_defence_factor = 0.05
+			army_attack_factor = 0.05
+			neutrality_drift = 0.15
+			training_time_factor = -0.1
+			army_morale_factor = 0.05
+
+			
+			
+
+
+
+			}
+
+			rule = { can_decline_call_to_war = yes }
+
+		}
+
+	SPA_CARLISMO= {
+
+		name = SPA_CARLISMO
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+            
+			stability_weekly = 0.0005
+
+
+
+			}
+
+			rule = { can_decline_call_to_war = yes }
+
+		}
+
+		SPA_FRANCO_CABRA= {
+
+		name = SPA_alcazar
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+             production_speed_infrastructure_factor = -1.50
+			 production_speed_industrial_complex_factor = -1.20
+			 production_speed_arms_factory_factor = 0.20
+			 consumer_goods_expected_value = 0.075
+
+
+
+			}
+
+			rule = { can_decline_call_to_war = yes }
+
+		}
+
+				SPA_FRANCO_BASTARDO= {
+
+		name = SPA_alcazar
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+             production_speed_infrastructure_factor = -0.40
+			 production_speed_industrial_complex_factor = 0.05
+			 production_speed_arms_factory_factor = -0.60
+			 consumer_goods_expected_value = 0.075
+
+
+
+			}
+
+			rule = { can_decline_call_to_war = yes }
+
+		}
+
+		SPA_FRANCO_MODO_BESTIA= {
+
+		name = SPA_alcazar
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+             production_speed_infrastructure_factor = 0.25
+			 production_speed_industrial_complex_factor = -0.30
+			 production_speed_arms_factory_factor = -1
+			 consumer_goods_expected_value = 0.10
+
+
+
+			}
+
+			rule = { can_decline_call_to_war = yes }
+
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 		SPA_infra_slop= {
 
@@ -70,9 +1100,10 @@ ideas = {
 			}
 
 			modifier = {
-               production_speed_arms_factory_factor = 0.125
+               production_speed_buildings_factor = 0.10
 			   industrial_capacity_factory = 0.05
 			production_factory_start_efficiency_factor = 0.025
+			consumer_goods_expected_value = 0.20
 
 
 			}
@@ -127,8 +1158,9 @@ ideas = {
 			}
 
 			modifier = {
-               production_speed_arms_factory_factor = 0.1
-				consumer_goods_expected_value = 0.05
+               production_speed_buildings_factor = 0.05
+			   industrial_capacity_factory = 0.05
+				consumer_goods_expected_value = 0.20
 			}
 
 			rule = { can_decline_call_to_war = yes }
@@ -182,10 +1214,10 @@ ideas = {
 			}
 
 			modifier = {
-				industrial_capacity_factory = -0.1
-				industrial_capacity_dockyard = -0.1
-				production_speed_buildings_factor = -0.05
-				consumer_goods_expected_value = 0.1
+				industrial_capacity_factory = 0.00
+				industrial_capacity_dockyard = -5
+				production_speed_buildings_factor = 0.00
+				consumer_goods_expected_value = 0.30
 			}
 
 			rule = { can_decline_call_to_war = yes }
@@ -204,7 +1236,7 @@ ideas = {
 
 		Modifier = { 
 			industrial_capacity_factory = 0.075
-			production_factory_max_efficiency_factor = 0.10
+			production_factory_efficiency_gain_factor = 0.05
 			production_speed_buildings_factor = 0.10
 			
 
@@ -226,7 +1258,7 @@ ideas = {
 		Modifier = { 
 			industrial_capacity_factory = 0.05
             production_speed_buildings_factor = 0.05
-			production_factory_max_efficiency_factor = 0.10
+			production_factory_efficiency_gain_factor = 0.05
 
 
 		}
@@ -344,10 +1376,10 @@ ideas = {
 				ai_get_ally_desire_factor = -300
 				ai_join_ally_desire_factor = -300
 				join_faction_tension = 0.5
-				industrial_capacity_factory = -0.2
-				industrial_capacity_dockyard = -0.2
-				production_speed_buildings_factor = -0.1
-				consumer_goods_factor = 0.2
+				industrial_capacity_factory = -0.60
+				industrial_capacity_dockyard = -2
+				production_speed_buildings_factor = -0.60
+				consumer_goods_expected_value = 0.35
 			}
 
 			rule = { can_decline_call_to_war = yes }
@@ -376,9 +1408,9 @@ ideas = {
 				ai_get_ally_desire_factor = -200
 				ai_join_ally_desire_factor = -200
 				join_faction_tension = 0.5
-				industrial_capacity_factory = -0.14
-				industrial_capacity_dockyard = -0.14
-				production_speed_buildings_factor = -0.07
+				industrial_capacity_factory = -0.50
+				industrial_capacity_dockyard = -2.25
+				production_speed_buildings_factor = 0.05
 				consumer_goods_factor = 0.15
 			}
 
@@ -405,10 +1437,10 @@ ideas = {
 			}
 
 			modifier = {
-				industrial_capacity_factory = -0.07
-				industrial_capacity_dockyard = -0.07
-				production_speed_buildings_factor = -0.04
-				consumer_goods_factor = 0.10
+				industrial_capacity_factory = -0.50
+				industrial_capacity_dockyard = -3
+				production_speed_buildings_factor = 0.15
+				consumer_goods_expected_value = 0.05
 			}
 
 			rule = { can_decline_call_to_war = yes }
@@ -508,8 +1540,8 @@ ideas = {
 				army_defence_factor = -0.05
 				army_attack_factor = -0.05
 				conscription = 0.01
-				army_infantry_attack_factor = 0.05
-				army_infantry_defence_factor = 0.05
+				army_armor_attack_factor = 0.05
+				army_armor_defence_factor = 0.05
 			}
 		}
 
@@ -724,8 +1756,10 @@ ideas = {
 			}
 
 			modifier = {
-				training_time_factor = -0.1
-				minimum_training_level = -0.1
+				training_time_factor = -0.15
+				minimum_training_level = -0.15
+				experience_gain_factor = 0.10
+				experience_gain_army_factor = 0.10
 			}
 		}
 
@@ -763,7 +1797,8 @@ ideas = {
 			}
 
 			modifier = {
-				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.05
+				consumer_goods_factor = -0.05
 			}
 		}
 
@@ -797,7 +1832,7 @@ ideas = {
 			}
 
 			modifier = {
-				industrial_capacity_factory = 0.1
+				industrial_capacity_factory = 0.075
 			}
 		}
 
@@ -980,7 +2015,7 @@ ideas = {
 			}
 
 			modifier = {
-				max_planning = 0.1
+			consumer_goods_expected_value = -0.05
 			}
 		}
 
@@ -1004,21 +2039,20 @@ ideas = {
 		}
 
 		SPA_la_division_azul = {
+			allowed = { 
+				always = yes 
+			}	 
+			removal_cost = -1
 
-			picture = SPA_la_division_azul
-
-			allowed = {
-				original_tag = SPR
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
+			picture = saf_history_of_segregation
 			modifier = {
-				send_volunteer_size = 3
-				send_volunteer_divisions_required = -0.25
-				send_volunteers_tension = -0.20
+				experience_gain_army_unit_factor = 0.05
+			}
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.10 instant = yes 
+
+				}
 			}
 		}
 
@@ -1035,9 +2069,10 @@ ideas = {
 			}
 
 			modifier = {
-				stability_weekly = -0.005
-				army_defence_factor = -0.1
-				army_attack_factor = -0.1
+				army_defence_factor = 0.05
+				army_attack_factor = 0.05
+			neutrality_drift = 0.10
+
 			}
 		}
 
