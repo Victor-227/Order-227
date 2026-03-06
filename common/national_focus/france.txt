@@ -1166,7 +1166,8 @@
 			focus = FRA_dirigisme
 		}
 		prerequisite = {
-			focus = FRA_national_champions}
+			focus = FRA_national_champions
+		}
 
 		cost = 10
 
@@ -1185,16 +1186,11 @@
 		completion_reward = {
 			random_owned_state = {
 				prioritize = {16}
-				add_extra_state_shared_building_slots = 7
 				add_building_construction = {
 					type = arms_factory
 					level = 7
 					instant_build = yes
 				}
-		}
-		random_owned_state = {
-				prioritize = {16}
-				add_extra_state_shared_building_slots = 7
 				add_building_construction = {
 					type = industrial_complex
 					level = 7
@@ -1390,19 +1386,10 @@
 		completion_reward = {
 			random_owned_state = {
 				prioritize = {779}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				prioritize = {779}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 			}
@@ -1741,17 +1728,6 @@
 		x = 9
 		y = 1
 		
-		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-			}
-		}
-
 		prerequisite = {
 			focus = FRA_reform_the_labour_laws
 			focus = FRA_protect_the_rights_of_man

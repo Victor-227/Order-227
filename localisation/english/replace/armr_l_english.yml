@@ -1,0 +1,9 @@
+﻿l_english:
+ basic_light_tank_chassis_short:0 "1938 Light"
+ improved_light_tank_chassis_short:0 "1941 Light"
+ advanced_light_tank_chassis_short:0 "1943 Light"
+ improved_medium_tank_chassis_short:0 "1941 Medium"
+ advance_medium_tank_chassis_short:0 "1943 Medium"
+ basic_heavy_tank_chassis_short:0 "1938 Heavy"
+ improved_heavy_tank_chassis_short:0 "1941 Heavy"
+ advanced_heavy_tank_chassis_short:0 "1943 Heavy"

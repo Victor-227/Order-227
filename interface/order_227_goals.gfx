@@ -28,7 +28,7 @@ spriteTypes = {
         texturefile = "gfx/interface/goals/containment.dds"
     }
     SpriteType = {
-        name = "appeasement" 
+        name = "GFX_appeasement" 
         texturefile = "gfx/interface/goals/ENG_appeasement.dds"
     }
     SpriteType = {

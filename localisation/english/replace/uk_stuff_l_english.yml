@@ -19,3 +19,6 @@
  ENG_peace_time_construction_1:0 "War Time Industry"
  ENG_appeasement_path_war_idea:0 "The Appeasement Dividend"
  ENG_containment_path_war_idea:0 "Ministry of Supply Authority"
+ has_no_further_appeasement_tt:0 "Has national spirit §YNo Further Appeasement§!"
+ uk_air_base_tt:0 "Set all §YAir Bases§! in §YSouthern England§! to the maximum level."
+ countenance_tt:0 "The §YUnited Kingdom§! and the §YSoviet Union§! execute Operation Countenance, partitioning §YIran§!."
