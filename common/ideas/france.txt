@@ -1743,9 +1743,8 @@ ideas = {
 		
 	}
 	
-	tank_manufacturer = {
+	tank_research = {
 
-		designer = yes
 	
 		# TECHNOLOGY
 		renault_fra = {
@@ -1844,9 +1843,8 @@ ideas = {
 		}
 	}
 	
-	materiel_manufacturer = {
+	material_research = {
 			
-		designer = yes
 		
 		somua = {
 		
@@ -1889,9 +1887,8 @@ ideas = {
 		}
 	}
 	
-	aircraft_manufacturer = {
+	aircraft_research = {
 			
-		designer = yes
 		
 		morane_saulnier = {
 			
@@ -2011,9 +2008,8 @@ ideas = {
 		}
 		
 	}
-	naval_manufacturer = {
+	naval_research = {
 
-		designer = yes
 		
 		fcm = {
 						

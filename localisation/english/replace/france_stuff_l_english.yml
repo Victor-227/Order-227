@@ -25,4 +25,5 @@
  test_tt:0 "Remove §YInefficient Economy§ §W, which grants \n£factory_output_texticon  Factory Output:§  §R-20.00%§ \n§W£dockyard_output_texticon  Dockyard Output:§ §R -20.00%§ §W.                §"
  FRA_democratic:0 "French Republic"
  FRA_democratic_DEF:0 "The French Rebulic"
+ BLT_neutrality:0 "Baltics"
  

@@ -1,5 +1,6 @@
 NDefines.NGame.GAME_SPEED_SECONDS = { 600.0, 0.5, 0.2, 0.1, 0.0 }
 NDefines.NGame.COMBAT_LOG_MAX_MONTHS = 36
+NDefines.NGame.ENERGY_SOURCE = "oil"
 
 NDefines.NDiplomacy.BASE_SEND_ATTACHE_COST = 150
 NDefines.NDiplomacy.BASE_SEND_ATTACHE_CP_COST = 0

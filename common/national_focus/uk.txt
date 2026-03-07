@@ -2821,9 +2821,15 @@ focus_tree = {
 			annex_country= {
 				target= IRE
 			}
-		    transfer_state = 113
-			transfer_state = 134
-			transfer_state = 135
+			113 = {
+				set_compliance = 70
+			}
+			134 = {
+				set_compliance = 70
+			}
+			135 = {
+				set_compliance = 70
+			}
 		}
 	}
 

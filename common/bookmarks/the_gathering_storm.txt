@@ -10,20 +10,6 @@ bookmarks = {
 		"FRA"={
 			history = "FRA_GATHERING_STORM_DESC"
 			ideology = democratic
-			available = { NOT = { has_dlc = "La Resistance" } }
-			ideas = {
-				FRA_victors_of_wwi
-				FRA_disjointed_government
-				FRA_protected_by_the_maginot_line
-			}
-			focuses = { FRA_pre_empt_the_fascist_attack
-			FRA_join_the_ententes
-			FRA_revise_the_constitution
-			}
-		}
-		"FRA"={
-			history = "FRA_GATHERING_STORM_DESC"
-			ideology = democratic
 			available = { has_dlc = "La Resistance" } 
 			ideas = {
 				FRA_victors_of_wwi
@@ -31,7 +17,7 @@ bookmarks = {
 				FRA_protected_by_the_maginot_line
 			}
 			focuses = {
-				FRA_pre_empt_the_fascist_attack
+			FRA_pre_empt_the_fascist_attack
 			FRA_join_the_ententes
 			FRA_revise_the_constitution
 			}
@@ -60,27 +46,11 @@ bookmarks = {
 				george_v
 			}
 			focuses = {
-				ENG_imperial_federation
-				ENG_the_kings_party
-				ENG_organize_the_blackshirts
+				ENG_global_defense
+				ENG_home_defence
+				ENG_god_save_the_king
 			}
 		}
-		"ENG"={
-			history = "ENG_GATHERING_STORM_DESC"
-			ideology = democratic
-			available = { NOT = { has_dlc = "Man the Guns" } }
-			ideas = {
-				stiff_upper_lip
-				ENG_the_war_to_end_all_wars
-				george_v
-			}
-			focuses = {
-				tizard_mission_focus
-				ENG_war_with_germany
-				ENG_war_with_italy
-			}
-		}
-
 		GER = {
 			history = "GER_GATHERING_STORM_DESC"
 			ideology = fascism
@@ -96,23 +66,6 @@ bookmarks = {
 				GER_glory_to_the_imperial_army
 			}
 		}
-
-		GER = {
-			history = "GER_GATHERING_STORM_DESC"
-			ideology = fascism
-			available = { NOT = { has_dlc = "Gotterdammerung" } }
-			ideas = {
-				GER_mefo_bills_1936_fake_ns
-				GER_army_1936_fake_ns
-				GER_airforce_fake_ns
-			}
-			focuses = {
-				GER_fuhrerprinzip
-				GER_revive_the_kaiserreich
-				GER_reestablish_free_elections
-			}
-		}
-
 		"ITA"={
 			history = "ITA_GATHERING_STORM_DESC"
 			ideology = fascism
@@ -128,39 +81,6 @@ bookmarks = {
 				ITA_a_colonial_empire
 			}		
 		}
-		"ITA"={
-			history = "ITA_GATHERING_STORM_DESC"
-			ideology = fascism
-			available = { NOT = { has_dlc = "By Blood Alone" } }
-			ideas = {
-				vittorio_emanuele
-				ITA_iri_fake_ns
-				ITA_re_fake_ns
-			}	
-			focuses = {
-				ITA_comandante_diavolo
-				ITA_to_live_as_a_lion
-				ITA_a_colonial_empire
-			}		
-		}
-		JAP = {
-			history = "JAP_GATHERING_STORM_DESC"
-			available = {  NOT = { has_dlc = "No Compromise, No Surrender" } }
-			ideology = neutrality
-			new_content = yes
-			override_leader_portrait = JAP_emperor_hirohito
-			ideas = {
-				JAP_1936_fake_state_shintoism_idea
-				JAP_1936_fake_industrial_idea
-				JAP_militarism
-			}
-			focuses = {
-				JAP_sea_purge_the_kodoha_faction
-				JAP_the_unthinkable_option
-				JAP_support_the_kodoha_faction
-			}
-		}
-
 		JAP = {
 			history = "JAP_GATHERING_STORM_DESC"
 			available = {  has_dlc = "No Compromise, No Surrender" }
@@ -193,27 +113,9 @@ bookmarks = {
 				SOV_reconvene_the_zemsky_sobor
 			}	
 		}
-		"SOV"={
-			history = "SOV_GATHERING_STORM_DESC"
-			ideology = communism
-			available = { NOT = { has_dlc = "No Step Back" } }
-			ideas = {
-				trotskyite_plot_nsb
-				SOV_second_five_year_plan_fake_1936_ns
-				SOV_politicized_military
-			}
-			focuses = {
-				SOV_behead_the_snake
-				SOV_father_of_nations
-				SOV_the_supreme_soviet
-			}	
-		}
-
 		"---"={
 			history = "OTHER_GATHERING_STORM_DESC"
 		}
-
-
 		# minors from DLC ####
 		"CAN"={
 			minor = yes
@@ -223,7 +125,9 @@ bookmarks = {
 				CAN_great_depression_1
 				CAN_conscription_crisis
 			}
-			focuses = {}
+			focuses = {
+
+			}
 		}
 		"AST"={
 			minor = yes
@@ -238,7 +142,6 @@ bookmarks = {
 				AST_delegation_to_china
 			}
 		}
-		
 		"SAF"={
 			minor = yes
 			history = "SAF_GATHERING_STORM_DESC"
@@ -249,27 +152,10 @@ bookmarks = {
 			}
 			focuses = {
 				SAF_secure_interests_in_africa
+				SAF_abandon_westminster
 				SAF_support_the_german_coup
-				SAF_anti_colonialist_crusade
 			}
 		}
-
-		RAJ = {
-			minor = yes
-			history = "RAJ_GATHERING_STORM_DESC"
-			available = {  NOT = { has_dlc = "Graveyard of Empires" } }
-			ideology = neutrality
-			ideas = {
-				RAJ_agrarian_society
-				RAJ_princely_states
-			}
-			focuses = {
-				RAJ_all_india_forward_bloc
-				RAJ_indian_gurkhas
-				RAJ_the_smiling_buddha
-			}
-		}
-
 		RAJ = {
 			minor = yes
 			history = "RAJ_GATHERING_STORM_DESC"
@@ -286,25 +172,6 @@ bookmarks = {
 				RAJ_a_peacock_prince
 			}
 		}
-
-		
-
-		HUN = {
-			minor = yes
-			history = "HUN_GATHERING_STORM_DESC"
-			ideology = neutrality
-			available = {  NOT = { has_dlc = "Gotterdammerung" } }
-			ideas = {
-				HUN_treaty_of_triannon
-				HUN_gombos_trade_treaty
-			}
-			focuses = {
-				HUN_proclaim_the_restoration_of_austria_hungary
-				HUN_secret_rearmament
-				HUN_renounce_the_treaty_of_trianon
-			}
-		}
-
 		"ROM"={
 			minor = yes
 			history = "ROM_GATHERING_STORM_DESC"
@@ -319,29 +186,6 @@ bookmarks = {
 				ROM_preserve_greater_romania
 			}
 		}
-		
-		
-	
-		
-
-		"MAN"={
-			minor = yes
-			history = "MAN_GATHERING_STORM_DESC"
-			available = { NOT = { has_dlc = "No Compromise, No Surrender" } }
-			ideology = fascism
-			ideas = {
-				MAN_banditry
-				MAN_kwantung_veto
-				MAN_low_legitimacy_5
-			}
-			focuses = {
-				MAN_obedience
-				MAN_independence_war
-				MAN_claim_the_mandate_of_heaven
-			}
-		}
-		
-
 		"SPR"={
 			minor = yes
 			history = "SPAIN_GATHERING_STORM_DESC"
@@ -353,13 +197,10 @@ bookmarks = {
 			}
 			focuses = {
 				SPA_caudillo_of_spain
-				SPA_no_compromise_on_carlist_ideals
-				SPR_anarchism_knows_no_borders
+				SPA_unite_iberia
+				SPA_supremacy_of_the_communion
 			}
 		}
-
-		
-
 		"BUL"={
 			minor = yes
 			history = "BUL_GATHERING_STORM_DESC"
@@ -375,8 +216,6 @@ bookmarks = {
 				BUL_prussia_of_the_balkans
 			}
 		}
-
-		
 		HUN = {
 			minor = yes
 			history = "HUN_GATHERING_STORM_DESC"
@@ -393,7 +232,6 @@ bookmarks = {
 				wuw_HUN_reviving_the_spirit_of_1848
 			}
 		}
-		
 		MAN = {
 			minor = yes
 			history = "MAN_TSR_GATHERING_STORM_DESC"
