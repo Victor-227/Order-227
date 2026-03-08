@@ -923,18 +923,7 @@ defined_text = { # Country
 	name = GetFrenchCoronationCity
 	text = {
 		trigger = {
-			FRA = {  }
-		}
-		localization_key = LaR_France_Reims
-	}
-	text = {
-		trigger = {
-			FRA = { 
-				OR = {
-					
-					
-				}
-			}
+			always = yes
 		}
 		localization_key = LaR_France_Paris
 	}
@@ -944,27 +933,9 @@ defined_text = { # Country
 	name = GetFrenchRoyalTitle
 	text = {
 		trigger = {
-			FRA = {
-				
-			}
+			always = yes
 		}
 		localization_key = LaR_France_King
-	}
-	text = {
-		trigger = {
-			FRA = {
-				
-			}
-		}
-		localization_key = LaR_France_King_of_The_French
-	}
-	text = {
-		trigger = {
-			FRA = { 
-				
-			}
-		}
-		localization_key = LaR_France_Emperor
 	}
 }
 

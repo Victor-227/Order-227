@@ -1,0 +1,21 @@
+BLT = {
+    male = {
+        names = {
+            Jaan Peeter Toomas Karl Jüri Vladimir Aleksander Rein
+            Janis Peteris Juris Ivars Andris
+            Vytautas Antanas Jonas Petras Juozas
+        }
+    }
+    female = {
+        names = {
+            Maria Anna Kristina Linda Tiina
+            Kristine Inese Sandra
+            Ona Marija Irena
+        }
+    }
+    surnames = {
+        Tamm Saar Sepp Mägi Kukk
+        Berzins Kalnins Ozolins Jansons
+        Kazlauskas Petrauskas Jankauskas
+    }
+}

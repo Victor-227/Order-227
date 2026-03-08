@@ -4,58 +4,26 @@ C:.
 +---common
 |   +---bookmarks (NEEDS FINAL TOUCH BEFORE RELEASE)
 |   +---characters (NEEDS FURTHER OBSERVATION)
-|   +---country_leader
-|   +---decisions
-|   +---defines
-|   +---doctrines
+|   +---country_leader (THIS ONE IS OKAY JUST BALANCING)
+|   +---decisions (NEEDS DEBLOATING BIG TIME)
+|   +---doctrines (OBVIOUS BALANCE REQUIRED)
 |   |   +---grand_doctrines
 |   |   \---subdoctrines
 |   |       +---air
 |   |       +---land
 |   |       \---sea
-|   +---ideas
-|   +---idea_tags
-|   +---military_industrial_organization
-|   |   \---organizations
-|   +---modifiers
-|   +---names
-|   +---national_focus
-|   +---on_actions
-|   +---operations
-|   +---resources
-|   +---scripted_effects
-|   +---scripted_localisation
-|   +---scripted_triggers
-|   +---state_category
-|   +---technologies
-|   +---units
+|   +---ideas  (LEAVING IT HERE STILL NEED DEBLOATING STARTING WITH THIS ONE)
+|   +---idea_tags (THIS ONE IS ACTUALLY FINE BUT NEED IT HERE TO REMIND MYSELF OF THE NEW TAB I ADDED)
+|   +---national_focus (VERY OBVIOUS BUT ALSO NEEDS DEBLOATING)
+|   +---resources (STILL THINKING ABOUT COAL)
+|   +---state_category (SMALL ADJUSTEMENTS NEEDED)
+|   +---technologies (PROBABLY NO BLOAT HERE JUST NEED TO FINISH IT)
+|   +---units (SAME THING HERE)
 |   |   \---equipment
 |   |       +---modules
 |   |       \---upgrades
-|   \---unit_leader
-+---events
-+---gfx
-|   +---flags
-|   |   +---medium
-|   |   \---small
-|   +---interface
-|   |   +---counters
-|   |   |   \---ships_small
-|   |   +---goals
-|   |   +---ideas
-|   |   +---navalcombat
-|   |   |   \---ships
-|   |   \---strategicair
-|   +---leaders
-|   |   +---BLT
-|   |   +---ITA
-|   |   +---ROM
-|   |   \---SAF
-|   \---texticons
-+---history
+|   \---unit_leader (I THINK THIS ONE IS DONE JUST NEED TO CHECK IT REALLY QUICK LATER)
++---history (THIS ONE IS ALSO JUST TOO BIG SO THERE IS PROBABLY A LOT THAT CAN BE DEBLOATED)
 |   +---countries
 |   +---states
 |   \---units
-+---interface
-\---map
-    +---strategicregions
