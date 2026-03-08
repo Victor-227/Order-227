@@ -32,11 +32,11 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = wuw_HUN_status
+		id = HUN_status
 		x = 0
 		y = 0
 
-		cost = 999
+		cost = 9.6
 	}
 
 	focus = {
@@ -73,7 +73,7 @@ focus_tree = {
 
 			add_political_power = 50
 			add_stability = 0.05
-			add_war_support = -0.05
+			add_war_support = -0.1
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -99,7 +99,8 @@ focus_tree = {
 		id = wuw_HUN_end_the_regency
 		icon = GFX_focus_hun_elect_a_king
 		mutually_exclusive = { focus = wuw_HUN_continue_the_regency }
-		x = 16
+		x = 18
+
 		y = 0
 
 		cost = 5
@@ -233,43 +234,16 @@ focus_tree = {
 				}
 				transfer_state_to = ROOT
 			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			every_country = {
-				limit = {
-					NOT = {
-						OR = {
-							original_tag = ROOT
-							is_subject_of = ROOT
-							is_in_faction_with = ROOT
-						}
-					}
-					OR = {
-						owns_state = 664
-						owns_state = 70
-						owns_state = 71
-						owns_state = 73
-						owns_state = 72
-					}
-				}
-				ROOT = {
-					create_wargoal = {
-						type = take_core_state
-						target = PREV
-						#generator = { state_id }
-					}
-				}
-			}
-
 		}
 	}
 
 	focus = {
 		id = wuw_HUN_enact_agrarian_reform
 		icon = GFX_focus_generic_farmland
-		x = 3
-		y = 2
+		prerequisite = { focus = wuw_HUN_cancel_the_german_trade_deal }
+		x = 1
+		y = 1
+		relative_position_id = wuw_HUN_cancel_the_german_trade_deal
 
 		cost = 5
 
@@ -301,10 +275,10 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_cancel_the_german_trade_deal
 		icon = GFX_focus_eng_concessions_to_the_trade_unions
-		prerequisite = { focus = unt_HUN_the_regent_supreme }
+		prerequisite = { focus = HUN_the_regent_supreme }
 		x = 0
 		y = 1
-		relative_position_id = unt_HUN_the_regent_supreme
+		relative_position_id = HUN_the_regent_supreme
 
 		cost = 5
 
@@ -458,46 +432,6 @@ focus_tree = {
 
 			add_political_power = 120
 
-			custom_effect_tooltip = POR_the_communist_threat_tt
-			every_country = {
-				limit = {
-					has_government = communism
-					NOT = { is_in_faction_with = ROOT }
-					OR = {
-						is_major = yes
-						is_neighbor_of = ROOT
-					}
-				}
-			}
-
-			hidden_effect = {
-				every_country = {
-					limit = {
-						has_government = communism
-						NOT = {
-							OR = {
-								is_in_faction_with = ROOT
-								is_subject_of = ROOT
-							}
-						}
-						OR = {
-							is_major = yes
-							is_neighbor_of = ROOT
-						}
-					}
-					ROOT = {
-						add_ai_strategy = {
-							type = declare_war
-							id = PREV
-							value = 100
-						}
-						create_wargoal = {
-							type = topple_government
-							target = PREV
-						}
-					}
-				}
-			}
 		}
 	}
 
@@ -744,8 +678,7 @@ focus_tree = {
 		id = wuw_HUN_reestablish_the_rongyos_garda
 		icon = GFX_focus_HUN_reestablish_the_rongyos_garda
 		prerequisite = { focus = wuw_HUN_strengthen_horthys_reign focus = wuw_HUN_undermine_the_admiral }
-		#mutually_exclusive = { focus = wuw_HUN_undermine_the_admiral }
-		x = 4
+		x = 5
 		y = 2
 		relative_position_id = wuw_HUN_strengthen_horthys_reign
 
@@ -869,7 +802,6 @@ focus_tree = {
 		id = wuw_HUN_strenghten_the_order_of_vitez
 		icon = GFX_focus_HUN_strenghten_the_order_of_vitez
 		prerequisite = { focus = wuw_HUN_strengthen_horthys_reign }
-		#mutually_exclusive = { focus = wuw_HUN_undermine_the_admiral }
 		x = 3
 		y = 1
 		relative_position_id = wuw_HUN_strengthen_horthys_reign
@@ -1045,7 +977,7 @@ focus_tree = {
 		completion_reward = {
 
 			add_stability = 0.05
-			add_war_support = -0.05
+			add_war_support = -0.15
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -1066,7 +998,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = unt_HUN_the_regent_supreme
+		id = HUN_the_regent_supreme
 		icon = GFX_focus_HUN_strengthen_horthys_reign
 		prerequisite = { focus = wuw_HUN_outlaw_the_party_of_national_will }
 		x = 0
@@ -1150,10 +1082,10 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_renounce_the_treaty_of_trianon
 		icon = GFX_focus_renounce_the_treaty_of_trianon
-		prerequisite = { focus = unt_HUN_the_regent_supreme focus = wuw_HUN_government_of_national_unity}
+		prerequisite = { focus = HUN_the_regent_supreme focus = wuw_HUN_government_of_national_unity}
 
-		x = 12
-		y = 5
+		x = 13
+		y = 6
 
 		cost = 2
 
@@ -1276,8 +1208,10 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_the_hungarian_life_and_renewal_party
 		icon = GFX_focus_HUN_the_hungarian_life_and_renewal_party
-		x = 7
-		y = 6
+		prerequisite = { focus = wuw_HUN_cancel_the_german_trade_deal }
+		x = -1
+		y = 1
+		relative_position_id = wuw_HUN_cancel_the_german_trade_deal
 
 		cost = 5
 
@@ -1585,10 +1519,8 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_the_turul_association
 		icon = GFX_focus_HUN_the_turul_association
-		prerequisite = { focus = wuw_HUN_renounce_the_treaty_of_trianon }
-		x = 0
-		y = 1
-		relative_position_id = wuw_HUN_renounce_the_treaty_of_trianon
+		x = 13
+		y = 4
 
 		offset = {
 			x = -8
@@ -1659,9 +1591,10 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_carrying_on_arpads_legacy
 		icon = GFX_focus_HUN_carrying_on_arpads_legacy
-
-		x = 3
-		y = 5
+		prerequisite = { focus = wuw_HUN_the_hungarian_life_and_renewal_party focus = wuw_HUN_enact_agrarian_reform }
+		x = 0
+		y = 2
+		relative_position_id = wuw_HUN_cancel_the_german_trade_deal
 
 		cost = 10
 
@@ -1695,9 +1628,10 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_institute_corporatism
 		icon = GFX_focus_ICE_state_corporatism
-		x = 0
-		y = 2
-		relative_position_id = wuw_HUN_government_of_national_unity
+		prerequisite = { focus = wuw_HUN_a_roman_catholic_state }
+		x = -1
+		y = 1
+		relative_position_id = wuw_HUN_a_roman_catholic_state
 
 		cost = 10
 
@@ -1808,8 +1742,10 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_incorporate_the_hungarian_life_movement
 		icon = GFX_focus_HUN_incorporate_the_hungarian_life_movement
-		x = 20
-		y = 6
+		prerequisite = { focus = wuw_HUN_a_roman_catholic_state }
+		x = 1
+		y = 1
+		relative_position_id = wuw_HUN_a_roman_catholic_state
 
 		cost = 10
 
@@ -1844,9 +1780,10 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_heirs_of_the_huns
 		icon = GFX_focus_generic_fascist_propaganda
-		x = 1
-		y = 1
-		relative_position_id = wuw_HUN_institute_corporatism
+		prerequisite = { focus = wuw_HUN_institute_corporatism focus = wuw_HUN_incorporate_the_hungarian_life_movement }
+		x = 0
+		y = 2
+		relative_position_id = wuw_HUN_a_roman_catholic_state
 
 		cost = 5
 
@@ -2002,9 +1939,8 @@ focus_tree = {
 		id = wuw_HUN_promote_hungarianism
 		icon = GFX_focus_generic_support_the_left_right
 		prerequisite = { focus = wuw_HUN_act_of_defense focus = wuw_HUN_wherever_the_cross_points }
-		#mutually_exclusive = { focus = wuw_HUN_government_of_national_unity }
 		x = 0
-		y = 4
+		y = 3
 		relative_position_id = wuw_HUN_renounce_the_treaty_of_trianon
 
 		offset = {
@@ -2076,12 +2012,8 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_strengthen_the_turani_vadaszok
 		icon = GFX_focus_generic_limited_social_mobilization
-		# GFX_focus_TUR_turanist_ambition
-		prerequisite = { focus = wuw_HUN_promote_hungarianism }
-		#mutually_exclusive = { focus = wuw_HUN_government_of_national_unity }
-		x = 1
-		y = 1
-		relative_position_id = wuw_HUN_promote_hungarianism
+		x = 15
+		y = 3
 
 		cost = 10
 
@@ -3641,59 +3573,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = wuw_HUN_the_cult_of_arpad
-		icon = GFX_focus_HUN_carrying_on_arpads_legacy
-		x = 1
-		y = 5
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 15
-		}
-
-		available = {
-			has_government = democratic
-			has_war_support > 0.79
-			is_subject = no
-			custom_trigger_tooltip = {
-				tooltip = wuw_HUN_proclaim_greater_hungary_core_states_requirement
-				AND = {
-					155 = {
-						is_fully_controlled_by = ROOT
-					}
-					974 = {
-						is_fully_controlled_by = ROOT
-					}
-					973 = {
-						is_fully_controlled_by = ROOT
-					}
-					43 = {
-						is_fully_controlled_by = ROOT
-					}
-					154 = {
-						is_fully_controlled_by = ROOT
-					}
-				}
-			}
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-
-		completion_reward = {
-			add_ideas = HUN_the_cult_of_arpad_idea
-		}
-	}
-
-	focus = {
 		id = wuw_HUN_promote_revanchist_sentiment
 		icon = GFX_focus_focus_fra_revolution_utmost
 		x = 1
@@ -3805,7 +3684,7 @@ focus_tree = {
 		id = wuw_HUN_avoid_interventionalist_destablilization
 		icon = GFX_goal_generic_consumer_goods
 		mutually_exclusive = { focus = wuw_HUN_economic_intervention }
-		x = 9
+		x = 7
 		y = 0
 		relative_position_id = wuw_HUN_end_the_regency
 
@@ -3850,9 +3729,9 @@ focus_tree = {
 		id = wuw_HUN_economic_intervention
 		icon = GFX_goal_generic_demand_territory
 		mutually_exclusive = { focus = wuw_HUN_avoid_interventionalist_destablilization }
-		x = 13
+		x = 6
 		y = 0
-		relative_position_id = wuw_HUN_end_the_regency
+		relative_position_id = wuw_HUN_avoid_interventionalist_destablilization
 
 		cost = 5
 
@@ -3880,7 +3759,7 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_secret_rearmament
 		icon = GFX_focus_secret_rearmament
-		x = 10
+		x = 12
 		y = 0
 		relative_position_id = wuw_HUN_economic_intervention
 
@@ -3937,7 +3816,6 @@ focus_tree = {
 		id = wuw_HUN_forcefully_revitalize_the_industries
 		icon = GFX_goal_generic_forceful_treaty
 		prerequisite = { focus = wuw_HUN_economic_intervention }
-		#mutually_exclusive = { focus = wuw_HUN_avoid_interventionalist_destablilization }
 		x = 1
 		y = 1
 		relative_position_id = wuw_HUN_economic_intervention
@@ -4174,10 +4052,10 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_promote_increased_urbanization
 		icon = GFX_focus_generic_low_cost_housing
-		prerequisite = { focus = wuw_HUN_reintigrate_the_imperial_railroads }
+		prerequisite = { focus = wuw_HUN_magyar_allamvasutak focus = wuw_HUN_reintigrate_the_imperial_railroads }
 		x = 1
 		y = 1
-		relative_position_id = wuw_HUN_reintigrate_the_imperial_railroads
+		relative_position_id = wuw_HUN_magyar_allamvasutak
 
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY }
 
@@ -4238,11 +4116,10 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_expand_the_ganz_muvek
 		icon = GFX_focus_generic_modernize_industry
-		prerequisite = { focus = wuw_HUN_reintigrate_the_imperial_railroads }
-		#mutually_exclusive = { focus = wuw_HUN_avoid_interventionalist_destablilization }
+		prerequisite = { focus = wuw_HUN_magyar_allamvasutak focus = wuw_HUN_reintigrate_the_imperial_railroads }
 		x = -1
 		y = 1
-		relative_position_id = wuw_HUN_reintigrate_the_imperial_railroads
+		relative_position_id = wuw_HUN_magyar_allamvasutak
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -4317,9 +4194,8 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_devalue_the_pengo
 		icon = GFX_focus_HUN_devalue_the_pengo
-		prerequisite = { focus = wuw_HUN_reintigrate_the_imperial_railroads }
-		#mutually_exclusive = { focus = wuw_HUN_avoid_interventionalist_destablilization }
-		x = -2
+		prerequisite = { focus = wuw_HUN_expand_the_ganz_muvek focus = wuw_HUN_promote_increased_urbanization focus = wuw_HUN_manred_weiss_steel_and_metal_works }
+		x = -1
 		y = 2
 		relative_position_id = wuw_HUN_reintigrate_the_imperial_railroads
 
@@ -4369,14 +4245,14 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_announce_the_gyor_program
 		icon = GFX_goal_generic_production
-		prerequisite = { focus = wuw_HUN_expand_the_ganz_muvek focus = wuw_HUN_promote_increased_urbanization }
-		x = 1
+		prerequisite = { focus = wuw_HUN_devalue_the_pengo }
+		x = 0
 		y = 1
-		relative_position_id = wuw_HUN_expand_the_ganz_muvek
+		relative_position_id = wuw_HUN_devalue_the_pengo
 
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
 
-		cost = 10
+		cost = 5
 
 		dynamic = yes
 
@@ -4895,11 +4771,8 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_reinstate_the_navy
 		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = wuw_HUN_secret_rearmament }
-		#mutually_exclusive = { focus = wuw_HUN_avoid_interventionalist_destablilization }
-		x = 16
-		y = 1
-		relative_position_id = wuw_HUN_secret_rearmament
+		x = 65
+		y = 3
 
 		search_filters = { FOCUS_FILTER_NAVY_XP FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_INDUSTRY }
 
@@ -4971,8 +4844,6 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_sailing_the_danube
 		icon = GFX_focus_generic_merchant_fleet
-		prerequisite = { focus = wuw_HUN_secret_rearmament }
-		#mutually_exclusive = { focus = wuw_HUN_avoid_interventionalist_destablilization }
 		x = 14
 		y = 1
 		relative_position_id = wuw_HUN_secret_rearmament
@@ -5016,9 +4887,8 @@ focus_tree = {
 		id = wuw_HUN_make_the_magyar_legiero_known
 		icon = GFX_focus_HUN_make_the_magyar_legiero_known
 		prerequisite = { focus = wuw_HUN_negotiate_the_restrictions }
-		prerequisite = { focus = wuw_HUN_announce_the_gyor_program }
-		#mutually_exclusive = { focus = wuw_HUN_avoid_interventionalist_destablilization }
-		x = -2
+		# prerequisite = { focus = wuw_HUN_announce_the_gyor_program }
+		x = -4
 		y = 2
 		relative_position_id = wuw_HUN_negotiate_the_restrictions
 
@@ -5116,9 +4986,8 @@ focus_tree = {
 		id = wuw_HUN_initiate_army_maneuvers
 		icon = GFX_goal_generic_position_armies
 		prerequisite = { focus = wuw_HUN_negotiate_the_restrictions }
-		prerequisite = { focus = wuw_HUN_announce_the_gyor_program }
-		#mutually_exclusive = { focus = wuw_HUN_avoid_interventionalist_destablilization }
-		x = 5
+		# prerequisite = { focus = wuw_HUN_announce_the_gyor_program }
+		x = 7
 		y = 2
 		relative_position_id = wuw_HUN_negotiate_the_restrictions
 
@@ -5163,8 +5032,7 @@ focus_tree = {
 		id = wuw_HUN_invest_in_ludovica_academy
 		icon = GFX_focus_generic_military_academy
 		prerequisite = { focus = wuw_HUN_negotiate_the_restrictions }
-		#mutually_exclusive = { focus = wuw_HUN_avoid_interventionalist_destablilization }
-		x = 9
+		x = 14
 		y = 2
 		relative_position_id = wuw_HUN_negotiate_the_restrictions
 
@@ -5221,21 +5089,19 @@ focus_tree = {
 		id = wuw_HUN_expand_the_diosgyor_machinery_factory
 		icon = GFX_focus_HUN_expand_the_diosgyor_machinery_factory
 		prerequisite = { focus = wuw_HUN_announce_the_gyor_program }
-		#mutually_exclusive = { focus = wuw_HUN_avoid_interventionalist_destablilization }
 		x = 2
 		y = 1
 		relative_position_id = wuw_HUN_announce_the_gyor_program
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
 		}
 
 		available = {
-			wuw_HUN_does_not_have_trianon = yes
 			AND = {
 				155 = {
 					is_owned_and_controlled_by = ROOT
@@ -5312,25 +5178,21 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_manred_weiss_steel_and_metal_works
 		icon = GFX_focus_generic_steel
-		prerequisite = { focus = wuw_HUN_announce_the_gyor_program }
-		#mutually_exclusive = { focus = wuw_HUN_avoid_interventionalist_destablilization }
-		x = 4
+		prerequisite = { focus = wuw_HUN_magyar_allamvasutak focus = wuw_HUN_reintigrate_the_imperial_railroads }
+		x = 1
 		y = 1
-		relative_position_id = wuw_HUN_announce_the_gyor_program
+		relative_position_id = wuw_HUN_reintigrate_the_imperial_railroads
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
 		}
 
 		available = {
-			wuw_HUN_does_not_have_trianon = yes
-			43 = {
-				is_owned_and_controlled_by = ROOT
-			}
+
 		}
 
 		bypass = {
@@ -5378,12 +5240,12 @@ focus_tree = {
 		icon = GFX_focus_generic_improve_the_administration
 		prerequisite = { focus = wuw_HUN_announce_the_gyor_program }
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = wuw_HUN_announce_the_gyor_program
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 20
@@ -5419,14 +5281,14 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_expand_the_lignite_industry
 		icon = GFX_focus_generic_mining_industry
-		prerequisite = { focus = wuw_HUN_expand_the_hungarian_academy_of_sciences }
-		x = 0
+		prerequisite = { focus = wuw_HUN_announce_the_gyor_program }
+		x = -2
 		y = 1
-		relative_position_id = wuw_HUN_expand_the_hungarian_academy_of_sciences
+		relative_position_id = wuw_HUN_announce_the_gyor_program
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -5471,7 +5333,7 @@ focus_tree = {
 					}				
 					add_resource = {
 						type = coal
-						amount = 8 
+						amount = 67
 					}
 				}
 			}
@@ -5483,12 +5345,11 @@ focus_tree = {
 		id = wuw_HUN_tap_newfound_oil_deposits
 		icon = GFX_goal_generic_oil_refinery
 		prerequisite = { focus = wuw_HUN_expand_the_lignite_industry }
-		mutually_exclusive = { focus = wuw_HUN_hungarian_tradition }
-		x = 1
+		x = 0
 		y = 1
 		relative_position_id = wuw_HUN_expand_the_lignite_industry
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -5559,6 +5420,13 @@ focus_tree = {
 
 			custom_effect_tooltip = available_industrial_concern
 			show_ideas_tooltip = HUN_maort
+			
+			add_tech_bonus = {
+				name = HUN_synthetic_industry
+				bonus = 0.25
+				uses = 2
+				category = synth_resources
+			}
 
 		}
 	}
@@ -5566,11 +5434,12 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_hungarian_autarky
 		icon = GFX_focus_generic_stockpile_fuel
-		prerequisite = { focus = wuw_HUN_hungarian_tradition focus = wuw_HUN_tap_newfound_oil_deposits }
-		#mutually_exclusive = { focus = wuw_HUN_avoid_interventionalist_destablilization }
+		prerequisite = { focus = wuw_HUN_tap_newfound_oil_deposits }
+		prerequisite = { focus = wuw_HUN_budapest_university_of_technology_and_economics }
+		mutually_exclusive = { focus = wuw_HUN_hungarian_tradition }
 		x = -1
 		y = 1
-		relative_position_id = wuw_HUN_tap_newfound_oil_deposits
+		relative_position_id = wuw_HUN_budapest_university_of_technology_and_economics
 
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_RESEARCH }
 
@@ -5596,13 +5465,6 @@ focus_tree = {
 		completion_reward = {
 
 			add_ideas = HUN_hungarian_autarky_idea
-
-			add_tech_bonus = {
-				name = HUN_synthetic_industry
-				bonus = 0.25
-				uses = 2
-				category = synth_resources
-			}
 
 		}
 	}
@@ -5643,11 +5505,12 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_hungarian_tradition
 		icon = GFX_focus_HUN_hungarian_tradition
-		prerequisite = { focus = wuw_HUN_expand_the_lignite_industry }
-		mutually_exclusive = { focus = wuw_HUN_tap_newfound_oil_deposits }
-		x = -1
+		prerequisite = { focus = wuw_HUN_budapest_university_of_technology_and_economics }
+		prerequisite = { focus = wuw_HUN_expand_the_aluminum_industry }
+		mutually_exclusive = { focus = wuw_HUN_hungarian_autarky }
+		x = 1
 		y = 1
-		relative_position_id = wuw_HUN_expand_the_lignite_industry
+		relative_position_id = wuw_HUN_budapest_university_of_technology_and_economics
 
 		cost = 10
 
@@ -5675,11 +5538,10 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_magyar_allamvasutak
 		icon = GFX_focus_HUN_magyar_allamvasutak
-		prerequisite = { focus = wuw_HUN_expand_the_lignite_industry }
-		#mutually_exclusive = { focus = wuw_HUN_hungarian_tradition }
-		x = -2
-		y = 2
-		relative_position_id = wuw_HUN_expand_the_lignite_industry
+		prerequisite = { focus = wuw_HUN_avoid_interventionalist_destablilization focus = wuw_HUN_economic_intervention}
+		x = 2
+		y = 1
+		relative_position_id = wuw_HUN_avoid_interventionalist_destablilization
 
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 
@@ -5716,10 +5578,10 @@ focus_tree = {
 					}
 				}
 				43 = {
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = industrial_complex
-						level = 1
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -5735,11 +5597,10 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_expand_the_aluminum_industry
 		icon = GFX_focus_generic_aluminum
-		prerequisite = { focus = wuw_HUN_expand_the_lignite_industry }
-		#mutually_exclusive = { focus = wuw_HUN_hungarian_tradition }
-		x = 2
-		y = 2
-		relative_position_id = wuw_HUN_expand_the_lignite_industry
+		prerequisite = { focus = wuw_HUN_expand_the_diosgyor_machinery_factory }
+		x = 0
+		y = 1
+		relative_position_id = wuw_HUN_expand_the_diosgyor_machinery_factory
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -5774,22 +5635,21 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_budapest_university_of_technology_and_economics
 		icon = GFX_focus_research
-		prerequisite = { focus = wuw_HUN_expand_the_aluminum_industry focus = wuw_HUN_magyar_allamvasutak }
-		#mutually_exclusive = { focus = wuw_HUN_hungarian_tradition }
-		x = -2
+		prerequisite = { focus = wuw_HUN_expand_the_hungarian_academy_of_sciences }
+		x = 0
 		y = 1
-		relative_position_id = wuw_HUN_expand_the_aluminum_industry
+		relative_position_id = wuw_HUN_expand_the_hungarian_academy_of_sciences
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
 		}
 
 		available = {
-			num_of_factories > 50
+			num_of_factories > 60
 		}
 
 		bypass = {
@@ -6559,11 +6419,9 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_danuvia_submachine_guns
 		icon = GFX_goal_generic_small_arms
-		prerequisite = { focus = wuw_HUN_initiate_army_maneuvers }
-		#mutually_exclusive = { focus = wuw_HUN_repulö_muszaki_intezet }
-		x = -2
+		x = -1
 		y = 1
-		relative_position_id = wuw_HUN_initiate_army_maneuvers
+		relative_position_id = wuw_HUN_invest_in_ludovica_academy
 
 		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
 
@@ -6624,11 +6482,10 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_form_the_gyorshadtest
 		icon = GFX_focus_HUN_form_the_gyorshadtest
-		prerequisite = { focus = wuw_HUN_initiate_army_maneuvers }
-		#mutually_exclusive = { focus = wuw_HUN_repulö_muszaki_intezet }
+		prerequisite = { focus = wuw_HUN_the_botond }
 		x = 0
 		y = 1
-		relative_position_id = wuw_HUN_initiate_army_maneuvers
+		relative_position_id = wuw_HUN_the_botond
 
 		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
 
@@ -6811,11 +6668,9 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_establish_the_mavag_army_division
 		icon = GFX_focus_HUN_establish_the_mavag_army_division
-		prerequisite = { focus = wuw_HUN_form_the_gyorshadtest }
-		#mutually_exclusive = { focus = wuw_HUN_repulö_muszaki_intezet }
 		x = 0
 		y = 1
-		relative_position_id = wuw_HUN_form_the_gyorshadtest
+		relative_position_id = wuw_HUN_quantity_over_quality
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -6878,11 +6733,10 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_doctrinal_studies
 		icon = GFX_goal_generic_army_doctrines
-		prerequisite = { focus = wuw_HUN_invest_in_ludovica_academy }
-		#mutually_exclusive = { focus = wuw_HUN_repulö_muszaki_intezet }
-		x = -1
+		prerequisite = { focus = wuw_HUN_initiate_army_maneuvers }
+		x = 0
 		y = 1
-		relative_position_id = wuw_HUN_invest_in_ludovica_academy
+		relative_position_id = wuw_HUN_initiate_army_maneuvers
 
 		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER }
 
@@ -7080,11 +6934,10 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_light_infantry_divisions_doctrine
 		icon = GFX_focus_prc_infiltration
-		prerequisite = { focus = wuw_HUN_magyar_kiralyi_csendorseg }
-		#mutually_exclusive = { focus = wuw_HUN_repulö_muszaki_intezet }
-		x = 1
+		prerequisite = { focus = wuw_HUN_expand_the_army }
+		x = 0
 		y = 1
-		relative_position_id = wuw_HUN_magyar_kiralyi_csendorseg
+		relative_position_id = wuw_HUN_expand_the_army
 
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_RESEARCH }
 
@@ -7279,7 +7132,7 @@ focus_tree = {
 		icon = GFX_focus_generic_combined_arms
 		prerequisite = { focus = wuw_HUN_doctrinal_studies }
 		mutually_exclusive = { focus = wuw_HUN_expand_the_army }
-		x = -1
+		x = -3
 		y = 1
 		relative_position_id = wuw_HUN_doctrinal_studies
 
@@ -7292,7 +7145,7 @@ focus_tree = {
 		}
 
 		available = {
-			num_of_factories > 29
+
 		}
 
 		bypass = {
@@ -7327,7 +7180,7 @@ focus_tree = {
 		icon = GFX_focus_HUN_expand_the_army
 		prerequisite = { focus = wuw_HUN_doctrinal_studies }
 		mutually_exclusive = { focus = wuw_HUN_quantity_over_quality }
-		x = 1
+		x = 3
 		y = 1
 		relative_position_id = wuw_HUN_doctrinal_studies
 
@@ -7340,7 +7193,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_war_support > 0.84
+
 		}
 
 		bypass = {
@@ -7359,11 +7212,10 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_the_botond
 		icon = GFX_goal_generic_army_motorized
-		prerequisite = { focus = wuw_HUN_quantity_over_quality }
-		#mutually_exclusive = { focus = wuw_HUN_expand_the_army }
-		x = 1
-		y = 1
-		relative_position_id = wuw_HUN_quantity_over_quality
+		prerequisite = { focus = wuw_HUN_doctrinal_studies }
+		x = 0
+		y = 2
+		relative_position_id = wuw_HUN_doctrinal_studies
 
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
 
@@ -7417,10 +7269,8 @@ focus_tree = {
 		id = wuw_HUN_the_turan
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = wuw_HUN_quantity_over_quality }
-		prerequisite = { focus = wuw_HUN_establish_the_mavag_army_division }
-		#mutually_exclusive = { focus = wuw_HUN_expand_the_army }
-		x = -1
-		y = 1
+		x = 1
+		y = 2
 		relative_position_id = wuw_HUN_quantity_over_quality
 
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
@@ -7596,8 +7446,6 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_assault_gun_focus
 		icon = GFX_focus_generic_self_propelled_gun
-		prerequisite = { focus = wuw_HUN_establish_the_mavag_army_division }
-		#mutually_exclusive = { focus = wuw_HUN_the_toldi }
 		x = 0
 		y = 2
 		relative_position_id = wuw_HUN_establish_the_mavag_army_division
@@ -7747,8 +7595,7 @@ focus_tree = {
 		id = wuw_HUN_the_toldi
 		icon = GFX_focus_generic_tankette
 		prerequisite = { focus = wuw_HUN_quantity_over_quality }
-		#mutually_exclusive = { focus = wuw_HUN_assault_gun_focus }
-		x = 0
+		x = -1
 		y = 2
 		relative_position_id = wuw_HUN_quantity_over_quality
 
@@ -7849,8 +7696,7 @@ focus_tree = {
 		id = wuw_HUN_invest_in_the_special_forces
 		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = wuw_HUN_expand_the_army }
-		#mutually_exclusive = { focus = wuw_HUN_assault_gun_focus }
-		x = 1
+		x = 2
 		y = 1
 		relative_position_id = wuw_HUN_expand_the_army
 
@@ -7909,10 +7755,8 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_construct_the_arpad_line
 		icon = GFX_goal_fortify_the_westwall
-		prerequisite = { focus = wuw_HUN_expand_the_army focus = wuw_HUN_quantity_over_quality }
-		#mutually_exclusive = { focus = wuw_HUN_assault_gun_focus }
 		x = 0
-		y = 2
+		y = 5
 		relative_position_id = wuw_HUN_expand_the_army
 
 		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_HISTORICAL }
