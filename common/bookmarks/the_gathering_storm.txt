@@ -137,9 +137,6 @@ bookmarks = {
 				AST_great_depression_1
 			}
 			focuses = {
-				AST_never_another_gallipoli
-				AST_support_indonesian_uprising
-				AST_delegation_to_china
 			}
 		}
 		"SAF"={
@@ -227,9 +224,7 @@ bookmarks = {
 				HUN_hungarian_national_defense_association
 			}
 			focuses = {
-				wuw_HUN_renovato_imperii
 				wuw_HUN_strengthen_horthys_reign
-				wuw_HUN_reviving_the_spirit_of_1848
 			}
 		}
 		MAN = {

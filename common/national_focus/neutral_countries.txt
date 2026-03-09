@@ -1,11 +1,11 @@
 focus_tree = {
 	id = neutral_countries
-	
 	country = {
 		factor = 0
         modifier = {
-            add= 2000
-            OR={tag=BLT
+            add = 2000
+            OR = {
+				tag=BLT
                 tag=IRE
 				tag=FIN 
 				tag=SWE
@@ -25,7 +25,6 @@ focus_tree = {
             }
         }
 	}
-	
 	default = no
 	reset_on_civilwar = no
 }

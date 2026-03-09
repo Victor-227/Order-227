@@ -2696,9 +2696,8 @@ focus_tree = {
 			
 		}
 		icon = GFX_goal_generic_position_armies
-		x = 0
-		y = 1
-		relative_position_id = ENG_consolidate_the_british_isles
+		x = 9
+		y = 3
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -2733,9 +2732,8 @@ focus_tree = {
 		available = {
 		}
 		icon = god_save_king
-		x = 0
-		y = 1
-		relative_position_id = ENG_appeal_to_imperial_loyalists
+		x = 11
+		y = 3
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -2871,9 +2869,8 @@ focus_tree = {
 			
 		}
 		icon = GFX_focus_eng_bring_the_dominions_back_into_the_fold
-		x = 0
-		y = 1
-		relative_position_id = ENG_move_to_secure_the_dominions
+		x = 13
+		y = 3
 		cost = 10
 		ai_will_do = {
 			factor = 1
