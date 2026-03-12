@@ -2098,6 +2098,44 @@ ideas = {
 				factor = 0.5
 			}
 		}
+	}
+	industrial_output = {	
+		
+		famh_1 = {
+						
+			allowed = {
+				original_tag = FRA
+			}
+						
+			research_bonus = {
+				industry = 0.15
+			}
+			
+			traits = { industrial_concern }
+
+			ai_will_do = {
+				factor = 2
+			}
+		}
+
+		sfr_1 = {
+
+			picture = generic_radio_concern
+						
+			allowed = {
+				original_tag = FRA
+			}
+						
+			research_bonus = {
+				electronics = 0.15
+			}
+			
+			traits = { electronics_concern }
+
+			ai_will_do = {
+				factor = 0.5
+			}
+		}
 
 	}
 }

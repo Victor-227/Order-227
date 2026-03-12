@@ -43,7 +43,7 @@ idea_categories = {
 		slot = aircraft_research
 		slot = material_research
 		slot = industrial_concern
-		character_slot = industrial_theorist
+		character_slot = theorist
 		ledger = civilian
 		cost = 150
 		removal_cost = 0
@@ -55,7 +55,7 @@ idea_categories = {
 		slot = aircraft_manufacturer
 		slot = materiel_manufacturer
 		slot = industrial_output
-		character_slot = theorist
+		character_slot = industrial_person
 
 		ledger = civilian
 		

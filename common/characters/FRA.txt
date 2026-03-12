@@ -1706,7 +1706,8 @@ characters={
 			}
 		}
 		advisor={
-			slot = political_advisor
+			cost = 150
+			slot = industrial_person
 			idea_token = FRA_zivony_peshkov
 			allowed  = {
 				original_tag  = FRA
@@ -1732,7 +1733,8 @@ characters={
 			}
 		}
 		advisor={
-			slot = political_advisor
+			cost = 150
+			slot = industrial_person
 			idea_token = FRA_felix_gouin
 			allowed  = {
 				original_tag  = FRA
@@ -1758,7 +1760,8 @@ characters={
 			}
 		}
 		advisor={
-			slot = political_advisor
+			cost = 150
+			slot = industrial_person
 			idea_token = FRA_charles_tillon
 			allowed  = {
 				original_tag  = FRA

@@ -43,4 +43,28 @@ spriteTypes = {
         name = "infra_effort" 
         texturefile = "gfx/interface/goals/ENG_improve_INS_airbases.dds"
     }
+    SpriteType = {
+		name = "GFX_idea_slot_tank_research"
+		textureFile = "gfx/interface/idea_slot_tank_manufacturer.dds"
+	}
+    SpriteType = {
+		name = "GFX_idea_slot_naval_research"
+		textureFile = "gfx/interface/idea_slot_naval_manufacturer.dds"
+	}
+    SpriteType = {
+		name = "GFX_idea_slot_aircraft_research"
+		textureFile = "gfx/interface/idea_slot_aircraft_manufacturer.dds"
+	}
+    SpriteType = {
+		name = "GFX_idea_slot_material_research"
+		textureFile = "gfx/interface/idea_slot_materiel_manufacturer.dds"
+	}
+    SpriteType = {
+		name = "GFX_idea_slot_industrial_output"
+		textureFile = "gfx/interface/idea_slot_industrial_concern.dds"
+	}
+    SpriteType = {
+		name = "GFX_idea_slot_industrial_person"
+		textureFile = "gfx/interface/goals/idea_slot_industrial_theorist.dds"
+	}
 }
