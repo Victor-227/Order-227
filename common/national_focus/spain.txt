@@ -289,9 +289,7 @@ focus_tree = {
 
 	focus = {
 		id = SPA_emergency_munitions_corporations
-		available = {
-			NOT = { has_global_flag = scw_over }
-		}
+
 		bypass = {
 		}
 		prerequisite = { focus = SPA_national_recovery }
@@ -454,9 +452,7 @@ focus_tree = {
 		id = SPA_secure_the_national_defense_council
 		available = {
 		}
-		bypass = {
-			has_global_flag = scw_over
-		}
+
 		prerequisite = { focus = SPA_the_phalanx_ascendant }
 		
 		icon = GFX_goal_generic_political_pressure
@@ -476,9 +472,7 @@ focus_tree = {
 		id = SPA_suspend_the_constitution
 		available = {
 		}
-		bypass = {
-			has_global_flag = scw_over
-		}
+
 		prerequisite = { focus = SPA_primo_de_rivera_prisoner_exchange }
 		
 		icon = GFX_goal_generic_more_territorial_claims
@@ -514,9 +508,7 @@ focus_tree = {
 		id = SPA_primo_de_rivera_prisoner_exchange
 		available = {
 		}
-		bypass = {
-			has_global_flag = scw_over
-		}
+
 		prerequisite = { focus = SPA_the_phalanx_ascendant }
 		
 		icon = GFX_goal_generic_intelligence_exchange
@@ -538,13 +530,7 @@ focus_tree = {
 		id = SPA_eliminate_the_carlists
 		available = {
 		}
-		bypass = {
-			OR = {
-				has_war_with = SPB
-				has_global_flag = SPR_carlist_uprising_flag
-				has_global_flag = scw_over
-			}
-		}
+
 		prerequisite = { focus = SPA_primo_de_rivera_prisoner_exchange }
 		
 		icon = GFX_focus_spa_eliminate_the_carlists
@@ -566,9 +552,7 @@ focus_tree = {
 		id = SPA_establish_the_directory
 		available = {
 		}
-		bypass = {
-			has_global_flag = scw_over
-		}
+
 		prerequisite = { focus = SPA_suspend_the_constitution }
 
 		
@@ -751,9 +735,7 @@ focus_tree = {
 
 	focus = {
 		id = SPA_the_national_syndicalist_state
-		available = {
-			has_global_flag = scw_over
-		}
+
 		bypass = {
 		}
 		prerequisite = { focus = SPA_unite_iberia }
@@ -843,40 +825,6 @@ focus_tree = {
 
 
 
-
-	focus = {
-		id = SPA_commerce_protection
-		available = {
-		}
-		bypass = {
-		}
-		prerequisite = { focus = SPA_expand_the_slipways }
-		
-		icon = GFX_goal_generic_navy_cruiser
-		x = 1
-		y = 2
-		relative_position_id = SPA_invest_in_naval_infrastructure
-		cost = 10
-
-		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_RESEARCH}
-		completion_reward = {
-			add_tech_bonus = {
-				name = SPA_commerce_protection
-				bonus = 1
-				uses = 1
-				category = ca_tech
-			}
-
-			add_mastery_bonus = {
-				name = SPA_commerce_protection
-				bonus = 0.1
-				days = 240
-				track = screens
-
-			}
-		}
-	}
 
 
 
@@ -976,9 +924,7 @@ focus_tree = {
 
 	focus = {
 		id = SPA_the_national_and_popular_army_of_spain
-		available = {
-			has_global_flag = scw_over
-		}
+
 		bypass = {
 		}
 		prerequisite = { focus = SPA_the_phalanx_ascendant}
@@ -1632,12 +1578,7 @@ focus_tree = {
 		id = SPA_save_the_alcazar
 		available = {
 		}
-		bypass = {
-			OR = {
-				controls_province = 858
-				has_global_flag = scw_over
-			}
-		}
+
 		prerequisite = { focus = SPA_unify_the_nationalist_front }
 		
 		icon = GFX_focus_spa_save_the_alcazar
@@ -1658,9 +1599,7 @@ focus_tree = {
 		id = SPA_martyrdom_for_primo_de_rivera
 		available = {
 		}
-		bypass = {
-			has_global_flag = scw_over
-		}
+
 		prerequisite = { focus = SPA_expand_the_axis_gold_trade }
 		
 		icon = GFX_goal_generic_secret_weapon
@@ -1730,9 +1669,7 @@ focus_tree = {
 	focus = {
 		id = SPA_consolidate_the_north
 
-		bypass = {
-			has_global_flag = scw_over
-		}
+	
 		prerequisite = { focus = SPA_supremacy_of_the_communion }
 		
 		icon = GFX_goal_generic_position_armies
@@ -1781,9 +1718,7 @@ focus_tree = {
 	focus = {
 		id = SPA_portuguese_aid
 
-		bypass = {
-			has_global_flag = scw_over
-		}
+
 		prerequisite = { focus = SPA_the_stabilization_plan }
 		
 		icon = GFX_focus_generic_befriend_portugal
@@ -2055,7 +1990,7 @@ focus_tree = {
 		prerequisite = { focus = SPA_demand_french_north_africa focus = SPA_la_division_azul}
 
 		
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_PHI_hispanidad_filipina
 		x = -1
 		y = 3
 		relative_position_id = SPA_adopt_the_26_points
@@ -2166,17 +2101,7 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
-		complete_tooltip = {
-			every_state = {
-				limit = { has_state_flag = SPA_expand_the_slipways_3DY }
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = dockyard
-					level = 3
-					instant_build = yes
-				}
-			}
-		}
+
 
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -2218,44 +2143,6 @@ focus_tree = {
 	}
 
 
-	focus = {
-		id = SPA_restart_small_scale_shipbuilding
-		available = {
-		}
-		bypass = {
-		}
-		prerequisite = { focus = SPA_expand_the_slipways }
-		
-		icon = GFX_focus_generic_destroyer
-		x = -1
-		y = 2
-		relative_position_id = SPA_invest_in_naval_infrastructure
-		cost = 10
-
-		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_RESEARCH}
-		completion_reward = {
-			navy_experience = 25
-			add_tech_bonus = {
-				name = SPA_restart_small_scale_shipbuilding
-				bonus = 1
-				uses = 1
-				category = ca_tech
-			}
-			add_tech_bonus = {
-				name = SPA_restart_small_scale_shipbuilding
-				bonus = 1
-				uses = 1
-				category = dd_tech
-			}
-			add_tech_bonus = {
-				name = SPA_restart_small_scale_shipbuilding
-				bonus = 1
-				uses = 1
-				category = ss_tech
-			}
-		}
-	}
 
 	focus = {
 		id = SPA_la_division_azul
@@ -2463,9 +2350,7 @@ focus_tree = {
 		id = SPA_contact_the_union_militar_espanola
 		available = {
 		}
-		bypass = {
-			has_global_flag = scw_over
-		}
+
 		prerequisite = { focus = SPA_restore_the_monarchy }
 		
 		
@@ -2487,9 +2372,7 @@ focus_tree = {
 		id = SPA_head_the_junta_nacional
 		available = {
 		}
-		bypass = {
-			has_global_flag = scw_over
-		}
+
 		prerequisite = { focus = SPA_supremacy_of_the_communion }
 		
 		icon = GFX_goal_generic_political_pressure
@@ -2510,9 +2393,7 @@ focus_tree = {
 		id = SPA_unite_the_requetes
 		available = {
 		}
-		bypass = {
-			has_global_flag = scw_over
-		}
+
 		prerequisite = { focus = SPA_head_the_junta_nacional }
 		
 		icon = GFX_goal_generic_military_sphere
@@ -2535,9 +2416,7 @@ focus_tree = {
 		id = SPA_the_war_in_the_north
 		available = {
 		}
-		bypass = {
-			has_global_flag = scw_over
-		}
+
 		prerequisite = { focus = SPA_supremacy_of_the_communion }
 		
 		icon = GFX_goal_generic_position_armies
@@ -2557,9 +2436,7 @@ focus_tree = {
 		id = SPA_revive_the_spirit_of_the_carlist_wars
 		available = {
 		}
-		bypass = {
-			has_global_flag = scw_over
-		}
+
 		prerequisite = { focus = SPA_the_war_in_the_north }
 		
 		icon = GFX_goal_generic_propaganda
@@ -2941,7 +2818,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = SPA_restore_the_empire }
 		
-		icon =  GFX_goal_generic_demand_territory
+		icon =  GFX_focus_generic_farmland
 		x = -1
 		y = 1
 		relative_position_id = SPA_restore_the_empire
@@ -2973,7 +2850,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = SPA_strengthen_the_empire }
 		
-		icon =  GFX_goal_generic_demand_territory
+		icon =   GFX_focus_RAJ_special_economic_zones
 		x = 0
 		y = 1
 		relative_position_id = SPA_strengthen_the_empire
@@ -3046,7 +2923,7 @@ focus_tree = {
 		prerequisite = { focus = SPA_press_the_gibraltar_claim}
 		prerequisite = { focus = SPA_kill_the_anglo }
 		
-		icon = GFX_focus_attack_britain
+		icon = GFX_focus_CHL_promote_pan_hispanic_rhetoric
 		x = 0
 		y = 4
 		relative_position_id = SPA_restore_the_empire
@@ -3067,7 +2944,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = SPA_found_the_academia_vazquez_de_mella}
 		
-		icon = GFX_focus_attack_britain
+		icon = GFX_focus_PHI_beach_defense_strategy
 		x = 1
 		y = 2
 		relative_position_id = SPA_restore_the_empire
@@ -3092,7 +2969,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = SPA_fortnite2 }
 		
-		icon = GFX_focus_attack_britain
+		icon = GFX_focus_spa_the_war_of_vengeance
 		x = 1
 		y = 3
 		relative_position_id = SPA_restore_the_empire

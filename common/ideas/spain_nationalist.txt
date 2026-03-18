@@ -1411,7 +1411,7 @@ ideas = {
 				industrial_capacity_factory = -0.50
 				industrial_capacity_dockyard = -2.25
 				production_speed_buildings_factor = 0.05
-				consumer_goods_factor = 0.15
+				consumer_goods_expected_value = 0.15
 			}
 
 			rule = { can_decline_call_to_war = yes }
@@ -1719,7 +1719,7 @@ ideas = {
 			}
 
 			modifier = {
-				consumer_goods_factor = -0.15
+				consumer_goods_expected_value = -0.15
 			}
 		}
 
@@ -1798,7 +1798,7 @@ ideas = {
 
 			modifier = {
 				production_speed_industrial_complex_factor = 0.05
-				consumer_goods_factor = -0.05
+				consumer_goods_expected_value = -0.05
 			}
 		}
 
@@ -1852,7 +1852,7 @@ ideas = {
 
 			modifier = {
 				stability_weekly = 0.002
-				consumer_goods_factor = -0.15
+				consumer_goods_expected_value = -0.15
 			}
 		}
 
@@ -1872,7 +1872,7 @@ ideas = {
 
 			modifier = {
 				stability_weekly = 0.002
-				consumer_goods_factor = -0.15
+				consumer_goods_expected_value = -0.15
 				production_speed_infrastructure_factor = 0.1
 			}
 		}
@@ -1892,7 +1892,7 @@ ideas = {
 			}
 
 			modifier = {
-				consumer_goods_factor = -0.25
+				consumer_goods_expected_value = -0.25
 				production_speed_infrastructure_factor = 0.1
 			}
 		}
@@ -1912,7 +1912,7 @@ ideas = {
 			}
 
 			modifier = {
-				consumer_goods_factor = -0.25
+				consumer_goods_expected_value = -0.25
 				production_speed_infrastructure_factor = 0.1
 				production_speed_industrial_complex_factor = 0.1
 			}
@@ -1933,7 +1933,7 @@ ideas = {
 			}
 
 			modifier = {
-				consumer_goods_factor = -0.15
+				consumer_goods_expected_value = -0.15
 				production_speed_infrastructure_factor = 0.1
 				production_speed_industrial_complex_factor = 0.1
 			}
@@ -1954,7 +1954,7 @@ ideas = {
 			}
 
 			modifier = {
-				consumer_goods_factor = -0.25
+				consumer_goods_expected_value = -0.25
 				production_speed_infrastructure_factor = 0.1
 				production_speed_industrial_complex_factor = 0.1
 				industrial_capacity_factory = 0.05
@@ -1977,7 +1977,7 @@ ideas = {
 			}
 
 			modifier = {
-				consumer_goods_factor = -0.15
+				consumer_goods_expected_value = -0.15
 				production_speed_infrastructure_factor = 0.1
 				production_speed_industrial_complex_factor = 0.1
 				industrial_capacity_factory = 0.05
