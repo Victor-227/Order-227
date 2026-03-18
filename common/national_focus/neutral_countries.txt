@@ -22,6 +22,8 @@ focus_tree = {
 				tag=BEL
 				tag=CHI
 				tag=PER
+				tag=TUR
+				tag=SWI
             }
         }
 	}
