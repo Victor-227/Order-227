@@ -1,0 +1,163 @@
+ITA_mussolini_dec_cat = {
+	ITA_mussolini_1 = {
+	   icon = GFX_decision_generic_speech
+	    allowed = {
+		    tag = ITA
+	    }
+
+	    available = {
+		    has_completed_focus = ITA_strengthen_the_regime
+	    }
+
+	    visible = {
+		    always = yes
+	    }
+
+        fire_only_once = yes
+	    cost = 150
+
+		modifier = {
+			consumer_goods_expected_value = 0.05		
+		}
+		days_remove = 180
+
+	    remove_effect = {
+	        161 = {
+                add_resource = {
+                    type = steel
+                    amount = 10
+                }
+            }
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 800
+				producer = ITA
+			}
+	    }
+    }
+	ITA_mussolini_1 = {
+	   icon = GFX_decision_generic_speech
+	    allowed = {
+		    tag = ITA
+	    }
+
+	    available = {
+		    has_completed_focus = ITA_strengthen_the_regime
+	    }
+
+	    visible = {
+		    always = yes
+	    }
+
+        fire_only_once = yes
+	    cost = 150
+
+		modifier = {
+			consumer_goods_expected_value = 0.05		
+		}
+		days_remove = 180
+
+	    remove_effect = {
+	        161 = {
+                add_resource = {
+                    type = steel
+                    amount = 18
+                }
+            }
+	    }
+    }
+	ITA_mussolini_2 = {
+	   icon = GFX_decision_generic_speech
+	    allowed = {
+		    tag = ITA
+	    }
+
+	    available = {
+		    has_completed_focus = ITA_strengthen_the_regime
+	    }
+
+	    visible = {
+		    always = yes
+	    }
+
+        fire_only_once = yes
+	    cost = 150
+
+		modifier = {
+			consumer_goods_expected_value = 0.05		
+		}
+		days_remove = 180
+
+	    remove_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 5000
+				producer = ITA
+			}
+		}
+    }
+	ITA_mussolini_3 = {
+	   icon = GFX_decision_generic_speech
+	    allowed = {
+		    tag = ITA
+	    }
+
+	    available = {
+		    has_completed_focus = ITA_strengthen_the_regime
+	    }
+
+	    visible = {
+		    always = yes
+	    }
+
+        fire_only_once = yes
+	    cost = 150
+
+		modifier = {
+			consumer_goods_expected_value = 0.05		
+		}
+		days_remove = 180
+
+	    remove_effect = {
+	        157 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+                add_resource = {
+                    type = chromium
+                    amount = 10
+                }
+            }
+	    }
+    }
+	ITA_mussolini_4 = {
+	   icon = GFX_decision_generic_speech
+	    allowed = {
+		    tag = ITA
+	    }
+
+	    available = {
+		    has_completed_focus = ITA_strengthen_the_regime
+	    }
+
+	    visible = {
+		    always = yes
+	    }
+
+        fire_only_once = yes
+	    cost = 150
+
+		modifier = {
+			consumer_goods_expected_value = 0.05		
+		}
+		days_remove = 180
+
+	    remove_effect = {
+	        add_to_variable = { ITA_military_industry_dm_industrial_capacity_factory = 0.075 }
+			custom_effect_tooltip = ITA_mussolini_decision_tt
+	    }
+    }
+}

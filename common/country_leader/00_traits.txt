@@ -4224,6 +4224,7 @@ leader_traits = {
 			economy_cost_factor = -0.15
 		}
 		stability_factor = 0.05
+		consumer_goods_expected_value = -0.02
 	}
 
 	il_duce_strengthen = { #Focus Strengthen the Regime
@@ -4239,6 +4240,7 @@ leader_traits = {
 		drift_defence_factor = 0.1
 		conscription_factor = 0.1
 		fascism_drift = 0.1
+		production_factory_efficiency_gain_factor = 0.1
 	}
 
 	il_duce_providence_strengthen = { #Focus The Man of Providence + Strengthen the Regime
@@ -4252,9 +4254,10 @@ leader_traits = {
 			economy_cost_factor = -0.15
 		}
 		stability_factor = 0.05
-		drift_defence_factor = 0.1
 		conscription_factor = 0.1
 		fascism_drift = 0.1
+		production_factory_efficiency_gain_factor = 0.1
+		consumer_goods_expected_value = -0.02
 	}
 
 	il_duce_devotion = { #Focus Heroes of the Nation
@@ -4268,9 +4271,11 @@ leader_traits = {
 			economy_cost_factor = -0.15
 		}
 		stability_factor = 0.1
-		drift_defence_factor = 0.15
 		conscription_factor = 0.15
 		fascism_drift = 0.1
+		production_factory_efficiency_gain_factor = 0.1
+		consumer_goods_expected_value = -0.02
+		industrial_capacity_factory = 0.10
 	}
 
 	il_duce_heroes = { #Focus Heroes of the Nation
@@ -4283,26 +4288,43 @@ leader_traits = {
 			economy_cost_factor = -0.15
 		}
 		stability_factor = 0.1
-		drift_defence_factor = 0.15
 		conscription_factor = 0.15
 		fascism_drift = 0.1
+		production_factory_efficiency_gain_factor = 0.1
+		consumer_goods_expected_value = -0.02
+		industrial_capacity_factory = 0.10
+		army_morale_factor = 0.05
+		army_org_factor = 0.1
 	}
 
 	#LION TAMER
 	lion_tamer = { #Focus Culto al Duce
 		random = no
 		party_popularity_stability_factor = 0.1
-		surrender_limit = 0.05
 		resistance_damage_to_garrison = -0.15
+		production_factory_start_efficiency_factor = 0.05
+		equipment_bonus = { 
+		    infantry_equipment = {
+			    build_cost_ic = -0.1
+			    instant = yes
+		    }
+		}
 	}
 
 	lion_tamer_2 = { #Focus To Live as a Lion
 		random = no
 		party_popularity_stability_factor = 0.1
-		surrender_limit = 0.05
 		resistance_damage_to_garrison = -0.15
+		production_factory_start_efficiency_factor = 0.05
 		war_support_factor = 0.05
 		offensive_war_stability_factor = 0.1
+		industrial_capacity_factory = 0.05
+		equipment_bonus = { 
+		    infantry_equipment = {
+			    build_cost_ic = -0.1
+			    instant = yes
+		    }
+		}
 	}
 
 	#CAPO SUPREMO
@@ -4318,29 +4340,29 @@ leader_traits = {
 	mussolini_minister_of_foreign_affairs = {
 		random = no
 		sprite = 13
-		opinion_gain_monthly_factor = 0.07
 		resistance_damage_to_garrison = -0.07
+		consumer_goods_expected_value = -0.01
 	}
 
 	mussolini_minister_of_justice = {
 		random = no
 		sprite = 13
-		improve_relations_maintain_cost_factor = -0.25
+		production_factory_max_efficiency_factor = 0.02
 		resistance_decay = 0.02
 	}
 
 	mussolini_minister_of_education = {
 		random = no
 		sprite = 13
-		research_speed_factor = 0.01
+		research_speed_factor = 0.05
 		stability_factor = 0.02
 	}
 
 	mussolini_minister_of_corporations = {
 		random = no
 		sprite = 13
-		industrial_capacity_factory = 0.02
-		industrial_capacity_dockyard = 0.02
+		industrial_capacity_factory = 0.04
+		industrial_capacity_dockyard = 0.04
 	}
 
 	### KING VITTORIO EMANUELE III ###
@@ -4481,14 +4503,20 @@ leader_traits = {
 	#THE GRAND COUNCIL
 	the_grand_council = {
 		random = no
-		political_power_factor = -0.01
-		stability_factor = -0.05
+		political_power_factor = -0.1
+		stability_factor = -0.1
 	}
 
 	#ITALO BALBO TRAITS
 	aviation_hero = { 
 		random = no
-		custom_modifier_tooltip = ITA_aviation_hero_tt #air_equipment = -0.05
+		custom_modifier_tooltip = ITA_aviation_hero_tt
+		equipment_bonus = { 
+		    cas = {
+			    build_cost_ic = -0.075 
+			    instant = yes
+		    }
+		}	
 		political_power_factor = 0.05
 		fascism_drift = 0.05
 	}
@@ -4504,10 +4532,8 @@ leader_traits = {
 	#DINO GRANDI TRAITS
 	silver_tongue = { 
 		random = no
-		opinion_gain_monthly_factor = 0.2
-		improve_relations_maintain_cost_factor = -0.2
-		justify_war_goal_time = -0.15
-		foreign_subversive_activites = -0.1
+		political_power_factor = 0.15
+		trade_opinion_factor = 0.25
 	}
 
 	silver_tongue_no_lar = { 
@@ -4557,8 +4583,7 @@ leader_traits = {
 			army_advisor_cost_factor = -0.25
 			navy_advisor_cost_factor = -0.25
 		}
-		drift_defence_factor = 0.05
-		research_speed_factor = 0.025 
+		research_speed_factor = 0.05 
 		operative_slot = 1
 	}
 
@@ -4609,8 +4634,8 @@ leader_traits = {
 		sprite = 13
 		fascism_drift = 0.05
 		political_power_factor = 0.05
-		opinion_gain_monthly_factor = 0.15
 		resistance_damage_to_garrison = -0.15
+		consumer_goods_expected_value = -0.02
 		custom_modifier_tooltip = ITA_hierarch_bop_tt
 	}
 
@@ -4619,7 +4644,8 @@ leader_traits = {
 		sprite = 13
 		fascism_drift = 0.05
 		political_power_factor = 0.05
-		improve_relations_maintain_cost_factor = -0.5
+		consumer_goods_expected_value = -0.01
+		production_factory_max_efficiency_factor = 0.04
 		resistance_decay = 0.05
 		custom_modifier_tooltip = ITA_hierarch_bop_tt
 	}
@@ -4629,7 +4655,7 @@ leader_traits = {
 		sprite = 13
 		political_power_factor = 0.05
 		fascism_drift = 0.05
-		research_speed_factor = 0.02
+		research_speed_factor = 0.1
 		stability_factor = 0.05
 		custom_modifier_tooltip = ITA_hierarch_bop_tt
 	}
@@ -4639,8 +4665,8 @@ leader_traits = {
 		sprite = 13
 		political_power_factor = 0.05
 		fascism_drift = 0.05
-		industrial_capacity_factory = 0.05
-		industrial_capacity_dockyard = 0.05
+		industrial_capacity_factory = 0.075
+		industrial_capacity_dockyard = 0.075
 		custom_modifier_tooltip = ITA_hierarch_bop_tt
 	}
 
@@ -8414,11 +8440,30 @@ leader_traits = {
 			}
 		}
 	}
+	financial_specialist = {
+		sprite = 10
+		random = yes
+        consumer_goods_expected_value = -0.025
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
 
 	financial_expert = {
 		sprite = 10
 		random = yes
         consumer_goods_expected_value = -0.05
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	financial_genius = {
+		sprite = 10
+		random = yes
+        consumer_goods_expected_value = -0.075
 
 		ai_will_do = {
 			factor = 2

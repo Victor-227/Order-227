@@ -67,4 +67,76 @@ spriteTypes = {
 		name = "GFX_idea_slot_industrial_person"
 		textureFile = "gfx/interface/goals/idea_slot_industrial_theorist.dds"
 	}
-}
+    SpriteType = {
+		name = "ITA_develop_libya"
+		textureFile = "gfx/interface/goals/ITA_develop_libya.dds"
+	}
+    SpriteType = {
+		name = "ITA_albanian_oil"
+		textureFile = "gfx/interface/goals/ITA_albanian_oil.dds"
+	}
+    SpriteType = {
+		name = "ITA_develop_ethiopia"
+		textureFile = "gfx/interface/goals/ITA_develop_ethiopia.dds"
+	}
+    SpriteType = {
+		name = "ITA_novus_ordo"
+		textureFile = "gfx/interface/goals/ITA_novus_ordo.dds"
+	}
+    SpriteType = {
+		name = "ITA_pact_of_steel"
+		textureFile = "gfx/interface/goals/ITA_pact_of_steel.dds"
+	}
+    SpriteType = {
+		name = "ITA_the_man_of_providence"
+		textureFile = "gfx/interface/goals/ITA_the_man_of_providence.dds"
+	}
+    SpriteType = {
+		name = "ITA_foreign_affairs"
+		textureFile = "gfx/interface/goals/ITA_foreign_affairs.dds"
+	}
+    SpriteType = {
+		name = "ITA_ministry_of_italian_africa"
+		textureFile = "gfx/interface/goals/ITA_ministry_of_italian_africa.dds"
+	}
+    SpriteType = {
+		name = "ITA_stop_the_squandering"
+		textureFile = "gfx/interface/goals/ITA_stop_the_squandering.dds"
+	}
+    SpriteType = {
+		name = "ITA_franco_italian_pact"
+		textureFile = "gfx/interface/goals/ITA_franco_italian_pact.dds"
+	}
+    SpriteType = {
+		name = "ITA_regional_development"
+		textureFile = "gfx/interface/goals/ITA_regional_development.dds"
+	}
+    SpriteType = {
+		name = "ITA_naval_power_projection"
+		textureFile = "gfx/interface/goals/ITA_naval_power_projection.dds"
+	}
+    SpriteType = {
+		name = "ITA_a_greater_purpose"
+		textureFile = "gfx/interface/goals/ITA_a_greater_purpose.dds"
+	}
+    SpriteType = {
+		name = "ITA_legge_bottai"
+		textureFile = "gfx/interface/goals/italy_stolen_icons/ITA_legge_bottai.dds"
+	}
+    SpriteType = {
+		name = "ITA_devotion"
+		textureFile = "gfx/interface/goals/italy_stolen_icons/ITA_devotion.dds"
+	}
+    SpriteType = {
+		name = "ITA_consolidate_power"
+		textureFile = "gfx/interface/goals/italy_stolen_icons/ITA_consolidate_power.dds"
+	}
+    SpriteType = {
+		name = "ITA_power_plants_in_terni"
+		textureFile = "gfx/interface/goals/italy_stolen_icons/ITA_power_plants_in_terni.dds"
+	
+    SpriteType = {
+		name = "ITA_steel_industry_in_terni"
+		textureFile = "gfx/interface/goals/italy_stolen_icons/ITA_steel_industry_in_terni.dds"
+	}
+}    

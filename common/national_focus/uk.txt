@@ -666,7 +666,7 @@ focus_tree = {
 		icon = GFX_goal_generic_air_doctrine
 		x = 43
 		y = 2
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 3
 		}
@@ -678,23 +678,20 @@ focus_tree = {
 		completion_reward = {
 			air_experience = 25
 			custom_effect_tooltip = uk_air_base_tt
-			hidden_effect = {
-			    every_owned_state = {
-				    limit = {
-					    OR = {
-						    state = 123
-						    state = 338
-							state = 129
-							state = 128
-					    }
-				    }	
-				    add_building_construction = {
-					    type = air_base
-					     level = 10
-					    instant_build = yes
-				    }
+			every_owned_state = {
+				limit = {
+				    OR = {
+					    state = 123
+					    state = 338
+						state = 129
+						state = 128
+					}
+				}	
+				set_building_level = {
+					type = air_base
+					level = 10
 			    }
-		    }
+			}	
 		}
 	}
 
@@ -731,7 +728,7 @@ focus_tree = {
 		x = -1
 		y = 2
 		relative_position_id = air_rearmament_focus
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 3
 		}
