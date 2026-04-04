@@ -37,12 +37,12 @@ idea_categories = {
 		removal_cost = 0
 	}
 
-	Research = {
+	research_&_theory = {
 		slot = tank_research
 		slot = naval_research
 		slot = aircraft_research
-		slot = material_research
-		slot = industrial_concern
+		slot = materiel_research
+		slot = industrial_research
 		character_slot = theorist
 		ledger = civilian
 		cost = 150
@@ -55,7 +55,7 @@ idea_categories = {
 		slot = aircraft_manufacturer
 		slot = materiel_manufacturer
 		slot = industrial_output
-		character_slot = industrial_person
+		slot = industrial_theorist
 
 		ledger = civilian
 		

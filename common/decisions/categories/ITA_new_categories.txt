@@ -9,6 +9,7 @@ ITA_mussolini_dec_cat = {
 	}
 	
 	priority = 20
+	
 	visible = {
 		has_completed_focus = ITA_strengthen_the_regime
 	}

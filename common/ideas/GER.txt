@@ -1877,13 +1877,13 @@ ideas = {
 						has_dynamic_modifier = { modifier = GER_recovering_economy_modifier }
 					}
 					add_to_variable = { #These numbers must match the once set in the event to stop the mefo bills
-						GER_industrial_consumer_goods_factor = GER_economic_crash_consumer_goods
+						GER_industrial_consumer_goods_expected_value = GER_economic_crash_consumer_goods
 					}
 				}
 			}
 
 			modifier = {
-				consumer_goods_factor = 0.40
+				consumer_goods_expected_value = 0.1
 			}
 		}
 
@@ -5513,7 +5513,7 @@ ideas = {
 		}
 	}
 
-	industrial_concern = {
+	industrial_research = {
 		
 		ig_faben = {
 			
@@ -5610,6 +5610,9 @@ ideas = {
 			traits = { electronics_concern }
 		}
 
+	}
+
+	industrial_output = {
 		GER_vereinigte_stahlwerke = {
 
 			picture = GER_vereinigte_stahlwerke
@@ -5943,6 +5946,196 @@ ideas = {
 			}
 			
 			traits = { GER_reichswerke_conglomerate }
+		}
+
+	}
+
+	industrial_theorist = {
+
+		GER_albert_speer = {
+			name = GER_albert_speer
+
+			allowed = {
+				original_tag = GER
+			}
+
+			ai_will_do = {
+				factor = 100
+			}
+
+			visible = {
+				NOT = {
+					has_completed_focus = GER_42_crisis
+				}
+			}			
+
+			available = {
+				has_completed_focus = GER_ascension_of_speer
+			}
+
+			research_bonus = {
+				cat_production = 0.06
+		    }
+
+			traits = { GER_wirtschaftsminister_speer }
+
+			
+			removal_cost = -1		
+		}
+
+		GER_albert_speer_42 = {
+			name = GER_albert_speer
+
+			allowed = {
+				original_tag = GER
+			}
+
+			ai_will_do = {
+				factor = 100
+			}
+
+			visible = {
+				has_completed_focus = GER_42_crisis
+			}			
+
+			available = {
+				has_completed_focus = GER_42_crisis
+				NOT = {
+					has_completed_focus = GER_ascension_of_speer
+				}
+			}
+
+			research_bonus = {
+				cat_production = 0.1
+		    }
+
+			traits = { GER_wirtschaftsminister_speer_42 }
+
+			
+			removal_cost = -1		
+		}
+
+		GER_fritz_todt = {
+			name = GER_fritz_todt
+
+			visible = {
+				NOT = {
+					has_completed_focus = GER_42_crisis
+				}
+			}
+
+			available = {
+				has_completed_focus = GER_ascension_of_todt
+			}
+
+			research_bonus = {
+				construction_tech = 0.15
+		    }
+
+			traits = { GER_wirtschaftsminister_todt }	
+		}
+
+		GER_fritz_todt_42 = {
+			name = GER_fritz_todt
+
+			visible = {
+				has_completed_focus = GER_42_crisis
+			}
+
+			available = {
+				AND = {
+					has_completed_focus = GER_ascension_of_speer
+					has_completed_focus = GER_42_crisis
+				}
+			}
+
+			research_bonus = {
+				construction_tech = 0.15
+		    }
+
+			traits = { GER_wirtschaftsminister_todt_42 }	
+		}
+
+		GER_hjalmar_schacht = {
+			name = GER_hjalmar_schacht
+			visible = {
+				NOT = {
+					has_completed_focus = GER_42_crisis
+				}
+			}
+
+			available = {
+				has_completed_focus = GER_ascension_of_schacht
+			}
+
+			traits = { GER_wirtschaftsminister_schacht }	
+		}
+
+		GER_hjalmar_schacht_42 = {
+			name = GER_hjalmar_schacht
+
+			visible = {
+				has_completed_focus = GER_42_crisis
+			}
+
+			available = {
+				AND = {
+					has_completed_focus = GER_ascension_of_speer
+					has_completed_focus = GER_42_crisis
+				}
+			}
+
+
+			traits = { GER_wirtschaftsminister_schacht_42 }
+		}
+
+		GER_hermann_göring = {
+			name = GER_hermann_goring
+
+			visible = {
+				NOT = {
+					has_completed_focus = GER_42_crisis
+				}
+			}
+			
+			available = {
+				has_completed_focus = GER_ascension_of_goring
+			}
+
+			research_bonus = {
+				excavation_tech = 0.15
+				concentrated_industry_category = 0.08
+		    }
+
+			traits = { GER_wirtschaftsminister_göring }
+		}
+
+		GER_hermann_göring_42 = {
+			name = GER_hermann_goring
+
+			visible = {
+				has_completed_focus = GER_42_crisis
+			}
+
+			available = {
+				AND = {
+					has_completed_focus = GER_ascension_of_speer
+					has_completed_focus = GER_42_crisis
+				}
+			}
+
+			modify_building_resources = {
+        	   building = synthetic_refinery
+        	   resource = rubber
+        	   amount = 1
+        	}
+
+			research_bonus = {
+				excavation_tech = 0.15
+				concentrated_industry_category = 0.08
+		    }
+
+			traits = { GER_wirtschaftsminister_göring_42 }
 		}
 	}
 

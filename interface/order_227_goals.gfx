@@ -309,4 +309,16 @@ SpriteTypes = {
 		name = "GFX_focus_ENG_UK_secret_focus"
 		texturefile = "gfx/interface/goals/ENG/focus_ENG_UK_secret_focus.dds"
 	}
+
+	### NEW GER FOCUSES
+	SpriteType = {
+		name = "GFX_goal_GER_continue_with_schacht"
+		texturefile = "gfx/interface/goals/ENG/goal_GER_continue_with_schacht.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_GER_continue_with_schacht"
+		texturefile = "gfx/interface/goals/ENG/goal_GER_continue_with_schacht.dds"
+	}
+	
 }
