@@ -5792,18 +5792,21 @@ ideas = {
 			}
 
 			visible = {
-				has_completed_focus = GER_form_organization_todt
 				NOT = { has_completed_focus = GER_autonomous_organization_todt }
 			}
+
+			available = {
+				has_completed_focus = GER_form_organization_todt
+			}
 			
-			cost = 75
+			cost = 150
 
 			ai_will_do = {
 				base = 10
 			}
 			
 			research_bonus = {
-				construction_tech = 0.15
+				construction_tech = 0.07
 			}
 
 			traits = { GER_organization_todt_trait }
@@ -5822,14 +5825,14 @@ ideas = {
 				has_completed_focus = GER_autonomous_organization_todt
 			}
 			
-			cost = 75
+			cost = 150
 
 			ai_will_do = {
 				base = 20
 			}
 			
 			research_bonus = {
-				construction_tech = 0.15
+				construction_tech = 0.07
 			}
 
 			traits = { GER_organization_todt_improved_trait }
@@ -5941,13 +5944,60 @@ ideas = {
 			cost = 100
 
 			research_bonus = {
-				excavation_tech = 0.15
-				industry = 0.15
+				excavation_tech = 0.1
+				industry = 0.1
 			}
 			
 			traits = { GER_reichswerke_conglomerate }
 		}
 
+		GER_rwim = {
+			name = GER_rwim
+
+			picture = GER_rwim
+			
+			allowed = {
+				original_tag = GER
+			}
+
+			visible = {
+				NOT = {
+					has_completed_focus = GER_schacht_2
+				}
+			}
+
+			available = {
+				has_completed_focus = GER_schacht_1
+			}
+			
+			cost = 150
+
+			
+			traits = { GER_rwim_1 }
+		}
+
+		GER_rwim_improved = {
+			name = GER_rwim
+
+			picture = GER_rwim
+			
+			allowed = {
+				original_tag = GER
+			}
+
+			visible = {
+				has_completed_focus = GER_schacht_2
+			}
+
+			available = {
+				has_completed_focus = GER_schacht_2
+			}
+			
+			cost = 150
+
+			
+			traits = { GER_rwim_2 }
+		}
 	}
 
 	industrial_theorist = {
@@ -6018,6 +6068,10 @@ ideas = {
 		GER_fritz_todt = {
 			name = GER_fritz_todt
 
+			allowed = {
+				original_tag = GER
+			}
+
 			visible = {
 				NOT = {
 					has_completed_focus = GER_42_crisis
@@ -6029,7 +6083,7 @@ ideas = {
 			}
 
 			research_bonus = {
-				construction_tech = 0.15
+				construction_tech = 0.08
 		    }
 
 			traits = { GER_wirtschaftsminister_todt }	
@@ -6037,6 +6091,10 @@ ideas = {
 
 		GER_fritz_todt_42 = {
 			name = GER_fritz_todt
+
+			allowed = {
+				original_tag = GER
+			}
 
 			visible = {
 				has_completed_focus = GER_42_crisis
@@ -6058,6 +6116,11 @@ ideas = {
 
 		GER_hjalmar_schacht = {
 			name = GER_hjalmar_schacht
+
+			allowed = {
+				original_tag = GER
+			}
+
 			visible = {
 				NOT = {
 					has_completed_focus = GER_42_crisis
@@ -6065,7 +6128,7 @@ ideas = {
 			}
 
 			available = {
-				has_completed_focus = GER_ascension_of_schacht
+				has_completed_focus = GER_schacht
 			}
 
 			traits = { GER_wirtschaftsminister_schacht }	
@@ -6073,6 +6136,10 @@ ideas = {
 
 		GER_hjalmar_schacht_42 = {
 			name = GER_hjalmar_schacht
+
+			allowed = {
+				original_tag = GER
+			}
 
 			visible = {
 				has_completed_focus = GER_42_crisis
@@ -6092,6 +6159,10 @@ ideas = {
 		GER_hermann_göring = {
 			name = GER_hermann_goring
 
+			allowed = {
+				original_tag = GER
+			}
+
 			visible = {
 				NOT = {
 					has_completed_focus = GER_42_crisis
@@ -6107,11 +6178,15 @@ ideas = {
 				concentrated_industry_category = 0.08
 		    }
 
-			traits = { GER_wirtschaftsminister_göring }
+			traits = { GER_wirtschaftsminister_goering }
 		}
 
 		GER_hermann_göring_42 = {
 			name = GER_hermann_goring
+
+			allowed = {
+				original_tag = GER
+			}
 
 			visible = {
 				has_completed_focus = GER_42_crisis
@@ -6135,7 +6210,7 @@ ideas = {
 				concentrated_industry_category = 0.08
 		    }
 
-			traits = { GER_wirtschaftsminister_göring_42 }
+			traits = { GER_wirtschaftsminister_goering_42 }
 		}
 	}
 
@@ -6170,6 +6245,41 @@ ideas = {
 	### #  # #  # ### #  #      ##  ### #  #  ##  ### ### 
 
 	hidden_ideas = {
+		
+		GER_reichleiter_schacht = {
+			name = GER_reichleiter_schacht
+			picture = SWE_let_fly_all_guns
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = -0.1
+
+				production_speed_industrial_complex_factor = 0.1
+			}
+		}
+
+		GER_reichleiter_schacht_improved = {
+			name = GER_reichleiter_schacht_improved
+			picture = SWE_let_fly_all_guns
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = -0.3
+
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_buildings_factor = 0.05
+			}
+		}
 
 
 		GER_todt_reich_engineer = {
@@ -6186,7 +6296,7 @@ ideas = {
 				# PP Cost
 				political_power_gain = -0.1
 
-				production_speed_industrial_complex_factor = 0.1
+				production_speed_industrial_complex_factor = 0.05
 				production_speed_infrastructure_factor = 0.1
 				production_speed_rail_way_factor = 0.1
 			}
@@ -6206,11 +6316,15 @@ ideas = {
 				# PP Cost
 				political_power_gain = -0.3
 
-				production_speed_industrial_complex_factor = 0.1
+				production_speed_industrial_complex_factor = 0.05
 				production_speed_infrastructure_factor = 0.1
 				production_speed_rail_way_factor = 0.1
-				production_speed_arms_factory_factor = 0.1
-				production_speed_dockyard_factor = 0.1
+
+				#production_speed_industrial_complex_factor = 0.075
+				#production_speed_infrastructure_factor = 0.1
+				#production_speed_rail_way_factor = 0.1
+				#production_speed_arms_factory_factor = 0.025
+				#production_speed_dockyard_factor = 0.05
 			}
 		}
 
@@ -6249,8 +6363,8 @@ ideas = {
 
 				production_speed_buildings_factor = 0.05
 				fascism_drift = 0.01
-				industrial_capacity_factory = 0.1
-				industrial_capacity_dockyard = 0.1
+				industrial_capacity_factory = 0.025
+				industrial_capacity_dockyard = 0.025
 			}
 		}
 
@@ -6291,10 +6405,8 @@ ideas = {
 				local_resources_factor = 0.05
 				#production_lack_of_resource_penalty_factor = -0.05?
 				#industry_free_repair_factor = 0.15?
-				production_factory_max_efficiency_factor = 0.05
-				production_factory_efficiency_gain_factor = 0.05
-				production_factory_start_efficiency_factor = 0.05
-				line_change_production_efficiency_factor = 0.05
+				production_factory_max_efficiency_factor = 0.02
+				production_factory_efficiency_gain_factor = 0.02
 			}
 		}
 

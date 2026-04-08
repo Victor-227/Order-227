@@ -11731,7 +11731,7 @@ country_event = {
 	picture = GFX_report_event_generic_parliament
 
 	trigger = {
-		allways = NO
+		always = NO
 	}
 
 	mean_time_to_happen = {

@@ -748,6 +748,7 @@ GER_airforce_modifier = { #Airforce NS
 	air_strategic_bomber_bombing_factor = GER_military_air_strategic_bomber_bombing_factor
 	air_range_factor = GER_military_air_range_factor
 	air_fuel_consumption_factor = GER_military_air_fuel_consumption_factor
+	air_cas_present_factor = GER_air_cas_present_factor
 }
 
 GER_airforce_communist_modifier = { #Communnist Airforce NS
@@ -808,6 +809,7 @@ GER_military_intelligence_service_modifier = { #Spy Stuff
 	# Basic
 	master_ideology_drift = GER_military_intelligence_service_master_ideology_drift
 	consumer_goods_factor = GER_military_intelligence_service_consumer_goods_factor
+	consumer_goods_expected_value = GER_military_intelligence_service_consumer_goods_expected_value
 
 	# LaR
 	operative_slot = GER_military_intelligence_service_operative_slot

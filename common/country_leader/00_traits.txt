@@ -11620,7 +11620,7 @@ leader_traits = {
 	energy_supply_company = {
 		random = no
 
-		consumer_goods_factor = -0.075
+		consumer_goods_expected_value = -0.02
 
 		ai_will_do = {
 			factor = 1
@@ -11721,7 +11721,7 @@ leader_traits = {
 	conglomerate = {
 		random = no
 
-		consumer_goods_factor = 0.05 #yes, this is actually a penalty
+		consumer_goods_expected_value = 0.03 #yes, this is actually a penalty
 		local_resources_factor = 0.05
 		production_lack_of_resource_penalty_factor = -0.05
 
@@ -12898,7 +12898,7 @@ leader_traits = {
 
 		production_speed_infrastructure_factor = 0.1
 		production_speed_rail_way_factor = 0.1
-		production_speed_arms_factory_factor = 0.1
+		production_speed_arms_factory_factor = 0.075
 		production_speed_bunker_factor = 0.1
 		production_speed_coastal_bunker_factor = 0.05
 		global_building_slots = 1
@@ -12946,7 +12946,7 @@ leader_traits = {
 	GER_reichswerke_conglomerate = {
 		random = no
 
-		consumer_goods_factor = 0.05 #yes, this is actually a penalty
+		consumer_goods_expected_value = 0.02 #yes, this is actually a penalty
 		local_resources_factor = 0.1
 		production_lack_of_resource_penalty_factor = -0.15
 
@@ -18029,7 +18029,7 @@ leader_traits = {
 	GER_wirtschaftsminister_schacht = {
 		sprite = 10
 		random = no
-		consumer_goods_expected_value = -0.05
+		consumer_goods_expected_value = -0.03
 		production_speed_industrial_complex_factor = 0.15
 		production_speed_arms_factory_factor = -0.1
 	}
@@ -18040,6 +18040,18 @@ leader_traits = {
 		consumer_goods_expected_value = -0.05
 		production_factory_start_efficiency_factor = 0.075
 		line_change_production_efficiency_factor = 0.075
+	}
+
+	GER_rwim_1 = {
+		consumer_goods_expected_value = -0.02
+		production_speed_industrial_complex_factor = 0.05
+	}
+
+	GER_rwim_2 = {
+		consumer_goods_expected_value = -0.02
+		production_speed_industrial_complex_factor = 0.1
+		production_speed_buildings_factor = 0.03
+		global_building_slots = 2
 	}
 
 	GER_wirtschaftsminister_todt = {
@@ -18064,7 +18076,7 @@ leader_traits = {
 		industry_air_damage_factor = -0.1
 	}
 
-	GER_wirtschaftsminister_göring = {
+	GER_wirtschaftsminister_goering = {
 		sprite = 10
 		random = no
 		industrial_capacity_factory = 0.1
@@ -18075,7 +18087,7 @@ leader_traits = {
 		production_speed_synthetic_refinery_factor = 0.2
 	}
 
-	GER_wirtschaftsminister_göring_42 = {
+	GER_wirtschaftsminister_goering_42 = {
 		sprite = 10
 		random = no
 		industrial_capacity_factory = 0.125

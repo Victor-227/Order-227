@@ -313,12 +313,13 @@ SpriteTypes = {
 	### NEW GER FOCUSES
 	SpriteType = {
 		name = "GFX_goal_GER_continue_with_schacht"
-		texturefile = "gfx/interface/goals/ENG/goal_GER_continue_with_schacht.dds"
+		texturefile = "gfx/interface/goals/GER/goal_GER_continue_with_schacht.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_goal_GER_continue_with_schacht"
-		texturefile = "gfx/interface/goals/ENG/goal_GER_continue_with_schacht.dds"
+		texturefile = "gfx/interface/goals/GER/goal_GER_continue_with_schacht.dds"
 	}
+
 	
 }

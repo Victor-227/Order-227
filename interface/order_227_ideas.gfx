@@ -38,4 +38,19 @@ SpriteTypes = {
         name = GFX_idea_GER_hjalmar_schacht_42
         texturefile = "gfx/interface/ideas/GER/idea_GER_hjalmar_schacht.dds"
     }
+
+    SpriteType = {
+        name = GFX_portrait_GER_hjalmar_schacht
+        texturefile = "gfx/interface/ideas/GER/portrait_GER_hjalmar_schacht.dds"
+    }
+
+    SpriteType = {
+        name = GFX_hjalmar_schacht_available_small
+        texturefile = "gfx/interface/ideas/GER/hjalmar_schacht_available_small.dds"
+    }
+
+    SpriteType = {
+        name = GFX_idea_GER_rwim
+        texturefile = "gfx/interface/ideas/GER/rwim.dds"
+    }
 }

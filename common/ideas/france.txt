@@ -1843,7 +1843,7 @@ ideas = {
 		}
 	}
 	
-	material_research = {
+	materiel_research = {
 			
 		
 		somua = {
