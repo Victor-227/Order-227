@@ -35,6 +35,7 @@ add_namespace = GER_inner_circle_himmler
 add_namespace = GER_inner_circle_goebbels
 add_namespace = GER_inner_circle_hess
 add_namespace = GER_inner_circle_bormann
+add_namespace = GER_inner_circle_schacht
 
 
 
@@ -14256,15 +14257,15 @@ country_event = {
 		AND = {
 			# Bryansk
 			224 = {
-				
+				is_controlled_by_ROOT_or_subject = yes
 			}
 			# Kursk
 			220 = {
-				
+				is_controlled_by_ROOT_or_subject = yes
 			}
 			# Orel
 			222 = {
-				
+				is_controlled_by_ROOT_or_subject = yes
 			}
 		}
 		has_war_with = SOV
@@ -14324,7 +14325,7 @@ country_event = {
 
 		every_state = {
 			limit = {
-				
+				is_controlled_by_ROOT_or_subject = yes
 				OR = {
 					state = 224 # Bryansk
 					state = 220 # Kursk
@@ -14449,15 +14450,15 @@ country_event = {
 		AND = {
 			# Bryansk
 			224 = {
-				
+				is_controlled_by_ROOT_or_subject = yes
 			}
 			# Kursk
 			220 = {
-				
+				is_controlled_by_ROOT_or_subject = yes
 			}
 			# Orel
 			222 = {
-				
+				is_controlled_by_ROOT_or_subject = yes
 			}
 		}
 		has_war_with = GER
@@ -14547,11 +14548,11 @@ country_event = {
 		AND = {
 			# Serbia
 			107 = {
-				
+				is_controlled_by_ROOT_or_subject = yes
 			}
 			# Morava
 			108 = {
-				
+				is_controlled_by_ROOT_or_subject = yes
 			}
 		}
 		SOV = {
@@ -14631,7 +14632,17 @@ country_event = {
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		
+		every_state = {
+			limit = {
+				is_controlled_by_ROOT_or_subject = yes
+				OR = {
+					state = 107 # Serbia
+					state = 108 # Morava
+				}
+			}
+			add_resistance = -10		
+		}
+
 	}
 
 	# We have no need for this Russian Rabble
@@ -23621,6 +23632,122 @@ country_event = {
 			}
 			clr_country_flag = GER_wunderwaffe_in_progress_flag
 		}
+		else = { #Debug logs
+			#log = "SOMETHING WENT WRONG WITH TODT's FOCUS BRANCH - Cannot complete focus"
+		}
+	}
+}
+
+###### SCHACHT
+
+# SCHACHT - Start work on Focus
+country_event = {
+	id = GER_inner_circle_schacht.01
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_completed_focus = GER_schacht
+		OR = {
+			check_variable = { GER_ascended_advisor_1 = 8 }
+			check_variable = { GER_ascended_advisor_2 = 8 }
+			check_variable = { GER_ascended_advisor_3 = 8 }
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_completed_focus = GER_schacht_1 }
+			}
+			activate_shine_on_focus = GER_schacht_1
+			set_country_flag = { flag = GER_schacht_1_in_progress_flag days = @inner_circle_time_tier_1_flag value = 1 }
+			country_event = { id = GER_inner_circle_schacht.02 days = @inner_circle_time_tier_1 }
+		}
+		else_if = {
+			limit = {
+				NOT = { has_completed_focus = GER_schacht_2 }
+				NOT = { check_variable = { GER_industrialist_prevailed = 2 } } #Speer Prevailed in the Industrialist Intrigue
+				NOT = { check_variable = { GER_industrialist_prevailed = 3 } } #Göring Prevailed in the Industrialist Intrigue
+			}
+			activate_shine_on_focus = GER_schacht_2
+			set_country_flag = { flag = GER_schacht_2_in_progress_flag days = @inner_circle_time_tier_2_flag value = 1 }
+			country_event = { id = GER_inner_circle_schacht.02 days = @inner_circle_time_tier_2 }
+		}
+		#else_if = {
+			#limit = {
+			#	NOT = { has_completed_focus = GER_wunderwaffe }
+			#	NOT = { has_shine_effect_on_focus = GER_wunderwaffe } #Speer is working on this already
+			#	NOT = { check_variable = { GER_industrialist_prevailed = 2 } } #Speer Prevailed in the Industrialist Intrigue
+			#	NOT = { check_variable = { GER_industrialist_prevailed = 3 } } #Göring Prevailed in the Industrialist Intrigue
+			#}
+			#activate_shine_on_focus = GER_wunderwaffe
+			#set_country_flag = { flag = GER_wunderwaffe_in_progress_flag days = @inner_circle_time_tier_3_flag value = 1 }
+			#country_event = { id = GER_inner_circle_todt.02 days = @inner_circle_time_tier_3 }
+			#set_variable = { GER_wonder_weapons_focus_advisor = 1 }
+		#}
+		else = { #Debug logs
+			#log = "SOMETHING WENT WRONG WITH TODT's FOCUS BRANCH - Cannot start new focus"
+		}
+	}
+}
+
+# SCHACHT - Complete Focus
+country_event = {
+	id = GER_inner_circle_schacht.02
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_completed_focus = GER_schacht
+		OR = {
+			check_variable = { GER_ascended_advisor_1 = 8 }
+			check_variable = { GER_ascended_advisor_2 = 8 }
+			check_variable = { GER_ascended_advisor_3 = 8 }
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_shine_effect_on_focus = GER_schacht_1
+			}
+			complete_national_focus = {
+				focus = GER_schacht_1
+				use_side_message = yes
+				originator_name = GER_hjalmar_schacht
+			}
+			clr_country_flag = GER_schacht_1_in_progress_flag
+			country_event = { id = GER_inner_circle_schacht.01 days = GER_inner_circle_days_to_start_focus random_days = GER_inner_circle_random_days }
+		}
+		else_if = {
+			limit = {
+				has_shine_effect_on_focus = GER_schacht_2
+			}
+			complete_national_focus = {
+				focus = GER_schacht_2
+				use_side_message = yes
+				originator_name = GER_hjalmar_schacht
+			}
+			clr_country_flag = GER_schacht_2_in_progress_flag
+			country_event = { id = GER_inner_circle_schacht.01 days = GER_inner_circle_days_to_start_focus random_days = GER_inner_circle_random_days }
+		}
+		#else_if = {
+			#limit = {
+			#	has_shine_effect_on_focus = GER_wunderwaffe
+			#	check_variable = { GER_wonder_weapons_focus_advisor = 1 } #It is Todt working on it
+			#}
+			#complete_national_focus = {
+			#	focus = GER_wunderwaffe
+			#	use_side_message = yes
+			#	originator_name = GER_fritz_todt
+			#}
+			#clr_country_flag = GER_wunderwaffe_in_progress_flag
+		#}
 		else = { #Debug logs
 			#log = "SOMETHING WENT WRONG WITH TODT's FOCUS BRANCH - Cannot complete focus"
 		}

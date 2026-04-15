@@ -200,7 +200,7 @@ leader_traits = {
 		random = no
 		war_support_factor = 0.05
 		stability_factor = 0.05
-		justify_war_goal_time = -0.25
+		production_factory_efficiency_gain_factor = 0.05
 
 		ai_will_do = {
 			factor = 1
@@ -630,6 +630,19 @@ leader_traits = {
 		}
 	}
 
+	SIK_socialist_revolutionary_in_name = {
+		random = no
+		sprite = 13
+
+		neutrality_drift = 0.02
+		political_power_factor = 0.1
+		war_support_factor = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 	JAP_modernist_architect = {
 		random = no
 		sprite = 13
@@ -778,6 +791,44 @@ leader_traits = {
 
 	}
 
+	KHM_british_connection = {
+		random = no
+		sprite = 13
+
+		political_power_factor = 0.05
+		army_morale_factor = 0.1
+
+	}
+
+	KHM_daoyin_of_kashgar = {
+		random = no
+		sprite = 13
+
+		political_power_factor = 0.05
+		production_speed_buildings_factor = 0.05
+		war_support_factor = 0.05
+
+	}
+
+	KHM_civil_governor_for_life = {
+		random = no
+		sprite = 13
+
+		stability_factor = 0.15
+		political_power_factor = 0.05
+		consumer_goods_factor = -0.05
+
+	}
+
+	KHM_jadidist_emir = {
+		random = no
+		sprite = 13
+
+		research_speed_factor = 0.05
+		consumer_goods_factor = -0.1
+
+	}
+
 	KUM_champion_father_of_the_faithful = {
 		random = no
 		sprite = 13
@@ -787,6 +838,26 @@ leader_traits = {
 		war_support_factor = 0.1
 		army_attack_factor = 0.1
 		army_defence_factor = 0.1
+
+	}
+	
+	KHM_ghazi_trait = {
+		random = no
+		sprite = 13
+
+		army_attack_factor = 0.05
+		army_defence_factor = 0.05
+
+	}
+
+	CHI_bandit_warlord = {
+		random = no
+		sprite = 13
+
+		equipment_capture_factor = 0.02
+		war_support_factor = 0.05
+		stability_factor = -0.05
+		attrition = -0.05
 
 	}
 
@@ -919,6 +990,36 @@ leader_traits = {
 
 		communism_acceptance = -40
 		army_attack_factor = 0.025
+
+	}
+
+	KHM_emir_of_khotan = {
+		random = no
+		sprite = 13
+
+		communism_acceptance = -50
+		army_core_defence_factor = 0.05
+		war_support_factor = 0.05
+
+	}
+
+	CHI_jade_marshal = {
+		random = no
+		sprite = 13
+
+		army_attack_factor = 0.05
+		army_defence_factor = 0.05
+		war_support_factor = 0.05
+
+	}
+
+	CHI_border_garrison_commander = {
+		random = no
+		sprite = 13
+
+		army_core_defence_factor = 0.05
+		conscription_factor = 0.05
+		mobilization_speed = 0.05
 
 	}
 
@@ -1361,6 +1462,7 @@ leader_traits = {
 		sprite = 13 
 
 		political_power_factor = -0.05
+		local_resources_coal_factor = 0.15
 		production_speed_buildings_factor = 0.05
 
 	}
@@ -2431,7 +2533,8 @@ leader_traits = {
 
 	anti_democrat = {
 		random = no
-		democratic_drift = -0.05
+		democratic_acceptance = -50
+		democratic_drift = -0.02
 		stability_factor = 0.10
 
 		ai_will_do = {
@@ -3002,6 +3105,7 @@ leader_traits = {
 
 	gentle_scholar = { #abdulmejid
 		random = no
+		sprite = 13
 		stability_factor = 0.15
 		war_support_factor = -0.1
 		political_advisor_cost_factor = -0.25
@@ -3368,11 +3472,23 @@ leader_traits = {
 
 	prime_minister_atsiz = {
 		random = no
+		sprite = 13
 		war_support_factor = 0.1
 		mobilization_laws_cost_factor = -0.25
 		justify_war_goal_time = -0.33
 		conscription = 0.005
 		fascism_drift = 0.1
+	}
+
+	grey_wolf_trait = {
+		random = no
+		sprite = 13
+
+		war_support_factor = 0.15
+		mobilization_laws_cost_factor = -0.3
+		justify_war_goal_time = -0.5
+		conscription = 0.01
+
 	}
 
 	feminist_ultranationalist = {
@@ -4108,6 +4224,7 @@ leader_traits = {
 			economy_cost_factor = -0.15
 		}
 		stability_factor = 0.05
+		consumer_goods_expected_value = -0.02
 	}
 
 	il_duce_strengthen = { #Focus Strengthen the Regime
@@ -4123,6 +4240,7 @@ leader_traits = {
 		drift_defence_factor = 0.1
 		conscription_factor = 0.1
 		fascism_drift = 0.1
+		production_factory_efficiency_gain_factor = 0.1
 	}
 
 	il_duce_providence_strengthen = { #Focus The Man of Providence + Strengthen the Regime
@@ -4136,9 +4254,10 @@ leader_traits = {
 			economy_cost_factor = -0.15
 		}
 		stability_factor = 0.05
-		drift_defence_factor = 0.1
 		conscription_factor = 0.1
 		fascism_drift = 0.1
+		production_factory_efficiency_gain_factor = 0.1
+		consumer_goods_expected_value = -0.02
 	}
 
 	il_duce_devotion = { #Focus Heroes of the Nation
@@ -4152,9 +4271,11 @@ leader_traits = {
 			economy_cost_factor = -0.15
 		}
 		stability_factor = 0.1
-		drift_defence_factor = 0.15
 		conscription_factor = 0.15
 		fascism_drift = 0.1
+		production_factory_efficiency_gain_factor = 0.1
+		consumer_goods_expected_value = -0.02
+		industrial_capacity_factory = 0.10
 	}
 
 	il_duce_heroes = { #Focus Heroes of the Nation
@@ -4167,26 +4288,43 @@ leader_traits = {
 			economy_cost_factor = -0.15
 		}
 		stability_factor = 0.1
-		drift_defence_factor = 0.15
 		conscription_factor = 0.15
 		fascism_drift = 0.1
+		production_factory_efficiency_gain_factor = 0.1
+		consumer_goods_expected_value = -0.02
+		industrial_capacity_factory = 0.10
+		army_morale_factor = 0.05
+		army_org_factor = 0.1
 	}
 
 	#LION TAMER
 	lion_tamer = { #Focus Culto al Duce
 		random = no
 		party_popularity_stability_factor = 0.1
-		surrender_limit = 0.05
 		resistance_damage_to_garrison = -0.15
+		production_factory_start_efficiency_factor = 0.05
+		equipment_bonus = { 
+		    infantry_equipment = {
+			    build_cost_ic = -0.1
+			    instant = yes
+		    }
+		}
 	}
 
 	lion_tamer_2 = { #Focus To Live as a Lion
 		random = no
 		party_popularity_stability_factor = 0.1
-		surrender_limit = 0.05
 		resistance_damage_to_garrison = -0.15
+		production_factory_start_efficiency_factor = 0.05
 		war_support_factor = 0.05
 		offensive_war_stability_factor = 0.1
+		industrial_capacity_factory = 0.05
+		equipment_bonus = { 
+		    infantry_equipment = {
+			    build_cost_ic = -0.1
+			    instant = yes
+		    }
+		}
 	}
 
 	#CAPO SUPREMO
@@ -4202,29 +4340,29 @@ leader_traits = {
 	mussolini_minister_of_foreign_affairs = {
 		random = no
 		sprite = 13
-		opinion_gain_monthly_factor = 0.07
 		resistance_damage_to_garrison = -0.07
+		consumer_goods_expected_value = -0.01
 	}
 
 	mussolini_minister_of_justice = {
 		random = no
 		sprite = 13
-		improve_relations_maintain_cost_factor = -0.25
+		production_factory_max_efficiency_factor = 0.02
 		resistance_decay = 0.02
 	}
 
 	mussolini_minister_of_education = {
 		random = no
 		sprite = 13
-		research_speed_factor = 0.01
+		research_speed_factor = 0.05
 		stability_factor = 0.02
 	}
 
 	mussolini_minister_of_corporations = {
 		random = no
 		sprite = 13
-		industrial_capacity_factory = 0.02
-		industrial_capacity_dockyard = 0.02
+		industrial_capacity_factory = 0.04
+		industrial_capacity_dockyard = 0.04
 	}
 
 	### KING VITTORIO EMANUELE III ###
@@ -4365,14 +4503,20 @@ leader_traits = {
 	#THE GRAND COUNCIL
 	the_grand_council = {
 		random = no
-		political_power_factor = -0.01
-		stability_factor = -0.05
+		political_power_factor = -0.1
+		stability_factor = -0.1
 	}
 
 	#ITALO BALBO TRAITS
 	aviation_hero = { 
 		random = no
-		custom_modifier_tooltip = ITA_aviation_hero_tt #air_equipment = -0.05
+		custom_modifier_tooltip = ITA_aviation_hero_tt
+		equipment_bonus = { 
+		    cas = {
+			    build_cost_ic = -0.075 
+			    instant = yes
+		    }
+		}	
 		political_power_factor = 0.05
 		fascism_drift = 0.05
 	}
@@ -4388,10 +4532,8 @@ leader_traits = {
 	#DINO GRANDI TRAITS
 	silver_tongue = { 
 		random = no
-		opinion_gain_monthly_factor = 0.2
-		improve_relations_maintain_cost_factor = -0.2
-		justify_war_goal_time = -0.15
-		foreign_subversive_activites = -0.1
+		political_power_factor = 0.15
+		trade_opinion_factor = 0.25
 	}
 
 	silver_tongue_no_lar = { 
@@ -4441,8 +4583,7 @@ leader_traits = {
 			army_advisor_cost_factor = -0.25
 			navy_advisor_cost_factor = -0.25
 		}
-		drift_defence_factor = 0.05
-		research_speed_factor = 0.025 
+		research_speed_factor = 0.05 
 		operative_slot = 1
 	}
 
@@ -4493,8 +4634,8 @@ leader_traits = {
 		sprite = 13
 		fascism_drift = 0.05
 		political_power_factor = 0.05
-		opinion_gain_monthly_factor = 0.15
 		resistance_damage_to_garrison = -0.15
+		consumer_goods_expected_value = -0.02
 		custom_modifier_tooltip = ITA_hierarch_bop_tt
 	}
 
@@ -4503,7 +4644,8 @@ leader_traits = {
 		sprite = 13
 		fascism_drift = 0.05
 		political_power_factor = 0.05
-		improve_relations_maintain_cost_factor = -0.5
+		consumer_goods_expected_value = -0.01
+		production_factory_max_efficiency_factor = 0.04
 		resistance_decay = 0.05
 		custom_modifier_tooltip = ITA_hierarch_bop_tt
 	}
@@ -4513,7 +4655,7 @@ leader_traits = {
 		sprite = 13
 		political_power_factor = 0.05
 		fascism_drift = 0.05
-		research_speed_factor = 0.02
+		research_speed_factor = 0.1
 		stability_factor = 0.05
 		custom_modifier_tooltip = ITA_hierarch_bop_tt
 	}
@@ -4523,8 +4665,8 @@ leader_traits = {
 		sprite = 13
 		political_power_factor = 0.05
 		fascism_drift = 0.05
-		industrial_capacity_factory = 0.05
-		industrial_capacity_dockyard = 0.05
+		industrial_capacity_factory = 0.075
+		industrial_capacity_dockyard = 0.075
 		custom_modifier_tooltip = ITA_hierarch_bop_tt
 	}
 
@@ -5857,6 +5999,7 @@ leader_traits = {
 	}
 
 	SWE_ardent_conservative = {
+		sprite = 13
 		political_power_factor = -0.1
 		grant_medal_cost_factor = -0.15
 		dig_in_speed_factor = 0.20
@@ -6499,6 +6642,17 @@ leader_traits = {
 		stability_factor = 0.05
 	}
 
+	IRQ_guardian_of_independence = {
+		random = no
+		sprite = 13
+
+		army_core_defence_factor = 0.1
+		democratic_drift = 0.05
+		stability_factor = 0.05
+		war_support_factor = 0.05
+
+	}
+
 	IRQ_militant_politician = {
 		random = no 
 		sprite = 18
@@ -6589,6 +6743,16 @@ leader_traits = {
 		stability_factor = 0.1
 	}
 
+	IRQ_shiite_representative = {
+		random = no 
+		sprite = 13
+
+		political_power_factor = 0.1
+		stability_factor = 0.1
+		drift_defence_factor = 0.15
+
+	}
+
 	IRQ_the_grand_mufti = {
 		random = no 
 		sprite = 13
@@ -6617,6 +6781,33 @@ leader_traits = {
 
 		fascism_drift = 0.06
 		stability_factor = 0.1
+	}
+
+	KUW_the_military_sheikh = {
+		random = no
+		sprite = 13
+		army_core_defence_factor = 0.15
+		cavalry_attack_factor = 0.1
+		cavalry_defence_factor = 0.1
+		conscription = 0.02
+	}
+
+	JOR_emir_of_transjordan = {
+		random = no
+		sprite = 13
+
+		stability_factor = 0.1
+		political_power_factor = 0.05
+
+	}
+
+	PAL_experienced_high_commissioner = {
+		random = no
+		sprite = 13
+
+		production_speed_infrastructure_factor = 0.1
+		political_power_factor = 0.05
+
 	}
 
 	IRQ_knight_of_arabism = {
@@ -6747,6 +6938,17 @@ leader_traits = {
 		political_power_factor = 0.1
 	}
 
+	IRQ_hashemite_supporter = {
+		random = no
+		sprite = 13
+
+		stability_factor = -0.05
+		improve_relations_maintain_cost_factor = -1
+		political_advisor_cost_factor = -0.5
+		political_power_factor = 0.1
+
+	}
+
 	IRQ_poet_of_freedom = {
 		random = no 
 		sprite = 13
@@ -6754,6 +6956,26 @@ leader_traits = {
 		democratic_acceptance = 50
 		war_support_factor = 0.1
 		autonomy_gain = 1
+	}
+
+	YEM_supreme_imam_trait = {
+		random = no 
+		sprite = 13
+		
+		drift_defence_factor = 0.5
+		political_power_factor = 0.05
+		conscription_factor = 0.05
+		war_support_factor = 0.1
+
+	}
+
+	OMA_unifier_of_muscat_and_oman = {
+		random = no 
+		sprite = 13
+		
+		production_speed_buildings_factor = 0.05
+		political_power_factor = 0.05
+
 	}
 
 	########################
@@ -8218,11 +8440,30 @@ leader_traits = {
 			}
 		}
 	}
+	financial_specialist = {
+		sprite = 10
+		random = yes
+        consumer_goods_expected_value = -0.025
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
 
 	financial_expert = {
 		sprite = 10
 		random = yes
         consumer_goods_expected_value = -0.05
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	financial_genius = {
+		sprite = 10
+		random = yes
+        consumer_goods_expected_value = -0.075
 
 		ai_will_do = {
 			factor = 2
@@ -8539,7 +8780,9 @@ leader_traits = {
 		sprite = 10
 
 		stability_factor = 0.05
-		consumer_goods_factor = -0.15
+		consumer_goods_expected_value = -0.02
+		industrial_capacity_factory = 0.1
+		neutrality_drift = 0.1
 
 		ai_will_do = {
 			factor = 1
@@ -8550,7 +8793,8 @@ leader_traits = {
 		random = no
 		sprite = 13
 
-		political_power_factor = 0.15
+		stability_factor = 0.15
+		neutrality_drift = 0.1
 
 		ai_will_do = {
 			factor = 1
@@ -9503,6 +9747,18 @@ leader_traits = {
 		sprite = 13
 		
 		neutrality_drift = 0.1
+		justify_war_goal_time = -0.25
+		war_support_factor = 0.1
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	SAU_unifier_of_central_arabia = {
+		random = no
+		sprite = 13
+		
 		justify_war_goal_time = -0.25
 		war_support_factor = 0.1
 		
@@ -11091,6 +11347,20 @@ leader_traits = {
 		}
 	}
 
+	desert_motor_transport_company = {
+		random = no
+		
+		supply_combat_penalties_on_core_factor = -0.15
+		supply_node_range = 0.15
+		supply_consumption_factor = -0.05
+
+		equipment_bonus = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 	improved_railway_company = {
 		random = no
 		production_speed_rail_way_factor = 0.25
@@ -11241,6 +11511,28 @@ leader_traits = {
 		}
 	}
 
+	electricity_focused_state_bank = {
+		random = no
+
+		factory_energy_consumption = -0.1
+		consumer_goods_factor = -0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	industrial_investment_bank = {
+		random = no
+
+		production_speed_industrial_complex_factor = 0.05
+		consumer_goods_factor = -0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 	telephone_company = {
 		random = no
 		land_reinforce_rate = 0.02
@@ -11328,7 +11620,7 @@ leader_traits = {
 	energy_supply_company = {
 		random = no
 
-		consumer_goods_factor = -0.075
+		consumer_goods_expected_value = -0.02
 
 		ai_will_do = {
 			factor = 1
@@ -11415,7 +11707,9 @@ leader_traits = {
 
 	inventive_genius = {
 		random = no
+		sprite = 10
 
+		custom_modifier_tooltip = TUR_inventive_genius_electronics_modifier_tt
 		political_power_gain = 0.05
 		opinion_gain_monthly_factor = 0.05
 
@@ -11427,7 +11721,7 @@ leader_traits = {
 	conglomerate = {
 		random = no
 
-		consumer_goods_factor = 0.05 #yes, this is actually a penalty
+		consumer_goods_expected_value = 0.03 #yes, this is actually a penalty
 		local_resources_factor = 0.05
 		production_lack_of_resource_penalty_factor = -0.05
 
@@ -11914,7 +12208,9 @@ leader_traits = {
 
 	inventive_genius = {
 		random = no
+		sprite = 10
 
+		custom_modifier_tooltip = TUR_inventive_genius_electronics_modifier_tt
 		political_power_gain = 0.05
 		opinion_gain_monthly_factor = 0.05
 
@@ -12049,9 +12345,11 @@ leader_traits = {
 		random = no #only for Franz Winkler
 		sprite = 18
 
-		modifier_army_sub_unit_militia_attack_factor = 0.2
-		modifier_army_sub_unit_militia_defence_factor = 0.2
-		army_core_defence_factor = 0.1
+		modifier_army_sub_unit_militia_attack_factor = 0.1
+		modifier_army_sub_unit_militia_defence_factor = 0.1
+		army_core_defence_factor = 0.05
+		war_support_factor = 0.1
+
 	}
 
 	AUS_prince_of_starhemberg = {
@@ -12600,7 +12898,7 @@ leader_traits = {
 
 		production_speed_infrastructure_factor = 0.1
 		production_speed_rail_way_factor = 0.1
-		production_speed_arms_factory_factor = 0.1
+		production_speed_arms_factory_factor = 0.075
 		production_speed_bunker_factor = 0.1
 		production_speed_coastal_bunker_factor = 0.05
 		global_building_slots = 1
@@ -12648,7 +12946,7 @@ leader_traits = {
 	GER_reichswerke_conglomerate = {
 		random = no
 
-		consumer_goods_factor = 0.05 #yes, this is actually a penalty
+		consumer_goods_expected_value = 0.02 #yes, this is actually a penalty
 		local_resources_factor = 0.1
 		production_lack_of_resource_penalty_factor = -0.15
 
@@ -17698,6 +17996,7 @@ leader_traits = {
 			}
 		}
 	}
+
 	#Calinescu
 	man_of_steel = {
 		random = no
@@ -17706,8 +18005,8 @@ leader_traits = {
 		political_power_gain = 0.2
 		stability_weekly = 0.003
 		consumer_goods_expected_value = -0.03
-
 	}
+
 	#Calinescu leader
 	ROM_man_of_steel_2 = {
 		random = no
@@ -17715,9 +18014,8 @@ leader_traits = {
 		stability_weekly = 0.003
 		consumer_goods_expected_value = -0.1
 		neutrality_drift = 0.2
-		
-
 	}
+	
 	#Sima 
 	iron_guard_leader = {
 		random = no
@@ -17726,6 +18024,105 @@ leader_traits = {
 		stability_factor = -0.25
 		production_speed_arms_factory_factor = 0.30
 		military_factory_donations = 10
+	}
 
+	GER_wirtschaftsminister_schacht = {
+		sprite = 10
+		random = no
+		consumer_goods_expected_value = -0.03
+		production_speed_industrial_complex_factor = 0.15
+		production_speed_arms_factory_factor = -0.1
+	}
+
+	GER_wirtschaftsminister_schacht_42 = {
+		sprite = 10
+		random = no
+		consumer_goods_expected_value = -0.05
+		production_factory_start_efficiency_factor = 0.075
+		line_change_production_efficiency_factor = 0.075
+	}
+
+	GER_rwim_1 = {
+		consumer_goods_expected_value = -0.02
+		production_speed_industrial_complex_factor = 0.05
+	}
+
+	GER_rwim_2 = {
+		consumer_goods_expected_value = -0.02
+		production_speed_industrial_complex_factor = 0.1
+		production_speed_buildings_factor = 0.03
+		global_building_slots = 2
+	}
+
+	GER_wirtschaftsminister_todt = {
+		sprite = 10
+		random = no
+		production_speed_infrastructure_factor = 0.25
+		production_speed_rail_way_factor = 0.15
+		production_speed_supply_node_factor = 0.3
+		production_speed_bunker_factor = 0.2
+		production_speed_coastal_bunker_factor = 0.2
+	}
+
+	GER_wirtschaftsminister_todt_42 = {
+		sprite = 10
+		random = no
+		production_speed_infrastructure_factor = 0.15
+		production_speed_rail_way_factor = 0.2
+		production_speed_supply_node_factor = 0.35
+		production_speed_bunker_factor = 0.3
+		production_speed_coastal_bunker_factor = 0.3
+		industry_repair_factor = 0.2
+		industry_air_damage_factor = -0.1
+	}
+
+	GER_wirtschaftsminister_goering = {
+		sprite = 10
+		random = no
+		industrial_capacity_factory = 0.1
+		industrial_capacity_dockyard = 0.1
+		production_speed_arms_factory_factor = 0.1
+		consumer_goods_expected_value = 0.02
+		local_resources_factor = 0.1
+		production_speed_synthetic_refinery_factor = 0.2
+	}
+
+	GER_wirtschaftsminister_goering_42 = {
+		sprite = 10
+		random = no
+		industrial_capacity_factory = 0.125
+		industrial_capacity_dockyard = 0.125
+		production_speed_arms_factory_factor = 0.05
+		consumer_goods_expected_value = 0.03
+		local_resources_factor = 0.15
+		production_speed_synthetic_refinery_factor = 0.15
+	}
+
+	GER_wirtschaftsminister_speer = {
+		sprite = 10
+		random = no
+		production_factory_efficiency_gain_factor = 0.075
+		production_factory_max_efficiency_factor = 0.05
+		production_factory_start_efficiency_factor = 0.075
+		line_change_production_efficiency_factor = 0.075
+	}
+
+	GER_wirtschaftsminister_speer_42 = {
+		sprite = 10
+		random = no
+		production_factory_efficiency_gain_factor = 0.1
+		production_factory_max_efficiency_factor = 0.1
+		production_factory_start_efficiency_factor = 0.1
+		line_change_production_efficiency_factor = 0.1
+		equipment_bonus = {
+			infantry_equipment = {
+				build_cost_ic = -0.1
+				instant = yes
+			}
+			artillery = {
+				build_cost_ic = -0.1
+				instant = yes
+			}
+		}
 	}
 }

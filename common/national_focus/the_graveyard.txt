@@ -1,0 +1,517 @@
+focus_tree = {
+    id = the_graveyard
+    country = {
+        factor = 0
+    }
+    default = no
+    focus = {
+	id = AST_a_deal_with_japan
+}
+focus = {
+	id = AST_abandon_the_westminster_system
+}
+focus = {
+	id = AST_empower_the_workers
+}
+focus = {
+	id = AST_never_another_gallipoli
+}
+focus = {
+	id = AST_protect_the_homeland
+}
+focus = {
+	id = AST_sever_ties_with_uk
+}
+focus = {
+	id = AST_support_indonesian_uprising
+}
+focus = {
+	id = AST_support_the_centre_party
+}
+focus = {
+	id = AST_the_south_west_pacific_initiative
+}
+focus = {
+	id = CAN_compromise_with_quebec
+}
+focus = {
+	id = CAN_cookie_carriers
+}
+focus = {
+	id = CAN_forced_quebec_conscription
+}
+focus = {
+	id = CAN_fund_fairchilds_development
+}
+focus = {
+	id = CAN_north_american_alliance
+}
+focus = {
+	id = CAN_patriation
+}
+focus = {
+	id = CAN_skewer_the_eagle
+}
+focus = {
+	id = ENG_alliance_with_germany
+}
+focus = {
+	id = ENG_concessions_to_the_trade_unions
+}
+focus = {
+	id = ENG_crush_the_dream
+}
+focus = {
+	id = ENG_eliminate_the_upper_class
+}
+focus = {
+	id = ENG_enforce_the_naval_treaties
+}
+focus = {
+	id = ENG_imperial_conference
+}
+focus = {
+	id = ENG_indian_autonomy
+}
+focus = {
+	id = ENG_organize_the_blackshirts
+}
+focus = {
+	id = ENG_secure_the_italian_alliance
+}
+focus = {
+	id = ENG_the_british_communist_alternative
+}
+focus = {
+	id = ENG_the_fate_of_the_royal_family
+}
+focus = {
+	id = ENG_the_three_nation_solution
+}
+focus = {
+	id = ENG_unite_the_anglosphere
+}
+focus = {
+	id = FRA_anti_fascist_coalition
+}
+focus = {
+	id = FRA_ban_communism
+}
+focus = {
+	id = FRA_ban_the_leagues
+}
+focus = {
+	id = FRA_carry_the_revolution_east
+}
+focus = {
+	id = FRA_carry_the_revolution_north
+}
+focus = {
+	id = FRA_carry_the_revolution_south
+}
+focus = {
+	id = FRA_carry_the_revolution_west
+}
+focus = {
+	id = FRA_destroy_the_counter_revolution
+}
+focus = {
+	id = FRA_disunite_germany
+}
+focus = {
+	id = FRA_establish_spheres_of_influence
+}
+focus = {
+	id = FRA_go_with_britain
+}
+focus = {
+	id = FRA_humanite_unie
+}
+focus = {
+	id = FRA_invite_communist_ministers
+}
+focus = {
+	id = FRA_latin_entente
+}
+focus = {
+	id = FRA_leftist_rhetoric
+}
+focus = {
+	id = FRA_loyalty_to_the_cause
+}
+focus = {
+	id = FRA_no_further_humiliations
+}
+focus = {
+	id = FRA_orleanist_restoration
+}
+focus = {
+	id = FRA_proclaim_the_third_empire
+}
+focus = {
+	id = FRA_ratify_the_stresa_front
+}
+focus = {
+	id = FRA_repeal_the_law_of_exile
+}
+focus = {
+	id = FRA_revolution_to_the_utmost
+}
+focus = {
+	id = FRA_right_wing_rhetoric
+}
+focus = {
+	id = FRA_secure_the_crown_of_spain
+}
+focus = {
+	id = FRA_strengthen_the_little_entente
+}
+focus = {
+	id = FRA_the_council_of_rambouillet
+}
+focus = {
+	id = FRA_the_legitimate_heir
+}
+focus = {
+	id = FRA_two_countries_two_crowns
+}
+focus = {
+	id = FRA_utilize_the_leagues
+}
+focus = {
+	id = FRA_woo_italy
+}
+focus = {
+	id = HUN_balkan_ambitions
+}
+focus = {
+	id = ROM_align_hungary
+}
+focus = {
+	id = ROM_appoint_soviet_friendly_government
+}
+focus = {
+	id = ROM_balkans_dominance
+}
+focus = {
+	id = ROM_black_sea_dominance
+}
+focus = {
+	id = ROM_coastal_defense_navy
+}
+focus = {
+	id = ROM_handle_the_king
+}
+focus = {
+	id = ROM_iron_guard
+}
+focus = {
+	id = ROM_the_cordon_sanitaire
+}
+focus = {
+	id = SAF_a_king_for_our_people
+}
+focus = {
+	id = SAF_empower_the_workers
+}
+focus = {
+	id = SAF_Union_of_the_African_People
+}
+focus = {
+	id = SPA_cultivate_fanaticism
+}
+focus = {
+	id = SPA_join_the_allies
+}
+focus = {
+	id = SPA_prepare_the_carlist_insurrection
+}
+focus = {
+	id = SPA_reassert_american_dominance
+}
+focus = {
+	id = SPA_restore_the_iberian_union
+}
+focus = {
+	id = SPA_secure_the_northern_garrisons
+}
+focus = {
+	id = SPA_tackle_the_vulnerable_fronts
+}
+focus = {
+	id = SPA_the_army_of_africa
+}
+focus = {
+	id = SPA_the_fifth_column
+}
+focus = {
+	id = SPA_the_iberian_pact
+}
+focus = {
+	id = SPA_the_latin_bloc
+}
+focus = {
+	id = SPR_a_red_iberia
+}
+focus = {
+	id = SPR_against_trotskyism_and_stalinism
+}
+focus = {
+	id = SPR_all_must_bear_the_torch
+}
+focus = {
+	id = SPR_all_must_do_their_part
+}
+focus = {
+	id = SPR_anti_fascist_unity
+}
+focus = {
+	id = SPR_appeal_for_increased_autonomy
+}
+focus = {
+	id = SPR_communal_autarky
+}
+focus = {
+	id = SPR_communal_military_strategies
+}
+focus = {
+	id = SPR_communists_in_the_government
+}
+focus = {
+	id = SPR_crush_the_revolution
+}
+focus = {
+	id = SPR_demand_ministerial_positions
+}
+focus = {
+	id = SPR_disband_the_army
+}
+focus = {
+	id = SPR_distribute_arms_to_the_people
+}
+focus = {
+	id = SPR_enlarge_the_weapon_caches
+}
+focus = {
+	id = SPR_expand_soviet_aid
+}
+focus = {
+	id = SPR_exploit_spains_riches
+}
+focus = {
+	id = SPR_foreign_arms_purchases
+}
+focus = {
+	id = SPR_fuel_for_the_war_machine
+}
+focus = {
+	id = SPR_global_defense_council
+}
+focus = {
+	id = SPR_hinder_nkvd_interference
+}
+focus = {
+	id = SPR_international_brigades
+}
+focus = {
+	id = SPR_maintain_the_second_republic
+}
+focus = {
+	id = SPR_masters_of_our_own_fate
+}
+focus = {
+	id = SPR_new_leadership
+}
+focus = {
+	id = SPR_oppose_the_communists
+}
+focus = {
+	id = SPR_plant_the_seeds_of_revolution
+}
+focus = {
+	id = SPR_portuguese_anarchism
+}
+focus = {
+	id = SPR_red_bulwark_in_the_west
+}
+focus = {
+	id = SPR_regional_defense_council_of_aragon
+}
+focus = {
+	id = SPR_relocate_the_gold_reserves
+}
+focus = {
+	id = SPR_secure_democratic_principles
+}
+focus = {
+	id = SPR_secure_the_guardia_civil
+}
+focus = {
+	id = SPR_secure_the_guardia_de_asalto
+}
+focus = {
+	id = SPR_solidify_government_control
+}
+focus = {
+	id = SPR_stabilize_the_nation
+}
+focus = {
+	id = SPR_take_the_initiative
+}
+focus = {
+	id = SPR_the_anti_fascist_workers_revolution
+}
+focus = {
+	id = SPR_the_inevitable_counterblow
+}
+focus = {
+	id = SPR_the_popular_front
+}
+focus = {
+	id = SPR_the_stalinist_doctrine
+}
+focus = {
+	id = SPR_train_the_union_youth
+}
+focus = {
+	id = SPR_unify_the_london_bureau
+}
+focus = {
+	id = SPR_united_under_socialism
+}
+focus = {
+	id = SPR_war_of_independence
+}
+focus = {
+	id = uk_balkan_strategy
+}
+focus = {
+	id = uk_burma_focus
+}
+focus = {
+	id = uk_china_focus
+}
+focus = {
+	id = uk_free_india_focus
+}
+focus = {
+	id = uk_scandinavian_focus
+}
+focus = {
+	id = wuw_HUN_a_danubian_federation
+}
+focus = {
+	id = wuw_HUN_a_habsburg_poland
+}
+focus = {
+	id = wuw_HUN_a_responsible_government
+}
+focus = {
+	id = wuw_HUN_abide_by_the_little_ententes_stipulations
+}
+focus = {
+	id = wuw_HUN_demand_austrian_restoration
+}
+focus = {
+	id = wuw_HUN_demand_wiedist_restoration
+}
+focus = {
+	id = wuw_HUN_elect_a_democratic_king
+}
+focus = {
+	id = wuw_HUN_elect_a_fascist_king
+}
+focus = {
+	id = wuw_HUN_elections_in_the_revolutionary_council
+}
+focus = {
+	id = wuw_HUN_end_the_white_terror
+}
+focus = {
+	id = wuw_HUN_establish_the_second_republic
+}
+focus = {
+	id = wuw_HUN_establishing_a_new_dynasty
+}
+focus = {
+	id = wuw_HUN_goulash_communism
+}
+focus = {
+	id = wuw_HUN_guarantee_religious_liberties
+}
+focus = {
+	id = wuw_HUN_habsburg_ascension_in_spain
+}
+focus = {
+	id = wuw_HUN_hold_territorial_referendums
+}
+focus = {
+	id = wuw_HUN_integrate_bohemian_and_austrian_industries
+}
+focus = {
+	id = wuw_HUN_invite_otto_to_the_throne
+}
+focus = {
+	id = wuw_HUN_join_the_comintern
+}
+focus = {
+	id = wuw_HUN_license_fiat_tankettes
+}
+focus = {
+	id = wuw_HUN_press_maximilians_and_the_iturbides_claims
+}
+focus = {
+	id = wuw_HUN_protect_czechoslovakia
+}
+focus = {
+	id = wuw_HUN_reclaim_the_slovak_possessions
+}
+focus = {
+	id = wuw_HUN_reenlist_the_sich_riflemen
+}
+focus = {
+	id = wuw_HUN_reinstate_the_lenin_boys
+}
+focus = {
+	id = wuw_HUN_reinstate_the_pragmatic_sanction
+}
+focus = {
+	id = wuw_HUN_renovato_imperii
+}
+focus = {
+	id = wuw_HUN_restore_the_lombardo_venetian_kingdom
+}
+focus = {
+	id = wuw_HUN_restore_the_socialist_federative_republic
+}
+focus = {
+	id = wuw_HUN_revenge_for_1919
+}
+focus = {
+	id = wuw_HUN_revenge_for_the_brusilov_offensive
+}
+focus = {
+	id = wuw_HUN_reverse_the_brain_drain
+}
+focus = {
+	id = wuw_HUN_stage_an_uprising_in_leitha
+}
+focus = {
+	id = wuw_HUN_the_balkan_pact
+}
+focus = {
+	id = wuw_HUN_the_lands_of_the_crown_of_saint_stephen
+}
+focus = {
+	id = wuw_HUN_the_old_habsburg_king
+}
+focus = {
+	id = wuw_HUN_the_triple_kingdom
+}
+focus = {
+	id = wuw_HUN_undoing_the_yugoslav_mistake
+}
+focus = {
+	id = wuw_HUN_volksbund_der_deutschen_in_ungarn
+}
+}

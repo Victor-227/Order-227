@@ -37,15 +37,7 @@ if = {
 
 starting_train_buffer = 4
 
-if = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	set_naval_oob = "ENG_1936_Naval"
-	else = {
-		set_naval_oob = "ENG_1936_Naval_Legacy"
-	}
-}
+set_naval_oob = "ENG_1936_Naval"
 
 if = {
 	limit = {
@@ -118,7 +110,7 @@ IRQ = {
 set_research_slots = 4
 
 set_stability = 0.6
-set_war_support = 0.1
+set_war_support = 0.0
 add_command_power = 20
 
 # Starting tech
@@ -566,12 +558,11 @@ add_to_faction = ENG
 #add_to_faction = FRA
 add_to_faction = CAN
 add_to_faction = AST
-add_to_faction = NZL
 add_to_faction = SAF
+add_to_faction = USA
 
 give_military_access = RAJ
 add_to_faction = RAJ		# Must be after puppet
-add_to_faction = MAL
 
 #give_guarantee = CZE
 
@@ -579,7 +570,6 @@ add_to_faction = MAL
 recruit_character = ENG_oswald_mosley
 recruit_character = ENG_stanley_baldwin
 recruit_character = ENG_winston_churchill
-recruit_character = ENG_harry_pollitt
 recruit_character = ENG_alan_brooke
 recruit_character = ENG_bernard_montgomery
 recruit_character = ENG_claude_auchinleck
@@ -640,7 +630,6 @@ recruit_character = ENG_edward_ellington
 
 
 
-recruit_character = ENG_john_beckett
 recruit_character = ENG_corgis_1
 recruit_character = ENG_corgis_2
 recruit_character = ENG_corgis_3
@@ -648,7 +637,6 @@ recruit_character = ENG_alan_turing
 recruit_character = ENG_clement_attlee
 recruit_character = ENG_ernest_bevin
 recruit_character = ENG_leslie_hore_belisha
-recruit_character = ENG_george_orwell
 recruit_character = ENG_nevile_henderson
 recruit_character = ENG_random_communist_minister_8
 recruit_character = ENG_random_communist_minister_9
@@ -664,9 +652,7 @@ recruit_character = ENG_random_communist_minister_13
 recruit_character = ENG_random_communist_minister_12
 recruit_character = ENG_random_communist_minister_11
 recruit_character = ENG_random_communist_minister_10
-recruit_character = ENG_mary_sophia_allen
 recruit_character = ENG_philip_kerr
-recruit_character = ENG_sylvia_pankhurst
 recruit_character = ENG_stewart_menzies
 recruit_character = ENG_maxwell_aitken
 recruit_character = ENG_thomas_moore

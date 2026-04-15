@@ -21,15 +21,8 @@ starting_train_buffer = 1.5
 
 set_research_slots = 4
 set_stability = 0.6
-IF = {
-	limit = {
-		has_dlc = "Gotterdammerung"
-	}
-	set_war_support = 0.65 # Was 0.7, but now get +5% from the Collosseum
-	ELSE = {
-		set_war_support = 0.8
-	}
-}
+set_war_support = 0.65
+
 
 add_ideas = {
 	vittorio_emanuele
@@ -41,38 +34,19 @@ add_ideas = {
 
 # RESISTANCE / COMPLIANCE
 
-550 = { #ERITREA
-	start_resistance = yes
-	set_compliance = 20
-	set_resistance = 0
-	set_garrison_strength = 1.0
-}
-
-559 = { #SOMALILAND
-	start_resistance = yes
-	set_compliance = 20
-	set_resistance = 0
-	set_garrison_strength = 1.0
-}
-
-844 = { #JUBALAND
-	start_resistance = yes
-	set_compliance = 20
-	set_resistance = 0
-	set_garrison_strength = 1.0
-}
-
 every_owned_state = { #LIBYAN STATES
 	limit = {
-		is_core_of = LBA
+		OR = {
+		is_core_of = KUR
+		is_core_of = ETH
+		}
 		NOT = { state = 273 } #Don't add resistance in the middle of the impassable desert thanks
 	}
 	start_resistance = yes
-	set_compliance = 35
+	set_compliance = 30
 	set_resistance = 0
 	set_garrison_strength = 1.0
 }
-
 
 #######################################
 ############ MISSIOLINIS ##############
@@ -366,9 +340,6 @@ set_technology = {
 	basic_train = 1
 }
 
-set_grand_doctrine = grand_battleplan
-set_grand_doctrine = new_fleet_in_being
-
 if = {
 	limit = {
 		has_dlc = "La Resistance"
@@ -478,257 +449,6 @@ if = {
 	add_ideas = MTG_naval_treaty_cheating
 }
 
-# DIPLOMACY / WAR 36
-if = {
-	limit = {
-		has_start_date < 1936.01.02
-	}
-	give_guarantee = ALB
-}
-
-1939.1.1 = {
-
-	add_political_power = 1198
-	add_command_power = 100
-	
-	#white_peace = ETH
-	if = {
-		limit = {
-			has_dlc = "Man the Guns"
-		}
-		remove_ideas = MTG_naval_treaty_adherent
-		remove_naval_treaty_effect = yes
-	}
-
-	#adding ministers
-	add_ideas = {
-		ITA_giovanni_marinelli
-		ITA_giacomo_acerbo
-		emilio_de_bono
-		vittorio_ambrosio
-		fiat
-		beretta
-
-		#laws
-		partial_economic_mobilisation
-		extensive_conscription
-	}
-
-	### FOCUS TREE ###
-	unlock_national_focus = ITA_solid_progress
-	#1936
-	complete_national_focus = ITA_ethiopian_war_logistics_bba #35
-	complete_national_focus = ITA_italian_highways_bba #35
-	complete_national_focus = ITA_servizio_informazione_militare
-	complete_national_focus = ITA_triumph_in_africa_bba
-	complete_national_focus = ITA_ministry_of_italian_africa #35
-	complete_national_focus = ITA_foreign_affairs #35
-	unlock_national_focus = ITA_the_new_emperor_of_ethiopia #35
-	unlock_national_focus = ITA_devaluate_the_lire #35
-	unlock_national_focus = ITA_topple_amhara_rulers #35
-	
-	#1937
-	unlock_national_focus = ITA_corpo_di_truppe_volontarie #35
-	complete_national_focus = ITA_army_primacy_bba #35
-	complete_national_focus = ITA_culto_del_duce
-	complete_national_focus = ITA_fiocchi_munizioni #35
-	complete_national_focus = ITA_naval_power_projection #35
-	complete_national_focus = ITA_air_innovations_bba #35
-	complete_national_focus = ITA_expand_rome_flying_school #35
-	complete_national_focus = ITA_oto_naval_guns #35
-	complete_national_focus = ITA_develop_libya #35
-
-	#1938
-	complete_national_focus = ITA_steel_industry_in_terni
-	complete_national_focus = ITA_citta_dell_aria
-	complete_national_focus = ITA_the_man_of_providence #35
-	complete_national_focus = ITA_security_militias #35
-	complete_national_focus = ITA_railway_innovations
-	unlock_national_focus = ITA_expand_foggia_farm_fields
-
-	#1939
-	unlock_national_focus = ITA_potential_allies_in_the_balkans #35
-	complete_national_focus = ITA_develop_eritrea #35
-	complete_national_focus = ITA_industria_della_gomma_sintetica #35
-	unlock_national_focus = ITA_albanian_occupation #35 #Apr 1939
-	complete_national_focus = ITA_pact_of_steel #35 #May 39
-	complete_national_focus = ITA_expand_naval_facilities #35
-	complete_national_focus = ITA_stockpile_fuel #35
-
-	complete_special_project = {
-		project = sp:sp_naval_midget_submarine
-		scientist = ITA_filippo_bonfiglietti
-		state = 158
-	}
-
-	# Effects from The New Emperor of Ethiopia
-
-	ITA_vittorio_emanuele_iii = { 
-		add_country_leader_trait = emperor_of_ethiopia
-	}
-
-	add_popularity = {
-		ideology = neutrality
-		popularity = 0.05
-	}
-
-	# Effects from Corpo di Truppe Volontarie
-	SPR = { add_opinion_modifier = { target = ITA modifier = ita_supported_spain_civil_war } }
-	oob = "ITA_aviazione_legionaria"
-
-	# Effects from Potential Allies in the Balkans
-	YUG = {
-		add_opinion_modifier = { target = ITA modifier = ita_diplomacy_focus }
-		add_popularity = {
-			ideology = fascism
-			popularity = 0.07
-		}
-	}
-	ROM = {
-		add_opinion_modifier = { target = ITA modifier = ita_diplomacy_focus }
-	}
-	BUL = {
-		add_opinion_modifier = { target = ITA modifier = ita_diplomacy_focus }
-		add_popularity = {
-			ideology = fascism
-			popularity = 0.07
-		}
-	}
-	activate_targeted_decision = { target = YUG decision = ITA_pressure_country_government_balkan }
-	activate_targeted_decision = { target = ROM decision = ITA_pressure_country_government_balkan }
-	activate_targeted_decision = { target = BUL decision = ITA_pressure_country_government_balkan }
-	activate_targeted_decision = { target = YUG decision = ITA_promote_ideology_rallies_balkan }
-	activate_targeted_decision = { target = ROM decision = ITA_promote_ideology_rallies_balkan }
-	activate_targeted_decision = { target = BUL decision = ITA_promote_ideology_rallies_balkan }
-
-	# Effects from Albanian Occupation
-	add_named_threat = { threat = 2 name = ITA_albania_war_goal }
-	add_ideas = vittorio_emanuele_albania_ethiopia
-	ITA_vittorio_emanuele_iii = { add_country_leader_trait = king_of_albania }
-
-	oob = "ITA_1939"
-
-	set_technology = {
-		interwar_artillery = 1
-		interwar_antitank = 1
-		infantry_weapons2 = 1
-		support_weapons = 1
-		support_weapons2 = 1
-		tech_recon = 1
-
-		#Air
-		#force_rotation = 1
-		#fighter_baiting = 1
-		#low_echelon_support = 1
-		#dispersed_fighting = 1
-
-		#electronics
-		electronic_mechanical_engineering = 1
-		radio = 1
-		mechanical_computing = 1
-		computing_machine = 1
-		basic_encryption = 1
-		basic_decryption = 1
-
-		#industry
-		basic_machine_tools = 1
-		improved_machine_tools = 1
-		advanced_machine_tools = 1
-		synth_oil_experiments = 1
-		fuel_refining2 = 1
-		construction1 = 1
-		construction2 = 1
-		construction3 = 1
-		concentrated_industry = 1
-		concentrated_industry2 = 1
-		concentrated_industry3 = 1
-	}
-
-set_grand_doctrine = grand_battleplan
-set_grand_doctrine = new_fleet_in_being
-set_grand_doctrine = new_operational_integrity	
-set_sub_doctrine = defensive_postures
-add_mastery = {
-    amount = 100
-    sub_doctrine = defensive_postures
-}
-	
-	complete_special_project = {
-		project = sp:sp_air_radar
-		scientist = ITA_giovanni_giorgi
-		state = 2
-	}
-
-	if = {
-		limit = {
-			NOT = {
-				has_dlc = "No Step Back"
-			}
-		}
-		set_technology = {
-	
-			improved_light_tank = 1
-	
-		}
-		set_oob = "ITA_1939"
-	}
-	if = {
-		limit = {
-			
-			has_dlc = "No Step Back"
-			
-		}
-		set_technology = {
-	
-			improved_light_tank_chassis = 1
-	
-		}
-		set_oob = "ITA_1939_nsb"
-	}
-	if = {
-		limit = { has_dlc = "By Blood Alone" }
-			set_air_oob = "ITA_1939_air_bba"
-			set_technology = {
-				aa_hmg = 1
-				improved_small_airframe = 1
-			}
-		else = {
-			set_air_oob = "ITA_1939_air_legacy"
-			set_technology = {
-				fighter1 = 1
-				fighter2 = 1
-				tactical_bomber1 = 1
-				tactical_bomber2 = 1
-			}
-		}
-	}
-	if = {
-		limit = { not = { has_dlc = "Man the Guns" } }
-		set_technology = {
-			basic_submarine = 1
-			basic_destroyer = 1
-			improved_destroyer = 1
-			basic_light_cruiser = 1
-			basic_battleship = 1
-			improved_battleship = 1
-		}
-		set_naval_oob = "ITA_1939_naval_legacy"
-	}
-	if = {
-		limit = {
-			has_dlc = "Man the Guns"
-		}
-		set_technology = {
-			#improved_airplane_launcher = 1
-			
-		}
-		set_naval_oob = "ITA_1939_naval_mtg"
-	}
-	
-	set_stability = 0.8
-	GER = { add_to_faction = ITA }
-}
-
 
 set_convoys = 200
 
@@ -749,7 +469,6 @@ recruit_character = ITA_benito_mussolini
 recruit_character = ITA_grand_council
 recruit_character = ITA_vittorio_emanuele_iii
 recruit_character = ITA_ferruccio_parri
-recruit_character = ITA_palmiro_togliatti
 recruit_character = ITA_rodolfo_graziani
 recruit_character = ITA_pietro_badoglio
 recruit_character = ITA_emilio_de_bono
@@ -781,7 +500,6 @@ recruit_character = ITA_hamid_idris_awate
 recruit_character = ITA_ibrahim_farag_mohammed
 recruit_character = ITA_mario_ricci
 recruit_character = ITA_norma_barbolini
-recruit_character = ITA_luigi_longo
 recruit_character = ITA_ada_gobetti
 recruit_character = ITA_randolfo_pacciardi
 recruit_character = ITA_giuseppe_pieche
@@ -815,9 +533,6 @@ recruit_character = ITA_giacomo_acerbo
 recruit_character = ITA_giovanni_marinelli
 recruit_character = ITA_serafino_mazzolini
 recruit_character = ITA_roberto_farinacci
-recruit_character = ITA_ivanoe_bonomi
-recruit_character = ITA_luigi_einaudi
-recruit_character = ITA_amadeo_bordiga
 recruit_character = ITA_paolo_thaon_di_revel
 recruit_character = ITA_dino_grandi
 recruit_character = ITA_carlo_scorza
@@ -834,24 +549,12 @@ recruit_character = ITA_guido_jung
 recruit_character = ITA_adelchi_serena
 recruit_character = ITA_curzio_malaparte
 recruit_character = ITA_giuseppe_bottai
-recruit_character = ITA_antonio_pesenti
-recruit_character = ITA_fausto_gullo
-recruit_character = ITA_giulio_paggio
-recruit_character = ITA_ignazio_silone
 recruit_character = ITA_vittorio_emanuele_orlando
-recruit_character = ITA_mario_scelba
-recruit_character = ITA_guido_de_ruggiero
 recruit_character = ITA_enrico_fermi
-recruit_character = ITA_alberto_tarchiani
-recruit_character = ITA_giuseppe_borea
 recruit_character = ITA_raffaele_de_courten
 
-recruit_character = ITA_sandro_pertini
-recruit_character = ITA_pietro_d_acquarone
-recruit_character = ITA_alberto_de_stefani
 recruit_character = ITA_ugo_luca
 recruit_character = ITA_pompeo_colajanni
-recruit_character = ITA_alcide_de_gasperi
 recruit_character = ITA_comitato_di_liberazione_nazionale
 recruit_character = ITA_papa_pio_xi
 recruit_character = ITA_papa_pio_xii

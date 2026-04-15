@@ -36,14 +36,26 @@ idea_categories = {
 		cost = 150
 		removal_cost = 0
 	}
+
+	research_&_theory = {
+		slot = tank_research
+		slot = naval_research
+		slot = aircraft_research
+		slot = materiel_research
+		slot = industrial_research
+		character_slot = theorist
+		ledger = civilian
+		cost = 150
+		removal_cost = 0
+	}
 	
 	research_production = {
 		slot = tank_manufacturer
 		slot = naval_manufacturer
 		slot = aircraft_manufacturer
 		slot = materiel_manufacturer
-		slot = industrial_concern
-		character_slot = theorist
+		slot = industrial_output
+		slot = industrial_theorist
 
 		ledger = civilian
 		
@@ -105,7 +117,7 @@ idea_categories = {
 	naval_academy_spirit = {
 		type = navy_spirit
 
-		cost = 20
+		cost = 25
 		removal_cost = -1
 		
 		politics_tab = no
@@ -117,7 +129,7 @@ idea_categories = {
 	navy_spirit = {
 		type = navy_spirit
 
-		cost = 35
+		cost = 50
 		removal_cost = -1
 		
 		politics_tab = no
@@ -129,7 +141,7 @@ idea_categories = {
 	naval_command_spirit = {
 		type = navy_spirit
 		
-		cost = 50
+		cost = 75
 		removal_cost = -1
 		
 		politics_tab = no
@@ -167,7 +179,7 @@ idea_categories = {
 		
 		politics_tab = no
 		
-		cost = 50
+		cost = 75
 		removal_cost = -1
 		
 		ledger = hidden

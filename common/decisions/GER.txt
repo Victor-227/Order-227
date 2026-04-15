@@ -684,7 +684,7 @@ GER_operational_planning_category = {
 				any_controlled_state = {
 					is_on_continent = europe
 					any_neighbor_state = {
-						
+						is_controlled_by_ROOT_or_ally = yes
 					}
 				}
 			}
@@ -926,7 +926,7 @@ GER_operational_planning_category = {
 				any_controlled_state = {
 					is_on_continent = africa
 					any_neighbor_state = {
-						
+						is_controlled_by_ROOT_or_ally = yes
 					}
 				}
 			}
@@ -1143,21 +1143,25 @@ GER_price_controls_cat = {
 		}
 
 		available = {
+			custom_trigger_tooltip = {
+				tooltip = GER_industrial_consumer_goods_factor_limit_decision_tt
+				check_variable = { GER_industrial_consumer_goods_expected_value > 0.15 }
+			}
 		}
 
 		visible = { #This decision is not available for the 1939 Start
 			NOT = { has_country_flag = GER_inactivate_price_control_measures_flag }
 		}
 
-		cost = 30
+		cost = 75
 
 		fire_only_once = yes
 
 		complete_effect = {
 			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GER_industrial_consumer_goods_factor = -0.05
-				tooltip = consumer_goods_factor_tt
+				GER_industrial_consumer_goods_expected_value = -0.03
+				tooltip = consumer_goods_expected_value_tt
 			}
 			GER_reduce_mefo_bills_penalty = yes
 			add_war_support = 0.025
@@ -1189,21 +1193,25 @@ GER_price_controls_cat = {
 		}
 
 		available = {
+			custom_trigger_tooltip = {
+				tooltip = GER_industrial_consumer_goods_factor_limit_decision_tt
+				check_variable = { GER_industrial_consumer_goods_expected_value > 0.15 }
+			}
 		}
 
 		visible = { #This decision is not available for the 1939 Start
 			NOT = { has_country_flag = GER_inactivate_price_control_measures_flag }
 		}
 
-		cost = 30
+		cost = 75
 
 		fire_only_once = yes
 
 		complete_effect = {
 			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GER_industrial_consumer_goods_factor = -0.05
-				tooltip = consumer_goods_factor_tt
+				GER_industrial_consumer_goods_expected_value = -0.03
+				tooltip = consumer_goods_expected_value_tt
 			}
 			GER_reduce_mefo_bills_penalty = yes
 			add_popularity = { ideology = ROOT popularity = 0.025 }
@@ -1234,21 +1242,25 @@ GER_price_controls_cat = {
 		}
 
 		available = {
+			custom_trigger_tooltip = {
+				tooltip = GER_industrial_consumer_goods_factor_limit_decision_tt
+				check_variable = { GER_industrial_consumer_goods_expected_value > 0.15 }
+			}
 		}
 
 		visible = { #This decision is not available for the 1939 Start
 			NOT = { has_country_flag = GER_inactivate_price_control_measures_flag }
 		}
 
-		cost = 30
+		cost = 75
 
 		fire_only_once = yes
 
 		complete_effect = {
 			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GER_industrial_consumer_goods_factor = -0.05
-				tooltip = consumer_goods_factor_tt
+				GER_industrial_consumer_goods_expected_value = -0.03
+				tooltip = consumer_goods_expected_value_tt
 			}
 			GER_reduce_mefo_bills_penalty = yes
 			add_timed_idea = {
@@ -1283,21 +1295,25 @@ GER_price_controls_cat = {
 
 		available = {
 			has_completed_focus = GER_coal_liquefaction
+			custom_trigger_tooltip = {
+				tooltip = GER_industrial_consumer_goods_factor_limit_decision_tt
+				check_variable = { GER_industrial_consumer_goods_expected_value > 0.15 }
+			}
 		}
 
 		visible = { #This decision is not available for the 1939 Start
 			NOT = { has_country_flag = GER_inactivate_price_control_measures_flag }
 		}
 
-		cost = 30
+		cost = 75
 
 		fire_only_once = yes
 
 		complete_effect = {
 			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GER_industrial_consumer_goods_factor = -0.05
-				tooltip = consumer_goods_factor_tt
+				GER_industrial_consumer_goods_expected_value = -0.03
+				tooltip = consumer_goods_expected_value_tt
 			}
 			GER_reduce_mefo_bills_penalty = yes
 		}
@@ -1327,21 +1343,25 @@ GER_price_controls_cat = {
 		}
 
 		available = {
+			custom_trigger_tooltip = {
+				tooltip = GER_industrial_consumer_goods_factor_limit_decision_tt
+				check_variable = { GER_industrial_consumer_goods_expected_value > 0.15 }
+			}
 		}
 
 		visible = { #This decision is not available for the 1939 Start
 			NOT = { has_country_flag = GER_inactivate_price_control_measures_flag }
 		}
 
-		cost = 15
+		cost = 50
 
 		fire_only_once = yes
 
 		complete_effect = {
 			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GER_industrial_consumer_goods_factor = -0.15
-				tooltip = consumer_goods_factor_tt
+				GER_industrial_consumer_goods_expected_value = -0.09
+				tooltip = consumer_goods_expected_value_tt
 			}
 			GER_reduce_mefo_bills_penalty = yes
 			add_timed_idea = {
@@ -1376,21 +1396,25 @@ GER_price_controls_cat = {
 
 		available = {
 			has_stability > 0.2
+			custom_trigger_tooltip = {
+				tooltip = GER_industrial_consumer_goods_factor_limit_decision_tt
+				check_variable = { GER_industrial_consumer_goods_expected_value > 0.15 }
+			}
 		}
 
 		visible = { #This decision is not available for the 1939 Start
 			NOT = { has_country_flag = GER_inactivate_price_control_measures_flag }
 		}
 
-		cost = 15
+		cost = 50
 
 		fire_only_once = yes
 
 		complete_effect = {
 			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GER_industrial_consumer_goods_factor = -0.1
-				tooltip = consumer_goods_factor_tt
+				GER_industrial_consumer_goods_expected_value = -0.06
+				tooltip = consumer_goods_expected_value_tt
 			}
 			GER_reduce_mefo_bills_penalty = yes
 			add_stability = -0.025
@@ -1422,21 +1446,25 @@ GER_price_controls_cat = {
 
 		available = {
 			has_stability > 0.2
+			custom_trigger_tooltip = {
+				tooltip = GER_industrial_consumer_goods_factor_limit_decision_tt
+				check_variable = { GER_industrial_consumer_goods_expected_value > 0.15 }
+			}
 		}
 
 		visible = { #This decision is not available for the 1939 Start
 			NOT = { has_country_flag = GER_inactivate_price_control_measures_flag }
 		}
 
-		cost = 15
+		cost = 50
 
 		fire_only_once = yes
 
 		complete_effect = {
 			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GER_industrial_consumer_goods_factor = -0.1
-				tooltip = consumer_goods_factor_tt
+				GER_industrial_consumer_goods_expected_value = -0.06
+				tooltip = consumer_goods_expected_value_tt
 			}
 			GER_reduce_mefo_bills_penalty = yes
 			add_stability = -0.025
@@ -3341,7 +3369,7 @@ operations = {
 			
 			219 = {	#MOSCOW
 				OR = {
-					
+					is_controlled_by_ROOT_or_ally = yes
 					controller = {
 						original_tag = FIN
 						has_completed_focus = FIN_cooperation_with_germany
@@ -3351,7 +3379,7 @@ operations = {
 
 			195 = {	#LENINGRAD
 				OR = {
-					
+					is_controlled_by_ROOT_or_ally = yes
 					controller = {
 						original_tag = FIN
 						has_completed_focus = FIN_cooperation_with_germany
@@ -3361,7 +3389,7 @@ operations = {
 
 			202 = {	#KIEV
 				OR = {
-					
+					is_controlled_by_ROOT_or_ally = yes
 					controller = {
 						original_tag = FIN
 						has_completed_focus = FIN_cooperation_with_germany
@@ -3371,7 +3399,7 @@ operations = {
 
 			217 = {	#STALINGRAD
 				OR = {
-					
+					is_controlled_by_ROOT_or_ally = yes
 					controller = {
 						original_tag = FIN
 						has_completed_focus = FIN_cooperation_with_germany
@@ -3531,34 +3559,34 @@ GER_reichskommissariats = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				110 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				142 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				143 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				144 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				920 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				921 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				922 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				923 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				924 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				925 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -3719,13 +3747,13 @@ GER_reichskommissariats = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				7 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				35 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				36 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -3879,19 +3907,19 @@ GER_reichskommissariats = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				6 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				29 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				34 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				977 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				980 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -4043,67 +4071,67 @@ GER_reichskommissariats = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				94 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				95 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				96 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				194 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				204 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				206 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				11 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				784 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				189 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				12 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				190 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				13 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				191 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				814 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				815 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				809 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				808 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				810 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				813 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				812 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				811 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -4295,52 +4323,52 @@ GER_reichskommissariats = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				93 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				199 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				201 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				202 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				193 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				203 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				197 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				225 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				259 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				226 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				196 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				200 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				221 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				228 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				227 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				137 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -4515,13 +4543,13 @@ GER_reichskommissariats = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				192 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				834 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				198 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -4625,10 +4653,10 @@ GER_reichskommissariats = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				766 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				78 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -4720,46 +4748,46 @@ GER_reichskommissariats = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				231 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				230 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				229 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				826 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				232 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				821 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				828 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				827 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				233 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				234 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				235 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				237 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				236 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				238 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -4913,73 +4941,73 @@ GER_reichskommissariats = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				405 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				742 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				830 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				584 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				832 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				831 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				823 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				587 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				585 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				732 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				404 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				586 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				402 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				406 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				407 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				583 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				881 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				589 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				590 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				588 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				882 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				654 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				40 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -5142,118 +5170,118 @@ GER_reichskommissariats = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				219 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				205 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				242 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				243 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				241 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				207 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				224 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				210 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				246 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				209 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				263 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				208 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				195 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				244 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				264 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				247 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				223 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				222 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				220 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				240 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				258 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				260 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				265 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				245 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				218 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				217 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				351 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				248 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				253 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				254 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				257 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				252 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				255 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				239 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				250 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				879 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				880 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				214 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -5423,7 +5451,7 @@ GER_reichskommissariats = {
 
 		visible = {
 			OR = {
-				829 = {  }
+				829 = { is_controlled_by_ROOT_or_subject = yes }
 				country_exists = RKM
 				has_war_with = 829.controller
 			}
@@ -5438,7 +5466,7 @@ GER_reichskommissariats = {
 				}
 			}
 			829 = {
-				
+				is_controlled_by_ROOT_or_subject = yes
 			}
 		}
 
@@ -5706,31 +5734,31 @@ GER_reichskommissariats = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				401 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				251 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				652 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				582 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				651 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				249 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				256 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				833 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				399 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -5804,25 +5832,25 @@ GER_reichskommissariats = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				825 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				262 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				397 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				400 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				398 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				581 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				573 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -5924,37 +5952,37 @@ GER_reichskommissariats = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				569 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				570 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				571 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				403 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				572 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				653 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				580 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				577 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				578 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				579 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				824 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -6082,13 +6110,13 @@ GER_reichskommissariats = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				216 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				215 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				213 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -6152,16 +6180,16 @@ GER_reichskommissariats = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				88 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				90 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				92 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				10 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -6309,10 +6337,10 @@ GER_reichskommissariats = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				89 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				91 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -6407,10 +6435,10 @@ GER_reichskommissariats = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				9 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				75 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -6556,85 +6584,85 @@ GER_reichskommissariats = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				165 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				167 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				794 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				166 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				172 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				792 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				176 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				790 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				791 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				174 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				171 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				788 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				793 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				168 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				41 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				170 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				175 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				789 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				173 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				169 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				118 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				180 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				181 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				795 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				179 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				112 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				806 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -6809,82 +6837,82 @@ GER_reichskommissariats = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				109 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				103 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				104 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				804 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				105 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				107 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				108 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				802 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				803 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				106 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				970 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				934 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				44 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				805 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				48 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				212 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				801 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				211 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				81 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				46 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				77 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				971 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				79 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				78 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				766 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				80 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -7092,7 +7120,7 @@ GER_reichskommissariats = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				163 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -7186,52 +7214,52 @@ GER_reichskommissariats = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				127 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				123 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				126 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				338 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				125 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				122 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				128 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				129 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				132 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				130 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				931 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				131 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				121 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				133 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				136 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				120 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -7403,19 +7431,19 @@ GER_reichskommissariats = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				184 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				731 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				185 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				47 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				186 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -7522,37 +7550,37 @@ GER_reichskommissariats = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				764 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				45 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				82 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				84 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				76 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				83 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				974 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				973 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				154 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				43 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				155 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -7698,16 +7726,16 @@ GER_reichskommissariats = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				73 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				664 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				71 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				70 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -7776,19 +7804,19 @@ GER_reichskommissariats = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				119 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				113 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				134 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				135 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				932 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -7894,106 +7922,106 @@ GER_reichskommissariats = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				458 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				665 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				460 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				513 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				459 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				461 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				462 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				290 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				783 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				699 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				557 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				448 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				661 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				449 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				662 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				450 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				663 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				451 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				452 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				447 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				907 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				456 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				457 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				883 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				551 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				886 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				549 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				887 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				774 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				272 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				701 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				899 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				898 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				781 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -8182,205 +8210,205 @@ GER_reichskommissariats = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				296 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				780 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				700 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				298 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				779 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				556 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				778 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				274 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				777 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				776 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				558 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				902 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				901 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				900 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				773 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				660 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				885 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				884 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				548 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				904 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				547 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				905 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				903 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				844 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				559 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				269 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				268 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				550 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				908 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				842 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				843 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				841 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				840 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				835 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				836 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				839 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				271 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				838 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				837 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				546 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				297 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				539 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				772 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				796 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				768 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				769 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				718 = {
-				 	
+				 	is_controlled_by_ROOT_or_subject = yes
 				}
 				538 = {
-				 	
+				 	is_controlled_by_ROOT_or_subject = yes
 				}
 				890 = {
-				  	
+				  	is_controlled_by_ROOT_or_subject = yes
 				}
 				295 = {
-				 	
+				 	is_controlled_by_ROOT_or_subject = yes
 				}
 				888 = {
-				 	
+				 	is_controlled_by_ROOT_or_subject = yes
 				}
 				889 = {
-				 	
+				 	is_controlled_by_ROOT_or_subject = yes
 				}
 				771 = {
-				 	
+				 	is_controlled_by_ROOT_or_subject = yes
 				}
 				770 = {
-				 	
+				 	is_controlled_by_ROOT_or_subject = yes
 				}
 				981 = {
-				 	
+				 	is_controlled_by_ROOT_or_subject = yes
 				}
 				540 = {
-				 	
+				 	is_controlled_by_ROOT_or_subject = yes
 				}
 				891 = {
-				 	
+				 	is_controlled_by_ROOT_or_subject = yes
 				}
 				892 = {
-				 	
+				 	is_controlled_by_ROOT_or_subject = yes
 				}
 				897 = {
-				 	
+				 	is_controlled_by_ROOT_or_subject = yes
 				}
 				896 = {
-				 	
+				 	is_controlled_by_ROOT_or_subject = yes
 				}
 				544 = {
-				 	
+				 	is_controlled_by_ROOT_or_subject = yes
 				}
 				545 = {
-				 	
+				 	is_controlled_by_ROOT_or_subject = yes
 				}
 				542 = {
-				 	
+				 	is_controlled_by_ROOT_or_subject = yes
 				}
 				895 = {
-				 	
+				 	is_controlled_by_ROOT_or_subject = yes
 				}
 				894 = {
-				 	
+				 	is_controlled_by_ROOT_or_subject = yes
 				}
 				541 = {
-				 	
+				 	is_controlled_by_ROOT_or_subject = yes
 				}
 				893 = {
-				 	
+				 	is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -8602,13 +8630,13 @@ GER_reichskommissariats = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				275 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				719 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				681 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -8702,118 +8730,118 @@ GER_reichskommissariats = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				307 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				489 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				488 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				687 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				309 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				310 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				969 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				495 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				940 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				939 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				938 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				942 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				280 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				486 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				504 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				944 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				503 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				502 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				501 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				505 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				941 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				497 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				937 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				935 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				498 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				936 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				499 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				496 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				943 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				500 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				487 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				688 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				301 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				946 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				945 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				300 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				510 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				957 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -9020,91 +9048,91 @@ GER_reichskommissariats = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				953 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				507 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				949 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				954 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				955 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				512 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				950 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				279 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				511 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				958 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				278 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				956 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				960 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				509 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				508 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				959 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				952 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				506 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				951 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				302 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				947 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				492 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				494 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				303 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				491 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				490 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				305 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				306 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				493 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -9293,130 +9321,130 @@ GER_reichskommissariats = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				304 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				685 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				316 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				317 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				312 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				314 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				313 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				311 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				474 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				475 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				476 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				477 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				485 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				478 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				277 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				479 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				481 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				480 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				482 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				483 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				315 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				689 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				693 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				690 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				318 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				319 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				686 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				695 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				694 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				308 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				692 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				691 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				375 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				371 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				370 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				367 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				366 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				365 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				376 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				377 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				374 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				372 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -9618,142 +9646,142 @@ GER_reichskommissariats = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				359 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				360 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				361 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				362 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				816 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				363 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				364 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				368 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				369 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				261 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				396 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				358 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				357 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				393 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				395 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				394 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				373 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				392 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				391 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				383 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				384 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				390 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				389 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				382 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				381 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				388 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				380 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				470 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				472 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				867 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				683 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				865 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				469 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				467 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				682 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				866 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				276 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				468 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				465 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				464 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				862 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				863 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				466 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				861 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				860 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				332 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -9950,13 +9978,13 @@ GER_reichskommissariats = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				730 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				331 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				101 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -10082,40 +10110,40 @@ GER_reichskommissariats = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				484 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				378 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				379 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				387 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				385 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				386 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				740 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				473 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				471 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				864 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				463 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				739 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -10195,67 +10223,67 @@ GER_reichskommissariats = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				516 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				576 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				568 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				567 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				566 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				878 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				575 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				565 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				876 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				574 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				877 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				644 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				822 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				875 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				562 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				874 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				637 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				561 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				564 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				563 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				560 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -10372,31 +10400,31 @@ GER_reichskommissariats = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				619 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				1042 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				287 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				759 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				617 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				618 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				760 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				329 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				818 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -10500,103 +10528,103 @@ GER_reichskommissariats = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				291 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				676 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				675 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				656 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				455 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				454 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				553 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				554 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				680 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				677 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				799 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				453 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				854 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				855 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				679 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				857 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				859 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				292 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				856 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				858 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				678 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				765 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				658 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				659 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				293 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				294 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				1010 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				1011 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				1013 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				1014 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				1015 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				1016 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				992 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -10782,58 +10810,58 @@ GER_reichskommissariats = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				344 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				350 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				352 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				348 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				353 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				800 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				354 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				349 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				355 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				798 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				356 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				345 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				346 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				49 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				347 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				343 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				339 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				342 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -10947,55 +10975,55 @@ GER_reichskommissariats = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				419 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				421 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				420 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				417 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				413 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				266 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				411 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				412 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				418 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				416 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				414 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				410 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				1000 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				1001 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				1004 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				1002 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				1003 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -11107,187 +11135,187 @@ GER_reichskommissariats = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				439 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				440 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				441 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				787 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				442 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				445 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				444 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				415 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				267 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				443 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				433 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				428 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				438 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				437 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				427 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				429 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				436 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				425 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				424 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				423 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				320 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				321 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				422 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				426 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				435 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				431 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				430 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				432 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				434 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				640 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				288 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				323 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				324 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				733 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				758 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				322 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				757 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				601 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				1009 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				1007 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				988 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				1008 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				1012 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				1005 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				1006 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				987 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				989 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				986 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				991 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				983 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				982 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				984 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				985 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				990 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				998 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				999 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				997 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				996 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				994 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				993 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				995 = {
-				 	
+				 	is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -11500,373 +11528,373 @@ GER_reichskommissariats = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				613 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				598 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				597 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				743 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				614 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				608 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				609 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				610 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				716 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				745 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				527 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				525 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				328 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				715 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				714 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				761 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				657 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				717 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				408 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				409 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				655 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				537 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				555 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				536 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				533 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				282 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				534 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				532 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				535 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				531 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				530 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				529 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				528 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				526 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				524 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				596 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				595 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				593 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				592 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				594 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				591 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				728 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				729 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				326 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				599 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				600 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				602 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				749 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				606 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				620 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				607 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				750 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				603 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				748 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				605 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				755 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				622 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				615 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				746 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				621 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				611 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				612 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				819 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				817 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				330 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				820 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				756 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				616 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				755 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				283 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				754 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				604 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				753 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				752 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				751 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				747 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				325 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				671 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				670 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				286 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				741 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				868 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				869 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				289 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				645 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				623 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				327 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				624 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				628 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				625 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				626 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				627 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				647 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				648 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				646 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				638 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				632 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				744 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				1025 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				1026 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				1027 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				1028 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				1029 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				1030 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				1031 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				1032 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				1033 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				1034 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				1035 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				1036 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				1037 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				1038 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				1039 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				1040 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				1041 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				1043 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				1044 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				1045 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				1046 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				1017 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				1018 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				1019 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				1020 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -12150,142 +12178,142 @@ GER_reichskommissariats = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				979 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				1024 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				1023 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				1022 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				1021 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				523 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				737 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				634 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				669 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				668 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				738 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				721 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				667 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				673 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				334 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				333 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				335 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				672 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				336 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				724 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				711 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				712 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				684 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				725 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				639 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				643 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				633 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				642 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				734 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				635 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				636 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				726 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				641 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				284 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				723 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				872 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				520 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				870 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				522 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				871 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				519 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				517 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				518 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				285 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				521 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 				873 = {
-				    
+				    is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -17086,7 +17114,7 @@ GER_weltpolitik_cat = {
 				has_completed_focus = GER_mittelafrika
 			}
 			777 = {
-				
+				is_controlled_by_ROOT_or_subject = yes
 			}
 			NOT = {
 				has_country_flag = GER_unlocked_the_schutztruppe_division_templates
@@ -17164,7 +17192,7 @@ GER_weltpolitik_cat = {
 				has_completed_focus = GER_mittelafrika
 			}
 			773 = {
-				
+				is_controlled_by_ROOT_or_subject = yes
 			}
 			NOT = {
 				has_country_flag = GER_unlocked_the_schutztruppe_division_templates
@@ -17242,7 +17270,7 @@ GER_weltpolitik_cat = {
 				has_completed_focus = GER_mittelafrika
 			}
 			546 = {
-				
+				is_controlled_by_ROOT_or_subject = yes
 			}
 			NOT = {
 				has_country_flag = GER_unlocked_the_schutztruppe_division_templates
@@ -17320,7 +17348,7 @@ GER_weltpolitik_cat = {
 				has_completed_focus = GER_mittelafrika
 			}
 			768 = {
-				
+				is_controlled_by_ROOT_or_subject = yes
 			}
 			NOT = {
 				has_country_flag = GER_unlocked_the_schutztruppe_division_templates
@@ -17398,7 +17426,7 @@ GER_weltpolitik_cat = {
 				has_completed_focus = GER_mittelafrika
 			}
 			769 = {
-				
+				is_controlled_by_ROOT_or_subject = yes
 			}
 			NOT = {
 				has_country_flag = GER_unlocked_the_schutztruppe_division_templates
@@ -17476,7 +17504,7 @@ GER_weltpolitik_cat = {
 				has_completed_focus = GER_mittelafrika
 			}
 			895 = {
-				
+				is_controlled_by_ROOT_or_subject = yes
 			}
 			NOT = {
 				has_country_flag = GER_unlocked_the_schutztruppe_division_templates
@@ -17554,7 +17582,7 @@ GER_weltpolitik_cat = {
 				has_completed_focus = GER_mittelafrika
 			}
 			894 = {
-				
+				is_controlled_by_ROOT_or_subject = yes
 			}
 			NOT = {
 				has_country_flag = GER_unlocked_the_schutztruppe_division_templates
@@ -17632,7 +17660,7 @@ GER_weltpolitik_cat = {
 				has_completed_focus = GER_mittelafrika
 			}
 			541 = {
-				
+				is_controlled_by_ROOT_or_subject = yes
 			}
 			NOT = {
 				has_country_flag = GER_unlocked_the_schutztruppe_division_templates
@@ -17710,7 +17738,7 @@ GER_weltpolitik_cat = {
 				has_completed_focus = GER_mittelafrika
 			}
 			893 = {
-				
+				is_controlled_by_ROOT_or_subject = yes
 			}
 			NOT = {
 				has_country_flag = GER_unlocked_the_schutztruppe_division_templates
@@ -17793,7 +17821,7 @@ GER_weltpolitik_cat = {
 				has_completed_focus = GER_ally_chiang_kai_shek
 			}
 			743 = {
-				
+				is_controlled_by_ROOT_or_subject = yes
 			}
 			NOT = {
 				has_country_flag = GER_unlocked_the_schutztruppe_division_templates
@@ -17872,7 +17900,7 @@ GER_weltpolitik_cat = {
 				has_completed_focus = GER_ally_chiang_kai_shek
 			}
 			646 = {
-				
+				is_controlled_by_ROOT_or_subject = yes
 			}
 			NOT = {
 				has_country_flag = GER_unlocked_the_schutztruppe_division_templates
@@ -17947,7 +17975,7 @@ GER_weltpolitik_cat = {
 				has_completed_focus = GER_ally_chiang_kai_shek
 			}
 			647 = {
-				
+				is_controlled_by_ROOT_or_subject = yes
 			}
 			NOT = {
 				has_country_flag = GER_unlocked_the_schutztruppe_division_templates
@@ -18022,7 +18050,7 @@ GER_weltpolitik_cat = {
 				has_completed_focus = GER_ally_chiang_kai_shek
 			}
 			684 = {
-				
+				is_controlled_by_ROOT_or_subject = yes
 			}
 			NOT = {
 				has_country_flag = GER_unlocked_the_schutztruppe_division_templates
@@ -18101,7 +18129,7 @@ GER_weltpolitik_cat = {
 				has_completed_focus = GER_ally_chiang_kai_shek
 			}
 			633 = {
-				
+				is_controlled_by_ROOT_or_subject = yes
 			}
 			NOT = {
 				has_country_flag = GER_unlocked_the_schutztruppe_division_templates
@@ -18180,7 +18208,7 @@ GER_weltpolitik_cat = {
 				has_completed_focus = GER_ally_chiang_kai_shek
 			}
 			725 = {
-				
+				is_controlled_by_ROOT_or_subject = yes
 			}
 			NOT = {
 				has_country_flag = GER_unlocked_the_schutztruppe_division_templates
@@ -18255,7 +18283,7 @@ GER_weltpolitik_cat = {
 				has_completed_focus = GER_ally_chiang_kai_shek
 			}
 			726 = {
-				
+				is_controlled_by_ROOT_or_subject = yes
 			}
 			NOT = {
 				has_country_flag = GER_unlocked_the_schutztruppe_division_templates
@@ -18330,7 +18358,7 @@ GER_weltpolitik_cat = {
 				has_completed_focus = GER_ally_chiang_kai_shek
 			}
 			634 = {
-				
+				is_controlled_by_ROOT_or_subject = yes
 			}
 			NOT = {
 				has_country_flag = GER_unlocked_the_schutztruppe_division_templates
@@ -18409,7 +18437,7 @@ GER_weltpolitik_cat = {
 				has_completed_focus = GER_ally_chiang_kai_shek
 			}
 			737 = {
-				
+				is_controlled_by_ROOT_or_subject = yes
 			}
 			NOT = {
 				has_country_flag = GER_unlocked_the_schutztruppe_division_templates
@@ -18488,7 +18516,7 @@ GER_weltpolitik_cat = {
 				has_completed_focus = GER_ally_chiang_kai_shek
 			}
 			979 = {
-				
+				is_controlled_by_ROOT_or_subject = yes
 			}
 			NOT = {
 				has_country_flag = GER_unlocked_the_schutztruppe_division_templates
@@ -19048,34 +19076,34 @@ GER_realpolitik_cat = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				810 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				12 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				808 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				809 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				190 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				13 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				191 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				813 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				812 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				811 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -19252,67 +19280,67 @@ GER_realpolitik_cat = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				202 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				201 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				93 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				199 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				198 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				834 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				192 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				203 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				193 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				225 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				259 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				226 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				197 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				196 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				200 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				221 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				227 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				228 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				137 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				218 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				234 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -19432,16 +19460,16 @@ GER_realpolitik_cat = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				231 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				826 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				230 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				229 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -19562,19 +19590,19 @@ GER_realpolitik_cat = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				827 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				828 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				821 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				232 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				233 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -19689,22 +19717,22 @@ GER_realpolitik_cat = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				194 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				204 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				206 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				207 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				241 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				96 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -19800,16 +19828,16 @@ GER_realpolitik_cat = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				6 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				34 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				977 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				29 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -19944,10 +19972,10 @@ GER_realpolitik_cat = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				14 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				30 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -20081,19 +20109,19 @@ GER_realpolitik_cat = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				122 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				132 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				128 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				338 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				123 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -20233,28 +20261,28 @@ GER_realpolitik_cat = {
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				121 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				133 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				136 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				120 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				933 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				131 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				931 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 				932 = {
-					
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}

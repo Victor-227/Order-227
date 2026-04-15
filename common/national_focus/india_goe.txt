@@ -8844,7 +8844,7 @@ focus_tree = {
             if = {
                 limit = {
                     440 = {
-                        
+                        is_controlled_by_ROOT_or_subject = yes
                     }
                 }
 
@@ -8861,7 +8861,7 @@ focus_tree = {
             if = {
                 limit = {
                     433 = {
-                        
+                        is_controlled_by_ROOT_or_subject = yes
                     }
                 }
 

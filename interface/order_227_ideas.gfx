@@ -1,0 +1,56 @@
+SpriteTypes = {
+    SpriteType = {
+        name = GFX_idea_GER_albert_speer
+        texturefile = "gfx/interface/ideas/GER/idea_GER_albert_speer.dds"
+    }
+
+    SpriteType = {
+        name = GFX_idea_GER_albert_speer_42
+        texturefile = "gfx/interface/ideas/GER/idea_GER_albert_speer.dds"
+    }
+
+    SpriteType = {
+        name = GFX_idea_GER_hermann_göring
+        texturefile = "gfx/interface/ideas/GER/idea_GER_hermann_göring.dds"
+    }
+
+    SpriteType = {
+        name = GFX_idea_GER_hermann_göring_42
+        texturefile = "gfx/interface/ideas/GER/idea_GER_hermann_göring.dds"
+    }
+
+    SpriteType = {
+        name = GFX_idea_GER_fritz_todt
+        texturefile = "gfx/interface/ideas/GER/idea_GER_fritz_todt.dds"
+    }
+
+    SpriteType = {
+        name = GFX_idea_GER_fritz_todt_42
+        texturefile = "gfx/interface/ideas/GER/idea_GER_fritz_todt.dds"
+    }
+
+    SpriteType = {
+        name = GFX_idea_GER_hjalmar_schacht
+        texturefile = "gfx/interface/ideas/GER/idea_GER_hjalmar_schacht.dds"
+    }
+
+    SpriteType = {
+        name = GFX_idea_GER_hjalmar_schacht_42
+        texturefile = "gfx/interface/ideas/GER/idea_GER_hjalmar_schacht.dds"
+    }
+
+    SpriteType = {
+        name = GFX_portrait_GER_hjalmar_schacht
+        texturefile = "gfx/interface/ideas/GER/portrait_GER_hjalmar_schacht.dds"
+    }
+
+    SpriteType = {
+        name = GFX_hjalmar_schacht_available_small
+        texturefile = "gfx/interface/ideas/GER/hjalmar_schacht_available_small.dds"
+    }
+
+    SpriteType = {
+        name = GFX_idea_GER_rwim
+        texturefile = "gfx/interface/ideas/GER/rwim.dds"
+    }
+}

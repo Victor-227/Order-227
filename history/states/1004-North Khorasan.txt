@@ -5,9 +5,18 @@ state={
 	manpower = 353246
 	state_category = rural
 
-	history={}
+	history={
+		owner = PER
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			8093 1 
+		}
+		add_core_of = PER
+	}
 	provinces={
-		7573 1521 10351
+		7573 1521 10351 8093 11671
 	}
 
 	local_supplies=0.0 

@@ -786,10 +786,10 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_expected_value = 0.15
+				consumer_goods_expected_value = 0.2
 				conscription = -0.02
-				production_speed_arms_factory_factor = 0.2
-				production_speed_dockyard_factor = 0.2
+				production_speed_arms_factory_factor = 0.25
+				production_speed_dockyard_factor = 0.25
 				conversion_cost_civ_to_mil_factor= -0.3
 				conversion_cost_mil_to_civ_factor = -0.3
 				industrial_capacity_factory = 0.05
@@ -1324,8 +1324,8 @@ ideas = {
 
 			modifier = {
 				min_export = 0.15
-				#industrial_capacity_factory = 0.05
-				#industrial_capacity_dockyard = 0.05
+				industrial_capacity_factory = 0.03
+				industrial_capacity_dockyard = 0.03
 				production_speed_buildings_factor = 0.05
 				research_speed_factor = 0.05
 				lend_lease_tension = 0.20

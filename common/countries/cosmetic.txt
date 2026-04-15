@@ -301,7 +301,7 @@ SPR_nationalist_spain = {
 	color_ui = rgb { 245 123 38 }
 }
 SPR_carlist_spain = {
-	color = rgb { 255 128 0 }
+	color = rgb { 255 212 0 }
 	color_ui = rgb { 255 255 122 }
 }
 SPR_anarchist_spain = {
@@ -314,7 +314,7 @@ SPR_republican_spain = {
 }
 
 SPA_directory = {
-	color = rgb { 200 100 31 }
+	color = rgb { 153 0 0 }
 	color_ui = rgb { 245 123 38 }
 }
 

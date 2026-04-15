@@ -1,0 +1,325 @@
+SpriteTypes = {
+	### NEW ENG FOCUSES
+	SpriteType = {
+		name = "GFX_focus_ENG_steady_as_she_goes"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_steady_as_she_goes.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_global_defense"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_global_defense.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_every_man_will_do_his_duty"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_every_man_will_do_his_duty.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_motion_of_no_confidence_new"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_motion_of_no_confidence_new.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_no_further_appeasement"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_no_further_appeasement.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_kickstart_the_war_industry"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_kickstart_the_war_industry.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_maintaining_imperial_integrity"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_maintaining_imperial_integrity.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_maintaining_the_balance_of_power"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_maintaining_the_balance_of_power.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_home_defence"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_home_defence.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_issue_gasmasks"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_issue_gasmasks.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_military_training_act"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_military_training_act.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_prepare_for_the_inevitable"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_prepare_for_the_inevitable.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_a_change_in_course"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_a_change_in_course.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_the_kings_party"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_the_kings_party.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_consolidate_the_british_isles"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_consolidate_the_british_isles.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_reassess_continental_commitments"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_reassess_continental_commitments.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_appeal_to_imperial_loyalists"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_appeal_to_imperial_loyalists.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_god_save_the_king"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_god_save_the_king.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_move_to_secure_the_dominions"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_move_to_secure_the_dominions.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_empire_focus"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_empire_focus.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_service_focus"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_service_focus.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_colonial_focus"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_colonial_focus.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_british_commonwealth_air_training_plan"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_british_commonwealth_air_training_plan.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_imperial_federation"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_imperial_federation.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_decolonization"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_decolonization.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_limited_rearmament_focus"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_limited_rearmament_focus.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_industrial_focus"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_industrial_focus.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_extra_tech_slot"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_extra_tech_slot.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_general_rearmament_focus"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_general_rearmament_focus.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_royal_ordinance_focus"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_royal_ordinance_focus.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_uk_small_arms_focus"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_uk_small_arms_focus.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_uk_shadow_scheme_focus"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_uk_shadow_scheme_focus.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_motorized_focus"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_motorized_focus.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_tank_focus"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_tank_focus.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_expand_the_secret_intelligence_service_focus"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_expand_the_secret_intelligence_service_focus.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_special_air_service_new"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_special_air_service_new.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_parachute_regiments"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_parachute_regiments.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_air_rearmement_focus"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_air_rearmement_focus.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_fighter_command"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_fighter_command.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_chiefs_of_staff_committee"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_chiefs_of_staff_committee.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_uk_jet_focus"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_uk_jet_focus.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_crypto_bomb_focus"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_crypto_bomb_focus.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_naval_rearmament_focus"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_naval_rearmament_focus.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_aircraft_production_focus"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_aircraft_production_focus.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_uk_commonwealth_focus"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_uk_commonwealth_focus.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_uk_india_focus"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_uk_india_focus.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_uk_canada_focus"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_uk_canada_focus.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_uk_south_africa_focus"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_uk_south_africa_focus.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_uk_south_africa_focus"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_uk_south_africa_focus.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_uk_australia_focus"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_uk_australia_focus.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_revisit_colonial_policy"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_revisit_colonial_policy.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_guide_the_colonies"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_guide_the_colonies.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_bring_the_dominions_back_into_the_fold"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_bring_the_dominions_back_into_the_fold.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_towards_dominion_independence"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_towards_dominion_independence.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_foundations_for_an_indian_state"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_foundations_for_an_indian_state.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_air_defense_focus"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_air_defense_focus.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_radar_focus"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_radar_focus.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_tizard_mission_focus"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_tizard_mission_focus.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_maud_focus"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_maud_focus.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_UK_secret_focus"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_UK_secret_focus.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_UK_secret_focus"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_UK_secret_focus.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_UK_secret_focus"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_UK_secret_focus.dds"
+	}
+
+	### NEW GER FOCUSES
+	SpriteType = {
+		name = "GFX_goal_GER_continue_with_schacht"
+		texturefile = "gfx/interface/goals/GER/goal_GER_continue_with_schacht.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_GER_continue_with_schacht"
+		texturefile = "gfx/interface/goals/GER/goal_GER_continue_with_schacht.dds"
+	}
+
+	
+}

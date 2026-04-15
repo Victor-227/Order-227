@@ -1,0 +1,12 @@
+﻿capital = 266
+add_ideas= {ai_nation}
+recruit_character = PER_reza_shah_pahlavi
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	neutrality = 100
+}

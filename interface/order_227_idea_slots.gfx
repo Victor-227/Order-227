@@ -1,0 +1,36 @@
+SpriteTypes = {
+    SpriteType = {
+        name = GFX_idea_slot_tank_research
+        texturefile = "gfx/interface/idea_slot_tank_research.dds"
+    }
+
+    SpriteType = {
+        name = GFX_idea_slot_naval_research
+        texturefile = "gfx/interface/idea_slot_naval_research.dds"
+    }
+
+    SpriteType = {
+        name = GFX_idea_slot_aircraft_research
+        texturefile = "gfx/interface/idea_slot_aircraft_research.dds"
+    }
+
+    SpriteType = {
+        name = GFX_idea_slot_materiel_research
+        texturefile = "gfx/interface/idea_slot_materiel_research.dds"
+    }
+
+    SpriteType = {
+        name = GFX_idea_slot_industrial_research
+        texturefile = "gfx/interface/idea_slot_industrial_research.dds"
+    }
+
+    SpriteType = {
+        name = GFX_idea_slot_industrial_output
+        texturefile = "gfx/interface/idea_slot_industrial_concern.dds"
+    }
+
+    SpriteType = {
+        name = GFX_idea_slot_industrial_theorist
+        texturefile = "gfx/interface/idea_slot_industrial_theorist.dds"
+    }
+}

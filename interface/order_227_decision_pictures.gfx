@@ -1,0 +1,7 @@
+SpriteTypes = {
+    ### NEW GER DECISION
+    SpriteType = {
+		name = "GFX_decision_GER_oberkommando_der_wehrmacht"
+		texturefile = "gfx/interface/decisions/decision_GER_oberkommando_der_wehrmacht.dds"
+	}
+}

@@ -1,0 +1,16 @@
+ITA_mussolini_dec_cat = { 
+
+	icon = GFX_decision_category_ITA_colonial_management
+
+	picture = GFX_decision_cat_picture_ITA_colonial_management
+	
+	allowed = {
+		original_tag = ITA
+	}
+	
+	priority = 20
+	
+	visible = {
+		has_completed_focus = ITA_strengthen_the_regime
+	}
+}

@@ -433,6 +433,7 @@
 				limit = {
 					has_state_flag = FRA_colonial_industry_target
 				}
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
 					level = 2
@@ -553,11 +554,13 @@
 			factor = 1
 		}
 		completion_reward = {
+			custom_effect_tooltip = available_chief_of_army
+			show_ideas_tooltip = maxime_weygand
                     add_equipment_to_stockpile = {
 					type = infantry_equipment
 					amount = 10000
 					producer = FRA
-				}
+			}
 		}
 	}
 	
@@ -686,7 +689,9 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
+
 		completion_reward = {
+			custom_effect_tooltip = FRA_tank_spawn_in_tt
 			if={
 				limit = {
                 has_tech = improved_medium_tank_chassis
@@ -919,9 +924,9 @@
 			factor = 0.2
 		}
 		completion_reward = {
-			army_experience = 25
 			custom_effect_tooltip = available_chief_of_army
 			show_ideas_tooltip = maurice_gamelin
+			army_experience = 25
 		}
 	}
 
@@ -1161,7 +1166,8 @@
 			focus = FRA_dirigisme
 		}
 		prerequisite = {
-			focus = FRA_national_champions}
+			focus = FRA_national_champions
+		}
 
 		cost = 10
 
@@ -1180,16 +1186,11 @@
 		completion_reward = {
 			random_owned_state = {
 				prioritize = {16}
-				add_extra_state_shared_building_slots = 7
 				add_building_construction = {
 					type = arms_factory
 					level = 7
 					instant_build = yes
 				}
-		}
-		random_owned_state = {
-				prioritize = {16}
-				add_extra_state_shared_building_slots = 7
 				add_building_construction = {
 					type = industrial_complex
 					level = 7
@@ -1385,19 +1386,10 @@
 		completion_reward = {
 			random_owned_state = {
 				prioritize = {779}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				prioritize = {779}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 			}
@@ -1447,17 +1439,9 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			if = {
-				limit = {
-					has_idea = FRA_inefficient_economy_1
-				}
+			custom_effect_tooltip = test_tt
+			hidden_effect = {
 				remove_ideas = { FRA_inefficient_economy_1 }
-			}
-			if = {
-				limit = {
-					has_idea = FRA_inefficient_economy_2
-				}
-				remove_ideas = { FRA_inefficient_economy_2 }
 			}
 		}
 	}
@@ -1593,12 +1577,6 @@
 		}
 
 		available = {
-			any_owned_state = {
-				NOT = {
-					is_on_continent = europe
-					is_core_of = ROOT # has at least one colonial state
-				}
-			}
 		}
 		
 		bypass = {
@@ -1610,7 +1588,7 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_MANPOWER }
 		completion_reward = {
-			add_ideas = { FRA_expanded_citizenship }
+			add_ideas = { FRA_expanded_citizenship_1 }
 		}
 	}
 	focus = {
@@ -1644,7 +1622,7 @@
 		search_filters = { FOCUS_FILTER_MANPOWER }
 		completion_reward = {
 			swap_ideas = {
-				remove_idea = FRA_expanded_citizenship
+				remove_idea = FRA_expanded_citizenship_1
 				add_idea = FRA_france_undividable
 			}
 			
@@ -1667,7 +1645,6 @@
 		}
 
 		available = {
-			has_war = no
 		}
 		
 		bypass = {
@@ -1712,7 +1689,10 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-         add_ideas= {FRA_immigration}
+            swap_ideas = {
+				remove_idea = FRA_expanded_citizenship_1
+				add_idea = FRA_expanded_citizenship_2
+			}
 		}
 	}
 	focus = {
@@ -1748,17 +1728,6 @@
 		x = 9
 		y = 1
 		
-		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-			}
-		}
-
 		prerequisite = {
 			focus = FRA_reform_the_labour_laws
 			focus = FRA_protect_the_rights_of_man
@@ -2331,18 +2300,10 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
-		complete_tooltip = {
-			if = {
-				limit = { has_idea = FRA_inefficient_economy_1 }
-				remove_ideas = {  FRA_inefficient_economy_2
-				}
-			}
-			
-		}
 		completion_reward = {
-			if = {
-				limit = { has_idea = FRA_inefficient_economy_2 }
-				remove_ideas = {FRA_inefficient_economy_2}
+			custom_effect_tooltip = test_tt
+			hidden_effect = {
+				remove_ideas = { FRA_inefficient_economy_1 }
 			}
 		}
 	}
@@ -2524,20 +2485,8 @@
 			transfer_state = 890
 			transfer_state = 888
 
-
-			}
-		
+		}
 	}
-
-
-
-
-
-
-
-
-
-
 
 	focus = {
 		id = FRA_revise_the_constitution
@@ -2623,7 +2572,7 @@
 	
 
 	focus = {
-		id = FRA_guarantee_the_constitution_1
+		id = FRA_guarantee
 		icon = GFX_goal_generic_military_sphere
 		x = 25
 		y = 10
@@ -2931,9 +2880,9 @@
 		x = 0
 		y = 1
 		prerequisite = { 
-			focus = FRA_guarantee_the_constitution_1
+			focus = FRA_guarantee
 		}
-		relative_position_id = FRA_guarantee_the_constitution_1
+		relative_position_id = FRA_guarantee
 		
 		cost = 5
 		ai_will_do = {
