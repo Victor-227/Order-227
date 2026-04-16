@@ -37,7 +37,7 @@ idea_categories = {
 		removal_cost = 0
 	}
 
-	research_&_theory = {
+	research_theory = {
 		slot = tank_research
 		slot = naval_research
 		slot = aircraft_research

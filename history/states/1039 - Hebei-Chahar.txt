@@ -20,7 +20,7 @@ state = {
 		}
 
 		buildings = {
-			infrastructure = 1 #was 2
+			infrastructure = 2 #was 2
 			1590 = {
 				landmark_great_wall_section = {
 				    level = 1

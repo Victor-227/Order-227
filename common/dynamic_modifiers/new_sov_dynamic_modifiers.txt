@@ -1,0 +1,62 @@
+SOV_dual_factories_dynamic_modifiers = {
+
+    enable = {
+        always = yes
+    }
+
+    icon = GFX_SOV_tractor_factories
+
+    production_speed_industrial_complex_factor = -0.15
+}
+
+SOV_gosplan_ukraine_dynamic_modifiers = {
+
+    enable = {
+        always = yes
+    }
+
+    icon = GFX_SOV_tractor_factories
+
+    state_production_speed_buildings_factor = 0.25
+    production_speed_infrastructure_factor = 0.1
+    local_building_slots_factor = 0.1
+}
+
+SOV_gosplan_moscow_dynamic_modifiers = {
+
+    enable = {
+        always = yes
+    }
+
+    icon = GFX_SOV_tractor_factories
+
+    state_production_speed_buildings_factor = 0.20
+    production_speed_infrastructure_factor = 0.1
+    local_building_slots_factor = 0.1
+}
+
+SOV_gosplan_urals_dynamic_modifiers = {
+
+    enable = {
+        always = yes
+    }
+
+    icon = GFX_SOV_tractor_factories
+
+    state_production_speed_buildings_factor = 0.15
+    production_speed_infrastructure_factor = 0.1
+    local_building_slots_factor = 0.1
+}
+
+SOV_gosplan_siberia_dynamic_modifiers = {
+
+    enable = {
+        always = yes
+    }
+
+    icon = GFX_SOV_tractor_factories
+
+    state_production_speed_buildings_factor = 0.10
+    production_speed_infrastructure_factor = 0.2
+    local_building_slots_factor = 0.2
+}

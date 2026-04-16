@@ -1,6 +1,5 @@
 ﻿l_english:
-ger:0 "gay"
- GER_oberkommando_der_wehrmacht_dec_cat:0 "Oberkommando Der Wehrmahct"
+ GER_oberkommando_der_wehrmacht_dec_cat:0 "Oberkommando der Wehrmahct"
  GER_oberkommando_der_wehrmacht_dec_cat_desc:0 "The Oberkommando der Wehrmacht serves as the supreme command of the German armed forces. From here, the Führer and his generals coordinate the operational planning of the Wehrmacht's campaigns, issuing directives to the Heer, Kriegsmarine and Luftwaffe. It is here that the fate of nations is decided."
  consumer_goods_expected_value_tt: " $MODIFIER_CONSUMER_GOODS_EXPECTED_VALUE$: $RIGHT|Y%1$"
  GER_wirtschaftsminister_mechanic_tt:0 "§YWirtschaftsminister Mechanic:§!\nWith the Führerprinzip, you will appoint a Wirtschaftsminister to guide the economy.\n\n• Picking §HSchacht, Todt, or Göring§! will lead to Speer replacing them in 1942.\n• Picking §HAlbert Speer§! will lead to him being replaced by your choice of the other three advisors in 1942.\n\nAll advisors have both an early and a 1942 version."
@@ -25,3 +24,4 @@ ger:0 "gay"
  GER_wirtschaftsminister_goering_42:0 "Beauftragter für den Vierjahresplan"
  GER_wirtschaftsminister_todt_42:0 "Generalinspekteur für das Bauwesen"
  GER_wirtschaftsminister_speer_42:0 "Direktor für industrielle Rationalisierung"
+ GER_mefo_bills_1936_fake_ns_tt: "$GER_increasing_cg_tt$ $GER_CG_penalties_may_apply$\n\n $MODIFIER_CONSUMER_GOODS_EXPECTED_VALUE$: §Y3.0%§!\n $MODIFIER_CIVILIAN_INTEL_TO_OTHERS$: §G-25.0%§! \n $MODIFIER_ARMY_INTEL_TO_OTHERS$: §G-25.0%§!\n $MODIFIER_NAVY_INTEL_TO_OTHERS$: §G-25.0%§!\n $MODIFIER_AIRFORCE_INTEL_TO_OTHERS_FACTOR$: §G-25.0%§! \n $modifier_production_speed_arms_factory_factor$: §G+10.00%§!\n $modifier_production_speed_dockyard_factor$: §G+10.00%§!"

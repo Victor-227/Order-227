@@ -1,4 +1,6 @@
 SpriteTypes = {
+    ### GERMANY
+
     SpriteType = {
         name = GFX_idea_GER_albert_speer
         texturefile = "gfx/interface/ideas/GER/idea_GER_albert_speer.dds"
@@ -53,4 +55,18 @@ SpriteTypes = {
         name = GFX_idea_GER_rwim
         texturefile = "gfx/interface/ideas/GER/rwim.dds"
     }
+
+    ### SOVIET
+
+    SpriteType = {
+        name = GFX_idea_SOV_war_economy
+        texturefile = "gfx/interface/ideas/SOV/SOV_forced_urbanization.dds"
+    }
+
+    ### ROMANIA
+    SpriteType = {
+        name = GFX_idea_ROM_horia_sima
+        texturefile = "gfx/interface/ideas/ROM/ROM_horia_sima.dds"
+    }
+    
 }

@@ -17,7 +17,7 @@ state = {
 		add_core_of = SOV
 
 		buildings = {
-			infrastructure = 1
+			infrastructure = 2
 		}
 		
 	}

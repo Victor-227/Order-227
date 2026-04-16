@@ -15,7 +15,7 @@ state={
 		add_core_of = RAJ
 		owner = RAJ
 		buildings = {
-			infrastructure = 1
+			infrastructure = 2
 			industrial_complex = 1
 		}
 

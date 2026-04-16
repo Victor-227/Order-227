@@ -6,7 +6,7 @@ state={
 	}
 	history = {
 		buildings = {
-			infrastructure = 1
+			infrastructure = 2
 		}
 		owner = AST
 		add_core_of = AST

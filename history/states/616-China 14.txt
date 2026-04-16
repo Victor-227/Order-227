@@ -9,7 +9,7 @@ state = {
 		add_core_of = CHI
 
 		buildings = {
-			infrastructure = 1
+			infrastructure = 2
 
 			8127 = {
 				landmark_great_wall_section = {

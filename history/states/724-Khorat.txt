@@ -14,7 +14,7 @@ state={
 		owner = JAP
 		add_core_of = KUR
 		buildings = {
-			infrastructure = 2
+			infrastructure = 4
 			12230 = {
 				naval_base = 1
 			}

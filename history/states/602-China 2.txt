@@ -11,14 +11,14 @@ state={
 		add_core_of = CHI
 
 		buildings = {
-			infrastructure = 2 #was: 3 was: 5
+			infrastructure = 4 #was: 3 was: 5
 			industrial_complex = 1 #was 2
 			arms_factory = 1 #was 2
 		}
 		1939.1.1 = {
 			buildings = {
 				industrial_complex = 2
-				infrastructure = 3 #was: 6
+				infrastructure = 6 #was: 6
 				air_base = 1
 				arms_factory = 1
 			}

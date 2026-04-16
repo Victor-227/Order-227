@@ -1,0 +1,35 @@
+SOV_dual_factories_dec_cat = {
+
+    icon = GFX_SOV_tractor_factories
+
+    picture = GFX_decision_SOV_dual_factories
+
+
+    allowed = {
+        original_tag = SOV
+    }
+
+    priority = 20
+
+    visible = {
+        always = yes
+    }
+}
+
+SOV_gosplan_dec_cat = {
+
+    icon = GFX_SOV_tractor_factories
+
+    picture = GFX_decision_SOV_gosplan
+
+
+    allowed = {
+        original_tag = SOV
+    }
+
+    priority = 21
+
+    visible = {
+        always = yes
+    }
+}

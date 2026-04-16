@@ -17,7 +17,7 @@ state = {
 		add_core_of = USA
 
 		buildings = {
-			infrastructure = 2
+			infrastructure = 4
 
 			# Hoover Dam
 			4799 = { dam_mountain = 1 }

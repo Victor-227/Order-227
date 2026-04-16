@@ -321,5 +321,31 @@ SpriteTypes = {
 		texturefile = "gfx/interface/goals/GER/goal_GER_continue_with_schacht.dds"
 	}
 
+	### NEW SOVIET ICONS
+	SpriteType = {
+		name = "GFX_goal_SOV_tractor_factories"
+		texturefile = "gfx/interface/goals/SOV/SOV_tractor_factories.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_SOV_test"
+		texturefile = "gfx/interface/goals/SOV/test_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_SOV_siberia"
+		texturefile = "gfx/interface/goals/SOV/SOV_siberia.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_SOV_urals_1"
+		texturefile = "gfx/interface/goals/SOV/SOV_urals.dds"
+	}
+
+
+
+
+
+
 	
 }

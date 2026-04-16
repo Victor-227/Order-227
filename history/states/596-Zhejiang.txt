@@ -27,7 +27,7 @@ state = {
 		
 		buildings = {
 
-			infrastructure = 2
+			infrastructure = 4
 			air_base = 1 # Ningbo Lishe Airbase
 
 			7191 = {

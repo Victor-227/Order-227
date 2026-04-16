@@ -15,7 +15,7 @@ state = {
 		add_core_of = KUR
                 add_claim_by = RAJ
 		buildings = {
-			infrastructure = 1
+			infrastructure = 2
 		}
 
 		victory_points = {

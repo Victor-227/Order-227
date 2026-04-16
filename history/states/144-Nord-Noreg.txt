@@ -22,7 +22,7 @@ state = {
 		add_core_of = NOR
 		
 		buildings = {
-			infrastructure = 2
+			infrastructure = 4
 			air_base = 1
 			192 = {
 				naval_base = 3

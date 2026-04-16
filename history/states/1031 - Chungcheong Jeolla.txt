@@ -15,7 +15,7 @@ state = {
 		add_core_of = KUR
 
 		buildings = {
-			infrastructure = 2
+			infrastructure = 4
 			industrial_complex = 1 
 			7175 = {
 				naval_base = 3

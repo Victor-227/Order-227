@@ -21,7 +21,7 @@ state = {
 		add_core_of = CHI
 
 		buildings = {
-			infrastructure = 2
+			infrastructure = 4
 			industrial_complex = 1
 			10004 = { # Fangcheng
 				naval_base = 1

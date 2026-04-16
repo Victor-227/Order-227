@@ -19,7 +19,7 @@ state={
 		start_resistance = yes
 		set_resistance =  70
 		buildings = {
-			infrastructure = 1
+			infrastructure = 2
 		}
 	}
 

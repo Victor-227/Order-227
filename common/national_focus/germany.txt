@@ -13845,7 +13845,7 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = GER_hermann_goering
+			show_ideas_tooltip = GER_hermann_göring
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 

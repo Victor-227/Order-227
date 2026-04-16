@@ -10,7 +10,7 @@ state = {
 		add_core_of = KUR
                 add_claim_by = RAJ
 		buildings = {
-			infrastructure = 2
+			infrastructure = 4
 			industrial_complex = 1
 		}
 

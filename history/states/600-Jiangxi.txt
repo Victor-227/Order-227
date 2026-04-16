@@ -7,7 +7,7 @@ state={
 		add_core_of = CHI
 
 		buildings = {
-			infrastructure = 1 #was 2
+			infrastructure = 2 #was 2
 			industrial_complex = 1 #was 2
 		}
 

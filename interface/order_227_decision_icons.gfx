@@ -1,0 +1,7 @@
+SpriteTypes = {
+    ### NEW SOVIET DECISION
+    SpriteType = {
+		name = "GFX_SOV_tractor_factories"
+		texturefile = "gfx/interface/decisions/SOV/SOV_tractor_factories.dds"
+	}
+}

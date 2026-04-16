@@ -12,7 +12,7 @@ state = {
 		add_core_of = CHI
 
 		buildings = {
-			infrastructure = 2	
+			infrastructure = 4	
 			industrial_complex = 2
 			11913 = {
                 landmark_nanjing_presidential_palace = {

@@ -1,0 +1,1572 @@
+SOV_dual_factories_dec_cat = {
+
+    SOV_leningrad = {
+
+        icon = GFX_SOV_tractor_factories
+
+        highlight_states = {
+			highlight_state_targets = {
+				state = 195
+			}
+		}
+
+        allowed = {
+            original_tag = SOV
+        }
+
+        available = {
+            has_completed_focus = SOV_tractor_plants
+        }
+
+        fire_only_once = yes
+
+        cost = 50
+
+        days_remove = 20
+
+        modifier = {
+            civilian_factory_use = 5
+        }
+
+        complete_effect = {
+
+        }
+
+        remove_effect = {
+            195 = {
+                add_dynamic_modifier = {
+                    modifier = SOV_dual_factories_dynamic_modifiers
+                    scope = SOV
+                }
+                set_state_flag = SOV_dual_factories
+
+                set_variable = { pre_dual_use_civs = building_level@industrial_complex }
+            }
+        }
+    }
+
+    SOV_kharkov = {
+
+        icon = GFX_SOV_tractor_factories
+
+        highlight_states = {
+			highlight_state_targets = {
+				state = 221
+			}
+		}
+
+        allowed = {
+            original_tag = SOV
+        }
+
+        available = {
+            has_completed_focus = SOV_tractor_plants
+        }
+
+        fire_only_once = yes
+
+        cost = 50
+
+        days_remove = 20
+
+        modifier = {
+            civilian_factory_use = 5
+        }
+
+        remove_effect = {
+            221 = {
+                add_dynamic_modifier = {
+                    modifier = SOV_dual_factories_dynamic_modifiers
+                    scope = SOV
+                }
+                set_state_flag = SOV_dual_factories
+
+                set_variable = { pre_dual_use_civs = building_level@industrial_complex }
+            }
+        }
+    }
+
+    SOV_gorky = {
+
+        icon = GFX_SOV_tractor_factories
+
+        highlight_states = {
+			highlight_state_targets = {
+				state = 252
+			}
+		}
+
+        allowed = {
+            original_tag = SOV
+        }
+
+        available = {
+            has_completed_focus = SOV_tractor_plants
+        }
+
+        fire_only_once = yes
+
+        cost = 50
+
+        days_remove = 20
+
+        modifier = {
+            civilian_factory_use = 5
+        }
+
+        remove_effect = {
+            252 = {
+                add_dynamic_modifier = {
+                    modifier = SOV_dual_factories_dynamic_modifiers
+                    scope = SOV
+                }
+                set_state_flag = SOV_dual_factories
+
+                set_variable = { pre_dual_use_civs = building_level@industrial_complex }
+            }
+        }
+    }
+
+    SOV_stalingrad = {
+
+        icon = GFX_SOV_tractor_factories
+
+        highlight_states = {
+			highlight_state_targets = {
+				state = 217
+			}
+		}
+
+        allowed = {
+            original_tag = SOV
+        }
+
+        available = {
+            has_completed_focus = SOV_tractor_plants
+        }
+
+        fire_only_once = yes
+
+        cost = 50
+
+        days_remove = 20
+
+        modifier = {
+            civilian_factory_use = 5
+        }
+
+        remove_effect = {
+            217 = {
+                add_dynamic_modifier = {
+                    modifier = SOV_dual_factories_dynamic_modifiers
+                    scope = SOV
+                }
+                set_state_flag = SOV_dual_factories
+
+                set_variable = { pre_dual_use_civs = building_level@industrial_complex }
+            }
+        }
+    }
+
+    SOV_nizhny_tagil = {
+
+        icon = GFX_SOV_tractor_factories
+
+        highlight_states = {
+			highlight_state_targets = {
+				state = 653
+			}
+		}
+
+        allowed = {
+            original_tag = SOV
+        }
+
+        available = {
+            has_completed_focus = SOV_tractor_plants
+        }
+
+        fire_only_once = yes
+
+        cost = 50
+
+        days_remove = 20
+
+        modifier = {
+            civilian_factory_use = 5
+        }
+
+        remove_effect = {
+            653 = {
+                add_dynamic_modifier = {
+                    modifier = SOV_dual_factories_dynamic_modifiers
+                    scope = SOV
+                }
+                set_state_flag = SOV_dual_factories
+
+                set_variable = { pre_dual_use_civs = building_level@industrial_complex }
+            }
+        }
+    }
+
+    SOV_chelyabinsk = {
+
+        icon = GFX_SOV_tractor_factories
+
+        highlight_states = {
+			highlight_state_targets = {
+				state = 572
+			}
+		}
+
+        allowed = {
+            original_tag = SOV
+        }
+
+        available = {
+            has_completed_focus = SOV_tractor_plants
+        }
+
+        fire_only_once = yes
+
+        cost = 50
+
+        days_remove = 20
+
+        modifier = {
+            civilian_factory_use = 5
+        }
+
+        remove_effect = {
+            572 = {
+                add_dynamic_modifier = {
+                    modifier = SOV_dual_factories_dynamic_modifiers
+                    scope = SOV
+                }
+                set_state_flag = SOV_dual_factories
+
+                set_variable = { pre_dual_use_civs = building_level@industrial_complex }
+            }
+        }
+    }
+
+    SOV_conversion_divider = {
+        icon = generic_text  # Uses a plain text icon instead of a factory
+        cost = 0
+    
+        # Makes it show up, but prevents the player from ever clicking it
+        available = { always = no } 
+        visible = { always = yes }
+    
+        # Leave effects blank
+        effect = {
+
+        }
+    }
+
+    SOV_leningrad_conversion = {
+
+        icon = GFX_SOV_tractor_factories
+
+        highlight_states = {
+			highlight_state_targets = {
+				state = 195
+			}
+		}
+
+        allowed = {
+            original_tag = SOV
+        }
+
+        available = {
+            195 = {
+                has_state_flag = SOV_dual_factories
+            }
+            has_war = yes
+        }
+
+        fire_only_once = yes
+
+        cost = 50
+
+        complete_effect = {
+            195 = {
+                remove_dynamic_modifier = {
+                    modifier = SOV_dual_factories_dynamic_modifiers
+                    scope = SOV
+                }
+                
+                clr_state_flag = SOV_dual_factories
+
+                set_variable = { current_civs = building_level@industrial_complex }
+                set_variable = { eligible_civs = current_civs }
+                subtract_from_variable = { eligible_civs = pre_dual_use_civs }
+                if = {
+                    limit = {
+                        check_variable = { eligible_civs > 0 }
+                    }
+                    while_loop_effect = {
+                        limit = {
+                            check_variable = { eligible_civs > 0 }
+                        }
+                        remove_building = {
+                            type = industrial_complex
+                            level = 1
+                            instant_build = yes
+                        }
+
+                        add_building_construction = {
+                            type = arms_factory
+                            level = 1
+                            instant_build = yes
+                        }
+                        subtract_from_variable = { eligible_civs = 1}
+                    }
+                }
+            }
+        }
+    }
+
+    SOV_kharkov_conversion = {
+
+        icon = GFX_SOV_tractor_factories
+
+        highlight_states = {
+			highlight_state_targets = {
+				state = 221
+			}
+		}
+
+        allowed = {
+            original_tag = SOV
+        }
+
+        available = {
+            221 = {
+                has_state_flag = SOV_dual_factories
+            }
+            has_war = yes
+        }
+
+        fire_only_once = yes
+
+        cost = 50
+
+        complete_effect = {
+            221 = {
+                remove_dynamic_modifier = {
+                    modifier = SOV_dual_factories_dynamic_modifiers
+                    scope = SOV
+                }
+                
+                clr_state_flag = SOV_dual_factories
+
+                set_variable = { current_civs = building_level@industrial_complex }
+                set_variable = { eligible_civs = current_civs }
+                subtract_from_variable = { eligible_civs = pre_dual_use_civs }
+                if = {
+                    limit = {
+                        check_variable = { eligible_civs > 0 }
+                    }
+                    while_loop_effect = {
+                        limit = {
+                            check_variable = { eligible_civs > 0 }
+                        }
+                        remove_building = {
+                            type = industrial_complex
+                            level = 1
+                            instant_build = yes
+                        }
+
+                        add_building_construction = {
+                            type = arms_factory
+                            level = 1
+                            instant_build = yes
+                        }
+                        subtract_from_variable = { eligible_civs = 1}
+                    }
+                }
+            }
+        }
+    }
+
+    SOV_gorky_conversion = {
+
+        icon = GFX_SOV_tractor_factories
+
+        highlight_states = {
+			highlight_state_targets = {
+				state = 252
+			}
+		}
+
+        allowed = {
+            original_tag = SOV
+        }
+
+        available = {
+            252 = {
+                has_state_flag = SOV_dual_factories
+            }
+            has_war = yes
+        }
+
+        fire_only_once = yes
+
+        cost = 50
+
+        complete_effect = {
+            252 = {
+                remove_dynamic_modifier = {
+                    modifier = SOV_dual_factories_dynamic_modifiers
+                    scope = SOV
+                }
+                
+                clr_state_flag = SOV_dual_factories
+
+                set_variable = { current_civs = building_level@industrial_complex }
+                set_variable = { eligible_civs = current_civs }
+                subtract_from_variable = { eligible_civs = pre_dual_use_civs }
+                if = {
+                    limit = {
+                        check_variable = { eligible_civs > 0 }
+                    }
+                    while_loop_effect = {
+                        limit = {
+                            check_variable = { eligible_civs > 0 }
+                        }
+                        remove_building = {
+                            type = industrial_complex
+                            level = 1
+                            instant_build = yes
+                        }
+
+                        add_building_construction = {
+                            type = arms_factory
+                            level = 1
+                            instant_build = yes
+                        }
+                        subtract_from_variable = { eligible_civs = 1}
+                    }
+                }
+            }
+        }
+    }
+
+    SOV_stalingrad_conversion = {
+
+        icon = GFX_SOV_tractor_factories
+
+        highlight_states = {
+			highlight_state_targets = {
+				state = 217
+			}
+		}
+
+        allowed = {
+            original_tag = SOV
+        }
+
+        available = {
+            217 = {
+                has_state_flag = SOV_dual_factories
+            }
+            has_war = yes
+        }
+
+        fire_only_once = yes
+
+        cost = 50
+
+        complete_effect = {
+            217 = {
+                remove_dynamic_modifier = {
+                    modifier = SOV_dual_factories_dynamic_modifiers
+                    scope = SOV
+                }
+                
+                clr_state_flag = SOV_dual_factories
+
+                set_variable = { current_civs = building_level@industrial_complex }
+                set_variable = { eligible_civs = current_civs }
+                subtract_from_variable = { eligible_civs = pre_dual_use_civs }
+                if = {
+                    limit = {
+                        check_variable = { eligible_civs > 0 }
+                    }
+                    while_loop_effect = {
+                        limit = {
+                            check_variable = { eligible_civs > 0 }
+                        }
+                        remove_building = {
+                            type = industrial_complex
+                            level = 1
+                            instant_build = yes
+                        }
+
+                        add_building_construction = {
+                            type = arms_factory
+                            level = 1
+                            instant_build = yes
+                        }
+                        subtract_from_variable = { eligible_civs = 1}
+                    }
+                }
+            }
+        }
+    }
+
+    SOV_nizhny_tagil_conversion = {
+
+        icon = GFX_SOV_tractor_factories
+
+        highlight_states = {
+			highlight_state_targets = {
+				state = 653
+			}
+		}
+
+        allowed = {
+            original_tag = SOV
+        }
+
+        available = {
+            653 = {
+                has_state_flag = SOV_dual_factories
+            }
+            has_war = yes
+        }
+
+        fire_only_once = yes
+
+        cost = 50
+
+        complete_effect = {
+            653 = {
+                remove_dynamic_modifier = {
+                    modifier = SOV_dual_factories_dynamic_modifiers
+                    scope = SOV
+                }
+                
+                clr_state_flag = SOV_dual_factories
+
+                set_variable = { current_civs = building_level@industrial_complex }
+                set_variable = { eligible_civs = current_civs }
+                subtract_from_variable = { eligible_civs = pre_dual_use_civs }
+                if = {
+                    limit = {
+                        check_variable = { eligible_civs > 0 }
+                    }
+                    while_loop_effect = {
+                        limit = {
+                            check_variable = { eligible_civs > 0 }
+                        }
+                        remove_building = {
+                            type = industrial_complex
+                            level = 1
+                            instant_build = yes
+                        }
+
+                        add_building_construction = {
+                            type = arms_factory
+                            level = 1
+                            instant_build = yes
+                        }
+                        subtract_from_variable = { eligible_civs = 1}
+                    }
+                }
+            }
+        }
+    }
+
+    SOV_chelyabinsk_conversion = {
+
+        icon = GFX_SOV_tractor_factories
+
+        highlight_states = {
+			highlight_state_targets = {
+				state = 572
+                state = 583
+			}
+		}
+
+        allowed = {
+            original_tag = SOV
+        }
+
+        available = {
+            572 = {
+                has_state_flag = SOV_dual_factories
+            }
+            has_war = yes
+        }
+
+        fire_only_once = yes
+
+        cost = 50
+
+        complete_effect = {
+            572 = {
+                remove_dynamic_modifier = {
+                    modifier = SOV_dual_factories_dynamic_modifiers
+                    scope = SOV
+                }
+                
+                clr_state_flag = SOV_dual_factories
+
+                set_variable = { current_civs = building_level@industrial_complex }
+                set_variable = { eligible_civs = current_civs }
+                subtract_from_variable = { eligible_civs = pre_dual_use_civs }
+                if = {
+                    limit = {
+                        check_variable = { eligible_civs > 0 }
+                    }
+                    while_loop_effect = {
+                        limit = {
+                            check_variable = { eligible_civs > 0 }
+                        }
+                        remove_building = {
+                            type = industrial_complex
+                            level = 1
+                            instant_build = yes
+                        }
+
+                        add_building_construction = {
+                            type = arms_factory
+                            level = 1
+                            instant_build = yes
+                        }
+                        subtract_from_variable = { eligible_civs = 1}
+                    }
+                }
+            }
+        }
+    }
+}
+
+SOV_gosplan_dec_cat = {
+    SOV_gosplan_ukraine = {
+
+        icon = GFX_SOV_tractor_factories
+
+        highlight_states = {
+            highlight_state_targets = {
+                state = 202
+                state = 221
+                state = 226
+                state = 200
+                state = 227
+                state = 192
+                state = 137
+                state = 259
+            }
+        }
+
+        allowed = {
+            original_tag = SOV
+        }
+
+        visible = {
+            NOT = {
+                OR = {
+                    has_country_flag = SOV_moscow_gosplan
+                    has_country_flag = SOV_urals_gosplan
+                    has_country_flag = SOV_siberia_gosplan
+                }
+            }
+        }
+
+        available = {
+            has_completed_focus = ukraine
+        }
+
+        fire_only_once = yes
+
+        cost = 150
+
+        days_remove = 90
+
+        modifier = {
+            political_power_factor = -0.15
+            civilian_factory_use = 5
+        }
+
+        complete_effect = {
+            every_owned_state = {
+                limit = {
+                    is_gosplan_ukraine = yes
+                }
+
+                add_dynamic_modifier = {
+                    modifier = SOV_gosplan_ukraine_dynamic_modifiers
+                    scope = SOV
+                }
+            }
+            set_country_flag = SOV_ukraine_gosplan
+        }
+
+        remove_effect = {
+            random_owned_state = {
+				prioritize = { 202 }
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+            set_country_flag = SOV_ukraine_gosplan_1
+        }
+    }
+
+    SOV_gosplan_ukraine_1 = {
+
+        icon = GFX_SOV_tractor_factories
+
+        allowed = {
+            original_tag = SOV
+        }
+
+        visible = {
+            has_country_flag = SOV_ukraine_gosplan
+        }
+
+        available = {
+            has_country_flag = SOV_ukraine_gosplan_1
+        }
+
+        fire_only_once = yes
+
+        cost = 150
+
+        days_remove = 90
+
+        modifier = {
+            political_power_factor = -0.1
+            civilian_factory_use = 3
+        }
+
+        complete_effect = {
+            add_ideas = { SOV_gosplan_ukraine_spirit }
+            custom_effect_tooltip = generic_skip_one_line_tt
+            clr_country_flag = SOV_ukraine_gosplan_1
+        }
+        
+        remove_effect = {
+            random_owned_state = {
+				prioritize = { 221 }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+            set_country_flag = SOV_ukraine_gosplan_2
+        }
+    }
+
+    SOV_gosplan_ukraine_2 = {
+
+        icon = GFX_SOV_tractor_factories
+
+        allowed = {
+            original_tag = SOV
+        }
+
+        visible = {
+            has_country_flag = SOV_ukraine_gosplan
+        }
+
+        available = {
+            has_country_flag = SOV_ukraine_gosplan_2
+        }
+
+        fire_only_once = yes
+
+        cost = 150
+
+        days_remove = 90
+
+        modifier = {
+            political_power_factor = -0.1
+            civilian_factory_use = 3
+        }
+
+        complete_effect = {
+            swap_ideas = {
+				remove_idea = SOV_gosplan_ukraine_spirit
+				add_idea = SOV_gosplan_ukraine_spirit_1
+			}
+            clr_country_flag = SOV_ukraine_gosplan_2
+        }
+        
+        remove_effect = {
+            random_owned_state = {
+				prioritize = { 226 }
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+            set_country_flag = SOV_ukraine_gosplan_3
+        }
+    }
+
+    SOV_gosplan_ukraine_3 = {
+
+        icon = GFX_SOV_tractor_factories
+
+        allowed = {
+            original_tag = SOV
+        }
+
+        visible = {
+            has_country_flag = SOV_ukraine_gosplan
+        }
+
+        available = {
+            has_country_flag = SOV_ukraine_gosplan_3
+        }
+
+        fire_only_once = yes
+
+        cost = 150
+
+        days_remove = 90
+
+        modifier = {
+            political_power_factor = -0.1
+            civilian_factory_use = 3
+        }
+
+        complete_effect = {
+            swap_ideas = {
+				remove_idea = SOV_gosplan_ukraine_spirit_1
+				add_idea = SOV_gosplan_ukraine_spirit_2
+			}
+            clr_country_flag = SOV_ukraine_gosplan_3
+        }
+        
+        remove_effect = {
+            random_owned_state = {
+				prioritize = { 137 }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+        }   
+    }
+
+    SOV_gosplan_moscow = {
+
+        icon = GFX_SOV_tractor_factories
+
+        highlight_states = {
+            highlight_state_targets = {
+                state = 219
+                state = 223
+                state = 252
+                state = 248
+                state = 247
+                state = 253
+                state = 222
+                state = 254
+            }
+        }
+
+        allowed = {
+            original_tag = SOV
+        }
+
+        visible = {
+            NOT = {
+                OR = {
+                    has_country_flag = SOV_ukraine_gosplan
+                    has_country_flag = SOV_urals_gosplan
+                    has_country_flag = SOV_siberia_gosplan
+                }
+            }
+        }
+
+        available = {
+            has_completed_focus = moscow
+        }
+
+        fire_only_once = yes
+
+        cost = 150
+
+        days_remove = 90
+
+        modifier = {
+            political_power_factor = -0.15
+            civilian_factory_use = 5
+        }
+
+        complete_effect = {
+
+            every_owned_state = {
+                limit = {
+                    is_gosplan_moscow = yes
+                }
+
+                add_dynamic_modifier = {
+                    modifier = SOV_gosplan_moscow_dynamic_modifiers
+                    scope = SOV
+                }
+            }
+            set_country_flag = SOV_moscow_gosplan
+        }
+
+        remove_effect = {
+            random_owned_state = {
+				prioritize = { 219 }
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+
+                add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+            set_country_flag = SOV_moscow_gosplan_1
+        }
+    }
+
+    SOV_gosplan_moscow_1 = {
+
+        icon = GFX_SOV_tractor_factories
+
+        allowed = {
+            original_tag = SOV
+        }
+
+        visible = {
+            has_country_flag = SOV_moscow_gosplan
+        }
+
+        available = {
+            has_country_flag = SOV_moscow_gosplan_1
+        }
+
+        fire_only_once = yes
+
+        cost = 150
+
+        days_remove = 90
+
+        modifier = {
+            political_power_factor = -0.1
+            civilian_factory_use = 3
+        }
+
+        complete_effect = {
+            add_ideas = { SOV_gosplan_moscow_spirit }
+            custom_effect_tooltip = generic_skip_one_line_tt
+            clr_country_flag = SOV_moscow_gosplan_1
+        }
+        
+        remove_effect = {
+            random_owned_state = {
+				prioritize = { 223 }
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+
+                add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+            set_country_flag = SOV_moscow_gosplan_2
+        }
+    }
+
+    SOV_gosplan_moscow_2 = {
+
+        icon = GFX_SOV_tractor_factories
+
+        allowed = {
+            original_tag = SOV
+        }
+
+        visible = {
+            has_country_flag = SOV_moscow_gosplan
+        }
+
+        available = {
+            has_country_flag = SOV_moscow_gosplan_2
+        }
+
+        fire_only_once = yes
+
+        cost = 150
+
+        days_remove = 90
+
+        modifier = {
+            political_power_factor = -0.1
+            civilian_factory_use = 3
+        }
+
+        complete_effect = {
+            swap_ideas = {
+                remove_idea = SOV_gosplan_moscow_spirit
+                add_idea = SOV_gosplan_moscow_spirit_1
+            }
+            clr_country_flag = SOV_moscow_gosplan_2
+        }
+        
+        remove_effect = {
+            random_owned_state = {
+				prioritize = { 253 }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+
+                add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+            set_country_flag = SOV_moscow_gosplan_3
+        }
+    }
+
+    SOV_gosplan_moscow_3 = {
+
+        icon = GFX_SOV_tractor_factories
+
+        allowed = {
+            original_tag = SOV
+        }
+
+        visible = {
+            has_country_flag = SOV_moscow_gosplan
+        }
+
+        available = {
+            has_country_flag = SOV_moscow_gosplan_3
+        }
+
+        fire_only_once = yes
+
+        cost = 150
+
+        days_remove = 90
+
+        modifier = {
+            political_power_factor = -0.1
+            civilian_factory_use = 3
+        }
+
+        complete_effect = {
+            swap_ideas = {
+                remove_idea = SOV_gosplan_moscow_spirit_1
+                add_idea = SOV_gosplan_moscow_spirit_2
+            }
+            clr_country_flag = SOV_moscow_gosplan_3
+        }
+        
+        remove_effect = {
+            random_owned_state = {
+				prioritize = { 247 }
+				add_extra_state_shared_building_slots = 2
+
+                add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+    }
+
+    SOV_gosplan_urals = {
+
+        icon = GFX_SOV_tractor_factories
+
+        highlight_states = {
+            highlight_state_targets = {
+                state = 572
+                state = 653
+                state = 582
+                state = 398
+                state = 651
+                state = 652
+                state = 399
+                state = 573
+            }
+        }
+
+        allowed = {
+            original_tag = SOV
+        }
+
+        visible = {
+            NOT = {
+                OR = {
+                    has_country_flag = SOV_ukraine_gosplan
+                    has_country_flag = SOV_moscow_gosplan
+                    has_country_flag = SOV_siberia_gosplan
+                }
+            }
+        }
+
+        available = {
+            has_completed_focus = urals
+        }
+
+        fire_only_once = yes
+
+        cost = 150
+
+        days_remove = 90
+
+        modifier = {
+            political_power_factor = -0.15
+            civilian_factory_use = 5
+        }
+
+        complete_effect = {
+            every_owned_state = {
+                limit = {
+                    is_gosplan_urals = yes
+                }
+
+                add_dynamic_modifier = {
+                    modifier = SOV_gosplan_urals_dynamic_modifiers
+                    scope = SOV
+                }
+            }
+            set_country_flag = SOV_urals_gosplan
+        }
+        remove_effect = {
+            random_owned_state = {
+				prioritize = { 572 }
+				add_extra_state_shared_building_slots = 5
+
+                add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+
+                add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+            set_country_flag = SOV_urals_gosplan_1
+        }
+    }    
+    SOV_gosplan_urals_1 = {
+
+        icon = GFX_SOV_tractor_factories
+
+        allowed = {
+            original_tag = SOV
+        }
+
+        visible = {
+            has_country_flag = SOV_urals_gosplan
+        }
+
+        available = {
+            has_country_flag = SOV_urals_gosplan_1
+        }
+
+        fire_only_once = yes
+
+        cost = 150
+
+        days_remove = 90
+
+        modifier = {
+            political_power_factor = -0.1
+            civilian_factory_use = 3
+        }
+
+        complete_effect = {
+            add_ideas = { SOV_gosplan_urals_spirit }
+            custom_effect_tooltip = generic_skip_one_line_tt
+            clr_country_flag = SOV_urals_gosplan_1
+        }
+        
+        remove_effect = {
+            random_owned_state = {
+				prioritize = { 651 }
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+
+                add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+            set_country_flag = SOV_urals_gosplan_2
+        }
+    }
+
+    SOV_gosplan_urals_2 = {
+
+        icon = GFX_SOV_tractor_factories
+
+        allowed = {
+            original_tag = SOV
+        }
+
+        visible = {
+            has_country_flag = SOV_urals_gosplan
+        }
+
+        available = {
+            has_country_flag = SOV_urals_gosplan_2
+        }
+
+        fire_only_once = yes
+
+        cost = 150
+
+        days_remove = 90
+
+        modifier = {
+            political_power_factor = -0.1
+            civilian_factory_use = 3
+        }
+
+        complete_effect = {
+            swap_ideas = {
+                remove_idea = SOV_gosplan_urals_spirit
+                add_idea = SOV_gosplan_urals_spirit_1
+            }
+            clr_country_flag = SOV_urals_gosplan_2
+        }
+        
+        remove_effect = {
+            random_owned_state = {
+				prioritize = { 653 }
+				add_extra_state_shared_building_slots = 4
+
+                add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+            set_country_flag = SOV_urals_gosplan_3
+        }
+    }
+
+    SOV_gosplan_urals_3 = {
+
+        icon = GFX_SOV_tractor_factories
+
+        allowed = {
+            original_tag = SOV
+        }
+
+        visible = {
+            has_country_flag = SOV_urals_gosplan
+        }
+
+        available = {
+            has_country_flag = SOV_urals_gosplan_3
+        }
+
+        fire_only_once = yes
+
+        cost = 150
+
+        days_remove = 90
+
+        modifier = {
+            political_power_factor = -0.1
+            civilian_factory_use = 3
+        }
+
+        complete_effect = {
+            swap_ideas = {
+                remove_idea = SOV_gosplan_urals_spirit_1
+                add_idea = SOV_gosplan_urals_spirit_2
+            }
+            clr_country_flag = SOV_urals_gosplan_3
+        }
+        
+        remove_effect = {
+            random_owned_state = {
+				prioritize = { 582 }
+				add_extra_state_shared_building_slots = 3
+
+                add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+        }
+    }
+
+    SOV_gosplan_siberia = {
+
+        icon = GFX_SOV_tractor_factories
+
+        highlight_states = {
+            highlight_state_targets = {
+                state = 571
+                state = 570
+                state = 569
+                state = 578
+                state = 568
+                state = 40
+                state = 566
+                state = 403
+                state = 408
+                state = 409
+            }
+        }
+
+        allowed = {
+            original_tag = SOV
+        }
+
+        visible = {
+            NOT = {
+                OR = {
+                    has_country_flag = SOV_ukraine_gosplan
+                    has_country_flag = SOV_moscow_gosplan
+                    has_country_flag = SOV_urals_gosplan
+                }
+            }
+        }
+
+        available = {
+            has_completed_focus = siberia
+        }
+
+        fire_only_once = yes
+
+        cost = 150
+
+        days_remove = 90
+
+        modifier = {
+            political_power_factor = -0.15
+            civilian_factory_use = 5
+        }
+
+        complete_effect = {
+            every_owned_state = {
+                limit = {
+                    is_gosplan_siberia = yes
+                }
+
+                add_dynamic_modifier = {
+                    modifier = SOV_gosplan_siberia_dynamic_modifiers
+                    scope = SOV
+                }
+            }
+            set_country_flag = SOV_siberia_gosplan
+        }
+
+        remove_effect = {
+            every_owned_state = {
+                limit = {
+                    is_gosplan_siberia = yes
+                }
+
+                add_extra_state_shared_building_slots = 8
+
+                add_building_construction = {
+                    type = infrastructure
+                    level = 4
+                    instant_build = yes
+                }
+            }
+            set_country_flag = SOV_siberia_gosplan_1    
+        }
+    }
+
+    SOV_gosplan_siberia_1 = {
+
+        icon = GFX_SOV_tractor_factories
+
+        allowed = {
+            original_tag = SOV
+        }
+
+        visible = {
+            has_country_flag = SOV_siberia_gosplan
+        }
+
+        available = {
+            has_country_flag = SOV_siberia_gosplan_1
+        }
+
+        fire_only_once = yes
+
+        cost = 150
+
+        days_remove = 90
+
+        modifier = {
+            political_power_factor = -0.1
+            civilian_factory_use = 3
+        }
+
+        complete_effect = {
+            add_ideas = { SOV_gosplan_siberia_spirit }
+            custom_effect_tooltip = generic_skip_one_line_tt
+            clr_country_flag = SOV_siberia_gosplan_1
+        }
+        
+        remove_effect = {
+            random_owned_state = {
+				prioritize = { 408 }
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+
+                add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+            set_country_flag = SOV_siberia_gosplan_2
+        }
+    }
+
+    SOV_gosplan_siberia_2 = {
+
+        icon = GFX_SOV_tractor_factories
+
+        allowed = {
+            original_tag = SOV
+        }
+
+        visible = {
+            has_country_flag = SOV_siberia_gosplan
+        }
+
+        available = {
+            has_country_flag = SOV_siberia_gosplan_2
+        }
+
+        fire_only_once = yes
+
+        cost = 150
+
+        days_remove = 90
+
+        modifier = {
+            political_power_factor = -0.1
+            civilian_factory_use = 3
+        }
+
+        complete_effect = {
+            swap_ideas = {
+                remove_idea = SOV_gosplan_siberia_spirit
+                add_idea = SOV_gosplan_siberia_spirit_1
+            }
+            custom_effect_tooltip = generic_skip_one_line_tt
+            clr_country_flag = SOV_siberia_gosplan_2
+        }
+        
+        remove_effect = {
+            random_owned_state = {
+				prioritize = { 571 }
+				add_extra_state_shared_building_slots = 4
+                add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+            set_country_flag = SOV_siberia_gosplan_3
+        }
+    }
+
+    SOV_gosplan_siberia_3 = {
+
+        icon = GFX_SOV_tractor_factories
+
+        allowed = {
+            original_tag = SOV
+        }
+
+        visible = {
+            has_country_flag = SOV_siberia_gosplan
+        }
+
+        available = {
+            has_country_flag = SOV_siberia_gosplan_3
+        }
+
+        fire_only_once = yes
+
+        cost = 150
+
+        days_remove = 90
+
+        modifier = {
+            political_power_factor = -0.1
+            civilian_factory_use = 3
+        }
+
+        complete_effect = {
+            swap_ideas = {
+                remove_idea = SOV_gosplan_siberia_spirit_1
+                add_idea = SOV_gosplan_siberia_spirit_2
+            }
+            custom_effect_tooltip = generic_skip_one_line_tt
+            clr_country_flag = SOV_siberia_gosplan_3
+        }
+        
+        remove_effect = {
+            random_owned_state = {
+				prioritize = { 403 }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+
+                add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+    }
+}

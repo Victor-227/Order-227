@@ -62,8 +62,8 @@ bookmarks = {
 			}
 			focuses = {
 				GER_fuhrerprinzip
-				GER_the_peoples_victory
-				GER_glory_to_the_imperial_army
+				GER_schacht
+				GER_the_four_year_plan
 			}
 		}
 		"ITA"={

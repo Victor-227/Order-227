@@ -12,7 +12,7 @@ state={
 			9357 1 #Ukmerge
 		}
 		buildings = {
-			infrastructure = 3
+			infrastructure = 6
 
 
 		}

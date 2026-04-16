@@ -15,7 +15,7 @@ state = {
 		add_core_of = CZE
 
 		buildings = {
-			infrastructure = 4
+			infrastructure = 8
 			arms_factory = 1
 		}
 

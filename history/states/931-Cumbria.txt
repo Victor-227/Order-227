@@ -15,7 +15,7 @@ state = {
 			11332 3 #Carlisle
 		}
 		buildings = {
-			infrastructure = 3 #was: 6
+			infrastructure = 6 #was: 6
 		}
 	}
 

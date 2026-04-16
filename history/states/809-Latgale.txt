@@ -6,7 +6,7 @@ state={
 	history={
 		owner = BLT
 		buildings = {
-			infrastructure = 2
+			infrastructure = 4
 		}
 		add_core_of = BLT
 		add_core_of = SOV

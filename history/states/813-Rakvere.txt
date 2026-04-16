@@ -12,7 +12,7 @@ state={
 			11127 1 #Rakvere
 		}
 		buildings = {
-			infrastructure = 3 #was: 5
+			infrastructure = 6 #was: 5
 			industrial_complex = 3
 			arms_factory = 3
 

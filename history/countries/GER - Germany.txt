@@ -935,7 +935,6 @@ recruit_character = GER_oswald_lutz
 recruit_character = GER_walther_nehring
 recruit_character = GER_hans_krebs
 recruit_character = GER_rolf_carls
-recruit_character = GER_helmuth_wilberg
 recruit_character = GER_josef_kammhuber
 recruit_character = GER_robert_knauss
 recruit_character = GER_alfred_becker

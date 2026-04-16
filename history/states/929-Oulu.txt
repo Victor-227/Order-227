@@ -23,7 +23,7 @@ state = {
 		}
 		
 		buildings = {
-			infrastructure = 1
+			infrastructure = 2
 
 			# Merikoski Power Plant
 			#158 = { dam = 1 }

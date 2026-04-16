@@ -1,7 +1,18 @@
 SpriteTypes = {
-    ### NEW GER DECISION
+    ### NEW GERMANY DECISION
     SpriteType = {
 		name = "GFX_decision_GER_oberkommando_der_wehrmacht"
-		texturefile = "gfx/interface/decisions/decision_GER_oberkommando_der_wehrmacht.dds"
+		texturefile = "gfx/interface/decisions/GER/decision_GER_oberkommando_der_wehrmacht.dds"
+	}
+
+	### NEW SOVIET DECISION
+	SpriteType = {
+		name = "GFX_decision_SOV_dual_factories"
+		texturefile = "gfx/interface/decisions/SOV/decision_SOV_tractor_factory.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_decision_SOV_gosplan"
+		texturefile = "gfx/interface/decisions/SOV/decision_SOV_five_years_plans.dds"	
 	}
 }
