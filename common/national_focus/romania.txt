@@ -922,7 +922,7 @@ focus_tree = {
 
 	focus = {
 		id = ROM_his_majestys_loyal_government
-		icon = GFX_goal_generic_propaganda
+		icon = GFX_focus_generic_monarchist_sentiment
 		prerequisite = { focus = ROM_revise_the_constitution focus = ROM_fortify_the_borders }
 		mutually_exclusive = { focus = ROM_flexible_foreign_policy }
 		x = -2
@@ -963,6 +963,7 @@ focus_tree = {
 
 	focus = {
 		id = ROM_empower_the_minister
+		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = ROM_his_majestys_loyal_government }
 		x = 0
 		y = 1
@@ -982,6 +983,7 @@ focus_tree = {
 
 	focus = {
 		id = ROM_reform_industry
+		icon = GFX_focus_BEL_engine_of_the_economy
 		prerequisite = { focus = ROM_empower_the_minister }
 		x = 2
 		y = 1
@@ -996,6 +998,7 @@ focus_tree = {
 
 	focus = {
 		id = ROM_repurpose_royal_treasury
+		icon = GFX_focus_CHI_planned_economy
 		prerequisite = { focus = ROM_reform_industry }
 		x = 0
 		y = 1
@@ -1075,7 +1078,7 @@ focus_tree = {
 
 	focus = {
 		id = ROM_expand_the_sentinels
-		
+		icon = GFX_focus_CHL_expand_the_forestry
 		prerequisite = { focus = ROM_empower_the_minister }
 		x = -2
 		y = 1
@@ -1171,6 +1174,7 @@ focus_tree = {
 
 	focus = {
 		id = ROM_placeholder
+		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = ROM_all_parties_must_end }
 		x = 1
 		y = 1
@@ -1183,7 +1187,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+        swap_ideas = {
+		remove_idea = ROM_iron_guard_2
+		add_idea = ROM_iron_guard_3
+			}
 		}
 	}
 	
@@ -1362,7 +1369,7 @@ focus_tree = {
 			if = {
 				#rename to greater romania if fascist
 			}
-			retire_character = ROM_horia_sima
+			hidden_effect= {retire_character = ROM_horia_sima}
 		}
 	}
 
@@ -1425,6 +1432,7 @@ focus_tree = {
 
 	focus = {
 		id = ROM_national_christian_party 
+	   icon = GFX_focus_BEL_christian_corporatism
 		
 		prerequisite = { focus = ROM_appoint_german_friendly_government }
 		x = 2
@@ -1440,6 +1448,7 @@ focus_tree = {
 
 	focus = {
 		id = ROM_develop_the_countryside
+		icon = GFX_focus_generic_modernizing_agriculture
 		
 		prerequisite = { focus = ROM_national_christian_party }
 		x = 0
@@ -1496,6 +1505,7 @@ focus_tree = {
 
 	focus = {
 		id = ROM_horia_sima
+		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = ROM_iron_guard_integration }
 		x = 0
 		y = 1
@@ -1515,6 +1525,7 @@ focus_tree = {
 
 	focus = {#add weak monarch idea or something idk
 		id = ROM_balance_shifts
+		icon = GFX_focus_GER_subjugate_romanian_economy
 		prerequisite = { focus = ROM_conducator }
 		x = 0
 		y = 1
@@ -1633,6 +1644,7 @@ focus_tree = {
 
 	focus = {
 		id = ROM_restore_michael
+		icon = GFX_focus_rom_coup
 		prerequisite = { focus = ROM_force_abdication }
 		x = 1
 		y = 1
@@ -1647,6 +1659,7 @@ focus_tree = {
 
 	focus = {
 		id = ROM_jilava_massacre
+		icon = GFX_focus_RAJ_red_in_the_shadows
 		prerequisite = { focus = ROM_force_abdication }
 		x = -1
 		y = 1

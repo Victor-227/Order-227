@@ -931,9 +931,8 @@ ideas = {
 		
 	
 	
-	tank_manufacturer = { 
+	tank_research = { 
 		
-		designer = yes
 		
 		pzinz_rom = {
 			
@@ -1008,7 +1007,7 @@ ideas = {
 	}	
 	
 
-	industrial_concern = {
+	industrial_research = {
 		
 		
 		ROM_ROMLOC = {
@@ -1029,9 +1028,8 @@ ideas = {
 		}	
 	}
 
-	naval_manufacturer = { 			
+	naval_research = { 			
 		
-		designer = yes
 		
 		constanta_shipyard = {
 			
@@ -1135,9 +1133,8 @@ ideas = {
 	}	
 	
 
-	materiel_manufacturer = {
+	materiel_research = {
 		
-		designer = yes
 		
 		
 		ROM_vauxhall = {
@@ -1291,9 +1288,8 @@ ideas = {
 		}
 	}
 	
-	aircraft_manufacturer = { 		
+	aircraft_research = { 		
 			
-		designer = yes
 		
 		iar = {
 			
@@ -1455,5 +1451,49 @@ ideas = {
 			modifier = {
 				
 			}
+	}
+    
+	industrial_theorist = { 
+
+	ROM_nicolae_malaxa={
+		name=ROM_nicolae_malaxa
+		portraits={
+			army={
+				small="GFX_idea_ROM_nicolae_malaxa"
+			}
 		}
+		
+			
+			idea_token = ROM_nicolae_malaxa
+			allowed = {
+				original_tag = ROM
+				has_dlc = "Death or Dishonor"
+			}
+			traits = {
+				captain_of_industry 
+			}
+	}
+
+
+		ROM_nicolae_malaxa1={
+		name=ROM_nicolae_malaxa1
+		portraits={
+			army={
+				small="GFX_idea_ROM_nicolae_malaxa"
+			}
+		}
+		
+			
+			idea_token = ROM_nicolae_malaxa1
+			allowed = {
+				original_tag = ROM
+				has_dlc = "Death or Dishonor"
+			}
+			traits = {
+				War_industrialist
+			}
+	}
+
+	}
+
 }

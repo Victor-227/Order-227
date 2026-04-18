@@ -78,7 +78,7 @@ ideas = {
      }	
 	    targeted_modifier = {
         tag = ITA
-        attack_bonus_against = 0.15
+        attack_bonus_against = 0.10
      }
 	    targeted_modifier = {
          tag = SPR
@@ -112,7 +112,7 @@ ideas = {
 			equipment_bonus = {
 				armor = {
 					build_cost_ic = -0.10 instant = yes 
-					hard_attack = 0.10
+					hard_attack = 0.05
 				}
 			}
 		}

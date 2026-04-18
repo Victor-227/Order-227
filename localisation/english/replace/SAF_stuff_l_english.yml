@@ -1,4 +1,4 @@
-﻿l_engish:
+﻿l_english:
  SAF_abandon_westminster:0 "OSS Stablization"
  SAF_abandon_westminster_desc:0 "The situation in the cape has reached a critical point.The OSS shall send one of their men to bring back order to the country and get it ready for the coming war,no matter the cost."
  SAF_support_the_afrikaner_broederbond:0 "Infiltrate the Afrikaner Broederbond"
@@ -11,3 +11,4 @@
  SAF_fascist1:0 "Overclock the Factories"
  SAF_steal_everything:0 "SIONIC Engineer's Assistance"
  SAF_mercenary_army:0 "A Mercenary Army"
+ SAF_nazi:0 "Industrial Reforms"

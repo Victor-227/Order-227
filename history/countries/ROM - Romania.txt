@@ -25,7 +25,6 @@ recruit_character = ROM_gheorghe_avramescu
 recruit_character = ROM_constantin_sanatescu
 recruit_character = ROM_horia_macellariu
 recruit_character = ROM_gheorghe_potopeanu
-recruit_character = ROM_emanoil_ionescu
 recruit_character = ROM_gheorghe_mihail
 recruit_character = ROM_nicolae_sova
 recruit_character = ROM_paul_teodorescu
