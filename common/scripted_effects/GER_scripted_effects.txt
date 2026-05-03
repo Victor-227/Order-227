@@ -221,46 +221,10 @@ give_SOV_armor_research_bonuses = { #this effect is run for the Soviets!
 		limit = {
 			has_dlc = "No Step Back"
 		}
-		create_equipment_variant = {
-			name = "A-20"
-			type = medium_tank_chassis_1
-			parent_version = 0
-			allow_without_tech = no
-			modules = {
-				main_armament_slot = tank_small_cannon_2
-				turret_type_slot = tank_medium_two_man_tank_turret
-				suspension_type_slot = tank_christie_suspension
-				armor_type_slot = tank_welded_armor
-				engine_type_slot = tank_diesel_engine
-				special_type_slot_1 = sloped_armor
-			}
-			upgrades = {
-				tank_nsb_engine_upgrade = 8
-				tank_nsb_armor_upgrade = 2
-			}
-			icon = "GFX_SOV_basic_medium_tank_medium"
-		}
-		create_equipment_variant = {
-			name = "KV-1"
-			type = heavy_tank_chassis_1
-			parent_version = 0
-			modules = {
-				main_armament_slot = tank_medium_cannon
-				turret_type_slot = tank_heavy_three_man_tank_turret
-				suspension_type_slot = tank_torsion_bar_suspension
-				armor_type_slot = tank_welded_armor
-				engine_type_slot = tank_diesel_engine		
-			}
-			upgrades = {
-				tank_nsb_engine_upgrade = 10
-				tank_nsb_armor_upgrade = 9
-			}
-			icon = "GFX_SOV_improved_heavy_tank_medium"
-		}
 		add_tech_bonus = {
 			name = armor_bonus
 			bonus = 1.0
-			uses = 2
+			uses = 1
 			category = armor
 		}
 	}
@@ -1233,8 +1197,8 @@ GER_seize_gold_reserves_in_europe_peacefully = { #This will only work when ROOT 
 				}
 
 				add_to_variable = {
-					GER_industrial_consumer_goods_factor = occupied_state_num_factory
-					tooltip = consumer_goods_factor_tt
+					GER_industrial_consumer_goods_expected_value = occupied_state_num_factory
+					tooltip = consumer_goods_expected_value_tt
 				}
 				GER_reduce_mefo_bills_penalty = yes
 			}

@@ -13,12 +13,10 @@ state = {
 		}
 
 		add_core_of = FIN
-		add_core_of = SOV
 		
 		victory_points = { #Salla
 			197 1
 		}
-
 	}
 
 	provinces = {

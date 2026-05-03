@@ -311,7 +311,6 @@ ideas = {
 
 			modifier = {
 				fascism_drift = 0.2
-				fascism_acceptance = 85
 			}
 		}
 
@@ -2124,7 +2123,7 @@ ideas = {
 
 			targeted_modifier = { 
 				tag = GER
-				license_purchase_cost = -0.5
+				#license_purchase_cost = -0.5
 				license_production_speed = 0.25
 				license_tech_difference_speed = 0.25
 				trade_cost_for_target_factor = -0.3
@@ -2401,8 +2400,6 @@ ideas = {
 			modifier = {
 				experience_gain_army_factor = 0.15
 				experience_gain_air_factor = 0.15
-				send_volunteer_size = 2
-				air_volunteer_cap = 2
 			}
 		}
 
@@ -4224,6 +4221,7 @@ ideas = {
 				army_org_factor = 0.05
 				planning_speed = 0.25
 				supply_consumption_factor = 0.15
+				experience_gain_factor = -0.25
 			}
 		}
 		GER_army_1939_fake_ns = { #Fake National Spirit for showing off dynamic modifier at games start-up
@@ -4370,7 +4368,7 @@ ideas = {
 			
 			
 			research_bonus = {
-				armor = 0.15
+				armor = 0.1
 			}
 			
 			traits = { medium_tank_manufacturer }
@@ -4423,7 +4421,7 @@ ideas = {
 			}
 
 			research_bonus = {
-				naval_equipment = 0.15
+				naval_equipment = 0.1
 			}
 			
 			equipment_bonus = {
@@ -4505,7 +4503,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				air_equipment = 0.15
+				air_equipment = 0.1
 			}
 			
 			traits = { light_aircraft_manufacturer }
@@ -4529,7 +4527,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				artillery = 0.15
+				artillery = 0.1
 			}
 			
 			traits = { artillery_manufacturer }
@@ -4546,7 +4544,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				infantry_weapons = 0.15
+				infantry_weapons = 0.1
 			}
 			
 			traits = { infantry_equipment_manufacturer }
@@ -4563,7 +4561,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				motorized_equipment = 0.15
+				motorized_equipment = 0.1
 			}
 			
 			traits = { motorized_equipment_manufacturer }
@@ -5274,11 +5272,11 @@ ideas = {
 				}
 			}
 
-			modify_building_resources = {
+			#remember this to buff if göring is weak modify_building_resources = {
         	   building = synthetic_refinery
         	   resource = rubber
         	   amount = 1
-        	}
+        	#}
 
 			research_bonus = {
 				excavation_tech = 0.15
@@ -5523,7 +5521,6 @@ ideas = {
 				foreign_subversive_activites = -0.3
 				non_core_manpower = 0.02
 
-				subversive_activites_upkeep = -0.25
 				operative_slot = 1
 				intelligence_agency_defense = 0.2
 				intel_from_combat_factor = 0.25
@@ -5649,7 +5646,6 @@ ideas = {
 				offensive_war_stability_factor = 0.1
 				defensive_war_stability_factor = 0.1
 				operative_slot = 1
-				boost_ideology_mission_factor = 0.15
 				boost_resistance_factor = 0.15
 			}
 		}
@@ -5694,7 +5690,6 @@ ideas = {
 				# PP Gain
 				political_power_gain = 0.15
 
-				opinion_gain_monthly_same_ideology_factor = 1
 			}
 		}
 
@@ -5712,8 +5707,6 @@ ideas = {
 			modifier = {
 				# PP Gain
 				political_power_gain = 0.4
-
-				opinion_gain_monthly_same_ideology_factor = 1
 
 				military_industrial_organization_funds_gain = 0.15
 				military_industrial_organization_research_bonus = 0.15

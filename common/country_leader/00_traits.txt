@@ -7533,11 +7533,10 @@ leader_traits = {
 
 	stalin_heart_of_steel = {
 		random = no
-		stability_factor = -0.1
+		stability_factor = -0.15
+		stability_weekly = -0.001
 		war_support_factor = 0.05
 		political_power_factor = 0.05
-		opinion_gain_monthly_factor = -0.05
-		subjects_autonomy_gain = -0.1
 	}
 
 	stalin_heart_of_steel_opposition = {
@@ -7551,20 +7550,17 @@ leader_traits = {
 	stalin_inheritor_of_lenin = {
 		random = no
 		political_power_factor = 0.1
-		justify_war_goal_time = -0.25
 	}
 
 	stalin_inheritor_of_lenin_genius = {
 		random = no
 		political_power_factor = 0.1
-		justify_war_goal_time = -0.25
 		research_speed_factor = 0.05
 	}
 
 	stalin_inheritor_of_lenin_leader = {
 		random = no
 		political_power_factor = 0.1
-		justify_war_goal_time = -0.25
 		party_popularity_stability_factor = 0.15
 		defensive_war_stability_factor = 0.4
 		political_advisor_cost_factor = -0.25
@@ -7573,7 +7569,6 @@ leader_traits = {
 	stalin_inheritor_of_lenin_final = {
 		random = no
 		political_power_factor = 0.1
-		justify_war_goal_time = -0.25
 		research_speed_factor = 0.05
 		party_popularity_stability_factor = 0.15
 		defensive_war_stability_factor = 0.4
@@ -7582,21 +7577,18 @@ leader_traits = {
 
 	stalin_servant_of_lenin = {
 		random = no
-		drift_defence_factor = 0.15
-		guarantee_cost = -0.25
+		stability_weekly = 0.001
 	}
 
 	stalin_servant_of_lenin_worship = {
 		random = no
-		drift_defence_factor = 0.15
-		guarantee_cost = -0.25
+		stability_weekly = 0.001
 		stability_factor = 0.15
 	}
 
 	stalin_servant_of_lenin_leader = {
 		random = no
-		drift_defence_factor = 0.15
-		guarantee_cost = -0.25
+		stability_weekly = 0.001
 		party_popularity_stability_factor = 0.15
 		defensive_war_stability_factor = 0.4
 		political_advisor_cost_factor = -0.25
@@ -7604,8 +7596,7 @@ leader_traits = {
 
 	stalin_servant_of_lenin_final = {
 		random = no
-		drift_defence_factor = 0.15
-		guarantee_cost = -0.25
+		stability_weekly = 0.001
 		stability_factor = 0.15
 		party_popularity_stability_factor = 0.15
 		defensive_war_stability_factor = 0.4
@@ -7616,22 +7607,23 @@ leader_traits = {
 		random = no
 		war_support_factor = 0.1
 		army_morale_factor = 0.05
-		annex_cost_factor = -0.1
+		army_org_factor = 0.04
 	}
 
 	stalin_architect_of_communism = {
 		random = no
 		communism_drift = 0.1
-		master_ideology_drift = 0.1
-		puppet_cost_factor = -0.2
+		production_speed_buildings_factor = 0.04
+		global_building_slots_factor = 0.03
 	}
 
 	stalin_father_of_nations = {
 		random = no
 		stability_weekly = 0.001
 		compliance_gain = 0.05
-		justify_war_goal_when_in_major_war_time = -0.5
 		conscription = 0.02
+		army_core_attack_factor = 0.02
+		army_core_defence_factor = -0.2
 	}
 
 	stalin_authority_undermined = {
@@ -10632,7 +10624,6 @@ leader_traits = {
 			}
 		}
 		air_doctrine_cost_factor = -0.10
-		custom_modifier_tooltip = air_chief_mastery_tt
 
 		ai_will_do = {
 			factor = 1
@@ -11632,7 +11623,6 @@ leader_traits = {
 	energy_supply_company = {
 		random = no
 
-		consumer_goods_expected_value = -0.02
 
 		ai_will_do = {
 			factor = 1

@@ -567,6 +567,7 @@ SOV_second_five_year_plan_dynamic_modifier = { #NATIONAL SPIRIT
 	production_factory_efficiency_gain_factor = SOV_fyp_production_factory_efficiency_gain_factor #-0.15
 	production_factory_max_efficiency_factor = SOV_fyp_production_factory_max_efficiency_factor #0.05
 	consumer_goods_factor = SOV_fyp_consumer_goods_factor #0.05
+	consumer_goods_expected_value = SOV_fyp_consumer_goods_expected_value
 	production_speed_industrial_complex_factor = SOV_fyp_production_speed_industrial_complex_factor #0.05
 }
 
@@ -579,6 +580,7 @@ SOV_third_five_year_plan_dynamic_modifier = { #NATIONAL SPIRIT - Basic
 	production_factory_efficiency_gain_factor = SOV_fyp_production_factory_efficiency_gain_factor #-0.1
 	production_factory_max_efficiency_factor = SOV_fyp_production_factory_max_efficiency_factor #0.05
 	consumer_goods_factor = SOV_fyp_consumer_goods_factor #0.1
+	consumer_goods_expected_value = SOV_fyp_consumer_goods_expected_value
 	production_speed_industrial_complex_factor = SOV_fyp_production_speed_industrial_complex_factor #0.05
 
 	#INITIAL
@@ -623,6 +625,7 @@ SOV_third_five_year_plan_military_dynamic_modifier = { #NATIONAL SPIRIT - Milita
 	
 	#INITIAL -> Shift to Armaments Production
 	production_speed_arms_factory_factor = SOV_fyp_production_speed_arms_factory_factor #0.10
+	production_cost_arms_factory_factor = SOV_fyp_production_cost_arms_factory_factor
 
 	#EXTRA IMPROVEMENTS
 	local_resources_factor = SOV_fyp_local_resources_factor #0.10 -> Increase State Reserves
@@ -1087,6 +1090,7 @@ SOV_defense_industry_dynamic_modifier = { #NATIONAL SPIRIT
 	production_factory_max_efficiency_factor = SOV_defense_industry_production_factory_max_efficiency_factor #0.05
 	production_factory_efficiency_gain_factor = SOV_defense_industry_production_factory_efficiency_gain_factor #-0.05
 	line_change_production_efficiency_factor = SOV_defense_industry_line_change_production_efficiency_factor #-0.1
+	industrial_capacity_factory = SOV_defense_industry_industrial_capacity_factory
 
 	#FUTURE
 	tank_manufacturer_cost_factor = SOV_defense_industry_tank_manufacturer_cost_factor #-0.25 -> Tank Designer focus

@@ -1,6 +1,6 @@
 ideas = {
 	academy_spirit = {
-		
+
 		bold_attack_spirit = {
 			ledger = army
 			available = { has_military_academy = yes }
@@ -252,7 +252,6 @@ ideas = {
 					NOT = { has_dlc = "No Step Back" }
 				}
 			}
-
 		}	
 		CHI_whampoa_military_academy_spirit = {
 			ledger = army
@@ -290,7 +289,6 @@ ideas = {
 				}
 			}
 		}
-		
 		cult_of_heroism_army_spirit = {
 			ledger = army
 			visible = { has_dlc = "No Compromise, No Surrender" }
@@ -313,7 +311,6 @@ ideas = {
 				}
 			}
 		}
-		
 		professional_officer_corps_spirit = {
 			ledger = army
 			modifier = {
@@ -329,7 +326,6 @@ ideas = {
 				}
 			}
 		}
-		
 	}
 
 	army_spirit = {

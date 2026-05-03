@@ -1,11 +1,11 @@
 SpriteTypes = {
-    ### NEW GERMANY DECISION
+    ### NEW GERMANY DECISIONS
     SpriteType = {
 		name = "GFX_decision_GER_oberkommando_der_wehrmacht"
 		texturefile = "gfx/interface/decisions/GER/decision_GER_oberkommando_der_wehrmacht.dds"
 	}
 
-	### NEW SOVIET DECISION
+	### NEW SOVIET DECISIONS
 	SpriteType = {
 		name = "GFX_decision_SOV_dual_factories"
 		texturefile = "gfx/interface/decisions/SOV/decision_SOV_tractor_factory.dds"
