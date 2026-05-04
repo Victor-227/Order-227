@@ -1,0 +1,92 @@
+laptop diary day one
+have to find a replacement stat for all this manufacterer cost stuff or maybe just delete them
+air tree seems to be already decent just fix the thing above and thats that
+navy tree is who the fuck cares
+need to take a look at the evacuations and probably need to add new evacuation decisions that do it automatically but actually use trains and it is a bit detrimental you are fucking disasembling factories and moving them like come on
+army tree probably needs a revamp
+i think there were some other stuff that needed a bit more stuff happening but that should be all for the soviet tree
+industrial concerns gonna be the national specialists and gosprot needs to go to conglomarete category and need to add maybe gosplan there but i dont know how to do that without giving soviets infinite amount of bonuses at this point, maybe add a general construction debuff to one of the spirits and call it a day
+########### do all the generic bullshit with the oob files, history file of the nation and adjust mios aswell and that is soviets for you
+
+
+
+########## okay now real shit happening here first things first need to do the manufacterer ----- into research thing on all nations that dont have them yet, and the last line that soviets have that also needs to be done to all the nations,
+
+NATIONS THAT ARE 100% RIGHT NOW ARE 
+ONLY GERMANY FOR NOW
+okay let me actually think of all the nations,
+allies = SOV (which should be done soon probs) UK, FRA, SAF, #####CAN(SUN IS WORKING ON THAT RIGHT NOW SO NO NEED FOR ME TO TOUCH THAT)
+axis = GER(100% done for sure, but obviously i might have forgot something) ITA (the tree isnt even done yet there is actually some work to be done there), SPR(sun did this but I will ask him if I can do the clean up I was talking about myself for this nation so he can full focus Canada), ROM( this is done already but I just need to check if anything is missing) HUN(this is untermensch but I have to check it up right before the game and after his "last push") BUL(this nation going to be annexed)
+one thing I remembered after bulgaria is I need to copy the host tool bullshit from some fucking mod
+
+
+#### okay now stuff that I need to remember but I cant because b12 deficiency or something,
+NEED TO SEE HOW AND WHERE TO CHANGE THE NO COHESION NEGATIVE PLANNING MULTIPLIER TO ZERO BECAUSE LMAO PARADOX
+need to change area defense tripling the general capacity and make it zero and just adjust general capacities from there
+probably need to copy over the define explanations to the defines in the mod so i dont go crazy
+need to also add the number of the line they are in and order them accordingly because for some reason
+manpower delivery speed i think is like 4x but might need more depends on how it feels in the game
+special forces cap def will be there, it makes it interesting and the modifiers from them are nice to include in the trees as fillers
+naval factories max are 50 but that is probably too much, need to know from the italy and the uk player about how fast they are shitting out ships, especially exepensive ones
+i already tested the base speed values of factories can just delete them the game uses the energy ones because duh if nothing costs energy it means that everything uses energy but the use is 0 but still there or something
+base cap being 40 is actually i think very good vanilla has too much ic on every nation, and i think it makes cap more valuable but that is coming from my ass need to check it with math
+max leaders to show is 0 but it still shows 1, this is the fucking field commander promoting bullshit but it doesn't matter I don't think
+combat scale i think was reduced by half, i think this is needed because holy shit vanilla planes die super fast, i also want to add like 20 base ic cost to all planes so yeah that would make it so no one would have air after 1 year and russia would probably rape germany overall cancer meta
+disruption lowered so cas is not one sided but not lowered too crazy that bombers just get through no matter what
+there is no master gain from training, i think that actually controls army, air, and, navy, which is good I think but I want to also adjust master stuff probably after game, I already added mastery gain to advisors but that is either going to be removed or master gain from combat is going to get scaled down so they are more important
+could definitely expand the doctrines, add a support column aswell, because i like the new doctrine system where the top doctrines is self confined but i feel like 4 clicks on the doctrine is too little i liked how tsm did it to be fair but probably don't want to copy fully
+
+
+
+
+thinking of adding radios as tech to the armor tree like engine tech and armor tech, also want to make a modules tree probably but make sure to not copy oak because that is too much at that point but definitely still needed as vanilla research is very boring, also revert the fucking merging of rubber and oil stuff why remove more tech when the research is done in 41 already
+while talking about research probably increase year ahead penalty by 50%, i think it is just 100%, 50 is good don't want to make it like tfb
+
+i assume evacuation is done with while_loop_effect, it should evacuate one civ one mill every seven days i think balance wise that is good, also need to give ukraine players a chance to click the other 3 gosplan decisions as ukraine is just too volatile and they should be given a chance to get the buffs somewhere else, but I don't even know if they would click it as the -cg and output are probably nice for them to just keep
+the code probably looks something like this
+
+every_owned_state = {
+    limit = {
+        any_neighbouring_state = {
+            NOT = {
+                is_controlled_by = SOV or something like from or owner or something
+            }
+        }
+    }
+
+    remove_building_construction = civ 1
+    remove_building_construction = mill 1
+    add_building_construction = civ 1 
+    add_building_construction = mill 1
+    modifier = train use
+    cancel_if = is_not_controlled_by = SOV
+    repeat until no factories with while_loop_effect
+    this is probably a mission so just copy from mefo
+    oooh 
+    wait
+    fire 
+    i could make it so decision somewhere in the tree can affect how long evacuations take, don't know where i would add this but this is like a fire idea lowkey
+}
+
+okay that is enough for this break
+probably want to actually take notes from the class here maybe
+
+sociolinguistics notes maybe
+gender and age
+
+different patterns of lang of man and woman
+woman affective funtction
+woman solidarity
+covert prestige for man
+overt prestige for woman
+face saving
+face threatining
+
+age
+
+age graded patterns
+swear vocab of teenagers
+change process and age graded use are different
+slang vocab linguistic prerogative
+
+lang chnage spreding through a community, regular increase or decrease in the use of the linguistic form
