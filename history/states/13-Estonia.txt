@@ -18,8 +18,6 @@ state={
 
 		}
 		add_core_of = BLT
-		add_core_of = SOV
-
 	}
 
 	provinces={

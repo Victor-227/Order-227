@@ -89,31 +89,7 @@ country_event = { #MEFO Bills have been cancelled
 			GER_mefo_bills_airforce_intel_to_others = 0.25
 			tooltip = airforce_intel_to_others_tt
 		}
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-
-		custom_effect_tooltip = GER_unlock_seize_gold_reserves_tt	
-		
-		custom_effect_tooltip = generic_skip_one_line_tt
-
-		effect_tooltip = {
-			retire_character = GER_hjalmar_schacht
-			show_ideas_tooltip = hjalmar_schacht
-		}
-	}
-	option = { #Stop rearmaming and receive Recovering Economy or Wirtschaftswunder
-		name = germany_mefo_bills.1.b
-		ai_chance = {
-			base = 0
-		}
-		GER_stop_rearmament = yes
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-
-		effect_tooltip = {
-			retire_character = GER_hjalmar_schacht
-			show_ideas_tooltip = hjalmar_schacht
-		}
+		#custom_effect_tooltip = GER_unlock_seize_gold_reserves_tt	
 	}
 }
 
@@ -345,36 +321,6 @@ country_event = {
 		custom_effect_tooltip = war_will_cancel_deal_tt
 		FROM = {
 			country_event = { id = wuw_GER_diplomacy.2 hours = 5 random_hours = 5 }
-		}
-	}
-
-	option = { #Rejects
-		name = wuw_GER_diplomacy.1.b
-		ai_chance = {
-			base = 1
-			modifier = {
-				add = 15
-				has_opinion = {
-					target = FROM
-					value < -29
-				}
-			}
-			modifier = {
-				add = 15
-				has_opinion = {
-					target = FROM
-					value < -49
-				}
-			}
-			modifier = {
-				add = 20
-				FROM = {
-					has_added_tension_amount > 15
-				}
-			}
-		}		
-		FROM = {
-			country_event = { id = wuw_GER_diplomacy.3 hours = 5 random_hours = 5 }
 		}
 	}
 }

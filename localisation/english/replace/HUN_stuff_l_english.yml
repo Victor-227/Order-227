@@ -1,20 +1,58 @@
 ﻿l_english:
 
- HUN_urbanization_efforts: "Infrastructure Efforts"
-
- HUN_status: "Ver0.4"
- HUN_status_desc: "Patch Notes: will be ready for v1.0 when like v0.6 or v0.7"
+ HUN_status: "Ver0.5"
+ HUN_status_desc: "Patch Notes: can probably press it into service after 2 more patches, 3 or 4 to perfect"
 
  HUN_the_regent_supreme: "The Regent Supreme"
  HUN_the_regent_supreme_desc: "W.I.P."
 
+ HUN_first_vienna_award: "The First Vienna Award"
+ HUN_first_vienna_award_desc: "WIP"
+
+ HUN_second_vienna_award: "The First Second Vienna Award"
+ HUN_second_vienna_award_desc: "WIP"
+
+ HUN_fate_of_yugoslavia: "The Fate of Yugoslavia"
+ HUN_fate_of_yugoslavia_desc: "WIP"
+
  wuw_HUN_demand_transylvania: "Reintegrate Transylvania"
  wuw_HUN_demand_transylvania_desc: "W.I.P."
 
+ wuw_HUN_demand_the_vojvodina: "Reintegrate the Vojvodina"
+ wuw_HUN_demand_the_vojvodina_desc: "W.I.P."
+
+ HUN_urbanization_efforts: "Infrastructure Efforts"
+
+ HUN_rural_electrification: "Rural Electrification"
+ HUN_rural_electrification_desc: "WIP"
+
  HUN_secret_rearmament_tt_2: "§RSprit will be removed when increasing conscription beyond§! §YDisarmed Nation§!"
+ 
+ wuw_HUN_negotiate_the_restrictions: "Bled Agreement"
 
-HUN_invite_german_designers: "Invite German Designers"
-HUN_invite_german_designers_desc: "WIP"
+ HUN_invite_german_designers: "Invite German Designers"
+ HUN_invite_german_designers_desc: "WIP"
 
-HUN_the_tigris: "The Tigris"
-HUN_the_tigris_desc: "WIP"
+ HUN_the_tigris: "The Tigris"
+ HUN_the_tigris_desc: "WIP"
+
+ HUN_invest_in_support_equipment: "Improve Our Support Equipment"
+ HUN_invest_in_support_equipment_desc: "WIP"
+
+ HUN_invest_in_artillery: "Better Artillery Guns"
+ HUN_invest_in_artillery_desc: "WIP"
+
+ HUN_buzoganyveto: "The 44M Buzoganyveto"
+ HUN_buzoganyveto_desc: "Silly Hungarian anti-tank rocket."
+
+ HUN_marine_experiments: "Experiment with Marines"
+ HUN_marine_experiments_desc: "WIP"
+
+ HUN_air_infantry_coordination: "Air-Infantry Coordination"
+ HUN_air_infantry_coordination_desc: "WIP"
+ 
+ wuw_HUN_demand_croatian_reintegration: "Reclaim Croatia!"
+ wuw_HUN_demand_croatian_reintegration_desc: "W.I.P."
+
+ wuw_HUN_enlarge_the_ganz_danubius_division_tt: "Add §G10§! §YNaval Dockyards§! in a random controlled §YCoastal State§!"
+ 

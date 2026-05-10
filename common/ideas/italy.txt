@@ -3051,7 +3051,7 @@ ideas = {
 			}
 	
 			modifier = {
-				stability_weekly = -0.002
+				stability_weekly = -0.0015
 				political_power_gain = -0.15
 			}
 		}

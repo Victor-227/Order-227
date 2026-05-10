@@ -586,7 +586,7 @@ buildings = {
 		spawn_point = dam_spawn
 		damage_factor = -1
 		is_buildable = no
-		affects_energy = yes
+		affects_energy = no
 		need_detection = yes
 		detecting_intel_type = civilian 
 		province_damage_modifiers = { flooded }
@@ -601,7 +601,6 @@ buildings = {
 			state_production_speed_buildings_factor = 0.15
 			local_building_slots_factor = 0.15
 			state_resources_factor = 0.1
-			local_factory_energy_consumption = -0.65
 		}
 	}
 	dam_mountain = {

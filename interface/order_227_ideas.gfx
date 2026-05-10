@@ -53,7 +53,12 @@ SpriteTypes = {
 
     SpriteType = {
         name = GFX_idea_GER_rwim
-        texturefile = "gfx/interface/ideas/GER/rwim.dds"
+        texturefile = "gfx/interface/ideas/GER/idea_GER_rwim.dds"
+    }
+
+    SpriteType = {
+        name = GFX_idea_GER_totaler_krieg
+        texturefile = "gfx/interface/ideas/GER/idea_GER_totaler_krieg.dds"
     }
 
     ### SOVIET

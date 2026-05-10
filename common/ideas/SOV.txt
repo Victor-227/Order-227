@@ -821,8 +821,8 @@ ideas = {
 
 			modifier = {
 				stability_factor = 0.05
-				consumer_goods_factor = -0.06
-				global_building_slots = 1
+				consumer_goods_expected_value = -0.01
+				global_building_slots = 3
 			}
 		}
 
@@ -1164,10 +1164,11 @@ ideas = {
 			}
 
 			modifier = {
-				subversive_activites_upkeep = -0.5
+				agency_upgrade_time = -0.2
 				operative_slot = 1
 				root_out_resistance_effectiveness_factor = 0.1
 				resistance_damage_to_garrison = -0.05
+				intelligence_agency_defense = 1.5
 			}
 		}
 
@@ -1252,8 +1253,8 @@ ideas = {
 			}
 
 			modifier = {
-				production_factory_efficiency_gain_factor = 0.05
-				research_speed_factor = 0.02
+				production_factory_efficiency_gain_factor = 0.07
+				research_speed_factor = 0.1
 			}
 		}
 
@@ -1273,11 +1274,10 @@ ideas = {
 			}
 
 			modifier = {
-				production_factory_efficiency_gain_factor = 0.05
-				research_speed_factor = 0.02
-				drift_defence_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.07
+				research_speed_factor = 0.08
 				communism_drift = 0.05
-				consumer_goods_factor = -0.05
+				consumer_goods_expected_value = -0.04
 			}
 		}
 
@@ -3363,7 +3363,7 @@ ideas = {
 		}
 
 		SOV_gosplan_moscow_spirit = {
-			name = gosplan_ukraine_spirit
+			name = gosplan_moscow_spirit
 			picture = can_wartime_prices_and_trade_board
 
 			removal_cost = -1
@@ -3386,7 +3386,7 @@ ideas = {
 		}
 
 		SOV_gosplan_moscow_spirit_1 = {
-			name = gosplan_ukraine_spirit
+			name = gosplan_moscow_spirit
 			picture = can_wartime_prices_and_trade_board
 
 			removal_cost = -1
@@ -3409,7 +3409,7 @@ ideas = {
 		}
 
 		SOV_gosplan_moscow_spirit_2 = {
-			name = gosplan_ukraine_spirit
+			name = gosplan_moscow_spirit
 			picture = can_wartime_prices_and_trade_board
 
 			removal_cost = -1
@@ -3432,7 +3432,7 @@ ideas = {
 		}
 
 		SOV_gosplan_urals_spirit = {
-			name = gosplan_ukraine_spirit
+			name = gosplan_urals_spirit
 			picture = can_wartime_prices_and_trade_board
 
 			removal_cost = -1
@@ -3455,7 +3455,7 @@ ideas = {
 		}
 
 		SOV_gosplan_urals_spirit_1 = {
-			name = gosplan_ukraine_spirit
+			name = gosplan_urals_spirit
 			picture = can_wartime_prices_and_trade_board
 
 			removal_cost = -1
@@ -3478,7 +3478,7 @@ ideas = {
 		}
 
 		SOV_gosplan_urals_spirit_2 = {
-			name = gosplan_ukraine_spirit
+			name = gosplan_urals_spirit
 			picture = can_wartime_prices_and_trade_board
 
 			removal_cost = -1
@@ -3501,7 +3501,7 @@ ideas = {
 		}
 
 		SOV_gosplan_siberia_spirit = {
-			name = gosplan_ukraine_spirit
+			name = gosplan_siberia_spirit
 			picture = can_wartime_prices_and_trade_board
 
 			removal_cost = -1
@@ -3528,7 +3528,7 @@ ideas = {
 		}
 
 		SOV_gosplan_siberia_spirit_1 = {
-			name = gosplan_ukraine_spirit
+			name = gosplan_siberia_spirit
 			picture = can_wartime_prices_and_trade_board
 
 			removal_cost = -1
@@ -3548,14 +3548,14 @@ ideas = {
 			        instant = yes
 		        }
 		        artillery = {
-			        build_cost_ic = -0.9
+			        build_cost_ic = -0.09
 			        instant = yes
 		        }
 		    }
 		}
 
 		SOV_gosplan_siberia_spirit_2 = {
-			name = gosplan_ukraine_spirit
+			name = gosplan_siberia_spirit
 			picture = can_wartime_prices_and_trade_board
 
 			removal_cost = -1
@@ -4641,9 +4641,7 @@ ideas = {
    ##    ##     ## ##    ## ##    ##  ######
 
 
-	tank_manufacturer = {
-
-		designer = yes
+	tank_research = {
 
 		### NSB ###
 
@@ -6062,9 +6060,7 @@ ideas = {
 		}
 	}
 
-	naval_manufacturer = {
-
-		designer = yes
+	naval_research = {
 
 		### NSB ###
 
@@ -7837,11 +7833,7 @@ ideas = {
 		}
 	}
 
-	aircraft_manufacturer = {
-
-		designer = yes
-
-
+	aircraft_research = {
 
  #     #  ###   #####
  ##   ##   #   #     #
@@ -9021,9 +9013,7 @@ ideas = {
 	}
 
 
-	materiel_manufacturer = {
-
-		designer = yes
+	materiel_research = {
 
 		### NSB ###
 
@@ -9808,7 +9798,7 @@ ideas = {
 		}
 	}
 
-	industrial_concern = {
+	industrial_research = {
 
   #####                                                                         #######
  #     #  #####    ##    #       #  #    #   ####   #####     ##    #####          #     #####     ##    #    #  #####   ####   #####
@@ -10516,4 +10506,5 @@ ideas = {
 			}
 		}
 
+}
 }

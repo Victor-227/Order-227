@@ -586,7 +586,6 @@ SOV_dual_factories_dec_cat = {
         highlight_states = {
 			highlight_state_targets = {
 				state = 572
-                state = 583
 			}
 		}
 

@@ -1,5 +1,7 @@
 SpriteTypes = {
-	### NEW ENG FOCUSES
+
+	### NEW UK ICONS
+
 	SpriteType = {
 		name = "GFX_focus_ENG_steady_as_she_goes"
 		texturefile = "gfx/interface/goals/ENG/focus_ENG_steady_as_she_goes.dds"
@@ -310,42 +312,87 @@ SpriteTypes = {
 		texturefile = "gfx/interface/goals/ENG/focus_ENG_UK_secret_focus.dds"
 	}
 
-	### NEW GER FOCUSES
+	### NEW GERMANY ICONS
+
 	SpriteType = {
-		name = "GFX_goal_GER_continue_with_schacht"
-		texturefile = "gfx/interface/goals/GER/goal_GER_continue_with_schacht.dds"
+		name = "GFX_focus_GER_reichleiter_schacht"
+		texturefile = "gfx/interface/goals/GER/focus_GER_reichleiter_schacht.dds"
 	}
 
 	SpriteType = {
-		name = "GFX_goal_GER_continue_with_schacht"
-		texturefile = "gfx/interface/goals/GER/goal_GER_continue_with_schacht.dds"
+		name = "GFX_focus_GER_occupation_of_france"
+		texturefile = "gfx/interface/goals/GER/focus_GER_occupation_of_france.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_demands_to_sweden"
+		texturefile = "gfx/interface/goals/GER/focus_GER_demands_to_sweden.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_reign_in_deficit_spending"
+		texturefile = "gfx/interface/goals/GER/focus_GER_reign_in_deficit_spending.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_the_wirtschaftswunder_foundation"
+		texturefile = "gfx/interface/goals/GER/focus_GER_the_wirtschaftswunder_foundation.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_totaler_krieg"
+		texturefile = "gfx/interface/goals/GER/focus_GER_totaler_krieg.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_42_economic_crisis"
+		texturefile = "gfx/interface/goals/GER/focus_GER_42_economic_crisis.dds"
 	}
 
 	### NEW SOVIET ICONS
+
 	SpriteType = {
-		name = "GFX_goal_SOV_tractor_factories"
-		texturefile = "gfx/interface/goals/SOV/SOV_tractor_factories.dds"
+		name = "GFX_focus_SOV_tractor_factories"
+		texturefile = "gfx/interface/goals/SOV/focus_SOV_tractor_factories.dds"
 	}
 
 	SpriteType = {
-		name = "GFX_goal_SOV_test"
-		texturefile = "gfx/interface/goals/SOV/test_2.dds"
+		name = "GFX_focus_SOV_baltic_security_2"
+		texturefile = "gfx/interface/goals/SOV/focus_SOV_baltic_security_2.dds"
 	}
 
 	SpriteType = {
-		name = "GFX_goal_SOV_siberia"
-		texturefile = "gfx/interface/goals/SOV/SOV_siberia.dds"
+		name = "GFX_focus_SOV_ukraine"
+		texturefile = "gfx/interface/goals/SOV/focus_SOV_ukraine.dds"
 	}
 
 	SpriteType = {
-		name = "GFX_goal_SOV_urals_1"
-		texturefile = "gfx/interface/goals/SOV/SOV_urals.dds"
+		name = "GFX_focus_SOV_siberia"
+		texturefile = "gfx/interface/goals/SOV/focus_SOV_siberia.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_focus_SOV_urals"
+		texturefile = "gfx/interface/goals/SOV/focus_SOV_urals.dds"
+	}
 
+	SpriteType = {
+		name = "GFX_focus_SOV_moscow"
+		texturefile = "gfx/interface/goals/SOV/focus_SOV_moscow.dds"
+	}
 
+	SpriteType = {
+		name = "GFX_focus_SOV_east"
+		texturefile = "gfx/interface/goals/SOV/focus_SOV_east.dds"
+	}
 
+	SpriteType = {
+		name = "GFX_focus_SOV_west"
+		texturefile = "gfx/interface/goals/SOV/focus_SOV_west.dds"
+	}
 
-
-	
+	SpriteType = {
+		name = "GFX_focus_SOV_gosplan"
+		texturefile = "gfx/interface/goals/SOV/focus_SOV_gosplan.dds"
+	}
 }
