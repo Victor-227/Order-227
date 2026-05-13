@@ -15,4 +15,9 @@ SpriteTypes = {
 		name = "GFX_decision_SOV_gosplan"
 		texturefile = "gfx/interface/decisions/SOV/decision_SOV_five_years_plans.dds"	
 	}
+
+		SpriteType = {
+		name = "GFX_yngeco"
+		texturefile = "gfx/interface/decisions/CAN/yngmap.dds"	
+	}
 }

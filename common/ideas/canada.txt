@@ -1,6 +1,394 @@
 ideas = {
 
 	country = {
+
+								        CAN_compass_fiend = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = great_depression
+
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.10 
+				}
+			}
+				
+			
+		}
+
+						        CAN_DIL_MILITARY3 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = great_depression
+
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				production_cost_arms_factory_factor = -0.05
+				consumer_goods_expected_value = -0.05
+				production_efficiency_cap_factor = 0.1
+				
+			}
+		}
+
+
+
+				        CAN_DIL_MILITARY2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = great_depression
+
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				production_cost_arms_factory_factor = -0.05
+				consumer_goods_expected_value = -0.025
+				production_efficiency_cap_factor = 0.05
+				
+			}
+		}
+
+				        CAN_DIL_MILITARY = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = great_depression
+
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				production_cost_arms_factory_factor = -0.025
+				
+			}
+		}
+				        CAN_DIL_Industrial_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = great_depression
+
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				production_cost_industrial_complex_factor = -0.05
+				local_resources_factor = 0.15
+				
+			}
+		}
+				        CAN_DIL_Industrial_1 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = great_depression
+
+			modifier = {
+				production_speed_buildings_factor = 0.075
+				production_cost_industrial_complex_factor = -0.03
+				consumer_goods_expected_value = 0.01
+				local_resources_factor = 0.10
+				
+			}
+		}
+
+
+
+		        CAN_DIL_Industrial = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = great_depression
+
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				production_cost_industrial_complex_factor = -0.03
+				consumer_goods_expected_value = 0.01
+				
+			}
+		}
+
+		        CAN_DIL1 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = great_depression
+
+			modifier = {
+				production_speed_buildings_factor = 0.025
+				
+			}
+		}
+
+
+        CAN_light_Industry2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = great_depression
+
+			modifier = {
+				consumer_goods_expected_value = 0.10
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_speed_buildings_factor = 0.075
+			}
+		}
+
+		        CAN_light_Industry = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = great_depression
+
+			modifier = {
+				consumer_goods_expected_value = 0.15
+				industrial_capacity_factory = -0.10
+				industrial_capacity_dockyard = -0.10
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+
+
+
+
+
+
+
+
+
+		CAN_heavy_industry_reliefs3 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = great_depression
+
+			modifier = {
+				consumer_goods_expected_value = 0.125
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+				production_speed_buildings_factor = 0.10
+				production_cost_arms_factory_factor = 0.05
+				local_building_slots_factor = 0.05
+				local_resources_factor = 0.10
+			}
+		}
+
+
+		        		CAN_BIG_MONEY = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = great_depression
+
+			modifier = {
+				industrial_capacity_factory = 0.075
+				production_factory_efficiency_gain_factor = 0.10
+				production_factory_start_efficiency_factor = 0.05
+				local_building_slots_factor = 0.10
+			}
+		}
+
+
+
+		        		CAN_heavy_industry_prioritized = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = great_depression
+
+			modifier = {
+				add_stability = -0,15
+			}
+		}
+
+
+		        		CAN_heavy_industry_reliefs2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = great_depression
+
+			modifier = {
+				consumer_goods_expected_value = 0.150
+				industrial_capacity_factory = -0.10
+				industrial_capacity_dockyard = -0.10
+				production_speed_buildings_factor = 0.10
+				production_cost_industrial_complex_factor = -0.10
+				production_cost_arms_factory_factor = 0.15
+				local_building_slots_factor = 0.05
+				local_resources_factor = 0.10
+			}
+		}
+
+
+		        		CAN_heavy_industry_reliefs = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = great_depression
+
+			modifier = {
+				consumer_goods_expected_value = 0.20
+				industrial_capacity_factory = -0.175
+				industrial_capacity_dockyard = -0.175
+				production_speed_buildings_factor = 0.125
+				production_cost_industrial_complex_factor = -0.15
+				production_cost_arms_factory_factor = 0.30
+				local_building_slots_factor = 0.05
+				local_resources_factor = 0.05
+			}
+		}
+
+            
+        		CAN_new_deal_relief = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = great_depression
+
+			modifier = {
+				consumer_goods_expected_value = 0.25
+				industrial_capacity_factory = -0.175
+				industrial_capacity_dockyard = -0.175
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+
+
+
+
+
+
+
+
 		CAN_great_depression_1 = {
 
 			allowed = {
@@ -674,7 +1062,7 @@ ideas = {
 	}
 
 	# TECHNOLOGY
-	tank_manufacturer = {
+	tank_research = {
 
 		designer = yes
 
@@ -697,7 +1085,7 @@ ideas = {
 		}
 	}
 
-	industrial_concern = {
+	industrial_research = {
 
 
 
@@ -761,7 +1149,7 @@ ideas = {
 
 	}
 
-	materiel_manufacturer = {
+	materiel_research = {
 
 		designer = yes
 
@@ -806,7 +1194,7 @@ ideas = {
 
 	}
 
-	naval_manufacturer = {
+	naval_research = {
 
 		designer = yes
 
@@ -849,7 +1237,7 @@ ideas = {
 		}
 	}
 
-	aircraft_manufacturer = {
+	aircraft_research = {
 
 		designer = yes
 
@@ -941,6 +1329,103 @@ ideas = {
 			ai_will_do = {
 				factor = 1
 			}
+		}
+	}
+
+	industrial_output = {
+	
+
+
+		CAN_Defense_Industry_Limited = {
+
+			picture = GER_philipp_holzmann
+			
+			allowed = {
+				original_tag = CAN
+			}
+
+			visible = {
+
+			}
+			
+			cost = 150
+
+			ai_will_do = {
+				base = 1
+				modifier = {
+					factor = 5
+					is_historical_focus_on = yes
+				}
+			}
+
+			traits = { construction_company }
+
+			
+		}
+
+
+
+		CAN_McClary_manufacturing_company = {
+
+			picture = GER_philipp_holzmann
+			
+			allowed = {
+				original_tag = CAN
+				
+			}
+
+			visible = {
+          
+			}
+			
+			cost = 150
+
+			ai_will_do = {
+				base = 1
+				modifier = {
+					factor = 5
+					is_historical_focus_on = yes
+				}
+			}
+
+			traits = { construction_company }
+
+			#make this company give 5% more output and less resource needs for production 
+		}
+
+	}
+
+
+	industrial_theorist = {
+		CAN_Robert_bryce = {
+			name = CAN_Robert_bryce
+
+			allowed = {
+				original_tag = CAN
+			}
+
+			ai_will_do = {
+				factor = 100
+			}
+
+			visible = {
+				NOT = {
+					has_completed_focus = GER_42_crisis
+				}
+			}			
+
+			available = {
+				has_completed_focus = CAN_new_deal_1
+			}
+
+			research_bonus = {
+				cat_production = 0.06
+		    }
+
+			traits = { GER_wirtschaftsminister_speer }
+
+			
+			removal_cost = -1		
 		}
 	}
 }
