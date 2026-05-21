@@ -3207,7 +3207,7 @@ focus_tree = {
 		icon = GFX_focus_BUL_found_the_brannik
 		relative_position_id = BUL_promote_bulgarian_nationalism
 		x = 0
-		y = 2
+		y = 3
 		cost = 10
 
 		mutually_exclusive = { focus = BUL_depose_the_tsar }
@@ -3225,11 +3225,11 @@ focus_tree = {
 	focus = {
 		id = BUL_bulgarian_irredentism
 
-		prerequisite = { focus = BUL_promote_bulgarian_nationalism focus = BUL_the_path_towards_a_greater_bulgaria }
+		prerequisite = {  focus = BUL_the_path_towards_a_greater_bulgaria }
 
 		icon = GFX_goal_generic_territory_or_war
 		relative_position_id = BUL_promote_bulgarian_nationalism
-		x = 1
+		x = 3
 		y = 1
 		cost = 10
 
@@ -3291,8 +3291,8 @@ focus_tree = {
 
 		icon = GFX_goal_generic_small_arms #GFX_goal_generic_army_artillery2
 		relative_position_id = BUL_found_the_brannik
-		x = 0
-		y = 3
+		x = -3
+		y = 2
 		cost = 10
 
 		available = {
@@ -3381,297 +3381,13 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = BUL_plot_against_boris
+	
 
-		prerequisite = { focus = BUL_liberalization_of_trade_policies }
+	
 
-		dynamic = yes
 
-		icon = GFX_focus_BUL_plot_against_boris
-		relative_position_id = BUL_liberalization_of_trade_policies
-		x = 0
-		y = 1
-		cost = 10
-		mutually_exclusive = { focus = BUL_strengthen_the_royal_dictatorship }
 
-		bypass = {
-			has_country_flag = BUL_tsar_boris_is_dead_flag
-		}
 
-		available = {
-
-		}
-		
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		completion_reward = {
-			if = {
-				limit = {
-					NOT = { has_country_flag = BUL_tsar_boris_is_dead_flag }
-				}
-				unlock_decision_category_tooltip = BUL_plot_against_boris_dec_cat
-			}
-		}
-	}
-
-	focus = {
-		id = BUL_the_return_of_ferdinand_i
-
-		prerequisite = { focus = BUL_plot_against_boris }
-
-		icon = GFX_focus_BUL_the_return_of_ferdinand
-		relative_position_id = BUL_plot_against_boris
-		x = -1
-		y = 2
-		cost = 10
-		mutually_exclusive = { focus = BUL_form_a_regency_council }
-
-		available = {
-			has_country_flag = BUL_tsar_boris_is_dead_flag
-			BUL_has_abolished_monarchy = no
-			NOT = { is_in_faction_with = ENG }
-			NOT = { is_in_faction_with = FRA }
-			OR = {
-				is_faction_leader = yes
-				is_in_faction = no
-				AND = {
-					any_country = {
-						is_in_faction_with = ROOT
-						is_faction_leader = yes
-						NOT = { has_government = communism }
-						NOT = { has_government = democratic }
-					}
-				}
-			}
-		}
-		
-		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT}
-		completion_reward = {
-			hidden_effect = { #Store Former leader for loc purposes
-				if = {
-					limit = {
-						has_country_leader = {
-							character = BUL_georgi_ivanov_kyoseivanov
-							ruling_only = yes
-						}
-					}
-					set_variable = { BUL_former_leader_before_ferdinand = 1 } # 1 = Kyoseivanov
-				}
-				else_if = {
-					limit = {
-						has_country_leader = {
-							character = BUL_bogdan_filov
-							ruling_only = yes
-						}
-					}
-					set_variable = { BUL_former_leader_before_ferdinand = 2 } # 2 = Filov
-				}
-				else_if = {
-					limit = {
-						has_country_leader = {
-							character = BUL_nikola_mushanov
-							ruling_only = yes
-						}
-					}
-					set_variable = { BUL_former_leader_before_ferdinand = 3 } # 3 = Mushanov
-				}
-				else_if = {
-					limit = {
-						has_country_leader = {
-							character = BUL_hristo_lukov
-							ruling_only = yes
-						}
-					}
-					set_variable = { BUL_former_leader_before_ferdinand = 4 } # 4 = Lukov
-				}
-				else_if = {
-					limit = {
-						has_country_leader = {
-							character = BUL_aleksandar_tsankov
-							ruling_only = yes
-						}
-					}
-					set_variable = { BUL_former_leader_before_ferdinand = 5 } # 5 = Tsankov
-				}
-			}
-
-			set_country_flag = BUL_the_return_of_ferdinand_flag
-			set_party_name = {
-				ideology = neutrality
-				long_name = BUL_ferdinand_loyalists_party_long
-				name = BUL_ferdinand_loyalists_party
-			}
-			add_country_leader_role = {
-				character = BUL_ferdinand_i
-				country_leader = {
-					expire = "1965.1.1"
-					ideology = despotism
-					traits = {
-						dreams_of_a_new_byzantium
-					}
-				}
-				promote_leader = yes
-			}
-			if = {
-				limit = {
-					NOT = { has_government = neutrality }
-				}
-				set_politics = {
-					ruling_party = neutrality
-					elections_allowed = no
-				}
-			}
-			if = { 
-				limit = {
-					num_subjects > 0
-				}
-				every_other_country = {
-					limit = {
-						is_subject_of = ROOT
-					}
-					add_ideas = BUL_ferdinands_puppet
-				}
-			}
-			BUL = {
-				custom_effect_tooltip = BUL_the_return_of_ferdinand_opinion_tt
-			}
-			every_other_country = {
-				limit = {
-					OR = {
-						tag = GRE
-						tag = YUG
-						tag = ROM
-						tag = TUR
-					}
-					NOT = { is_subject_of = ROOT }
-					NOT = {	is_in_faction_with = ROOT }
-				}
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = BUL_ferdinand_is_back
-				}
-				hidden_effect = {
-					ROOT = {
-						add_opinion_modifier = {
-							target = PREV
-							modifier = BUL_old_enemies
-						}
-					}
-				}
-			}
-
-			hidden_effect = {
-				news_event = { id = bftb_news.4 hours = 8 random_hours = 4 }
-			}
-		}
-	}
-
-	focus = {
-		id = BUL_amend_old_grudges
-
-		prerequisite = { focus = BUL_the_return_of_ferdinand_i }
-
-		icon = GFX_goal_generic_occupy_states_ongoing_war
-		relative_position_id = BUL_the_return_of_ferdinand_i
-		x = 0
-		y = 1
-		cost = 10
-
-		available = {
-			has_country_leader = {
-				character = BUL_ferdinand_i 
-				ruling_only = yes
-			}
-			OR = {
-				country_exists = ENG
-				country_exists = FRA
-				country_exists = YUG
-				country_exists = GRE
-				country_exists = ROM
-				country_exists = TUR
-			}
-		}
-		
-		completion_reward = {
-			if = {
-				limit = {
-					country_exists = ENG
-				}
-				ROOT = {
-					create_wargoal = {
-						type = puppet_wargoal_focus
-						target = ENG
-					}
-				}
-			}
-			if = {
-				limit = {
-					country_exists = FRA
-				}
-				ROOT = {
-					create_wargoal = {
-						type = puppet_wargoal_focus
-						target = FRA
-					}
-				}
-			}
-			hidden_effect = {
-				every_country = {
-					limit = {
-						OR = {
-							original_tag = YUG
-							original_tag = GRE
-							original_tag = ROM
-							original_tag = TUR
-						}
-					}
-					ROOT = {
-						create_wargoal = {
-							type = annex_everything
-							target = PREV
-						}
-					}
-				}
-			}
-			custom_effect_tooltip = BUL_amend_old_grudges_balkan_targets_tt
-			every_country = {
-				limit = {
-					OR = {
-						original_tag = YUG
-						original_tag = GRE
-						original_tag = ROM
-						original_tag = TUR
-					}
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = BUL_form_a_regency_council
-
-		prerequisite = { focus = BUL_plot_against_boris }
-
-		icon = GFX_focus_BUL_form_a_regency_council
-		relative_position_id = BUL_plot_against_boris
-		x = 1
-		y = 2
-		cost = 10
-		mutually_exclusive = { focus = BUL_the_return_of_ferdinand_i }
-
-		available = {
-			has_country_flag = BUL_tsar_boris_is_dead_flag
-			BUL_has_abolished_monarchy = no
-		}
-		
-		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY}
-		completion_reward = {
-			add_stability = 0.1
-			add_political_power = 70
-			country_event = { id = bftb_bulgaria_tsar_boris.3 hours = 12 random_hours = 6 }
-			custom_effect_tooltip = BUL_form_a_regency_council_tt
-		}
-	}
 
 	focus = {
 		id = BUL_the_fate_of_the_balkans
@@ -3679,8 +3395,8 @@ focus_tree = {
 		prerequisite = { focus = BUL_form_a_regency_council focus = BUL_the_return_of_ferdinand_i focus = BUL_war_industry}
 
 		icon = GFX_focus_BUL_the_fate_of_the_balkans
-		relative_position_id = BUL_form_a_regency_council
-		x = 0
+		relative_position_id = BUL_war_industry
+		x = -2
 		y = 2
 		cost = 5
 		mutually_exclusive = { focus = BUL_join_the_tripartite_pact focus = BUL_join_the_allies focus = BUL_a_balkan_confederation }
@@ -4031,72 +3747,7 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = BUL_consolidate_dominance_of_the_seas
 
-		prerequisite = { focus = BUL_guardians_of_the_balkans focus = BUL_join_the_allies }
-
-		icon = GFX_goal_generic_navy_battleship
-		relative_position_id = BUL_guardians_of_the_balkans
-		x = -3
-		y = 1
-		cost = 10
-
-		available = {
-		}
-		
-		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY}
-		completion_reward = {
-			add_war_support = 0.05
-			navy_experience = 50
-			add_doctrine_cost_reduction = {
-				name = BUL_consolidate_dominance_of_the_seas
-			    cost_reduction = 0.5
-			    uses = 2
-				category = naval_doctrine
-			}
-			random_owned_state = {
-				limit = {
-					free_building_slots = {
-						building = dockyard
-						size > 2
-						include_locked = yes
-					}
-				}
-				set_state_flag = BUL_consolidate_dominance_of_the_seas_flag
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				limit = {
-					NOT = { has_state_flag = BUL_consolidate_dominance_of_the_seas_flag }
-					free_building_slots = {
-						building = dockyard
-						size > 2
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
-			hidden_effect = {
-				random_owned_state = {
-					limit = {
-						has_state_flag = BUL_consolidate_dominance_of_the_seas_flag
-					}
-					clr_state_flag = BUL_consolidate_dominance_of_the_seas_flag
-				}
-			}
-		}
-	}
 
 
 ########    ###     ######   ######  ####  ######  ########    ########  ########     ###    ##    ##  ######  ##     ## 
@@ -4202,7 +3853,7 @@ focus_tree = {
 		icon = GFX_focus_rom_abdicate
 		relative_position_id = BUL_the_path_towards_a_greater_bulgaria
 		x = 0
-		y = 2
+		y = 3
 		cost = 10
 
 		mutually_exclusive = { focus = BUL_found_the_brannik }
@@ -4656,7 +4307,7 @@ focus_tree = {
 
 		icon = GFX_focus_chi_mission_to_germany
 		relative_position_id = BUL_bulgarian_irredentism
-		x = 2
+		x = 1
 		y = 2
 		cost = 10
 
@@ -5045,44 +4696,7 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = BUL_peaceful_development
-
-		prerequisite = { focus = BUL_join_the_tripartite_pact }
-
-		icon = GFX_goal_generic_position_armies
-		relative_position_id = BUL_join_the_tripartite_pact
-		x = 0
-		y = 1
-		cost = 10
-		mutually_exclusive = { focus = BUL_total_war }
-
-		bypass = {
-			has_war = yes
-		}
-
-		available = {
-			if = {
-				limit = {
-					has_war = yes
-				}
-				#This is intended so that the focus does not look unavailable when it can actually be bypassed
-			}
-			has_war = no
-		}
-		
-		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_ANNEXATION}
-		completion_reward = {
-			add_stability = 0.1
-			add_war_support = -0.1
-			custom_effect_tooltip = BUL_peaceful_development_tt
-
-			add_ai_strategy = { #We really want to garrison all these territorial gains
-				type = garrison
-				value = 50
-			}
-		}
-	}
+	
 
 	focus = {
 		id = BUL_military_secrets_sharing
@@ -5241,7 +4855,7 @@ focus_tree = {
 
 		icon = GFX_goal_generic_attack_allies
 		relative_position_id = BUL_join_the_tripartite_pact
-		x = 2
+		x = 0
 		y = 1
 		cost = 10
 		mutually_exclusive = { focus = BUL_peaceful_development }
@@ -5451,7 +5065,7 @@ focus_tree = {
 			}
 		}
 
-		prerequisite = { focus = BUL_total_war focus = BUL_bulgarian_administration_of_the_balkans }
+		prerequisite = { focus = BUL_total_war  }
 
 		icon = GFX_focus_BUL_the_third_bulgarian_empire
 		relative_position_id = BUL_total_war
