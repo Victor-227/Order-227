@@ -1568,4 +1568,190 @@ SOV_gosplan_dec_cat = {
 			}
         }
     }
+
+    a = {
+        days_mission_timeout = 10
+        available = {
+            has_completed_focus = SOV_transpolar_flights
+        }
+    }
+}
+
+SOV_industrial_evacuation_dec_cat = {
+
+    SOV_industrial_evacuation = {
+
+        icon = generic_construction
+
+        allowed = {
+            original_tag = SOV
+        }
+
+        days_mission_timeout = 10
+
+        state_target = yes
+
+        on_map_mode = map_only
+
+        target_root_trigger = {
+			original_tag = SOV
+            has_war = yes
+		}
+
+        target_trigger = {
+			FROM = {
+				is_core_of = ROOT
+				is_controlled_by = ROOT  ###THIS MIGHT BE THE PROBLEM THE STATE NEEDS TO BE ONLY CONTROLLED NOT FULLY CONTROLLED FOR IT TO EVAC
+				is_on_continent = europe
+                OR = {
+                    any_neighbor_state = {
+                        NOT = {
+                            is_controlled_by = ROOT
+                        }
+                    }
+                    any_neighbor_state = {
+                        any_neighbor_state = {
+                            NOT = { 
+                                is_controlled_by = ROOT 
+                            }
+                        }
+                    }
+                }
+
+                OR = {
+                    industrial_complex > 0
+                    arms_factory > 0
+                }
+                NOT = {
+                    has_state_flag = SOV_evacuation_disrupted   ### THIS MIGHT BE DOING SOME WEIRD SHIT ASWELL
+                }
+			}
+		}
+
+        available = {
+            FROM = {
+                NOT = {
+                    is_controlled_by = ROOT
+                }
+            }
+        }
+
+        complete_effect = {
+            
+        }
+    
+        timeout_effect = {
+            if = {
+                limit = {
+                    FROM = {
+                        industrial_complex > 0
+                    }
+                }
+
+                FROM = {
+                    remove_building = {
+                        type = industrial_complex
+                        level = 1
+                    }
+                }
+
+                random_state = {
+					limit = {
+						OR = {
+							state = 40
+							state = 882
+							state = 590
+							state = 583
+							state = 403
+							state = 571
+							state = 570
+							state = 569
+							state = 578
+							state = 576
+						}
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+						}
+					}
+
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+            }
+
+            if = {
+                limit = {
+                    FROM = {
+                        arms_factory > 0
+                    }
+                }
+
+                FROM = {
+                    remove_building = {
+                        type = arms_factory
+                        level = 1
+                    }
+                }
+
+                random_state = {
+					limit = {
+						OR = {
+							state = 40
+							state = 882
+							state = 590
+							state = 583
+							state = 403
+							state = 571
+							state = 570
+							state = 569
+							state = 578
+							state = 576
+						}
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+						}
+					}
+
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+            }
+
+            #activate_mission = SOV_industrial_evacuation
+
+            #hidden_effect = {
+            #   if = {
+            #    limit = {
+            #           FROM = {
+            #                OR = {
+            #                   industrial_complex > 0
+            #                   arms_factory > 0
+            #               }
+            #                is_controlled_by = ROOT
+            #            }
+            #        }
+            #        activate_mission = SOV_industrial_evacuation ### THIS
+            #    }
+            #}
+        }
+    }
+
+
+    sov_test_1 = {
+
+        available = {
+            192 = {
+                has_state_flag = SOV_evacuation_disrupted
+                #has_state_flag = sov_larp
+            }
+        }
+    }
 }

@@ -69,3 +69,4 @@
  moscow:0 "Expand the Capital Region"
  urals:0 "The Uralmash Project"
  siberia:0 "The Kuzbass Complex"
+ SOV_industrial_evacuation:0 "Relocate Industry from [FROM.GetName]"

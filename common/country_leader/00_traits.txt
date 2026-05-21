@@ -7623,7 +7623,7 @@ leader_traits = {
 		compliance_gain = 0.05
 		conscription = 0.02
 		army_core_attack_factor = 0.02
-		army_core_defence_factor = -0.2
+		army_core_defence_factor = -0.02
 	}
 
 	stalin_authority_undermined = {

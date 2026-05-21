@@ -2768,12 +2768,12 @@ focus_tree = {
 				    }
 			    }
 			    SOV = {
-				transfer_state = 419
-				transfer_state = 1000
-				transfer_state = 420
-				transfer_state = 266
-				transfer_state = 1004
-				transfer_state = 416
+					transfer_state = 419
+					transfer_state = 1000
+					transfer_state = 420
+					transfer_state = 266
+					transfer_state = 1004
+					transfer_state = 416
 		     	}
 			}
 		}

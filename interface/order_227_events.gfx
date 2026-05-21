@@ -9,4 +9,4 @@ SpriteTypes = {
 		name = "GFX_report_event_speer_replaced"
 		texturefile = "gfx/event_pictures/report_event_speer_replaced.dds"
 	}
-}    
+}

@@ -1,6 +1,6 @@
 laptop diary day one
 have to find a replacement stat for all this manufacterer cost stuff or maybe just delete them
-air tree seems to be already decent just fix the thing above and thats that
+air tree seems to be already decent just fix the thing above and thats that ( i just put ### for the cost stuff i can make them do something later if it feels to bland)
 navy tree is who the fuck cares
 need to take a look at the evacuations and probably need to add new evacuation decisions that do it automatically but actually use trains and it is a bit detrimental you are fucking disasembling factories and moving them like come on
 army tree probably needs a revamp
@@ -49,7 +49,7 @@ every_owned_state = {
     limit = {
         any_neighbouring_state = {
             NOT = {
-                is_controlled_by = SOV or something like from or owner or something
+                is_controlled_by = SOV or something like from or owner or something (it is called ROOT dumbass)
             }
         }
     }
@@ -90,3 +90,27 @@ change process and age graded use are different
 slang vocab linguistic prerogative
 
 lang chnage spreding through a community, regular increase or decrease in the use of the linguistic form
+
+WHENEVER THE 3R  FOCUS STARTS THERE IS AN EVENT TO IN THE CIRCLE NEED TO FIX THIS OR ITS FUCKING RETARDED
+
+
+golden idol of capitalism useless
+do not blab and enemy is treacherous can be made better
+
+
+
+
+
+
+
+
+OKAY LOCK IN
+ROAD TREE FOR VICTOR RIGHT NOW
+MAKE THE NEW TANK MODULE TREE, AFTER IT FIX UP INDUSTRY AND ENGINEERING TREE, AFTER TAKE A LOOK AT AIR TREE
+CLEAN UP SOVIETS------ CLEAN UP ITALY ------- CLEAN UP UK ----------- START WORKING ON JAPAN --------
+REMVOVE SPYS REDUCING PLANNING!!!!!!!!!
+
+
+SOVIET TRAIN INDUSTRIAL CONCERN CAN AFFECT THE EVACS DEFINETLY IMPLEMENT THIS BUT NEEDS TO BE UPGRADED WITH THE NATIONAL SPECIALISTS
+
+NNEED TO UNDERSTAND on_state_control_changed HOW it works so I can make soviets not evac after losing a state

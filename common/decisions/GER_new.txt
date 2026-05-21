@@ -226,7 +226,47 @@ GER_oberkommando_der_wehrmacht_dec_cat = {
 						enemy = SOV
 					}   
                 }
-            } 
+
+                40 = {
+                    add_extra_state_shared_building_slots = 50
+                }
+
+                882 = {
+                    add_extra_state_shared_building_slots = 50
+                }
+
+                590 = {
+                    add_extra_state_shared_building_slots = 50
+                }
+
+                583 = {
+                    add_extra_state_shared_building_slots = 50
+                }
+
+                571 = {
+                    add_extra_state_shared_building_slots = 50
+                }
+
+                570 = {
+                    add_extra_state_shared_building_slots = 50
+                }
+
+                569 = {
+                    add_extra_state_shared_building_slots = 50
+                }
+
+                578 = {
+                    add_extra_state_shared_building_slots = 50
+                }
+
+                576 = {
+                    add_extra_state_shared_building_slots = 50
+                }
+                
+                SOV = {
+                    complete_national_focus = SOV_move_industry_to_the_urals
+                }
+            }
         }
     }
 }
