@@ -1,0 +1,182 @@
+CAN_young_economists = {
+CAN_eco1 = {
+    id = generic_industry 
+    available = {
+        has_stability < 1
+    }
+    visible = {
+        always = yes 
+    }
+    cost = 50 
+    fire_only_once = yes 
+    complete_effect = {
+        add_stability = 0.1
+    }
+}
+
+CAN_empleado = {
+    id = generic_industry 
+    available = {
+        
+    }
+    visible = {
+        always = yes 
+    }
+    cost = 1
+    fire_only_once = yes 
+    complete_effect = {
+    add_to_variable = { unemployment = 10 }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CAN.var_unemployment = {
+}
+
+}

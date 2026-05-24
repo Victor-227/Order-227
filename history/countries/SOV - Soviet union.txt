@@ -693,6 +693,8 @@ set_variable = { SOV_planned_economy_max_surrender_limit_offset = 0 } #Victory O
 set_variable = { SOV_planned_economy_industry_repair_factor = 0 } #Victory Over Devastation
 set_variable = { SOV_planned_economy_consumer_goods_factor = 0 } #Victory Over Devastation
 
+set_variable = { SOV_industrial_evacuation_timer = 11 }
+
 
 #Add synthetic refineries tech
 set_technology = {

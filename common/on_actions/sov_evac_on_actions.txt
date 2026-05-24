@@ -1,0 +1,72 @@
+on_actions = {
+    on_state_control_changed = {
+        effect = {
+            if = {
+                limit = {
+                    FROM.FROM = { is_core_of = SOV }
+                    ROOT = { NOT = { tag = SOV } }
+                }
+                FROM.FROM = {
+					set_state_flag = SOV_evacuation_disrupted
+				}
+            }
+        }
+    }
+
+    on_startup = {
+        effect = {
+            if = {
+                limit = {
+                    has_game_rule = {
+                        rule = no_asia
+                        option = YES
+                    }
+                }
+
+                BLT = {
+				    annex_country = {
+					    target = USA
+				    }
+			    }
+
+                BLT = {
+				    annex_country = {
+					    target = RAJ
+				    }
+			    }
+
+                BLT = {
+				    annex_country = {
+					    target = AST
+				    }
+			    }
+
+                BLT = {
+				    annex_country = {
+					    target = CHI
+				    }
+			    }
+
+                BLT = {
+				    annex_country = {
+					    target = JAP
+				    }
+			    }
+
+                BLT = {
+				    annex_country = {
+					    target = MAN
+				    }
+			    }
+
+                every_state = {
+                    limit = {
+                        is_owned_by = BLT
+                    }
+
+                    add_core_of = BLT
+                }
+            }
+        }
+    }
+}

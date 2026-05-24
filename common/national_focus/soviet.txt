@@ -1196,7 +1196,7 @@ focus_tree = {
 			air_experience = 50
 
 			add_tech_bonus = {
-				name = need_new_name_for_this_shit
+				name = SOV_transpolar_flights
 				bonus = 0.5
 				uses = 1
 				category = light_fighter
@@ -1221,8 +1221,8 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			set_variable = { SOV_soviet_airforce_aircraft_manufacturer_cost_factor = -0.25 }
-			custom_effect_tooltip = SOV_expand_the_aircraft_industry_ns_tt
+			#set_variable = { SOV_soviet_airforce_aircraft_manufacturer_cost_factor = -0.25 }
+			#custom_effect_tooltip = SOV_expand_the_aircraft_industry_ns_tt
 
 			random_owned_controlled_state = {
 				limit = {
@@ -1409,19 +1409,9 @@ focus_tree = {
 			}
 
 			hidden_effect = {
-				if = { #DEFAULT COMMIE
-					limit = {
-						has_government = communism
-					}
-					#Swap dynamic modifiers to show the bonus equipment custom tooltip
-					remove_dynamic_modifier = { modifier = SOV_soviet_airforce_dynamic_modifier }
-					add_dynamic_modifier = { modifier = SOV_soviet_airforce_aircraft_production_focus_dynamic_modifier }
-				}
-				else = { #ALT IDEOLOGY
-					#Swap dynamic modifiers to show the bonus equipment custom tooltip
-					remove_dynamic_modifier = { modifier = SOV_soviet_airforce_dynamic_modifier_alt }
-					add_dynamic_modifier = { modifier = SOV_soviet_airforce_aircraft_production_focus_dynamic_modifier_alt }
-				}
+				#Swap dynamic modifiers to show the bonus equipment custom tooltip
+				remove_dynamic_modifier = { modifier = SOV_soviet_airforce_dynamic_modifier }
+				add_dynamic_modifier = { modifier = SOV_soviet_airforce_aircraft_production_focus_dynamic_modifier }
 			}
 			
 			custom_effect_tooltip = SOV_increase_aircraft_production_ns_tt
@@ -1685,6 +1675,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_to_variable = { SOV_soviet_airforce_strategic_bomb_visibility = -0.1 }
+			add_to_variable = { SOV_soviet_airforce_air_range_factor = 0.1}
 			custom_effect_tooltip = SOV_long_range_aircraft_ns_tt
 
 			add_tech_bonus = {
@@ -3349,8 +3340,8 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-			set_variable = { SOV_defense_industry_tank_manufacturer_cost_factor = -0.25 }
-			custom_effect_tooltip = SOV_superior_war_machines_ns_tt
+			#set_variable = { SOV_defense_industry_tank_manufacturer_cost_factor = -0.25 }
+			#custom_effect_tooltip = SOV_superior_war_machines_ns_tt
 
 			add_tech_bonus = {
 				name = SOV_superior_war_machines
@@ -3378,8 +3369,8 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-			set_variable = { SOV_defense_industry_materiel_manufacturer_cost_factor = -0.25 }
-			custom_effect_tooltip = SOV_the_means_to_wage_war_ns_tt
+			#set_variable = { SOV_defense_industry_materiel_manufacturer_cost_factor = -0.25 }
+			#custom_effect_tooltip = SOV_the_means_to_wage_war_ns_tt
 
 			add_tech_bonus = {
 				name = SOV_the_means_to_wage_war
@@ -3678,7 +3669,6 @@ focus_tree = {
 			#Need for tooltip
 			set_variable = { SOV_the_red_army_mastery_loss_factor_inverted = SOV_the_red_army_mastery_loss_factor }
 			multiply_variable = { SOV_the_red_army_mastery_loss_factor_inverted = -1 }
-
 		}
 	}
 
@@ -5076,6 +5066,7 @@ focus_tree = {
 		mutually_exclusive = { focus = SOV_restore_cossack_units }
 
 		available = {
+
 		}
 		
 		search_filters = {}
@@ -5094,10 +5085,11 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = SOV_strengthen_the_mobilization_plan
-		cost = 10
+		cost = 5
 
 		available = {
-			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
+			#NOT = { has_country_flag = SOV_paranoia_system_active_flag }
+			has_war = yes
 		}
 		
 		search_filters = {}
@@ -5127,7 +5119,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = SOV_rehabilitated_military
-		cost = 10
+		cost = 5
 
 		select_effect = {
 			add_ideas = SOV_military_reorganization_ns
@@ -5152,8 +5144,9 @@ focus_tree = {
 				remove_ideas = SOV_military_reorganization_ns
 			}
 
-			add_to_variable = { SOV_the_red_army_unit_infantry_design_cost_factor = -0.1 }
-			add_to_variable = { SOV_the_red_army_unit_artillery_brigade_design_cost_factor = -0.1 }
+			#add_to_variable = { SOV_the_red_army_unit_infantry_design_cost_factor = -0.1 }
+			#add_to_variable = { SOV_the_red_army_unit_artillery_brigade_design_cost_factor = -0.1 }
+			add_to_variable = { SOV_the_red_army_experience_gain_factor = 0.14 }
 			custom_effect_tooltip = SOV_military_reorganization_ns_tt
 
 			army_experience = 50
@@ -5171,9 +5164,10 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			any_enemy_country = {
-				SOV_is_major_not_original_sov = yes
-			}
+			has_war = yes
+			#any_enemy_country = {
+			#	SOV_is_major_not_original_sov = yes
+			#}
 		}
 		
 		search_filters = {}
@@ -5198,7 +5192,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_rehabilitated_military
-		cost = 10
+		cost = 5
 
 		available = {
 
@@ -5274,7 +5268,7 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			has_war = yes
+			
 		}
 		
 		search_filters = {}
@@ -5294,12 +5288,23 @@ focus_tree = {
 						penal_battalion = { x = 0 y = 0 }
 						penal_battalion = { x = 0 y = 1 }
 						penal_battalion = { x = 0 y = 2 }
+						penal_battalion = { x = 0 y = 3 }
 						penal_battalion = { x = 1 y = 0 }
 						penal_battalion = { x = 1 y = 1 }
 						penal_battalion = { x = 1 y = 2 }
+						penal_battalion = { x = 1 y = 3 }
 						penal_battalion = { x = 2 y = 0 }
 						penal_battalion = { x = 2 y = 1 }
 						penal_battalion = { x = 2 y = 2 }
+						penal_battalion = { x = 2 y = 3 }
+						penal_battalion = { x = 3 y = 0 }
+						penal_battalion = { x = 3 y = 1 }
+						penal_battalion = { x = 3 y = 2 }
+						penal_battalion = { x = 3 y = 3 }
+						penal_battalion = { x = 4 y = 0 }
+						penal_battalion = { x = 4 y = 1 }
+						artillery_brigade = { x = 4 y = 2 }
+						artillery_brigade = { x = 4 y = 3 }
 					}
 					support = {
 						artillery = { x = 0 y = 0 }
@@ -5318,14 +5323,10 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_lessons_of_war
-		cost = 10
+		cost = 5
 
 		available = {
-			any_owned_state = {
-				controller = {
-					has_war_with = ROOT
-				}
-			}
+
 		}
 		
 		search_filters = {FOCUS_FILTER_PROPAGANDA}
@@ -5394,7 +5395,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = SOV_lessons_of_war
-		cost = 10
+		cost = 5
 
 		available = {
 
@@ -5480,7 +5481,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_military_reorganization
-		cost = 10
+		cost = 5
 
 		mutually_exclusive = { focus = SOV_swap_to_political_advisors }
 
@@ -5586,7 +5587,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = SOV_military_reorganization
-		cost = 10
+		cost = 5
 
 		mutually_exclusive = { focus = SOV_keep_commissars_organization focus = SOV_adjoined_battle_priests }
 
@@ -5646,7 +5647,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_keep_commissars_organization
-		cost = 10
+		cost = 5
 
 		allow_branch = {
 			NOT = {
@@ -5656,10 +5657,10 @@ focus_tree = {
 		}
 
 		available = {
-			any_enemy_country = {
-				SOV_is_major_not_original_sov = yes
-			}
-			surrender_progress < 0.05
+			#any_enemy_country = {
+			#	SOV_is_major_not_original_sov = yes
+			#}
+			surrender_progress < 0.07
 		}
 		
 		search_filters = {FOCUS_FILTER_ARMY_XP}

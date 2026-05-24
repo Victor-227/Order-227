@@ -472,7 +472,7 @@ SOV_invaders_must_die = { #STATE MODIFIER
 	resistance_target = 0.15
 	resistance_decay = -0.30
 	state_resources_factor = -0.25
-	disable_strategic_redeployment = 1
+	#disable_strategic_redeployment = 0
 }
 
 SOV_seraya_loshad_battery = { #STATE MODIFIER
@@ -1137,6 +1137,7 @@ SOV_the_red_army_dynamic_modifier = { #NATIONAL SPIRIT
 	dig_in_speed_factor = SOV_the_red_army_dig_in_speed_factor #0.05 -> Experts in Camouflage
 	operative_slot  = SOV_the_red_army_operative_slot  #1 -> Organization of the Partisans
 	max_command_power_mult = SOV_the_red_army_max_command_power_mult #0.1 -> Depoliticize the Military
+	experience_gain_factor = SOV_the_red_army_experience_gain_factor
 }
 
 SOV_the_red_army_dynamic_modifier_alt = { #NATIONAL SPIRIT

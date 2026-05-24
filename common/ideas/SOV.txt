@@ -104,7 +104,10 @@ ideas = {
 			}
 
 			modifier = {
-				drift_defence_factor = 0.5
+				#drift_defence_factor = 0.5
+				army_core_attack_factor = -0.1
+				army_core_defence_factor = -0.1
+				production_speed_buildings_factor = -0.1
 			}
 			rule = {
 				can_create_factions = yes
@@ -3095,7 +3098,7 @@ ideas = {
 				naval_doctrine_cost_factor = 0.2
 				air_doctrine_cost_factor = 0.2
 
-				drift_defence_factor = 0.1
+				army_core_attack_factor = -0.04
 				army_core_defence_factor = 0.03
 			}
 		}
@@ -3144,9 +3147,7 @@ ideas = {
 				naval_doctrine_cost_factor = 0.2
 				air_doctrine_cost_factor = 0.2
 
-				drift_defence_factor = 0.15
 				army_core_defence_factor = 0.03
-				army_core_attack_factor = 0.03
 				max_command_power = 50
 
 				army_org_factor = 0.05
@@ -3197,9 +3198,9 @@ ideas = {
 				naval_doctrine_cost_factor = 0.1
 				air_doctrine_cost_factor = 0.1
 
-				drift_defence_factor = 0.1
+				army_core_attack_factor = -0.04
 				army_core_defence_factor = 0.03
-				command_power_gain_mult = 0.1
+				command_power_gain_mult = 0.15
 
 				army_org_factor = -0.05
 				army_morale_factor = 0.1
@@ -9987,6 +9988,8 @@ ideas = {
 				mobilization_speed = 0.02
 			}
 		}
+	}	
+		industrial_output = {
 
 
   #####
@@ -10051,7 +10054,7 @@ ideas = {
 				production_speed_arms_factory_factor = 0.05
 				production_speed_dockyard_factor = 0.05
 				license_purchase_cost = -0.25
-				production_factory_max_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.03
 			}
 		}
 
@@ -10080,8 +10083,8 @@ ideas = {
 				production_speed_arms_factory_factor = 0.05
 				production_speed_dockyard_factor = 0.05
 				license_purchase_cost = -0.25
-				production_factory_max_efficiency_factor = 0.1
-				consumer_goods_factor = -0.15
+				production_factory_max_efficiency_factor = 0.03
+				consumer_goods_expected_value = -0.02
 			}
 		}
 
@@ -10110,8 +10113,8 @@ ideas = {
 				production_speed_arms_factory_factor = 0.1
 				production_speed_dockyard_factor = 0.05
 				license_purchase_cost = -0.25
-				production_factory_max_efficiency_factor = 0.1
-				industrial_capacity_factory = 0.05
+				production_factory_max_efficiency_factor = 0.03
+				industrial_capacity_factory = 0.04
 			}
 		}
 
@@ -10138,10 +10141,10 @@ ideas = {
 			modifier = {
 				production_speed_industrial_complex_factor = 0.05
 				production_speed_arms_factory_factor = 0.05
-				production_speed_dockyard_factor = 0.1
+				production_speed_dockyard_factor = 0.3
 				license_purchase_cost = -0.25
-				production_factory_max_efficiency_factor = 0.1
-				industrial_capacity_dockyard = 0.05
+				production_factory_max_efficiency_factor = 0.03
+				industrial_capacity_dockyard = 0.2
 			}
 		}
 
@@ -10170,7 +10173,7 @@ ideas = {
 				production_speed_arms_factory_factor = 0.05
 				production_speed_dockyard_factor = 0.05
 				license_purchase_cost = -0.25
-				line_change_production_efficiency_factor = 0.1
+				line_change_production_efficiency_factor = 0.15
 				production_lack_of_resource_penalty_factor = -0.1
 			}
 		}
@@ -10200,9 +10203,9 @@ ideas = {
 				production_speed_arms_factory_factor = 0.05
 				production_speed_dockyard_factor = 0.05
 				license_purchase_cost = -0.25
-				line_change_production_efficiency_factor = 0.1
+				line_change_production_efficiency_factor = 0.15
 				production_lack_of_resource_penalty_factor = -0.1
-				consumer_goods_factor = -0.15
+				consumer_goods_expected_value = -0.02
 			}
 		}
 
@@ -10231,9 +10234,9 @@ ideas = {
 				production_speed_arms_factory_factor = 0.1
 				production_speed_dockyard_factor = 0.05
 				license_purchase_cost = -0.25
-				line_change_production_efficiency_factor = 0.1
+				line_change_production_efficiency_factor = 0.15
 				production_lack_of_resource_penalty_factor = -0.1
-				industrial_capacity_factory = 0.05
+				industrial_capacity_factory = 0.04
 			}
 		}
 
@@ -10260,11 +10263,11 @@ ideas = {
 			modifier = {
 				production_speed_industrial_complex_factor = 0.05
 				production_speed_arms_factory_factor = 0.05
-				production_speed_dockyard_factor = 0.1
+				production_speed_dockyard_factor = 0.3
 				license_purchase_cost = -0.25
-				line_change_production_efficiency_factor = 0.1
+				line_change_production_efficiency_factor = 0.15
 				production_lack_of_resource_penalty_factor = -0.1
-				industrial_capacity_dockyard = 0.05
+				industrial_capacity_dockyard = 0.2
 			}
 		}
 
@@ -10293,7 +10296,7 @@ ideas = {
 				production_speed_arms_factory_factor = 0.05
 				production_speed_dockyard_factor = 0.05
 				license_purchase_cost = -0.25
-				production_factory_efficiency_gain_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.2
 			}
 		}
 
@@ -10322,8 +10325,8 @@ ideas = {
 				production_speed_arms_factory_factor = 0.05
 				production_speed_dockyard_factor = 0.05
 				license_purchase_cost = -0.25
-				production_factory_efficiency_gain_factor = 0.05
-				consumer_goods_factor = -0.15
+				production_factory_efficiency_gain_factor = 0.2
+				consumer_goods_expected_value = -0.02
 			}
 		}
 
@@ -10352,8 +10355,8 @@ ideas = {
 				production_speed_arms_factory_factor = 0.1
 				production_speed_dockyard_factor = 0.05
 				license_purchase_cost = -0.25
-				production_factory_efficiency_gain_factor = 0.05
-				industrial_capacity_factory = 0.05
+				production_factory_efficiency_gain_factor = 0.2
+				industrial_capacity_factory = 0.04
 			}
 		}
 
@@ -10380,10 +10383,10 @@ ideas = {
 			modifier = {
 				production_speed_industrial_complex_factor = 0.05
 				production_speed_arms_factory_factor = 0.05
-				production_speed_dockyard_factor = 0.1
+				production_speed_dockyard_factor = 0.3
 				license_purchase_cost = -0.25
-				production_factory_efficiency_gain_factor = 0.05
-				industrial_capacity_dockyard = 0.05
+				production_factory_efficiency_gain_factor = 0.2
+				industrial_capacity_dockyard = 0.2
 			}
 		}
 
@@ -10412,7 +10415,7 @@ ideas = {
 				production_speed_arms_factory_factor = 0.05
 				production_speed_dockyard_factor = 0.05
 				license_purchase_cost = -0.25
-				production_factory_start_efficiency_factor = 0.1
+				production_factory_start_efficiency_factor = 0.15
 			}
 		}
 
@@ -10441,8 +10444,8 @@ ideas = {
 				production_speed_arms_factory_factor = 0.05
 				production_speed_dockyard_factor = 0.05
 				license_purchase_cost = -0.25
-				production_factory_start_efficiency_factor = 0.1
-				consumer_goods_factor = -0.15
+				production_factory_start_efficiency_factor = 0.15
+				consumer_goods_expected_value = -0.02
 			}
 		}
 
@@ -10471,8 +10474,8 @@ ideas = {
 				production_speed_arms_factory_factor = 0.1
 				production_speed_dockyard_factor = 0.05
 				license_purchase_cost = -0.25
-				production_factory_start_efficiency_factor = 0.1
-				industrial_capacity_factory = 0.05
+				production_factory_start_efficiency_factor = 0.15
+				industrial_capacity_factory = 0.04
 			}
 		}
 
@@ -10499,12 +10502,39 @@ ideas = {
 			modifier = {
 				production_speed_industrial_complex_factor = 0.05
 				production_speed_arms_factory_factor = 0.05
-				production_speed_dockyard_factor = 0.1
+				production_speed_dockyard_factor = 0.3
 				license_purchase_cost = -0.25
-				production_factory_start_efficiency_factor = 0.1
-				industrial_capacity_dockyard = 0.05
+				production_factory_start_efficiency_factor = 0.15
+				industrial_capacity_dockyard = 0.2
 			}
 		}
 
-}
+		SOV_gosplan = {
+
+			name = SOV_gosproyektstroy_1
+
+			picture = generic_industrial_concern_2
+
+			allowed = {
+				original_TAG = SOV
+			}
+
+			visible = {
+
+			}
+
+			cost = 100
+
+			traits = { construction_company }
+
+			modifier = {
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_arms_factory_factor = 0.05
+				production_speed_dockyard_factor = 0.3
+				license_purchase_cost = -0.25
+				production_factory_start_efficiency_factor = 0.15
+				industrial_capacity_dockyard = 0.2
+			}
+		}
+	}
 }

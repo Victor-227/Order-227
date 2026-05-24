@@ -1,0 +1,508 @@
+#####################
+
+###  ##  #  # # #  ## 
+ #  #  # ## # # # #   
+ #  #### # ## ##   #  
+ #  #  # #  # # #   # 
+ #  #  # #  # # # ## 
+
+ #################### 
+CAN_vickers_armstrong_can_organization = {
+	name = CAN_vickers_armstrong_can_organization
+	include = generic_medium_tank_organization
+	icon = GFX_idea_vickers_armstrong_can
+	allowed = {
+		original_TAG = CAN
+		has_dlc = "Together for Victory"
+	}
+}
+
+
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+CAN_kingston_shipbuilding_organization = {
+	name = CAN_kingston_shipbuilding_organization
+	include = generic_task_force_ship_organization
+	icon = GFX_idea_kingston_shipbuilding
+	allowed = {
+		original_TAG = CAN
+	}
+}
+
+CAN_halifax_shipyard_organization = {
+	name = CAN_halifax_shipyard_organization
+	include = generic_escort_ship_organization
+	icon = GFX_idea_halifax_shipyard
+	allowed = {
+		original_TAG = CAN
+	}
+}
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+CAN_de_havilland_organization = {
+	name = CAN_de_havilland_organization
+	include = generic_medium_aircraft_organization
+	icon = GFX_idea_de_havilland
+	allowed = {
+		original_TAG = CAN
+	}
+}
+
+CAN_canadian_car_foundry_organization = {
+	name = CAN_canadian_car_foundry_organization
+	include = generic_light_aircraft_organization
+	icon = GFX_idea_canadian_car_foundry
+	allowed = {
+		original_TAG = CAN
+	}
+}
+
+CAN_fairchild_aircraft_ltd_organization = {
+	name = CAN_fairchild_aircraft_ltd_organization
+	include = generic_naval_aircraft_organization
+	icon = GFX_idea_generic_air_manufacturer_2
+	allowed = {
+		original_TAG = CAN
+		has_dlc = "Together for Victory"
+	}
+	available = {
+		owner = { has_completed_focus = CAN_fund_fairchilds_development }
+	}
+}
+
+CAN_handley_page_organization = {
+	name = CAN_handley_page_organization
+	include = generic_heavy_aircraft_organization
+	icon = GFX_idea_generic_air_manufacturer_3
+	allowed = {
+		original_TAG = CAN
+		has_dlc = "Together for Victory"
+	}
+	available = {
+		owner = { has_completed_focus = CAN_cookie_carriers }
+	}
+}
+
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+
+###################################
+
+CAN_inglis_company_organization = {
+	name = CAN_inglis_company_organization
+	include = generic_support_equipment_organization
+	icon = GFX_idea_inglis_company
+	allowed = {
+		original_TAG = CAN
+		has_dlc = "Together for Victory"
+	}
+}
+
+CAN_small_arms_limited_organization = {
+	name = CAN_small_arms_limited_organization
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_small_arms_limited
+	allowed = {
+		original_TAG = CAN
+		has_dlc = "Together for Victory"
+	}
+}
+
+CAN_Defense_Industry_Limited = {
+	name = CAN_DIL
+	include = generic_support_equipment_organization
+	icon = GFX_idea_inglis_company
+	allowed = {
+		original_TAG = CAN
+	}
+
+		available= {
+		has_completed_focus = CAN_new_deal_2
+	}
+
+	visible = {
+	}
+	equipment_type = {
+	mio_cat_eq_all_light_tank
+	 mio_cat_eq_all_medium_tank 
+	 mio_cat_eq_all_heavy_tank
+	 infantry_equipment
+	 artillery
+	 anti_tank
+	 anti_air
+	 support_equipment
+	rocket_artillery_equipment
+
+
+	}
+
+	research_categories = {
+	mio_cat_tech_light_armor_and_modules 
+	mio_cat_tech_medium_armor_and_modules 
+	mio_cat_tech_heavy_armor_and_modules 
+	mio_cat_all_artillery_equipment
+	mio_cat_all_cas_and_modules
+	mio_cat_all_heavy_aircraft_and_modules
+	mio_cat_all_light_aircraft_and_modules
+	mio_cat_all_medium_aircraft_and_modules
+    infantry_weapons
+	support_tech
+	mio_cat_tech_all_motorized_mechanized
+	}
+
+	research_bonus = -0.20
+
+remove_trait = { generic_mio_trait_scrap_melting  
+generic_mio_trait_material_recycling 
+generic_mio_trait_private_scientists_program
+ generic_mio_trait_anti_tank_rifle
+  generic_mio_trait_single_shot_man_portable_anti_tank_system
+  generic_mio_trait_private_tenders
+  generic_mio_trait_pontoons
+  generic_mio_trait_small_sidearms
+  generic_mio_trait_light_mortar
+  generic_mio_trait_high_quality_material_blend
+  generic_mio_trait_mass_production
+  generic_mio_trait_research_program
+  generic_mio_trait_efficient_scale_up
+  }
+
+
+  	initial_trait = {
+	name = generic_mio_initial_trait_medium_tank_designer
+
+	organization_modifier = {
+		military_industrial_organization_size_up_requirement = 0.15
+		military_industrial_organization_funds_gain = -0.05
+	}
+	production_bonus = {
+		production_capacity_factor = -0.15
+		production_efficiency_gain_factor = -0.30
+		production_efficiency_cap_factor = -0.05
+	
+		}
+	}
+
+
+  	trait = {
+		token = Industrial_father
+		name = Industrial_father
+		icon = GFX_generic_mio_trait_icon_supply_consumption
+		
+		position = { x=4 y=0 }
+		
+
+		production_bonus = {
+
+		}
+
+	
+
+		on_complete = {
+			FROM = {
+			add_ideas = {
+             CAN_DIL1
+			}
+			}
+		}
+	}
+
+		trait = {
+		token = DIL_INDUSTRIAL
+		name = generic_mio_trait_efficient_scale_up
+		icon = GFX_generic_mio_trait_icon_efficiency_cap
+		
+		position = { x= -1 y= 1 }
+		relative_position_id = Industrial_father
+		
+		all_parents = { Industrial_father }
+
+		mutually_exclusive = { DIL_MILITARY }
+
+		organization_modifier = {
+			military_industrial_organization_size_up_requirement = 0.05
+			military_industrial_organization_research_bonus = 0.05
+		}
+
+		production_bonus = {
+			
+		}
+		on_complete = {
+			FROM = {
+		swap_ideas = { remove_idea = CAN_DIL1 add_idea = CAN_DIL_Industrial
+			}
+			}
+		}
+	}
+
+			trait = {
+		token = DIL_MILITARY
+		name = Ready_for_anything1
+		icon =  GFX_generic_mio_trait_icon_efficiency_gain
+		
+		position = { x= 1 y= 1 }
+		relative_position_id = Industrial_father
+		
+		all_parents = { Industrial_father }
+
+		mutually_exclusive = { DIL_INDUSTRIAL }
+		
+
+		organization_modifier = {
+		
+		}
+
+		production_bonus = {
+		production_capacity_factor = 0.10
+		production_efficiency_gain_factor = 0.10
+		production_efficiency_cap_factor = 0.05
+		}
+		on_complete = {
+			FROM = {
+		swap_ideas = { remove_idea = CAN_DIL1 add_idea = CAN_DIL_MILITARY
+			}
+			}
+		}
+	}
+
+				trait = {
+		token = DIL_MILITARY2
+		name = Ready_for_anything2
+		icon = GFX_generic_mio_trait_icon_conversion_speed
+		
+		position = { x= 2 y= 2 }
+		relative_position_id = Industrial_father
+		
+		all_parents = { DIL_MILITARY }
+
+		organization_modifier = {
+		
+		}
+
+		production_bonus = {
+		production_capacity_factor = 0.10
+		production_efficiency_gain_factor = 0.20
+		production_efficiency_cap_factor = 0.05
+		}
+		on_complete = {
+			FROM = {
+		swap_ideas = { remove_idea = CAN_DIL_MILITARY add_idea = CAN_DIL_MILITARY2
+			}
+			}
+		}
+	}
+
+					trait = {
+		token = DIL_MILITARY3
+		name = Ready_for_anything3
+		icon = GFX_generic_mio_department_icon_tank_medium_tank_production
+		
+		position = { x= 2 y= 3 }
+		relative_position_id = Industrial_father
+		
+		all_parents = { DIL_MILITARY2 }
+
+		organization_modifier = {
+		
+		}
+
+		production_bonus = {
+		production_capacity_factor = 0.05
+		production_efficiency_gain_factor = 0.15
+		production_efficiency_cap_factor = 0.075
+		}
+		on_complete = {
+			FROM = {
+		swap_ideas = { remove_idea = CAN_DIL_MILITARY2 add_idea = CAN_DIL_MILITARY3
+			}
+			}
+		}
+	}
+
+					trait = {
+		token = DIL_INDUSTRIAL2
+		name = Foundations1
+		icon = GFX_military_industrial_organization_train_equipment
+		
+		position = { x= -2 y= 2 }
+		relative_position_id = Industrial_father
+		
+		all_parents = { DIL_INDUSTRIAL }
+
+		organization_modifier = {
+		military_industrial_organization_size_up_requirement = 0.05
+		military_industrial_organization_funds_gain = -0.05
+		}
+
+		production_bonus = {
+		production_capacity_factor = 0.05
+		production_efficiency_gain_factor = 0.05
+		production_efficiency_cap_factor = 0.025
+		}
+		on_complete = {
+			FROM = {
+		swap_ideas = { remove_idea = CAN_DIL_Industrial add_idea = CAN_DIL_Industrial_1
+			}
+        682 = {
+						add_resource = {
+					type = steel
+					amount = 24
+				}
+
+				add_resource = {
+					type = chromium
+					amount = 12
+
+	add_resource = {
+			type = tungsten
+			amount = 8
+				}
+				}
+		}
+
+			}
+		}
+	}
+
+						trait = {
+		token = DIL_INDUSTRIAL3
+		name = Foundations2
+		icon = GFX_generic_mio_department_icon_tank_general_conversion
+		
+		position = { x= -2 y= 3 }
+		relative_position_id = Industrial_father
+		
+		all_parents = { DIL_INDUSTRIAL2 }
+
+		organization_modifier = {
+		
+		}
+
+		production_bonus = {
+		production_capacity_factor = 0.05
+		production_efficiency_gain_factor = 0.05
+		production_efficiency_cap_factor = 0.025
+		}
+		on_complete = {
+			FROM = {
+		swap_ideas = { remove_idea = CAN_DIL_Industrial_1 add_idea = CAN_DIL_Industrial_2
+			}
+			}
+		}
+	}
+
+						trait = {
+		token = DIL_MUTUAL
+		name = mutual
+		icon = GFX_generic_mio_department_icon_facilities
+		
+		position = { x= 0 y= 2 }
+		relative_position_id = Industrial_father
+		
+		all_parents = { DIL_INDUSTRIAL DIL_MILITARY }
+         
+		organization_modifier = {
+		
+		}
+
+		production_bonus = {
+
+		}
+		on_complete = {
+			FROM = {
+				       			862 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+				}
+				}
+			}
+		}
+	}
+
+							trait = {
+		token = DIL_MUTUAL1
+		name = mutual1
+		icon = GFX_generic_mio_department_icon_support_production
+		
+		position = { x= -1 y= 3 }
+		relative_position_id = Industrial_father
+		
+		all_parents = { DIL_MUTUAL }
+        mutually_exclusive = DIL_MUTUAL2
+		organization_modifier = {
+		
+		}
+
+		production_bonus = {
+
+		}
+		on_complete = {
+			FROM = {
+         				       			473 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+				}
+				}
+			}
+		}
+	}
+
+							trait = {
+		token = DIL_MUTUAL2
+		name = MUTUAL2
+		icon = GFX_generic_mio_department_icon_support_production
+		
+		position = { x= 1 y= 3 }
+		relative_position_id = Industrial_father
+		
+		all_parents = { DIL_MUTUAL }
+       mutually_exclusive = {DIL_MUTUAL1}
+		organization_modifier = {
+		
+		}
+
+		on_complete = {
+			FROM = {
+				       			473 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+				type = arms_factory
+				level = 3
+				instant_build = yes
+				}
+				}
+			}
+		}
+	}
+
+
+}
