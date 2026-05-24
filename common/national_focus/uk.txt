@@ -152,7 +152,7 @@ focus_tree = {
 		icon = GFX_focus_ENG_limited_rearmament_focus
 		x = 38
 		y = 0
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}

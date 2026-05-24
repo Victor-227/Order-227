@@ -569,6 +569,7 @@ SOV_second_five_year_plan_dynamic_modifier = { #NATIONAL SPIRIT
 	consumer_goods_factor = SOV_fyp_consumer_goods_factor #0.05
 	consumer_goods_expected_value = SOV_fyp_consumer_goods_expected_value
 	production_speed_industrial_complex_factor = SOV_fyp_production_speed_industrial_complex_factor #0.05
+	production_speed_buildings_factor = SOV_fyp_production_speed_buildings_factor
 }
 
 SOV_third_five_year_plan_dynamic_modifier = { #NATIONAL SPIRIT - Basic

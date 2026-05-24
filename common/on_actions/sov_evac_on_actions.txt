@@ -1,72 +1,97 @@
 on_actions = {
-    on_state_control_changed = {
-        effect = {
-            if = {
-                limit = {
-                    FROM.FROM = { is_core_of = SOV }
-                    ROOT = { NOT = { tag = SOV } }
-                }
-                FROM.FROM = {
-					set_state_flag = SOV_evacuation_disrupted
+	#on_state_control_changed = {       ######### dont need this anymore but kept here because can be useful later
+	#    effect = {
+	#        if = {
+	#            limit = {
+	#                FROM.FROM = { is_core_of = SOV }
+	#                ROOT = { NOT = { tag = SOV } }
+	#            }
+	#            FROM.FROM = {
+	#				set_state_flag = SOV_evacuation_disrupted
+	#			}
+	#        }
+	#    }
+	#}
+
+	on_startup = {
+		effect = {
+			SOV = {
+				country_event = {
+					id = soviet.gosplan.1
 				}
-            }
-        }
-    }
+				activate_mission = SOV_five_year_plan_master_mission
+			}
+		}
+	}
 
-    on_startup = {
-        effect = {
-            if = {
-                limit = {
-                    has_game_rule = {
-                        rule = no_asia
-                        option = YES
-                    }
-                }
+	on_monthly_SOV = {
+		effect = {
+			limit = {
+				SOV = {
+					has_dynamic_modifier = SOV_second_five_year_plan_dynamic_modifier
+				}
+			}
 
-                BLT = {
-				    annex_country = {
-					    target = USA
-				    }
-			    }
+			add_to_variable = { SOV_second_five_year_plan_progress = 1 }
+			add_to_variable = { SOV_accumulated_factories = 1 }
+			subtract_from_variable = { SOV_temp_cg_duration = 10 }
+		}
+	}
 
-                BLT = {
-				    annex_country = {
-					    target = RAJ
-				    }
-			    }
+	on_startup = {
+		effect = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = no_asia
+						option = YES
+					}
+				}
 
-                BLT = {
-				    annex_country = {
-					    target = AST
-				    }
-			    }
+				BLT = {
+					annex_country = {
+						target = USA
+					}
+				}
 
-                BLT = {
-				    annex_country = {
-					    target = CHI
-				    }
-			    }
+				BLT = {
+					annex_country = {
+						target = RAJ
+					}
+				}
 
-                BLT = {
-				    annex_country = {
-					    target = JAP
-				    }
-			    }
+				BLT = {
+					annex_country = {
+						target = AST
+					}
+				}
 
-                BLT = {
-				    annex_country = {
-					    target = MAN
-				    }
-			    }
+				BLT = {
+					annex_country = {
+						target = CHI
+					}
+				}
 
-                every_state = {
-                    limit = {
-                        is_owned_by = BLT
-                    }
+				BLT = {
+					annex_country = {
+						target = JAP
+					}
+				}
 
-                    add_core_of = BLT
-                }
-            }
-        }
-    }
+				BLT = {
+					annex_country = {
+						target = MAN
+					}
+				}
+
+				every_state = {
+					limit = {
+						is_owned_by = BLT
+					}
+
+					add_core_of = BLT
+				}
+			}
+		}
+	}
 }

@@ -5,3 +5,4 @@ tags={
 picture="thumbnail.png"
 name="Order 227"
 supported_version="1.17.4.1"
+replace_path="history/general"

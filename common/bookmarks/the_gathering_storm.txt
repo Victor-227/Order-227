@@ -17,9 +17,9 @@ bookmarks = {
 				FRA_protected_by_the_maginot_line
 			}
 			focuses = {
-			FRA_pre_empt_the_fascist_attack
-			FRA_join_the_ententes
-			FRA_revise_the_constitution
+				FRA_pre_empt_the_fascist_attack
+				FRA_join_the_ententes
+				FRA_revise_the_constitution
 			}
 		}
 		"USA"={
@@ -175,12 +175,11 @@ bookmarks = {
 			ideology = neutrality
 			ideas = {
 				ROM_king_carol_ii_hedonist
-				neutrality_idea
 			}
 			focuses = {
-				ROM_balkans_dominance
 				ROM_institute_royal_dictatorship
-				ROM_preserve_greater_romania
+				ROM_all_parties_must_end
+				ROM_conducator
 			}
 		}
 		"SPR"={
@@ -244,5 +243,5 @@ bookmarks = {
 				MAN_tsr_claim_the_mandate_of_heaven
 			}
 		}
-    }		
+	}		
 }

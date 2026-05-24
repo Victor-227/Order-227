@@ -90,7 +90,8 @@ SOV_industry_relocation = {
 	}
 
 	visible = {
-		has_completed_focus = SOV_move_industry_to_the_urals
+		#has_completed_focus = SOV_move_industry_to_the_urals
+		always = no
 	}
 }
 

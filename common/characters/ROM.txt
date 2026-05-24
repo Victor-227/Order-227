@@ -66,6 +66,12 @@ characters={
 				man_of_steel 
 			}
 
+			visible = {
+				NOT = {
+					has_completed_focus = ROM_all_parties_must_end
+				}
+			}
+
 			available = {
 				has_completed_focus = ROM_empower_the_minister
 			}
@@ -125,11 +131,7 @@ characters={
 				large="GFX_Portrait_romania_petre_dumitrescu"
 				small="GFX_idea_ROM_petre_dumitrescu"
 			}
-			civilian={
-				large="GFX_Portrait_romania_petre_dumitrescu"
-			}
 		}
-		
 		advisor={
 			slot = army_chief
 			idea_token = ROM_petre_dumitrescu
@@ -139,12 +141,11 @@ characters={
 			traits = {
 				army_chief_organizational_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
 		}
-
 		field_marshal={
 			traits={ logistics_wizard offensive_doctrine }
 			skill=4
@@ -186,7 +187,7 @@ characters={
 			}
 		}
 		advisor={
-			cost = 100
+			cost = 150
 			slot = theorist
 			idea_token = ROM_gheorghe_potopeanu
 			ledger = army
@@ -207,7 +208,7 @@ characters={
 			}
 		}
 		advisor={
-			cost = 100
+			cost = 150
 			slot = theorist
 			idea_token = ROM_emanoil_ionescu
 			ledger = air
@@ -241,7 +242,7 @@ characters={
 			traits = {
 				army_chief_defensive_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -270,7 +271,6 @@ characters={
 				large="GFX_Portrait_romania_ion_antonescu"
 			}	
 		}
-
 		advisor={
 			slot = army_chief
 			idea_token = ROM_ion_antonescu
@@ -280,7 +280,7 @@ characters={
 			traits = {
 				army_chief_offensive_3
 			}
-			cost = 100
+			cost = 200
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -288,12 +288,11 @@ characters={
 				has_completed_focus = ROM_appoint_german_friendly_government
 			}
 		}
-
 		
 		field_marshal={
 			traits={ brilliant_strategist organizer }
 			skill=5
-			attack_skill=6
+			attack_skill=5
 			defense_skill=4
 			planning_skill=4
 			logistics_skill=5
@@ -320,7 +319,7 @@ characters={
 			traits = {
 				navy_chief_commerce_raiding_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -344,7 +343,7 @@ characters={
 			traits = {
 				navy_chief_maneuver_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -380,7 +379,7 @@ characters={
 			traits = {
 				air_chief_ground_support_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -403,7 +402,7 @@ characters={
 			traits = {
 				air_chief_reform_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -431,7 +430,7 @@ characters={
 			traits = {
 				army_infantry_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -464,7 +463,7 @@ characters={
 			traits = {
 				army_commando_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -488,7 +487,7 @@ characters={
 			traits = {
 				air_strategic_bombing_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -512,7 +511,7 @@ characters={
 			traits = {
 				air_airborne_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -607,7 +606,25 @@ characters={
 		}
 	}
 
-
+	ROM_nicolae_malaxa={
+		name=ROM_nicolae_malaxa
+		portraits={
+			army={
+				small="GFX_idea_ROM_nicolae_malaxa"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ROM_nicolae_malaxa
+			allowed = {
+				original_tag = ROM
+				has_dlc = "Death or Dishonor"
+			}
+			traits = {
+				captain_of_industry 
+			}
+		}
+	}
 
 	ROM_petru_groza={
 		name=ROM_petru_groza
@@ -648,14 +665,6 @@ characters={
 					}
 					has_completed_focus = ROM_appoint_german_friendly_government
 				}
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
-				}
 			}
 			allowed = {
 				original_tag = ROM
@@ -668,6 +677,7 @@ characters={
 			}
 		}
 	}
+
 	ROM_horia_sima={
 		name=ROM_horia_sima
 		portraits={
@@ -675,7 +685,7 @@ characters={
 				small="GFX_idea_ROM_horia_sima"
 			}
 		}
-			advisor={
+		advisor={
 			slot = political_advisor
 			idea_token = ROM_horia_sima
 			available = {
@@ -686,5 +696,29 @@ characters={
 			}
 		}
 	}
-}
 
+	ROM_mihail_moruzov={
+		name="Mihail Moruzov"
+		portraits={
+			army={
+				small="GFX_idea_ROM_barbu_paraianu"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ROM_mihail_moruzov
+			available = {
+				has_completed_focus = ROM_securitate
+			}
+			allowed = {
+				original_tag = ROM
+			}
+			traits = {
+				director_of_the_siguranta 
+			}
+			ai_will_do = {
+				factor = 0.000
+			}
+		}
+	}
+}

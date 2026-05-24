@@ -647,11 +647,12 @@ focus_tree = {
 			if = {
 				limit = {
 					date > 1938.01.01
+				}
 			}
 		}
 		continue_if_invalid = yes
 		x = 0
-		y = 2
+		y = 3
 		relative_position_id = USA_arsenal_of_democracy
 		cost = 10
 		ai_will_do = {
@@ -668,7 +669,7 @@ focus_tree = {
 			add_ideas = partial_economic_mobilisation	
 		}
 	}
-}
+
 	focus = {
 		id = USA_pre_war_build_up
 		icon = GFX_focus_generic_the_giant_wakes

@@ -2085,17 +2085,13 @@ country_event = {
 			modifier = ROM_foreign_motor_company
 		}
 
-		if = {
-			limit = {
-				has_dlc = "Arms Against Tyranny"
-			}
-			custom_effect_tooltip = available_mio_tt
-			show_mio_tooltip = ENG_vauxhall_automotive_organization
-		}
-		else = {
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = ROM_vauxhall
-		}
+		custom_effect_tooltip = available_mio_tt
+		show_mio_tooltip = ENG_vauxhall_automotive_organization
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		custom_effect_tooltip = available_designer
+		show_ideas_tooltip = ROM_vauxhall
 	}
 	option = {# Germany
 		name = DOD_romania.120.b
@@ -2112,17 +2108,13 @@ country_event = {
 			modifier = ROM_foreign_motor_company
 		}
 
-		if = {
-			limit = {
-				has_dlc = "Arms Against Tyranny"
-			}
-			custom_effect_tooltip = available_mio_tt
-			show_mio_tooltip = GER_opel_organization
-		}
-		else = {
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = ROM_opel
-		}
+		custom_effect_tooltip = available_mio_tt
+		show_mio_tooltip = GER_opel_organization
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		custom_effect_tooltip = available_designer
+		show_ideas_tooltip = ROM_opel
 	}
 	option = {# USA
 		name = DOD_romania.120.c
@@ -2135,17 +2127,13 @@ country_event = {
 			modifier = ROM_foreign_motor_company
 		}
 
-		if = {
-			limit = {
-				has_dlc = "Arms Against Tyranny"
-			}
-			custom_effect_tooltip = available_mio_tt
-			show_mio_tooltip = USA_ford_motor_company_organization
-		}
-		else = {
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = ROM_ford
-		}
+		custom_effect_tooltip = available_mio_tt
+		show_mio_tooltip = USA_ford_motor_company_organization
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		custom_effect_tooltip = available_designer
+		show_ideas_tooltip = ROM_ford
 	}
 }
 

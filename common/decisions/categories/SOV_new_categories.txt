@@ -1,52 +1,71 @@
-SOV_dual_factories_dec_cat = {
+SOV_five_year_plan_dec_cat = {
 
-    icon = GFX_SOV_tractor_factories
+	icon = GFX_SOV_tractor_factories
 
-    picture = GFX_decision_SOV_dual_factories
+	picture = GFX_decision_SOV_gosplan
 
-    allowed = {
-        original_tag = SOV
-    }
+	allowed = {
+		original_tag = SOV
+	}
 
-    priority = 20
+	priority = 99
 
-    visible = {
-        always = yes
-    }
+	visible = {
+		always = yes
+	}
+
+	visible_when_empty = yes
 }
 
 SOV_gosplan_dec_cat = {
 
-    icon = GFX_SOV_tractor_factories
+	icon = GFX_SOV_tractor_factories
 
-    picture = GFX_decision_SOV_gosplan
+	picture = GFX_decision_SOV_gosplan
 
-    allowed = {
-        original_tag = SOV
-    }
+	allowed = {
+		original_tag = SOV
+	}
 
-    priority = 21
+	priority = 98
 
-    visible = {
-        always = yes
-    }
+	visible = {
+		always = yes
+	}
+}
+
+SOV_dual_factories_dec_cat = {
+
+	icon = GFX_SOV_tractor_factories
+
+	picture = GFX_decision_SOV_dual_factories
+
+	allowed = {
+		original_tag = SOV
+	}
+
+	priority = 97
+
+	visible = {
+		always = yes
+	}
 }
 
 SOV_industrial_evacuation_dec_cat = {
 
-    icon = GFX_SOV_tractor_factories
+	icon = GFX_SOV_tractor_factories
 
-    picture = GFX_decision_SOV_gosplan
+	picture = GFX_decision_SOV_gosplan
 
-    allowed = {
-        original_tag = SOV
-    }
+	allowed = {
+		original_tag = SOV
+	}
 
-    priority = 1
+	priority = 1
 
-    visible = {
-        always = yes
-    }
+	visible = {
+		always = yes
+	}
 
-    visible_when_empty = yes
+	visible_when_empty = yes
 }

@@ -1,77 +1,92 @@
 SpriteTypes = {
-    ### GERMANY
 
-    SpriteType = {
-        name = GFX_idea_GER_albert_speer
-        texturefile = "gfx/interface/ideas/GER/idea_GER_albert_speer.dds"
-    }
+	### GERMANY
 
-    SpriteType = {
-        name = GFX_idea_GER_albert_speer_42
-        texturefile = "gfx/interface/ideas/GER/idea_GER_albert_speer.dds"
-    }
+	SpriteType = {
+		name = GFX_idea_GER_albert_speer
+		texturefile = "gfx/interface/ideas/GER/idea_GER_albert_speer.dds"
+	}
 
-    SpriteType = {
-        name = GFX_idea_GER_hermann_göring
-        texturefile = "gfx/interface/ideas/GER/idea_GER_hermann_göring.dds"
-    }
+	SpriteType = {
+		name = GFX_idea_GER_albert_speer_42
+		texturefile = "gfx/interface/ideas/GER/idea_GER_albert_speer.dds"
+	}
 
-    SpriteType = {
-        name = GFX_idea_GER_hermann_göring_42
-        texturefile = "gfx/interface/ideas/GER/idea_GER_hermann_göring.dds"
-    }
+	SpriteType = {
+		name = GFX_idea_GER_hermann_göring
+		texturefile = "gfx/interface/ideas/GER/idea_GER_hermann_göring.dds"
+	}
 
-    SpriteType = {
-        name = GFX_idea_GER_fritz_todt
-        texturefile = "gfx/interface/ideas/GER/idea_GER_fritz_todt.dds"
-    }
+	SpriteType = {
+		name = GFX_idea_GER_hermann_göring_42
+		texturefile = "gfx/interface/ideas/GER/idea_GER_hermann_göring.dds"
+	}
 
-    SpriteType = {
-        name = GFX_idea_GER_fritz_todt_42
-        texturefile = "gfx/interface/ideas/GER/idea_GER_fritz_todt.dds"
-    }
+	SpriteType = {
+		name = GFX_idea_GER_fritz_todt
+		texturefile = "gfx/interface/ideas/GER/idea_GER_fritz_todt.dds"
+	}
 
-    SpriteType = {
-        name = GFX_idea_GER_hjalmar_schacht
-        texturefile = "gfx/interface/ideas/GER/idea_GER_hjalmar_schacht.dds"
-    }
+	SpriteType = {
+		name = GFX_idea_GER_fritz_todt_42
+		texturefile = "gfx/interface/ideas/GER/idea_GER_fritz_todt.dds"
+	}
 
-    SpriteType = {
-        name = GFX_idea_GER_hjalmar_schacht_42
-        texturefile = "gfx/interface/ideas/GER/idea_GER_hjalmar_schacht.dds"
-    }
+	SpriteType = {
+		name = GFX_idea_GER_hjalmar_schacht
+		texturefile = "gfx/interface/ideas/GER/idea_GER_hjalmar_schacht.dds"
+	}
 
-    SpriteType = {
-        name = GFX_portrait_GER_hjalmar_schacht
-        texturefile = "gfx/interface/ideas/GER/portrait_GER_hjalmar_schacht.dds"
-    }
+	SpriteType = {
+		name = GFX_idea_GER_hjalmar_schacht_42
+		texturefile = "gfx/interface/ideas/GER/idea_GER_hjalmar_schacht.dds"
+	}
 
-    SpriteType = {
-        name = GFX_hjalmar_schacht_available_small
-        texturefile = "gfx/interface/ideas/GER/hjalmar_schacht_available_small.dds"
-    }
+	SpriteType = {
+		name = GFX_portrait_GER_hjalmar_schacht
+		texturefile = "gfx/interface/ideas/GER/portrait_GER_hjalmar_schacht.dds"
+	}
 
-    SpriteType = {
-        name = GFX_idea_GER_rwim
-        texturefile = "gfx/interface/ideas/GER/idea_GER_rwim.dds"
-    }
+	SpriteType = {
+		name = GFX_hjalmar_schacht_available_small
+		texturefile = "gfx/interface/ideas/GER/hjalmar_schacht_available_small.dds"
+	}
 
-    SpriteType = {
-        name = GFX_idea_GER_totaler_krieg
-        texturefile = "gfx/interface/ideas/GER/idea_GER_totaler_krieg.dds"
-    }
+	SpriteType = {
+		name = GFX_idea_GER_rwim
+		texturefile = "gfx/interface/ideas/GER/idea_GER_rwim.dds"
+	}
 
-    ### SOVIET
+	SpriteType = {
+		name = GFX_idea_GER_totaler_krieg
+		texturefile = "gfx/interface/ideas/GER/idea_GER_totaler_krieg.dds"
+	}
 
-    SpriteType = {
-        name = GFX_idea_SOV_war_economy
-        texturefile = "gfx/interface/ideas/SOV/SOV_forced_urbanization.dds"
-    }
+	### SOVIET
 
-    ### ROMANIA
-    SpriteType = {
-        name = GFX_idea_ROM_horia_sima
-        texturefile = "gfx/interface/ideas/ROM/ROM_horia_sima.dds"
-    }
-    
+	SpriteType = {
+		name = GFX_idea_SOV_war_economy
+		texturefile = "gfx/interface/ideas/SOV/SOV_forced_urbanization.dds"
+	}
+
+	### ROMANIA
+	SpriteType = {
+		name = GFX_idea_ROM_horia_sima
+		texturefile = "gfx/interface/ideas/ROM/ROM_horia_sima.dds"
+	}
+
+	SpriteType = {
+		name = GFX_idea_ROM_ion_gugurtu
+		texturefile = "gfx/interface/ideas/ROM/ROM_ion_gugurtu.dds"
+	}
+
+	SpriteType = {
+		name = GFX_idea_ROM_greater_romania
+		texturefile = "gfx/interface/ideas/ROM/idea_ROM_greater_romania.dds"
+	}
+
+	SpriteType = {
+		name = GFX_idea_ROM_national_christian_party_in_power
+		texturefile = "gfx/interface/ideas/ROM/idea_ROM_national_christian_party_in_power.dds"
+	}
 }

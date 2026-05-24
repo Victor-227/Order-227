@@ -1,711 +1,2356 @@
-SOV_dual_factories_dec_cat = {
+SOV_five_year_plan_dec_cat = {
 
-    SOV_leningrad = {
+	SOV_five_year_plan_decision = {
 
-        icon = GFX_SOV_tractor_factories
+		icon = GFX_SOV_tractor_factories
 
-        highlight_states = {
-			highlight_state_targets = {
-				state = 195
+		allowed = {
+			original_tag = SOV
+		}
+
+		visible = {
+			has_dynamic_modifier = SOV_second_five_year_plan_dynamic_modifier
+			NOT = {
+				has_completed_focus = SOV_finish_the_five_year_plan
 			}
 		}
 
-        allowed = {
-            original_tag = SOV
-        }
+		available = {
+			OR = {
+				has_country_flag = SOV_gosplan_ukraine_rng
+				has_country_flag = SOV_gosplan_moscow_rng
+				has_country_flag = SOV_gosplan_urals_rng
+				has_country_flag = SOV_gosplan_siberia_rng
+			}
+			check_variable = { SOV_active_five_year_plan_missions < 3 }
+		}
 
-        available = {
-            has_completed_focus = SOV_tractor_plants
-        }
 
-        fire_only_once = yes
+		days_re_enable = 100
 
-        cost = 50
+		complete_effect = {
 
-        days_remove = 20
+			add_to_variable = { 
+				SOV_active_five_year_plan_missions = 1
+			}
 
-        modifier = {
-            civilian_factory_use = 5
-        }
+			add_to_variable = { 
+				SOV_fyp_consumer_goods_expected_value = 0.01
+				tooltip = consumer_goods_expected_value_tt
+			}
 
-        complete_effect = {
+			if = {
+				limit = {
+					has_country_flag = SOV_gosplan_ukraine_rng
+				}
 
-        }
+				random_list = {
 
-        remove_effect = {
-            195 = {
-                add_dynamic_modifier = {
-                    modifier = SOV_dual_factories_dynamic_modifiers
-                    scope = SOV
-                }
-                set_state_flag = SOV_dual_factories
+					70 = {
 
-                set_variable = { pre_dual_use_civs = building_level@industrial_complex }
-            }
-        }
-    }
+						modifier = {
+							factor = 0
+							NOT = {
+								any_owned_state = {
+									is_gosplan_ukraine = yes
+									free_building_slots = { 
+										building = industrial_complex 
+										size > 0 
+									}
+									NOT = { 
+										has_state_flag = SOV_five_year_plan_active_state
+									}
+								}
+							}
+						}
 
-    SOV_kharkov = {
+						random_owned_controlled_state = {
+							limit = {
+								is_gosplan_ukraine = yes
+								free_building_slots = {
+									building = industrial_complex
+									size > 0
+								}
+								infrastructure > 5
+								NOT = {
+									has_state_flag = SOV_five_year_plan_active_state
+								}
+							}
 
-        icon = GFX_SOV_tractor_factories
+							set_state_flag = SOV_five_year_plan_active_state
+							set_state_flag = SOV_flag_for_five_year_plan_mission
+							set_variable = { pre_mission_civs = building_level@industrial_complex }
+						}
+					}
 
-        highlight_states = {
-			highlight_state_targets = {
-				state = 221
+					30 = {
+						random_owned_controlled_state = {
+							limit = {
+								free_building_slots = {
+									building = industrial_complex
+									size > 0
+								}
+								infrastructure > 5
+								NOT = {
+									has_state_flag = SOV_five_year_plan_active_state
+								}
+								NOT = {
+									is_gosplan_ukraine = yes
+								}
+							}
+
+							set_state_flag = SOV_five_year_plan_active_state
+							set_state_flag = SOV_flag_for_five_year_plan_mission
+							set_variable = { pre_mission_civs = building_level@industrial_complex }
+						}
+					}
+				}
+			}
+
+			else_if = {
+
+				limit = {
+					has_country_flag = SOV_gosplan_moscow_rng
+				}
+
+				random_list = {
+
+					70 = {
+
+						modifier = {
+							factor = 0
+							NOT = {
+								any_owned_state = {
+									is_gosplan_moscow = yes
+									free_building_slots = { 
+										building = industrial_complex 
+										size > 0 
+									}
+									NOT = { 
+										has_state_flag = SOV_five_year_plan_active_state
+									}
+								}
+							}
+						}
+
+						random_owned_controlled_state = {
+							limit = {
+								is_gosplan_moscow = yes
+								free_building_slots = {
+									building = industrial_complex
+									size > 0
+								}
+								infrastructure > 5
+								NOT = {
+									has_state_flag = SOV_five_year_plan_active_state
+								}
+							}
+
+							set_state_flag = SOV_five_year_plan_active_state
+							set_state_flag = SOV_flag_for_five_year_plan_mission
+							set_variable = { pre_mission_civs = building_level@industrial_complex }
+						}
+					}
+
+					30 = {
+						random_owned_controlled_state = {
+							limit = {
+								free_building_slots = {
+									building = industrial_complex
+									size > 0
+								}
+								infrastructure > 5
+								NOT = {
+									has_state_flag = SOV_five_year_plan_active_state
+								}
+								NOT = {
+									is_gosplan_moscow = yes
+								}
+							}
+
+							set_state_flag = SOV_five_year_plan_active_state
+							set_state_flag = SOV_flag_for_five_year_plan_mission
+							set_variable = { pre_mission_civs = building_level@industrial_complex }
+						}
+					}
+				}
+			}
+
+			else_if = {
+
+				limit = {
+					has_country_flag = SOV_gosplan_urals_rng
+				}
+
+				random_list = {
+
+					70 = {
+
+						modifier = {
+							factor = 0
+							NOT = {
+								any_owned_state = {
+									is_gosplan_urals = yes
+									free_building_slots = { 
+										building = industrial_complex 
+										size > 0 
+									}
+									NOT = { 
+										has_state_flag = SOV_five_year_plan_active_state
+									}
+								}
+							}
+						}
+
+						random_owned_controlled_state = {
+							limit = {
+								is_gosplan_urals = yes
+								free_building_slots = {
+									building = industrial_complex
+									size > 0
+								}
+								infrastructure > 5
+								NOT = {
+									has_state_flag = SOV_five_year_plan_active_state
+								}
+							}
+
+							set_state_flag = SOV_five_year_plan_active_state
+							set_state_flag = SOV_flag_for_five_year_plan_mission
+							set_variable = { pre_mission_civs = building_level@industrial_complex }
+						}
+					}
+
+					30 = {
+						random_owned_controlled_state = {
+							limit = {
+								free_building_slots = {
+									building = industrial_complex
+									size > 0
+								}
+								infrastructure > 5
+								NOT = {
+									has_state_flag = SOV_five_year_plan_active_state
+								}
+								NOT = {
+									is_gosplan_urals = yes
+								}
+							}
+
+							set_state_flag = SOV_five_year_plan_active_state
+							set_state_flag = SOV_flag_for_five_year_plan_mission
+							set_variable = { pre_mission_civs = building_level@industrial_complex }
+						}
+					}
+				}
+			}
+
+			else_if = {
+
+				limit = {
+					has_country_flag = SOV_gosplan_siberia_rng
+				}
+
+				random_list = {
+
+					70 = {
+
+						modifier = {
+							factor = 0
+							NOT = {
+								any_owned_state = {
+									is_gosplan_siberia = yes
+									free_building_slots = { 
+										building = industrial_complex 
+										size > 0 
+									}
+									NOT = { 
+										has_state_flag = SOV_five_year_plan_active_state
+									}
+								}
+							}
+						}
+
+						random_owned_controlled_state = {
+							limit = {
+								is_gosplan_siberia = yes
+								free_building_slots = {
+									building = industrial_complex
+									size > 0
+								}
+								infrastructure > 5
+								NOT = {
+									has_state_flag = SOV_five_year_plan_active_state
+								}
+							}
+
+							set_state_flag = SOV_five_year_plan_active_state
+							set_state_flag = SOV_flag_for_five_year_plan_mission
+							set_variable = { pre_mission_civs = building_level@industrial_complex }
+						}
+					}
+
+					30 = {
+						random_owned_controlled_state = {
+							limit = {
+								free_building_slots = {
+									building = industrial_complex
+									size > 0
+								}
+								infrastructure > 5
+								NOT = {
+									has_state_flag = SOV_five_year_plan_active_state
+								}
+								NOT = {
+									is_gosplan_siberia = yes
+								}
+							}
+
+							set_state_flag = SOV_five_year_plan_active_state
+							set_state_flag = SOV_flag_for_five_year_plan_mission
+							set_variable = { pre_mission_civs = building_level@industrial_complex }
+						}
+					}
+				}
+			}
+
+			activate_mission = SOV_five_year_plan_mission
+		}
+	}
+
+	SOV_five_year_plan_decision_1 = {
+
+		icon = GFX_SOV_tractor_factories
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		visible = {
+			has_dynamic_modifier = SOV_second_five_year_plan_dynamic_modifier
+			NOT = {
+				has_completed_focus = SOV_finish_the_five_year_plan
 			}
 		}
 
-        allowed = {
-            original_tag = SOV
-        }
+		available = {
+			OR = {
+				has_country_flag = SOV_gosplan_ukraine_rng
+				has_country_flag = SOV_gosplan_moscow_rng
+				has_country_flag = SOV_gosplan_urals_rng
+				has_country_flag = SOV_gosplan_siberia_rng
+			}
+			check_variable = { SOV_active_five_year_plan_missions < 3 }
+		}
 
-        available = {
-            has_completed_focus = SOV_tractor_plants
-        }
 
-        fire_only_once = yes
+		days_re_enable = 100
 
-        cost = 50
+		complete_effect = {
 
-        days_remove = 20
+			add_to_variable = { 
+				SOV_active_five_year_plan_missions = 1
+			}
 
-        modifier = {
-            civilian_factory_use = 5
-        }
+			add_to_variable = { 
+				SOV_fyp_consumer_goods_expected_value = 0.01
+				tooltip = consumer_goods_expected_value_tt
+			}
 
-        remove_effect = {
-            221 = {
-                add_dynamic_modifier = {
-                    modifier = SOV_dual_factories_dynamic_modifiers
-                    scope = SOV
-                }
-                set_state_flag = SOV_dual_factories
+			if = {
+				limit = {
+					has_country_flag = SOV_gosplan_ukraine_rng
+				}
 
-                set_variable = { pre_dual_use_civs = building_level@industrial_complex }
-            }
-        }
-    }
+				random_list = {
 
-    SOV_gorky = {
+					70 = {
 
-        icon = GFX_SOV_tractor_factories
+						modifier = {
+							factor = 0
+							NOT = {
+								any_owned_state = {
+									is_gosplan_ukraine = yes
+									free_building_slots = { 
+										building = industrial_complex 
+										size > 0 
+									}
+									NOT = { 
+										has_state_flag = SOV_five_year_plan_active_state
+									}
+								}
+							}
+						}
 
-        highlight_states = {
-			highlight_state_targets = {
-				state = 252
+						random_owned_controlled_state = {
+							limit = {
+								is_gosplan_ukraine = yes
+								free_building_slots = {
+									building = industrial_complex
+									size > 0
+								}
+								NOT = {
+									has_state_flag = SOV_five_year_plan_active_state
+								}
+							}
+
+							set_state_flag = SOV_five_year_plan_active_state
+							set_state_flag = SOV_flag_for_five_year_plan_mission_1
+							set_variable = { pre_mission_civs = building_level@industrial_complex }
+						}
+					}
+
+					30 = {
+						random_owned_controlled_state = {
+							limit = {
+								free_building_slots = {
+									building = industrial_complex
+									size > 0
+								}
+								NOT = {
+									has_state_flag = SOV_five_year_plan_active_state
+								}
+								NOT = {
+									is_gosplan_ukraine = yes
+								}
+							}
+
+							set_state_flag = SOV_five_year_plan_active_state
+							set_state_flag = SOV_flag_for_five_year_plan_mission_1
+							set_variable = { pre_mission_civs = building_level@industrial_complex }
+						}
+					}
+				}
+			}
+
+			else_if = {
+
+				limit = {
+					has_country_flag = SOV_gosplan_moscow_rng
+				}
+
+				random_list = {
+
+					70 = {
+
+						modifier = {
+							factor = 0
+							NOT = {
+								any_owned_state = {
+									is_gosplan_moscow = yes
+									free_building_slots = { 
+										building = industrial_complex 
+										size > 0 
+									}
+									NOT = { 
+										has_state_flag = SOV_five_year_plan_active_state
+									}
+								}
+							}
+						}
+
+						random_owned_controlled_state = {
+							limit = {
+								is_gosplan_moscow = yes
+								free_building_slots = {
+									building = industrial_complex
+									size > 0
+								}
+								NOT = {
+									has_state_flag = SOV_five_year_plan_active_state
+								}
+							}
+
+							set_state_flag = SOV_five_year_plan_active_state
+							set_state_flag = SOV_flag_for_five_year_plan_mission_1
+							set_variable = { pre_mission_civs = building_level@industrial_complex }
+						}
+					}
+
+					30 = {
+						random_owned_controlled_state = {
+							limit = {
+								free_building_slots = {
+									building = industrial_complex
+									size > 0
+								}
+								NOT = {
+									has_state_flag = SOV_five_year_plan_active_state
+								}
+								NOT = {
+									is_gosplan_moscow = yes
+								}
+							}
+
+							set_state_flag = SOV_five_year_plan_active_state
+							set_state_flag = SOV_flag_for_five_year_plan_mission_1
+							set_variable = { pre_mission_civs = building_level@industrial_complex }
+						}
+					}
+				}
+			}
+
+			else_if = {
+
+				limit = {
+					has_country_flag = SOV_gosplan_urals_rng
+				}
+
+				random_list = {
+
+					70 = {
+
+						modifier = {
+							factor = 0
+							NOT = {
+								any_owned_state = {
+									is_gosplan_urals = yes
+									free_building_slots = { 
+										building = industrial_complex 
+										size > 0 
+									}
+									NOT = { 
+										has_state_flag = SOV_five_year_plan_active_state
+									}
+								}
+							}
+						}
+
+						random_owned_controlled_state = {
+							limit = {
+								is_gosplan_urals = yes
+								free_building_slots = {
+									building = industrial_complex
+									size > 0
+								}
+								NOT = {
+									has_state_flag = SOV_five_year_plan_active_state
+								}
+							}
+
+							set_state_flag = SOV_five_year_plan_active_state
+							set_state_flag = SOV_flag_for_five_year_plan_mission_1
+							set_variable = { pre_mission_civs = building_level@industrial_complex }
+						}
+					}
+
+					30 = {
+						random_owned_controlled_state = {
+							limit = {
+								free_building_slots = {
+									building = industrial_complex
+									size > 0
+								}
+								NOT = {
+									has_state_flag = SOV_five_year_plan_active_state
+								}
+								NOT = {
+									is_gosplan_urals = yes
+								}
+							}
+
+							set_state_flag = SOV_five_year_plan_active_state
+							set_state_flag = SOV_flag_for_five_year_plan_mission_1
+							set_variable = { pre_mission_civs = building_level@industrial_complex }
+						}
+					}
+				}
+			}
+
+			else_if = {
+
+				limit = {
+					has_country_flag = SOV_gosplan_siberia_rng
+				}
+
+				random_list = {
+
+					70 = {
+
+						modifier = {
+							factor = 0
+							NOT = {
+								any_owned_state = {
+									is_gosplan_siberia = yes
+									free_building_slots = { 
+										building = industrial_complex 
+										size > 0 
+									}
+									NOT = { 
+										has_state_flag = SOV_five_year_plan_active_state
+									}
+								}
+							}
+						}
+
+						random_owned_controlled_state = {
+							limit = {
+								is_gosplan_siberia = yes
+								free_building_slots = {
+									building = industrial_complex
+									size > 0
+								}
+								NOT = {
+									has_state_flag = SOV_five_year_plan_active_state
+								}
+							}
+
+							set_state_flag = SOV_five_year_plan_active_state
+							set_state_flag = SOV_flag_for_five_year_plan_mission_1
+							set_variable = { pre_mission_civs = building_level@industrial_complex }
+						}
+					}
+
+					30 = {
+						random_owned_controlled_state = {
+							limit = {
+								free_building_slots = {
+									building = industrial_complex
+									size > 0
+								}
+								NOT = {
+									has_state_flag = SOV_five_year_plan_active_state
+								}
+								NOT = {
+									is_gosplan_siberia = yes
+								}
+							}
+
+							set_state_flag = SOV_five_year_plan_active_state
+							set_state_flag = SOV_flag_for_five_year_plan_mission_1
+							set_variable = { pre_mission_civs = building_level@industrial_complex }
+						}
+					}
+				}
+			}
+
+			activate_mission = SOV_five_year_plan_mission_1
+		}
+	}
+
+	SOV_five_year_plan_decision_2 = {
+
+		icon = GFX_SOV_tractor_factories
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		visible = {
+			has_dynamic_modifier = SOV_second_five_year_plan_dynamic_modifier
+			NOT = {
+				has_completed_focus = SOV_finish_the_five_year_plan
 			}
 		}
 
-        allowed = {
-            original_tag = SOV
-        }
+		available = {
+			OR = {
+				has_country_flag = SOV_gosplan_ukraine_rng
+				has_country_flag = SOV_gosplan_moscow_rng
+				has_country_flag = SOV_gosplan_urals_rng
+				has_country_flag = SOV_gosplan_siberia_rng
+			}
+			check_variable = { SOV_active_five_year_plan_missions < 3 }
+		}
 
-        available = {
-            has_completed_focus = SOV_tractor_plants
-        }
 
-        fire_only_once = yes
+		days_re_enable = 100
 
-        cost = 50
+		complete_effect = {
 
-        days_remove = 20
+			add_to_variable = { 
+				SOV_active_five_year_plan_missions = 1
+			}
 
-        modifier = {
-            civilian_factory_use = 5
-        }
+			add_to_variable = { 
+				SOV_fyp_consumer_goods_expected_value = 0.01
+				tooltip = consumer_goods_expected_value_tt
+			}
 
-        remove_effect = {
-            252 = {
-                add_dynamic_modifier = {
-                    modifier = SOV_dual_factories_dynamic_modifiers
-                    scope = SOV
-                }
-                set_state_flag = SOV_dual_factories
+			if = {
+				limit = {
+					has_country_flag = SOV_gosplan_ukraine_rng
+				}
 
-                set_variable = { pre_dual_use_civs = building_level@industrial_complex }
-            }
-        }
-    }
+				random_list = {
 
-    SOV_stalingrad = {
+					70 = {
 
-        icon = GFX_SOV_tractor_factories
+						modifier = {
+							factor = 0
+							NOT = {
+								any_owned_state = {
+									is_gosplan_ukraine = yes
+									free_building_slots = { 
+										building = industrial_complex 
+										size > 0 
+									}
+									NOT = { 
+										has_state_flag = SOV_five_year_plan_active_state
+									}
+								}
+							}
+						}
 
-        highlight_states = {
-			highlight_state_targets = {
-				state = 217
+						random_owned_controlled_state = {
+							limit = {
+								is_gosplan_ukraine = yes
+								free_building_slots = {
+									building = industrial_complex
+									size > 0
+								}
+								NOT = {
+									has_state_flag = SOV_five_year_plan_active_state
+								}
+							}
+
+							set_state_flag = SOV_five_year_plan_active_state
+							set_state_flag = SOV_flag_for_five_year_plan_mission_2
+							set_variable = { pre_mission_civs = building_level@industrial_complex }
+						}
+					}
+
+					30 = {
+						random_owned_controlled_state = {
+							limit = {
+								free_building_slots = {
+									building = industrial_complex
+									size > 0
+								}
+								NOT = {
+									has_state_flag = SOV_five_year_plan_active_state
+								}
+								NOT = {
+									is_gosplan_ukraine = yes
+								}
+							}
+
+							set_state_flag = SOV_five_year_plan_active_state
+							set_state_flag = SOV_flag_for_five_year_plan_mission_2
+							set_variable = { pre_mission_civs = building_level@industrial_complex }
+						}
+					}
+				}
+			}
+
+			else_if = {
+
+				limit = {
+					has_country_flag = SOV_gosplan_moscow_rng
+				}
+
+				random_list = {
+
+					70 = {
+
+						modifier = {
+							factor = 0
+							NOT = {
+								any_owned_state = {
+									is_gosplan_moscow = yes
+									free_building_slots = { 
+										building = industrial_complex 
+										size > 0 
+									}
+									NOT = { 
+										has_state_flag = SOV_five_year_plan_active_state
+									}
+								}
+							}
+						}
+
+						random_owned_controlled_state = {
+							limit = {
+								is_gosplan_moscow = yes
+								free_building_slots = {
+									building = industrial_complex
+									size > 0
+								}
+								NOT = {
+									has_state_flag = SOV_five_year_plan_active_state
+								}
+							}
+
+							set_state_flag = SOV_five_year_plan_active_state
+							set_state_flag = SOV_flag_for_five_year_plan_mission_2
+							set_variable = { pre_mission_civs = building_level@industrial_complex }
+						}
+					}
+
+					30 = {
+						random_owned_controlled_state = {
+							limit = {
+								free_building_slots = {
+									building = industrial_complex
+									size > 0
+								}
+								NOT = {
+									has_state_flag = SOV_five_year_plan_active_state
+								}
+								NOT = {
+									is_gosplan_moscow = yes
+								}
+							}
+
+							set_state_flag = SOV_five_year_plan_active_state
+							set_state_flag = SOV_flag_for_five_year_plan_mission_2
+							set_variable = { pre_mission_civs = building_level@industrial_complex }
+						}
+					}
+				}
+			}
+
+			else_if = {
+
+				limit = {
+					has_country_flag = SOV_gosplan_urals_rng
+				}
+
+				random_list = {
+
+					70 = {
+
+						modifier = {
+							factor = 0
+							NOT = {
+								any_owned_state = {
+									is_gosplan_urals = yes
+									free_building_slots = { 
+										building = industrial_complex 
+										size > 0 
+									}
+									NOT = { 
+										has_state_flag = SOV_five_year_plan_active_state
+									}
+								}
+							}
+						}
+
+						random_owned_controlled_state = {
+							limit = {
+								is_gosplan_urals = yes
+								free_building_slots = {
+									building = industrial_complex
+									size > 0
+								}
+								NOT = {
+									has_state_flag = SOV_five_year_plan_active_state
+								}
+							}
+
+							set_state_flag = SOV_five_year_plan_active_state
+							set_state_flag = SOV_flag_for_five_year_plan_mission_2
+							set_variable = { pre_mission_civs = building_level@industrial_complex }
+						}
+					}
+
+					30 = {
+						random_owned_controlled_state = {
+							limit = {
+								free_building_slots = {
+									building = industrial_complex
+									size > 0
+								}
+								NOT = {
+									has_state_flag = SOV_five_year_plan_active_state
+								}
+								NOT = {
+									is_gosplan_urals = yes
+								}
+							}
+
+							set_state_flag = SOV_five_year_plan_active_state
+							set_state_flag = SOV_flag_for_five_year_plan_mission_2
+							set_variable = { pre_mission_civs = building_level@industrial_complex }
+						}
+					}
+				}
+			}
+
+			else_if = {
+
+				limit = {
+					has_country_flag = SOV_gosplan_siberia_rng
+				}
+
+				random_list = {
+
+					70 = {
+
+						modifier = {
+							factor = 0
+							NOT = {
+								any_owned_state = {
+									is_gosplan_siberia = yes
+									free_building_slots = { 
+										building = industrial_complex 
+										size > 0 
+									}
+									NOT = { 
+										has_state_flag = SOV_five_year_plan_active_state
+									}
+								}
+							}
+						}
+
+						random_owned_controlled_state = {
+							limit = {
+								is_gosplan_siberia = yes
+								free_building_slots = {
+									building = industrial_complex
+									size > 0
+								}
+								NOT = {
+									has_state_flag = SOV_five_year_plan_active_state
+								}
+							}
+
+							set_state_flag = SOV_five_year_plan_active_state
+							set_state_flag = SOV_flag_for_five_year_plan_mission_2
+							set_variable = { pre_mission_civs = building_level@industrial_complex }
+						}
+					}
+
+					30 = {
+						random_owned_controlled_state = {
+							limit = {
+								free_building_slots = {
+									building = industrial_complex
+									size > 0
+								}
+								NOT = {
+									has_state_flag = SOV_five_year_plan_active_state
+								}
+								NOT = {
+									is_gosplan_siberia = yes
+								}
+							}
+
+							set_state_flag = SOV_five_year_plan_active_state
+							set_state_flag = SOV_flag_for_five_year_plan_mission_2
+							set_variable = { pre_mission_civs = building_level@industrial_complex }
+						}
+					}
+				}
+			}
+
+			activate_mission = SOV_five_year_plan_mission_2
+		}
+	}
+
+	SOV_five_year_plan_decision_3 = {
+
+		icon = GFX_SOV_tractor_factories
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		visible = {
+			has_dynamic_modifier = SOV_second_five_year_plan_dynamic_modifier
+			NOT = {
+				has_completed_focus = SOV_finish_the_five_year_plan
 			}
 		}
 
-        allowed = {
-            original_tag = SOV
-        }
+		available = {
+			OR = {
+				has_country_flag = SOV_gosplan_ukraine_rng
+				has_country_flag = SOV_gosplan_moscow_rng
+				has_country_flag = SOV_gosplan_urals_rng
+				has_country_flag = SOV_gosplan_siberia_rng
+			}
+			check_variable = { SOV_active_five_year_plan_missions < 3 }
+		}
 
-        available = {
-            has_completed_focus = SOV_tractor_plants
-        }
 
-        fire_only_once = yes
+		days_re_enable = 100
 
-        cost = 50
+		complete_effect = {
 
-        days_remove = 20
+			add_to_variable = { 
+				SOV_active_five_year_plan_missions = 1
+			}
 
-        modifier = {
-            civilian_factory_use = 5
-        }
+			add_to_variable = { 
+				SOV_fyp_consumer_goods_expected_value = 0.01
+				tooltip = consumer_goods_expected_value_tt
+			}
 
-        remove_effect = {
-            217 = {
-                add_dynamic_modifier = {
-                    modifier = SOV_dual_factories_dynamic_modifiers
-                    scope = SOV
-                }
-                set_state_flag = SOV_dual_factories
+			if = {
+				limit = {
+					has_country_flag = SOV_gosplan_ukraine_rng
+				}
 
-                set_variable = { pre_dual_use_civs = building_level@industrial_complex }
-            }
-        }
-    }
+				random_list = {
 
-    SOV_nizhny_tagil = {
+					70 = {
 
-        icon = GFX_SOV_tractor_factories
+						modifier = {
+							factor = 0
+							NOT = {
+								any_owned_state = {
+									is_gosplan_ukraine = yes
+									free_building_slots = { 
+										building = industrial_complex 
+										size > 0 
+									}
+									NOT = { 
+										has_state_flag = SOV_five_year_plan_active_state
+									}
+								}
+							}
+						}
 
-        highlight_states = {
-			highlight_state_targets = {
-				state = 653
+						random_owned_controlled_state = {
+							limit = {
+								is_gosplan_ukraine = yes
+								free_building_slots = {
+									building = industrial_complex
+									size > 0
+								}
+								NOT = {
+									has_state_flag = SOV_five_year_plan_active_state
+								}
+							}
+
+							set_state_flag = SOV_five_year_plan_active_state
+							set_state_flag = SOV_flag_for_five_year_plan_mission_3
+							set_variable = { pre_mission_civs = building_level@industrial_complex }
+						}
+					}
+
+					30 = {
+						random_owned_controlled_state = {
+							limit = {
+								free_building_slots = {
+									building = industrial_complex
+									size > 0
+								}
+								NOT = {
+									has_state_flag = SOV_five_year_plan_active_state
+								}
+								NOT = {
+									is_gosplan_ukraine = yes
+								}
+							}
+
+							set_state_flag = SOV_five_year_plan_active_state
+							set_state_flag = SOV_flag_for_five_year_plan_mission_3
+							set_variable = { pre_mission_civs = building_level@industrial_complex }
+						}
+					}
+				}
+			}
+
+			else_if = {
+
+				limit = {
+					has_country_flag = SOV_gosplan_moscow_rng
+				}
+
+				random_list = {
+
+					70 = {
+
+						modifier = {
+							factor = 0
+							NOT = {
+								any_owned_state = {
+									is_gosplan_moscow = yes
+									free_building_slots = { 
+										building = industrial_complex 
+										size > 0 
+									}
+									NOT = { 
+										has_state_flag = SOV_five_year_plan_active_state
+									}
+								}
+							}
+						}
+
+						random_owned_controlled_state = {
+							limit = {
+								is_gosplan_moscow = yes
+								free_building_slots = {
+									building = industrial_complex
+									size > 0
+								}
+								NOT = {
+									has_state_flag = SOV_five_year_plan_active_state
+								}
+							}
+
+							set_state_flag = SOV_five_year_plan_active_state
+							set_state_flag = SOV_flag_for_five_year_plan_mission_3
+							set_variable = { pre_mission_civs = building_level@industrial_complex }
+						}
+					}
+
+					30 = {
+						random_owned_controlled_state = {
+							limit = {
+								free_building_slots = {
+									building = industrial_complex
+									size > 0
+								}
+								NOT = {
+									has_state_flag = SOV_five_year_plan_active_state
+								}
+								NOT = {
+									is_gosplan_moscow = yes
+								}
+							}
+
+							set_state_flag = SOV_five_year_plan_active_state
+							set_state_flag = SOV_flag_for_five_year_plan_mission_3
+							set_variable = { pre_mission_civs = building_level@industrial_complex }
+						}
+					}
+				}
+			}
+
+			else_if = {
+
+				limit = {
+					has_country_flag = SOV_gosplan_urals_rng
+				}
+
+				random_list = {
+
+					70 = {
+
+						modifier = {
+							factor = 0
+							NOT = {
+								any_owned_state = {
+									is_gosplan_urals = yes
+									free_building_slots = { 
+										building = industrial_complex 
+										size > 0 
+									}
+									NOT = { 
+										has_state_flag = SOV_five_year_plan_active_state
+									}
+								}
+							}
+						}
+
+						random_owned_controlled_state = {
+							limit = {
+								is_gosplan_urals = yes
+								free_building_slots = {
+									building = industrial_complex
+									size > 0
+								}
+								NOT = {
+									has_state_flag = SOV_five_year_plan_active_state
+								}
+							}
+
+							set_state_flag = SOV_five_year_plan_active_state
+							set_state_flag = SOV_flag_for_five_year_plan_mission_3
+							set_variable = { pre_mission_civs = building_level@industrial_complex }
+						}
+					}
+
+					30 = {
+						random_owned_controlled_state = {
+							limit = {
+								free_building_slots = {
+									building = industrial_complex
+									size > 0
+								}
+								NOT = {
+									has_state_flag = SOV_five_year_plan_active_state
+								}
+								NOT = {
+									is_gosplan_urals = yes
+								}
+							}
+
+							set_state_flag = SOV_five_year_plan_active_state
+							set_state_flag = SOV_flag_for_five_year_plan_mission_3
+							set_variable = { pre_mission_civs = building_level@industrial_complex }
+						}
+					}
+				}
+			}
+
+			else_if = {
+
+				limit = {
+					has_country_flag = SOV_gosplan_siberia_rng
+				}
+
+				random_list = {
+
+					70 = {
+
+						modifier = {
+							factor = 0
+							NOT = {
+								any_owned_state = {
+									is_gosplan_siberia = yes
+									free_building_slots = { 
+										building = industrial_complex 
+										size > 0 
+									}
+									NOT = { 
+										has_state_flag = SOV_five_year_plan_active_state
+									}
+								}
+							}
+						}
+
+						random_owned_controlled_state = {
+							limit = {
+								is_gosplan_siberia = yes
+								free_building_slots = {
+									building = industrial_complex
+									size > 0
+								}
+								NOT = {
+									has_state_flag = SOV_five_year_plan_active_state
+								}
+							}
+
+							set_state_flag = SOV_five_year_plan_active_state
+							set_state_flag = SOV_flag_for_five_year_plan_mission_3
+							set_variable = { pre_mission_civs = building_level@industrial_complex }
+						}
+					}
+
+					30 = {
+						random_owned_controlled_state = {
+							limit = {
+								free_building_slots = {
+									building = industrial_complex
+									size > 0
+								}
+								NOT = {
+									has_state_flag = SOV_five_year_plan_active_state
+								}
+								NOT = {
+									is_gosplan_siberia = yes
+								}
+							}
+
+							set_state_flag = SOV_five_year_plan_active_state
+							set_state_flag = SOV_flag_for_five_year_plan_mission_3
+							set_variable = { pre_mission_civs = building_level@industrial_complex }
+						}
+					}
+				}
+			}
+
+			activate_mission = SOV_five_year_plan_mission_3
+		}
+	}
+
+	SOV_five_year_plan_decision_4 = {
+
+		icon = GFX_SOV_tractor_factories
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		visible = {
+			has_dynamic_modifier = SOV_second_five_year_plan_dynamic_modifier
+			NOT = {
+				has_completed_focus = SOV_finish_the_five_year_plan
 			}
 		}
 
-        allowed = {
-            original_tag = SOV
-        }
+		available = {
+			OR = {
+				has_country_flag = SOV_gosplan_ukraine_rng
+				has_country_flag = SOV_gosplan_moscow_rng
+				has_country_flag = SOV_gosplan_urals_rng
+				has_country_flag = SOV_gosplan_siberia_rng
+			}
+			check_variable = { SOV_active_five_year_plan_missions < 3 }
+		}
 
-        available = {
-            has_completed_focus = SOV_tractor_plants
-        }
 
-        fire_only_once = yes
+		days_re_enable = 100
 
-        cost = 50
+		complete_effect = {
 
-        days_remove = 20
+			add_to_variable = { 
+				SOV_active_five_year_plan_missions = 1
+			}
 
-        modifier = {
-            civilian_factory_use = 5
-        }
+			add_to_variable = { 
+				SOV_fyp_consumer_goods_expected_value = 0.01
+				tooltip = consumer_goods_expected_value_tt
+			}
 
-        remove_effect = {
-            653 = {
-                add_dynamic_modifier = {
-                    modifier = SOV_dual_factories_dynamic_modifiers
-                    scope = SOV
-                }
-                set_state_flag = SOV_dual_factories
+			if = {
+				limit = {
+					has_country_flag = SOV_gosplan_ukraine_rng
+				}
 
-                set_variable = { pre_dual_use_civs = building_level@industrial_complex }
-            }
-        }
-    }
+				random_list = {
 
-    SOV_chelyabinsk = {
+					70 = {
 
-        icon = GFX_SOV_tractor_factories
+						modifier = {
+							factor = 0
+							NOT = {
+								any_owned_state = {
+									is_gosplan_ukraine = yes
+									infrastructure < 8
+									NOT = { 
+										has_state_flag = SOV_five_year_plan_active_state
+									}
+								}
+							}
+						}
 
-        highlight_states = {
-			highlight_state_targets = {
-				state = 572
+						random_owned_controlled_state = {
+							limit = {
+								is_gosplan_ukraine = yes
+								infrastructure < 8
+								NOT = {
+									has_state_flag = SOV_five_year_plan_active_state
+								}
+							}
+
+							set_state_flag = SOV_five_year_plan_active_state
+							set_state_flag = SOV_flag_for_five_year_plan_mission_4
+							set_variable = { pre_mission_infrastructure = building_level@infrastructure }
+							add_to_variable = { pre_mission_infrastructure = 2 }
+						}
+					}
+
+					30 = {
+						random_owned_controlled_state = {
+							limit = {
+								infrastructure < 8
+								NOT = {
+									has_state_flag = SOV_five_year_plan_active_state
+								}
+								NOT = {
+									is_gosplan_ukraine = yes
+								}
+							}
+
+							set_state_flag = SOV_five_year_plan_active_state
+							set_state_flag = SOV_flag_for_five_year_plan_mission_4
+							set_variable = { pre_mission_infrastructure = building_level@infrastructure }
+							add_to_variable = { pre_mission_infrastructure = 2 }
+						}
+					}
+				}
+			}
+
+			else_if = {
+
+				limit = {
+					has_country_flag = SOV_gosplan_moscow_rng
+				}
+
+				random_list = {
+
+					70 = {
+
+						modifier = {
+							factor = 0
+							NOT = {
+								any_owned_state = {
+									is_gosplan_moscow = yes
+									infrastructure < 8
+									NOT = { 
+										has_state_flag = SOV_five_year_plan_active_state
+									}
+								}
+							}
+						}
+
+						random_owned_controlled_state = {
+							limit = {
+								is_gosplan_moscow = yes
+								infrastructure < 8
+								NOT = {
+									has_state_flag = SOV_five_year_plan_active_state
+								}
+							}
+
+							set_state_flag = SOV_five_year_plan_active_state
+							set_state_flag = SOV_flag_for_five_year_plan_mission_4
+							set_variable = { pre_mission_infrastructure = building_level@infrastructure }
+							add_to_variable = { pre_mission_infrastructure = 2 }
+						}
+					}
+
+					30 = {
+						random_owned_controlled_state = {
+							limit = {
+								infrastructure < 8
+								NOT = {
+									has_state_flag = SOV_five_year_plan_active_state
+								}
+								NOT = {
+									is_gosplan_moscow = yes
+								}
+							}
+
+							set_state_flag = SOV_five_year_plan_active_state
+							set_state_flag = SOV_flag_for_five_year_plan_mission_4
+							set_variable = { pre_mission_infrastructure = building_level@infrastructure }
+							add_to_variable = { pre_mission_infrastructure = 2 }
+						}
+					}
+				}
+			}
+
+			else_if = {
+
+				limit = {
+					has_country_flag = SOV_gosplan_urals_rng
+				}
+
+				random_list = {
+
+					70 = {
+
+						modifier = {
+							factor = 0
+							NOT = {
+								any_owned_state = {
+									is_gosplan_urals = yes
+									infrastructure < 8
+									NOT = { 
+										has_state_flag = SOV_five_year_plan_active_state
+									}
+								}
+							}
+						}
+
+						random_owned_controlled_state = {
+							limit = {
+								is_gosplan_urals = yes
+								infrastructure < 8
+								NOT = {
+									has_state_flag = SOV_five_year_plan_active_state
+								}
+							}
+
+							set_state_flag = SOV_five_year_plan_active_state
+							set_state_flag = SOV_flag_for_five_year_plan_mission_4
+							set_variable = { pre_mission_infrastructure = building_level@infrastructure }
+							add_to_variable = { pre_mission_infrastructure = 2 }
+						}
+					}
+
+					30 = {
+						random_owned_controlled_state = {
+							limit = {
+								infrastructure < 8
+								NOT = {
+									has_state_flag = SOV_five_year_plan_active_state
+								}
+								NOT = {
+									is_gosplan_urals = yes
+								}
+							}
+
+							set_state_flag = SOV_five_year_plan_active_state
+							set_state_flag = SOV_flag_for_five_year_plan_mission_4
+							set_variable = { pre_mission_infrastructure = building_level@infrastructure }
+							add_to_variable = { pre_mission_infrastructure = 2 }
+						}
+					}
+				}
+			}
+
+			else_if = {
+
+				limit = {
+					has_country_flag = SOV_gosplan_siberia_rng
+				}
+
+				random_list = {
+
+					70 = {
+
+						modifier = {
+							factor = 0
+							NOT = {
+								any_owned_state = {
+									is_gosplan_siberia = yes
+									infrastructure < 8
+									NOT = { 
+										has_state_flag = SOV_five_year_plan_active_state
+									}
+								}
+							}
+						}
+
+						random_owned_controlled_state = {
+							limit = {
+								is_gosplan_siberia = yes
+								infrastructure < 8
+								NOT = {
+									has_state_flag = SOV_five_year_plan_active_state
+								}
+							}
+
+							set_state_flag = SOV_five_year_plan_active_state
+							set_state_flag = SOV_flag_for_five_year_plan_mission_4
+							set_variable = { pre_mission_infrastructure = building_level@infrastructure }
+							add_to_variable = { pre_mission_infrastructure = 2 }
+						}
+					}
+
+					30 = {
+						random_owned_controlled_state = {
+							limit = {
+								infrastructure < 8
+								NOT = {
+									has_state_flag = SOV_five_year_plan_active_state
+								}
+								NOT = {
+									is_gosplan_siberia = yes
+								}
+							}
+
+							set_state_flag = SOV_five_year_plan_active_state
+							set_state_flag = SOV_flag_for_five_year_plan_mission_4
+							set_variable = { pre_mission_infrastructure = building_level@infrastructure }
+							add_to_variable = { pre_mission_infrastructure = 2 }
+						}
+					}
+				}
+			}
+
+			activate_mission = SOV_five_year_plan_mission_4
+		}
+	}
+
+	SOV_five_year_plan_mission = {
+
+		icon = generic_construction
+
+		highlight_states = {
+			highlight_states_trigger = {
+				# Makes the map glow wherever this flag is present
+				has_state_flag = SOV_flag_for_five_year_plan_mission
+			}
+			highlight_color_while_active = 3 # Color code 3 is Green
+		}
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		is_good = no
+
+		days_mission_timeout = 90
+
+		activation = {
+			always = no
+		}
+
+		available = {
+			any_owned_state = {
+				has_state_flag = SOV_flag_for_five_year_plan_mission
+
+				check_variable = {
+					var = pre_mission_civs
+					value = building_level@industrial_complex
+					compare = less_than
+				}
 			}
 		}
 
-        allowed = {
-            original_tag = SOV
-        }
+		complete_effect = {
 
-        available = {
-            has_completed_focus = SOV_tractor_plants
-        }
+			subtract_from_variable = { 
+				SOV_active_five_year_plan_missions = 1
+			}
 
-        fire_only_once = yes
+			if = {
+				limit = {
+					has_country_flag = SOV_focus_on_factories
+				}
+				every_owned_state = {
+					limit = {
+						has_state_flag = SOV_flag_for_five_year_plan_mission
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
 
-        cost = 50
+					clr_state_flag = SOV_five_year_plan_active_state
+					clr_state_flag = SOV_flag_for_five_year_plan_mission
+					clear_variable = pre_mission_civs
+				}
+			}
+			
+			else = {
+				every_owned_state = {
+					limit = {
+						has_state_flag = SOV_flag_for_five_year_plan_mission
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
 
-        days_remove = 20
+					clr_state_flag = SOV_five_year_plan_active_state
+					clr_state_flag = SOV_flag_for_five_year_plan_mission
+					clear_variable = pre_mission_civs
+				}
+			}
 
-        modifier = {
-            civilian_factory_use = 5
-        }
+			if = {
+				limit = {
+					has_country_flag = SOV_focus_on_progression
+				}
 
-        remove_effect = {
-            572 = {
-                add_dynamic_modifier = {
-                    modifier = SOV_dual_factories_dynamic_modifiers
-                    scope = SOV
-                }
-                set_state_flag = SOV_dual_factories
+				add_to_variable = { SOV_second_five_year_plan_progress = 4 }
+			}
 
-                set_variable = { pre_dual_use_civs = building_level@industrial_complex }
-            }
-        }
-    }
+			else = {
+				add_to_variable = { SOV_second_five_year_plan_progress = 3 }
+			}
 
-    SOV_conversion_divider = {
-        icon = generic_text  # Uses a plain text icon instead of a factory
-        cost = 0
-    
-        # Makes it show up, but prevents the player from ever clicking it
-        available = { always = no } 
-        visible = { always = yes }
-    
-        # Leave effects blank
-        effect = {
+			add_to_variable = { 
+				SOV_fyp_consumer_goods_expected_value = -0.01
+				tooltip = consumer_goods_expected_value_tt
+			}
 
-        }
-    }
-
-    SOV_leningrad_conversion = {
-
-        icon = GFX_SOV_tractor_factories
-
-        highlight_states = {
-			highlight_state_targets = {
-				state = 195
+			add_to_variable = { 
+				SOV_fyp_production_speed_buildings_factor = 0.01
+				tooltip = production_speed_buildings_factor_tt
 			}
 		}
 
-        allowed = {
-            original_tag = SOV
-        }
+		timeout_effect = {
 
-        available = {
-            195 = {
-                has_state_flag = SOV_dual_factories
-            }
-            has_war = yes
-        }
+			subtract_from_variable = { 
+				SOV_active_five_year_plan_missions = 1
+			}
 
-        fire_only_once = yes
+			### punishment here
+			every_owned_state = {
+				limit = {
+					has_state_flag = SOV_flag_for_five_year_plan_mission
+				}
 
-        cost = 50
+				clr_state_flag = SOV_five_year_plan_active_state
+				clr_state_flag = SOV_flag_for_five_year_plan_mission
+				clear_variable = pre_mission_civs
+			}
 
-        complete_effect = {
-            195 = {
-                remove_dynamic_modifier = {
-                    modifier = SOV_dual_factories_dynamic_modifiers
-                    scope = SOV
-                }
-                
-                clr_state_flag = SOV_dual_factories
+			add_to_variable = { 
+				SOV_fyp_consumer_goods_expected_value = -0.01
+				tooltip = consumer_goods_expected_value_tt
+			}
+		}
+	}
 
-                set_variable = { current_civs = building_level@industrial_complex }
-                set_variable = { eligible_civs = current_civs }
-                subtract_from_variable = { eligible_civs = pre_dual_use_civs }
-                if = {
-                    limit = {
-                        check_variable = { eligible_civs > 0 }
-                    }
-                    while_loop_effect = {
-                        limit = {
-                            check_variable = { eligible_civs > 0 }
-                        }
-                        remove_building = {
-                            type = industrial_complex
-                            level = 1
-                            instant_build = yes
-                        }
+	SOV_five_year_plan_mission_1 = {
 
-                        add_building_construction = {
-                            type = arms_factory
-                            level = 1
-                            instant_build = yes
-                        }
-                        subtract_from_variable = { eligible_civs = 1}
-                    }
-                }
-            }
-        }
-    }
+		icon = generic_construction
 
-    SOV_kharkov_conversion = {
+		highlight_states = {
+			highlight_states_trigger = {
+				# Makes the map glow wherever this flag is present
+				has_state_flag = SOV_flag_for_five_year_plan_mission_1
+			}
+			highlight_color_while_active = 3 # Color code 3 is Green
+		}
 
-        icon = GFX_SOV_tractor_factories
+		allowed = {
+			original_tag = SOV
+		}
 
-        highlight_states = {
-			highlight_state_targets = {
-				state = 221
+		is_good = no
+
+		days_mission_timeout = 90
+
+		activation = {
+			always = no
+		}
+
+		available = {
+			any_owned_state = {
+				has_state_flag = SOV_flag_for_five_year_plan_mission_1
+
+				check_variable = {
+					var = pre_mission_civs
+					value = building_level@industrial_complex
+					compare = less_than
+				}
 			}
 		}
 
-        allowed = {
-            original_tag = SOV
-        }
+		complete_effect = {
 
-        available = {
-            221 = {
-                has_state_flag = SOV_dual_factories
-            }
-            has_war = yes
-        }
+			subtract_from_variable = { 
+				SOV_active_five_year_plan_missions = 1
+			}
 
-        fire_only_once = yes
+			if = {
+				limit = {
+					has_country_flag = SOV_focus_on_factories
+				}
+				every_owned_state = {
+					limit = {
+						has_state_flag = SOV_flag_for_five_year_plan_mission_1
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
 
-        cost = 50
+					clr_state_flag = SOV_five_year_plan_active_state
+					clr_state_flag = SOV_flag_for_five_year_plan_mission_1
+					clear_variable = pre_mission_civs
+				}
+			}
+			
+			else = {
+				every_owned_state = {
+					limit = {
+						has_state_flag = SOV_flag_for_five_year_plan_mission_1
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
 
-        complete_effect = {
-            221 = {
-                remove_dynamic_modifier = {
-                    modifier = SOV_dual_factories_dynamic_modifiers
-                    scope = SOV
-                }
-                
-                clr_state_flag = SOV_dual_factories
+					clr_state_flag = SOV_five_year_plan_active_state
+					clr_state_flag = SOV_flag_for_five_year_plan_mission_1
+					clear_variable = pre_mission_civs
+				}
+			}
 
-                set_variable = { current_civs = building_level@industrial_complex }
-                set_variable = { eligible_civs = current_civs }
-                subtract_from_variable = { eligible_civs = pre_dual_use_civs }
-                if = {
-                    limit = {
-                        check_variable = { eligible_civs > 0 }
-                    }
-                    while_loop_effect = {
-                        limit = {
-                            check_variable = { eligible_civs > 0 }
-                        }
-                        remove_building = {
-                            type = industrial_complex
-                            level = 1
-                            instant_build = yes
-                        }
+			if = {
+				limit = {
+					has_country_flag = SOV_focus_on_progression
+				}
 
-                        add_building_construction = {
-                            type = arms_factory
-                            level = 1
-                            instant_build = yes
-                        }
-                        subtract_from_variable = { eligible_civs = 1}
-                    }
-                }
-            }
-        }
-    }
+				add_to_variable = { SOV_second_five_year_plan_progress = 4 }
+			}
 
-    SOV_gorky_conversion = {
+			else = {
+				add_to_variable = { SOV_second_five_year_plan_progress = 3 }
+			}
 
-        icon = GFX_SOV_tractor_factories
+			add_to_variable = { 
+				SOV_fyp_consumer_goods_expected_value = -0.01
+				tooltip = consumer_goods_expected_value_tt
+			}
 
-        highlight_states = {
-			highlight_state_targets = {
-				state = 252
+			add_to_variable = { 
+				SOV_fyp_production_speed_buildings_factor = 0.01
+				tooltip = production_speed_buildings_factor_tt
 			}
 		}
 
-        allowed = {
-            original_tag = SOV
-        }
+		timeout_effect = {
 
-        available = {
-            252 = {
-                has_state_flag = SOV_dual_factories
-            }
-            has_war = yes
-        }
+			subtract_from_variable = { 
+				SOV_active_five_year_plan_missions = 1
+			}
 
-        fire_only_once = yes
+			### punishment here
+			every_owned_state = {
+				limit = {
+					has_state_flag = SOV_flag_for_five_year_plan_mission_1
+				}
 
-        cost = 50
+				clr_state_flag = SOV_five_year_plan_active_state
+				clr_state_flag = SOV_flag_for_five_year_plan_mission_1
+				clear_variable = pre_mission_civs
+			}
 
-        complete_effect = {
-            252 = {
-                remove_dynamic_modifier = {
-                    modifier = SOV_dual_factories_dynamic_modifiers
-                    scope = SOV
-                }
-                
-                clr_state_flag = SOV_dual_factories
+			add_to_variable = { 
+				SOV_fyp_consumer_goods_expected_value = -0.01
+				tooltip = consumer_goods_expected_value_tt
+			}
+		}
+	}
 
-                set_variable = { current_civs = building_level@industrial_complex }
-                set_variable = { eligible_civs = current_civs }
-                subtract_from_variable = { eligible_civs = pre_dual_use_civs }
-                if = {
-                    limit = {
-                        check_variable = { eligible_civs > 0 }
-                    }
-                    while_loop_effect = {
-                        limit = {
-                            check_variable = { eligible_civs > 0 }
-                        }
-                        remove_building = {
-                            type = industrial_complex
-                            level = 1
-                            instant_build = yes
-                        }
+	SOV_five_year_plan_mission_2 = {
 
-                        add_building_construction = {
-                            type = arms_factory
-                            level = 1
-                            instant_build = yes
-                        }
-                        subtract_from_variable = { eligible_civs = 1}
-                    }
-                }
-            }
-        }
-    }
+		icon = generic_construction
 
-    SOV_stalingrad_conversion = {
+		highlight_states = {
+			highlight_states_trigger = {
+				# Makes the map glow wherever this flag is present
+				has_state_flag = SOV_flag_for_five_year_plan_mission_2
+			}
+			highlight_color_while_active = 3 # Color code 3 is Green
+		}
 
-        icon = GFX_SOV_tractor_factories
+		allowed = {
+			original_tag = SOV
+		}
 
-        highlight_states = {
-			highlight_state_targets = {
-				state = 217
+		is_good = no
+
+		days_mission_timeout = 90
+
+		activation = {
+			always = no
+		}
+
+		available = {
+			any_owned_state = {
+				has_state_flag = SOV_flag_for_five_year_plan_mission_2
+
+				check_variable = {
+					var = pre_mission_civs
+					value = building_level@industrial_complex
+					compare = less_than
+				}
 			}
 		}
 
-        allowed = {
-            original_tag = SOV
-        }
+		complete_effect = {
 
-        available = {
-            217 = {
-                has_state_flag = SOV_dual_factories
-            }
-            has_war = yes
-        }
+			subtract_from_variable = { 
+				SOV_active_five_year_plan_missions = 1
+			}
 
-        fire_only_once = yes
+			if = {
+				limit = {
+					has_country_flag = SOV_focus_on_factories
+				}
+				every_owned_state = {
+					limit = {
+						has_state_flag = SOV_flag_for_five_year_plan_mission_2
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
 
-        cost = 50
+					clr_state_flag = SOV_five_year_plan_active_state
+					clr_state_flag = SOV_flag_for_five_year_plan_mission_2
+					clear_variable = pre_mission_civs
+				}
+			}
+			
+			else = {
+				every_owned_state = {
+					limit = {
+						has_state_flag = SOV_flag_for_five_year_plan_mission_2
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
 
-        complete_effect = {
-            217 = {
-                remove_dynamic_modifier = {
-                    modifier = SOV_dual_factories_dynamic_modifiers
-                    scope = SOV
-                }
-                
-                clr_state_flag = SOV_dual_factories
+					clr_state_flag = SOV_five_year_plan_active_state
+					clr_state_flag = SOV_flag_for_five_year_plan_mission_2
+					clear_variable = pre_mission_civs
+				}
+			}
 
-                set_variable = { current_civs = building_level@industrial_complex }
-                set_variable = { eligible_civs = current_civs }
-                subtract_from_variable = { eligible_civs = pre_dual_use_civs }
-                if = {
-                    limit = {
-                        check_variable = { eligible_civs > 0 }
-                    }
-                    while_loop_effect = {
-                        limit = {
-                            check_variable = { eligible_civs > 0 }
-                        }
-                        remove_building = {
-                            type = industrial_complex
-                            level = 1
-                            instant_build = yes
-                        }
+			if = {
+				limit = {
+					has_country_flag = SOV_focus_on_progression
+				}
 
-                        add_building_construction = {
-                            type = arms_factory
-                            level = 1
-                            instant_build = yes
-                        }
-                        subtract_from_variable = { eligible_civs = 1}
-                    }
-                }
-            }
-        }
-    }
+				add_to_variable = { SOV_second_five_year_plan_progress = 4 }
+			}
 
-    SOV_nizhny_tagil_conversion = {
+			else = {
+				add_to_variable = { SOV_second_five_year_plan_progress = 3 }
+			}
 
-        icon = GFX_SOV_tractor_factories
+			add_to_variable = { 
+				SOV_fyp_consumer_goods_expected_value = -0.01
+				tooltip = consumer_goods_expected_value_tt
+			}
 
-        highlight_states = {
-			highlight_state_targets = {
-				state = 653
+			add_to_variable = { 
+				SOV_fyp_production_speed_buildings_factor = 0.01
+				tooltip = production_speed_buildings_factor_tt
 			}
 		}
 
-        allowed = {
-            original_tag = SOV
-        }
+		timeout_effect = {
 
-        available = {
-            653 = {
-                has_state_flag = SOV_dual_factories
-            }
-            has_war = yes
-        }
+			subtract_from_variable = { 
+				SOV_active_five_year_plan_missions = 1
+			}
 
-        fire_only_once = yes
+			### punishment here
+			every_owned_state = {
+				limit = {
+					has_state_flag = SOV_flag_for_five_year_plan_mission_2
+				}
 
-        cost = 50
+				clr_state_flag = SOV_five_year_plan_active_state
+				clr_state_flag = SOV_flag_for_five_year_plan_mission_2
+				clear_variable = pre_mission_civs
+			}
 
-        complete_effect = {
-            653 = {
-                remove_dynamic_modifier = {
-                    modifier = SOV_dual_factories_dynamic_modifiers
-                    scope = SOV
-                }
-                
-                clr_state_flag = SOV_dual_factories
+			add_to_variable = { 
+				SOV_fyp_consumer_goods_expected_value = -0.01
+				tooltip = consumer_goods_expected_value_tt
+			}
+		}
+	}
 
-                set_variable = { current_civs = building_level@industrial_complex }
-                set_variable = { eligible_civs = current_civs }
-                subtract_from_variable = { eligible_civs = pre_dual_use_civs }
-                if = {
-                    limit = {
-                        check_variable = { eligible_civs > 0 }
-                    }
-                    while_loop_effect = {
-                        limit = {
-                            check_variable = { eligible_civs > 0 }
-                        }
-                        remove_building = {
-                            type = industrial_complex
-                            level = 1
-                            instant_build = yes
-                        }
+	SOV_five_year_plan_mission_3 = {
 
-                        add_building_construction = {
-                            type = arms_factory
-                            level = 1
-                            instant_build = yes
-                        }
-                        subtract_from_variable = { eligible_civs = 1}
-                    }
-                }
-            }
-        }
-    }
+		icon = generic_construction
 
-    SOV_chelyabinsk_conversion = {
+		highlight_states = {
+			highlight_states_trigger = {
+				# Makes the map glow wherever this flag is present
+				has_state_flag = SOV_flag_for_five_year_plan_mission_3
+			}
+			highlight_color_while_active = 3 # Color code 3 is Green
+		}
 
-        icon = GFX_SOV_tractor_factories
+		allowed = {
+			original_tag = SOV
+		}
 
-        highlight_states = {
-			highlight_state_targets = {
-				state = 572
+		is_good = no
+
+		days_mission_timeout = 90
+
+		activation = {
+			always = no
+		}
+
+		available = {
+			any_owned_state = {
+				has_state_flag = SOV_flag_for_five_year_plan_mission_3
+
+				check_variable = {
+					var = pre_mission_civs
+					value = building_level@industrial_complex
+					compare = less_than
+				}
 			}
 		}
 
-        allowed = {
-            original_tag = SOV
-        }
+		complete_effect = {
 
-        available = {
-            572 = {
-                has_state_flag = SOV_dual_factories
-            }
-            has_war = yes
-        }
+			subtract_from_variable = { 
+				SOV_active_five_year_plan_missions = 1
+			}
 
-        fire_only_once = yes
+			if = {
+				limit = {
+					has_country_flag = SOV_focus_on_factories
+				}
+				every_owned_state = {
+					limit = {
+						has_state_flag = SOV_flag_for_five_year_plan_mission_3
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
 
-        cost = 50
+					clr_state_flag = SOV_five_year_plan_active_state
+					clr_state_flag = SOV_flag_for_five_year_plan_mission_3
+					clear_variable = pre_mission_civs
+				}
+			}
+			
+			else = {
+				every_owned_state = {
+					limit = {
+						has_state_flag = SOV_flag_for_five_year_plan_mission_3
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
 
-        complete_effect = {
-            572 = {
-                remove_dynamic_modifier = {
-                    modifier = SOV_dual_factories_dynamic_modifiers
-                    scope = SOV
-                }
-                
-                clr_state_flag = SOV_dual_factories
+					clr_state_flag = SOV_five_year_plan_active_state
+					clr_state_flag = SOV_flag_for_five_year_plan_mission_3
+					clear_variable = pre_mission_civs
+				}
+			}
 
-                set_variable = { current_civs = building_level@industrial_complex }
-                set_variable = { eligible_civs = current_civs }
-                subtract_from_variable = { eligible_civs = pre_dual_use_civs }
-                if = {
-                    limit = {
-                        check_variable = { eligible_civs > 0 }
-                    }
-                    while_loop_effect = {
-                        limit = {
-                            check_variable = { eligible_civs > 0 }
-                        }
-                        remove_building = {
-                            type = industrial_complex
-                            level = 1
-                            instant_build = yes
-                        }
+			if = {
+				limit = {
+					has_country_flag = SOV_focus_on_progression
+				}
 
-                        add_building_construction = {
-                            type = arms_factory
-                            level = 1
-                            instant_build = yes
-                        }
-                        subtract_from_variable = { eligible_civs = 1}
-                    }
-                }
-            }
-        }
-    }
+				add_to_variable = { SOV_second_five_year_plan_progress = 4 }
+			}
+
+			else = {
+				add_to_variable = { SOV_second_five_year_plan_progress = 3 }
+			}
+
+			add_to_variable = { 
+				SOV_fyp_consumer_goods_expected_value = -0.01
+				tooltip = consumer_goods_expected_value_tt
+			}
+
+			add_to_variable = { 
+				SOV_fyp_production_speed_buildings_factor = 0.01
+				tooltip = production_speed_buildings_factor_tt
+			}
+		}
+
+		timeout_effect = {
+
+			subtract_from_variable = { 
+				SOV_active_five_year_plan_missions = 1
+			}
+
+			### punishment here
+			every_owned_state = {
+				limit = {
+					has_state_flag = SOV_flag_for_five_year_plan_mission_3
+				}
+
+				clr_state_flag = SOV_five_year_plan_active_state
+				clr_state_flag = SOV_flag_for_five_year_plan_mission_3
+				clear_variable = pre_mission_civs
+			}
+
+			add_to_variable = { 
+				SOV_fyp_consumer_goods_expected_value = -0.01
+				tooltip = consumer_goods_expected_value_tt
+			}
+		}
+	}
+
+	SOV_five_year_plan_mission_4 = {
+
+		icon = generic_construction
+
+		highlight_states = {
+			highlight_states_trigger = {
+				# Makes the map glow wherever this flag is present
+				has_state_flag = SOV_flag_for_five_year_plan_mission_4
+			}
+			highlight_color_while_active = 3 # Color code 3 is Green
+		}
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		is_good = no
+
+		days_mission_timeout = 90
+
+		activation = {
+			always = no
+		}
+
+		available = {
+			any_owned_state = {
+				has_state_flag = SOV_flag_for_five_year_plan_mission_4
+
+				check_variable = {
+					var = pre_mission_infrastructure
+					value = building_level@infrastructure
+					compare = less_than
+				}
+			}
+		}
+
+		complete_effect = {
+
+			subtract_from_variable = { 
+				SOV_active_five_year_plan_missions = 1
+			}
+
+			if = {
+				limit = {
+					has_country_flag = SOV_focus_on_factories
+				}
+				every_owned_state = {
+					limit = {
+						has_state_flag = SOV_flag_for_five_year_plan_mission_4
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+
+					clr_state_flag = SOV_five_year_plan_active_state
+					clr_state_flag = SOV_flag_for_five_year_plan_mission_4
+					clear_variable = pre_mission_infrastructure
+					clear_variable = target_infrastructure
+				}
+			}
+			
+			else = {
+				every_owned_state = {
+					limit = {
+						has_state_flag = SOV_flag_for_five_year_plan_mission_4
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+
+					clr_state_flag = SOV_five_year_plan_active_state
+					clr_state_flag = SOV_flag_for_five_year_plan_mission_4
+					clear_variable = pre_mission_infrastructure
+					clear_variable = target_infrastructure
+				}
+			}
+
+			if = {
+				limit = {
+					has_country_flag = SOV_focus_on_progression
+				}
+
+				add_to_variable = { SOV_second_five_year_plan_progress = 4 }
+			}
+
+			else = {
+				add_to_variable = { SOV_second_five_year_plan_progress = 3 }
+			}
+
+			add_to_variable = { 
+				SOV_fyp_consumer_goods_expected_value = -0.01
+				tooltip = consumer_goods_expected_value_tt
+			}
+
+			add_to_variable = { 
+				SOV_fyp_production_speed_buildings_factor = 0.01
+				tooltip = production_speed_buildings_factor_tt
+			}
+		}
+
+		timeout_effect = {
+
+			subtract_from_variable = { 
+				SOV_active_five_year_plan_missions = 1
+			}
+
+			### punishment here
+			every_owned_state = {
+				limit = {
+					has_state_flag = SOV_flag_for_five_year_plan_mission_4
+				}
+
+				clr_state_flag = SOV_five_year_plan_active_state
+				clr_state_flag = SOV_flag_for_five_year_plan_mission_4
+				clear_variable = pre_mission_infrastructure
+				clear_variable = target_infrastructure
+			}
+
+			add_to_variable = { 
+				SOV_fyp_consumer_goods_expected_value = -0.01
+				tooltip = consumer_goods_expected_value_tt
+			}
+		}
+	}
+
+	SOV_five_year_plan_extend_deadline = {
+
+		icon = generic_political_actions
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		visible = {
+			has_active_mission = SOV_five_year_plan_master_mission
+		}
+
+		cost = 50 
+
+		days_re_enable = 100
+
+		complete_effect = {
+
+			add_stability = -0.05
+
+			add_days_mission_timeout = {
+				mission = SOV_five_year_plan_master_mission
+				days = 30
+			}
+		}
+	}
+
+	SOV_five_year_plan_master_mission = {
+
+		icon = generic_construction
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		is_good = no
+
+		days_mission_timeout = 730
+
+		activation = {
+			always = no
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SOV_five_year_plan_mission_tt
+				check_variable = {
+					var = SOV_second_five_year_plan_progress
+					value = 100
+					compare = greater_than_or_equals
+				}
+			}
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					check_variable = { SOV_accumulated_factories > 0 }
+				}
+				while_loop_effect = {
+					limit = {
+						check_variable = { SOV_accumulated_factories > 0 }
+					}
+
+					random_owned_controlled_state = {
+						add_extra_state_shared_building_slots = 1 
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					}
+					subtract_from_variable = { SOV_accumulated_factories = 1 }
+				}
+			}
+
+			custom_effect_tooltip = SOV_five_year_plan_reward_tt
+
+			SOV = {
+				complete_national_focus = SOV_finish_the_five_year_plan
+			}
+
+			set_variable = {
+				SOV_fyp_production_speed_buildings_factor = 0.05
+				tooltip = production_speed_buildings_factor_tt
+			}
+
+			if = {
+				limit = {
+					check_variable = { SOV_temp_cg_duration < 100 }
+				}
+				set_variable = {
+					SOV_temp_cg_duration = 100
+				}
+			}
+
+			add_timed_idea = {
+				idea = SOV_five_year_plan_master_mission_reward
+				days = SOV_temp_cg_duration
+			}
+
+			clear_variable = SOV_temp_cg_duration
+			clear_variable = temp_greed_penalty
+		}
+
+		timeout_effect = {
+			### punishment here
+			SOV = {
+				complete_national_focus = SOV_finish_the_five_year_plan
+			}
+		}
+	}
 }
 
 SOV_gosplan_dec_cat = {
-    SOV_gosplan_ukraine = {
 
-        icon = GFX_SOV_tractor_factories
+	SOV_gosplan_ukraine = {
 
-        highlight_states = {
-            highlight_state_targets = {
-                state = 202
-                state = 221
-                state = 226
-                state = 200
-                state = 227
-                state = 192
-                state = 137
-                state = 259
-            }
-        }
+		icon = GFX_SOV_tractor_factories
 
-        allowed = {
-            original_tag = SOV
-        }
+		highlight_states = {
+			highlight_state_targets = {
+				state = 202
+				state = 221
+				state = 226
+				state = 200
+				state = 227
+				state = 192
+				state = 137
+				state = 259
+			}
+		}
 
-        visible = {
-            NOT = {
-                OR = {
-                    has_country_flag = SOV_moscow_gosplan
-                    has_country_flag = SOV_urals_gosplan
-                    has_country_flag = SOV_siberia_gosplan
-                }
-            }
-        }
+		allowed = {
+			original_tag = SOV
+		}
 
-        available = {
-            has_completed_focus = ukraine
-        }
+		visible = {
+			NOT = {
+				OR = {
+					has_country_flag = SOV_moscow_gosplan
+					has_country_flag = SOV_urals_gosplan
+					has_country_flag = SOV_siberia_gosplan
+				}
+			}
+		}
 
-        fire_only_once = yes
+		available = {
+			has_completed_focus = ukraine
+		}
 
-        cost = 150
+		fire_only_once = yes
 
-        days_remove = 90
+		cost = 150
 
-        modifier = {
-            political_power_factor = -0.15
-            civilian_factory_use = 5
-        }
+		days_remove = 90
 
-        complete_effect = {
-            every_owned_state = {
-                limit = {
-                    is_gosplan_ukraine = yes
-                }
+		modifier = {
+			political_power_factor = -0.15
+			civilian_factory_use = 5
+		}
 
-                add_dynamic_modifier = {
-                    modifier = SOV_gosplan_ukraine_dynamic_modifiers
-                    scope = SOV
-                }
-            }
-            set_country_flag = SOV_ukraine_gosplan
-        }
+		complete_effect = {
+			every_owned_state = {
+				limit = {
+					is_gosplan_ukraine = yes
+				}
 
-        remove_effect = {
-            random_owned_state = {
+				add_dynamic_modifier = {
+					modifier = SOV_gosplan_ukraine_dynamic_modifiers
+					scope = SOV
+				}
+			}
+			set_country_flag = SOV_ukraine_gosplan
+		}
+
+		remove_effect = {
+			random_owned_state = {
 				prioritize = { 202 }
 				add_extra_state_shared_building_slots = 6
 				add_building_construction = {
@@ -714,45 +2359,45 @@ SOV_gosplan_dec_cat = {
 					instant_build = yes
 				}
 			}
-            set_country_flag = SOV_ukraine_gosplan_1
-        }
-    }
+			set_country_flag = SOV_ukraine_gosplan_1
+		}
+	}
 
-    SOV_gosplan_ukraine_1 = {
+	SOV_gosplan_ukraine_1 = {
 
-        icon = GFX_SOV_tractor_factories
+		icon = GFX_SOV_tractor_factories
 
-        allowed = {
-            original_tag = SOV
-        }
+		allowed = {
+			original_tag = SOV
+		}
 
-        visible = {
-            has_country_flag = SOV_ukraine_gosplan
-        }
+		visible = {
+			has_country_flag = SOV_ukraine_gosplan
+		}
 
-        available = {
-            has_country_flag = SOV_ukraine_gosplan_1
-        }
+		available = {
+			has_country_flag = SOV_ukraine_gosplan_1
+		}
 
-        fire_only_once = yes
+		fire_only_once = yes
 
-        cost = 150
+		cost = 150
 
-        days_remove = 90
+		days_remove = 90
 
-        modifier = {
-            political_power_factor = -0.1
-            civilian_factory_use = 3
-        }
+		modifier = {
+			political_power_factor = -0.1
+			civilian_factory_use = 3
+		}
 
-        complete_effect = {
-            add_ideas = { SOV_gosplan_ukraine_spirit }
-            custom_effect_tooltip = generic_skip_one_line_tt
-            clr_country_flag = SOV_ukraine_gosplan_1
-        }
-        
-        remove_effect = {
-            random_owned_state = {
+		complete_effect = {
+			add_ideas = { SOV_gosplan_ukraine_spirit }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			clr_country_flag = SOV_ukraine_gosplan_1
+		}
+		
+		remove_effect = {
+			random_owned_state = {
 				prioritize = { 221 }
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -761,47 +2406,47 @@ SOV_gosplan_dec_cat = {
 					instant_build = yes
 				}
 			}
-            set_country_flag = SOV_ukraine_gosplan_2
-        }
-    }
+			set_country_flag = SOV_ukraine_gosplan_2
+		}
+	}
 
-    SOV_gosplan_ukraine_2 = {
+	SOV_gosplan_ukraine_2 = {
 
-        icon = GFX_SOV_tractor_factories
+		icon = GFX_SOV_tractor_factories
 
-        allowed = {
-            original_tag = SOV
-        }
+		allowed = {
+			original_tag = SOV
+		}
 
-        visible = {
-            has_country_flag = SOV_ukraine_gosplan
-        }
+		visible = {
+			has_country_flag = SOV_ukraine_gosplan
+		}
 
-        available = {
-            has_country_flag = SOV_ukraine_gosplan_2
-        }
+		available = {
+			has_country_flag = SOV_ukraine_gosplan_2
+		}
 
-        fire_only_once = yes
+		fire_only_once = yes
 
-        cost = 150
+		cost = 150
 
-        days_remove = 90
+		days_remove = 90
 
-        modifier = {
-            political_power_factor = -0.1
-            civilian_factory_use = 3
-        }
+		modifier = {
+			political_power_factor = -0.1
+			civilian_factory_use = 3
+		}
 
-        complete_effect = {
-            swap_ideas = {
+		complete_effect = {
+			swap_ideas = {
 				remove_idea = SOV_gosplan_ukraine_spirit
 				add_idea = SOV_gosplan_ukraine_spirit_1
 			}
-            clr_country_flag = SOV_ukraine_gosplan_2
-        }
-        
-        remove_effect = {
-            random_owned_state = {
+			clr_country_flag = SOV_ukraine_gosplan_2
+		}
+		
+		remove_effect = {
+			random_owned_state = {
 				prioritize = { 226 }
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
@@ -810,47 +2455,47 @@ SOV_gosplan_dec_cat = {
 					instant_build = yes
 				}
 			}
-            set_country_flag = SOV_ukraine_gosplan_3
-        }
-    }
+			set_country_flag = SOV_ukraine_gosplan_3
+		}
+	}
 
-    SOV_gosplan_ukraine_3 = {
+	SOV_gosplan_ukraine_3 = {
 
-        icon = GFX_SOV_tractor_factories
+		icon = GFX_SOV_tractor_factories
 
-        allowed = {
-            original_tag = SOV
-        }
+		allowed = {
+			original_tag = SOV
+		}
 
-        visible = {
-            has_country_flag = SOV_ukraine_gosplan
-        }
+		visible = {
+			has_country_flag = SOV_ukraine_gosplan
+		}
 
-        available = {
-            has_country_flag = SOV_ukraine_gosplan_3
-        }
+		available = {
+			has_country_flag = SOV_ukraine_gosplan_3
+		}
 
-        fire_only_once = yes
+		fire_only_once = yes
 
-        cost = 150
+		cost = 150
 
-        days_remove = 90
+		days_remove = 90
 
-        modifier = {
-            political_power_factor = -0.1
-            civilian_factory_use = 3
-        }
+		modifier = {
+			political_power_factor = -0.1
+			civilian_factory_use = 3
+		}
 
-        complete_effect = {
-            swap_ideas = {
+		complete_effect = {
+			swap_ideas = {
 				remove_idea = SOV_gosplan_ukraine_spirit_1
 				add_idea = SOV_gosplan_ukraine_spirit_2
 			}
-            clr_country_flag = SOV_ukraine_gosplan_3
-        }
-        
-        remove_effect = {
-            random_owned_state = {
+			clr_country_flag = SOV_ukraine_gosplan_3
+		}
+		
+		remove_effect = {
+			random_owned_state = {
 				prioritize = { 137 }
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -859,72 +2504,72 @@ SOV_gosplan_dec_cat = {
 					instant_build = yes
 				}
 			}
-        }   
-    }
+		}   
+	}
 
-    SOV_gosplan_moscow = {
+	SOV_gosplan_moscow = {
 
-        icon = GFX_SOV_tractor_factories
+		icon = GFX_SOV_tractor_factories
 
-        highlight_states = {
-            highlight_state_targets = {
-                state = 219
-                state = 223
-                state = 252
-                state = 248
-                state = 247
-                state = 253
-                state = 222
-                state = 254
-            }
-        }
+		highlight_states = {
+			highlight_state_targets = {
+				state = 219
+				state = 223
+				state = 252
+				state = 248
+				state = 247
+				state = 253
+				state = 222
+				state = 254
+			}
+		}
 
-        allowed = {
-            original_tag = SOV
-        }
+		allowed = {
+			original_tag = SOV
+		}
 
-        visible = {
-            NOT = {
-                OR = {
-                    has_country_flag = SOV_ukraine_gosplan
-                    has_country_flag = SOV_urals_gosplan
-                    has_country_flag = SOV_siberia_gosplan
-                }
-            }
-        }
+		visible = {
+			NOT = {
+				OR = {
+					has_country_flag = SOV_ukraine_gosplan
+					has_country_flag = SOV_urals_gosplan
+					has_country_flag = SOV_siberia_gosplan
+				}
+			}
+		}
 
-        available = {
-            has_completed_focus = moscow
-        }
+		available = {
+			has_completed_focus = moscow
+		}
 
-        fire_only_once = yes
+		fire_only_once = yes
 
-        cost = 150
+		cost = 150
 
-        days_remove = 90
+		days_remove = 90
 
-        modifier = {
-            political_power_factor = -0.15
-            civilian_factory_use = 5
-        }
+		modifier = {
+			political_power_factor = -0.15
+			civilian_factory_use = 5
+		}
 
-        complete_effect = {
+		complete_effect = {
 
-            every_owned_state = {
-                limit = {
-                    is_gosplan_moscow = yes
-                }
+			every_owned_state = {
+				limit = {
+					is_gosplan_moscow = yes
+				}
 
-                add_dynamic_modifier = {
-                    modifier = SOV_gosplan_moscow_dynamic_modifiers
-                    scope = SOV
-                }
-            }
-            set_country_flag = SOV_moscow_gosplan
-        }
+				add_dynamic_modifier = {
+					modifier = SOV_gosplan_moscow_dynamic_modifiers
+					scope = SOV
+				}
+			}
+			set_country_flag = SOV_moscow_gosplan
+		}
 
-        remove_effect = {
-            random_owned_state = {
+		remove_effect = {
+			random_owned_state = {
 				prioritize = { 219 }
 				add_extra_state_shared_building_slots = 5
 				add_building_construction = {
@@ -933,51 +2578,51 @@ SOV_gosplan_dec_cat = {
 					instant_build = yes
 				}
 
-                add_building_construction = {
+				add_building_construction = {
 					type = arms_factory
 					level = 1
 					instant_build = yes
 				}
 			}
-            set_country_flag = SOV_moscow_gosplan_1
-        }
-    }
+			set_country_flag = SOV_moscow_gosplan_1
+		}
+	}
 
-    SOV_gosplan_moscow_1 = {
+	SOV_gosplan_moscow_1 = {
 
-        icon = GFX_SOV_tractor_factories
+		icon = GFX_SOV_tractor_factories
 
-        allowed = {
-            original_tag = SOV
-        }
+		allowed = {
+			original_tag = SOV
+		}
 
-        visible = {
-            has_country_flag = SOV_moscow_gosplan
-        }
+		visible = {
+			has_country_flag = SOV_moscow_gosplan
+		}
 
-        available = {
-            has_country_flag = SOV_moscow_gosplan_1
-        }
+		available = {
+			has_country_flag = SOV_moscow_gosplan_1
+		}
 
-        fire_only_once = yes
+		fire_only_once = yes
 
-        cost = 150
+		cost = 150
 
-        days_remove = 90
+		days_remove = 90
 
-        modifier = {
-            political_power_factor = -0.1
-            civilian_factory_use = 3
-        }
+		modifier = {
+			political_power_factor = -0.1
+			civilian_factory_use = 3
+		}
 
-        complete_effect = {
-            add_ideas = { SOV_gosplan_moscow_spirit }
-            custom_effect_tooltip = generic_skip_one_line_tt
-            clr_country_flag = SOV_moscow_gosplan_1
-        }
-        
-        remove_effect = {
-            random_owned_state = {
+		complete_effect = {
+			add_ideas = { SOV_gosplan_moscow_spirit }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			clr_country_flag = SOV_moscow_gosplan_1
+		}
+		
+		remove_effect = {
+			random_owned_state = {
 				prioritize = { 223 }
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
@@ -986,53 +2631,53 @@ SOV_gosplan_dec_cat = {
 					instant_build = yes
 				}
 
-                add_building_construction = {
+				add_building_construction = {
 					type = arms_factory
 					level = 2
 					instant_build = yes
 				}
 			}
-            set_country_flag = SOV_moscow_gosplan_2
-        }
-    }
+			set_country_flag = SOV_moscow_gosplan_2
+		}
+	}
 
-    SOV_gosplan_moscow_2 = {
+	SOV_gosplan_moscow_2 = {
 
-        icon = GFX_SOV_tractor_factories
+		icon = GFX_SOV_tractor_factories
 
-        allowed = {
-            original_tag = SOV
-        }
+		allowed = {
+			original_tag = SOV
+		}
 
-        visible = {
-            has_country_flag = SOV_moscow_gosplan
-        }
+		visible = {
+			has_country_flag = SOV_moscow_gosplan
+		}
 
-        available = {
-            has_country_flag = SOV_moscow_gosplan_2
-        }
+		available = {
+			has_country_flag = SOV_moscow_gosplan_2
+		}
 
-        fire_only_once = yes
+		fire_only_once = yes
 
-        cost = 150
+		cost = 150
 
-        days_remove = 90
+		days_remove = 90
 
-        modifier = {
-            political_power_factor = -0.1
-            civilian_factory_use = 3
-        }
+		modifier = {
+			political_power_factor = -0.1
+			civilian_factory_use = 3
+		}
 
-        complete_effect = {
-            swap_ideas = {
-                remove_idea = SOV_gosplan_moscow_spirit
-                add_idea = SOV_gosplan_moscow_spirit_1
-            }
-            clr_country_flag = SOV_moscow_gosplan_2
-        }
-        
-        remove_effect = {
-            random_owned_state = {
+		complete_effect = {
+			swap_ideas = {
+				remove_idea = SOV_gosplan_moscow_spirit
+				add_idea = SOV_gosplan_moscow_spirit_1
+			}
+			clr_country_flag = SOV_moscow_gosplan_2
+		}
+		
+		remove_effect = {
+			random_owned_state = {
 				prioritize = { 253 }
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -1041,179 +2686,179 @@ SOV_gosplan_dec_cat = {
 					instant_build = yes
 				}
 
-                add_building_construction = {
+				add_building_construction = {
 					type = arms_factory
 					level = 1
 					instant_build = yes
 				}
 			}
-            set_country_flag = SOV_moscow_gosplan_3
-        }
-    }
+			set_country_flag = SOV_moscow_gosplan_3
+		}
+	}
 
-    SOV_gosplan_moscow_3 = {
+	SOV_gosplan_moscow_3 = {
 
-        icon = GFX_SOV_tractor_factories
+		icon = GFX_SOV_tractor_factories
 
-        allowed = {
-            original_tag = SOV
-        }
+		allowed = {
+			original_tag = SOV
+		}
 
-        visible = {
-            has_country_flag = SOV_moscow_gosplan
-        }
+		visible = {
+			has_country_flag = SOV_moscow_gosplan
+		}
 
-        available = {
-            has_country_flag = SOV_moscow_gosplan_3
-        }
+		available = {
+			has_country_flag = SOV_moscow_gosplan_3
+		}
 
-        fire_only_once = yes
+		fire_only_once = yes
 
-        cost = 150
+		cost = 150
 
-        days_remove = 90
+		days_remove = 90
 
-        modifier = {
-            political_power_factor = -0.1
-            civilian_factory_use = 3
-        }
+		modifier = {
+			political_power_factor = -0.1
+			civilian_factory_use = 3
+		}
 
-        complete_effect = {
-            swap_ideas = {
-                remove_idea = SOV_gosplan_moscow_spirit_1
-                add_idea = SOV_gosplan_moscow_spirit_2
-            }
-            clr_country_flag = SOV_moscow_gosplan_3
-        }
-        
-        remove_effect = {
-            random_owned_state = {
+		complete_effect = {
+			swap_ideas = {
+				remove_idea = SOV_gosplan_moscow_spirit_1
+				add_idea = SOV_gosplan_moscow_spirit_2
+			}
+			clr_country_flag = SOV_moscow_gosplan_3
+		}
+		
+		remove_effect = {
+			random_owned_state = {
 				prioritize = { 247 }
 				add_extra_state_shared_building_slots = 2
 
-                add_building_construction = {
+				add_building_construction = {
 					type = arms_factory
 					level = 2
 					instant_build = yes
 				}
 			}
-        }
-    }
+		}
+	}
 
-    SOV_gosplan_urals = {
+	SOV_gosplan_urals = {
 
-        icon = GFX_SOV_tractor_factories
+		icon = GFX_SOV_tractor_factories
 
-        highlight_states = {
-            highlight_state_targets = {
-                state = 572
-                state = 653
-                state = 582
-                state = 398
-                state = 651
-                state = 652
-                state = 399
-                state = 573
-            }
-        }
+		highlight_states = {
+			highlight_state_targets = {
+				state = 572
+				state = 653
+				state = 582
+				state = 398
+				state = 651
+				state = 652
+				state = 399
+				state = 573
+			}
+		}
 
-        allowed = {
-            original_tag = SOV
-        }
+		allowed = {
+			original_tag = SOV
+		}
 
-        visible = {
-            NOT = {
-                OR = {
-                    has_country_flag = SOV_ukraine_gosplan
-                    has_country_flag = SOV_moscow_gosplan
-                    has_country_flag = SOV_siberia_gosplan
-                }
-            }
-        }
+		visible = {
+			NOT = {
+				OR = {
+					has_country_flag = SOV_ukraine_gosplan
+					has_country_flag = SOV_moscow_gosplan
+					has_country_flag = SOV_siberia_gosplan
+				}
+			}
+		}
 
-        available = {
-            has_completed_focus = urals
-        }
+		available = {
+			has_completed_focus = urals
+		}
 
-        fire_only_once = yes
+		fire_only_once = yes
 
-        cost = 150
+		cost = 150
 
-        days_remove = 90
+		days_remove = 90
 
-        modifier = {
-            political_power_factor = -0.15
-            civilian_factory_use = 5
-        }
+		modifier = {
+			political_power_factor = -0.15
+			civilian_factory_use = 5
+		}
 
-        complete_effect = {
-            every_owned_state = {
-                limit = {
-                    is_gosplan_urals = yes
-                }
+		complete_effect = {
+			every_owned_state = {
+				limit = {
+					is_gosplan_urals = yes
+				}
 
-                add_dynamic_modifier = {
-                    modifier = SOV_gosplan_urals_dynamic_modifiers
-                    scope = SOV
-                }
-            }
-            set_country_flag = SOV_urals_gosplan
-        }
-        remove_effect = {
-            random_owned_state = {
+				add_dynamic_modifier = {
+					modifier = SOV_gosplan_urals_dynamic_modifiers
+					scope = SOV
+				}
+			}
+			set_country_flag = SOV_urals_gosplan
+		}
+		remove_effect = {
+			random_owned_state = {
 				prioritize = { 572 }
 				add_extra_state_shared_building_slots = 5
 
-                add_building_construction = {
+				add_building_construction = {
 					type = industrial_complex
 					level = 1
 					instant_build = yes
 				}
 
-                add_building_construction = {
+				add_building_construction = {
 					type = arms_factory
 					level = 3
 					instant_build = yes
 				}
 			}
-            set_country_flag = SOV_urals_gosplan_1
-        }
-    }    
-    SOV_gosplan_urals_1 = {
+			set_country_flag = SOV_urals_gosplan_1
+		}
+	}    
+	SOV_gosplan_urals_1 = {
 
-        icon = GFX_SOV_tractor_factories
+		icon = GFX_SOV_tractor_factories
 
-        allowed = {
-            original_tag = SOV
-        }
+		allowed = {
+			original_tag = SOV
+		}
 
-        visible = {
-            has_country_flag = SOV_urals_gosplan
-        }
+		visible = {
+			has_country_flag = SOV_urals_gosplan
+		}
 
-        available = {
-            has_country_flag = SOV_urals_gosplan_1
-        }
+		available = {
+			has_country_flag = SOV_urals_gosplan_1
+		}
 
-        fire_only_once = yes
+		fire_only_once = yes
 
-        cost = 150
+		cost = 150
 
-        days_remove = 90
+		days_remove = 90
 
-        modifier = {
-            political_power_factor = -0.1
-            civilian_factory_use = 3
-        }
+		modifier = {
+			political_power_factor = -0.1
+			civilian_factory_use = 3
+		}
 
-        complete_effect = {
-            add_ideas = { SOV_gosplan_urals_spirit }
-            custom_effect_tooltip = generic_skip_one_line_tt
-            clr_country_flag = SOV_urals_gosplan_1
-        }
-        
-        remove_effect = {
-            random_owned_state = {
+		complete_effect = {
+			add_ideas = { SOV_gosplan_urals_spirit }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			clr_country_flag = SOV_urals_gosplan_1
+		}
+		
+		remove_effect = {
+			random_owned_state = {
 				prioritize = { 651 }
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
@@ -1222,230 +2867,230 @@ SOV_gosplan_dec_cat = {
 					instant_build = yes
 				}
 
-                add_building_construction = {
+				add_building_construction = {
 					type = arms_factory
 					level = 2
 					instant_build = yes
 				}
 			}
-            set_country_flag = SOV_urals_gosplan_2
-        }
-    }
+			set_country_flag = SOV_urals_gosplan_2
+		}
+	}
 
-    SOV_gosplan_urals_2 = {
+	SOV_gosplan_urals_2 = {
 
-        icon = GFX_SOV_tractor_factories
+		icon = GFX_SOV_tractor_factories
 
-        allowed = {
-            original_tag = SOV
-        }
+		allowed = {
+			original_tag = SOV
+		}
 
-        visible = {
-            has_country_flag = SOV_urals_gosplan
-        }
+		visible = {
+			has_country_flag = SOV_urals_gosplan
+		}
 
-        available = {
-            has_country_flag = SOV_urals_gosplan_2
-        }
+		available = {
+			has_country_flag = SOV_urals_gosplan_2
+		}
 
-        fire_only_once = yes
+		fire_only_once = yes
 
-        cost = 150
+		cost = 150
 
-        days_remove = 90
+		days_remove = 90
 
-        modifier = {
-            political_power_factor = -0.1
-            civilian_factory_use = 3
-        }
+		modifier = {
+			political_power_factor = -0.1
+			civilian_factory_use = 3
+		}
 
-        complete_effect = {
-            swap_ideas = {
-                remove_idea = SOV_gosplan_urals_spirit
-                add_idea = SOV_gosplan_urals_spirit_1
-            }
-            clr_country_flag = SOV_urals_gosplan_2
-        }
-        
-        remove_effect = {
-            random_owned_state = {
+		complete_effect = {
+			swap_ideas = {
+				remove_idea = SOV_gosplan_urals_spirit
+				add_idea = SOV_gosplan_urals_spirit_1
+			}
+			clr_country_flag = SOV_urals_gosplan_2
+		}
+		
+		remove_effect = {
+			random_owned_state = {
 				prioritize = { 653 }
 				add_extra_state_shared_building_slots = 4
 
-                add_building_construction = {
+				add_building_construction = {
 					type = arms_factory
 					level = 2
 					instant_build = yes
 				}
 			}
-            set_country_flag = SOV_urals_gosplan_3
-        }
-    }
+			set_country_flag = SOV_urals_gosplan_3
+		}
+	}
 
-    SOV_gosplan_urals_3 = {
+	SOV_gosplan_urals_3 = {
 
-        icon = GFX_SOV_tractor_factories
+		icon = GFX_SOV_tractor_factories
 
-        allowed = {
-            original_tag = SOV
-        }
+		allowed = {
+			original_tag = SOV
+		}
 
-        visible = {
-            has_country_flag = SOV_urals_gosplan
-        }
+		visible = {
+			has_country_flag = SOV_urals_gosplan
+		}
 
-        available = {
-            has_country_flag = SOV_urals_gosplan_3
-        }
+		available = {
+			has_country_flag = SOV_urals_gosplan_3
+		}
 
-        fire_only_once = yes
+		fire_only_once = yes
 
-        cost = 150
+		cost = 150
 
-        days_remove = 90
+		days_remove = 90
 
-        modifier = {
-            political_power_factor = -0.1
-            civilian_factory_use = 3
-        }
+		modifier = {
+			political_power_factor = -0.1
+			civilian_factory_use = 3
+		}
 
-        complete_effect = {
-            swap_ideas = {
-                remove_idea = SOV_gosplan_urals_spirit_1
-                add_idea = SOV_gosplan_urals_spirit_2
-            }
-            clr_country_flag = SOV_urals_gosplan_3
-        }
-        
-        remove_effect = {
-            random_owned_state = {
+		complete_effect = {
+			swap_ideas = {
+				remove_idea = SOV_gosplan_urals_spirit_1
+				add_idea = SOV_gosplan_urals_spirit_2
+			}
+			clr_country_flag = SOV_urals_gosplan_3
+		}
+		
+		remove_effect = {
+			random_owned_state = {
 				prioritize = { 582 }
 				add_extra_state_shared_building_slots = 3
 
-                add_building_construction = {
+				add_building_construction = {
 					type = arms_factory
 					level = 1
 					instant_build = yes
 				}
 			}
-        }
-    }
+		}
+	}
 
-    SOV_gosplan_siberia = {
+	SOV_gosplan_siberia = {
 
-        icon = GFX_SOV_tractor_factories
+		icon = GFX_SOV_tractor_factories
 
-        highlight_states = {
-            highlight_state_targets = {
-                state = 571
-                state = 570
-                state = 569
-                state = 578
-                state = 568
-                state = 40
-                state = 566
-                state = 403
-                state = 408
-                state = 409
-            }
-        }
+		highlight_states = {
+			highlight_state_targets = {
+				state = 571
+				state = 570
+				state = 569
+				state = 578
+				state = 568
+				state = 40
+				state = 566
+				state = 403
+				state = 408
+				state = 409
+			}
+		}
 
-        allowed = {
-            original_tag = SOV
-        }
+		allowed = {
+			original_tag = SOV
+		}
 
-        visible = {
-            NOT = {
-                OR = {
-                    has_country_flag = SOV_ukraine_gosplan
-                    has_country_flag = SOV_moscow_gosplan
-                    has_country_flag = SOV_urals_gosplan
-                }
-            }
-        }
+		visible = {
+			NOT = {
+				OR = {
+					has_country_flag = SOV_ukraine_gosplan
+					has_country_flag = SOV_moscow_gosplan
+					has_country_flag = SOV_urals_gosplan
+				}
+			}
+		}
 
-        available = {
-            has_completed_focus = siberia
-        }
+		available = {
+			has_completed_focus = siberia
+		}
 
-        fire_only_once = yes
+		fire_only_once = yes
 
-        cost = 150
+		cost = 150
 
-        days_remove = 90
+		days_remove = 90
 
-        modifier = {
-            political_power_factor = -0.15
-            civilian_factory_use = 5
-        }
+		modifier = {
+			political_power_factor = -0.15
+			civilian_factory_use = 5
+		}
 
-        complete_effect = {
-            every_owned_state = {
-                limit = {
-                    is_gosplan_siberia = yes
-                }
+		complete_effect = {
+			every_owned_state = {
+				limit = {
+					is_gosplan_siberia = yes
+				}
 
-                add_dynamic_modifier = {
-                    modifier = SOV_gosplan_siberia_dynamic_modifiers
-                    scope = SOV
-                }
-            }
-            set_country_flag = SOV_siberia_gosplan
-        }
+				add_dynamic_modifier = {
+					modifier = SOV_gosplan_siberia_dynamic_modifiers
+					scope = SOV
+				}
+			}
+			set_country_flag = SOV_siberia_gosplan
+		}
 
-        remove_effect = {
-            every_owned_state = {
-                limit = {
-                    is_gosplan_siberia = yes
-                }
+		remove_effect = {
+			every_owned_state = {
+				limit = {
+					is_gosplan_siberia = yes
+				}
 
-                add_extra_state_shared_building_slots = 8
+				add_extra_state_shared_building_slots = 8
 
-                add_building_construction = {
-                    type = infrastructure
-                    level = 4
-                    instant_build = yes
-                }
-            }
-            set_country_flag = SOV_siberia_gosplan_1    
-        }
-    }
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+			}
+			set_country_flag = SOV_siberia_gosplan_1    
+		}
+	}
 
-    SOV_gosplan_siberia_1 = {
+	SOV_gosplan_siberia_1 = {
 
-        icon = GFX_SOV_tractor_factories
+		icon = GFX_SOV_tractor_factories
 
-        allowed = {
-            original_tag = SOV
-        }
+		allowed = {
+			original_tag = SOV
+		}
 
-        visible = {
-            has_country_flag = SOV_siberia_gosplan
-        }
+		visible = {
+			has_country_flag = SOV_siberia_gosplan
+		}
 
-        available = {
-            has_country_flag = SOV_siberia_gosplan_1
-        }
+		available = {
+			has_country_flag = SOV_siberia_gosplan_1
+		}
 
-        fire_only_once = yes
+		fire_only_once = yes
 
-        cost = 150
+		cost = 150
 
-        days_remove = 90
+		days_remove = 90
 
-        modifier = {
-            political_power_factor = -0.1
-            civilian_factory_use = 3
-        }
+		modifier = {
+			political_power_factor = -0.1
+			civilian_factory_use = 3
+		}
 
-        complete_effect = {
-            add_ideas = { SOV_gosplan_siberia_spirit }
-            custom_effect_tooltip = generic_skip_one_line_tt
-            clr_country_flag = SOV_siberia_gosplan_1
-        }
-        
-        remove_effect = {
-            random_owned_state = {
+		complete_effect = {
+			add_ideas = { SOV_gosplan_siberia_spirit }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			clr_country_flag = SOV_siberia_gosplan_1
+		}
+		
+		remove_effect = {
+			random_owned_state = {
 				prioritize = { 408 }
 				add_extra_state_shared_building_slots = 6
 				add_building_construction = {
@@ -1454,104 +3099,104 @@ SOV_gosplan_dec_cat = {
 					instant_build = yes
 				}
 
-                add_building_construction = {
+				add_building_construction = {
 					type = industrial_complex
 					level = 2
 					instant_build = yes
 				}
 			}
-            set_country_flag = SOV_siberia_gosplan_2
-        }
-    }
+			set_country_flag = SOV_siberia_gosplan_2
+		}
+	}
 
-    SOV_gosplan_siberia_2 = {
+	SOV_gosplan_siberia_2 = {
 
-        icon = GFX_SOV_tractor_factories
+		icon = GFX_SOV_tractor_factories
 
-        allowed = {
-            original_tag = SOV
-        }
+		allowed = {
+			original_tag = SOV
+		}
 
-        visible = {
-            has_country_flag = SOV_siberia_gosplan
-        }
+		visible = {
+			has_country_flag = SOV_siberia_gosplan
+		}
 
-        available = {
-            has_country_flag = SOV_siberia_gosplan_2
-        }
+		available = {
+			has_country_flag = SOV_siberia_gosplan_2
+		}
 
-        fire_only_once = yes
+		fire_only_once = yes
 
-        cost = 150
+		cost = 150
 
-        days_remove = 90
+		days_remove = 90
 
-        modifier = {
-            political_power_factor = -0.1
-            civilian_factory_use = 3
-        }
+		modifier = {
+			political_power_factor = -0.1
+			civilian_factory_use = 3
+		}
 
-        complete_effect = {
-            swap_ideas = {
-                remove_idea = SOV_gosplan_siberia_spirit
-                add_idea = SOV_gosplan_siberia_spirit_1
-            }
-            custom_effect_tooltip = generic_skip_one_line_tt
-            clr_country_flag = SOV_siberia_gosplan_2
-        }
-        
-        remove_effect = {
-            random_owned_state = {
+		complete_effect = {
+			swap_ideas = {
+				remove_idea = SOV_gosplan_siberia_spirit
+				add_idea = SOV_gosplan_siberia_spirit_1
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			clr_country_flag = SOV_siberia_gosplan_2
+		}
+		
+		remove_effect = {
+			random_owned_state = {
 				prioritize = { 571 }
 				add_extra_state_shared_building_slots = 4
-                add_building_construction = {
+				add_building_construction = {
 					type = arms_factory
 					level = 3
 					instant_build = yes
 				}
 			}
-            set_country_flag = SOV_siberia_gosplan_3
-        }
-    }
+			set_country_flag = SOV_siberia_gosplan_3
+		}
+	}
 
-    SOV_gosplan_siberia_3 = {
+	SOV_gosplan_siberia_3 = {
 
-        icon = GFX_SOV_tractor_factories
+		icon = GFX_SOV_tractor_factories
 
-        allowed = {
-            original_tag = SOV
-        }
+		allowed = {
+			original_tag = SOV
+		}
 
-        visible = {
-            has_country_flag = SOV_siberia_gosplan
-        }
+		visible = {
+			has_country_flag = SOV_siberia_gosplan
+		}
 
-        available = {
-            has_country_flag = SOV_siberia_gosplan_3
-        }
+		available = {
+			has_country_flag = SOV_siberia_gosplan_3
+		}
 
-        fire_only_once = yes
+		fire_only_once = yes
 
-        cost = 150
+		cost = 150
 
-        days_remove = 90
+		days_remove = 90
 
-        modifier = {
-            political_power_factor = -0.1
-            civilian_factory_use = 3
-        }
+		modifier = {
+			political_power_factor = -0.1
+			civilian_factory_use = 3
+		}
 
-        complete_effect = {
-            swap_ideas = {
-                remove_idea = SOV_gosplan_siberia_spirit_1
-                add_idea = SOV_gosplan_siberia_spirit_2
-            }
-            custom_effect_tooltip = generic_skip_one_line_tt
-            clr_country_flag = SOV_siberia_gosplan_3
-        }
-        
-        remove_effect = {
-            random_owned_state = {
+		complete_effect = {
+			swap_ideas = {
+				remove_idea = SOV_gosplan_siberia_spirit_1
+				add_idea = SOV_gosplan_siberia_spirit_2
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			clr_country_flag = SOV_siberia_gosplan_3
+		}
+		
+		remove_effect = {
+			random_owned_state = {
 				prioritize = { 403 }
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -1560,102 +3205,740 @@ SOV_gosplan_dec_cat = {
 					instant_build = yes
 				}
 
-                add_building_construction = {
+				add_building_construction = {
 					type = arms_factory
 					level = 2
 					instant_build = yes
 				}
 			}
-        }
-    }
+		}
+	}
+}
 
-    a = {
-        days_mission_timeout = 10
-        available = {
-            has_completed_focus = SOV_transpolar_flights
-        }
-    }
+SOV_dual_factories_dec_cat = {
+
+	SOV_leningrad = {
+
+		icon = GFX_SOV_tractor_factories
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 195
+			}
+		}
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		available = {
+			has_completed_focus = SOV_tractor_plants
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+
+		days_remove = 20
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+			195 = {
+				add_dynamic_modifier = {
+					modifier = SOV_dual_factories_dynamic_modifiers
+					scope = SOV
+				}
+				set_state_flag = SOV_dual_factories
+
+				set_variable = { pre_dual_use_civs = building_level@industrial_complex }
+			}
+		}
+	}
+
+	SOV_kharkov = {
+
+		icon = GFX_SOV_tractor_factories
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 221
+			}
+		}
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		available = {
+			has_completed_focus = SOV_tractor_plants
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+
+		days_remove = 20
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		remove_effect = {
+			221 = {
+				add_dynamic_modifier = {
+					modifier = SOV_dual_factories_dynamic_modifiers
+					scope = SOV
+				}
+				set_state_flag = SOV_dual_factories
+
+				set_variable = { pre_dual_use_civs = building_level@industrial_complex }
+			}
+		}
+	}
+
+	SOV_gorky = {
+
+		icon = GFX_SOV_tractor_factories
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 252
+			}
+		}
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		available = {
+			has_completed_focus = SOV_tractor_plants
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+
+		days_remove = 20
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		remove_effect = {
+			252 = {
+				add_dynamic_modifier = {
+					modifier = SOV_dual_factories_dynamic_modifiers
+					scope = SOV
+				}
+				set_state_flag = SOV_dual_factories
+
+				set_variable = { pre_dual_use_civs = building_level@industrial_complex }
+			}
+		}
+	}
+
+	SOV_stalingrad = {
+
+		icon = GFX_SOV_tractor_factories
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 217
+			}
+		}
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		available = {
+			has_completed_focus = SOV_tractor_plants
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+
+		days_remove = 20
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		remove_effect = {
+			217 = {
+				add_dynamic_modifier = {
+					modifier = SOV_dual_factories_dynamic_modifiers
+					scope = SOV
+				}
+				set_state_flag = SOV_dual_factories
+
+				set_variable = { pre_dual_use_civs = building_level@industrial_complex }
+			}
+		}
+	}
+
+	SOV_nizhny_tagil = {
+
+		icon = GFX_SOV_tractor_factories
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 653
+			}
+		}
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		available = {
+			has_completed_focus = SOV_tractor_plants
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+
+		days_remove = 20
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		remove_effect = {
+			653 = {
+				add_dynamic_modifier = {
+					modifier = SOV_dual_factories_dynamic_modifiers
+					scope = SOV
+				}
+				set_state_flag = SOV_dual_factories
+
+				set_variable = { pre_dual_use_civs = building_level@industrial_complex }
+			}
+		}
+	}
+
+	SOV_chelyabinsk = {
+
+		icon = GFX_SOV_tractor_factories
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 572
+			}
+		}
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		available = {
+			has_completed_focus = SOV_tractor_plants
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+
+		days_remove = 20
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		remove_effect = {
+			572 = {
+				add_dynamic_modifier = {
+					modifier = SOV_dual_factories_dynamic_modifiers
+					scope = SOV
+				}
+				set_state_flag = SOV_dual_factories
+
+				set_variable = { pre_dual_use_civs = building_level@industrial_complex }
+			}
+		}
+	}
+
+	SOV_conversion_divider = {
+		icon = generic_text  # Uses a plain text icon instead of a factory
+		cost = 0
+	
+		# Makes it show up, but prevents the player from ever clicking it
+		available = { always = no } 
+		visible = { always = yes }
+	
+		# Leave effects blank
+		effect = {
+
+		}
+	}
+
+	SOV_leningrad_conversion = {
+
+		icon = GFX_SOV_tractor_factories
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 195
+			}
+		}
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		available = {
+			195 = {
+				has_state_flag = SOV_dual_factories
+			}
+			has_war = yes
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+			195 = {
+				remove_dynamic_modifier = {
+					modifier = SOV_dual_factories_dynamic_modifiers
+					scope = SOV
+				}
+				
+				clr_state_flag = SOV_dual_factories
+
+				set_variable = { current_civs = building_level@industrial_complex }
+				set_variable = { eligible_civs = current_civs }
+				subtract_from_variable = { eligible_civs = pre_dual_use_civs }
+				if = {
+					limit = {
+						check_variable = { eligible_civs > 0 }
+					}
+					while_loop_effect = {
+						limit = {
+							check_variable = { eligible_civs > 0 }
+						}
+						remove_building = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+						subtract_from_variable = { eligible_civs = 1}
+					}
+				}
+			}
+		}
+	}
+
+	SOV_kharkov_conversion = {
+
+		icon = GFX_SOV_tractor_factories
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 221
+			}
+		}
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		available = {
+			221 = {
+				has_state_flag = SOV_dual_factories
+			}
+			has_war = yes
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+			221 = {
+				remove_dynamic_modifier = {
+					modifier = SOV_dual_factories_dynamic_modifiers
+					scope = SOV
+				}
+				
+				clr_state_flag = SOV_dual_factories
+
+				set_variable = { current_civs = building_level@industrial_complex }
+				set_variable = { eligible_civs = current_civs }
+				subtract_from_variable = { eligible_civs = pre_dual_use_civs }
+				if = {
+					limit = {
+						check_variable = { eligible_civs > 0 }
+					}
+					while_loop_effect = {
+						limit = {
+							check_variable = { eligible_civs > 0 }
+						}
+						remove_building = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+						subtract_from_variable = { eligible_civs = 1}
+					}
+				}
+			}
+		}
+	}
+
+	SOV_gorky_conversion = {
+
+		icon = GFX_SOV_tractor_factories
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 252
+			}
+		}
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		available = {
+			252 = {
+				has_state_flag = SOV_dual_factories
+			}
+			has_war = yes
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+			252 = {
+				remove_dynamic_modifier = {
+					modifier = SOV_dual_factories_dynamic_modifiers
+					scope = SOV
+				}
+				
+				clr_state_flag = SOV_dual_factories
+
+				set_variable = { current_civs = building_level@industrial_complex }
+				set_variable = { eligible_civs = current_civs }
+				subtract_from_variable = { eligible_civs = pre_dual_use_civs }
+				if = {
+					limit = {
+						check_variable = { eligible_civs > 0 }
+					}
+					while_loop_effect = {
+						limit = {
+							check_variable = { eligible_civs > 0 }
+						}
+						remove_building = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+						subtract_from_variable = { eligible_civs = 1}
+					}
+				}
+			}
+		}
+	}
+
+	SOV_stalingrad_conversion = {
+
+		icon = GFX_SOV_tractor_factories
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 217
+			}
+		}
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		available = {
+			217 = {
+				has_state_flag = SOV_dual_factories
+			}
+			has_war = yes
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+			217 = {
+				remove_dynamic_modifier = {
+					modifier = SOV_dual_factories_dynamic_modifiers
+					scope = SOV
+				}
+				
+				clr_state_flag = SOV_dual_factories
+
+				set_variable = { current_civs = building_level@industrial_complex }
+				set_variable = { eligible_civs = current_civs }
+				subtract_from_variable = { eligible_civs = pre_dual_use_civs }
+				if = {
+					limit = {
+						check_variable = { eligible_civs > 0 }
+					}
+					while_loop_effect = {
+						limit = {
+							check_variable = { eligible_civs > 0 }
+						}
+						remove_building = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+						subtract_from_variable = { eligible_civs = 1}
+					}
+				}
+			}
+		}
+	}
+
+	SOV_nizhny_tagil_conversion = {
+
+		icon = GFX_SOV_tractor_factories
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 653
+			}
+		}
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		available = {
+			653 = {
+				has_state_flag = SOV_dual_factories
+			}
+			has_war = yes
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+			653 = {
+				remove_dynamic_modifier = {
+					modifier = SOV_dual_factories_dynamic_modifiers
+					scope = SOV
+				}
+				
+				clr_state_flag = SOV_dual_factories
+
+				set_variable = { current_civs = building_level@industrial_complex }
+				set_variable = { eligible_civs = current_civs }
+				subtract_from_variable = { eligible_civs = pre_dual_use_civs }
+				if = {
+					limit = {
+						check_variable = { eligible_civs > 0 }
+					}
+					while_loop_effect = {
+						limit = {
+							check_variable = { eligible_civs > 0 }
+						}
+						remove_building = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+						subtract_from_variable = { eligible_civs = 1}
+					}
+				}
+			}
+		}
+	}
+
+	SOV_chelyabinsk_conversion = {
+
+		icon = GFX_SOV_tractor_factories
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 572
+			}
+		}
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		available = {
+			572 = {
+				has_state_flag = SOV_dual_factories
+			}
+			has_war = yes
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+			572 = {
+				remove_dynamic_modifier = {
+					modifier = SOV_dual_factories_dynamic_modifiers
+					scope = SOV
+				}
+				
+				clr_state_flag = SOV_dual_factories
+
+				set_variable = { current_civs = building_level@industrial_complex }
+				set_variable = { eligible_civs = current_civs }
+				subtract_from_variable = { eligible_civs = pre_dual_use_civs }
+				if = {
+					limit = {
+						check_variable = { eligible_civs > 0 }
+					}
+					while_loop_effect = {
+						limit = {
+							check_variable = { eligible_civs > 0 }
+						}
+						remove_building = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+						subtract_from_variable = { eligible_civs = 1}
+					}
+				}
+			}
+		}
+	}
 }
 
 SOV_industrial_evacuation_dec_cat = {
 
-    SOV_industrial_evacuation = {
+	SOV_industrial_evacuation = {
 
-        icon = generic_construction
+		icon = generic_construction
 
-        allowed = {
-            original_tag = SOV
-        }
-
-        days_mission_timeout = 10
-
-        state_target = yes
-
-        on_map_mode = map_only
-
-        target_root_trigger = {
+		allowed = {
 			original_tag = SOV
-            has_war = yes
 		}
 
-        target_trigger = {
+		days_mission_timeout = 10
+
+		state_target = yes
+
+		on_map_mode = map_only
+
+		target_root_trigger = {
+			original_tag = SOV
+			has_war = yes
+		}
+
+		target_trigger = {
 			FROM = {
 				is_core_of = ROOT
 				is_controlled_by = ROOT  ###THIS MIGHT BE THE PROBLEM THE STATE NEEDS TO BE ONLY CONTROLLED NOT FULLY CONTROLLED FOR IT TO EVAC
 				is_on_continent = europe
-                OR = {
-                    any_neighbor_state = {
-                        NOT = {
-                            is_controlled_by = ROOT
-                        }
-                    }
-                    any_neighbor_state = {
-                        any_neighbor_state = {
-                            NOT = { 
-                                is_controlled_by = ROOT 
-                            }
-                        }
-                    }
-                }
+				OR = {
+					any_neighbor_state = {
+						NOT = {
+							is_controlled_by = ROOT
+						}
+					}
+					any_neighbor_state = {
+						any_neighbor_state = {
+							NOT = { 
+								is_controlled_by = ROOT 
+							}
+						}
+					}
+				}
 
-                OR = {
-                    industrial_complex > 0
-                    arms_factory > 0
-                }
-                NOT = {
-                    has_state_flag = SOV_evacuation_disrupted   ### THIS MIGHT BE DOING SOME WEIRD SHIT ASWELL
-                }
+				OR = {
+					industrial_complex > 0
+					arms_factory > 0
+				}
+				NOT = {
+					has_state_flag = SOV_evacuation_disrupted   ### THIS MIGHT BE DOING SOME WEIRD SHIT ASWELL
+				}
 			}
 		}
 
-        available = {
-            FROM = {
-                NOT = {
-                    is_controlled_by = ROOT
-                }
-            }
-        }
+		available = {
+			FROM = {
+				NOT = {
+					is_controlled_by = ROOT
+				}
+			}
+		}
 
-        complete_effect = {
-            
-        }
-    
-        timeout_effect = {
-            if = {
-                limit = {
-                    FROM = {
-                        industrial_complex > 0
-                    }
-                }
+		complete_effect = {
+			
+		}
+	
+		timeout_effect = {
+			if = {
+				limit = {
+					FROM = {
+						industrial_complex > 0
+					}
+				}
 
-                FROM = {
-                    remove_building = {
-                        type = industrial_complex
-                        level = 1
-                    }
-                }
+				FROM = {
+					remove_building = {
+						type = industrial_complex
+						level = 1
+					}
+				}
 
-                random_state = {
+				random_state = {
 					limit = {
 						OR = {
 							state = 40
@@ -1681,23 +3964,23 @@ SOV_industrial_evacuation_dec_cat = {
 						instant_build = yes
 					}
 				}
-            }
+			}
 
-            if = {
-                limit = {
-                    FROM = {
-                        arms_factory > 0
-                    }
-                }
+			if = {
+				limit = {
+					FROM = {
+						arms_factory > 0
+					}
+				}
 
-                FROM = {
-                    remove_building = {
-                        type = arms_factory
-                        level = 1
-                    }
-                }
+				FROM = {
+					remove_building = {
+						type = arms_factory
+						level = 1
+					}
+				}
 
-                random_state = {
+				random_state = {
 					limit = {
 						OR = {
 							state = 40
@@ -1723,35 +4006,35 @@ SOV_industrial_evacuation_dec_cat = {
 						instant_build = yes
 					}
 				}
-            }
+			}
 
-            #activate_mission = SOV_industrial_evacuation
+			#activate_mission = SOV_industrial_evacuation
 
-            #hidden_effect = {
-            #   if = {
-            #    limit = {
-            #           FROM = {
-            #                OR = {
-            #                   industrial_complex > 0
-            #                   arms_factory > 0
-            #               }
-            #                is_controlled_by = ROOT
-            #            }
-            #        }
-            #        activate_mission = SOV_industrial_evacuation ### THIS
-            #    }
-            #}
-        }
-    }
+			#hidden_effect = {
+			#   if = {
+			#    limit = {
+			#           FROM = {
+			#                OR = {
+			#                   industrial_complex > 0
+			#                   arms_factory > 0
+			#               }
+			#                is_controlled_by = ROOT
+			#            }
+			#        }
+			#        activate_mission = SOV_industrial_evacuation ### THIS
+			#    }
+			#}
+		}
+	}
 
 
-    sov_test_1 = {
+	sov_test_1 = {
 
-        available = {
-            192 = {
-                has_state_flag = SOV_evacuation_disrupted
-                #has_state_flag = sov_larp
-            }
-        }
-    }
+		available = {
+			192 = {
+				has_state_flag = SOV_evacuation_disrupted
+				#has_state_flag = sov_larp
+			}
+		}
+	}
 }

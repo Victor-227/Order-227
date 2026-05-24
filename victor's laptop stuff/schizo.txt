@@ -114,3 +114,6 @@ REMVOVE SPYS REDUCING PLANNING!!!!!!!!!
 SOVIET TRAIN INDUSTRIAL CONCERN CAN AFFECT THE EVACS DEFINETLY IMPLEMENT THIS BUT NEEDS TO BE UPGRADED WITH THE NATIONAL SPECIALISTS
 
 NNEED TO UNDERSTAND on_state_control_changed HOW it works so I can make soviets not evac after losing a state
+
+
+ledger stuff, swapping characters to ideas, the ledger actually works but the sprite doesn't show up for some reason
