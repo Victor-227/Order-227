@@ -583,7 +583,6 @@ country_event = {
 
 				transfer_advisors_to_vichy = yes
 
-				load_focus_tree = vichy_french_focus
 				FRA = {
 					transfer_units_fraction = {
 						target = event_target:vichy_france

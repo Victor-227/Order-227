@@ -16,7 +16,9 @@
  concentrated_industry_category_research:0 "£research_speed_texticon  Concentrated Technology Research Speed"
  BLT_neutrality:0 "Baltics"
  generic_industrial_conglomerate:0 "Industrial Conglomerate"
- tank_modules_research:0 "£research_speed_texticon Tank Modules Research Speed"
+ tank_modules_research:0 "£research_speed_texticon Tank Module Research Speed"
+ financial_specialist:0 "Financial Specialist"
+ financial_genius:0 "Financial Genius"
 
  # Machine Guns & Anti-Air
  additional_machine_guns_tech:0 "Additional Machineguns"

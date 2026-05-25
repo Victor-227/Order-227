@@ -6,7 +6,7 @@ NDefines.NDiplomacy.BASE_SEND_ATTACHE_CP_COST = 0
 
 NDefines.NCountry.REINFORCEMENT_MANPOWER_DELIVERY_SPEED = 50.0 --316
 NDefines.NCountry.BASE_MAX_COMMAND_POWER = 100.0 -- 442
-NDefines.NCountry.AIR_VOLUNTEER_PLANES_RATIO = 0 --444
+NDefines.NCountry.AIR_VOLUNTEER_PLANES_RATIO = 0 -- 444
 NDefines.NCountry.AIR_VOLUNTEER_BASES_CAPACITY_LIMIT = 0 -- 445
 NDefines.NCountry.SPECIAL_FORCES_CAP_BASE = 0 -- 447
 NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 10000 -- 448
@@ -61,5 +61,7 @@ NDefines.NAir.AIR_DEPLOYMENT_DAYS = 0
 NDefines.NAir.DISRUPTION_FACTOR = 2.5
 
 NDefines.NNavy.TRAINING_ACCIDENT_CHANCES = 0
+
+NDefines.NCharacter.DEFAULT_PP_COST_FOR_MILITARY_ADVISOR = 150 -- When an advisor does not have cost assigned this is the default used -- 4171
 
 NDefines.NDoctrines.TRAINING_MASTERY_GAIN_FACTOR = 0

@@ -60,6 +60,10 @@ characters={
 				original_tag  = FRA
 			}
 			available  = {
+				or  = {
+					has_completed_focus  = FRA_leftist_rhetoric 
+					has_completed_focus  = FRA_invite_communist_ministers 
+				}
 				not  = {
 					has_country_leader  = {
 						character  = FRA_philippe_petain
@@ -188,11 +192,10 @@ characters={
 					has_country_flag = vichy_france
 				}
 			}
-			cost = 100.000
 			traits = {
 				army_chief_offensive_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 7
 			}
@@ -232,22 +235,18 @@ characters={
 				original_tag = FRA
 			}
 			available = {
-				OR = {
-					has_completed_focus = FRA_defensive_focus
-					has_country_flag = vichy_france
-				}
+				has_completed_focus = FRA_defensive_focus
 			}
-			cost = 100.000
 			traits = {
 				army_chief_defensive_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 7
 			}
 		}
 		advisor={
-			cost = 100
+			cost = 150
 			slot = theorist
 			idea_token = maxime_weygand
 			ledger = army
@@ -255,13 +254,10 @@ characters={
 				original_tag = FRA
 			}
 			available = {
-				OR = {
-					has_completed_focus = FRA_defensive_focus
-					has_country_flag = vichy_france
-				}
+				has_completed_focus = FRA_defensive_focus
 			}
 			traits = {
-				military_theorist
+				grand_battle_plan_expert
 			}
 			ai_will_do = {
 				base = 0.5
@@ -298,7 +294,7 @@ characters={
 			traits = {
 				army_chief_maneuver_1
 			}
-			cost =  50
+			cost = 100
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -360,7 +356,7 @@ characters={
 			}
 		}
 		advisor={
-			cost = 100
+			cost = 200
 			slot = theorist
 			idea_token = charles_de_gaulle
 			ledger = army
@@ -417,7 +413,7 @@ characters={
 			traits = {
 				army_commando_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -445,7 +441,7 @@ characters={
 			}
 		}
 		advisor={
-			cost = 100
+			cost = 150
 			slot = theorist
 			idea_token = henri_giraud
 			ledger = army
@@ -498,7 +494,7 @@ characters={
 			traits = {
 				army_logistics_1
 			}
-			cost =  50
+			cost =  100
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -599,7 +595,7 @@ characters={
 			traits = {
 				navy_chief_decisive_battle_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -675,7 +671,7 @@ characters={
 			traits = {
 				navy_screen_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -722,7 +718,7 @@ characters={
 			traits = {
 				navy_capital_ship_1
 			}
-			cost =  50
+			cost =  100
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -854,7 +850,7 @@ characters={
 			traits = {
 				army_chief_offensive_1
 			}
-			cost =  50
+			cost = 100
 			ai_will_do = {
 				factor = 1.000
 				modifier = {
@@ -881,7 +877,7 @@ characters={
 			traits = {
 				army_chief_defensive_1
 			}
-			cost =  50
+			cost = 100
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -909,7 +905,7 @@ characters={
 			traits = {
 				navy_chief_naval_aviation_1
 			}
-			cost =  50
+			cost =  100
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -932,7 +928,7 @@ characters={
 			traits = {
 				navy_chief_commerce_raiding_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -958,7 +954,7 @@ characters={
 			traits = {
 				air_chief_ground_support_1
 			}
-			cost =  50
+			cost =  100
 			ai_will_do = {
 				factor = 2
 			}
@@ -981,7 +977,7 @@ characters={
 			traits = {
 				air_chief_all_weather_1
 			}
-			cost =  50
+			cost =  100
 			ai_will_do = {
 				factor = 0.5
 			}
@@ -1004,7 +1000,7 @@ characters={
 			traits = {
 				air_chief_reform_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1
 			}
@@ -1122,7 +1118,7 @@ characters={
 			traits = {
 				air_air_superiority_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1146,7 +1142,7 @@ characters={
 			traits = {
 				air_tactical_bombing_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1170,7 +1166,7 @@ characters={
 			traits = {
 				navy_fleet_logistics_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1194,7 +1190,7 @@ characters={
 			traits = {
 				air_air_combat_training_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1218,7 +1214,7 @@ characters={
 			traits = {
 				army_cavalry_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1246,21 +1242,12 @@ characters={
 			allowed  = {
 				original_tag  = FRA
 			}
+			visible = {
+				NOT = {
+					has_completed_focus = FRA_form_the_popular_front
+				}
+			}
 			available  = {
-				NOT  = {
-					has_country_leader  = {
-						character  = FRA_philippe_petain
-						ruling_only  = yes 
-					}
-				}
-				if  = {
-					limit  = {
-						has_dlc = "Man the Guns"
-					}
-					NOT  = {
-						has_autonomy_state  = autonomy_supervised_state
-					}
-				}
 			}
 			traits  = {
 				democratic_reformer 
@@ -1298,6 +1285,8 @@ characters={
 			}
 			available  = {
 				OR = {
+					has_completed_focus  = FRA_right_wing_rhetoric 
+					has_completed_focus  = FRA_utilize_the_leagues 
 					has_focus_tree  = vichy_french_focus
 				}
 				IF  = {
@@ -1387,8 +1376,6 @@ characters={
 				original_tag  = FRA
 			}
 			available  = {
-				has_completed_focus  = FRA_confirm_eastern_commitments 
-				has_government  = democratic 
 			}
 			cost  = 75.000
 			traits  = {
@@ -1417,7 +1404,6 @@ characters={
 			}
 			available  = {
 				has_completed_focus  = FRA_buy_time 
-				has_government  = democratic 
 			}
 			cost  = 75.000
 			traits  = {
@@ -1453,6 +1439,10 @@ characters={
 			}
 			available  = {
 				OR = {
+					OR = {
+						has_completed_focus = FRA_integralism 
+						has_completed_focus = FRA_orleanist_restoration 
+					}
 					OR  = {
 						has_government  = fascism 
 						has_government  = neutrality 
@@ -1492,6 +1482,7 @@ characters={
 			}
 			available  = {
 				OR = {
+					has_completed_focus  = FRA_national_regeneration 
 					has_government  = fascism 
 				}
 			}
@@ -1519,11 +1510,6 @@ characters={
 			idea_token = FRA_pierre_pucheu
 			allowed  = {
 				original_tag  = FRA
-			}
-			available  = {
-				not  = {
-					has_government  = communism 
-				}
 			}
 			cost  = 150.000
 			traits  = {
@@ -1656,8 +1642,11 @@ characters={
 			allowed  = {
 				original_tag  = FRA
 			}
+			available  = {
+				has_completed_focus  = FRA_form_the_popular_front 
+			}
 			traits  = {
-				financial_expert 
+				financial_specialist
 			}
 			on_add  = {
 			}
@@ -1706,8 +1695,7 @@ characters={
 			}
 		}
 		advisor={
-			cost = 150
-			slot = industrial_person
+			slot = political_advisor
 			idea_token = FRA_zivony_peshkov
 			allowed  = {
 				original_tag  = FRA
@@ -1733,8 +1721,7 @@ characters={
 			}
 		}
 		advisor={
-			cost = 150
-			slot = industrial_person
+			slot = political_advisor
 			idea_token = FRA_felix_gouin
 			allowed  = {
 				original_tag  = FRA
@@ -1760,8 +1747,7 @@ characters={
 			}
 		}
 		advisor={
-			cost = 150
-			slot = industrial_person
+			slot = political_advisor
 			idea_token = FRA_charles_tillon
 			allowed  = {
 				original_tag  = FRA

@@ -14,7 +14,6 @@
 		x = 0
 	}
 
-	
 	default = no
 	focus = {
 		id = FRA_devalue_the_franc
@@ -37,7 +36,7 @@
 		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = yes
+		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			add_timed_idea = {
@@ -66,7 +65,7 @@
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = yes
+		available_if_capitulated = no
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
@@ -130,7 +129,7 @@
 	
 			cancel_if_invalid = yes
 			continue_if_invalid = no
-			available_if_capitulated = yes
+			available_if_capitulated = no
 	
 			search_filters = { FOCUS_FILTER_STABILITY }
 			completion_reward = {
@@ -144,7 +143,7 @@
 					level = 2
 					instant_build = yes
 				}
-			    }
+				}
 			
 			random_owned_state = {
 					prioritize= {773}
@@ -170,7 +169,7 @@
 		relative_position_id = FRA_devalue_the_franc
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = yes
+		available_if_capitulated = no
 		bypass = {
 			
 		}
@@ -188,7 +187,7 @@
 				}
 				set_state_flag = FRA_colonial_industry_target
 			}
-		    random_owned_state = {
+			random_owned_state = {
 				prioritize = {660}
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -281,7 +280,7 @@
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = yes
+		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			every_owned_state = {
@@ -317,7 +316,7 @@
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = yes
+		available_if_capitulated = no
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
@@ -354,7 +353,7 @@
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = yes
+		available_if_capitulated = no
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
@@ -390,7 +389,7 @@
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = yes
+		available_if_capitulated = no
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
@@ -420,7 +419,7 @@
 			factor = 1
 		}
 
-		available_if_capitulated = yes
+		available_if_capitulated = no
 
 		bypass = {
 			
@@ -455,7 +454,7 @@
 		relative_position_id = FRA_military_factories
 		cost = 5
 
-		available_if_capitulated = yes
+		available_if_capitulated = no
 
 		ai_will_do = {
 			factor = 1
@@ -477,7 +476,7 @@
 		relative_position_id = FRA_colonial_industry
 		cost = 5
 
-		available_if_capitulated = yes
+		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_research_slot = 1
@@ -509,7 +508,7 @@
 
 		cancel_if_invalid = no
 		continue_if_invalid = yes
-		available_if_capitulated = yes
+		available_if_capitulated = no
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
@@ -548,7 +547,7 @@
 		y = 1
 		cost = 5
 		prerequisite = { focus = FRA_begin_rearmament }
-		available_if_capitulated = yes
+		available_if_capitulated = no
 		relative_position_id = FRA_begin_rearmament
 		ai_will_do = {
 			factor = 1
@@ -556,7 +555,7 @@
 		completion_reward = {
 			custom_effect_tooltip = available_chief_of_army
 			show_ideas_tooltip = maxime_weygand
-                    add_equipment_to_stockpile = {
+					add_equipment_to_stockpile = {
 					type = infantry_equipment
 					amount = 10000
 					producer = FRA
@@ -589,7 +588,7 @@
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = yes
+		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_doctrine_cost_reduction = {
@@ -609,7 +608,7 @@
 		relative_position_id = FRA_methodical_battle
 		cost = 5
 
-		available_if_capitulated = yes
+		available_if_capitulated = no
 
 		completion_reward = {
 			add_ideas = FRA_fortification_focus
@@ -665,7 +664,7 @@
 		
 		prerequisite = { focus = FRA_army_reform}
 		mutually_exclusive = { }
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -677,7 +676,7 @@
 			}
 			OR = {
 				has_tech = improved_medium_tank_chassis
-			    has_tech = improved_heavy_tank_chassis
+				has_tech = improved_heavy_tank_chassis
 			}
 		}
 		
@@ -694,7 +693,7 @@
 			custom_effect_tooltip = FRA_tank_spawn_in_tt
 			if={
 				limit = {
-                has_tech = improved_medium_tank_chassis
+				has_tech = improved_medium_tank_chassis
 			  }
 			
 			  division_template = {
@@ -742,7 +741,7 @@
 			
 			else={
 				limit = {
-                has_tech = improved_heavy_tank_chassis
+				has_tech = improved_heavy_tank_chassis
 			  }
 			
 			  division_template = {
@@ -818,7 +817,7 @@
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = yes
+		available_if_capitulated = no
 
 		completion_reward = {
 			army_experience = 15
@@ -855,7 +854,7 @@
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = yes
+		available_if_capitulated = no
 
 		completion_reward = {
 			add_ideas = { special_forces }
@@ -890,7 +889,7 @@
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = yes
+		available_if_capitulated = no
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -918,7 +917,7 @@
 		y = 1
 		cost = 5
 		relative_position_id = FRA_begin_rearmament
-		available_if_capitulated = yes
+		available_if_capitulated = no
 		prerequisite = { focus = FRA_begin_rearmament }
 		ai_will_do = {
 			factor = 0.2
@@ -954,7 +953,7 @@
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = yes
+		available_if_capitulated = no
 
 		completion_reward = {
 			custom_effect_tooltip = available_theorist
@@ -989,7 +988,7 @@
 		relative_position_id = FRA_mechanized_focus
 		cost = 5
 
-		available_if_capitulated = yes
+		available_if_capitulated = no
 
 		completion_reward = {
 			army_experience = 15
@@ -1003,9 +1002,9 @@
 		x = 0
 		y = 1
 		relative_position_id = FRA_motorized_focus
-		cost = 10
+		cost = 5
 
-		available_if_capitulated = yes
+		available_if_capitulated = no
 
 		completion_reward = {
 			army_experience = 15
@@ -1026,9 +1025,9 @@
 		x = -2
 		y = 1
 		relative_position_id = FRA_light_medium_armor
-		cost = 10
+		cost = 5
 
-		available_if_capitulated = yes
+		available_if_capitulated = no
 
 		available = {
 			NOT = { has_idea = FRA_disjointed_government }
@@ -1066,9 +1065,8 @@
 		icon = GFX_goal_generic_intelligence_exchange
 		x = 18
 		y = 0
-		
 
-		prerequisite = {}
+		prerequisite = { }
 		mutually_exclusive = { focus = FRA_revive_the_national_bloc }
 		cost = 5
 
@@ -1080,17 +1078,9 @@
 			}
 		}
 
-		available = {
-			
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = yes
+		available_if_capitulated = no
 
 		search_filters = { FOCUS_FILTER_POLITICAL  }
 		completion_reward = {
@@ -1105,20 +1095,19 @@
 				}
 				promote_leader = yes
 			}
-		add_ideas={FRA_growth}	
+			add_ideas = FRA_growth
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = FRA_vincent_auriol
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = FRA_roger_salengro
 		}
 	}
-
-
-
-
-
-	
-
-
-
-
-
 
 	focus = {
 		id = FRA_reconciliation
@@ -1181,7 +1170,7 @@
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = yes
+		available_if_capitulated = no
 
 		completion_reward = {
 			random_owned_state = {
@@ -1245,7 +1234,7 @@
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = yes
+		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			add_ideas = { FRA_matignon_agreements }
@@ -1286,7 +1275,7 @@
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = yes
+		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			swap_ideas = {
@@ -1322,7 +1311,7 @@
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = yes
+		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
@@ -1381,7 +1370,7 @@
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = yes
+		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			random_owned_state = {
@@ -1436,7 +1425,7 @@
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = yes
+		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			custom_effect_tooltip = test_tt
@@ -1472,7 +1461,7 @@
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = yes
+		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			add_ideas = { FRA_dirigisme }
@@ -1505,7 +1494,7 @@
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = yes
+		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY  }
 		completion_reward = {
 			random_owned_state = {
@@ -1689,7 +1678,7 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-            swap_ideas = {
+			swap_ideas = {
 				remove_idea = FRA_expanded_citizenship_1
 				add_idea = FRA_expanded_citizenship_2
 			}
@@ -1722,6 +1711,7 @@
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 		completion_reward = {add_ideas=FRA_agreement}
 	}
+
 	focus = {
 		id = FRA_review_foreign_policy
 		icon = GFX_goal_support_democracy
@@ -1749,7 +1739,7 @@
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = yes
+		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_political_power = 150
@@ -1781,7 +1771,7 @@
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = yes
+		available_if_capitulated = no
 
 		completion_reward = {
 			army_experience = 35
@@ -1808,10 +1798,10 @@
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = yes
+		available_if_capitulated = no
 
 		completion_reward = {
-			army_experience = 15
+			army_experience = 30
 		}
 	}
 	
@@ -1905,7 +1895,7 @@
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = yes
+		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_MANPOWER }
 		completion_reward = {
 			add_ideas = FRA_foreign_guest_workers_1
@@ -1974,20 +1964,17 @@
 			factor = 1
 		}
 
-		available = {
-			
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = yes
+		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_STABILITY }
 		completion_reward = {
-			add_war_support = 0.10
+			add_stability = 0.10
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = georges_bonnet
 		}
 	}
 	focus = {
@@ -2003,7 +1990,7 @@
 		relative_position_id = FRA_buy_time
 		cost = 5
 
-		available_if_capitulated = yes
+		available_if_capitulated = no
 
 		ai_will_do = {
 			factor = 1
@@ -2039,7 +2026,7 @@
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = yes
+		available_if_capitulated = no
 
 		completion_reward = {
 			add_ideas = FRA_tank_focus1
@@ -2074,7 +2061,7 @@
 		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = yes
+		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_country_leader_trait = tenacious_negotiator
@@ -2107,7 +2094,7 @@
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = yes
+		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			add_tech_bonus = {
@@ -2145,7 +2132,7 @@
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = yes
+		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_STABILITY }
 		completion_reward = {
 			add_stability = 0.15
@@ -2186,7 +2173,7 @@
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = yes
+		available_if_capitulated = no
 
 		completion_reward = {
 			add_popularity = { ideology = democratic popularity = 0.30 }
@@ -2229,7 +2216,7 @@
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = yes
+		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			add_ideas = { FRA_market_dynamism }
@@ -2260,7 +2247,7 @@
 		bypass = {}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = yes
+		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			add_ideas = { FRA_agricultural_protectionism }
@@ -2298,7 +2285,7 @@
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = yes
+		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			custom_effect_tooltip = test_tt
@@ -2334,7 +2321,7 @@
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = yes
+		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			add_ideas = { FRA_entrepeneurship }
@@ -2509,14 +2496,14 @@
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		cancel_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 		completion_reward = {
 			add_ideas= {
 				tot_economic_mobilisation
-		    }
+			}
 		}
 	}
 	focus = {
@@ -2636,11 +2623,11 @@
 
 		completion_reward = {
 			random_owned_state = {
-		        prioritize = {539}
+				prioritize = {539}
 				add_extra_state_shared_building_slots = 3
 			}
 			random_owned_state = {
-		        prioritize = {773}
+				prioritize = {773}
 				add_extra_state_shared_building_slots = 3
 			}
 		}
@@ -2671,7 +2658,7 @@
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = yes
+		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_STABILITY }
 		completion_reward = {
 			add_stability = 0.1
@@ -2707,12 +2694,6 @@
 			}
 		}
 	}
-
-	
-	
-	
-	
-
 	##### END ###########
 
 	focus = {
@@ -2751,7 +2732,7 @@
 					}
 				set_state_flag = FRA_naval_rearmament_2NB
 			}
-	    }
+		}
 	}
 	
 	focus = {
@@ -2933,7 +2914,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		completion_reward = {
-		    add_ideas = FRA_form_the_provisional_government_of_the_republic_2
+			add_ideas = FRA_form_the_provisional_government_of_the_republic_2
 		}
 	}
 }

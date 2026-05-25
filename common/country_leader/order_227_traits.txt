@@ -1,5 +1,20 @@
 leader_traits = {
 
+	#new financial stuff
+	financial_specialist = {
+		sprite = 10
+		random = no
+
+		consumer_goods_expected_value = -0.025
+	}
+
+	financial_genius = {
+		sprite = 10
+		random = no
+
+		consumer_goods_expected_value = -0.075
+	}
+
 	#Calinescu
 	man_of_steel = {
 		random = no
@@ -33,6 +48,7 @@ leader_traits = {
 	director_of_the_siguranta = {
 		random = no
 		sprite = 15
+
 		operative_slot = 1
 		agency_upgrade_time = -0.2
 		civilian_intel_to_others = -0.2
@@ -44,20 +60,39 @@ leader_traits = {
 	poet = {
 		random = no
 		sprite = 13
+
 		stability_factor = 0.06
 		stability_weekly = 0.002
 	}
 
 	generic_industrial_conglomerate = {
 		random = no
+
 		production_speed_buildings_factor = 0.05
 		industrial_capacity_factory = 0.05
 		industrial_capacity_dockyard = 0.05
 	}
 
+	GER_rwim_1 = {
+		random = no
+
+		consumer_goods_expected_value = -0.02
+		production_speed_industrial_complex_factor = 0.05
+	}
+
+	GER_rwim_2 = {
+		random = no
+
+		consumer_goods_expected_value = -0.02
+		production_speed_industrial_complex_factor = 0.1
+		production_speed_buildings_factor = 0.03
+		global_building_slots = 2
+	}
+
 	GER_wirtschaftsminister_schacht = {
 		sprite = 10
 		random = no
+
 		consumer_goods_expected_value = -0.03
 		production_speed_industrial_complex_factor = 0.15
 		production_speed_arms_factory_factor = -0.1
@@ -66,28 +101,16 @@ leader_traits = {
 	GER_wirtschaftsminister_schacht_42 = {
 		sprite = 10
 		random = no
+
 		consumer_goods_expected_value = -0.05
 		production_factory_start_efficiency_factor = 0.075
 		line_change_production_efficiency_factor = 0.075
 	}
 
-	GER_rwim_1 = {
-		random = no
-		consumer_goods_expected_value = -0.02
-		production_speed_industrial_complex_factor = 0.05
-	}
-
-	GER_rwim_2 = {
-		random = no
-		consumer_goods_expected_value = -0.02
-		production_speed_industrial_complex_factor = 0.1
-		production_speed_buildings_factor = 0.03
-		global_building_slots = 2
-	}
-
 	GER_wirtschaftsminister_todt = {
 		sprite = 10
 		random = no
+
 		production_speed_infrastructure_factor = 0.25
 		production_speed_rail_way_factor = 0.15
 		production_speed_supply_node_factor = 0.3
@@ -98,6 +121,7 @@ leader_traits = {
 	GER_wirtschaftsminister_todt_42 = {
 		sprite = 10
 		random = no
+
 		production_speed_infrastructure_factor = 0.15
 		production_speed_rail_way_factor = 0.2
 		production_speed_supply_node_factor = 0.35
@@ -110,6 +134,7 @@ leader_traits = {
 	GER_wirtschaftsminister_goering = {
 		sprite = 10
 		random = no
+
 		industrial_capacity_factory = 0.1
 		industrial_capacity_dockyard = 0.1
 		production_speed_arms_factory_factor = 0.1
@@ -121,6 +146,7 @@ leader_traits = {
 	GER_wirtschaftsminister_goering_42 = {
 		sprite = 10
 		random = no
+
 		industrial_capacity_factory = 0.125
 		industrial_capacity_dockyard = 0.125
 		production_speed_arms_factory_factor = 0.05
@@ -132,6 +158,7 @@ leader_traits = {
 	GER_wirtschaftsminister_speer = {
 		sprite = 10
 		random = no
+
 		production_factory_efficiency_gain_factor = 0.075
 		production_factory_max_efficiency_factor = 0.05
 		production_factory_start_efficiency_factor = 0.075
@@ -141,6 +168,7 @@ leader_traits = {
 	GER_wirtschaftsminister_speer_42 = {
 		sprite = 10
 		random = no
+
 		production_factory_efficiency_gain_factor = 0.1
 		production_factory_max_efficiency_factor = 0.1
 		production_factory_start_efficiency_factor = 0.1

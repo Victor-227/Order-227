@@ -1267,7 +1267,11 @@ ideas = {
 
 	industrial_output = {
 
-		ROM_ROMLOC = {
+		ROM_ROMLOC_1 = {
+
+			name = "ROMLOC"
+
+			picture = ROM_ROMLOC
 
 			allowed = {
 				original_tag = ROM
