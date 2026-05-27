@@ -1,0 +1,48 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "CAN_yngeco"
+		position = { x = 0 y = 0}	
+		size = { width = 700 height= 600 }
+		orientation = center
+		origo = center
+		fade_time = 100
+		moveable = yes
+		fade_type = linear
+		click_to_front = no
+		clipping = no
+		
+		background = {
+			name = "background"
+			quadTextureSprite="GFX_can_background"
+		}
+
+		iconType ={
+			name ="production_header_bg"
+			spriteType = "GFX_can_map"
+			position = { x= 160 y = 7 }
+			Orientation = "UPPER_LEFT"
+		}	
+
+
+		iconType ={
+			name ="test1"
+			spriteType = "GFX_test1"
+			position = { x= 206 y = 200}
+			Orientation = "UPPER_LEFT"
+		}	
+
+		#instantTextboxType = {
+		#	name = "political_title"
+		#	position = { x = 45 y = 8 }
+		#	font = "hoi_36header"
+		#	borderSize = {x = 0 y = 0}
+		#	text = "POLITICAL_POLITICAL"
+		#	maxWidth = 400
+		#	maxHeight = 20
+		#	fixedsize = yes
+		#}
+	}
+}
+
+

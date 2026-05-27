@@ -38,6 +38,7 @@ recruit_character = CAN_newton_wesley_rowell
 recruit_character = CAN_james_ilsley
 recruit_character = CAN_leo_richer_lafleche
 recruit_character = CAN_r_b_bennett
+recruit_character = CAN_truck_freak
 
 
 IF = {
@@ -206,4 +207,10 @@ if = {
 	}	
 }
 
-set_variable = { unemployment = 5 }
+set_variable = { unemployment = 30 }
+set_variable = { fiscal_health = 25}
+set_variable = { quebec = 10}
+set_variable = { east = 10}
+set_variable = { west = 10}
+set_variable = { north = 10}
+set_variable = { south = 30}

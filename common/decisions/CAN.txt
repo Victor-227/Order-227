@@ -13,7 +13,89 @@ CAN_eco1 = {
         add_stability = 0.1
     }
 }
+CAN_house_of_commons_36 = {
+    available = { date > 1937.6.11}
+    activation = {has_completed_focus = CAN_rowell_sirois_commission}
+        days_mission_timeout = 365 
+        cancel_trigger = {
+            has_war = yes
+        }
+        icon = GFX_decision_mission_icon
+            selectable_mission = no 
+            if = { var_unemployment < 20
+            timeout_effect = {
+                add_ideas = CAN_House_sucess_36 
+            }
+            }
+            if { var_unemployment > 20 
+            timeout_effect = {
+                remove_country_leader 
+            }
+            }
+}
 
+CAN_house_of_commons_37 = {
+    available = { date > 1940.6.11}
+    activation = {date > 1937.1.1}
+        days_mission_timeout = 365 
+        cancel_trigger = {
+            has_war = yes
+        }
+        icon = GFX_decision_mission_icon
+            selectable_mission = no 
+            if = { var_unemployment < 20
+            timeout_effect = {
+                add_ideas = CAN_House_sucess_37
+            }
+            }
+            if { var_unemployment > 20 
+            timeout_effect = {
+                remove_country_leader 
+            }
+            }
+}
+
+CAN_house_of_commons_38 = {
+    available = { date > 1940.6.11}
+    activation = {date > 1938.1.1}
+        days_mission_timeout = 365 
+        cancel_trigger = {
+            has_war = yes
+        }
+        icon = GFX_decision_mission_icon
+            selectable_mission = no 
+            if = { var_unemployment < 20
+            timeout_effect = {
+                add_ideas = CAN_House_sucess_38
+            }
+            }
+            if { var_unemployment > 20 
+            timeout_effect = {
+                remove_country_leader 
+            }
+            }
+}
+
+CAN_house_of_commons_39 = {
+    available = { date > 1940.6.11}
+    activation = {date > 1939.1.1}
+        days_mission_timeout = 365 
+        cancel_trigger = {
+            has_war = yes
+        }
+        icon = GFX_decision_mission_icon
+            selectable_mission = no 
+            if = { var_unemployment < 20
+            timeout_effect = {
+                add_ideas = CAN_House_sucess_39
+            }
+            }
+            if { var_unemployment > 20 
+            timeout_effect = {
+                remove_country_leader 
+            }
+            }
+}
 CAN_empleado = {
     id = generic_industry 
     available = {
@@ -28,6 +110,11 @@ CAN_empleado = {
     add_to_variable = { unemployment = 10 }
     }
 }
+
+
+}
+
+
 
 
 

@@ -1394,7 +1394,7 @@ focus_tree = {
 		id = CAN_independent_command
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = CAN_red_deer_training_camp }
-		x = -1
+		x = 0
 		y = 1
 		relative_position_id = CAN_red_deer_training_camp
 
@@ -1427,6 +1427,87 @@ focus_tree = {
 			}
 		}
 	}
+
+
+
+
+		focus = {
+		id = CAN_independent_command1
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = CAN_independent_command }
+			prerequisite = { focus = CAN_tankograd1 }
+		x = 2
+		y = 2
+		relative_position_id = CAN_red_deer_training_camp
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+						mio:CAN_truck_organization = {
+				add_mio_size = 2
+				add_mio_funds = 800
+				}
+			army_experience = 50
+
+		}
+	}
+
+
+	focus = {
+		id = CAN_independent_command2
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = CAN_independent_command1 }
+		x = 2
+		y = 3
+		relative_position_id = CAN_red_deer_training_camp
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			army_experience = 50
+			add_doctrine_cost_reduction = {
+				name = CAN_independent_command
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
 
 	
 	
@@ -1598,6 +1679,14 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
+			276 = {
+				add_building_construction = {
+				type = land_facility
+				level = 1
+				instant_build = yes
+				}
+				}
+			
 			army_experience = 50 
 			add_doctrine_cost_reduction = {
 				name = CAN_army_modernization
@@ -1612,7 +1701,8 @@ focus_tree = {
 		id = CAN_canadian_infantry_corps
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = CAN_army_modernization }
-		x = -1
+		mutually_exclusive = {focus = CAN_cmp_truck}
+		x = -6
 		y = 1
 		relative_position_id = CAN_army_modernization
 
@@ -1636,6 +1726,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
+			add_ideas = CAN_canadian_army_inf 
 			add_tech_bonus = {
 				name = CAN_canadian_infantry_corps
 				bonus = 0.5
@@ -1645,15 +1736,228 @@ focus_tree = {
 		}
 	}
 
+		focus = {
+		id = CAN_motofreaks
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = CAN_canadian_infantry_corps }
+		mutually_exclusive = { focus = CAN_best_of_the_best}
+		x = -6
+		y = 1
+		relative_position_id = CAN_canadian_infantry_corps
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_ideas = { CAN_cheap_trucks }
+
+		}
+	}
+
+			focus = {
+		id = CAN_motorized
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = CAN_motofreaks }
+		x = 1
+		y = 1
+		relative_position_id = CAN_motofreaks
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		#make the tt say it give u trcuk advisor
+        army_experience = 50
+		}
+	}
+
+				focus = {
+		id = CAN_motorized1
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = CAN_motorized }
+		x = 1
+		y = 2
+		relative_position_id = CAN_motofreaks
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			mio:CAN_truck_organization = {
+				add_mio_size = 2
+				add_mio_funds = 800
+				}
+				}
+	}
+
+
+					focus = {
+		id = CAN_motorized2
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = CAN_motofreaks }
+		x = -1
+		y = 1
+		relative_position_id = CAN_motofreaks
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			army_experience = 25
+			add_tech_bonus = {
+				name = CAN_cmp_truck
+				bonus = 0.50
+				uses = 2
+				category = artillery
+			}
+		}
+	}
+
+						focus = {
+		id = CAN_motorized3
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = CAN_motorized2 }
+		x = -1
+		y = 2
+		relative_position_id = CAN_motofreaks
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+          swap_ideas = { add_idea = CAN_cheap_trucks2 remove_idea = CAN_cheap_trucks}
+		}
+	}
+
+						focus = {
+		id = CAN_motorized4
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = CAN_motorized3 }
+		x = -1
+		y = 3
+		relative_position_id = CAN_motofreaks
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		set_technology = {
+			armored_car3 = 1
+			armored_car_at_upgrade = 1
+		}
+		
+
+		}
+	}
+
+
 	focus = {
 		id = CAN_cmp_truck
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = CAN_army_modernization }
-		x = 1
+		x = 5
 		y = 1
 		relative_position_id = CAN_army_modernization
 
 		cost = 5
+
+		mutually_exclusive = {focus =  CAN_canadian_infantry_corps}
 
 		ai_will_do = {
 			factor = 25
@@ -1727,11 +2031,58 @@ focus_tree = {
 	}
 
 	focus = {
-		id = CAN_royal_regiment_of_canadian_artillery
-		icon = GFX_goal_generic_army_artillery2
-		prerequisite = { focus = CAN_canadian_infantry_corps }
-		x = -1
+		id = CAN_infshared
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = CAN_best_of_the_best focus = CAN_motofreaks }
+		x = -8
 		y = 3
+		relative_position_id = CAN_army_modernization
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+         army_experience = 50
+		add_tech_bonus = {
+			name = CAN_cmp_truck
+			ahead_reduction = 2
+			bonus = 2.0
+			uses = 1
+			category = motorized_equipment
+			}
+		add_tech_bonus = {
+			
+			name = CAN_canadian_infantry_corps
+			bonus = 0.5
+			uses = 2
+			category = support_tech
+			}
+		}
+	}
+
+
+	focus = {
+		id = CAN_infshared1
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = CAN_infshared }
+		x = -8
+		y = 4
 		relative_position_id = CAN_army_modernization
 
 		cost = 5
@@ -1756,6 +2107,127 @@ focus_tree = {
 		completion_reward = {
 			add_breakthrough_progress = {
 				specialization = specialization_land
+				value = 0.20
+			}
+			add_tech_bonus = {
+				name = CAN_royal_regiment_of_canadian_artillery
+				bonus = 0.5
+				uses = 2
+				category = artillery
+			}
+		}
+	}
+
+		focus = {
+		id = CAN_infshared2
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = CAN_infshared1  }
+		prerequisite = { focus = CAN_motorized1 focus = CAN_specops1}
+		x = -8
+		y = 5
+		relative_position_id = CAN_army_modernization
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+        add_doctrine_cost_reduction = {
+	cost_reduction = 0.15
+	uses = 2
+	category = land_doctrine
+}
+		army_experience = 50
+		add_political_power = 50
+		}
+	}
+
+
+	focus = {
+		id = CAN_specops
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = CAN_best_of_the_best }
+		x = -5
+		y = 3
+		relative_position_id = CAN_army_modernization
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+	cost_reduction = 0.5
+	uses = 4
+	category = special_forces_doctrine
+}
+        
+		}
+	}
+
+		focus = {
+		id = CAN_specops3
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = CAN_best_of_the_best }
+		x = -3
+		y = 3
+		relative_position_id = CAN_army_modernization
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			set_technology = {
+				mountain_gun = 1 
+			}
+			add_breakthrough_progress = {
+				specialization = specialization_land
 				value = 0.15
 			}
 			add_tech_bonus = {
@@ -1767,12 +2239,160 @@ focus_tree = {
 		}
 	}
 
+
+			focus = {
+		id = CAN_AT
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = CAN_specops3 }
+		mutually_exclusive = {focus =  CAN_FORT_BUSTERS}
+		x = -2
+		y = 5
+		relative_position_id = CAN_army_modernization
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+        add_ideas = CAN_ANTITANK
+		}
+	}
+
+
+			focus = {
+		id = CAN_FORT_BUSTERS
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = CAN_specops3 }
+		mutually_exclusive = { focus =  CAN_AT }
+		x = -4
+		y = 5
+		relative_position_id = CAN_army_modernization
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+          add_ideas = CAN_fortbusters
+		}
+	}
+
+
+
+	focus = {
+		id = CAN_specops1
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = CAN_specops }
+		x = -5
+		y = 4
+		relative_position_id = CAN_army_modernization
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_ideas = CAN_africakorp
+		}
+	}
+
+
+
+
+
+	focus = {
+		id = CAN_best_of_the_best
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = CAN_canadian_infantry_corps }
+		mutually_exclusive = { focus = CAN_motofreaks}
+		x = -5
+		y = 2
+		relative_position_id = CAN_army_modernization
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.25
+			}
+			add_tech_bonus = {
+				name = CAN_royal_regiment_of_canadian_artillery
+				bonus = 0.75
+				uses = 2
+				category = artillery
+			}
+		}
+	}
+
 	focus = {
 		id = CAN_a_motorized_army
 		icon = GFX_goal_generic_build_tank
 		prerequisite = { focus = CAN_cmp_truck }
-		x = 1
-		y = 3
+		x = 4
+		y = 2
 		relative_position_id = CAN_army_modernization 
 
 		cost = 5
@@ -1801,15 +2421,16 @@ focus_tree = {
 				uses = 2
 				category = support_tech
 			}
+			add_equipment_to_stockpile = { type = motorized_equipment amount = 750 } 
 		}
 	}
 
 	focus = {
 		id = CAN_red_deer_training_camp
 		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = CAN_royal_regiment_of_canadian_artillery focus = CAN_a_motorized_army }
+		prerequisite = { focus = CAN_the_walkie_talkie }
 		x = 0
-		y = 4
+		y = 3
 		relative_position_id = CAN_army_modernization 
 
 		cost = 5
@@ -1846,9 +2467,412 @@ focus_tree = {
 	focus = {
 		id = CAN_the_valentine_tank
 		icon = GFX_goal_generic_army_tanks
-		prerequisite = { focus = CAN_red_deer_training_camp }
+		prerequisite = { focus = CAN_cmp_truck }
 		x = 1
+		y = 1
+		relative_position_id = CAN_cmp_truck
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.5
+			}
+
+			add_tech_bonus = {
+				name = CAN_the_valentine_tank
+				ahead_reduction = 2
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}
+			add_tech_bonus = {
+				name = CAN_the_valentine_tank
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}
+
+		}
+	}
+
+
+
+	focus = {
+		id = CAN_tankograd1
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = CAN_the_valentine_tank  }
+		prerequisite = { focus = CAN_a_motorized_army}
+		x = 0
+		y = 2
+		relative_position_id = CAN_cmp_truck
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+        add_Ideas = { CAN_tankograd}
+      
+
+		}
+	}
+
+
+focus = {
+		id = CAN_Iwantmech
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = CAN_tankograd1  }
+		mutually_exclusive = {focus = CAN_Iwanttanks}
+
+		x = -1
+		y = 3
+		relative_position_id = CAN_cmp_truck
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+
+       swap_ideas = {remove_idea = CAN_tankograd add_idea = CAN_tankograd_fat}
+
+		}
+	}
+
+
+focus = {
+		id = CAN_Iwantmech1
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = CAN_Iwantmech  }
+
+		x = -1
+		y = 4
+		relative_position_id = CAN_cmp_truck
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+       swap_ideas = {remove_idea = CAN_tankograd_fat add_idea = CAN_tankograd_fat2}
+
+		}
+	}
+
+
+	focus = {
+		id = CAN_Iwanttanks
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = CAN_tankograd1  }
+		mutually_exclusive = {focus = CAN_Iwantmech}
+		x = 1
+		y = 3
+		relative_position_id = CAN_cmp_truck
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.5
+			}
+
+			add_tech_bonus = {
+				name = CAN_the_valentine_tank
+				ahead_reduction = 2
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}
+			add_tech_bonus = {
+				name = CAN_the_valentine_tank
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}
+
+		}
+	}
+
+		focus = {
+		id = CAN_Iwanttanks1
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = CAN_Iwanttanks }
+		x = 1
+		y = 4
+		relative_position_id = CAN_cmp_truck
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+        			mio:CAN_truck_organization = {
+				add_mio_size = 2
+				add_mio_funds = 800
+				}
+		}
+	}
+
+		focus = {
+		id = CAN_fast
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = CAN_Iwanttanks1 focus = CAN_Iwantmech1 }
+		x = 0
 		y = 5
+		relative_position_id = CAN_cmp_truck
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.5
+			}
+
+			add_tech_bonus = {
+				name = CAN_the_valentine_tank
+				ahead_reduction = 2
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}
+			add_tech_bonus = {
+				name = CAN_the_valentine_tank
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}
+
+		}
+	}
+
+			focus = {
+		id = CAN_Iwanttanksoption1
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = CAN_Iwanttanks  }
+		mutually_exclusive = { focus = CAN_Iwanttanksoption2}
+		x = 2
+		y = 5
+		relative_position_id = CAN_cmp_truck
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.5
+			}
+
+			add_tech_bonus = {
+				name = CAN_the_valentine_tank
+				ahead_reduction = 2
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}
+			add_tech_bonus = {
+				name = CAN_the_valentine_tank
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}
+
+		}
+	}
+
+			focus = {
+		id = CAN_Iwanttanksoption2
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = CAN_Iwanttanks  }
+				mutually_exclusive = { focus = CAN_Iwanttanksoption1}
+		x = 4
+		y = 5
+		relative_position_id = CAN_cmp_truck
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.5
+			}
+
+			add_tech_bonus = {
+				name = CAN_the_valentine_tank
+				ahead_reduction = 2
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}
+			add_tech_bonus = {
+				name = CAN_the_valentine_tank
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}
+
+		}
+	}
+
+
+	focus = {
+		id = CAN_mill1
+		icon = GFX_goal_generic_army_tanks
+		x = 10
+		y = 10
 		relative_position_id = CAN_army_modernization 
 
 		cost = 10
@@ -1893,6 +2917,7 @@ focus_tree = {
 
 		}
 	}
+
 
 
 	############################
@@ -2645,7 +3670,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-					       			276 = {
+			276 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 				type = industrial_complex
@@ -2654,7 +3679,7 @@ focus_tree = {
 				}
 				}
 
-				       			473 = {
+			473 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 				type = industrial_complex
@@ -2662,7 +3687,7 @@ focus_tree = {
 				instant_build = yes
 				}
 				}
-				       			469 = {
+			469 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 				type = industrial_complex
@@ -2793,6 +3818,42 @@ focus_tree = {
 				}
 		
 			
+		}
+	}
+
+				focus = {
+		id = CAN_Invigorate_the_war_economy
+		icon = GFX_goal_generic_construct_civ_factory
+        prerequisite = {focus = CAN_new_deal_5 focus = CAN_new_deal_bail_out_light_industry4}
+
+		x = 3
+		y = 5
+		relative_position_id = CAN_new_deal
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 3
+				has_completed_focus = CAN_rowell_sirois_commission
+			}
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		completion_reward = {
+        add_ideas = partial_economic_mobilisation
 		}
 	}
 
@@ -3307,8 +4368,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = CAN_c_d_howe
+			swap_ideas  = {add_Idea = CAN_light_Industrymobilizing remove_idea = CAN_light_Industry2}
 		}
 	}
 					focus = {

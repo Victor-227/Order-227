@@ -1,7 +1,8 @@
 CAN_young_economists = {
     icon = generic_political_actions 
-    picture = GFX_yngeco
+    scripted_gui = CAN_gui
     allowed = {
         tag  =  CAN 
     }
+    priority = { base = 5 }
 }

@@ -21,6 +21,207 @@ ideas = {
 	}
 
 	country = {
+			SPA_kill_allies = {
+
+		name = SPA_kill_allies
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			    targeted_modifier = {
+			tag = FRA 
+              attack_bonus_against = 0.05
+             }
+			 			    targeted_modifier = {
+			tag = CAN 
+              attack_bonus_against = 0.05
+             }
+
+			    targeted_modifier = {
+			tag = ENG 
+              attack_bonus_against = 0.05
+             }
+
+			    targeted_modifier = {
+			tag = SAF 
+              attack_bonus_against = 0.05
+             }
+
+
+			}
+
+
+			SPA_army_of_africa1 = {
+
+		name = SPA_army_of_africa
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			equipment_bonus = {
+			armor = {
+			build_cost_ic = -0.05
+			breakthrough = 0.05 
+		    reliability = 0.10
+			maximum_speed = 0.05
+				}
+			}
+
+			modifier = {
+			attrition = -0.10
+            heat_attrition = -0.20
+			acclimatization_heat_climate_gain_factor = 0.25
+			supply_consumption_factor = -0.05
+			}
+
+			rule = { can_decline_call_to_war = yes }
+
+	}
+
+	SPA_army_of_africa = {
+
+		name = SPA_army_of_africa
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			attrition = -0.10
+            heat_attrition = -0.20
+			acclimatization_heat_climate_gain_factor = 0.25
+			supply_consumption_factor = -0.05
+			}
+
+			rule = { can_decline_call_to_war = yes }
+
+		}
+
+	SPA_kill_sovs = {
+
+		name = SPA_kill_sovs
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			    targeted_modifier = {
+             tag = SOV
+              attack_bonus_against = 0.05
+             }
+
+			}
+
+
+
+
+	    SPA_tanks = {
+
+		name = SPA_tanks 
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			equipment_bonus = {
+			armor = {
+			build_cost_ic = -0.05
+			breakthrough = 0.05 
+		    reliability = 0.10
+			maximum_speed = 0.05
+				}
+				modifier = {
+
+				}
+			}
+
+			modifier = {
+			}
+
+		}
+
+		SPA_cringe= {
+
+		name = SPA_cringe
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+
+			modifier = {
+			attrition = -0.10
+            snow_attrition = -0.20
+			acclimatization_cold_climate_gain_factor = 0.25
+			supply_consumption_factor = -0.05
+			}
+
+			rule = { can_decline_call_to_war = yes }
+
+		}
+		
 				SPA_larraz_tot = {
 
 		name = SPA_Larraz_plan
@@ -2835,5 +3036,105 @@ ideas = {
 			}
 		}
 
+
+		
+
+	}
+
+		industrial_output = {
+		SPR_altos_hornos_de_vizcaya = {
+
+			picture = SPR_altos_hornos_de_vizcaya
+			
+			allowed = {
+				original_tag = SPR
+			}
+			
+			cost = 150
+
+			research_bonus = {
+				industrial_tech = 0.15
+			}
+			
+			traits = { construction_company }
+		}
+		}
+
+			industrial_theorist = {
+
+		SPR_jose_antonio_giron = {
+			name = SPR_antonio_giron
+
+			allowed = {
+				original_tag = SPR
+			}
+
+			ai_will_do = {
+				factor = 100
+			}
+
+			visible = {
+			}			
+
+			available = {
+			}
+
+			research_bonus = {
+			}
+
+			traits = { captain_of_industry  }
+
+			
+			removal_cost = -1		
+		}
+			SPR_Diego_Hidalgo = {
+			name = SPR_Diego_Hidalgo
+
+			allowed = {
+				original_tag = SPR
+			}
+
+			ai_will_do = {
+				factor = 100
+			}
+
+			visible = {
+			}			
+
+			available = {
+			}
+
+			research_bonus = {
+			}
+
+			traits = { war_industrialist  }
+
+			
+			removal_cost = -1		
+		}
+		}
+
+	tank_research = { 
+
+		SPR_Trubia_arms = {
+
+			picture = GER_MAN
+			
+			allowed = {
+				original_tag = SPR
+			}
+
+			
+			
+			research_bonus = {
+				armor = 0.1
+			}
+			
+			traits = { medium_tank_manufacturer }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
 	}
 }

@@ -2,7 +2,306 @@ ideas = {
 
 	country = {
 
-								        CAN_compass_fiend = {
+				CAN_tankograd_sexy = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = great_depression
+
+			modifier = {
+			
+			}
+
+			equipment_bonus = {
+                armor = {
+				build_cost_ic = -0.1
+				breakthrough = 0.010 
+		        reliability = 0.05
+				maximum_speed = 0.05
+				}
+			}
+		}
+
+				CAN_africakorp = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = great_depression
+
+			modifier = {
+			heat_attrition_factor = -0.20
+			no_supply_grace = 48
+			offence = 0.05
+
+			}
+
+			equipment_bonus = {
+
+			}
+		}
+
+
+		
+
+					CAN_tankograd_fat2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = great_depression
+
+			modifier = {
+			
+			}
+
+			equipment_bonus = {
+                armor = {
+		        armor_value = 0.15
+				hardness = 0.05
+				reliability = 0.15
+				maximum_speed = -0.15
+				hard_attack = 0.05
+				soft_attack = 0.075
+
+				}
+			}
+		}
+
+				CAN_tankograd_fat = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = great_depression
+
+			modifier = {
+			
+			}
+
+			equipment_bonus = {
+                armor = {
+				build_cost_ic = -0.025
+				breakthrough = 0.05
+		        armor_value = 0.10
+				hardness = 0.05
+				reliability = 0.10
+				maximum_speed = -0.15
+				}
+			}
+		}
+
+		CAN_tankograd = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = great_depression
+
+			modifier = {
+			
+			}
+
+			equipment_bonus = {
+                armor = {
+				build_cost_ic = -0.075
+				breakthrough = 0.05
+		        reliability = 0.05
+				}
+			}
+		}
+
+				CAN_africakorp = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = great_depression
+
+			modifier = {
+			heat_attrition_factor = -0.20
+			no_supply_grace = 48
+			offence = 0.05
+
+			}
+
+			equipment_bonus = {
+
+			}
+		}
+
+		CAN_fortbusters= {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = great_depression
+
+			modifier = {
+			army_strength_factor = -0.05
+
+			}
+
+			equipment_bonus = {
+					lc_super_heavy_howitzer = {
+					build_cost_ic = -0.05
+					soft_attack = 0.10
+					breakthrough = 0.05
+ 				}
+			}
+		}
+
+				CAN_ANTITANK= {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = great_depression
+
+			modifier = {
+                initiative_factor = 0.075
+			}
+
+			equipment_bonus = {
+				anti_tank_equipment = {
+					build_cost_ic = -0.05
+					hard_attack = 0.10
+				}
+			}
+		}
+		
+		CAN_cheap_trucks2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = great_depression
+
+			modifier = {
+                initiative_factor = 0.05
+				supply_consumption_factor = -0.1
+				army_strength_factor = 0.05
+			}
+
+			equipment_bonus = {
+				motorized_equipment = {
+					build_cost_ic = -0.15 
+				}
+			}
+		}
+
+
+				 CAN_cheap_trucks = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = great_depression
+
+			modifier = {
+				army_strength_factor = 0.05
+			}
+
+			equipment_bonus = {
+				motorized_equipment = {
+					build_cost_ic = -0.15 
+				}
+			}
+		}
+
+				 CAN_canadian_army_inf = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = great_depression
+
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.10 
+				}
+			}
+		}
+
+		 CAN_compass_fiend = {
 
 			allowed = {
 				always = no
@@ -25,7 +324,7 @@ ideas = {
 			
 		}
 
-						        CAN_DIL_MILITARY3 = {
+			CAN_DIL_MILITARY3 = {
 
 			allowed = {
 				always = no
@@ -182,6 +481,31 @@ ideas = {
 		}
 
 
+        CAN_light_Industrymobilizing = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = great_depression
+
+			modifier = {
+				consumer_goods_expected_value = 0.05
+				industrial_capacity_factory = 0.10
+				industrial_capacity_dockyard = 0.05
+				production_speed_buildings_factor = 0.075
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = -0.25
+			}
+		}
+
+
         CAN_light_Industry2 = {
 
 			allowed = {
@@ -201,6 +525,8 @@ ideas = {
 				industrial_capacity_factory = 0.05
 				industrial_capacity_dockyard = 0.05
 				production_speed_buildings_factor = 0.075
+				production_speed_arms_factory_factor = -0.15
+				production_speed_industrial_complex_factor = 0.10
 			}
 		}
 
@@ -223,6 +549,8 @@ ideas = {
 				industrial_capacity_factory = -0.10
 				industrial_capacity_dockyard = -0.10
 				production_speed_buildings_factor = 0.05
+				production_speed_arms_factory_factor = -0.50
+				production_speed_industrial_complex_factor = 0.10 
 			}
 		}
 
@@ -261,7 +589,7 @@ ideas = {
 		}
 
 
-		        		CAN_BIG_MONEY = {
+		CAN_BIG_MONEY = {
 
 			allowed = {
 				always = no
@@ -285,7 +613,7 @@ ideas = {
 
 
 
-		        		CAN_heavy_industry_prioritized = {
+		CAN_heavy_industry_prioritized = {
 
 			allowed = {
 				always = no
@@ -305,7 +633,7 @@ ideas = {
 		}
 
 
-		        		CAN_heavy_industry_reliefs2 = {
+		CAN_heavy_industry_reliefs2 = {
 
 			allowed = {
 				always = no
@@ -359,7 +687,7 @@ ideas = {
 		}
 
             
-        		CAN_new_deal_relief = {
+        CAN_new_deal_relief = {
 
 			allowed = {
 				always = no
@@ -378,6 +706,8 @@ ideas = {
 				industrial_capacity_factory = -0.175
 				industrial_capacity_dockyard = -0.175
 				production_speed_buildings_factor = 0.05
+				production_speed_arms_factory_factor = -0.70
+				production_speed_industrial_complex_factor = -0.20 
 			}
 		}
 
@@ -404,9 +734,11 @@ ideas = {
 			picture = great_depression
 
 			modifier = {
-				consumer_goods_expected_value = 0.20
-				industrial_capacity_factory = -0.20
-				industrial_capacity_dockyard = -0.20
+				consumer_goods_expected_value = 0.35
+				industrial_capacity_factory = -0.25
+				industrial_capacity_dockyard = -0.40
+				production_speed_arms_factory_factor = -0.75
+				production_speed_industrial_complex_factor = -0.40
 			}
 		}
 
@@ -1416,6 +1748,93 @@ ideas = {
 
 			available = {
 				has_completed_focus = CAN_new_deal_1
+			}
+
+			research_bonus = {
+				cat_production = 0.06
+		    }
+
+			traits = { GER_wirtschaftsminister_speer }
+
+			
+			removal_cost = -1		
+		}
+
+				CAN_Robert_bryce = {
+			name = CAN_Robert_bryce
+
+			allowed = {
+				original_tag = CAN
+			}
+
+			ai_will_do = {
+				factor = 100
+			}
+
+			visible = {
+	
+			}			
+
+			available = {
+				has_completed_focus = CAN_rowell_sirois_commission
+			}
+
+			research_bonus = {
+				cat_production = 0.06
+		    }
+
+			traits = { GER_wirtschaftsminister_speer }
+
+			
+			removal_cost = -1		
+		}
+
+						CAN_Robert_bryce_win = {
+			name = CAN_Robert_bryce
+
+			allowed = {
+				original_tag = CAN
+			}
+
+			ai_will_do = {
+				factor = 100
+			}
+
+			visible = {
+	
+			}			
+
+			available = {
+				has_idea = { CAN_house_of_commons_38 }
+			}
+
+			research_bonus = {
+				cat_production = 0.06
+		    }
+
+			traits = { GER_wirtschaftsminister_speer }
+
+			
+			removal_cost = -1		
+		}
+
+								CAN_Robert_bryce_minister_Of_everything = {
+			name = CAN_Robert_bryce
+
+			allowed = {
+				original_tag = CAN
+			}
+
+			ai_will_do = {
+				factor = 100
+			}
+
+			visible = {
+	
+			}			
+
+			available = {
+				has_idea = { CAN_house_of_commons_war}
 			}
 
 			research_bonus = {

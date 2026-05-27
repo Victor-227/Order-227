@@ -230,6 +230,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
+
            	drop_cosmetic_tag = yes
 				set_cosmetic_tag = SPA_directory
 			set_politics = {ruling_party = fascism }
@@ -1464,7 +1465,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SPA_save_the_alcazar
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 
@@ -1585,7 +1586,7 @@ focus_tree = {
 		x = -5
 		y = 1
 		relative_position_id = SPA_unify_the_nationalist_front
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 
@@ -1606,7 +1607,7 @@ focus_tree = {
 		x = -1
 		y = 2
 		relative_position_id = SPA_save_the_alcazar
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL}
@@ -1639,6 +1640,7 @@ focus_tree = {
 		completion_reward = {
         SPA_francisco_franco = {
 		add_unit_leader_trait = ranger
+		add_unit_leader_trait = desert_fox
 		add_unit_leader_trait = armor_officer 
 		}
 		}
@@ -1657,7 +1659,7 @@ focus_tree = {
 		x = 2
 		y = 0
 		relative_position_id = SPA_martyrdom_for_primo_de_rivera
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_SPA_CARLIST_UPRISING}
@@ -1751,7 +1753,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SPA_save_the_alcazar
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
@@ -1771,7 +1773,7 @@ focus_tree = {
 
 		
 		icon = GFX_focus_generic_support_the_left_right
-		x = -1
+		x = -4
 		y = 1
 		relative_position_id = SPA_caudillo_of_spain
 		cost = 5
@@ -1903,7 +1905,7 @@ focus_tree = {
 		prerequisite = { focus = SPA_caudillo_of_spain}
 		
 		icon = GFX_focus_generic_treaty
-		x = 1
+		x = -2
 		y = 1
 		relative_position_id = SPA_caudillo_of_spain
 		cost = 5
@@ -1915,15 +1917,7 @@ focus_tree = {
 			    ideology = fascism
 			    popularity = 0.1
 			}
-			if = {
-				limit = {
-					NOT = {
-						has_idea = war_economy
-						has_idea = tot_economic_mobilisation
-					}
-				}
-				add_ideas = war_economy
-			}
+
 
 			every_owned_state = {
 				limit = {
@@ -1933,11 +1927,11 @@ focus_tree = {
 						state = 792
 					}
 				}
-													 165 = {
-													remove_dynamic_modifier = { modifier = autonomous_state } }
-						171 = {
-										remove_dynamic_modifier = { modifier = autonomous_state } }
-						792 = {
+				165 = {
+		        remove_dynamic_modifier = { modifier = autonomous_state } }
+				171 = {
+				remove_dynamic_modifier = { modifier = autonomous_state } }
+				792 = {
 				remove_dynamic_modifier = { modifier = autonomous_state } }
 			}
 		}
@@ -1979,11 +1973,11 @@ focus_tree = {
 		}
 
 		prerequisite = { focus = SPA_develop_north_africa focus = SPA_la_division_azul}
-
+        prerequisite = {focus = SPA_the_warm_dunes_of_cairo5 focus = SPA_the_cold_heart_of_bolchevism5}
 		
 		icon = GFX_focus_PHI_hispanidad_filipina
-		x = -1
-		y = 3
+		x = 1
+		y = 5
 		relative_position_id = SPA_adopt_the_26_points
 		cost = 10
 
@@ -2204,6 +2198,415 @@ focus_tree = {
 			
 		}
 	}
+
+
+	focus = {
+		id = SPA_research_tanques
+		bypass = {
+		}
+		prerequisite = { focus = SPA_the_duty_to_work }
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		
+		icon = GFX_goal_generic_territory_or_war
+		x = 3
+		y = -3
+		relative_position_id = SPA_caudillo_of_spain
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		set_technology = { gwtank = 1 }
+		add_equipment_to_stockpile = { type = motorized_equipment amount = 250 } 
+
+			
+		}
+	}
+
+		focus = {
+		id = SPA_research_tanques1
+		bypass = {
+		}
+		prerequisite = { focus = SPA_research_tanques }
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		
+		icon = GFX_goal_generic_territory_or_war
+		x = 2
+		y = -2
+		relative_position_id = SPA_caudillo_of_spain
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+        add_tech_bonus = {
+		name = CAN_cmp_truck
+		ahead_reduction = 0.5
+		bonus = 1.0
+		uses = 1
+		category = motorized_equipment
+			}
+			
+		}
+	}
+
+			focus = {
+		id = SPA_research_tanques2
+		bypass = {
+		}
+		prerequisite = { focus = SPA_research_tanques }
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		
+		icon = GFX_goal_generic_territory_or_war
+		x = 4
+		y = -2
+		relative_position_id = SPA_caudillo_of_spain
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 50
+	    			add_tech_bonus = {
+				name = SPA_taque
+				bonus = 0.75
+				uses = 2
+				category = armor
+			}
+
+			
+		}
+	}
+
+
+	focus = {
+		id = SPA_Crusade_into
+		bypass = {
+		}
+		prerequisite = { focus = SPA_caudillo_of_spain }
+		prerequisite = { focus = SPA_research_tanques1 focus = SPA_research_tanques2}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		
+		icon = GFX_goal_generic_territory_or_war
+		x = 3
+		y = 1
+		relative_position_id = SPA_caudillo_of_spain
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_political_power = 50
+        add_war_support = 0.15
+			 
+		}
+	}
+
+		focus = {
+		id = SPA_the_cold_heart_of_bolchevism
+		bypass = {
+		}
+		prerequisite = { focus = SPA_Crusade_into }
+        mutually_exclusive = {focus = SPA_the_warm_dunes_of_cairo}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		
+		icon = GFX_goal_generic_territory_or_war
+		x = 1
+		y = 1
+		relative_position_id = SPA_Crusade_into
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+        add_ideas = {SPA_cringe }
+		}
+	}
+
+			focus = {
+		id = SPA_the_cold_heart_of_bolchevism1
+		bypass = {
+		}
+		prerequisite = { focus = SPA_the_cold_heart_of_bolchevism  focus = SPA_the_warm_dunes_of_cairo}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		
+		icon = GFX_goal_generic_territory_or_war
+		x = 2
+		y = 2
+		relative_position_id = SPA_Crusade_into
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+         add_equipment_to_stockpile = { type = motorized_equipment amount = 500 } 
+			
+		}
+	}
+
+				focus = {
+		id = SPA_the_cold_heart_of_bolchevism2
+		bypass = {
+		}
+		prerequisite = { focus = SPA_the_cold_heart_of_bolchevism  focus =SPA_the_warm_dunes_of_cairo}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		
+		icon = GFX_goal_generic_territory_or_war
+		x = 0
+		y = 2
+		relative_position_id = SPA_Crusade_into
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+        add_ideas =  SPA_tanks	
+		}
+	}
+
+
+				focus = {
+		id = SPA_the_cold_heart_of_bolchevism4
+		bypass = {
+		}
+		prerequisite = { focus = SPA_the_cold_heart_of_bolchevism1 }
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		
+		icon = GFX_goal_generic_territory_or_war
+		x = 2
+		y = 3
+		relative_position_id = SPA_Crusade_into
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+        army_experience = 50
+		add_doctrine_cost_reduction = {
+			name = CAN_independent_command
+			cost_reduction = 0.5
+			uses = 1
+				category = land_doctrine
+			}
+			
+		}
+	}
+
+		focus = {
+		id = SPA_the_cold_heart_of_bolchevism5
+		bypass = {
+		}
+		prerequisite = { focus = SPA_the_cold_heart_of_bolchevism4 }
+		mutually_exclusive = { focus = SPA_the_warm_dunes_of_cairo5 }
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		
+		icon = GFX_goal_generic_territory_or_war
+		x = 1
+		y = 4
+		relative_position_id = SPA_Crusade_into
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+      
+        add_ideas = SPA_kill_sovs		
+		}
+	}
+
+
+		focus = {
+		id = SPA_the_warm_dunes_of_cairo
+		bypass = {
+		}
+		prerequisite = { focus = SPA_Crusade_into }
+		mutually_exclusive = {focus = SPA_the_cold_heart_of_bolchevism}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		
+		icon = GFX_goal_generic_territory_or_war
+		x = -1
+		y = 1
+		relative_position_id = SPA_Crusade_into
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+	    add_ideas = { SPA_army_of_africa }
+
+			
+		}
+	}
+
+	
+
+			focus = {
+		id = SPA_the_warm_dunes_of_cairo2
+		bypass = {
+		}
+		prerequisite = { focus = SPA_the_warm_dunes_of_cairo focus = SPA_the_cold_heart_of_bolchevism }
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		
+		icon = GFX_goal_generic_territory_or_war
+		x = -2
+		y = 2
+		relative_position_id = SPA_Crusade_into
+		cost = 10
+
+		available_if_capitulated = yes
+		completion_reward = {
+        army_experience = 50
+		add_doctrine_cost_reduction = {
+			name = CAN_independent_command
+			cost_reduction = 0.5
+			uses = 1
+				category = land_doctrine
+			}			
+		}
+	}
+
+
+			focus = {
+		id = SPA_the_warm_dunes_of_cairo3
+		bypass = {
+		}
+		prerequisite = { focus = SPA_the_warm_dunes_of_cairo2 }
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		
+		icon = GFX_goal_generic_territory_or_war
+		x = -2
+		y = 3
+		relative_position_id = SPA_Crusade_into
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		mio:SPR_tank_organization_wip = {
+		add_mio_size = 2
+		add_mio_funds = 800
+		}
+
+			
+		}
+	}
+
+
+
+
+
+
+
+	focus = {
+		id = SPA_the_warm_dunes_of_cairo5
+		bypass = {
+		}
+		prerequisite = { focus = SPA_the_warm_dunes_of_cairo3 }
+		mutually_exclusive = { focus = SPA_the_cold_heart_of_bolchevism5 }
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		
+		icon = GFX_goal_generic_territory_or_war
+		x = -1
+		y = 4
+		relative_position_id = SPA_Crusade_into
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+         add_ideas = SPA_kill_allies
+			
+		}
+	}
+	
 
 	focus = {
 		id = SPA_restore_the_monarchy
@@ -2762,9 +3165,14 @@ focus_tree = {
 			add_stability = 0.05
 			add_war_support = 0.05
 			add_ideas = war_economy
+					GER = {
+			add_to_faction = SPA 	
+		}
 			
 		}
 	}
+
+
 
 	focus = {
 		id = SPA_restore_the_empire
@@ -3217,7 +3625,7 @@ focus_tree = {
 
 		completion_reward = {
 
-        remove_ideas = SPA_recovering_from_civil_war_2
+        remove_ideas = SPA_recovering_from_civil_war_3
 
 		}
 	}

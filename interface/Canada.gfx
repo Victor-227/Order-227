@@ -1,0 +1,25 @@
+SpriteTypes = {
+
+
+
+	SpriteType = {
+		name = "GFX_can_map"
+		texturefile = "gfx/interface/decisions/CAN/yngmap.dds"
+	}
+
+    SpriteType = {
+		name = "GFX_can_background"
+		texturefile = "gfx/interface/decisions/CAN/backgroundcanada.dds"
+	}
+
+        SpriteType = {
+		name = "GFX_can_TEST"
+		texturefile = "gfx/interface/decisions/CAN/KILLPDXPEDOS.dds"
+        noOfFrames = 4
+	}
+
+            SpriteType = {
+		name = "GFX_test1"
+		texturefile = "gfx/interface/decisions/CAN/test1.dds"
+=	}
+}
