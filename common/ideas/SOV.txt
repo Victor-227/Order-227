@@ -1786,7 +1786,7 @@ ideas = {
 			}
 
 			modifier = {
-				consumer_goods_factor = -0.10
+				consumer_goods_expected_value = -0.025
 				country_resource_steel = 20 
 				country_resource_oil = 30
 				country_resource_chromium = 6
@@ -9863,7 +9863,7 @@ ideas = {
 			traits = { industrial_concern }
 
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_expected_value = -0.03
 			}
 			
 			ai_will_do = {
@@ -9926,7 +9926,7 @@ ideas = {
 			traits = { electronics_concern }
 
 			modifier = {
-				supply_consumption_factor = -0.02
+				supply_consumption_factor = -0.06
 			}
 		}
 
@@ -9997,7 +9997,7 @@ ideas = {
 			traits = { railway_company }
 
 			modifier = {
-				mobilization_speed = 0.02
+				mobilization_speed = 0.07
 			}
 		}
 	}	
@@ -10029,7 +10029,6 @@ ideas = {
 				NOT = { has_country_flag = SOV_gosproyektstroy_level_2_flag }
 			}
 
-			cost = 100
 
 			traits = { construction_company }
 
@@ -10055,8 +10054,6 @@ ideas = {
 				has_country_flag = { flag = SOV_gosproyektstroy_level_2_flag value = 1 } #USA
 				NOT = { has_country_flag = SOV_gosproyektstroy_level_3_flag }
 			}
-
-			cost = 100
 
 			traits = { construction_company }
 
@@ -10086,8 +10083,6 @@ ideas = {
 				has_country_flag = { flag = SOV_gosproyektstroy_level_3_flag value = 1 } #CIV
 			}
 
-			cost = 100
-
 			traits = { construction_company }
 
 			modifier = {
@@ -10115,8 +10110,6 @@ ideas = {
 				has_country_flag = { flag = SOV_gosproyektstroy_level_2_flag value = 1 } #USA
 				has_country_flag = { flag = SOV_gosproyektstroy_level_3_flag value = 2 } #MIL
 			}
-
-			cost = 100
 
 			traits = { construction_company }
 
@@ -10146,8 +10139,6 @@ ideas = {
 				has_country_flag = { flag = SOV_gosproyektstroy_level_3_flag value = 3 } #DOCK
 			}
 
-			cost = 100
-
 			traits = { construction_company }
 
 			modifier = {
@@ -10174,8 +10165,6 @@ ideas = {
 				has_country_flag = { flag = SOV_gosproyektstroy_level_2_flag value = 2 } #ENG
 				NOT = { has_country_flag = SOV_gosproyektstroy_level_3_flag }
 			}
-
-			cost = 100
 
 			traits = { construction_company }
 
@@ -10206,8 +10195,6 @@ ideas = {
 				has_country_flag = { flag = SOV_gosproyektstroy_level_3_flag value = 1 } #CIV
 			}
 
-			cost = 100
-
 			traits = { construction_company }
 
 			modifier = {
@@ -10236,8 +10223,6 @@ ideas = {
 				has_country_flag = { flag = SOV_gosproyektstroy_level_2_flag value = 2 } #ENG
 				has_country_flag = { flag = SOV_gosproyektstroy_level_3_flag value = 2 } #MIL
 			}
-
-			cost = 100
 
 			traits = { construction_company }
 
@@ -10268,8 +10253,6 @@ ideas = {
 				has_country_flag = { flag = SOV_gosproyektstroy_level_3_flag value = 3 } #DOCK
 			}
 
-			cost = 100
-
 			traits = { construction_company }
 
 			modifier = {
@@ -10297,8 +10280,6 @@ ideas = {
 				has_country_flag = { flag = SOV_gosproyektstroy_level_2_flag value = 3 } #GER
 				NOT = { has_country_flag = SOV_gosproyektstroy_level_3_flag }
 			}
-
-			cost = 100
 
 			traits = { construction_company }
 
@@ -10328,8 +10309,6 @@ ideas = {
 				has_country_flag = { flag = SOV_gosproyektstroy_level_3_flag value = 1 } #CIV
 			}
 
-			cost = 100
-
 			traits = { construction_company }
 
 			modifier = {
@@ -10357,8 +10336,6 @@ ideas = {
 				has_country_flag = { flag = SOV_gosproyektstroy_level_2_flag value = 3 } #GER
 				has_country_flag = { flag = SOV_gosproyektstroy_level_3_flag value = 2 } #MIL
 			}
-
-			cost = 100
 
 			traits = { construction_company }
 
@@ -10388,8 +10365,6 @@ ideas = {
 				has_country_flag = { flag = SOV_gosproyektstroy_level_3_flag value = 3 } #DOCK
 			}
 
-			cost = 100
-
 			traits = { construction_company }
 
 			modifier = {
@@ -10416,8 +10391,6 @@ ideas = {
 				has_country_flag = { flag = SOV_gosproyektstroy_level_2_flag value = 4 } #JAP
 				NOT = { has_country_flag = SOV_gosproyektstroy_level_3_flag }
 			}
-
-			cost = 100
 
 			traits = { construction_company }
 
@@ -10447,8 +10420,6 @@ ideas = {
 				has_country_flag = { flag = SOV_gosproyektstroy_level_3_flag value = 1 } #CIV
 			}
 
-			cost = 100
-
 			traits = { construction_company }
 
 			modifier = {
@@ -10476,8 +10447,6 @@ ideas = {
 				has_country_flag = { flag = SOV_gosproyektstroy_level_2_flag value = 4 } #JAP
 				has_country_flag = { flag = SOV_gosproyektstroy_level_3_flag value = 2 } #MIL
 			}
-
-			cost = 100
 
 			traits = { construction_company }
 
@@ -10507,8 +10476,6 @@ ideas = {
 				has_country_flag = { flag = SOV_gosproyektstroy_level_3_flag value = 3 } #DOCK
 			}
 
-			cost = 100
-
 			traits = { construction_company }
 
 			modifier = {
@@ -10523,29 +10490,43 @@ ideas = {
 
 		SOV_gosplan = {
 
-			name = SOV_gosproyektstroy_1
-
-			picture = generic_industrial_concern_2
+			name = "Gosplan Initiative"
 
 			allowed = {
 				original_TAG = SOV
 			}
 
-			visible = {
-
+			available = {
+				has_completed_focus = SOV_gosplan_initiative
 			}
 
-			cost = 100
+			traits = { gosplan }
+		}
+	}
 
-			traits = { construction_company }
+	industrial_theorist = { 
 
-			modifier = {
-				production_speed_industrial_complex_factor = 0.05
-				production_speed_arms_factory_factor = 0.05
-				production_speed_dockyard_factor = 0.3
-				license_purchase_cost = -0.25
-				production_factory_start_efficiency_factor = 0.15
-				industrial_capacity_dockyard = 0.2
+		SOV_nikolay_voznesensky = {
+			name = SOV_nikolay_voznesensky
+
+			allowed = {
+				original_tag = SOV
+			}
+
+			traits = {
+				captain_of_industry 
+			}
+		}
+
+		SOV_dimitry_ustinov = {
+			name = "Dmitry Ustinov"
+
+			allowed = {
+				original_tag = SOV
+			}
+
+			traits = {
+				war_industrialist
 			}
 		}
 	}

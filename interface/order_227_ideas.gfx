@@ -65,11 +65,22 @@ SpriteTypes = {
 	### SOVIET
 
 	SpriteType = {
-		name = GFX_idea_SOV_war_economy
-		texturefile = "gfx/interface/ideas/SOV/SOV_forced_urbanization.dds"
+		name = GFX_idea_SOV_command_economy
+		texturefile = "gfx/interface/ideas/SOV/idea_SOV_command_economy.dds"
+	}
+
+	SpriteType = {
+		name = GFX_idea_SOV_dimitry_ustinov
+		texturefile = "gfx/interface/ideas/SOV/idea_SOV_dimitry_ustinov.dds"
+	}
+
+	SpriteType = {
+		name = GFX_idea_SOV_gosplan
+		texturefile = "gfx/interface/ideas/SOV/idea_SOV_gosplan.dds"
 	}
 
 	### ROMANIA
+
 	SpriteType = {
 		name = GFX_idea_ROM_horia_sima
 		texturefile = "gfx/interface/ideas/ROM/ROM_horia_sima.dds"
@@ -88,5 +99,17 @@ SpriteTypes = {
 	SpriteType = {
 		name = GFX_idea_ROM_national_christian_party_in_power
 		texturefile = "gfx/interface/ideas/ROM/idea_ROM_national_christian_party_in_power.dds"
+	}
+
+	### ITALY
+
+	SpriteType = {
+		name = GFX_idea_ITA_alberto_beneduce
+		texturefile = "gfx/interface/ideas/ITA/idea_ITA_alberto_beneduce.dds"
+	}
+
+	SpriteType = {
+		name = GFX_idea_ITA_giacomo_acerbo
+		texturefile = "gfx/interface/ideas/ITA/idea_ITA_giacomo_acerbo.dds"
 	}
 }

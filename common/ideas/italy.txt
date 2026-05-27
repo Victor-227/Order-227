@@ -3412,10 +3412,8 @@ ideas = {
 ########  ########  ######  ####  ######   ##    ## ######## ##     ##  ######  
 	
 
-	tank_manufacturer = {
-	
-		designer = yes
-	
+	tank_research = {
+
 		fiat = { #NORTH
 			allowed = {
 				original_tag = ITA
@@ -3478,10 +3476,8 @@ ideas = {
 	}
 
 
-	naval_manufacturer = {
-	
-		designer = yes
-		
+	naval_research = {
+
 		crda = { #NORTH
 			allowed = {
 				original_tag = ITA
@@ -3775,10 +3771,8 @@ ideas = {
 		}
 	}
 	
-	aircraft_manufacturer = {	
-		
-		designer = yes
-		
+	aircraft_research = {	
+
 		macchi = { #NORTH
 			allowed = {
 				original_tag = ITA
@@ -4217,9 +4211,7 @@ ideas = {
 		}
 	}
 
-	materiel_manufacturer = {
-			
-		designer = yes
+	materiel_research = {
 		
 		beretta = { #NORTH
 			allowed = {
@@ -4494,7 +4486,7 @@ ideas = {
 		}
 	}
 
-	industrial_concern = {
+	industrial_research = {
 
 		ITA_ferrovie_dello_stato_italiane = {
 
@@ -4812,6 +4804,38 @@ ideas = {
 			modifier = {
 				recon_factor = 0.05
 				coordination_bonus = 0.1
+			}
+		}
+	}
+
+	industrial_output = {
+
+	}
+
+	industrial_theorist = { 
+
+		ITA_alberto_beneduce = {
+			name = ITA_alberto_beneduce
+
+			allowed = {
+				original_tag = ITA
+			}
+
+			traits = {
+				captain_of_industry 
+			}
+		}
+
+		ITA_giacomo_acerbo = {
+			name = ITA_giacomo_acerbo
+
+
+			allowed = {
+				original_tag = ITA
+			}
+
+			traits = {
+				war_industrialist
 			}
 		}
 	}

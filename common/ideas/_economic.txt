@@ -627,9 +627,7 @@ ideas = {
 		}
 
 		
-		SOV_war_economy_new = {
-
-			picture = SOV_war_economy
+		SOV_command_economy = {
 
 			visible = {
 				original_tag = SOV
@@ -643,9 +641,9 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_expected_value = 0.18
+				consumer_goods_expected_value = 0.20
 				conscription = -0.01
-				production_speed_arms_factory_factor = 0.25
+				production_speed_arms_factory_factor = 0.2
 				conversion_cost_civ_to_mil_factor= -0.2
 				conversion_cost_mil_to_civ_factor = -0.2
 				industrial_capacity_factory = 0.05

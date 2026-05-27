@@ -65,6 +65,13 @@ leader_traits = {
 		stability_weekly = 0.002
 	}
 
+	#Kalinin
+	popular_figurehead_kalinin = {
+		sprite = 13
+		stability_factor = 0.15
+		stability_weekly = 0.001
+	}
+
 	generic_industrial_conglomerate = {
 		random = no
 
@@ -183,5 +190,14 @@ leader_traits = {
 				instant = yes
 			}
 		}
+	}
+
+	gosplan = {
+		random = no
+
+		political_power_cost = 0.1
+		production_speed_buildings_factor = 0.1
+		global_building_slots_factor = 0.12
+		production_speed_infrastructure_factor = 0.15
 	}
 }

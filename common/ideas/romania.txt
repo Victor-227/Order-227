@@ -1283,7 +1283,7 @@ ideas = {
 	
 	industrial_theorist = { 
 
-		ROM_nicolae_malaxa={
+		ROM_nicolae_malaxa = {
 			name = ROM_nicolae_malaxa
 
 			allowed = {
@@ -1295,7 +1295,7 @@ ideas = {
 			}
 		}
 
-		ROM_ion_gugurtu={
+		ROM_ion_gugurtu = {
 			name = "Ion Gugurtu"
 
 			allowed = {

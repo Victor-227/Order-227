@@ -21,7 +21,11 @@
  SOV_gosplan_dec_cat_desc:0 "The rapid industrialization of the Soviet Union requires strict, centralized planning to prepare for the inevitable coming conflict. To maximize our economic output, the State Planning Commission (Gosplan) has drafted emergency directives designed to consolidate our development into a single, specialized industrial zone.\n\nThe proposed plans focus on either the heavy industry of §YUkraine§!, the administrative and aviation core of §YMoscow§!, the arms industry of the §YUrals§!, or the deep eastern expanse of §YSiberia§!. We cannot afford to distribute our resources evenly across the vastness of the nation; we must commit our full administrative weight to just §Rone of these regions§!."
  SOV_dual_factories_dynamic_modifiers:0 "Diverted Civilian Resources"
  SOV_dual_factories:0 "Tractor Factory Allocations"
- SOV_war_economy:0 "Command Economy"
+ popular_figurehead_kalinin:0 "Popular Figurehead"
+ gosplan:0 "Gosplan"
+ SOV_command_economy:0 "Command Economy"
+
+ #SOV_war_economy:0 "Command Economy"
  SOV_gosplan_ukraine_dynamic_modifiers:0 "Active State Planning Directive"
  SOV_gosplan_moscow_dynamic_modifiers:0 "Active State Planning Directive"
  SOV_gosplan_urals_dynamic_modifiers:0 "Active State Planning Directive"

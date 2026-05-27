@@ -2006,7 +2006,7 @@ ideas = {
 
 	industrial_theorist = { 
 
-		FRA_felix_gouin={
+		FRA_felix_gouin = {
 			name = FRA_felix_gouin
 
 			picture = generic_political_advisor_europe_4
@@ -2020,7 +2020,7 @@ ideas = {
 			}
 		}
 
-		FRA_zivony_peshkov={
+		FRA_zivony_peshkov = {
 			name = FRA_zivony_peshkov
 
 			picture = generic_army_europe_5
