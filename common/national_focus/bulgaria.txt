@@ -2988,7 +2988,7 @@ focus_tree = {
 		prerequisite = { focus = BUL_the_tsars_regime }
 		icon = GFX_focus_hol_the_foundations_of_defense
 		relative_position_id = BUL_the_tsars_regime
-		x = 1
+		x = -1
 		y = 1
 		cost = 10
 
@@ -3392,11 +3392,11 @@ focus_tree = {
 	focus = {
 		id = BUL_the_fate_of_the_balkans
 
-		prerequisite = { focus = BUL_form_a_regency_council focus = BUL_the_return_of_ferdinand_i focus = BUL_war_industry}
+		#prerequisite = { focus = BUL_form_a_regency_council focus = BUL_the_return_of_ferdinand_i focus = BUL_war_industry}
 
 		icon = GFX_focus_BUL_the_fate_of_the_balkans
 		relative_position_id = BUL_war_industry
-		x = -2
+		x = -5
 		y = 2
 		cost = 5
 		mutually_exclusive = { focus = BUL_join_the_tripartite_pact focus = BUL_join_the_allies focus = BUL_a_balkan_confederation }
@@ -3998,7 +3998,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		relative_position_id = BUL_depose_the_tsar
 		x = 0
-		y = 3
+		y = 2
 		cost = 10
 
 		available = {
@@ -4064,6 +4064,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
+			army_experience = 100
 			if = {
 				limit = {
 					has_dlc = "La Resistance"
@@ -4123,6 +4124,21 @@ focus_tree = {
 			add_ideas = BUL_volunteers_in_spain_nationalist
 			set_rule = { can_send_volunteers = yes }
 			custom_effect_tooltip = BUL_support_the_spanish_coup_tt
+
+						#add_ideas = CAN_volunteers3
+			custom_effect_tooltip = CAN_modify_army_spirit_tt
+			add_to_variable = {
+				CAN_experience_gain_army_factor_var = 0.07
+				tooltip = CAN_add_army_xp_tt1
+			}
+			add_to_variable = {
+				CAN_send_volunteers_tension_var = -0.50
+				tooltip = CAN_tension_tt1
+			}
+			add_to_variable = {
+				CAN_send_volunteer_divisions_required_var = -1
+				tooltip = CAN_force_tt1
+			}
 		}
 	}
 
@@ -4566,14 +4582,14 @@ focus_tree = {
 	focus = {
 		id = BUL_join_the_tripartite_pact
 
-		prerequisite = { focus = BUL_approach_germany }
-		##prerequisite = { focus = BUL_approach_germany }
+		prerequisite = { focus = BUL_war_industry focus = BUL_military_dictatorship}
+		##prerequisite = { focus = BUL_military_dictatorship }
 
 		dynamic = yes
 
 		icon = GFX_goal_support_fascism
 		relative_position_id = BUL_approach_germany
-		x = 0
+		x = -4
 		y = 4
 		cost = 5
 		mutually_exclusive = { focus = BUL_the_fate_of_the_balkans focus = BUL_join_the_allies }
@@ -4738,6 +4754,48 @@ focus_tree = {
 					add_to_tech_sharing_group = BUL_axis_research
 				}
 			}
+		}
+	}
+
+	focus = {
+		id = Ost_focus_1
+
+		prerequisite = { focus = BUL_the_eastern_front }
+
+		icon = GFX_focus_attack_soviet
+		relative_position_id = BUL_the_eastern_front
+		x = -0.7
+		y = 1
+		cost = 10
+
+		available = {
+			##
+		}
+		
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+
+		}
+	}
+
+		focus = {
+		id = Ost_focus_2
+
+		prerequisite = { focus = BUL_the_eastern_front }
+
+		icon = GFX_focus_attack_soviet
+		relative_position_id = BUL_the_eastern_front
+		x = 0.7
+		y = 1
+		cost = 10
+
+		available = {
+			##
+		}
+		
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+
 		}
 	}
 
@@ -5070,7 +5128,7 @@ focus_tree = {
 		icon = GFX_focus_BUL_the_third_bulgarian_empire
 		relative_position_id = BUL_total_war
 		x = -1
-		y = 2
+		y = 1
 		cost = 10
 
 		available = {
