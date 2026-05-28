@@ -76,11 +76,11 @@ IF = {
 			has_dlc = "Gotterdammerung"
 		}
 	}
-	set_stability = 0.7
-	set_war_support = 0.6
+	set_stability = 0.5
+	set_war_support = 0.5
 	ELSE = {
 		set_stability = 0.3
-		set_war_support = 0.4
+		set_war_support = 0.3
 	}
 }
 
@@ -342,7 +342,8 @@ set_politics = {
 set_popularities = {
 	democratic = 25
 	fascism = 31
-	neutrality = 44
+	communism = 1
+	neutrality = 43
 }
 
 # RECRUITING HUNGARIAN CHARACTERS
@@ -442,9 +443,9 @@ IF = {
 	recruit_character = HUN_pal_teleki
 	recruit_character = HUN_ferenc_fischer
 	recruit_character = HUN_fidel_palffy
-	recruit_character = HUN_istvan_friedrich
+	#	recruit_character = HUN_istvan_friedrich
 	recruit_character = HUN_magdolna_purgly
-	recruit_character = HUN_istvan_bethlen
+	#	recruit_character = HUN_istvan_bethlen
 	recruit_character = HUN_gyula_kadar
 	recruit_character = HUN_miklos_horthy_jr
 	recruit_character = HUN_pal_kiraly
@@ -508,9 +509,9 @@ add_breakthrough_progress = {
 			elections_allowed = yes
 		}
 		set_popularities = {
-			democratic = 27
-			fascism = 70
-			communism = 3
+			democratic = 25
+			fascism = 31
+			neutrality = 43
 		}
 
 		IF = {
@@ -578,10 +579,9 @@ add_breakthrough_progress = {
 			elections_allowed = no
 		}
 		set_popularities = {
-			neutrality = 74
-			democratic = 2
-			fascism = 24
-			communism = 0
+			neutrality = 43
+			democratic = 25
+			fascism = 31
 		}
 
 		IF = {

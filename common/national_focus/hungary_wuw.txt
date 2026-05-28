@@ -73,12 +73,9 @@ focus_tree = {
 
 			add_political_power = 50
 			add_stability = 0.05
-			add_war_support = -0.1
+			add_war_support = -0.05
 
 			custom_effect_tooltip = generic_skip_one_line_tt
-
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = HUN_jusztinian_seredi
 
 			hidden_effect = {
 				IF = {
@@ -97,10 +94,9 @@ focus_tree = {
 
 	focus = {
 		id = wuw_HUN_end_the_regency
-		icon = GFX_focus_hun_elect_a_king
+		icon = GFX_goal_generic_political_pressure
 		mutually_exclusive = { focus = wuw_HUN_continue_the_regency }
 		x = 16
-
 		y = 0
 
 		cost = 5
@@ -137,12 +133,7 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			custom_effect_tooltip = wuw_HUN_horthy_admiral_tt
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = HUN_jusztinian_seredi
-			show_ideas_tooltip = HUN_gusztav_gratz
+			#show_ideas_tooltip = HUN_gusztav_gratz
 		}
 	}
 
@@ -193,8 +184,8 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
-		cancel_if_invalid = no
-		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -321,8 +312,10 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_a_mobile_army
 		icon = GFX_focus_generic_mechanized
-		prerequisite = { focus = wuw_HUN_the_turan focus = wuw_HUN_assault_gun_focus }
-		x = 0
+		prerequisite = { focus = wuw_HUN_the_turan }
+		prerequisite = { focus = wuw_HUN_assault_gun_focus }
+		prerequisite = { focus = wuw_HUN_form_the_gyorshadtest }
+		x = 1
 		y = 4
 		relative_position_id = wuw_HUN_quantity_over_quality
 
@@ -446,7 +439,8 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = HUN_rural_electrification
-		cost = 10
+
+		cost = 5
 
 		ai_will_do = {
 			factor = 15
@@ -494,36 +488,6 @@ focus_tree = {
 
 		cost = 5
 
-		ai_will_do = {
-			factor = 15
-		}
-
-		allow_branch = {
-			IF = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = { has_completed_focus = wuw_HUN_end_the_regency }
-				NOT = { has_completed_focus = wuw_HUN_end_the_white_terror }
-				NOT = { has_completed_focus = wuw_HUN_undermine_the_admiral }
-			}
-		}
-
-		offset = {
-			x = 2
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = wuw_HUN_strengthen_horthys_reign
-			}
-		}
-
 		available = {
 			has_country_leader = {
 				ruling_only = yes
@@ -548,13 +512,6 @@ focus_tree = {
 
 		completion_reward = {
 
-			add_popularity = {
-				ideology = neutrality
-				popularity = 0.05
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
 			HUN_miklos_horthy = {
 				swap_country_leader_traits = {
 				    remove = HUN_the_regent
@@ -568,17 +525,13 @@ focus_tree = {
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = HUN_kalman_daranyi
 
-			hidden_effect = {
-				IF = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					mark_focus_tree_layout_dirty = yes
-				}
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
 			}
+
 		}
 	}
 
@@ -591,36 +544,6 @@ focus_tree = {
 		relative_position_id = wuw_HUN_end_the_regency
 
 		cost = 5
-
-		ai_will_do = {
-			factor = 5
-		}
-
-		allow_branch = {
-			IF = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = { has_completed_focus = wuw_HUN_end_the_regency }
-				NOT = { has_completed_focus = wuw_HUN_end_the_white_terror }
-				NOT = { has_completed_focus = wuw_HUN_strengthen_horthys_reign }
-			}
-		}
-
-		offset = {
-			x = -2
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = wuw_HUN_undermine_the_admiral
-			}
-		}
 
 		available = {
 			has_country_leader = {
@@ -643,8 +566,10 @@ focus_tree = {
 
 			add_popularity = {
 				ideology = fascism
-				popularity = 0.1
+				popularity = 0.05
 			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
 
 			add_stability = -0.05
 
@@ -657,29 +582,14 @@ focus_tree = {
 				    ideology = oligarchism
 				}
 			}
-
-			hidden_effect = {
-				IF = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					mark_focus_tree_layout_dirty = yes
-				}
-			}
-
 		}
 	}
 
 	focus = {
 		id = wuw_HUN_reestablish_the_rongyos_garda
 		icon = GFX_focus_HUN_reestablish_the_rongyos_garda
-		prerequisite = { focus = wuw_HUN_strengthen_horthys_reign focus = wuw_HUN_undermine_the_admiral }
-		x = 5
-		y = 2
-		relative_position_id = wuw_HUN_strengthen_horthys_reign
+		x = 56
+		y = 10
 
 		cost = 4
 
@@ -700,6 +610,7 @@ focus_tree = {
 		}
 
 		available = {
+			always = no
 			OR = {
 				has_government = neutrality
 				has_government = fascism
@@ -800,12 +711,12 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_strenghten_the_order_of_vitez
 		icon = GFX_focus_HUN_strenghten_the_order_of_vitez
-		prerequisite = { focus = wuw_HUN_strengthen_horthys_reign }
-		x = 3
+		prerequisite = { focus = wuw_HUN_award_military_promotions }
+		x = 0
 		y = 1
-		relative_position_id = wuw_HUN_strengthen_horthys_reign
+		relative_position_id = wuw_HUN_award_military_promotions
 
-		cost = 4
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -896,10 +807,6 @@ focus_tree = {
 
 		cost = 5
 
-		ai_will_do = {
-			factor = 10
-		}
-
 		available = {
 
 		}
@@ -926,7 +833,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			add_manpower = 10000
+			add_manpower = 7500
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -975,7 +882,6 @@ focus_tree = {
 
 		completion_reward = {
 
-			add_stability = 0.05
 			add_war_support = -0.15
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -991,7 +897,17 @@ focus_tree = {
 				ideology = fascism
 				long_name = HUN_arrow_cross_party_hungarist_movement_long
 				name = HUN_arrow_cross_party_hungarist_movement
-			}	
+			}
+
+			add_popularity = {
+				ideology = communism
+				popularity = -0.05
+			}
+
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.05
+			}
 
 		}
 	}
@@ -1030,30 +946,19 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_spur_on_the_trianon_trauma
 		icon = GFX_focus_ETH_freedom_at_gunpoint
-		x = 3
-		y = 3
+		prerequisite = { focus = wuw_HUN_strengthen_horthys_reign focus = wuw_HUN_undermine_the_admiral }
+		x = 5
+		y = 2
+		relative_position_id = wuw_HUN_strengthen_horthys_reign
 
-		cost = 10
-
-		ai_will_do = {
-			factor = 5
-		}
+		cost = 5
 
 		available = {
-			always = no
-			has_country_leader = {
-				ruling_only = yes
-				character = HUN_miklos_horthy
-			}
+
 		}
 
 		bypass = {
-			NOT = {
-				has_country_leader = {
-					ruling_only = yes
-					character = HUN_miklos_horthy
-				}
-			}
+
 		}
 
 		cancel_if_invalid = no
@@ -1063,18 +968,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER FOCUS_FILTER_HISTORICAL FOCUS_FILTER_WAR_SUPPORT }
 
 		completion_reward = {
-
-			HUN_miklos_horthy = {
-				swap_country_leader_traits = {
-				    remove = HUN_the_regent_2
-				    add = HUN_the_regent_3
-				    ideology = oligarchism
-				}
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			add_manpower = 14000
+			add_political_power = 50
+			add_war_support = 0.05
+			add_manpower = 15000
 
 		}
 	}
@@ -1094,7 +990,10 @@ focus_tree = {
 		}
 
 		available = {
-			has_idea = HUN_bled_agreement_wuw
+			OR = {
+				has_idea = HUN_bled_agreement_wuw
+				has_idea = HUN_denied_bled_agreement
+			}
 		}
 
 		bypass = {
@@ -1102,6 +1001,7 @@ focus_tree = {
 				wuw_HUN_does_not_have_trianon = yes
 				NOT = {
 					has_idea = HUN_bled_agreement_wuw
+					has_idea = HUN_denied_bled_agreement
 				}
 			}
 		}
@@ -1115,22 +1015,6 @@ focus_tree = {
 		completion_reward = {
 
 			add_threat = 1
-
-			IF = {
-				limit = {
-					FRA = {
-						has_completed_focus = FRA_strengthen_the_little_entente
-						exists = yes
-						is_subject = no
-					}
-				}
-				FRA = {
-					country_event = {
-						id = DOD_hungary.40
-						days = 1
-					}
-				}
-			}
 
 			IF = {
 				limit = {
@@ -1206,15 +1090,20 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL FOCUS_FILTER_WAR_SUPPORT }
 
 		completion_reward = {
+			add_political_power = 75
 			add_stability = 0.1
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
 		}
 	}
 
 	focus = {
 		id = wuw_HUN_act_of_defense
-		icon = GFX_goal_generic_defence
+		icon = GFX_focus_IRQ_promote_kurdish_culture
 		prerequisite = { focus = wuw_HUN_renounce_the_treaty_of_trianon }
-		#prerequisite = { focus = HUN_the_regent_supreme }
+		mutually_exclusive = { focus = wuw_HUN_wherever_the_cross_points }
 		x = -2
 		y = 2
 		relative_position_id = wuw_HUN_renounce_the_treaty_of_trianon
@@ -1279,7 +1168,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_undermine_the_admiral
 
-		cost = 4
+		cost = 5
 
 		ai_will_do = {
 			factor = 15
@@ -1289,15 +1178,7 @@ focus_tree = {
 		}
 
 		bypass = {
-			OR = {
-				has_government = fascism
-				NOT = {
-					has_country_leader = {
-						ruling_only = yes
-						character = HUN_miklos_horthy
-					}
-				}
-			}
+			
 		}
 
 		cancel_if_invalid = no
@@ -1335,10 +1216,6 @@ focus_tree = {
 
 		cost = 5
 
-		ai_will_do = {
-			factor = 10
-		}
-
 		available = {
 
 		}
@@ -1363,6 +1240,7 @@ focus_tree = {
 
 		completion_reward = {
 
+			add_political_power = 100
 			add_manpower = 15000
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -1370,6 +1248,11 @@ focus_tree = {
 			swap_ideas = {
 				remove_idea = HUN_hungarian_national_defense_association
 				add_idea = HUN_hungarian_national_defense_association_greenshirts
+			}
+
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
 			}
 
 		}
@@ -1405,6 +1288,10 @@ focus_tree = {
 
 		completion_reward = {
 
+			add_political_power = 150
+
+			add_stability = -0.05
+
 			country_event = {
 				id = WW_hungary.102
 				hours = 0
@@ -1422,10 +1309,6 @@ focus_tree = {
 		relative_position_id = wuw_HUN_the_march_on_budapest
 
 		cost = 5
-
-		ai_will_do = {
-			factor = 25
-		}
 
 		available = {
 			OR = {
@@ -1446,6 +1329,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER }
 
 		completion_reward = {
+			
+			add_stability = -0.05
 
 			IF = {
 				limit = {
@@ -1482,7 +1367,7 @@ focus_tree = {
 
 				custom_effect_tooltip = generic_skip_one_line_tt
 
-				HUN_remove_trianon_effect = yes
+				#HUN_remove_trianon_effect = yes
 
 				hidden_effect = {
 					news_event = { id = news.298 days = 1 }
@@ -1496,17 +1381,14 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_the_turul_association
 		icon = GFX_focus_HUN_the_turul_association
-		x = 11
-		y = 4
+		prerequisite = { focus = wuw_HUN_strengthen_horthys_reign }
+		x = 3
+		y = 1
+		relative_position_id = wuw_HUN_strengthen_horthys_reign
 
 		cost = 5
 
-		ai_will_do = {
-			factor = 5
-		}
-
 		available = {
-			always = no
 			OR = {
 				has_government = neutrality
 				has_government = fascism
@@ -1760,10 +1642,6 @@ focus_tree = {
 
 		cost = 5
 
-		ai_will_do = {
-			factor = 15
-		}
-
 		available = {
 
 		}
@@ -1779,6 +1657,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER }
 
 		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
 
 			hidden_effect = {
 				remove_trait = {
@@ -1838,7 +1723,7 @@ focus_tree = {
 		id = wuw_HUN_wherever_the_cross_points
 		icon = GFX_focus_HUN_wherever_the_cross_points
 		prerequisite = { focus = wuw_HUN_renounce_the_treaty_of_trianon }
-		#prerequisite = { focus = wuw_HUN_government_of_national_unity }
+		mutually_exclusive = { focus = wuw_HUN_act_of_defense }
 		x = 2
 		y = 2
 		relative_position_id = wuw_HUN_renounce_the_treaty_of_trianon
@@ -1864,13 +1749,11 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER }
 
 		completion_reward = {
-			add_ideas = { war_economy }
+			add_ideas = war_economy
 			custom_effect_tooltip = generic_skip_one_line_tt
-			add_timed_idea = {
-				idea = HUN_arrow_cross_idea
-			}
+			add_ideas = HUN_arrow_cross_idea
 			custom_effect_tooltip = generic_skip_one_line_tt
-			set_party_name = { 
+			set_party_name = {
 				ideology = fascism 
 				long_name = HUN_arrow_cross_party_long 
 				name = HUN_arrow_cross_party 
@@ -1883,7 +1766,7 @@ focus_tree = {
 		icon = GFX_focus_generic_support_the_left_right
 		prerequisite = { focus = wuw_HUN_renounce_the_treaty_of_trianon }
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = wuw_HUN_renounce_the_treaty_of_trianon
 
 		offset = {
@@ -1955,8 +1838,8 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_strengthen_the_turani_vadaszok
 		icon = GFX_focus_generic_limited_social_mobilization
-		x = 13
-		y = 3
+		x = 4
+		y = 10
 
 		cost = 10
 
@@ -2202,7 +2085,7 @@ focus_tree = {
 
 	focus = {
 		id = HUN_first_vienna_award
-
+		icon = GFX_focus_GER_fate_of_czechoslovakia
 		x = -2
 		y = 1
 		relative_position_id = wuw_HUN_reaffirm_territorial_claims
@@ -2213,28 +2096,15 @@ focus_tree = {
 	}
 
 	focus = {
-		id = HUN_second_vienna_award
-
-		x = 0
-		y = 1
-		relative_position_id = wuw_HUN_reaffirm_territorial_claims
-
-		available = {
-			always = no
-			#GER = { has_completed_focus = GER_first_vienna_award }
-		}
-	}
-
-	focus = {
 		id = HUN_fate_of_yugoslavia
-
+		icon = GFX_focus_GER_fate_of_yugoslavia
 		x = 2
 		y = 1
 		relative_position_id = wuw_HUN_reaffirm_territorial_claims
 
 		available = {
 			always = no
-			#GER = { has_completed_focus = GER_first_vienna_award }
+			GER = { has_completed_focus = GER_fate_of_yugoslavia }
 		}
 	}
 
@@ -2261,8 +2131,8 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = no
-		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
 		available_if_capitulated = no
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -2305,10 +2175,6 @@ focus_tree = {
 
 		cost = 5
 
-		ai_will_do = {
-			factor = 15
-		}
-
 		available = {
 			always = no
 
@@ -2344,15 +2210,6 @@ focus_tree = {
 
 		bypass = {
 
-			OR = {
-				owns_state = 664
-				controls_state = 664
-				664 = {
-					OWNER = {
-						has_war_with = ROOT
-					}
-				}
-			}
 
 		}
 
@@ -2458,14 +2315,7 @@ focus_tree = {
 
 		bypass = {
 
-			OR = {
-				owns_state = 73
-				73 = {
-					OWNER = {
-						has_war_with = ROOT
-					}
-				}
-			}
+			
 
 		}
 
@@ -2511,10 +2361,6 @@ focus_tree = {
 
 		cost = 5
 
-		ai_will_do = {
-			factor = 10
-		}
-
 		available = {
 
 			NOT = {
@@ -2535,7 +2381,6 @@ focus_tree = {
 				OWNER = {
 					NOT = {
 						OR = {
-							is_in_faction_with = ROOT
 							has_war_with = ROOT
 						}
 					}
@@ -2545,7 +2390,12 @@ focus_tree = {
 		}
 
 		bypass = {
-
+			76 = {
+				is_owned_by = ROOT
+			}
+			any_enemy_country = {
+				has_full_control_of_state = 76
+			}
 		}
 
 		cancel_if_invalid = no
@@ -2565,7 +2415,7 @@ focus_tree = {
 				custom_effect_tooltip = HUN_demands_tt
 				ROM = { 
 					country_event = { 
-						id = DOD_hungary.50 
+						id = DOD_hungary.50
 						hours = 6
 						random_hours = 12
 					} 
@@ -2604,112 +2454,46 @@ focus_tree = {
 
 		cost = 5
 
-		ai_will_do = {
-			factor = 10
-		}
-
 		will_lead_to_war_with = YUG
 
 		available = {
-
-			is_subject = no
+			OR = {
+				NOT = {
+					country_exists = YUG
+				}
+				YUG = { has_capitulated = yes }
+			}
+			
+			any_allied_country = {
+				has_full_control_of_state = 45
+			}
 
 			45 = {
 				NOT = {
 					is_owned_by = ROOT
 				}
 			}
-
-			IF = {
-				limit = {
-					45 = {
-						is_owned_by = YUG
-					}
-				}
-				strength_ratio = { tag = YUG ratio > 0.75 }
-			}
-
-			has_army_manpower = { size > 175000 }
-
 		}
 
 		bypass = {
-
-			OR = {
-				owns_state = 45
-				45 = {
-					OWNER = {
-						has_war_with = ROOT
-					}
-				}
-			}
-
+			owns_state = 45
 		}
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
-		cancel_if_invalid = no
-		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
 		available_if_capitulated = no
 
 		completion_reward = {
 
-			custom_effect_tooltip = HUN_demands_tt
-			IF = {
-				limit = {
-					YUG = {
-						is_subject = yes
-						owns_state = 45
-					}
-				}
-				create_wargoal = {
-					type = take_state_focus
-					target = YUG
-					expire = 0
-					generator = { 45 }
-				}
-				ELSE = {
-					IF = {
-						limit = {
-							OR = {
-								45 = { is_owned_by = YUG }
-								45 = { owner = { is_subject_of = YUG } }
-							}
-						}
-						YUG = { country_event = DOD_hungary.90 }
-					}
-				}
-			}
-
-			IF = {
-				limit = {
-					45 = {
-						NOT = {
-							OR  = {
-								is_owned_by = YUG
-								owner = { is_subject_of = YUG }
-							}
-						}
-					}
-				}
-				random_country = {
-					limit = {
-						owns_state = 45
-					}
-					country_event = {
-						id = WW_hungary.4
-						days = 2
-						random_days = 3
-					}
-				}
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
+			transfer_state = 45
+			add_state_core
 
 			custom_effect_tooltip = wuw_HUN_demand_the_vojvodina_tt
 
 			hidden_effect = {
-				news_event = { id = news.306 }
+				#	news_event = { id = news.306 }
 			}
 
 		}
@@ -2754,14 +2538,6 @@ focus_tree = {
 
 		bypass = {
 
-			OR = {
-				owns_state = 975
-				975 = {
-					OWNER = {
-						has_war_with = ROOT
-					}
-				}
-			}
 
 		}
 
@@ -2835,18 +2611,6 @@ focus_tree = {
 
 		bypass = {
 
-			OR = {
-				SLO = {
-					exists = yes
-					is_subject_of = ROOT
-				}
-				AND = {
-					owns_state = 70
-					owns_state = 71
-					#owns_state = 72
-					owns_state = 73
-				}
-			}
 
 		}
 
@@ -2956,12 +2720,6 @@ focus_tree = {
 
 		bypass = {
 
-			AND = {
-				owns_state = 70
-				owns_state = 71
-				#owns_state = 72
-				owns_state = 73
-			}
 
 		}
 
@@ -3350,16 +3108,7 @@ focus_tree = {
 		}
 
 		bypass = {
-			AND = {
-				is_in_faction_with = GER
-				GER = {
-					is_faction_leader = yes
-					OR = {
-						has_government = fascism
-						has_government = neutrality
-					}
-				}
-			}
+			
 		}
 
 		cancel_if_invalid = yes
@@ -3519,8 +3268,11 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_stability = 0.05
 			add_political_power = 100
+			add_stability = 0.05
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
 			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
@@ -3544,10 +3296,6 @@ focus_tree = {
 		relative_position_id = wuw_HUN_avoid_interventionalist_destablilization
 
 		cost = 5
-
-		ai_will_do = {
-			factor = 5
-		}
 
 		available = {
 
@@ -4218,45 +3966,16 @@ focus_tree = {
 		}
 
 		available = {
+
+			SOV = { has_completed_focus = SOV_secure_leningrad }
+
 			has_war = no
 			
 			FIN = {
 				has_war = yes
 				has_civil_war = no
 			}
-			custom_trigger_tooltip = {
-				tooltip = wuw_HUN_support_for_our_finnish_brothers_tt
-				OR = {
-					AND = {
-						FIN = {
-							OR = {
-								has_government = neutrality
-								has_government = fascism
-							}
-						}
-						HUN = {
-							OR = {
-								has_government = neutrality
-								has_government = fascism
-							}
-						}
-					}
-					AND = {
-						FIN = {
-							OR = {
-								has_government = democratic
-								has_government = communism
-							}
-						}
-						HUN = {
-							OR = {
-								has_government = democratic
-								has_government = communism
-							}
-						}
-					}
-				}
-			}
+			
 		}
 
 		bypass = {
@@ -4268,6 +3987,8 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+
+			army_experience = 50
 
 			add_timed_idea = {
 				idea = HUN_pan_ugric_volunteer_force
@@ -4512,12 +4233,7 @@ focus_tree = {
 
 		cost = 5
 
-		ai_will_do = {
-			factor = 10
-		}
-
 		available = {
-			always = no
 			NOT = {
 				has_idea = HUN_promises_of_peace
 			}
@@ -4890,6 +4606,10 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
+			custom_effect_tooltip = HUN_ferenc_szombathelyi_becomes_a_general
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
 			custom_effect_tooltip = available_chief_of_army
 			show_ideas_tooltip = HUN_karoly_beregfy
 			show_ideas_tooltip = HUN_ferenc_szombathelyi
@@ -5031,12 +4751,12 @@ focus_tree = {
 				prioritize = { 43 }
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
-					type = arms_factory
+					type = industrial_complex
 					level = 1
 					instant_build = yes
 				}
 				add_building_construction = {
-					type = industrial_complex
+					type = arms_factory
 					level = 1
 					instant_build = yes
 				}
@@ -5317,7 +5037,7 @@ focus_tree = {
 
 	focus = {
 		id = HUN_rural_electrification
-
+		icon = GFX_focus_ARG_develop_the_electricity_sector
 		prerequisite = { focus = wuw_HUN_invite_foreign_investors }
 		x = 0
 		y = 3
@@ -5326,7 +5046,44 @@ focus_tree = {
 		cost = 5
 
 		completion_reward = {
-			#
+
+			973 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+
+			974 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_tech_bonus = {
+				name = HUN_rural_electrification
+				bonus = 1
+				uses = 1
+				category = construction_tech
+			}
+
 		}
 	}
 
@@ -5600,7 +5357,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
@@ -5997,7 +5754,7 @@ focus_tree = {
 
 	focus = {
 		id = wuw_HUN_the_arado_ar_96
-		icon = GFX_focus_generic_cryptologic_bomb
+		icon = GFX_focus_generic_air_partners
 		prerequisite = { focus = wuw_HUN_joint_air_development }
 		x = -1
 		y = 1
@@ -6219,7 +5976,7 @@ focus_tree = {
 
 	focus = {
 		id = wuw_HUN_danuvia_submachine_guns
-		icon = GFX_goal_generic_small_arms
+		icon = GFX_focus_AFG_scavenging
 		prerequisite = { focus = wuw_HUN_expand_the_army }
 		x = -1
 		y = 1
@@ -6227,11 +5984,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
 
-		cost = 10
-
-		ai_will_do = {
-			factor = 5
-		}
+		cost = 5
 
 		available = {
 
@@ -6247,11 +6000,12 @@ focus_tree = {
 
 		completion_reward = {
 
-			add_tech_bonus = {
-				name = HUN_danuvia_submachine_guns
-				bonus = 0.75
-				uses = 1
-				category = infantry_weapons
+			43 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -6278,6 +6032,16 @@ focus_tree = {
 
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = HUN_pal_kiraly
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_tech_bonus = {
+				name = HUN_danuvia_submachine_guns
+				bonus = 0.75
+				uses = 1
+				category = infantry_weapons
+			}
+
 		}
 	}
 
@@ -6331,7 +6095,7 @@ focus_tree = {
 		icon = GFX_focus_HUN_form_the_gyorshadtest
 		prerequisite = { focus = wuw_HUN_the_botond }
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = wuw_HUN_the_botond
 
 		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
@@ -6670,10 +6434,6 @@ focus_tree = {
 
 		completion_reward = {
 
-			army_experience = 50
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
 			HUN_ivan_hindy = {
 				#promote_leader = yes
 				add_planning = 1
@@ -6694,8 +6454,6 @@ focus_tree = {
 				add_planning = 1
 				add_defense = 1
 			}
-
-			custom_effect_tooltip = HUN_ferenc_szombathelyi_becomes_a_general
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -6722,7 +6480,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_war_support > 0.70
+			
 		}
 
 		bypass = {
@@ -6742,7 +6500,7 @@ focus_tree = {
 		id = wuw_HUN_legacy_of_the_black_legion
 		icon = GFX_focus_HUN_legacy_of_the_black_legion
 		prerequisite = { focus = wuw_HUN_magyar_kiralyi_csendorseg }
-		x = 1
+		x = 0
 		y = 1
 		relative_position_id = wuw_HUN_magyar_kiralyi_csendorseg
 
@@ -6871,9 +6629,9 @@ focus_tree = {
 
 	focus = {
 		id = HUN_air_infantry_coordination
-		
+		icon = GFX_focus_generic_armored_air_support
 		prerequisite = { focus = wuw_HUN_light_infantry_divisions_doctrine }
-		x = 1
+		x = 0
 		y = 1
 		relative_position_id = wuw_HUN_light_infantry_divisions_doctrine
 
@@ -6888,7 +6646,7 @@ focus_tree = {
 		id = wuw_HUN_szent_laszlo_infantry_division
 		icon = GFX_focus_HUN_szent_laszlo_infantry_division
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = wuw_HUN_the_szekel_command
 
 		cost = 5
@@ -7081,7 +6839,7 @@ focus_tree = {
 
 	focus = {
 		id = HUN_the_tigris
-
+		icon = GFX_focus_generic_heavy_tank
 		prerequisite = { focus = wuw_HUN_seek_german_contracts }
 		x = -2
 		y = 2
@@ -7648,16 +7406,36 @@ focus_tree = {
 
 	focus = {
 		id = HUN_marine_experiments
-		
+		icon = GFX_goal_generic_amphibious_assault
 		prerequisite = { focus = wuw_HUN_transylvanian_mountaineers }
-		x = 2
+		x = 0
 		y = 1
 		relative_position_id = wuw_HUN_transylvanian_mountaineers
 
 		cost = 3
 
 		completion_reward = {
-			#
+			add_tech_bonus = {
+				name = HUN_marine_experiments_mt
+				bonus = 1
+				uses = 1
+				category = marine_tech
+			}
+			add_tech_bonus = {
+				name = HUN_marine_experiments_tp
+				bonus = 1
+				uses = 1
+				category = tp_tech
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_doctrine_cost_reduction = {
+				name = HUN_army_maneuvers
+				cost_reduction = 0.5
+				uses = 2
+				category = cat_marines_doctrine
+			}
 		}
 	}
 
@@ -8354,9 +8132,9 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_the_szekel_command
 		icon = GFX_focus_HUN_the_szekel_command
-		prerequisite = { focus = wuw_HUN_transylvanian_mountaineers }
+		#prerequisite = { focus = wuw_HUN_transylvanian_mountaineers }
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = wuw_HUN_transylvanian_mountaineers
 
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_HISTORICAL }

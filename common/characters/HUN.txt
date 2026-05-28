@@ -340,7 +340,7 @@ characters = {
 
 		country_leader = {
 			ideology = nazism
-			traits = { HUN_national_socialist_irredentist }
+			traits = { HUN_national_socialist_irredentist anti-communist }
 			expire = "1965.1.1.1"
 			id = -1
 		}
@@ -735,7 +735,7 @@ characters = {
 				traits = {
 					army_logistics_2
 				}
-				cost =  50
+				cost =  100
 				ai_will_do = {
 					base = 1
 				}
@@ -1625,7 +1625,7 @@ characters = {
 				logistics_skill = 3
 				legacy_id = -1
 				visible = {
-					has_completed_focus = wuw_HUN_award_military_promotions
+					has_completed_focus = wuw_HUN_invest_in_ludovica_academy
 				}
 			}
 
@@ -2032,11 +2032,7 @@ characters = {
 					army_armored_1
 				}
 
-				cost =  50
-
-				ai_will_do = {
-					factor = 1.000
-				}
+				cost =  75
 
 			}
 
@@ -2056,7 +2052,7 @@ characters = {
 			}
 
 			corps_commander = {
-				traits = { trait_HUN_vitez infantry_leader armor_officer }
+				traits = { trait_HUN_vitez armor_officer panzer_leader }
 				skill = 2
 				attack_skill = 3
 				defense_skill = 1
@@ -2080,7 +2076,7 @@ characters = {
 				}
 
 				available = {
-					has_completed_focus = wuw_HUN_form_the_gyorshadtest
+					has_completed_focus = wuw_HUN_quantity_over_quality
 				}
 
 				traits = {
@@ -2088,10 +2084,6 @@ characters = {
 				}
 
 				cost =  50
-
-				ai_will_do = {
-					base = 2
-				}
 				
 			}
 
@@ -2218,21 +2210,17 @@ characters = {
 
 				idea_token = HUN_jeno_ratz
 
-				ledger = air
+				ledger = army
 
 				allowed = {
 					original_tag = HUN
 				}
 
 				traits = {
-					air_air_combat_training_2
+					army_infantry_1
 				}
 
-				cost = 100
-
-				ai_will_do = {
-					factor = 1.000
-				}
+				cost = 50
 
 			}
 
@@ -2276,7 +2264,7 @@ characters = {
 				}
 
 				available = {
-					has_completed_focus = wuw_HUN_light_infantry_divisions_doctrine
+					has_completed_focus = wuw_HUN_expand_the_army
 				}
 
 				traits = {
@@ -2284,10 +2272,6 @@ characters = {
 				}
 
 				cost = 50
-
-				ai_will_do = {
-					base = 2
-				}
 				
 			}
 
@@ -3018,43 +3002,43 @@ characters = {
 
 	}
 
-	HUN_istvan_friedrich = {
-
-		name = HUN_istvan_friedrich
-
-		portraits = {
-			civilian = {
-				small = "GFX_portrait_HUN_istvan_friedrich_small"
-			}
-		}
-
-		advisor = {
-
-			slot = political_advisor
-
-			idea_token = HUN_istvan_friedrich
-
-			allowed = {
-				original_tag = HUN
-			}
-
-			available = {
-				NOT = {
-					has_government = communism
-				}
-			}
-
-			traits = {
-				captain_of_industry
-			}
-
-			ai_will_do = {
-				base = 1
-			}
-
-		}
-
-	}
+	#	HUN_istvan_friedrich = {
+	#
+	# 	name = HUN_istvan_friedrich
+	#
+	#	portraits = {
+	#		civilian = {
+	#			small = "GFX_portrait_HUN_istvan_friedrich_small"
+	#		}
+	#	}
+	#
+	#	advisor = {
+	#
+	#		slot = political_advisor
+	#
+	#		idea_token = HUN_istvan_friedrich
+	#
+	#		allowed = {
+	#			original_tag = HUN
+	#		}
+	#
+	#		available = {
+	#			NOT = {
+	#				has_government = communism
+	#			}
+	#		}
+	#
+	#		traits = {
+	#			captain_of_industry
+	#		}
+	#
+	#		ai_will_do = {
+	#			base = 1
+	#		}
+	#
+	#	}
+	#
+	#	}
 
 	HUN_magdolna_purgly = {
 
@@ -3244,16 +3228,8 @@ characters = {
 				has_dlc = "La Resistance"
 			}
 
-			visible = {
-				NOT = {
-					OR = {
-						has_completed_focus = wuw_HUN_restore_the_socialist_federative_republic
-						has_completed_focus = wuw_HUN_join_the_comintern
-					}
-				}
-			}
-
 			available = {
+				has_intelligence_agency = yes
 				NOT = {
 					has_government = communism
 				}
@@ -3324,7 +3300,7 @@ characters = {
 
 		advisor = {
 
-			slot = political_advisor
+			slot = materiel_designer
 
 			idea_token = HUN_pal_kiraly
 

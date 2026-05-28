@@ -17,6 +17,7 @@ ideas = {
 				production_speed_arms_factory_factor = -0.5
 			}
 		}
+
 		HUN_treaty_of_triannon_aat = {
 			name = HUN_treaty_of_triannon
 			picture = HUN_treaty_of_triannon
@@ -36,6 +37,7 @@ ideas = {
 				production_speed_arms_factory_factor = -0.5
 			}
 		}
+
 		HUN_treaty_of_triannon_wuw = {
 			name = HUN_treaty_of_triannon
 			picture = HUN_treaty_of_triannon
@@ -54,6 +56,7 @@ ideas = {
 				experience_gain_air_factor = -0.50
 			}
 		}
+
 		HUN_treaty_of_triannon_aat_wuw = {
 			name = HUN_treaty_of_triannon
 			picture = HUN_treaty_of_triannon
@@ -78,6 +81,7 @@ ideas = {
 				experience_gain_air_factor = -0.50
 			}
 		}
+
 		HUN_treaty_of_triannon_2 = {
 			allowed = {
 				original_tag = HUN
@@ -122,7 +126,8 @@ ideas = {
 				conscription = -0.005
 				production_speed_arms_factory_factor = -0.5
 				industrial_capacity_factory = -0.1
-				experience_gain_air_factor = -0.25
+				experience_gain_army_factor = -0.10
+				experience_gain_air_factor = -0.50
 			}
 		}
 		HUN_treaty_of_triannon_aat_wuw_no_army_exp_debuff = {
@@ -145,7 +150,8 @@ ideas = {
 				industrial_capacity_factory = -0.1
 				military_industrial_organization_funds_gain = -0.1
 				military_industrial_organization_research_bonus = -0.1
-				experience_gain_air_factor = -0.25
+				experience_gain_army_factor = -0.10
+				experience_gain_air_factor = -0.50
 			}
 		}
 
@@ -164,8 +170,10 @@ ideas = {
 				production_speed_arms_factory_factor = -0.5
 				industrial_capacity_factory = -0.1
 				experience_gain_army_factor = -0.50
+				experience_gain_air_factor = -0.10
 			}
 		}
+
 		HUN_treaty_of_triannon_aat_wuw_no_air_debuff = {
 			name = HUN_treaty_of_triannon
 			picture = HUN_treaty_of_triannon
@@ -187,6 +195,7 @@ ideas = {
 				military_industrial_organization_funds_gain = -0.1
 				military_industrial_organization_research_bonus = -0.1
 				experience_gain_army_factor = -0.50
+				experience_gain_air_factor = -0.10
 			}
 		}
 
@@ -204,8 +213,11 @@ ideas = {
 				conscription = -0.005
 				production_speed_arms_factory_factor = -0.5
 				industrial_capacity_factory = -0.1
+				experience_gain_army_factor = -0.10
+				experience_gain_air_factor = -0.10
 			}
 		}
+
 		HUN_treaty_of_triannon_aat_wuw_no_air_or_army_debuff = {
 			name = HUN_treaty_of_triannon
 			picture = HUN_treaty_of_triannon
@@ -226,6 +238,8 @@ ideas = {
 				industrial_capacity_factory = -0.1
 				military_industrial_organization_funds_gain = -0.1
 				military_industrial_organization_research_bonus = -0.1
+				experience_gain_army_factor = -0.10
+				experience_gain_air_factor = -0.10
 			}
 		}
 
@@ -241,7 +255,21 @@ ideas = {
 
 			modifier = {
 				justify_war_goal_time = 0.15
-				war_support_factor = 0.05
+			}
+		}
+
+		HUN_denied_bled_agreement = {
+			name = HUN_treaty_of_triannon_4
+			picture = HUN_treaty_of_triannon
+			allowed = {
+				original_tag = HUN
+			}
+			available = {
+				has_war = no
+			}
+
+			modifier = {
+				
 			}
 		}
 
@@ -601,7 +629,7 @@ ideas = {
 			modifier = {
 				stability_factor = 0.05
 				war_support_factor = 0.05
-				fascism_drift = 0.06
+				fascism_drift = 0.05
 				army_core_defence_factor = 0.05
 				conscription_factor = 0.05
 			}
@@ -693,7 +721,7 @@ ideas = {
 
 			modifier = {
 				army_attack_against_major_factor = 0.05
-				army_defence_against_major_factor = 0.1
+				army_defence_against_major_factor = 0.10
 				conscription_factor = 0.05
 				mobilization_speed = 0.15
 			}
@@ -739,9 +767,12 @@ ideas = {
 			picture = generic_armor
 
 			modifier = {
-				army_armor_attack_factor = 0.1
+				army_armor_attack_factor = 0.05
+				army_armor_defence_factor = 0.05
 				motorized_attack_factor = 0.05
 				motorized_defence_factor = 0.05
+				mechanized_attack_factor = 0.05
+				mechanized_defence_factor = 0.05
 				army_speed_factor = 0.05
 			}
 		}
@@ -898,7 +929,7 @@ ideas = {
 			picture = HUN_hungarian_gendarmerie
 
 			modifier = {
-				army_org_regain = 0.1
+				army_org_regain = 0.10
 				conscription_factor = 0.05
 			}
 		}
@@ -915,8 +946,10 @@ ideas = {
 			modifier = {
 				army_org_regain = 0.15
 				conscription_factor = 0.05
+				army_infantry_attack_factor = 0.05
+				army_infantry_defence_factor = 0.10
 				cavalry_attack_factor = 0.05
-				cavalry_defence_factor = 0.1
+				cavalry_defence_factor = 0.10
 			}
 		}
 
@@ -932,7 +965,7 @@ ideas = {
 
 			modifier = {
 				political_power_factor = -0.1
-				consumer_goods_expected_value = -0.03
+				consumer_goods_expected_value = -0.025
 			}
 		}
 
@@ -1183,9 +1216,10 @@ ideas = {
 
 			modifier = {
 				research_speed_factor = -0.05
-				political_power_factor = 0.1
-				war_support_factor = 0.1
-				stability_factor = 0.1
+				political_power_factor = 0.10
+				war_support_factor = 0.05
+				stability_factor = 0.10
+				weekly_manpower = 1000
 			}
 		}
 
@@ -1202,9 +1236,10 @@ ideas = {
 				resistance_growth = -0.05
 				army_core_defence_factor = 0.05
 				army_core_attack_factor = 0.05
-				war_support_factor = 0.1
-				stability_factor = 0.1
+				war_support_factor = 0.05
+				stability_factor = 0.20
 				research_speed_factor = -0.03
+				weekly_manpower = 1000
 			}
 		}
 
@@ -1236,7 +1271,7 @@ ideas = {
 
 			modifier = {
 				army_speed_factor = 0.02
-				cavalry_attack_factor = 0.05
+				army_attack_against_major_factor = 0.10
 				supply_consumption_factor = -0.05
 				fascism_drift = 0.04
 			}
@@ -2018,6 +2053,7 @@ ideas = {
 				conscription = 0.0025
 				industrial_capacity_factory = 0.05
 				production_speed_arms_factory_factor = 0.25
+				consumer_goods_expected_value = -0.025
 				custom_modifier_tooltip = HUN_secret_rearmament_tt_2
 			}
 		}
@@ -2119,52 +2155,22 @@ ideas = {
 		}
 	}
 
-	tank_manufacturer = {
-
-		designer = yes
-
-		# The MIO version should be british originally
-		HUN_crossley_motors = {
-
-			picture = ENG_crossley_motors
-
-			available = {
-				is_in_faction_with = ENG
-			}
-
-			ai_will_do = {
-				base = 1
-			}
-						
-			allowed = {
-				original_tag = HUN
-				has_dlc = "La Resistance"
-				has_dlc = "Gotterdammerung"
-			}
-						
-			research_bonus = {
-				armor = 0.15
-			}
-
-			traits = { armored_car_manufacturer }
-		}
+	tank_research = {
 
 		HUN_mavag_assault_guns = {
 
 			picture = HUN_mavag_assault_gun
+			
+			allowed = {
+				original_tag = HUN
+			}
 
 			available = {
 				has_completed_focus = wuw_HUN_establish_the_mavag_army_division
 			}
 
-			ai_will_do = {
-				base = 2
-			}
-						
-			allowed = {
-				original_tag = HUN
-				has_dlc = "Gotterdammerung"
-			}
+			cost = 150
+			removal_cost = 0
 						
 			research_bonus = {
 				armor = 0.15
@@ -2177,18 +2183,16 @@ ideas = {
 
 			picture = HUN_hti_turan
 
-			available = {
-				has_completed_focus = wuw_HUN_the_turan
-			}
-
-			ai_will_do = {
-				base = 5
-			}
-						
 			allowed = {
 				original_tag = HUN
-				has_dlc = "Gotterdammerung"
 			}
+
+			available = {
+				has_completed_focus = wuw_HUN_establish_the_mavag_army_division
+			}
+
+			cost = 150
+			removal_cost = 0
 						
 			research_bonus = {
 				armor = 0.15
@@ -2201,18 +2205,16 @@ ideas = {
 
 			picture = henschel
 
+			allowed = {
+				original_tag = HUN
+			}
+			
 			available = {
 				has_completed_focus = wuw_HUN_seek_german_contracts
 			}
 
-			ai_will_do = {
-				base = 1
-			}
-						
-			allowed = {
-				original_tag = HUN
-				has_dlc = "Gotterdammerung"
-			}
+			cost = 150
+			removal_cost = 0
 						
 			research_bonus = {
 				armor = 0.15
@@ -2225,18 +2227,16 @@ ideas = {
 
 			picture = fiat
 
-			available = {
-				has_completed_focus = wuw_HUN_license_fiat_tankettes
-			}
-
-			ai_will_do = {
-				base = 2
-			}
-						
 			allowed = {
 				original_tag = HUN
-				has_dlc = "Gotterdammerung"
 			}
+
+			available = {
+				
+			}
+
+			cost = 150
+			removal_cost = 0
 						
 			research_bonus = {
 				armor = 0.15
@@ -2247,19 +2247,20 @@ ideas = {
 
 	}
 	
-	aircraft_manufacturer = {
-			
-		designer = yes
+	aircraft_research = {
 		
 		mw_aircraft = {
 			
 			picture = generic_air_manufacturer_2
 
-			
 			allowed = {
 				original_tag = HUN
 			}
 			
+			available = {
+				#has_completed_focus = wuw_HUN_make_the_magyar_legiero_known
+			}
+
 			research_bonus = {
 				air_equipment = 0.15
 			}
@@ -2280,7 +2281,6 @@ ideas = {
 		mavag_aircraft = {
 			
 			picture = HUN_mavag_aircraft
-
 			
 			allowed = {
 				original_tag = HUN
@@ -2308,14 +2308,13 @@ ideas = {
 		HUN_mrt_aircraft = {
 			
 			picture = HUN_mrt_aircraft
-
 			
 			allowed = {
 				original_tag = HUN
 			}
 
 			available = {
-				#has_completed_focus = wuw_HUN_the_matyasfold_fighter_factory
+				has_completed_focus = wuw_HUN_the_matyasfold_fighter_factory
 			}
 			
 			research_bonus = {
@@ -2335,9 +2334,7 @@ ideas = {
 
 	}
 
-	naval_manufacturer = {
-	
-		designer = yes
+	naval_research = {
 	
 		HUN_ganz_danubius = {
 			
@@ -2366,7 +2363,7 @@ ideas = {
 			}
 			
 			cost = 150
-			removal_cost = 10
+			removal_cost = 0
 			
 			research_bonus = {
 				naval_equipment = 0.15
@@ -2412,7 +2409,7 @@ ideas = {
 			}
 			
 			cost = 150
-			removal_cost = 10
+			removal_cost = 0
 			
 			research_bonus = {
 				naval_equipment = 0.1
@@ -2434,7 +2431,7 @@ ideas = {
 
 	}
 
-	industrial_concern = {
+	industrial_research = {
 	
 		HUN_mavag = {
 			
@@ -2463,10 +2460,6 @@ ideas = {
 				original_tag = HUN
 			}
 
-			#visible = {
-			#	has_dlc = "Gotterdammerung"
-			#}
-			
 			research_bonus = {
 				electronics = 0.15
 			}
@@ -2476,6 +2469,11 @@ ideas = {
 			}
 			
 			traits = { electronics_concern }
+			
+			modifier = {
+				research_speed_factor = 0.05
+			}
+
 		}
 
 		HUN_mav = { 
@@ -2490,15 +2488,7 @@ ideas = {
 				has_completed_focus = wuw_HUN_magyar_allamvasutak
 			}
 
-			visible = {
-				has_dlc = "Gotterdammerung"
-			}
-
 			research_bonus = {
-			}
-
-			ai_will_do = {
-				base = 2
 			}
 		
 			traits = { railway_company } 
@@ -2519,16 +2509,8 @@ ideas = {
 				has_completed_focus = wuw_HUN_tap_newfound_oil_deposits
 			}
 
-			visible = {
-				has_dlc = "Gotterdammerung"
-			}
-
 			research_bonus = {
 				synth_resources = 0.15
-			}
-
-			ai_will_do = {
-				base = 2
 			}
 		
 			traits = { oil_extraction_company_trait } 
@@ -2540,9 +2522,7 @@ ideas = {
 
 	}
 
-	materiel_manufacturer = {
-	
-		designer = yes
+	materiel_research = {
 	
 		HUN_femaru_fegyver_es_gepgyar = {
 			
@@ -2552,18 +2532,15 @@ ideas = {
 				original_tag = HUN
 			}
 			
-			cost = 150
-			removal_cost = 10
-			
+			cost = 100
+			removal_cost = 0
+
 			research_bonus = {
 				infantry_weapons = 0.15
 			}
-
-			ai_will_do = {
-				base = 0.5
-			}
 			
 			traits = { infantry_equipment_manufacturer }
+			
 		}
 
 		HUN_danuvia_inf = {
@@ -2578,13 +2555,8 @@ ideas = {
 				has_completed_focus = wuw_HUN_danuvia_submachine_guns
 			}
 
-			visible = {
-				has_dlc = "Gotterdammerung"
-			}
-
-			ai_will_do = {
-				base = 5
-			}
+			cost = 100
+			removal_cost = 0
 			
 			research_bonus = {
 				infantry_weapons = 0.1
@@ -2606,14 +2578,9 @@ ideas = {
 				has_completed_focus = wuw_HUN_the_botond
 			}
 
-			visible = {
-				has_dlc = "Gotterdammerung"
-			}
+			cost = 100
+			removal_cost = 0
 
-			ai_will_do = {
-				base = 1
-			}
-			
 			research_bonus = {
 				motorized_equipment = 0.15
 			}
@@ -2621,6 +2588,13 @@ ideas = {
 			traits = { motorized_equipment_manufacturer }
 			
 			modifier = {
+
+			}
+
+			equipment_bonus = {
+				motorized = {
+					build_cost_ic = -0.05
+				}
 			}
 		}
 
@@ -2636,13 +2610,8 @@ ideas = {
 				has_completed_focus = wuw_HUN_seek_german_contracts
 			}
 
-			visible = {
-				has_dlc = "Gotterdammerung"
-			}
-
-			ai_will_do = {
-				base = 1
-			}
+			cost = 100
+			removal_cost = 0
 			
 			research_bonus = {
 				artillery = 0.15
@@ -2650,9 +2619,44 @@ ideas = {
 			
 			traits = { artillery_manufacturer }
 			
-			modifier = {
+			equipment_bonus = {
+				artillery_equipment = {
+					build_cost_ic = -0.025
+				}
 			}
 		}
 
 	}
+
+	industrial_theorist = { 
+
+		HUN_istvan_friedrich = {
+			name = HUN_istvan_friedrich
+
+			picture = GFX_portrait_HUN_istvan_friedrich_small
+
+			allowed = {
+				original_tag = HUN
+			}
+
+			traits = {
+				captain_of_industry 
+			}
+		}
+
+		HUN_zivony_peshkov = {
+			name = FRA_zivony_peshkov
+
+			picture = generic_army_europe_5
+
+			allowed = {
+				original_tag = FRA
+			}
+
+			traits = {
+				war_industrialist
+			}
+		}
+	}
+	
 }

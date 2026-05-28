@@ -10148,7 +10148,6 @@ leader_traits = {
 		random = no
 		sprite = 13
 		stability_factor = 0.05
-		war_support_factor = 0.05
 		political_power_factor = -0.15
 	}
 
@@ -10156,7 +10155,6 @@ leader_traits = {
 		random = no
 		sprite = 13
 		stability_factor = 0.05
-		war_support_factor = 0.05
 		political_power_factor = -0.05
 		neutrality_drift = 0.01
 	}
@@ -10164,8 +10162,7 @@ leader_traits = {
 	HUN_the_regent_3 = {
 		random = no
 		sprite = 13
-		stability_factor = 0.1
-		war_support_factor = 0.1
+		stability_factor = 0.05
 		neutrality_drift = 0.02
 	}
 
@@ -10173,7 +10170,6 @@ leader_traits = {
 		random = no
 		sprite = 13
 		stability_factor = -0.05
-		war_support_factor = -0.05
 		political_power_factor = -0.1
 		drift_defence_factor = -0.25
 	}
@@ -10388,7 +10384,7 @@ leader_traits = {
 		random = no
 		sprite = 13
 		production_speed_buildings_factor = 0.05
-		consumer_goods_expected_value = -0.02
+		consumer_goods_expected_value = -0.025
 	}
 
 	HUN_scholary_politician = {
@@ -10489,10 +10485,10 @@ leader_traits = {
 	HUN_innovative_weapons_designer = {
 		random = no
 		sprite = 13
-		research_speed_factor = 0.10
+		research_speed_factor = 0.15
 		equipment_bonus = {
 			infantry_equipment = {
-				build_cost_ic = -0.15
+				build_cost_ic = -0.10
 			}
 		}
 	}

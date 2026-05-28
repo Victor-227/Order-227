@@ -1,7 +1,7 @@
 ﻿l_english:
 
- HUN_status: "Ver0.5"
- HUN_status_desc: "Patch Notes: can probably press it into service after 2 more patches, 3 or 4 to perfect"
+ HUN_status: "Ver0.6"
+ HUN_status_desc: "Patch Notes: 1 more update and its done"
 
  HUN_the_regent_supreme: "The Regent Supreme"
  HUN_the_regent_supreme_desc: "W.I.P."
@@ -9,14 +9,10 @@
  HUN_first_vienna_award: "The First Vienna Award"
  HUN_first_vienna_award_desc: "WIP"
 
- HUN_second_vienna_award: "The First Second Vienna Award"
- HUN_second_vienna_award_desc: "WIP"
-
  HUN_fate_of_yugoslavia: "The Fate of Yugoslavia"
  HUN_fate_of_yugoslavia_desc: "WIP"
 
- wuw_HUN_demand_transylvania: "Reintegrate Transylvania"
- wuw_HUN_demand_transylvania_desc: "W.I.P."
+ HUN_demands_tt: "This will start an event chain for Translyvania."
 
  wuw_HUN_demand_the_vojvodina: "Reintegrate the Vojvodina"
  wuw_HUN_demand_the_vojvodina_desc: "W.I.P."
