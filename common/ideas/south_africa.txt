@@ -645,7 +645,7 @@ ideas = {
 		}
 	}
 
-	tank_manufacturer = {
+	tank_research = {
 		iscor = {
 			
 			picture = generic_tank_manufacturer_3
@@ -654,9 +654,6 @@ ideas = {
 				original_TAG = SAF
 				has_dlc = "Together for Victory"
 			}
-			
-
-			
 			research_bonus = {
 				armor = 0.15
 			}
@@ -668,7 +665,340 @@ ideas = {
 		}
 	}
 
-	industrial_concern = {
+	materiel_research = {
+		
+		designer = yes
+
+		SAF_star_bonifacio_echeverria = {
+			
+			picture = SPR_star_bonifacio_echeverria
+			
+			allowed = {
+				has_dlc = "La Resistance"
+				original_tag = SAF
+			}
+
+			available = {
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = SPR_scw_not_in_progress_tt
+						NOT = { SPR_scw_in_progress = yes }
+					}
+					controls_state = 792
+				}
+			}
+			
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			
+			traits = { infantry_equipment_manufacturer }
+			
+			modifier = {
+			}
+		}
+
+		SAF_esperanza_y_cia = {
+
+			picture = SPR_esperanza_y_cia
+			
+			allowed = {
+				has_dlc = "La Resistance"
+				original_tag = SAF
+			}
+
+			available = {
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = SPR_scw_not_in_progress_tt
+						NOT = { SPR_scw_in_progress = yes }
+					}
+					controls_state = 792
+				}
+			}
+			
+			research_bonus = {
+				artillery = 0.15
+			}
+			
+			traits = { artillery_manufacturer }
+			
+			modifier = {
+			}
+		}
+
+		SAF_llama_gabilondo_y_cia = {
+
+			picture = SPR_llama_gabilondo_y_cia_sa
+			
+			allowed = {
+				has_dlc = "La Resistance"
+				original_tag = SAF
+			}
+
+			available = {
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = SPR_scw_not_in_progress_tt
+						NOT = { SPR_scw_in_progress = yes }
+					}
+					controls_state = 792
+				}
+			}
+			
+			research_bonus = {
+				support_tech = 0.10
+			}
+			
+			traits = { support_equipment_manufacturer }
+			
+			modifier = {
+			}
+		}
+
+		SAF_hispano_suiza = {
+
+			picture = SPR_hispano_suiza
+			
+			allowed = {
+				OR = {
+					AND = {
+						has_dlc = "La Resistance"
+						original_tag = SAF					
+					}
+					SWI_bba_lar = yes 
+				}
+			}
+
+			available = {
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = SPR_scw_not_in_progress_tt
+						NOT = { SPR_scw_in_progress = yes }
+					}
+					controls_state = 165
+				}
+			}
+			
+			research_bonus = {
+				motorized_equipment = 0.15
+			}
+			
+			traits = { motorized_equipment_manufacturer }
+			
+			modifier = {
+			}
+			
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					SWI_bba_lar = yes
+					NOT = { has_global_flag = scw_over } 
+				}
+			}
+		}
+
+	}
+
+	aircraft_research = { 		
+			
+		designer = yes
+
+		### Vanilla ###
+
+		casa_vanilla = {
+
+			name = casa
+			
+			picture = generic_air_manufacturer_2
+
+			
+			allowed = {
+				original_tag = SAF
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { light_aircraft_manufacturer }
+			
+			equipment_bonus = {
+				# capable of aerobatics, forward shooting machine guns, low number of crashes
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		### La Resistance ###
+		
+		casa = {
+			
+			picture = SPR_casa
+
+			
+			allowed = {
+				has_dlc = "La Resistance"
+				original_tag = SAF
+			}
+
+			available = {
+            always = yes 
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { medium_aircraft_manufacturer }
+			
+			equipment_bonus = {
+				# capable of aerobatics, forward shooting machine guns, low number of crashes
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		SPR_hispano_aviacion = {
+			
+			picture = SPR_hispano_aviacion
+
+			
+			allowed = {
+				OR = {
+					AND = {
+						has_dlc = "La Resistance"
+						original_tag = SAF
+					}
+					SWI_bba_lar = yes
+				}						
+									
+			}
+
+			available = {
+	        always = yes 
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { light_aircraft_manufacturer }
+			
+			equipment_bonus = {
+				# capable of aerobatics, forward shooting machine guns, low number of crashes
+			}
+			
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					SWI_bba_lar = yes
+					NOT = { has_global_flag = scw_over } 
+				}
+			}
+		}
+	}
+
+
+	naval_research = { 			
+		
+		designer = yes
+
+		### Vanilla ###
+
+		secn_vanilla = {
+
+			name = secn
+			
+			picture = generic_naval_manufacturer_3
+
+			
+			allowed = {
+				NOT = { has_dlc = "La Resistance" }
+				original_tag = SAF
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			equipment_bonus = {
+				# fast and well armed
+			}
+			
+			traits = { naval_manufacturer }
+			
+			modifier = {
+				# Weak defence vs air
+			}
+		}
+
+		### La Resistance ###
+		
+		secn = {
+			
+			picture = SPR_sociedad_espanola_de_construccion_naval
+
+			
+			allowed = {
+				has_dlc = "La Resistance"
+				original_tag = SAF
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			equipment_bonus = {
+				# fast and well armed
+			}
+			
+			traits = { atlantic_fleet_naval_manufacturer }
+			
+			modifier = {
+				# Weak defence vs air
+			}
+		}
+
+		SAF_euskalduna = {
+			
+			picture = SPR_euskalduna
+
+			
+			allowed = {
+				has_dlc = "La Resistance"
+				original_tag = SAF
+			}
+
+			available = {
+            always = yes
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			equipment_bonus = {
+				# fast and well armed
+			}
+			
+			traits = { raiding_fleet_naval_manufacturer }
+			
+			modifier = {
+				# Weak defence vs air
+			}
+		}
+	}
+	
+
+
+	industrial_research = {
 		SAF_south_african_railways = {
 			
 			picture = generic_industrial_concern_3
@@ -692,5 +1022,77 @@ ideas = {
 			}
 		}
 	}
-}
+
+			industrial_output = {
+		SAF_SA_incorporated = {
+
+			picture = SPR_altos_hornos_de_vizcaya
+			
+			allowed = {
+				original_tag = SAF
+			}
+			
+			cost = 150
+
+			research_bonus = {
+			}
+			
+			traits = { construction_company }
+		}
+		}
+
+				industrial_theorist = {
+
+		SAF_Nicolaas_Havenga = {
+			name = SAF_Nicolaas_Havenga
+			picture = SAF_Nicolaas_Havenga
+
+			allowed = {
+				original_tag = SAF
+			}
+
+			ai_will_do = {
+				factor = 100
+			}
+
+			visible = {
+			}			
+
+			available = {
+			}
+
+			research_bonus = {
+			}
+
+			traits = { captain_of_industry  }
+
+			
+			removal_cost = -1		
+		}
+			SAF_Nicolaas_Havenga_mobilized = {
+			name = SAF_Nicolaas_Havenga_mobilized
+
+			allowed = {
+				original_tag = SAF
+			}
+
+			ai_will_do = {
+				factor = 100
+			}
+
+			visible = {
+			}			
+
+			available = {
+			}
+
+			research_bonus = {
+			}
+
+			traits = { war_industrialist  }
+
+			
+			removal_cost = -1		
+		}
+		}
 }

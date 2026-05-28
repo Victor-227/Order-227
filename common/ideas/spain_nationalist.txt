@@ -241,10 +241,10 @@ ideas = {
 			}
 
 			modifier = {
-               production_speed_buildings_factor = 0.15
-			   industrial_capacity_factory = 0.25
+            production_speed_buildings_factor = 0.20
+			industrial_capacity_factory = 0.35
 			production_factory_start_efficiency_factor = 0.030
-			consumer_goods_expected_value = 0.80
+			consumer_goods_expected_value = 0.45
 
 
 			}
@@ -674,7 +674,7 @@ ideas = {
 			rule = { can_decline_call_to_war = yes }
 
 		}
-								SPA_Economic_cannibalism_3 = {
+		SPA_Economic_cannibalism_3 = {
 
 		name = SPA_Economic_cannibalism
 
@@ -693,7 +693,7 @@ ideas = {
 			}
 
 	    modifier = {
-        stability_weekly = -0.0030
+        stability_weekly = -0.0020
 		
 
 		}
@@ -780,8 +780,8 @@ ideas = {
 			}
 
 	    modifier = {
-        stability_weekly = -0.0015
-		add_war_suport = 0.01
+        stability_weekly = -0.001
+		add_war_support = 0.015
 
 		}
             
@@ -1198,6 +1198,8 @@ ideas = {
 			 production_speed_industrial_complex_factor = -1.20
 			 production_speed_arms_factory_factor = 0.20
 			 consumer_goods_expected_value = 0.075
+			global_building_slots_factor = 0.15
+
 
 
 
@@ -1209,7 +1211,7 @@ ideas = {
 
 				SPA_FRANCO_BASTARDO= {
 
-		name = SPA_alcazar
+		name = SPA_FRANCO
 
 			picture = FRA_matignon_agreements
 
@@ -1230,6 +1232,9 @@ ideas = {
 			 production_speed_industrial_complex_factor = 0.05
 			 production_speed_arms_factory_factor = -0.60
 			 consumer_goods_expected_value = 0.075
+			 global_building_slots_factor = 0.15
+
+			 
 
 
 
@@ -1332,10 +1337,10 @@ ideas = {
 			}
 
 			modifier = {
-               production_speed_buildings_factor = 0.10
-			   industrial_capacity_factory = 0.05
-			production_factory_start_efficiency_factor = 0.025
-			consumer_goods_expected_value = 0.60
+               production_speed_buildings_factor = 0.15
+			   industrial_capacity_factory = 0.15
+			production_factory_start_efficiency_factor = 0.03
+			consumer_goods_expected_value = 0.35
 
 
 			}
@@ -1391,8 +1396,8 @@ ideas = {
 
 			modifier = {
                production_speed_buildings_factor = 0.05
-			   industrial_capacity_factory = 0.05
-				consumer_goods_expected_value = 0.50
+			   industrial_capacity_factory = 0.10
+				consumer_goods_expected_value = 0.30
 			}
 
 			rule = { can_decline_call_to_war = yes }
@@ -1446,10 +1451,10 @@ ideas = {
 			}
 
 			modifier = {
-				industrial_capacity_factory = 0.00
+				industrial_capacity_factory = 0.05
 				industrial_capacity_dockyard = -5
-				production_speed_buildings_factor = 0.00
-				consumer_goods_expected_value = 0.40
+				production_speed_buildings_factor = 0.05
+				consumer_goods_expected_value = 0.25
 			}
 
 			rule = { can_decline_call_to_war = yes }
