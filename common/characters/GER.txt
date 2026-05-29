@@ -719,7 +719,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { infantry_officer }
+			traits = { infantry_officer very_skilled_general }
 			skill = 3
 			attack_skill = 3
 			defense_skill = 3

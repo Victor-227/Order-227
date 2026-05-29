@@ -144,7 +144,7 @@ leader_traits = {
 
 		industrial_capacity_factory = 0.1
 		industrial_capacity_dockyard = 0.1
-		production_speed_arms_factory_factor = 0.1
+		production_speed_arms_factory_factor = 0.2
 		consumer_goods_expected_value = 0.02
 		local_resources_factor = 0.1
 		production_speed_synthetic_refinery_factor = 0.2

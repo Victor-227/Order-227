@@ -5,7 +5,6 @@ upgrades = {
 		max_level = 20 #each level represents ~50HP
 		cost = land
 
-		
 
 		level_requirements = {
 			5 = {
@@ -33,7 +32,7 @@ upgrades = {
 		add_stats = {
 			fuel_consumption = 0.05
 			build_cost_ic = 0.1
-			maximum_speed = 0.1
+			maximum_speed = 0.2
 		}
 	}
 
@@ -42,7 +41,6 @@ upgrades = {
 		max_level = 20 #each level represents ~10mm of armor 
 		cost = land
 
-		
 
 		level_requirements = {
 			5 = {

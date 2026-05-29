@@ -193,11 +193,11 @@ technologies = {
 
 	anti_tank_rifle_tech = {
 
-		enable_equipment_modules = {
-			secondary_turret_hmg
+		category_tank_destroyers = {
+			hard_attack = 0.02
+			ap_attack = 0.04
 		}
 
-		force_use_small_tech_layout = yes
 		path = {
 			leads_to_tech = tank_auto_cannon_tech
 			research_cost_coeff = 1

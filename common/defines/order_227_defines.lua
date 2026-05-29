@@ -11,6 +11,8 @@ NDefines.NCountry.AIR_VOLUNTEER_BASES_CAPACITY_LIMIT = 0 -- 445
 NDefines.NCountry.SPECIAL_FORCES_CAP_BASE = 0 -- 447
 NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 10000 -- 448
 
+NDefines.NTechnology.BASE_YEAR_AHEAD_PENALTY_FACTOR = 2.15 -- Base year ahead penalty 709
+
 NDefines.NProduction.DEFAULT_MAX_NAV_FACTORIES_PER_LINE = 50
 NDefines.NProduction.CONVOY_MAX_NAV_FACTORIES_PER_LINE = 50
 NDefines.NProduction.CAPITAL_SHIP_MAX_NAV_FACTORIES_PER_LINE = 50
@@ -54,6 +56,18 @@ NDefines.NMilitary.AIR_EQUIPMENT_BASE_COST = 0
 NDefines.NMilitary.AIR_EQUIPMENT_RAMP_COST = 0
 NDefines.NMilitary.AIR_WING_COUNTRY_XP_FROM_TRAINING_FACTOR = 0
 NDefines.NMilitary.AIR_WING_XP_TRAINING_MISSION_ACCIDENT_FACTOR = 0
+
+NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 40 -- how many divisions a corps commander is limited to. 0 = inf, < 0 = blocked 846
+
+NDefines.NMilitary.UNIT_LEADER_MODIFIER_COOLDOWN_ON_GROUP_CHANGE = 0 -- time in days for a unit leader to regain its modifiers 1187
+
+NDefines.NMilitary.GARRISON_ORDER_ARMY_CAP_FACTOR = 1 -- armies gets increased cap when they are garrisoned 1132
+
+NDefines.NMilitary.COHESION_IMMOBILE_PLANNING_SPEED_MULTIPLIER = 1 -- If using the 'immobile' cohesion setting, factor ALL planning speed growth by this 1066
+
+NDefines.NNavy.NAVAL_INVASION_PREPARE_DAYS = 21 -- base days needed to prepare a naval invasion 1619
+NDefines.NNavy.NAVAL_INVASION_PLAN_CAP = 5 -- base cap of naval invasions can be planned at the same time 1620
+NDefines.NNavy.BASE_NAVAL_INVASION_DIVISION_CAP = 10 -- base cap of divisions that can be assigned in a naval invasion 1621
 
 NDefines.NAir.AIR_WING_FLIGHT_SPEED_MULT = 0.1
 NDefines.NAir.COMBAT_DAMAGE_SCALE = 0.5

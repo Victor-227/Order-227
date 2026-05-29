@@ -129,6 +129,13 @@ set_technology = {
 	radio = 1
 	fuel_silos = 1
 	fuel_refining = 1
+	### tank modules
+	additional_machine_guns_tech = 1
+	anti_tank_rifle_tech = 1
+	tank_close_support_gun_tech = 1
+	early_optics_tech = 1
+	extra_ammo_storage_tech = 1
+	smoke_launchers_tech = 1
 }
 
 set_grand_doctrine = grand_battleplan
@@ -163,7 +170,7 @@ if = {
 	}
 	set_technology = {
 		gwtank_chassis = 1
-		basic_light_tank_chassis = 1
+		#basic_light_tank_chassis = 1
 	}
 }
 
@@ -636,7 +643,6 @@ recruit_character = ENG_corgis_3
 recruit_character = ENG_alan_turing
 recruit_character = ENG_clement_attlee
 recruit_character = ENG_ernest_bevin
-recruit_character = ENG_leslie_hore_belisha
 recruit_character = ENG_nevile_henderson
 recruit_character = ENG_random_communist_minister_8
 recruit_character = ENG_random_communist_minister_9
@@ -654,7 +660,6 @@ recruit_character = ENG_random_communist_minister_11
 recruit_character = ENG_random_communist_minister_10
 recruit_character = ENG_philip_kerr
 recruit_character = ENG_stewart_menzies
-recruit_character = ENG_maxwell_aitken
 recruit_character = ENG_thomas_moore
 
 recruit_character = ENG_john_cockcroft

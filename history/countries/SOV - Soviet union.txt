@@ -499,8 +499,8 @@ set_variable = { SOV_fyp_production_speed_industrial_complex_factor = 0.05 }
 set_variable = { SOV_fyp_industrial_concern_cost_factor = -0.15 } #-> Third Five Year Plan
 set_variable = { SOV_fyp_local_resources_factor = 0 } #-> Increase State Reserves
 set_variable = { SOV_fyp_line_change_production_efficiency_factor = 0 } #-> Industrial Modernization
-set_variable = { SOV_fyp_production_speed_arms_factory_factor = 0.1 } #-> Shift to Armaments Production
-set_variable = { SOV_fyp_production_cost_arms_factory_factor = -0.15 } #-> Shift to Armaments Production
+set_variable = { SOV_fyp_production_speed_arms_factory_factor = 0.08 } #-> Shift to Armaments Production
+set_variable = { SOV_fyp_production_cost_arms_factory_factor = -0.1 } #-> Shift to Armaments Production
 set_variable = { SOV_fyp_production_factory_start_efficiency_factor = 0 } #-> Optimize Production Lines
 set_variable = { SOV_fyp_industrial_capacity_factory = 0 } #-> Steel Casting Industry
 set_variable = { SOV_fyp_industrial_capacity_dockyard = 0 } #-> Steel Casting Industry
@@ -745,7 +745,7 @@ if = {
 	}
 }
 
-set_research_slots = 3
+set_research_slots = 5
 set_stability = 0.5
 set_war_support = 0.3
 
@@ -781,6 +781,13 @@ set_technology = { #WARNING: Do not just remove techs from here -> It can impact
 	fuel_silos = 1
 	fuel_refining = 1
 	basic_train = 1
+	### tank modules
+	additional_machine_guns_tech = 1
+	anti_tank_rifle_tech = 1
+	tank_close_support_gun_tech = 1
+	early_optics_tech = 1
+	extra_ammo_storage_tech = 1
+	smoke_launchers_tech = 1
 }
 
 set_grand_doctrine = mass_assault
@@ -802,8 +809,8 @@ if = {
 	}
 	set_technology = {
 		gwtank_chassis = 1
-		basic_light_tank_chassis = 1
-		improved_light_tank_chassis = 1
+		#basic_light_tank_chassis = 1
+		#improved_light_tank_chassis = 1
 		engine_tech_1 = 1
 		engine_tech_2 = 1
 	}

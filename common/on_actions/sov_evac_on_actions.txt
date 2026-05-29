@@ -91,6 +91,45 @@ on_actions = {
 
 					add_core_of = BLT
 				}
+
+				GER = {
+					add_offsite_building = {
+						type = industrial_complex
+						level = 10
+					}
+				}
+
+				ITA = {
+					add_offsite_building = {
+						type = industrial_complex
+						level = 10
+					}
+				}
+				
+				ENG = {
+					add_offsite_building = {
+						type = industrial_complex
+						level = 15
+					}
+				}
+			}
+		}
+	}
+
+
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					FROM = { tag = GER }
+					NOT = { tag = FRA }
+				}
+				every_state = {
+					limit = {
+						is_core_of = ROOT
+					}
+					add_compliance = 50
+				}
 			}
 		}
 	}

@@ -1061,7 +1061,7 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 
 		add_stats = {
-			soft_attack = 15
+			soft_attack = 10
 			hard_attack = 1
 			ap_attack = 2
 			build_cost_ic = 4.5
@@ -1074,7 +1074,7 @@ equipment_modules = {
 
 		build_cost_resources = {
 			steel = 1
-			tungsten = 2
+			tungsten = 1
 		}
 	}
 
@@ -1085,7 +1085,7 @@ equipment_modules = {
 		parent = tank_rocket_launcher
 
 		add_stats = {
-			soft_attack = 20
+			soft_attack = 15
 			hard_attack = 1
 			ap_attack = 2
 			build_cost_ic = 5.5
@@ -1098,7 +1098,7 @@ equipment_modules = {
 
 		build_cost_resources = {
 			steel = 2
-			tungsten = 2
+			tungsten = 1
 		}
 	}
 
@@ -1704,9 +1704,9 @@ equipment_modules = {
 
 		add_stats = {
 			build_cost_ic = 1.0
-			soft_attack = 2       
-			defense = 2           
-			breakthrough = 1      
+			soft_attack = 2
+			defense = 2
+			breakthrough = 1
 			air_attack = 2        # The unique anti-CAS sprinkle
 			reliability = -0.02   # Hole in the mantlet compromises armor slightly
 		}
@@ -1739,13 +1739,13 @@ equipment_modules = {
 
 		add_stats = {
 			build_cost_ic = 0.5
-			recon = 1             # Adds flat tactical capability
+			recon = 0.5             # Adds flat tactical capability
 			reliability = -0.04   # Fragile glass prisms
 		}
 		
 		multiply_stats = {
-			hard_attack = 0.05    # Multiplies the gun's effectiveness
-			soft_attack = 0.02    
+			hard_attack = 0.04    # Multiplies the gun's effectiveness
+			soft_attack = 0.02
 		}
 	}
 
@@ -1758,13 +1758,13 @@ equipment_modules = {
 
 		add_stats = {
 			build_cost_ic = 1.0
-			recon = 2
+			recon = 1
 			reliability = -0.06   # More complex calibration to break
 		}
 		
 		multiply_stats = {
-			hard_attack = 0.10    
-			soft_attack = 0.04    
+			hard_attack = 0.06
+			soft_attack = 0.03
 		}
 	}
 
@@ -1775,12 +1775,12 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 
 		add_stats = {
-			build_cost_ic = 1.5
-			hard_attack = 2       # Flat stats: pinpoint accuracy at range
-			soft_attack = 0.5     
+			build_cost_ic = 2.5
+			hard_attack = 3       # Flat stats: pinpoint accuracy at range
+			soft_attack = 0.5
 			ap_attack = 4         # Hitting specific weak spots
 			breakthrough = 2      # Engaging before the enemy returns fire
-			reliability = -0.05   
+			reliability = -0.05
 		}
 		
 		multiply_stats = { }
@@ -1794,10 +1794,10 @@ equipment_modules = {
 		parent = range_finder
 
 		add_stats = {
-			build_cost_ic = 2.5
-			hard_attack = 4       
-			soft_attack = 1.0     
-			ap_attack = 8         
+			build_cost_ic = 3.5
+			hard_attack = 5
+			soft_attack = 1.0
+			ap_attack = 8
 			breakthrough = 4
 			reliability = -0.08   # Highly complex stereoscopic lenses
 		}
@@ -1815,12 +1815,12 @@ equipment_modules = {
 			build_cost_ic = 1.0
 			breakthrough = 5          # Snapping to targets instantly during an assault
 			fuel_consumption = 0.5    # The motor draws heavy power from the engine
+			reliability = -0.05       # Hydraulics/electric motors breaking
 		}
 		
 		multiply_stats = {
 			hard_attack = 0.05        # Cheap percentage boost for tracking moving targets
 			soft_attack = 0.05
-			reliability = -0.05       # Hydraulics/electric motors breaking
 		}
 	}
 
@@ -1837,11 +1837,10 @@ equipment_modules = {
 			hard_attack = 2.5
 			breakthrough = 8
 			defense = 3               # Allows accurate covering fire while retreating
-		}
-
-		multiply_stats = {
 			reliability = -0.08       # Highly sensitive gyroscopes (worse than base stabilizer)
 		}
+
+		multiply_stats = { }
 	}
 
 	### 9. IMPROVED ERGONOMICS
@@ -1852,13 +1851,12 @@ equipment_modules = {
 
 		add_stats = {
 			build_cost_ic = 1.0
-			experience_loss_factor = -0.10 # Retain veteran status
+			experience_loss_factor = -0.04 # Retain veteran status
 			casualty_trickleback = 0.05    # Crew survives bailouts due to better hatches/layout
-		}
-		
-		multiply_stats = {
 			reliability = 0.05             # A comfortable crew maintains the tank better
 		}
+		
+		multiply_stats = { }
 	}
 
 	### 10. SPALL LINERS
@@ -1868,14 +1866,13 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 
 		add_stats = {
-			build_cost_ic = 1.5
+			build_cost_ic = 2
 			defense = 2               # Tangible physical layer of internal armor
-		}
-		
-		multiply_stats = {
-			max_strength = 0.15       # Protects the tank's internal HP from shredding
+			max_strength = 0.6       # Protects the tank's internal HP from shredding
 			reliability = 0.10        # Protects internal components from spalling
 		}
+		
+		multiply_stats = { }
 	}
 
 	### 11. ADVANCED SMOKE LAUNCHERS

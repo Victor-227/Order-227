@@ -1160,6 +1160,18 @@ focus_tree = {
 					INDENT = "    "
 				}
 			}
+
+			random_owned_controlled_state = {
+				prioritize = { 586 }
+				add_resource = {
+					type = aluminium
+					amount = 100
+				}
+				add_resource = {
+					type = rubber
+					amount = 30
+				}
+			}
 		}
 	}
 
@@ -1200,6 +1212,12 @@ focus_tree = {
 				bonus = 0.5
 				uses = 1
 				category = light_fighter
+			}
+			add_tech_bonus = {
+				name = SOV_transpolar_flights
+				bonus = 0.5
+				uses = 1
+				category = cat_air_engine
 			}
 		}
 	}
@@ -6357,7 +6375,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_command_economy
-		icon = GFX_SOV_war_economy_ccp_2d_sov_compatibility
+		icon = GFX_focus_SOV_command_economy
 		prerequisite = { focus = ukraine focus = moscow focus = urals focus = siberia }
 		relative_position_id = SOV_tractor_plants
 		x = 0
@@ -6434,6 +6452,9 @@ focus_tree = {
 		
 		completion_reward = {
 			add_political_power = 50
+
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = SOV_gosplan
 		}
 	}
 

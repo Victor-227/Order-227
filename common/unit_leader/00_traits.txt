@@ -1270,7 +1270,7 @@ leader_traits = {
 		cost = 700
 		modifier = {
 			army_armor_speed_factor = 0.05 
-			army_armor_attack_factor = 0.16 
+			army_armor_attack_factor = 0.12 
 		}
 		ai_will_do = {
 			factor = 1
@@ -3701,6 +3701,15 @@ leader_traits = {
 		
 	}
 
-
-
+	very_skilled_general = {
+ 		type = corps_commander
+		cost = 700
+		corps_commander_modifier = {
+			max_commander_army_size = 100
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+	}
 }

@@ -3386,6 +3386,12 @@ focus_tree = {
 				uses = 3 # was 4
 				category = air_equipment
 			}
+			add_tech_bonus = {
+				name = ITA_citta_dell_aria
+				bonus = 0.75
+				uses = 1
+				category = cat_air_engine
+			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			random_owned_controlled_state = {

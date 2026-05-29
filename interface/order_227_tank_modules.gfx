@@ -1,7 +1,7 @@
 SpriteTypes = {
 	### TECHS
 
-    SpriteType = {
+	SpriteType = {
 		name = "GFX_additional_machine_guns_tech_medium"
 		texturefile = "gfx/interface/technologies/additional_machine_guns_tech.dds"
 	}
@@ -151,40 +151,40 @@ SpriteTypes = {
 		texturefile = "gfx/interface/technologies/tank_heavy_cannon_3_tech.dds"
 	}
 
-	SpriteType = {
-		name = "GFX_early_optics_tech_medium"
-		texturefile = "gfx/interface/technologies/stabilizer_tech.dds"
-	}
+	#SpriteType = {
+	#	name = "GFX_early_optics_tech_medium"
+	#	texturefile = "gfx/interface/technologies/stabilizer_tech.dds"
+	#}
 
-	SpriteType = {
-		name = "GFX_improved_optics_tech_medium"
-		texturefile = "gfx/interface/technologies/stabilizer_tech.dds"
-	}
+	#SpriteType = {
+	#	name = "GFX_improved_optics_tech_medium"
+	#	texturefile = "gfx/interface/technologies/stabilizer_tech.dds"
+	#}
 
-	SpriteType = {
-		name = "GFX_range_finder_tech_medium"
-		texturefile = "gfx/interface/technologies/stabilizer_tech.dds"
-	}
+	#SpriteType = {
+	#	name = "GFX_range_finder_tech_medium"
+	#	texturefile = "gfx/interface/technologies/stabilizer_tech.dds"
+	#}
 
-	SpriteType = {
-		name = "GFX_advanced_range_finder_tech_medium"
-		texturefile = "gfx/interface/technologies/stabilizer_tech.dds"
-	}
+	#SpriteType = {
+	#	name = "GFX_advanced_range_finder_tech_medium"
+	#	texturefile = "gfx/interface/technologies/stabilizer_tech.dds"
+	#}
 
 	SpriteType = {
 		name = "GFX_stabilizer_tech_medium"
 		texturefile = "gfx/interface/technologies/stabilizer_tech.dds"
 	}
 
-	SpriteType = {
-		name = "GFX_power_traverse_tech_medium"
-		texturefile = "gfx/interface/technologies/stabilizer_tech.dds"
-	}
+	#SpriteType = {
+	#	name = "GFX_power_traverse_tech_medium"
+	#	texturefile = "gfx/interface/technologies/stabilizer_tech.dds"
+	#}
 
-	SpriteType = {
-		name = "GFX_gyrostabilizer_tech_medium"
-		texturefile = "gfx/interface/technologies/stabilizer_tech.dds"
-	}
+	#SpriteType = {
+	#	name = "GFX_gyrostabilizer_tech_medium"
+	#	texturefile = "gfx/interface/technologies/stabilizer_tech.dds"
+	#}
 
 	SpriteType = {
 		name = "GFX_extra_ammo_storage_tech_medium"
@@ -245,5 +245,15 @@ SpriteTypes = {
 	SpriteType = {
 		name = "GFX_EMI_light_squeezebore_cannon"
 		texturefile = "gfx/interface/technologies/light_squeezebore_cannon_tech.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_EMI_coaxial_machine_guns"
+		texturefile = "gfx/interface/technologies/coaxial_machine_guns_tech.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_EMI_close_defense_mortar"
+		texturefile = "gfx/interface/technologies/close_defense_mortar_tech.dds"
 	}
 }

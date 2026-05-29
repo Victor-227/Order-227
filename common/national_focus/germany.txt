@@ -4432,6 +4432,12 @@ focus_tree = {
 				uses = 2
 				category = air_equipment
 			}
+			add_tech_bonus = {
+				name = GER_aeronautical_research_institute
+				bonus = 0.5
+				uses = 1
+				category = cat_air_engine
+			}
 			add_breakthrough_progress = {
 				specialization = specialization_air
 				value = 0.5
@@ -11806,12 +11812,23 @@ focus_tree = {
 				add_idea = GER_reichleiter_schacht_improved
 			}
 
-			effect_tooltip = {
-				swap_ideas = {
-				remove_idea = GER_rwim
-				add_idea = GER_rwim_improved
+			if = {
+				limit = {
+					has_idea = GER_rwim
 				}
-			}	
+				swap_ideas = {
+					remove_idea = GER_rwim
+					add_idea = GER_rwim_improved
+				}
+			}
+			else = {
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = GER_rwim
+						add_idea = GER_rwim_improved
+					}
+				}
+			}
 
 			#custom_effect_tooltip = generic_skip_one_line_tt
 			#custom_effect_tooltip = {

@@ -262,6 +262,13 @@ set_technology = {
 	gw_artillery = 1
 	interwar_antiair = 1
 	basic_train = 1
+	### tank modules
+	additional_machine_guns_tech = 1
+	anti_tank_rifle_tech = 1
+	tank_close_support_gun_tech = 1
+	early_optics_tech = 1
+	extra_ammo_storage_tech = 1
+	smoke_launchers_tech = 1
 }
 if = {
 	limit = {

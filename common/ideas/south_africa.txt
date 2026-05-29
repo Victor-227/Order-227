@@ -1037,7 +1037,7 @@ ideas = {
 			research_bonus = {
 			}
 			
-			traits = { construction_company }
+			traits = { generic_industrial_conglomerate }
 		}
 		}
 

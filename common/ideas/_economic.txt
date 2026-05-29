@@ -626,7 +626,6 @@ ideas = {
 			cancel_if_invalid = no
 		}
 
-		
 		SOV_command_economy = {
 
 			visible = {

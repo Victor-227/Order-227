@@ -37,9 +37,6 @@ technologies = {
 		enable_equipment_modules = { 
 			ship_fire_control_system_0
 		}
-		enable_equipment_modules = { 
-			ship_fire_control_system_1
-		}
 		
 		research_cost = 1
 		start_year = 1936
@@ -97,7 +94,6 @@ technologies = {
 		}
 		
 		enable_equipment_modules = { 
-			tank_radio_1
 			radio_navigation_1
 			lc_radio_1 #Module for Land Cruiser
 		}
@@ -146,7 +142,6 @@ technologies = {
 		
 		enable_equipment_modules = { 
 			radio_navigation_2
-			tank_radio_2
 			lc_radio_2 #Module for Land Cruiser
 		}
 
@@ -190,7 +185,6 @@ technologies = {
 		}
 		
 		enable_equipment_modules = { 
-			tank_radio_3
 			lc_radio_3 #Module for Land Cruiser
 		}
 		
@@ -485,8 +479,8 @@ technologies = {
 		}
 		coordination_bonus = 0.01
 		enable_equipment_modules = { 
-			ship_radar_4
 			air_ground_radar_2
+			ship_radar_4
 			
 		}
 		special_project_specialization = { specialization_air specialization_nuclear }
@@ -521,19 +515,20 @@ technologies = {
 	mechanical_computing = {
 
 		# small boost to research speed
-		research_speed_factor = 0.06
+		research_speed_factor = 0.08
 		
 		path = {
 			leads_to_tech = computing_machine 
 			research_cost_coeff = 1
 		}
 
-		
+		path = {
+			leads_to_tech = basic_fire_control_system
+			research_cost_coeff = 1
+		}
 		enable_equipment_modules = {
 			bomb_sights_1
-			ship_fire_control_system_2
 		}
-		
 		
 		research_cost = 2.5
 		
@@ -557,11 +552,7 @@ technologies = {
 	computing_machine = {
 
 		# small boost to research speed
-		research_speed_factor = 0.08
-		enable_equipment_modules = { 
-			stabilizer
-			ship_fire_control_system_3
-		}
+		research_speed_factor = 0.1
 		
 		path = {
 			leads_to_tech = improved_computing_machine 
@@ -575,7 +566,10 @@ technologies = {
 			leads_to_tech = basic_decryption 
 			research_cost_coeff = 1
 		}
-		
+		path = {
+			leads_to_tech = improved_fire_control_system
+			research_cost_coeff = 1
+		}
 		research_cost = 2.5
 		start_year = 1938
 		
@@ -610,11 +604,10 @@ technologies = {
 	improved_computing_machine = {
 
 		# small boost to research speed
-		research_speed_factor = 0.1
+		research_speed_factor = 0.16
 		enable_equipment_modules = {
 			bomb_sights_2
 		}
-		
 		path = {
 			leads_to_tech = advanced_computing_machine 
 			research_cost_coeff = 1
@@ -628,6 +621,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
+		path = {
+			leads_to_tech = advanced_fire_control_system
+			research_cost_coeff = 1
+		}
 		
 		research_cost = 2.5
 		start_year = 1940
@@ -668,7 +665,7 @@ technologies = {
 	advanced_computing_machine = {
 
 		# small boost to research speed
-		research_speed_factor = 0.1
+		research_speed_factor = 0.16
 		
 		path = {
 			leads_to_tech = advanced_encryption 
@@ -956,7 +953,125 @@ technologies = {
 		}
 	}
 
-	
+	basic_fire_control_system = {
+
+		allow_branch = {
+			has_dlc = "Man the Guns"
+		}
+
+		enable_equipment_modules = { 
+			ship_fire_control_system_1
+		}
+		
+		research_cost = 1
+		
+		folder = {
+			name = electronics_folder
+			position = { x = @firecontrol y = 4 }
+		}
+		
+		ai_will_do = {
+			factor = 0.75
+			modifier = {
+				OR = {
+					tag = ENG
+					tag = USA
+					tag = JAP
+				}
+				factor = 3
+			}
+			modifier = {
+				OR = {
+					can_research = improved_fire_control_system
+					has_tech = improved_fire_control_system
+				}
+				factor = 0
+			}
+		}
+		
+		categories = {
+			electronics
+			computing_tech
+			naval_equipment
+		}
+	}
+
+	improved_fire_control_system = {
+
+		enable_equipment_modules = { 
+			ship_fire_control_system_2
+		}
+		
+		research_cost = 1
+		allow_branch = {
+			has_dlc = "Man the Guns"
+		}
+		folder = {
+			name = electronics_folder
+			position = { x = @firecontrol y = 8 }
+		}
+		
+		ai_will_do = {
+			factor = 0.75
+			modifier = {
+				OR = {
+					tag = ENG
+					tag = USA
+					tag = JAP
+				}
+				factor = 3
+			}
+			modifier = {
+				OR = {
+					can_research = advanced_fire_control_system
+					has_tech = advanced_fire_control_system
+				}
+				factor = 0
+			}
+		}
+		
+		categories = {
+			electronics
+			computing_tech
+			naval_equipment
+		}
+	}
+
+	advanced_fire_control_system = {
+
+		enable_equipment_modules = { 
+			ship_fire_control_system_3
+		}
+		allow_branch = {
+			has_dlc = "Man the Guns"
+		}
+		
+		research_cost = 1
+		
+		folder = {
+			name = electronics_folder
+			position = { x = @firecontrol y = 12 }
+		}
+		
+		ai_will_do = {
+			factor = 0.75
+			modifier = {
+				OR = {
+					tag = ENG
+					tag = USA
+					tag = JAP
+				}
+				factor = 3
+			}
+			
+		}
+		
+		categories = {
+			electronics
+			computing_tech
+			naval_equipment
+		}
+	}
 
 
 ###  ##  ###  ### ### ### ###  ##   ##  ### ###  ##  #  #     ### ###  ##  #  # #  #  ##  #    ##   ##  #   #     

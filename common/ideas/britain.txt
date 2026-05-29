@@ -19,7 +19,7 @@ ideas = {
 
 			modifier = {
 				production_factory_start_efficiency_factor = 0.05
-                production_factory_efficiency_gain_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
 				line_change_production_efficiency_factor = 0.05
 				global_building_slots_factor = 0.05
 			}
@@ -692,7 +692,7 @@ ideas = {
 
 		}
 		
-	    ENG_guided_by_britain_3 = {
+		ENG_guided_by_britain_3 = {
 
 			name = ENG_guided_by_britain
 
@@ -707,6 +707,31 @@ ideas = {
 			modifier = {
 				industrial_capacity_factory = 0.15
 				production_factory_max_efficiency_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+
+			picture = eng_guided_by_britain
+			
+			removal_cost = -1	
+
+		}
+
+		ENG_guided_by_britain_4 = {
+
+			name = "Commonwealth Production"
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_factory_max_efficiency_factor = 0.04
 				production_factory_start_efficiency_factor = 0.05
 				production_speed_buildings_factor = 0.05
 			}
@@ -2134,38 +2159,7 @@ ideas = {
 
 	}
 	
-	naval_manufacturer = {
-		
-		designer = yes
-		
-		yarrow_shipbuilders = {
-			
-			allowed = {
-				original_TAG = ENG
-			}
-						
-			research_bonus = {
-				naval_equipment = 0.15
-			}
-			
-			traits = { convoy_escort_naval_manufacturer }
-
-		}
-		
-		harland_wolff = {
-			
-			allowed = {
-				original_TAG = ENG
-			}
-			
-
-			
-			research_bonus = {
-				naval_equipment = 0.15
-			}
-			
-			traits = { pacific_fleet_naval_manufacturer }
-		}
+	naval_research = {
 		
 		cammell_laird = {
 			
@@ -2176,34 +2170,17 @@ ideas = {
 
 			
 			research_bonus = {
-				naval_equipment = 0.15
+				naval_equipment = 0.1
 			}
 			
-			traits = { atlantic_fleet_naval_manufacturer }
+			traits = { }
 			
 			modifier = {
 			}
 		}
-		
-		john_brown_company = {
-			
-			allowed = {
-				original_TAG = ENG
-			}
-			
-
-			
-			research_bonus = {
-				naval_equipment = 0.15
-			}
-			
-			traits = { coastal_defence_naval_manufacturer }
-		}	
 	}
 	
-	aircraft_manufacturer = {
-			
-		designer = yes
+	aircraft_research = {
 		
 		supermarine = {
 			
@@ -2214,90 +2191,17 @@ ideas = {
 
 			
 			research_bonus = {
-				air_equipment = 0.15
+				air_equipment = 0.1
 			}
 			
-			traits = { light_aircraft_manufacturer }
+			traits = { }
 			
 			modifier = {
 			}
-		}
-		
-		hawker = {
-			
-			allowed = {
-				original_TAG = ENG
-			}
-			
-
-			
-			research_bonus = {
-				air_equipment = 0.15
-			}
-			
-			traits = { CAS_manufacturer } 
-			
-			modifier = {
-			}
-		}	
-		de_havilland = {
-			
-			allowed = {
-				original_TAG = ENG
-			}
-			
-
-			
-			research_bonus = {
-				air_equipment = 0.15
-			}
-			
-			traits = { medium_aircraft_manufacturer }
-			
-			modifier = {
-			}
-		}
-		
-		avro = {
-			
-			allowed = {
-				original_TAG = ENG
-			}
-			
-
-			
-			research_bonus = {
-				air_equipment = 0.15
-			}
-			
-			traits = { heavy_aircraft_manufacturer }
-			
-			modifier = {
-			}
-		}
-		
-		fairey_aviation = {
-			
-			allowed = {
-				original_TAG = ENG
-			}
-			
-
-			
-			research_bonus = {
-				air_equipment = 0.15
-			}
-			
-			traits = { naval_aircraft_manufacturer }
-			
-			modifier = {
-			}
-		}			
+		}		
 	}
 	
-	materiel_manufacturer = {
-			
-		designer = yes
+	materiel_research = {
 		
 		rsaf_enfield = {
 			
@@ -2308,7 +2212,7 @@ ideas = {
 
 			
 			research_bonus = {
-				infantry_weapons = 0.15
+				infantry_weapons = 0.1
 			}
 			
 			traits = { infantry_equipment_manufacturer }
@@ -2326,7 +2230,7 @@ ideas = {
 
 			
 			research_bonus = {
-				motorized_equipment = 0.15
+				motorized_equipment = 0.1
 			}
 			
 			traits = { motorized_equipment_manufacturer }
@@ -2344,7 +2248,7 @@ ideas = {
 
 			
 			research_bonus = {
-				artillery = 0.15
+				artillery = 0.1
 			}
 			
 			traits = { artillery_manufacturer }
@@ -2353,7 +2257,7 @@ ideas = {
 			}
 		}
 	}
-	industrial_concern = {
+	industrial_research = {
 				
 		aioc = {
 			
@@ -2402,7 +2306,7 @@ ideas = {
 	}	
 
 	
-	tank_manufacturer = {
+	tank_research = {
 		vickers_armstrong_eng = {
 			
 			allowed = {
@@ -2412,12 +2316,53 @@ ideas = {
 
 			
 			research_bonus = {
-				armor = 0.15
+				armor = 0.1
 			}
 			
-			traits = { medium_tank_manufacturer }
+			traits = { }
 			
 			modifier = {
+			}
+		}
+	}
+
+	industrial_output = {
+
+		aioc_1 = {
+			name = "AIOC"
+			picture = aioc
+
+			allowed = {
+				original_tag = ENG
+			}
+
+			traits = { generic_industrial_conglomerate }
+		}
+	}
+
+	industrial_theorist = { 
+
+		ENG_leslie_hore_belisha = {
+			name = ENG_leslie_hore_belisha
+
+			allowed = {
+				original_tag = ENG
+			}
+
+			traits = {
+				captain_of_industry 
+			}
+		}
+
+		ENG_maxwell_aitken = {
+			name = ENG_maxwell_aitken
+
+			allowed = {
+				original_tag = ENG
+			}
+
+			traits = {
+				war_industrialist
 			}
 		}
 	}

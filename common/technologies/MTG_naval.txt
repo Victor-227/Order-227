@@ -13,9 +13,9 @@ technologies = {
 			ship_hull_light_1
 		}
 		enable_equipment_modules = {
-			ship_anti_air_1
 			light_ship_engine_1
 			ship_seaplane_tender_1
+			ship_anti_air_1
 		}
 		path = {
 			leads_to_tech = basic_ship_hull_light
@@ -78,9 +78,9 @@ technologies = {
 			ship_hull_light_2
 		}
 		enable_equipment_modules = {
-			ship_anti_air_2
 			light_ship_engine_2
 			ship_seaplane_tender_2
+			ship_anti_air_2
 		}
 		path = {
 			leads_to_tech = improved_ship_hull_light
@@ -127,8 +127,8 @@ technologies = {
 			ship_hull_light_3
 		}
 		enable_equipment_modules = {
-			ship_anti_air_3
 			light_ship_engine_3
+			ship_anti_air_3
 		}
 
 		path = {
@@ -156,6 +156,16 @@ technologies = {
 					tag = USA
 				}
 			}
+
+			modifier = {
+				factor = 1.5
+				date > 1939.1.1
+			}
+
+			modifier = {
+				factor = 1.5
+				date > 1940.1.1
+			}
 		}
 
 		categories = {
@@ -173,8 +183,8 @@ technologies = {
 			ship_hull_light_4
 		}
 		enable_equipment_modules = {
-			ship_anti_air_4
 			light_ship_engine_4
+			ship_anti_air_4
 		}
 
 		research_cost = 2
@@ -232,6 +242,16 @@ technologies = {
 			modifier = {
 				factor = 4
 				tag = ENG
+			}
+
+			modifier = {
+				factor = 2
+				date > 1938.1.1
+			}
+
+			modifier = {
+				factor = 2
+				date > 1939.1.1
 			}
 		}
 
@@ -421,6 +441,10 @@ technologies = {
 				factor = 2
 				anti_submarine_strategy_required_trigger = yes
 			}
+			modifier = {
+				factor = 0.1
+				original_tag = GER				
+			}
 		}
 
 		categories = {
@@ -549,8 +573,17 @@ technologies = {
 				has_war_with = GER
 			}
 			modifier = {
-				factor = 2
+				factor = 5
 				anti_submarine_strategy_required_trigger = yes
+			}
+			modifier = {
+				factor = 2
+				date > 1938.6.1
+			}
+
+			modifier = {
+				factor = 2
+				date > 1939.6.1
 			}
 		}
 
@@ -664,6 +697,7 @@ technologies = {
 			ship_airplane_launcher_1
 			cruiser_ship_engine_1
 			ship_armor_cruiser_1
+			ship_anti_air_1
 		}
 		path = {
 			leads_to_tech = basic_ship_hull_cruiser
@@ -726,6 +760,7 @@ technologies = {
 		enable_equipment_modules = {
 			cruiser_ship_engine_2
 			ship_airplane_launcher_2
+			ship_anti_air_2
 		}
 
 		path = {
@@ -773,6 +808,7 @@ technologies = {
 		}
 		enable_equipment_modules = {
 			cruiser_ship_engine_3
+			ship_anti_air_3
 		}
 		path = {
 			leads_to_tech = advanced_ship_hull_cruiser
@@ -799,6 +835,15 @@ technologies = {
 				}
 				factor = 4
 			}
+			modifier = {
+				factor = 1.5
+				date > 1939.1.1
+			}
+
+			modifier = {
+				factor = 1.5
+				date > 1940.1.1
+			}
 		}
 
 		categories = {
@@ -818,6 +863,7 @@ technologies = {
 		}
 		enable_equipment_modules = {
 			cruiser_ship_engine_4
+			ship_anti_air_4
 		}
 		research_cost = 1.5
 
@@ -970,6 +1016,7 @@ technologies = {
 			ship_armor_bb_1
 			heavy_ship_engine_1
 			ship_armor_bc_1
+			ship_anti_air_1
 		}
 
 		path = {
@@ -1029,6 +1076,7 @@ technologies = {
 		}
 		enable_equipment_modules = {
 			heavy_ship_engine_2
+			ship_anti_air_2
 		}
 		path = {
 			leads_to_tech = improved_ship_hull_heavy
@@ -1124,6 +1172,7 @@ technologies = {
 		}
 		enable_equipment_modules = {
 			heavy_ship_engine_3
+			ship_anti_air_3
 		}
 		path = {
 			leads_to_tech = advanced_ship_hull_heavy
@@ -1150,6 +1199,15 @@ technologies = {
 				is_major = no
 				factor = 0
 			}
+			modifier = {
+				factor = 1.5
+				date > 1939.1.1
+			}
+
+			modifier = {
+				factor = 1.5
+				date > 1940.1.1
+			}
 		}
 
 		categories = {
@@ -1168,6 +1226,7 @@ technologies = {
 		}
 		enable_equipment_modules = {
 			heavy_ship_engine_4
+			ship_anti_air_4
 		}
 		on_research_complete = {
 			if = {
@@ -1251,6 +1310,7 @@ technologies = {
 					tag = USA
 				}
 			}
+
 		}
 
 		categories = {
@@ -1289,6 +1349,11 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
+
+			modifier = {
+				factor = 0
+				date < 1938.1.1
+			}
 
 			modifier = {
 				factor = 4
@@ -1331,6 +1396,7 @@ early_ship_hull_carrier = {
 			ship_armor_carrier_deck
 			carrier_ship_engine_1
 			ship_deck_space
+			ship_anti_air_1
 		}
 
 		path = {
@@ -1375,6 +1441,7 @@ early_ship_hull_carrier = {
 		}
 		enable_equipment_modules = {
 			carrier_ship_engine_2
+			ship_anti_air_2
 		}
 		path = {
 			leads_to_tech = improved_ship_hull_carrier
@@ -1427,6 +1494,7 @@ early_ship_hull_carrier = {
 		}
 		enable_equipment_modules = {
 			carrier_ship_engine_3
+			ship_anti_air_3
 		}
 		on_research_complete = {
 			if = {
@@ -1477,6 +1545,15 @@ early_ship_hull_carrier = {
 					tag = USA
 				}
 			}
+			modifier = {
+				factor = 1.5
+				date > 1939.1.1
+			}
+
+			modifier = {
+				factor = 1.5
+				date > 1940.1.1
+			}
 		}
 
 		categories = {
@@ -1494,6 +1571,7 @@ early_ship_hull_carrier = {
 		}
 		enable_equipment_modules = {
 			carrier_ship_engine_4
+			ship_anti_air_4
 		}
 		on_research_complete = {
 			if = {
@@ -1694,6 +1772,15 @@ early_ship_hull_carrier = {
 					tag = GER
 					tag = USA
 				}
+			}
+			modifier = {
+				factor = 1.5
+				date > 1939.1.1
+			}
+
+			modifier = {
+				factor = 1.5
+				date > 1940.1.1
 			}
 		}
 

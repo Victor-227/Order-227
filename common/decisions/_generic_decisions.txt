@@ -305,6 +305,7 @@ propaganda_efforts = {
 
 		available = {
 			NOT = { has_country_flag = war_propaganda_campaign_running }
+			threat > 0.5
 			has_war_support < 0.5
 			
 			if = {
@@ -1826,7 +1827,8 @@ war_measures = {
 		cost = GER_war_bonds_var?50
 
 		modifier = {
-			consumer_goods_factor = -0.20
+			industrial_capacity_factory = 0.025
+			industrial_capacity_dockyard = 0.025
 		}
 
 		ai_will_do = {

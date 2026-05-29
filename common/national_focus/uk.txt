@@ -747,10 +747,16 @@ focus_tree = {
 			air_experience = 25
 			add_tech_bonus = {
 				name = fighter_command_focus
-				bonus = 1.0
+				bonus = 0.75
 				uses = 1
 				category = light_fighter
 				category = cat_heavy_fighter
+			}
+			add_tech_bonus = {
+				name = fighter_command_focus
+				bonus = 0.75
+				uses = 1
+				category = cat_air_engine
 			}
 			add_doctrine_cost_reduction = {
 				name = fighter_command_focus #land_doc_bonus
@@ -1745,10 +1751,10 @@ focus_tree = {
 	focus = {
 		id = ENG_decolonization
 		icon = GFX_focus_ENG_decolonization
-		prerequisite = { focus = ENG_self_government_for_africa }
-		prerequisite = { focus = ENG_self_government_for_asia }
+		prerequisite = { focus = ENG_self_government_for_africa focus = ENG_foundations_for_an_indian_state focus = ENG_self_government_for_asia }
+		#prerequisite = { focus = ENG_self_government_for_asia }
 		prerequisite = { focus = ENG_self_government_for_the_americas}
-		prerequisite = { focus = ENG_foundations_for_an_indian_state }
+		#prerequisite = { focus = ENG_foundations_for_an_indian_state }
 		available = { 
 		}
 		bypass = {
@@ -1767,6 +1773,10 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.1
 			add_political_power = 100
+			add_timed_idea = {
+				idea = ENG_guided_by_britain_4
+				days = 400
+			}
 			every_country = {
 				limit = {
 					is_subject_of = ROOT
@@ -1995,10 +2005,10 @@ focus_tree = {
 	focus = {
 		id = ENG_imperial_federation
 		icon = GFX_focus_ENG_imperial_federation
-		prerequisite = { focus = uk_canada_focus }
-		prerequisite = { focus = uk_india_focus }
+		prerequisite = { focus = uk_canada_focus focus = uk_australia_focus focus = uk_india_focus }
+		#prerequisite = { focus = uk_india_focus  }
 		prerequisite = { focus = uk_south_africa_focus }
-		prerequisite = { focus = uk_australia_focus }
+		#prerequisite = { focus = uk_australia_focus }
 		available = {
 			
 		}
@@ -2016,14 +2026,15 @@ focus_tree = {
 		}
 		search_filters = {FOCUS_FILTER_ANNEXATION}	
 		completion_reward = {
+			add_timed_idea = {
+				idea = ENG_guided_by_britain_4
+				days = 400
+			}
 			every_country = {
 				limit = {
-					OR = {
-						is_subject_of = ROOT
-					    tag = ROOT
-					}
+					is_subject_of = ROOT
 				}
-				add_timed_idea = {idea = ENG_guided_by_britain_3 days=450}
+				add_timed_idea = {idea = ENG_guided_by_britain_3 days = 450}
 			}
 		}
 	}
@@ -2272,7 +2283,7 @@ focus_tree = {
 			
 			every_core_state = {
                 limit = {
-                    infrastructure > 4
+                    infrastructure > 8
                 }
                 add_extra_state_shared_building_slots = 1
             }
@@ -2280,7 +2291,7 @@ focus_tree = {
 			else = {
 				every_core_state = {
                 limit = {
-                    infrastructure > 4
+                    infrastructure > 8
                 }
                 add_extra_state_shared_building_slots = 2
                 }
@@ -2356,7 +2367,7 @@ focus_tree = {
 			custom_effect_tooltip = infra_tt
 			every_core_state = {
                 limit = {
-                    infrastructure > 4
+                    infrastructure > 8
                 }
                 add_extra_state_shared_building_slots = 2
             }
@@ -3000,12 +3011,12 @@ focus_tree = {
 		}
 		search_filters = {FOCUS_FILTER_POLITICAL}	
 		completion_reward = {
-			add_political_power = 120
+			add_political_power = 150
 			custom_effect_tooltip = generic_skip_one_line_tt
 		
-		    set_autonomy = { target = CAN autonomy_state = autonomy_colony }
-			set_autonomy = { target = SAF autonomy_state = autonomy_colony }
-			set_autonomy = { target = AST autonomy_state = autonomy_colony }
+		    #set_autonomy = { target = CAN autonomy_state = autonomy_colony }
+			#set_autonomy = { target = SAF autonomy_state = autonomy_colony }
+			#set_autonomy = { target = AST autonomy_state = autonomy_colony }
 		}
 	}
 }

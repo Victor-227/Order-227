@@ -57,6 +57,13 @@ set_technology = {
 	aa_lmg = 1
 	engines_1 = 1
 	bba_early_transport_plane = 1
+	### tank modules
+	additional_machine_guns_tech = 1
+	anti_tank_rifle_tech = 1
+	tank_close_support_gun_tech = 1
+	early_optics_tech = 1
+	extra_ammo_storage_tech = 1
+	smoke_launchers_tech = 1
 }
 
 add_ideas = ROM_king_carol_ii_hedonist
