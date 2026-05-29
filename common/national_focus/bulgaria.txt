@@ -4911,13 +4911,13 @@ focus_tree = {
 		cost = 10
 
 		available = {
-			##
+			##a
 		}
 		
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 
-#stability_weekly -0.5
+#stability_weekly -0.55
 #resistance growth +30%
 
 		}
