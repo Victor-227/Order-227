@@ -4756,7 +4756,9 @@ focus_tree = {
 			}
 		}
 	}
-
+################################################################################################################
+#anti soviet mill focus_tree
+#################################################################################################################
 	focus = {
 		id = Ost_focus_1
 
@@ -4764,7 +4766,7 @@ focus_tree = {
 
 		icon = GFX_focus_attack_soviet
 		relative_position_id = BUL_the_eastern_front
-		x = -0.7
+		x = -1
 		y = 1
 		cost = 10
 
@@ -4774,7 +4776,7 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-
+#add entrench
 		}
 	}
 
@@ -4785,7 +4787,67 @@ focus_tree = {
 
 		icon = GFX_focus_attack_soviet
 		relative_position_id = BUL_the_eastern_front
-		x = 0.7
+		x = 1
+		y = 1
+		cost = 10
+
+		available = {
+			##
+		}
+		
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+#breakthrough
+		}
+	}
+
+		focus = {
+		id = Ost_focus_3
+
+		prerequisite = { focus = BUL_the_eastern_front }
+
+		icon = GFX_focus_attack_soviet
+		relative_position_id = Ost_focus_2
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+			##
+		}
+		
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+#breakthrough
+		}
+	}
+
+		focus = {
+		id = Ost_focus_4
+#Bulgarian Panzergrenadiers
+		icon = GFX_focus_attack_soviet
+		relative_position_id = Ost_focus_1
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+			##
+		}
+		
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+#research_bonus mechinized
+#add 400 german mechinized equipment
+		}
+	}
+
+		focus = {
+		id = Ost_focus_5
+#German Expert Assistance 
+		icon = GFX_focus_attack_soviet
+		relative_position_id = Ost_focus_2
+		x = 0
 		y = 1
 		cost = 10
 
@@ -4796,8 +4858,132 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 
+#production_factory_max_efficiency_factor 6
 		}
 	}
+
+		focus = {
+		id = Ost_focus_6
+#German Labor Assistance 
+		icon = GFX_focus_attack_soviet
+		relative_position_id = Ost_focus_2
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+			##
+		}
+		
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+
+#production_factory_efficiency_gain_factor 30
+#production output
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#################################################################3
+#                               occupation                      #
+#################################################################
+
+
+		focus = {
+		id = there_are_no_earthly_fears_on_the_eastern_front
+#German Labor Assistance 
+		icon = GFX_focus_attack_soviet
+		relative_position_id = Ost_focus_2
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+			##
+		}
+		
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+
+#stability_weekly -0.5
+#resistance growth +30%
+
+		}
+	}
+
+
+
+
+		focus = {
+		id = you_will_assend_to_paradise_in_the_flames_of_glory...
+#German Labor Assistance 
+		icon = GFX_focus_attack_soviet
+		relative_position_id = Ost_focus_2
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+			##
+		}
+		
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+
+#weekly_manpower -5000
+
+		}
+	}
+
+		focus = {
+		id = ...of_the_eternal_german_crusade
+#German Labor Assistance 
+		icon = GFX_focus_attack_soviet
+		relative_position_id = Ost_focus_2
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+			##
+		}
+		
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+
+
+#production output
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	focus = {
 		id = BUL_bulgarian_administration_of_the_balkans
