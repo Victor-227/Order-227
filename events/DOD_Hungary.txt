@@ -5435,17 +5435,21 @@ country_event = {
 		}
 	}
 
-	option = {# refuse
-		name = DOD_hungary.140.b
-		ai_chance = {
-			base = 25
-			modifier = {
-				is_historical_focus_on = yes
-				factor = 0
-			}
-		}
-		HUN = { country_event = { id = DOD_hungary.144 days = 3 } }
-	}
+###
+#	>not historical - untermenscj
+#	option = {# refuse
+#		name = DOD_hungary.140.b
+#		ai_chance = {
+#			base = 25
+#			modifier = {
+#				is_historical_focus_on = yes
+#				factor = 0
+#			}
+#		}
+#		HUN = { country_event = { id = DOD_hungary.144 days = 3 } }
+#	}
+###
+
 }
 
 #Bled Agreement - ROM/FRA has agreed, minors get to issue a response
@@ -5683,7 +5687,7 @@ country_event = {
 				factor = 0
 			}
 		}
-		add_stability = -0.1
+		#	add_stability = -0.1
 		add_ideas = HUN_denied_bled_agreement
 	}
 
@@ -5744,7 +5748,7 @@ country_event = {
 	option = {# appeal to Soviet Union
 		name = DOD_hungary.145.c
 		trigger = {
-			has_government = communism
+			#	has_government = communism
 			SOV = { has_government = communism }
 		}
 		ai_chance = {
@@ -5823,7 +5827,7 @@ country_event = {
 			ROM = { country_event = { id = DOD_hungary.147 days = 1} }
 		}
 
-		add_threat = 1
+		#	add_threat = 1
 	}
 
 	option = {# Hungary has to fend for themselves
@@ -5866,15 +5870,18 @@ country_event = {
 		}
 	}
 
-	option = {# be firm
-		name = DOD_hungary.147.b
-		ai_chance = {
-			factor = 20
-		}
-		HUN = { country_event = DOD_hungary.148 }
-		FROM = { add_opinion_modifier = { target = PREV modifier = HUN_stubborn_fools } }
-		HUN = { add_opinion_modifier = { target = FROM modifier = offered_support } }
-	}
+###
+#
+#	option = {# be firm
+#		name = DOD_hungary.147.b
+#		ai_chance = {
+#			factor = 20
+#		}
+#		HUN = { country_event = DOD_hungary.148 }
+#		FROM = { add_opinion_modifier = { target = PREV modifier = HUN_stubborn_fools } }
+#		HUN = { add_opinion_modifier = { target = FROM modifier = offered_support } }
+#	}
+###
 
 }
 

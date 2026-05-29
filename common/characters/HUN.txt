@@ -265,65 +265,67 @@ characters = {
 		
 	}
 
-	HUN_istvan_horthy = {
-
-		name = HUN_istvan_horthy
-
-		portraits = {
-			civilian = {
-				large = GFX_portrait_HUN_istvan_horthy
-				small = GFX_portrait_HUN_istvan_horthy_small
-			}
-		}
-
-		#country_leader = {
-		#	ideology = despotism
-		#	traits = { dislikes_germany HUN_popular_aviator }
-		#	expire = "1965.1.1.1"
-		#	id = -1
-		#}
-
-		advisor = {
-
-			slot = political_advisor
-
-			idea_token = HUN_istvan_horthy
-
-			allowed = {
-				original_tag = HUN
-			}
-
-			visible = {
-				NOT = {
-					OR = {
-						has_completed_focus = wuw_HUN_end_the_regency
-						has_completed_focus = wuw_HUN_end_the_white_terror
-						has_completed_focus = wuw_HUN_undermine_the_admiral
-					}
-				}
-			}
-
-			available = {	
-				AND = {
-					has_completed_focus = wuw_HUN_act_of_defense
-					has_country_leader = {
-						ruling_only = yes
-						character = HUN_miklos_horthy
-					}
-				}	
-			}
-
-			traits = {
-				war_industrialist 
-			}
-
-			ai_will_do = {
-				base = 1
-			}
-			
-		}
-		
-	}
+###
+#
+#	HUN_istvan_horthy = {
+#
+#		name = HUN_istvan_horthy
+#		portraits = {
+#			civilian = {
+#				large = GFX_portrait_HUN_istvan_horthy
+#				small = GFX_portrait_HUN_istvan_horthy_small
+#			}
+#		}
+#
+#		#country_leader = {
+#		#	ideology = despotism
+#		#	traits = { dislikes_germany HUN_popular_aviator }
+#		#	expire = "1965.1.1.1"
+#		#	id = -1
+#		#}
+#
+#		advisor = {
+#
+#			slot = political_advisor
+#
+#			idea_token = HUN_istvan_horthy
+#
+#			allowed = {
+#				original_tag = HUN
+#			}
+#
+#			visible = {
+#				NOT = {
+#					OR = {
+#						has_completed_focus = wuw_HUN_end_the_regency
+#						has_completed_focus = wuw_HUN_end_the_white_terror
+#						has_completed_focus = wuw_HUN_undermine_the_admiral
+#					}
+#				}
+#			}
+#
+#			available = {	
+#				AND = {
+#					has_completed_focus = wuw_HUN_act_of_defense
+#					has_country_leader = {
+#						ruling_only = yes
+#						character = HUN_miklos_horthy
+#					}
+#				}	
+#			}
+#
+#			traits = {
+#				war_industrialist 
+#			}
+#
+#			ai_will_do = {
+#				base = 1
+#			}
+#			
+#		}
+#		
+#	}
+###
 
 	HUN_ferenc_szalasi = {
 
@@ -735,7 +737,7 @@ characters = {
 				traits = {
 					army_logistics_2
 				}
-				cost =  100
+				cost =  150
 				ai_will_do = {
 					base = 1
 				}
@@ -821,7 +823,7 @@ characters = {
 				traits = {
 					army_chief_drill_2
 				}
-				cost =  100
+				cost =  150
 				ai_will_do = {
 					base = 1
 				}
@@ -1021,7 +1023,7 @@ characters = {
 				army_cavalry_2
 			}
 
-			cost = 100
+			cost = 150
 
 			ai_will_do = {
 				base = 1
@@ -1402,10 +1404,7 @@ characters = {
 			logistics_skill = 1
 			legacy_id = -1
 			visible = {
-				OR = {
-					has_completed_focus = wuw_HUN_reestablish_the_rongyos_garda
-					has_completed_focus = wuw_HUN_stage_an_uprising_in_leitha
-				}
+				has_completed_focus = wuw_HUN_reestablish_the_rongyos_garda
 			}
 		}
 		
@@ -1431,13 +1430,35 @@ characters = {
 			logistics_skill = 2
 			legacy_id = -1
 			visible = {
-				OR = {
-					has_completed_focus = wuw_HUN_reestablish_the_rongyos_garda
-					has_completed_focus = wuw_HUN_stage_an_uprising_in_leitha
-				}
+				has_completed_focus = wuw_HUN_reestablish_the_rongyos_garda
 			}
 		}
 		
+	}
+
+	HUN_unteryj_ee = {
+		name = "unteryj"
+		portraits = {
+			army = {
+				large = GFX_HUN_unteryj_ee
+				small = GFX_HUN_unteryj_ee_small
+			}
+		}
+		
+		corps_commander = {
+			traits = { cavalry_officer cavalry_leader trait_reckless }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+			legacy_id = -1
+			visible = {
+				has_completed_focus = wuw_HUN_reintigrate_slovakia
+				has_completed_focus = wuw_HUN_invest_in_ludovica_academy
+			}
+		}
+
 	}
 
 
@@ -1460,7 +1481,7 @@ characters = {
 			}
 
 			advisor = {
-				cost = 100
+				cost = 150
 				slot = theorist
 				idea_token = HUN_shvoy_kalman
 				ledger = army
@@ -1489,7 +1510,7 @@ characters = {
 
 			advisor = {
 
-				cost = 100
+				cost = 150
 
 				slot = theorist
 
@@ -1539,7 +1560,7 @@ characters = {
 		}
 
 		advisor = {
-			cost = 100
+			cost = 150
 			slot = theorist
 			idea_token = HUN_gyorgy_jendrassik
 			ledger = air
@@ -1594,7 +1615,7 @@ characters = {
 				traits = {
 					army_chief_defensive_2
 				}
-				cost = 100
+				cost = 150
 				ai_will_do = {
 					factor = 1.000
 				}
@@ -1647,7 +1668,7 @@ characters = {
 					army_chief_defensive_2
 				}
 
-				cost = 100
+				cost = 150
 
 				ai_will_do = {
 					base = 1
@@ -1688,7 +1709,7 @@ characters = {
 					army_chief_offensive_2
 				}
 
-				cost = 100
+				cost = 150
 
 				ai_will_do = {
 					factor = 1.000
@@ -1741,7 +1762,7 @@ characters = {
 					army_chief_offensive_2
 				}
 
-				cost = 100
+				cost = 150
 
 				ai_will_do = {
 					base = 3
@@ -1948,7 +1969,7 @@ characters = {
 				traits = {
 					air_air_combat_training_1
 				}
-				cost =  50
+				cost =  150
 				ai_will_do = {
 					base = 1
 				}
@@ -1989,7 +2010,7 @@ characters = {
 					air_air_combat_training_2
 				}
 
-				cost =  100
+				cost =  150
 
 				ai_will_do = {
 					base = 1
@@ -2032,7 +2053,7 @@ characters = {
 					army_armored_1
 				}
 
-				cost =  75
+				cost =  100
 
 			}
 
@@ -2083,7 +2104,7 @@ characters = {
 					army_armored_1
 				}
 
-				cost =  50
+				cost =  100
 				
 			}
 
@@ -2122,7 +2143,7 @@ characters = {
 					army_regrouping_2
 				}
 
-				cost = 100
+				cost = 150
 
 				ai_will_do = {
 					factor = 1.000
@@ -2177,7 +2198,7 @@ characters = {
 					army_regrouping_2
 				}
 
-				cost = 100
+				cost = 150
 
 				ai_will_do = {
 					base = 1
@@ -2220,7 +2241,7 @@ characters = {
 					army_infantry_1
 				}
 
-				cost = 50
+				cost = 100
 
 			}
 
@@ -2271,7 +2292,7 @@ characters = {
 					army_infantry_1
 				}
 
-				cost = 50
+				cost = 100
 				
 			}
 
@@ -2309,7 +2330,7 @@ characters = {
 					army_cavalry_2
 				}
 
-				cost = 100
+				cost = 150
 
 				ai_will_do = {
 					factor = 1.000
@@ -2368,7 +2389,7 @@ characters = {
 					army_entrenchment_2
 				}
 
-				cost = 100
+				cost = 150
 
 				ai_will_do = {
 					base = 1
@@ -2676,7 +2697,7 @@ characters = {
 					army_chief_organizational_2
 				}
 
-				cost = 100
+				cost = 150
 
 				ai_will_do = {
 					base = 2
@@ -3129,42 +3150,44 @@ characters = {
 		}
 
 	}
-
-	HUN_dezso_magos = {
-
-		name = HUN_dezso_magos
-
-		portraits = {
-			civilian = {
-				small = "GFX_portrait_HUN_dezso_magos_small"
-			}
-		}
-
-		advisor = {
-
-			slot = political_advisor
-
-			idea_token = HUN_dezso_magos
-
-			allowed = {
-				original_tag = HUN
-			}
-
-			available = {
-				has_completed_focus = wuw_HUN_construct_the_arpad_line
-			}
-
-			traits = {
-				fortress_architecht 
-			}
-
-			ai_will_do = {
-				base = 3
-			}
-
-		}
-
-	}
+###
+#
+#	HUN_dezso_magos = {
+#
+#		name = HUN_dezso_magos
+#
+#		portraits = {
+#			civilian = {
+#				small = "GFX_portrait_HUN_dezso_magos_small"
+#			}
+#		}
+#
+#		advisor = {
+#
+#			slot = political_advisor
+#
+#			idea_token = HUN_dezso_magos
+#
+#			allowed = {
+#				original_tag = HUN
+#			}
+#
+#			available = {
+#				has_completed_focus = wuw_HUN_construct_the_arpad_line
+#			}
+#
+#			traits = {
+#				fortress_architecht 
+#			}
+#
+#			ai_will_do = {
+#				base = 3
+#			}
+#
+#		}
+#
+#	}
+###
 
 	HUN_istvan_bethlen = {
 
@@ -3288,41 +3311,45 @@ characters = {
 
 	}
 
-	HUN_pal_kiraly = {
-
-		name = HUN_pal_kiraly
-
-		portraits = {
-			civilian = {
-				small = "GFX_portrait_HUN_pal_kiraly_small"
-			}
-		}
-
-		advisor = {
-
-			slot = materiel_designer
-
-			idea_token = HUN_pal_kiraly
-
-			allowed = {
-				original_tag = HUN
-			}
-
-			available = {
-				has_completed_focus = wuw_HUN_danuvia_submachine_guns
-			}
-
-			traits = {
-				HUN_innovative_weapons_designer
-			}
-
-			ai_will_do = {
-				base = 1
-			}
-
-		}
-
-	}
+###
+#
+#	HUN_pal_kiraly = {
+#
+#		name = HUN_pal_kiraly
+#
+#		portraits = {
+#			civilian = {
+#				small = "GFX_portrait_HUN_pal_kiraly_small"
+#			}
+#		}
+#
+#		advisor = {
+#
+#			slot = political_advisor
+#
+#			idea_token = HUN_pal_kiraly
+#
+#			allowed = {
+#				original_tag = HUN
+#			}
+#
+#			available = {
+#				has_completed_focus = wuw_HUN_danuvia_submachine_guns
+#			}
+#
+#			traits = {
+#				HUN_innovative_weapons_designer
+#			}
+#
+#			ai_will_do = {
+#				base = 1
+#			}
+#
+#		}
+#
+#
+#	}
+###
 
 	HUN_jusztinian_seredi = {
 

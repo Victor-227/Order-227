@@ -10124,7 +10124,7 @@ leader_traits = {
 
 		production_speed_bunker_factor = 0.15
 		production_speed_coastal_bunker_factor = 0.15
-		production_speed_arms_factory_factor = 0.05
+		production_speed_arms_factory_factor = 0.10
 		industrial_capacity_factory = 0.05
 	}
 
@@ -10227,7 +10227,8 @@ leader_traits = {
 		random = no
 		sprite = 13
 		research_speed_factor = -0.02
-		stability_factor = 0.10
+		stability_factor = 0.05
+		stability_weekly = 0.002
 	}
 
 	HUN_arpads_successor_trait = {
@@ -10488,7 +10489,7 @@ leader_traits = {
 		research_speed_factor = 0.15
 		equipment_bonus = {
 			infantry_equipment = {
-				build_cost_ic = -0.10
+				build_cost_ic = -0.05
 			}
 		}
 	}

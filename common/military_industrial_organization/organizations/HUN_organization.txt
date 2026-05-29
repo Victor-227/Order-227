@@ -22,6 +22,53 @@
 			has_completed_focus = wuw_HUN_establish_the_mavag_army_division
 		}
  	}
+
+	add_trait = {
+		token = HUN_mio_trait_high_velocity_armament
+		name = HUN_mio_trait_high_velocity_armament
+		icon = GFX_generic_mio_department_icon_tank_general_at
+		special_trait_background = yes
+
+		position = { x=1 y=1 }
+		relative_position_id = generic_mio_trait_improved_gun_metallurgy
+
+		all_parents = { generic_mio_trait_improved_gun_metallurgy }
+
+		# any_parent = { generic_mio_trait_spaced_armor generic_mio_trait_crew_survival_layout generic_mio_trait_sloped_side_armor }
+		
+		available = {
+		}
+
+		equipment_bonus = {
+			ap_attack = 0.05
+			hard_attack = 0.05
+			soft_attack = -0.03
+		}
+
+	}
+
+	add_trait = {
+		token = HUN_mio_trait_turan_iii
+		name = HUN_mio_trait_turan_iii
+		icon = GFX_generic_mio_department_icon_tank_general_armor
+		special_trait_background = yes
+
+		position = { x=0 y=1 }
+		relative_position_id = generic_mio_trait_crew_survival_layout
+
+		any_parent = { generic_mio_trait_spaced_armor generic_mio_trait_crew_survival_layout generic_mio_trait_sloped_side_armor }
+		
+		available = {
+		}
+
+		equipment_bonus = {
+			armor_value = 0.20
+			defense = 0.05
+			hardness = 0.05
+		}
+
+	}
+
  }
 
  HUN_mavag_assault_guns_organization = {
@@ -38,6 +85,25 @@
 			has_completed_focus = wuw_HUN_assault_gun_focus
 		}
  	}
+
+	add_trait = {
+		token = HUN_mio_trait_heat_ammunition
+		name = HUN_mio_trait_heat_ammunition
+		icon = GFX_generic_mio_trait_icon_ap_attack
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+		
+		available = {
+		}
+
+		equipment_bonus = {
+			ap_attack = 0.25
+			hard_attack = 0.25
+		}
+
+	}
+
  }
 
  HUN_fiat_tankettes_organization = {

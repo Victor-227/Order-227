@@ -420,7 +420,7 @@ IF = {
 	recruit_character = HUN_franz_friedrich
 	recruit_character = HUN_bela_kun
 	recruit_character = HUN_joseph_august_von_habsburg
-	recruit_character = HUN_istvan_horthy
+	#	recruit_character = HUN_istvan_horthy
 	recruit_character = HUN_ferenc_szalasi
 	recruit_character = HUN_mihaly_karolyi
 	recruit_character = HUN_janos_zichy
@@ -448,7 +448,7 @@ IF = {
 	#	recruit_character = HUN_istvan_bethlen
 	recruit_character = HUN_gyula_kadar
 	recruit_character = HUN_miklos_horthy_jr
-	recruit_character = HUN_pal_kiraly
+	#	recruit_character = HUN_pal_kiraly
 	recruit_character = HUN_janos_kadar
 	recruit_character = HUN_lennart_bernadotte
 	recruit_character = HUN_pal_pronay
@@ -457,12 +457,13 @@ IF = {
 	recruit_character = HUN_vasyl_vyshyvanyi
 	recruit_character = HUN_jozsef_kelen
 	recruit_character = HUN_hermann_pokorny
-	recruit_character = HUN_dezso_magos
+	#	recruit_character = HUN_dezso_magos
 	recruit_character = HUN_kalman_hardy
 	recruit_character = HUN_franz_anton_bach
 	recruit_character = HUN_hermann_goring
 	recruit_character = HUN_asboth_oszkar # Helis only exist if you have the dlc
 }
+recruit_character = HUN_unteryj_ee
 
 #Scientists always recruited
 recruit_character = HUN_nicholas_straussler

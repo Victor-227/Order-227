@@ -79,6 +79,33 @@ SpriteTypes = {
 		texturefile = "gfx/interface/ideas/SOV/idea_SOV_gosplan.dds"
 	}
 
+	### HUN
+
+	SpriteType = {
+		name = GFX_HUN_unteryj_ee
+		texturefile = "gfx/interface/ideas/HUN/HUN_unteryj_ee.png"
+	}
+
+	SpriteType = {
+		name = GFX_HUN_unteryj_ee_small
+		texturefile = "gfx/interface/ideas/HUN/HUN_unteryj_ee_small.png"
+	}
+
+	SpriteType = {
+		name = GFX_idea_HUN_dezso_magos
+		texturefile = "gfx/interface/ideas/HUN/HUN_dezso_magos.dds"
+	}
+
+	SpriteType = {
+		name = GFX_idea_HUN_istvan_friedrich
+		texturefile = "gfx/interface/ideas/HUN/HUN_istvan_friedrich.dds"
+	}
+
+	SpriteType = {
+		name = GFX_idea_HUN_pal_kiraly
+		texturefile = "gfx/interface/ideas/HUN/HUN_pal_kiraly.dds"
+	}
+
 	### ROMANIA
 
 	SpriteType = {

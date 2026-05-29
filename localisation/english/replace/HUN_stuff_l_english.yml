@@ -1,10 +1,12 @@
 ﻿l_english:
 
- HUN_status: "Ver0.6.1"
- HUN_status_desc: "Patch Notes: 1 more update and its done"
+ HUN_status: "Ver0.7.0"
+ HUN_status_desc: "Patch Notes: Ready for 29 May 2026 game. Designer: unteryj"
 
  HUN_the_regent_supreme: "The Regent Supreme"
  HUN_the_regent_supreme_desc: "W.I.P."
+
+ HUN_parties_of_hungarian_life_and_renewal: "Parties of Hungarian Life and Renewal"
 
  HUN_first_vienna_award: "The First Vienna Award"
  HUN_first_vienna_award_desc: "WIP"
@@ -26,11 +28,15 @@
  
  wuw_HUN_negotiate_the_restrictions: "Bled Agreement"
 
+ HUN_treaty_of_triannon_4: "Denied Bled Agreement"
+
  HUN_invite_german_designers: "Invite German Designers"
  HUN_invite_german_designers_desc: "WIP"
 
  HUN_the_tigris: "The Tigris"
  HUN_the_tigris_desc: "WIP"
+
+ gyordshadtest_division_mot_tt: "Gain two §YMotorized§! units"
 
  HUN_invest_in_support_equipment: "Improve Our Support Equipment"
  HUN_invest_in_support_equipment_desc: "WIP"
@@ -38,17 +44,32 @@
  HUN_invest_in_artillery: "Better Artillery Guns"
  HUN_invest_in_artillery_desc: "WIP"
 
- HUN_buzoganyveto: "The 44M Buzoganyveto"
+ HUN_buzoganyveto: "The 44M Buzogányvető"
  HUN_buzoganyveto_desc: "Silly Hungarian anti-tank rocket."
+
+ HUN_buzoganyveto_rocket: "Buzogányvető"
 
  HUN_marine_experiments: "Experiment with Marines"
  HUN_marine_experiments_desc: "WIP"
 
+ wuw_HUN_the_szekel_command_division_tt: "Gain two §YMountaineer§! divisions"
+
  HUN_air_infantry_coordination: "Air-Infantry Coordination"
  HUN_air_infantry_coordination_desc: "WIP"
+
+ wuw_HUN_szent_laszlo_infantry_division_tt: "Gain a veteran §YInfantry§! division"
+
+ HUN_bulwark_against_communism: "Bulwark Against Communism"
  
  wuw_HUN_demand_croatian_reintegration: "Reclaim Croatia!"
  wuw_HUN_demand_croatian_reintegration_desc: "W.I.P."
 
  wuw_HUN_enlarge_the_ganz_danubius_division_tt: "Add §G10§! §YNaval Dockyards§! in a random controlled §YCoastal State§!"
+ 
+ 
+ HUN_mio_trait_high_velocity_armament: "High Velocity Armament"
+
+ HUN_mio_trait_turan_iii: "The Turan III"
+
+ HUN_mio_trait_heat_ammunition: "HEAT Ammunition"
  
