@@ -2885,7 +2885,7 @@ focus_tree = {
 
 	focus = {
 		id = BUL_the_tsars_regime
-
+allow_branch = { always = no }
 		prerequisite = { focus = BUL_power_to_the_tsar }
 		icon = GFX_focus_generic_monarchy_1
 		relative_position_id = BUL_power_to_the_tsar
@@ -3024,7 +3024,7 @@ focus_tree = {
 		prerequisite = { focus = BUL_restore_the_tarnovo_constitution }
 		icon = GFX_focus_generic_treaty
 		relative_position_id = BUL_restore_the_tarnovo_constitution
-		x = 0
+		x = -1
 		y = 1
 		cost = 10
 
@@ -3160,12 +3160,12 @@ focus_tree = {
 	focus = {
 		id = BUL_limited_womens_suffrage
 
-		prerequisite = { focus = BUL_promote_bulgarian_nationalism }
+		prerequisite = { focus = BUL_freedom_of_press }
 
 		icon = GFX_focus_generic_concessions
-		relative_position_id = BUL_illusions_of_a_non_partisan_system
-		x = 2
-		y = 0
+		relative_position_id = BUL_freedom_of_press
+		x = 0
+		y = 1
 		cost = 10
 
 		available = {
@@ -3203,7 +3203,7 @@ focus_tree = {
 		id = BUL_found_the_brannik
 
 		prerequisite = { focus = BUL_promote_bulgarian_nationalism }
-		prerequisite = { focus = BUL_limited_womens_suffrage}
+
 		icon = GFX_focus_BUL_found_the_brannik
 		relative_position_id = BUL_promote_bulgarian_nationalism
 		x = 0
@@ -3229,7 +3229,7 @@ focus_tree = {
 
 		icon = GFX_goal_generic_territory_or_war
 		relative_position_id = BUL_promote_bulgarian_nationalism
-		x = 3
+		x = 2
 		y = 1
 		cost = 10
 
@@ -3252,7 +3252,7 @@ focus_tree = {
 		id = BUL_strengthen_the_royal_dictatorship
 
 		prerequisite = { focus = BUL_illusions_of_a_non_partisan_system }
-
+				prerequisite = { focus = BUL_limited_womens_suffrage}
 		icon = GFX_goal_generic_political_pressure
 		relative_position_id = BUL_illusions_of_a_non_partisan_system
 		x = 0
@@ -3363,7 +3363,7 @@ focus_tree = {
 	focus = {
 		id = BUL_liberalization_of_trade_policies
 
-		prerequisite = { focus = BUL_illusions_of_a_non_partisan_system focus = BUL_petorka }
+		prerequisite = { focus = BUL_limited_womens_suffrage }
 
 		icon = GFX_goal_generic_trade
 		relative_position_id = BUL_illusions_of_a_non_partisan_system
@@ -3391,7 +3391,7 @@ focus_tree = {
 
 	focus = {
 		id = BUL_the_fate_of_the_balkans
-
+allow_branch = { always = no } 
 		#prerequisite = { focus = BUL_form_a_regency_council focus = BUL_the_return_of_ferdinand_i focus = BUL_war_industry}
 
 		icon = GFX_focus_BUL_the_fate_of_the_balkans
@@ -3848,7 +3848,7 @@ focus_tree = {
 	focus = {
 		id = BUL_depose_the_tsar
 
-		prerequisite = { focus = BUL_the_path_towards_a_greater_bulgaria }
+	#prerequisite = { focus = BUL_the_path_towards_a_greater_bulgaria }
 		prerequisite = { focus = BUL_bulgarian_irredentism }
 		icon = GFX_focus_rom_abdicate
 		relative_position_id = BUL_the_path_towards_a_greater_bulgaria
@@ -4323,7 +4323,7 @@ focus_tree = {
 
 		icon = GFX_focus_chi_mission_to_germany
 		relative_position_id = BUL_bulgarian_irredentism
-		x = 1
+		x = 2
 		y = 2
 		cost = 10
 
@@ -4590,7 +4590,7 @@ focus_tree = {
 		icon = GFX_goal_support_fascism
 		relative_position_id = BUL_approach_germany
 		x = -4
-		y = 4
+		y = 3
 		cost = 5
 		mutually_exclusive = { focus = BUL_the_fate_of_the_balkans focus = BUL_join_the_allies }
 
@@ -4766,7 +4766,7 @@ focus_tree = {
 
 		icon = GFX_focus_attack_soviet
 		relative_position_id = BUL_the_eastern_front
-		x = -1
+		x = -1.5
 		y = 1
 		cost = 10
 
@@ -4787,7 +4787,7 @@ focus_tree = {
 
 		icon = GFX_focus_attack_soviet
 		relative_position_id = BUL_the_eastern_front
-		x = 1
+		x = 1.5
 		y = 1
 		cost = 10
 
@@ -4808,8 +4808,8 @@ focus_tree = {
 
 		icon = GFX_focus_attack_soviet
 		relative_position_id = Ost_focus_2
-		x = 0
-		y = 1
+		x =-1.5
+		y = 0
 		cost = 10
 
 		available = {
@@ -4824,6 +4824,7 @@ focus_tree = {
 
 		focus = {
 		id = Ost_focus_4
+		prerequisite = { focus = Ost_focus_1 }
 #Bulgarian Panzergrenadiers
 		icon = GFX_focus_attack_soviet
 		relative_position_id = Ost_focus_1
@@ -4837,7 +4838,13 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-#research_bonus mechinized
+			add_tech_bonus = {
+				name = BUL_kaproni_bulgarski
+			    bonus = 2
+			    uses = 1
+				category =mechanised_infantry1
+				category =mechanised_infantry2
+			}
 #add 400 german mechinized equipment
 		}
 	}
@@ -4899,13 +4906,52 @@ focus_tree = {
 #################################################################3
 #                               occupation                      #
 #################################################################
+		focus = {
+		id = neutral_in_all_but_name
+#German Labor Assistance 
+		icon = GFX_focus_attack_soviet
+		relative_position_id = BUL_join_the_tripartite_pact
+		x = 5
+		y = 0
+		cost = 10
 
+		available = {
+			##
+		}
+		
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+
+
+
+		}
+	}
+		focus = {
+		id = The_hottest_place_in_hell_is_reserved_for_those_who_maintain_their_neutrality.
+#German Labor Assistance 
+		icon = GFX_focus_attack_soviet
+		relative_position_id = neutral_in_all_but_name
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+			##
+		}
+		
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+
+
+
+		}
+	}
 
 		focus = {
 		id = there_are_no_earthly_fears_on_the_eastern_front
 #German Labor Assistance 
 		icon = GFX_focus_attack_soviet
-		relative_position_id = Ost_focus_2
+		relative_position_id = Ost_focus_4
 		x = 0
 		y = 1
 		cost = 10
@@ -4930,7 +4976,7 @@ focus_tree = {
 		id = you_will_assend_to_paradise_in_the_flames_of_glory...
 #German Labor Assistance 
 		icon = GFX_focus_attack_soviet
-		relative_position_id = Ost_focus_2
+		relative_position_id = there_are_no_earthly_fears_on_the_eastern_front
 		x = 0
 		y = 1
 		cost = 10
@@ -4948,12 +4994,12 @@ focus_tree = {
 	}
 
 		focus = {
-		id = ...of_the_eternal_german_crusade
+		id = of_the_eternal_german_crusade
 #German Labor Assistance 
 		icon = GFX_focus_attack_soviet
-		relative_position_id = Ost_focus_2
+		relative_position_id = Ost_focus_4
 		x = 0
-		y = 1
+		y = 3
 		cost = 10
 
 		available = {
