@@ -561,7 +561,7 @@ ideas = {
 			picture = generic_goods_red_bonus
 
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_expected_value = -0.05
 			}
 		}
 
@@ -658,7 +658,7 @@ ideas = {
 				armor = 0.15
 			}
 			
-			traits = { medium_tank_manufacturer }
+			traits = {  }
 			
 			modifier = {
 			}
@@ -692,7 +692,7 @@ ideas = {
 				infantry_weapons = 0.15
 			}
 			
-			traits = { infantry_equipment_manufacturer }
+			traits = {  }
 			
 			modifier = {
 			}
@@ -988,7 +988,7 @@ ideas = {
 				# fast and well armed
 			}
 			
-			traits = { raiding_fleet_naval_manufacturer }
+			traits = {  }
 			
 			modifier = {
 				# Weak defence vs air

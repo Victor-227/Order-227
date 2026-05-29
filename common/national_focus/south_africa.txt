@@ -72,7 +72,7 @@ focus_tree = {
 
 		available = {
 			OR = {
-				threat > 0.30
+				threat > 0.10
 				
 				
 			}

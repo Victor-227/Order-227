@@ -22,10 +22,11 @@ ideas = {
 
 			equipment_bonus = {
                 armor = {
-				build_cost_ic = -0.1
-				breakthrough = 0.010 
-		        reliability = 0.05
-				maximum_speed = 0.05
+				build_cost_ic = -0.10
+				breakthrough = 0.1
+		        reliability = 0.15
+				maximum_speed = 0.1
+				
 				}
 			}
 		}
@@ -317,7 +318,7 @@ ideas = {
 
 			equipment_bonus = {
 				armor = {
-					build_cost_ic = -0.10 
+					build_cost_ic = -0.05
 				}
 			}
 				
@@ -675,11 +676,11 @@ ideas = {
 			picture = great_depression
 
 			modifier = {
-				consumer_goods_expected_value = 0.20
+				consumer_goods_expected_value = 0.225
 				industrial_capacity_factory = -0.175
 				industrial_capacity_dockyard = -0.175
-				production_speed_buildings_factor = 0.125
-				production_cost_industrial_complex_factor = -0.15
+				production_speed_buildings_factor = 0.1
+				production_cost_industrial_complex_factor = -0.075
 				production_cost_arms_factory_factor = 0.30
 				local_building_slots_factor = 0.05
 				local_resources_factor = 0.05
@@ -1316,7 +1317,26 @@ ideas = {
 			picture = generic_exploit_mines
 
 			modifier = {
-				production_speed_buildings_factor = 0.20
+				production_speed_buildings_factor = 0.10
+				consumer_goods_expected_value = -0.05
+			}
+		}
+
+			CAN_goodjob = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_exploit_mines
+
+			modifier = {
+				consumer_goods_expected_value = -0.05
 			}
 		}
 
@@ -1411,7 +1431,7 @@ ideas = {
 				armor = 0.15
 			}
 
-			traits = { medium_tank_manufacturer }
+			traits = {  }
 
 			# quite the useless tanks the vickers 6-ton
 		}
@@ -1720,7 +1740,7 @@ ideas = {
 				}
 			}
 
-			traits = { construction_company }
+			traits = { railway_company }
 
 			#make this company give 5% more output and less resource needs for production 
 		}
@@ -1729,6 +1749,59 @@ ideas = {
 
 
 	industrial_theorist = {
+
+
+		CAN_jose_antonio_giron = {
+			name = SPR_antonio_giron
+
+			allowed = {
+				original_tag = CAN
+			}
+
+			ai_will_do = {
+				factor = 100
+			}
+
+			visible = {
+			}			
+
+			available = {
+			}
+
+			research_bonus = {
+			}
+
+			traits = { captain_of_industry  }
+
+			
+			removal_cost = -1		
+		}
+			CAN_Diego_Hidalgo = {
+			name = CAN_Diego_Hidalgo
+
+			allowed = {
+				original_tag = CAN
+			}
+
+			ai_will_do = {
+				factor = 100
+			}
+
+			visible = {
+			}			
+
+			available = {
+			}
+
+			research_bonus = {
+			}
+
+			traits = { war_industrialist  }
+
+			
+			removal_cost = -1		
+		}
+		
 		CAN_Robert_bryce = {
 			name = CAN_Robert_bryce
 
