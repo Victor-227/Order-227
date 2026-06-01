@@ -21,9 +21,8 @@ focus_tree = {
 		factor = 0
 		
 		modifier = {
-			add = 50
+			add = 10000
 			tag = CZE
-			has_dlc = "Peace For Our Time"
 		}
 	}
 
@@ -132,7 +131,7 @@ focus_tree = {
 	inlay_window = {
 		id = cze_industry_focus_inlay_window
 		relative_position_id = CZE_skoda_priority_shortcut_finder
-		position = { x = 0 y = 0 }
+		position = { x = 5 y = 0 }
 	}
 
 	shared_focus = HABSBURG_part_of_something_bigger
@@ -10291,9 +10290,6 @@ focus_tree = {
 
 		cost = 5
 
-		prerequisite = {
-			focus = CZE_revive_the_czechoslovak_legion_dynamic
-		}
 		mutually_exclusive = {
 			focus = CZE_soviet_alliance
 		}
