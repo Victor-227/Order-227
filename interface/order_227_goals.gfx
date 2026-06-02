@@ -400,4 +400,9 @@ SpriteTypes = {
 		name = "GFX_focus_SOV_command_economy"
 		texturefile = "gfx/interface/goals/SOV/focus_SOV_command_economy.dds"
 	}
+
+	SpriteType = {
+		name = "GFX_focus_CZE_slovak_independence"
+		texturefile = "gfx/interface/goals/CZE/focus_CZE_slovak_independence.dds"
+	}
 }
