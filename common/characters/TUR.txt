@@ -1,0 +1,18 @@
+characters = {
+
+    TUR_victor = {
+        name = "Victor"
+        portraits = {
+            civilian = {
+                large = GFX_TUR_victor
+            }
+        }
+        country_leader = {
+            traits = { the_director }
+            ideology = despotism
+            expire = "1965.1.1.1"
+        }
+
+    }
+
+}

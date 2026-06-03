@@ -1,0 +1,19 @@
+SpriteTypes = {
+
+    ### DEN
+    
+    SpriteType = {
+        name = GFX_DEN_benjamin_netanyahu
+        texturefile = "gfx/leaders/DEN/DEN_benjamin_netanyahu.png"
+    }
+
+    ### TUR
+
+    SpriteType = {
+        name = GFX_TUR_victor
+        texturefile = "gfx/leaders/TUR/TUR_victor.png"
+    }
+
+
+
+}

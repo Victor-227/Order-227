@@ -6,6 +6,20 @@ characters={
 #########################
 #########################
 
+	DEN_benjamin_netanyahu = {
+		name = "Ben"
+		portraits = {
+			civilian = {
+				large = GFX_DEN_benjamin_netanyahu
+			}
+		}
+		country_leader = {
+			traits = { defender_of_the_homeland }
+			ideology = populism
+			expire = "1965.1.1.1"
+		}
+	}
+
 #### DEMOCRATIC ####
 
 	DEN_thorvald_stauning = {

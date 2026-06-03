@@ -1,5 +1,5 @@
 ﻿capital = 110 # Oslo
-add_ideas= {ai_nation_that_has_war}
+add_ideas= { ai_nation_that_has_war ai_nation_lowered_surrender_limit }
 oob = "NOR_1936"
 set_research_slots = 3
 recruit_character = NOR_johan_nygaardsvold
@@ -18,4 +18,7 @@ set_technology = {
 	infantry_weapons = 1
 	tech_support = 1
 	gw_artillery=1
-}	
+}
+
+set_stability = 0.70
+set_war_support = 0.50

@@ -2416,7 +2416,7 @@ focus_tree = {
 
 		bypass = {
 			76 = {
-				is_owned_by = ROOT
+				is_fully_controlled_by = ROOT
 			}
 			any_enemy_country = {
 				has_full_control_of_state = 76
@@ -3099,7 +3099,7 @@ focus_tree = {
 			43 = {
 				add_resource = {
 					type = aluminium
-					amount = 16
+					amount = 24
 				}
 			}
 
@@ -3441,7 +3441,7 @@ focus_tree = {
 
 			add_timed_idea = {
 				idea = HUN_forceful_industrial_revitalization
-				days = 365
+				days = 250
 			}
 
 			add_tech_bonus = {
@@ -3765,7 +3765,7 @@ focus_tree = {
 					}
 					add_resource = {
 						type = steel
-						amount = 12
+						amount = 18
 					}
 				}
 				ELSE = {
@@ -4810,7 +4810,7 @@ focus_tree = {
 				}
 				add_resource = {
 					type = steel
-					amount = 10
+					amount = 22
 				}
 			}
 
@@ -5259,7 +5259,7 @@ focus_tree = {
 			43 = {
 				add_resource = {
 					type = aluminium
-					amount = 14
+					amount = 16
 				}
 			}
 		}
@@ -6730,6 +6730,10 @@ focus_tree = {
 
 		cost = 5
 
+		available = {
+			has_tech = improved_radio
+		}
+
 		completion_reward = {
 			add_ideas = HUN_air_infantry_radios
 		}
@@ -6744,10 +6748,6 @@ focus_tree = {
 		relative_position_id = wuw_HUN_magyar_kiralyi_csendorseg
 
 		cost = 5
-
-		ai_will_do = {
-			factor = 20
-		}
 
 		available = {
 			

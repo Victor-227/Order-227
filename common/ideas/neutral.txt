@@ -19,4 +19,29 @@ ideas = {
             training_time_factor = 10.0}
         }
     }
+
+    country = {
+
+        ai_nation_lowered_surrender_limit = {
+            name = "Unprepared for War"
+            
+            picture = generic_disjointed_gov
+
+            allowed = {
+                original_TAG = DEN
+                original_TAG = NOR
+            }
+
+            cancel = {
+                longest_war_length > 4
+            }
+
+            modifier = {
+                surrender_limit = -0.10
+            }
+            
+        }
+
+    }
+    
 }

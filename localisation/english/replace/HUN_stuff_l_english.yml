@@ -1,7 +1,7 @@
 ﻿l_english:
 
- HUN_status: "Ver0.7.0"
- HUN_status_desc: "Patch Notes: Ready for 29 May 2026 game. Designer: unteryj"
+ HUN_status: "Ver0.7.1"
+ HUN_status_desc: "Patch Notes: Last update on 2 June 2026. Designer: unteryj"
 
  HUN_the_regent_supreme: "The Regent Supreme"
  HUN_the_regent_supreme_desc: "W.I.P."
@@ -56,6 +56,8 @@
 
  HUN_air_infantry_coordination: "Air-Infantry Coordination"
  HUN_air_infantry_coordination_desc: "WIP"
+
+ HUN_air_infantry_radios: "Air-Infantry Radio Coordination"
 
  wuw_HUN_szent_laszlo_infantry_division_tt: "Gain a veteran §YInfantry§! division"
 
