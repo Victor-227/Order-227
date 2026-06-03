@@ -269,4 +269,39 @@ GER_oberkommando_der_wehrmacht_dec_cat = {
             }
         }
     }
+
+    GER_unternehmen_anton = {
+
+		icon = GFX_decision_ger_reichskommissariats
+
+        allowed = {
+            tag = GER
+        }
+
+		available = {
+            D04 = {
+			    has_war = yes
+            }
+        }
+
+        fire_only_once = yes
+
+		visible = {
+		    always = yes
+		}
+
+		complete_effect = {
+			annex_country = {
+                target = D04
+                transfer_troops = no
+                }
+            ITA = {
+                set_state_controller = 1
+                set_state_controller = 735
+                set_state_controller = 851
+                set_state_controller = 32
+                set_state_controller = 21
+            }
+	    }
+    }
 }
