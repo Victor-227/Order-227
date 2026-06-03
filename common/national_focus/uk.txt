@@ -2748,48 +2748,6 @@ focus_tree = {
 		    }	
 		}
 	}
-
-	
-
-	
-
-	
-
-	
-
-	focus = {
-		id = ENG_expose_the_belly_of_the_bear
-
-		available = {
-		}
-		icon = GFX_focus_eng_expose_the_belly_of_the_bear
-		prerequisite = { focus = uk_protect_suez }
-		x = 6
-		y = 9
-		cost = 2
-		ai_will_do = {
-			factor = 1
-		}	
-		completion_reward = {
-			custom_effect_tooltip = countenance_tt
-			hidden_effect= {
-			    ENG = {
-				    annex_country = {
-					    target = PER
-				    }
-			    }
-			    SOV = {
-					transfer_state = 419
-					transfer_state = 1000
-					transfer_state = 420
-					transfer_state = 266
-					transfer_state = 1004
-					transfer_state = 416
-		     	}
-			}
-		}
-	}
-
 	
 
 	focus = {

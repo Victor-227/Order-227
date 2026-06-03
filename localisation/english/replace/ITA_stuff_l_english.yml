@@ -27,3 +27,4 @@
  ITA_supremacy_in_the_skies_ra_tt:0 "$ITA_modify_regia_aeronautica_dynamic_modifier_ns_intro$ \n$MODIFIER_AIR_SUPERIORITY_EFFICIENCY$: §G+10%§!  \n$MODIFIER_AIR_INTERCEPT_EFFICIENCY$: §G+10%§! \n$MODIFIER_AIR_SUPERIORITY_BONUS_IN_COMBAT$: §G+10.0%§!\n\n"
  ITA_carica_di_isbuscenskij_re_tt:0 "$ITA_modify_regio_esercito_dynamic_modifier_ns_intro$ \n$modifier_army_sub_unit_cavalry_attack_factor$: §G+3.00%§! \n$modifier_army_sub_unit_cavalry_speed_factor$: §G+3.00%§! \n\n"
  ITA_modernize_ansaldo_facilities_military_industry_tt:0 "$ITA_modify_military_industry_dynamic_modifier_ns_intro$ \n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §G+5.00%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §G+5.00%§! \n\n"
+ ITA_occupy_tunisia:0 "Occupy Tunisia"
