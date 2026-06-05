@@ -51,3 +51,6 @@
  ger_42_crisis_tt:0 "This focus will auto complete on the 8th of February 1942."
  GER_war_with_france:0 "Occupation of France"
  occupation_of_france_tt:0 "We will gain compliance on the newly conquered French teritorries."
+ germany.229.t:0 "Acquisition of Škoda Works"
+ germany.229.desc:0 "The Škoda Works, a major industrial complex in Czechoslovakia, has been fully integrated into the Reich's war production. This acquisition will significantly boost our light tank manufacturing capabilities, providing us a critical edge for our future plans."
+ GER_acquisition_of_skoda_works:0 "Škoda Works"

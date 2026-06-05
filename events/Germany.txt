@@ -9376,6 +9376,32 @@ country_event = {
 		name = germany_economic_crisis.2.a
 		GER = {
 			complete_national_focus = GER_42_crisis
-		}	
+		}
+	}
+}
+
+country_event = {
+	id = germany.229
+	title = germany.229.t
+	desc = germany.229.desc
+	picture = GFX_skoda_works
+
+	fire_only_once = yes
+
+	available = {
+		tag = GER
+	}
+
+	trigger = {
+		tag = GER
+		has_completed_focus = GER_fate_of_czechoslovakia
+	}
+
+	option = {
+		name = "Achtung–Panzer!"
+		add_timed_idea = {
+			idea = GER_acquisition_of_skoda_works
+			days = 730
+		}
 	}
 }

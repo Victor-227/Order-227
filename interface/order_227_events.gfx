@@ -9,4 +9,9 @@ SpriteTypes = {
 		name = "GFX_report_event_speer_replaced"
 		texturefile = "gfx/event_pictures/report_event_speer_replaced.dds"
 	}
+
+	SpriteType = {
+		name = "GFX_skoda_works"
+		texturefile = "gfx/event_pictures/skoda_works-_1_.dds"
+	}
 }
