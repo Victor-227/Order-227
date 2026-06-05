@@ -5238,8 +5238,8 @@ ITA_colonial_management_dec_cat = {
 
 		complete_effect = {
 			ITA = {
-                set_state_controller = 458
-                set_state_controller = 665
+                transfer_state = 458
+                transfer_state = 665
 			}
 		}
 	}

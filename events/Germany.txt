@@ -9388,7 +9388,7 @@ country_event = {
 
 	fire_only_once = yes
 
-	available = {
+	allowed = {
 		tag = GER
 	}
 
