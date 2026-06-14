@@ -1,309 +1,289 @@
 GER_oberkommando_der_wehrmacht_dec_cat = {
-    GER_fall_weiss = {
-        icon = GFX_decision_ger_reichskommissariats
+	GER_fall_weiss = {
+		icon = GFX_decision_ger_reichskommissariats
 
-        allowed = {
-            tag = GER
-        }
+		allowed = {
+			tag = GER
+		}
 
-        available = {
-            has_completed_focus = GER_danzig_or_war
-            date > 1939.9.1
-        }
+		available = {
+			has_completed_focus = GER_danzig_or_war
+			date > 1939.9.1
+		}
 
-        visible = {
-		    always = yes
-	    }
+		visible = {
+			always = yes
+		}
 
-        fire_only_once = yes
+		fire_only_once = yes
 
-        complete_effect = {
-            GER = {
-                country_event = { id = germany.88}
-            }
-        }
-    }
+		complete_effect = {
+			GER = {
+				country_event = { id = germany.88}
+			}
+		}
+	}
 
-    GER_unternehmen_weserubung = {
-        icon = GFX_decision_ger_reichskommissariats
+	GER_unternehmen_weserubung = {
+		icon = GFX_decision_ger_reichskommissariats
 
-        allowed = {
-            tag = GER
-        }
+		allowed = {
+			tag = GER
+		}
 
-        available = {
-            has_completed_focus = GER_operation_weserubung
-        }
+		available = {
+			has_completed_focus = GER_operation_weserubung
+		}
 
-        visible = {
-		    always = yes
-	    }
-        
-        fire_only_once = yes
+		visible = {
+			always = yes
+		}
+		
+		fire_only_once = yes
 
-        complete_effect = {
-            declare_war_on = {
-			    type = annex_everything
-			    target = DEN
-		    }
-            declare_war_on = {
-			    type = annex_everything
-			    target = NOR
-		    }
-            hidden_effect = {
-                ENG = { add_to_faction = DEN }
-                ENG = { add_to_faction = NOR }
-                every_other_country = {
-                    limit = {
-                        NOT = {
-                            tag = ITA
-                        }
-                        is_in_faction_with = GER
-                    }
-                    add_to_war = { 
+		complete_effect = {
+			declare_war_on = {
+				type = annex_everything
+				target = DEN
+			}
+			declare_war_on = {
+				type = annex_everything
+				target = NOR
+			}
+			hidden_effect = {
+				ENG = { add_to_faction = DEN }
+				ENG = { add_to_faction = NOR }
+				every_other_country = {
+					limit = {
+						NOT = {
+							tag = ITA
+						}
+						is_in_faction_with = GER
+					}
+					add_to_war = { 
 						targeted_alliance = GER
 						enemy = DEN
 					}
-                    add_to_war = { 
+					add_to_war = { 
 						targeted_alliance = GER
 						enemy = NOR
 					}      
-                }
-            }
-        }
-    }
+				}
+			}
+		}
+	}
 
-    GER_fall_gelb = {
-        icon = GFX_decision_ger_reichskommissariats
+	GER_fall_gelb = {
+		icon = GFX_decision_ger_reichskommissariats
 
-        allowed = {
-            tag = GER
-        }
+		allowed = {
+			tag = GER
+		}
 
-        available = {
-            has_completed_focus = GER_around_maginot
-        }
+		available = {
+			has_completed_focus = GER_around_maginot
+		}
 
-        visible = {
-		    always = yes
-	    }
-        
-        fire_only_once = yes
+		visible = {
+			always = yes
+		}
+		
+		fire_only_once = yes
 
-        complete_effect = {
-            declare_war_on = {
-			    type = annex_everything
-			    target = BEL
-		    }
-            declare_war_on = {
-			    type = annex_everything
-			    target = HOL
-		    }
-            custom_effect_tooltip = GER_fall_gelb_tt
-            hidden_effect = {
-                ENG = { add_to_faction = BEL }
-                ENG = { add_to_faction = HOL }
-                every_other_country = {
-                    limit = {
-                        is_in_faction_with = GER
-                    }
-                    add_to_war = { 
+		complete_effect = {
+			declare_war_on = {
+				type = annex_everything
+				target = BEL
+			}
+			declare_war_on = {
+				type = annex_everything
+				target = HOL
+			}
+			custom_effect_tooltip = GER_fall_gelb_tt
+			hidden_effect = {
+				ENG = { add_to_faction = BEL }
+				ENG = { add_to_faction = HOL }
+				every_other_country = {
+					limit = {
+						is_in_faction_with = GER
+					}
+					add_to_war = { 
 						targeted_alliance = GER
 						enemy = BEL
 					}
-                    add_to_war = { 
+					add_to_war = { 
 						targeted_alliance = GER
 						enemy = HOL
 					}      
-                }
-            }
-        }
-    }
+				}
+			}
+		}
+	}
 
-    GER_unternehmen_marita = {
-        icon = GFX_decision_ger_reichskommissariats
+	GER_unternehmen_marita = {
+		icon = GFX_decision_ger_reichskommissariats
 
-        allowed = {
-            tag = GER
-        }
+		allowed = {
+			tag = GER
+		}
 
-        available = {
-            has_completed_focus = GER_fate_of_greece
-        }
+		available = {
+			has_completed_focus = GER_fate_of_greece
+		}
 
-        visible = {
-		    always = yes
-	    }
-        
-        fire_only_once = yes
+		visible = {
+			always = yes
+		}
+		
+		fire_only_once = yes
 
-        complete_effect = {
-            declare_war_on = {
-			    type = annex_everything
-			    target = GRE
-		    }
-            hidden_effect = {
-                ENG = { add_to_faction = GRE }
-                every_other_country = {
-                    limit = {
-                        is_in_faction_with = GER
-                    }
-                    add_to_war = { 
+		complete_effect = {
+			declare_war_on = {
+				type = annex_everything
+				target = GRE
+			}
+			hidden_effect = {
+				ENG = { add_to_faction = GRE }
+				every_other_country = {
+					limit = {
+						is_in_faction_with = GER
+					}
+					add_to_war = { 
 						targeted_alliance = GER
 						enemy = GRE
 					}   
-                }
-            }
-        }
-    }
+				}
+			}
+		}
+	}
 
-    GER_unternehmen_25 = {
-        icon = GFX_decision_ger_reichskommissariats
+	GER_unternehmen_25 = {
+		icon = GFX_decision_ger_reichskommissariats
 
-        allowed = {
-            tag = GER
-        }
+		allowed = {
+			tag = GER
+		}
 
-        available = {
-            has_completed_focus = GER_fate_of_yugoslavia
-        }
+		available = {
+			has_completed_focus = GER_fate_of_yugoslavia
+		}
 
-        visible = {
-		    always = yes
-	    }
-        
-        fire_only_once = yes
+		visible = {
+			always = yes
+		}
+		
+		fire_only_once = yes
 
-        complete_effect = {
-            declare_war_on = {
-			    type = annex_everything
-			    target = YUG
-		    }
-            hidden_effect = {
-                ENG = { add_to_faction = YUG }
-                every_other_country = {
-                    limit = {
-                        is_in_faction_with = GER
-                    }
-                    add_to_war = { 
+		complete_effect = {
+			declare_war_on = {
+				type = annex_everything
+				target = YUG
+			}
+			hidden_effect = {
+				ENG = { add_to_faction = YUG }
+				every_other_country = {
+					limit = {
+						is_in_faction_with = GER
+					}
+					add_to_war = { 
 						targeted_alliance = GER
 						enemy = YUG
 					}   
-                }
-            }
-        }
-    }
+				}
+			}
+		}
+	}
 
-    GER_unternehmen_barbarossa = {
-        icon = GFX_decision_ger_reichskommissariats
+	GER_unternehmen_barbarossa = {
+		icon = GFX_decision_ger_reichskommissariats
 
-        allowed = {
-            tag = GER
-        }
+		allowed = {
+			tag = GER
+		}
 
-        available = {
-            has_completed_focus = GER_war_with_the_ussr
-        }
+		available = {
+			has_completed_focus = GER_war_with_the_ussr
+		}
 
-        visible = {
-		    always = yes
-	    }
-        
-        fire_only_once = yes
+		visible = {
+			always = yes
+		}
+		
+		fire_only_once = yes
 
-        complete_effect = {
-            declare_war_on = {
-			    type = annex_everything
-			    target = SOV
-		    }
-            hidden_effect = {
-                every_other_country = {
-                    limit = {
-                        is_in_faction_with = GER
-                    }
-                    add_to_war = { 
+		complete_effect = {
+			declare_war_on = {
+				type = annex_everything
+				target = SOV
+			}
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						is_in_faction_with = GER
+					}
+					add_to_war = { 
 						targeted_alliance = GER
 						enemy = SOV
 					}   
-                }
+				}
 
-                40 = {
-                    add_extra_state_shared_building_slots = 50
-                }
+				583 = {
+					add_extra_state_shared_building_slots = 50
+				}
 
-                882 = {
-                    add_extra_state_shared_building_slots = 50
-                }
+				588 = {
+					add_extra_state_shared_building_slots = 50
+				}
 
-                590 = {
-                    add_extra_state_shared_building_slots = 50
-                }
+				590 = {
+					add_extra_state_shared_building_slots = 50
+				}
 
-                583 = {
-                    add_extra_state_shared_building_slots = 50
-                }
+				882 = {
+					add_extra_state_shared_building_slots = 50
+				}
+				
+				SOV = {
+					complete_national_focus = SOV_move_industry_to_the_urals
+				}
+			}
+		}
+	}
 
-                571 = {
-                    add_extra_state_shared_building_slots = 50
-                }
-
-                570 = {
-                    add_extra_state_shared_building_slots = 50
-                }
-
-                569 = {
-                    add_extra_state_shared_building_slots = 50
-                }
-
-                578 = {
-                    add_extra_state_shared_building_slots = 50
-                }
-
-                576 = {
-                    add_extra_state_shared_building_slots = 50
-                }
-                
-                SOV = {
-                    complete_national_focus = SOV_move_industry_to_the_urals
-                }
-            }
-        }
-    }
-
-    GER_unternehmen_anton = {
+	GER_unternehmen_anton = {
 
 		icon = GFX_decision_ger_reichskommissariats
 
-        allowed = {
-            tag = GER
-        }
+		allowed = {
+			tag = GER
+		}
 
 		available = {
-            OR = {
-                date > 1943.1.1
-                D04 = {
-			        has_war = yes
-                }
-            }
-        }
-        fire_only_once = yes
+			OR = {
+				date > 1943.1.1
+				D04 = {
+					has_war = yes
+				}
+			}
+		}
+		fire_only_once = yes
 
 		visible = {
-		    always = yes
+			always = yes
 		}
 
 		complete_effect = {
 			annex_country = {
-                target = D04
-                transfer_troops = no
-                }
-            ITA = {
-                set_state_controller = 1
-                set_state_controller = 735
-                set_state_controller = 851
-                set_state_controller = 32
-                set_state_controller = 21
-            }
-	    }
-    }
+				target = D04
+				transfer_troops = no
+			}
+			ITA = {
+				set_state_controller = 1
+				set_state_controller = 735
+				set_state_controller = 851
+				set_state_controller = 32
+				set_state_controller = 21
+			}
+		}
+	}
 }

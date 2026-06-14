@@ -1,25 +1,25 @@
 on_actions = {
-	#on_state_control_changed = {       ######### dont need this anymore but kept here because can be useful later
-	#    effect = {
-	#        if = {
-	#            limit = {
-	#                FROM.FROM = { is_core_of = SOV }
-	#                ROOT = { NOT = { tag = SOV } }
-	#            }
-	#            FROM.FROM = {
-	#				set_state_flag = SOV_evacuation_disrupted
-	#			}
-	#        }
-	#    }
-	#}
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					FROM.FROM = { is_core_of = SOV }
+					ROOT = { NOT = { tag = SOV } }
+				}
+				FROM.FROM = {
+					set_state_flag = SOV_evacuation_disrupted
+				}
+			}
+		}
+	}
 
 	on_startup = {
 		effect = {
 			SOV = {
 				country_event = {
-					id = soviet.gosplan.1
+					id = soviet.new.gosplan
 				}
-				activate_mission = SOV_five_year_plan_master_mission
+				activate_mission = SOV_second_five_year_plan_master_mission
 			}
 		}
 	}
@@ -32,7 +32,7 @@ on_actions = {
 				}
 			}
 
-			add_to_variable = { SOV_second_five_year_plan_progress = 1 }
+			add_to_variable = { SOV_five_year_plan_progress = 1 }
 			add_to_variable = { SOV_accumulated_factories = 1 }
 			subtract_from_variable = { SOV_temp_cg_duration = 10 }
 		}

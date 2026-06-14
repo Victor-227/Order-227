@@ -28,7 +28,7 @@ sub_units = {
 		}
 		manpower = 500
 		max_organisation = 12
-		max_strength = 2.2
+		max_strength = 3.5
 		default_morale = 0.3
 		training_time = 180
 		weight = 1.25
@@ -60,11 +60,11 @@ sub_units = {
 			movement = -0.1
 		}
 		urban = {
-			attack = -0.4
+			attack = -0.45
 			defence = -0.1
 		}
 		river = { 
-			attack = -0.2 
+			attack = -0.15
 			movement = -0.2
 		}
 		amphibious = { 

@@ -1020,7 +1020,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				naval_equipment = 0.15
+				naval_equipment = 0.1
 			}
 
 			equipment_bonus = {
@@ -1187,33 +1187,6 @@ ideas = {
 	}
 	
 	aircraft_research = {
-		iar = {
-
-			picture = generic_air_manufacturer_2
-
-			cost = 150
-
-			allowed = {
-				original_tag = ROM
-				NOT = {
-					has_dlc = "Death or Dishonor"
-				}
-			}
-			
-			research_bonus = {
-				air_equipment = 0.15
-			}
-			
-			traits = { light_aircraft_manufacturer }
-			
-			equipment_bonus = {
-				# produced the IAR-80 fighter/ground attack aircraft around 350 of them during 36-44
-			}
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
 
 		ROM_iar = {
 			
@@ -1281,7 +1254,7 @@ ideas = {
 		}
 	}
 	
-	industrial_theorist = { 
+	industrial_theorist = {
 
 		ROM_nicolae_malaxa = {
 			name = ROM_nicolae_malaxa

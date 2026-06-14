@@ -156,7 +156,7 @@ sub_units = {
 		combat_width = 2
 		
 		#Size Definitions
-		max_strength = 13
+		max_strength = 15
 		max_organisation = 65
 		default_morale = 0.4
 		manpower = 1000
@@ -214,7 +214,7 @@ sub_units = {
 		combat_width = 2
 		
 		#Size Definitions
-		max_strength = 13
+		max_strength = 15
 		max_organisation = 65
 		default_morale = 0.4
 		manpower = 1000
@@ -271,7 +271,7 @@ sub_units = {
 		combat_width = 2
 		
 		#Size Definitions
-		max_strength = 13
+		max_strength = 15
 		max_organisation = 65
 		default_morale = 0.4
 		manpower = 1000
@@ -330,7 +330,7 @@ sub_units = {
 		combat_width = 2
 
 		#Size Definitions
-		max_strength = 13
+		max_strength = 15
 		max_organisation = 65
 		default_morale = 0.4
 		manpower = 1000
@@ -387,7 +387,7 @@ sub_units = {
 		combat_width = 2
 		
 		#Size Definitions
-		max_strength = 15
+		max_strength = 17
 		max_organisation = 65
 		default_morale = 0.4
 		manpower = 1000

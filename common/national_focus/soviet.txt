@@ -86,6 +86,33 @@ focus_tree = {
 	}
 
 	focus = {
+		id = SOV_focus_on_progression_focus
+		icon = GFX_SOV_infrastructure_effort_nsb_ccp_2d_sov_compatibility
+		prerequisite = { focus = SOV_infrastructure_effort_nsb }
+		prerequisite = { focus = SOV_heavy_industry }
+		x = 1
+		y = 1
+		cost = 5
+
+		mutually_exclusive = { focus = SOV_focus_on_factories_focus }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			custom_effect_tooltip = focus_on_progression_tt
+			set_country_flag = SOV_focus_on_progression
+		}
+	}
+
+	focus = {
 		id = SOV_heavy_industry
 
 		icon = GFX_SOV_heavy_industry_ccp_2d_sov_compatibility
@@ -123,23 +150,49 @@ focus_tree = {
 	}
 
 	focus = {
+		id = SOV_focus_on_factories_focus
+		icon = GFX_SOV_heavy_industry_ccp_2d_sov_compatibility
+		prerequisite = { focus = SOV_infrastructure_effort_nsb }
+		prerequisite = { focus = SOV_heavy_industry }
+		x = 3
+		y = 1
+		cost = 5
+
+		mutually_exclusive = { focus = SOV_focus_on_progression_focus }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			custom_effect_tooltip = focus_on_factories_tt
+			set_country_flag = SOV_focus_on_factories
+		}
+	}
+
+	focus = {
 		id = SOV_finish_the_five_year_plan
 
 		icon = GFX_SOV_finish_the_five_year_plan_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_infrastructure_effort_nsb }
-		prerequisite = { focus = SOV_heavy_industry }
+		prerequisite = { focus = SOV_focus_on_progression_focus focus = SOV_focus_on_factories_focus}
 		x = 1
-		y = 1
+		y = 2
 		relative_position_id = SOV_infrastructure_effort_nsb
 		cost = 5
 
 		available = {
 			custom_trigger_tooltip = {
-				tooltip = SOV_fyp_controlled_factories_tier_1_tt
-				NOT = { num_of_controlled_factories < SOV_fyp_factory_requirement_tier_1 }
+				tooltip = five_year_plan_focus_completion_tt
+				always = no
 			}
 		}
-		
+
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
@@ -248,8 +301,8 @@ focus_tree = {
 
 		available = {
 			custom_trigger_tooltip = {
-				tooltip = SOV_fyp_controlled_factories_tier_2_tt
-				NOT = { num_of_controlled_factories < SOV_fyp_factory_requirement_tier_2 }
+				tooltip = five_year_plan_focus_completion_tt
+				always = no
 			}
 		}
 		

@@ -2004,7 +2004,7 @@ ideas = {
 		}
 	}
 
-	industrial_theorist = { 
+	industrial_theorist = {
 
 		FRA_felix_gouin = {
 			name = FRA_felix_gouin

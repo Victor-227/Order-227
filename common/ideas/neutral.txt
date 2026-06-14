@@ -1,47 +1,34 @@
 ideas = {
-    hidden_ideas = {
-        ai_nation = {
-            name = "AI Nation"
-            allowed = { always = yes }
-            modifier={production_speed_buildings_factor = -1.0
-            consumer_goods_expected_value = 1.0
-            industrial_capacity_factory = -10.0
-            research_speed_factor = -1
-            conscription = -1.0
-            training_time_factor = 10.0}
-        }
-        ai_nation_that_has_war = {
-            name = "AI Nation With Troops"
-            allowed = { always = yes }
-            modifier={production_speed_buildings_factor = -1.0
-            consumer_goods_expected_value = 1.0
-            research_speed_factor = -1
-            training_time_factor = 10.0}
-        }
-    }
+	hidden_ideas = {
+		ai_nation = {
+			name = "AI Nation"
+			allowed = { 
+				always = yes
+			}
+			modifier = {
+				production_speed_buildings_factor = -1.0
+				consumer_goods_expected_value = 1.0
+				industrial_capacity_factory = -10.0
+				research_speed_factor = -1
+				conscription = -1.0
+				training_time_factor = 10.0
+				political_power_gain = -2
+			}
+		}
 
-    country = {
+		ai_nation_that_has_war = {
+			name = "AI Nation With Troops"
+			allowed = { 
+				always = yes 
+			}
 
-        ai_nation_lowered_surrender_limit = {
-            name = "Unprepared for War"
-            
-            picture = generic_disjointed_gov
-
-            allowed = {
-                original_TAG = DEN
-                original_TAG = NOR
-            }
-
-            cancel = {
-                longest_war_length > 4
-            }
-
-            modifier = {
-                surrender_limit = -0.10
-            }
-            
-        }
-
-    }
-    
+			modifier = {
+				production_speed_buildings_factor = -1.0
+				consumer_goods_expected_value = 1.0
+				research_speed_factor = -1
+				training_time_factor = 10.0
+				political_power_gain = -2
+			}
+		}
+	}
 }

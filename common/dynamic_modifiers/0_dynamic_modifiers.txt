@@ -583,9 +583,10 @@ SOV_third_five_year_plan_dynamic_modifier = { #NATIONAL SPIRIT - Basic
 	consumer_goods_factor = SOV_fyp_consumer_goods_factor #0.1
 	consumer_goods_expected_value = SOV_fyp_consumer_goods_expected_value
 	production_speed_industrial_complex_factor = SOV_fyp_production_speed_industrial_complex_factor #0.05
+	production_speed_buildings_factor = SOV_fyp_production_speed_buildings_factor
 
 	#INITIAL
-	industrial_concern_cost_factor = SOV_fyp_industrial_concern_cost_factor #-0.15
+	industrial_research_cost_factor = SOV_fyp_industrial_concern_cost_factor #-0.15
 	
 	#EXTRA IMPROVEMENTS
 	local_resources_factor = SOV_fyp_local_resources_factor #0.10 -> Increase State Reserves
@@ -601,7 +602,8 @@ SOV_third_five_year_plan_civilian_dynamic_modifier = { #NATIONAL SPIRIT - Civili
 	production_factory_max_efficiency_factor = SOV_fyp_production_factory_max_efficiency_factor #0.05
 	consumer_goods_factor = SOV_fyp_consumer_goods_factor #0.08
 	production_speed_industrial_complex_factor = SOV_fyp_production_speed_industrial_complex_factor #0.1
-	industrial_concern_cost_factor = SOV_fyp_industrial_concern_cost_factor #-0.15
+	industrial_research_cost_factor = SOV_fyp_industrial_concern_cost_factor #-0.15
+	production_speed_buildings_factor = SOV_fyp_production_speed_buildings_factor
 	
 	#EXTRA IMPROVEMENTS
 	local_resources_factor = SOV_fyp_local_resources_factor #0.10 -> Increase State Reserves
@@ -622,7 +624,8 @@ SOV_third_five_year_plan_military_dynamic_modifier = { #NATIONAL SPIRIT - Milita
 	production_factory_max_efficiency_factor = SOV_fyp_production_factory_max_efficiency_factor #0.05
 	consumer_goods_factor = SOV_fyp_consumer_goods_factor #0.1
 	production_speed_industrial_complex_factor = SOV_fyp_production_speed_industrial_complex_factor #0
-	industrial_concern_cost_factor = SOV_fyp_industrial_concern_cost_factor #-0.15
+	industrial_research_cost_factor = SOV_fyp_industrial_concern_cost_factor #-0.15
+	production_speed_buildings_factor = SOV_fyp_production_speed_buildings_factor
 	
 	#INITIAL -> Shift to Armaments Production
 	production_speed_arms_factory_factor = SOV_fyp_production_speed_arms_factory_factor #0.10

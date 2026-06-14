@@ -979,7 +979,7 @@ technologies = {
 			tank_buster_1
 		}
 			
-		research_cost = 1
+		research_cost = 0.9
 		start_year = 1922
 
 		folder = {
@@ -1044,7 +1044,7 @@ technologies = {
 			}
 		}
 			
-		research_cost = 1
+		research_cost = 0.9
 		start_year = 1940
 
 		folder = {
@@ -1081,7 +1081,7 @@ technologies = {
 			armor_piercing_bomb_locks
 		}
 			
-		research_cost = 1
+		research_cost = 0.9
 		start_year = 1936
 
 		folder = {
@@ -1150,7 +1150,7 @@ technologies = {
 			torpedo_mounting
 		}
 			
-		research_cost = 1
+		research_cost = 0.9
 		start_year = 1936
 
 		folder = {
@@ -1193,7 +1193,7 @@ technologies = {
 			torpedo_mounting_2
 		}
 			
-		research_cost = 1
+		research_cost = 0.9
 		start_year = 1940
 
 		folder = {
@@ -1236,7 +1236,7 @@ technologies = {
 			torpedo_mounting_3
 		}
 			
-		research_cost = 1
+		research_cost = 0.9
 		start_year = 1944
 
 		folder = {
@@ -1278,7 +1278,7 @@ technologies = {
 			lmg_defense_turret_2x
 		}
 		
-		research_cost = 1
+		research_cost = 0.9
 		start_year = 1922
 
 		folder = {
@@ -1336,7 +1336,7 @@ technologies = {
 			armor_plate_large
 		}
 		
-		research_cost = 1
+		research_cost = 0.9
 		start_year = 1939
 
 		folder = {
@@ -1384,7 +1384,7 @@ technologies = {
 			hmg_defense_turret_2x
 		}
 		
-		research_cost = 1
+		research_cost = 0.9
 		start_year = 1939
 
 		folder = {
@@ -1430,7 +1430,7 @@ technologies = {
 			aircraft_cannon_1_2x
 		}
 		
-		research_cost = 1
+		research_cost = 0.9
 		start_year = 1939
 
 		folder = {
@@ -1488,7 +1488,7 @@ technologies = {
 			cannon_defense_turret_2x
 		}
 		
-		research_cost = 1.5
+		research_cost = 1.4
 		start_year = 1943
 
 		folder = {
@@ -1537,7 +1537,7 @@ technologies = {
 			cannon_defense_turret_2x
 		}
 		
-		research_cost = 2
+		research_cost = 1.9
 		start_year = 1945
 
 		folder = {
@@ -1587,7 +1587,7 @@ technologies = {
 			engine_1_6x	
 		}
 		
-		research_cost = 1
+		research_cost = 0.5
 		start_year = 1922
 
 		folder = {
@@ -1671,7 +1671,7 @@ technologies = {
 				PROJECT = sp_air_jet_engine	
 			}
 		}		
-		research_cost = 1
+		research_cost = 0.5
 		start_year = 1936
 
 		folder = {
@@ -1737,7 +1737,7 @@ technologies = {
 				PROJECT = sp_air_axial_jet_engine	
 			}
 		}		
-		research_cost = 1.5
+		research_cost = 1
 		start_year = 1940
 
 		folder = {
@@ -1805,7 +1805,7 @@ technologies = {
 			engine_4_6x	
 		}
 		
-		research_cost = 1.5
+		research_cost = 1
 		start_year = 1944
 
 		folder = {
@@ -1865,7 +1865,7 @@ technologies = {
 			drop_tanks
 		}
 		
-		research_cost = 1
+		research_cost = 0.9
 		start_year = 1936
 
 		folder = {
@@ -1929,7 +1929,7 @@ technologies = {
 			flying_boat_large
 		}
 		
-		research_cost = 1
+		research_cost = 0.9
 		start_year = 1936
 
 		folder = {

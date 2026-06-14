@@ -1,7 +1,6 @@
-state=
-{
-	id=1048
-	name="STATE_1048" # Arabian Desert
+state= {
+	id=1083
+	name="STATE_1083" # Arabian Desert
 	manpower = 1018
 	
 	state_category = wasteland

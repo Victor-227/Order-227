@@ -2,7 +2,7 @@ SOV_five_year_plan_dec_cat = {
 
 	icon = GFX_SOV_tractor_factories
 
-	picture = GFX_decision_SOV_gosplan
+	#picture = GFX_decision_SOV_gosplan
 
 	allowed = {
 		original_tag = SOV
@@ -55,7 +55,7 @@ SOV_industrial_evacuation_dec_cat = {
 
 	icon = GFX_SOV_tractor_factories
 
-	picture = GFX_decision_SOV_gosplan
+	#picture = GFX_decision_SOV_gosplan
 
 	allowed = {
 		original_tag = SOV

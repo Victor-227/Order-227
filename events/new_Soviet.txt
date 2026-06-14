@@ -1,34 +1,102 @@
-add_namespace = soviet.gosplan
+add_namespace = soviet.new
 
 country_event = {
-	id = soviet.gosplan.1
-	title = soviet.gosplan.1.t
-	desc = soviet.gosplan.1.desc
+	id = soviet.new.gosplan
+	title = soviet.new.gosplan.t
+	desc = soviet.new.gosplan.desc
 	picture = GFX_report_event_SOV_demands
 
 	is_triggered_only = yes
 
 	option = {
-		name = soviet.gosplan.1.a
+		name = soviet.new.gosplan.a
 		set_country_flag = SOV_gosplan_ukraine_rng
 		custom_effect_tooltip = SOV_gosplan_ukraine_rng_tt
 	}
 
 	option = {
-		name = soviet.gosplan.1.b
+		name = soviet.new.gosplan.b
 		set_country_flag = SOV_gosplan_moscow_rng
 		custom_effect_tooltip = SOV_gosplan_moscow_rng_tt
 	}
 
 	option = {
-		name = soviet.gosplan.1.c
+		name = soviet.new.gosplan.c
 		set_country_flag = SOV_gosplan_urals_rng
 		custom_effect_tooltip = SOV_gosplan_urals_rng_tt
 	}
 
 	option = {
-		name = soviet.gosplan.1.d
+		name = soviet.new.gosplan.d
 		set_country_flag = SOV_gosplan_siberia_rng
 		custom_effect_tooltip = SOV_gosplan_siberia_rng_tt
+	}
+}
+
+country_event = {
+	id = soviet.new.evacuations
+	title = soviet.new.evacuations.t
+	desc = soviet.new.evacuations.desc
+	picture = GFX_report_event_SOV_demands
+
+	is_triggered_only = yes
+
+	option = {
+		name = soviet.new.evacuations.a
+		subtract_from_variable = {
+			SOV_evacuation_days = 4
+		}
+
+		add_to_variable = {
+			SOV_evacuation_trains_cost = -10
+		}
+
+		add_to_variable = {
+			SOV_evacuation_trains_full_refund = 10
+		}
+
+		add_to_variable = {
+			SOV_evacuation_trains_refund = 5
+		}
+
+		custom_effect_tooltip = SOV_faster_evacuations_tt
+	}
+
+	option = {
+		name = soviet.new.evacuations.b
+		set_country_flag = SOV_double_evacuations
+
+		add_to_variable = {
+			SOV_evacuation_trains_cost = -14
+		}
+
+		add_to_variable = {
+			SOV_evacuation_trains_full_refund = 14
+		}
+
+		add_to_variable = {
+			SOV_evacuation_trains_refund = 7
+		}
+
+		custom_effect_tooltip = SOV_double_evacuations_tt
+	}
+
+	option = {
+		name = soviet.new.evacuations.c
+		set_country_flag = SOV_cheaper_evacuations
+
+		add_to_variable = {
+			SOV_evacuation_trains_cost = 10
+		}
+
+		add_to_variable = {
+			SOV_evacuation_trains_full_refund = -10
+		}
+
+		add_to_variable = {
+			SOV_evacuation_trains_refund = -5
+		}
+		
+		custom_effect_tooltip = SOV_cheaper_evacuations_tt
 	}
 }
