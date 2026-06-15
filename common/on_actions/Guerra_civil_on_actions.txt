@@ -1,0 +1,16 @@
+on_actions = {
+	
+on_capitulation_immeddiate = {
+    effect = {
+        if = {
+            limit = {
+                FROM = { tag = SPR }
+                ROOT = { tag = SPA }
+                }
+    annex_country = { 
+        target = SPA
+                }
+                }
+            }
+        }
+}

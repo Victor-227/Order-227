@@ -1,6 +1,7 @@
 ideas = {
 
-	country = {
+
+	country = {	
 		sour_loser = {
 			
 			allowed = {

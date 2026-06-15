@@ -522,7 +522,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			remove_ideas = SPR_military_disloyalty
+			remove_ideas = SPR_political_violence
 			add_war_support = 0.05
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = SPR_SPA_jose_antonio_primo_de_rivera
@@ -1806,6 +1806,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_MANPOWER}
 		completion_reward = {
+		remove_ideas = SPA_carlism_1
         add_country_leader_trait = Fascist_orchestrator 
 		 add_country_leader_trait = Iron_duke
 		}

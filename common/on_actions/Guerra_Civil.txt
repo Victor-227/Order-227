@@ -1,0 +1,31 @@
+on_actions = {
+
+on_capitulation_immediate  = {
+    effect = {
+        if = {
+            limit = {
+                FROM = { tag = SPR }
+                ROOT = { tag = SPA }
+                }
+            SPR = {annex_country = { target = SPA transfer_troops = no } } 
+
+            }
+        }
+}
+
+on_capitulation  = {
+    effect = {
+        if = {
+            limit = {
+                FROM = { tag = SPA }
+                ROOT = { tag = SPR }
+                }
+            SPR = {annex_country = { target = SPA transfer_troops = no } } 
+            EFR = { change_tag_from = POR }
+            SOV = { change_tag_from = SPA }
+            }
+        }
+}
+
+
+}
