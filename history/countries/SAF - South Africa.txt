@@ -1,4 +1,10 @@
-﻿capital = 275
+﻿set_variable = { SAF_segregation_dissatisfaction = 40 }
+clamp_variable = { var = SAF_segregation_dissatisfaction min = 0 max = 100 }
+
+add_ideas = SAF_unrest_level_4
+add_ideas = SAF_history_of_draft
+
+capital = 275
 
 set_research_slots = 3
 
@@ -20,8 +26,8 @@ if = {
 	}
 }
 
-set_stability = 0.6
-set_war_support = 0.1
+set_stability = 0.4
+set_war_support = 0
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
@@ -85,7 +91,6 @@ if = {
 if = {
 	limit = { has_dlc = "Together for Victory" }
 	add_ideas = SAF_ossewabrandwag
-	add_ideas = SAF_history_of_segregation
 
 	add_to_tech_sharing_group = commonwealth_research
 	add_opinion_modifier = { target = ENG modifier = SAF_anti_british_sentiment }
@@ -225,8 +230,15 @@ recruit_character = SAF_e_g_jansen
 recruit_character = SAF_sir_patrick_duncan
 recruit_character = SAF_Nicolaas_Havenga_mobilized
 recruit_character = SAF_Nicolaas_Havenga
-
-
+recruit_character = SAF_maurice_gamelin
+recruit_character = SAF_michael_nguni
+recruit_character = SAF_Jack_Sotho
+recruit_character = SAF_zivony_peshkov
+recruit_character = SAF_rene_massigli
+recruit_character = SAF_vincent_auriol
+recruit_character = SAF_joseph_auriol
+recruit_character = SAF_ferdinand_schorner
+recruit_character = SAF_werner_von_fritsch
 
 1939.1.1 = {
 	set_politics = {
@@ -245,3 +257,5 @@ recruit_character = SAF_Nicolaas_Havenga
 	promote_character = SAF_jan_smuts
 	retire_character = SAF_j_b_m_hertzog
 }
+
+

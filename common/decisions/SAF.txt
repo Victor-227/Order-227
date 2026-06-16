@@ -1,0 +1,93 @@
+SAF_segregation_management = {
+
+
+    SAF_fund_social_programs = {
+        allowed = { tag = SAF }
+
+        available = { has_variable = saf_segregation_dissatisfaction }
+
+        icon = generic_political_deal
+
+        cost = 15
+        days_remove = 30
+        
+        modifier = {
+            stability_factor = -0.10
+        }
+        
+        complete_effect = {
+            SAF = {
+                add_to_variable = { SAF_segregation_dissatisfaction = -3 }
+                clamp_variable = { var = SAF_segregation_dissatisfaction min = 0 max = 100 }
+            }
+            
+            custom_effect_tooltip = SAF_fund_social_programs_effect_desc
+        }
+        
+    }
+
+
+
+
+
+  SAF_workforce_integration = {
+	allowed = { tag = SAF }
+
+	available = { has_variable = saf_segregation_dissatisfaction }
+	
+	icon = generic
+
+    modifier = {
+		industrial_capacity_factory = -0.15    
+	}
+
+    cost = 10
+    days_remove = 60
+
+	complete_effect = {
+        SAF= {
+
+
+		add_to_variable = { saf_segregation_dissatisfaction = -4 }
+		clamp_variable = { var = saf_segregation_dissatisfaction min = 0 max = 100 }
+
+        custom_effect_tooltip = SAF_workforce_integration_effect_desc
+		
+	   }
+    }
+
+}
+
+
+
+
+
+
+SAF_equal_opportunity_infrastructure = {
+	allowed = { tag = SAF }
+
+	available = { has_variable = saf_segregation_dissatisfaction }
+
+    icon = generic
+	
+    cost = 20
+    days_remove = 45
+
+    modifier = {
+		production_speed_industrial_complex_factor = -0.20  
+		production_speed_infrastructure_factor = -0.15
+	}
+
+	complete_effect = {
+        SAF= {
+
+
+		add_to_variable = { saf_segregation_dissatisfaction = -5 }
+		clamp_variable = { var = saf_segregation_dissatisfaction min = 0 max = 100 }
+
+        custom_effect_tooltip = SAF_equal_opportunity_infrastructure_effect_desc
+        }
+		
+	 }
+   }
+}

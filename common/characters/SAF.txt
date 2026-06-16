@@ -86,6 +86,8 @@ characters={
 		}
 	}
 
+	######Commanders#####
+
 	SAF_george_edwin_brink={
 		name=SAF_george_edwin_brink
 		portraits={
@@ -98,12 +100,14 @@ characters={
 			traits={ desert_fox }
 			skill=4
 			attack_skill=4
-			defense_skill=4
+			defense_skill=3
 			planning_skill=4
-			logistics_skill=1
+			logistics_skill=2
 			legacy_id=-1
 		}
 	}
+
+	########Admiral########
 
 	SAF_guy_hallifax={
 		name=SAF_guy_hallifax
@@ -150,40 +154,7 @@ characters={
 			}
 		}
 
-		advisor={
-			slot = political_advisor
-			idea_token = SAF_j_f_van_rensburg_fascist
-			allowed = {
-				original_tag = SAF
-			}
-			available = {
-				if = {
-					limit = {
-						has_dlc = "Together for Victory"
-					}
-					has_completed_focus = SAF_support_the_afrikaner_broederbond 
-				}
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
-				}
-			}
-			traits = {
-				fascist_demagogue 
-			}
-			do_effect = {
-				NOT = {
-					has_government = fascism 
-				}
-			}
-			ai_will_do = {
-				factor = 0.000
-			}
-		}
+		
 	}
 
 	SAF_s_p_le_roux={
@@ -237,7 +208,7 @@ characters={
 		name=SAF_leonard_beyers
 		portraits={
 			army={
-				small="GFX_idea_SAF_leonard_beyers" #small="GFX_idea_generic_army_europe_4"
+				small="GFX_idea_SAF_leonard_beyers" 
 			}
 		}
 		advisor={
@@ -255,6 +226,58 @@ characters={
 			}
 		}		
 	}
+
+	SAF_maurice_gamelin={
+		name=SAF_maurice_gamelin
+		portraits={
+			army={small="GFX_idea_SAF_james_mitchell_baker"
+		}
+
+		}
+		advisor={
+			slot = army_chief
+			idea_token = SAF_maurice_gamelin
+			allowed = {
+				original_tag = SAF
+			}
+			available = {
+				has_completed_focus = SAF_Fund_Military_college
+			}
+			traits = {
+				army_chief_offensive_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 7
+			}
+		}
+	}	
+
+		SAF_Jack_Sotho={
+		name=SAF_Jack_Sotho
+		portraits={
+			army={small="GFX_idea_SAF_leonard_beyers" 
+		}
+
+		}
+		advisor={
+			slot = army_chief
+			idea_token = SAF_Jack_Sotho
+			allowed = {
+				original_tag = SAF
+			}
+			available = {
+				has_completed_focus = SAF_Infrantry_5
+			}
+			traits = {
+				army_chief_offensive_3
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 7
+			}
+		}
+	}	
 
 
 	### NAVY CHIEFS ###
@@ -357,6 +380,57 @@ characters={
 
 	### MILITARY HIGH COMMAND ###
 
+	SAF_ferdinand_schorner = {
+		name = SAF_ferdinand_schorner
+		portraits = {
+			army = {
+				
+				small = "GFX_idea_generic_army_europe_6"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = ferdinand_schorner
+			ledger = army
+			allowed = {
+				original_tag = SAF
+			}
+			traits = {
+				army_infantry_2
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 2.000
+			}
+		}
+	}
+
+	SAF_werner_von_fritsch = {
+		name = SAF_werner_von_fritsch
+		portraits = {
+			army = {
+				small = "GFX_idea_generic_army_europe_2"
+			}
+		}
+
+		advisor = {
+			slot = high_command
+			idea_token = werner_von_fritsch_high_command
+			ledger = army
+			allowed = {
+				original_tag = SAF
+			}
+			
+			traits = {
+				army_logistics_2
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.500
+			}
+		}
+	}	
+
 	SAF_robert_palmer={
 		name=SAF_robert_palmer
 		portraits={
@@ -373,6 +447,31 @@ characters={
 			}
 			traits = {
 				army_regrouping_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+
+	SAF_michael_nguni={
+		name=SAF_michael_nguni
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_3"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = SAF_michael_nguni
+			ledger = army
+			allowed = {
+				original_tag = SAF
+				
+			}
+			traits = {
+				army_commando_2
 			}
 			cost = 100
 			ai_will_do = {
@@ -582,6 +681,118 @@ characters={
 				silent_workhorse 
 			}
 		}		
+	}
+
+	SAF_zivony_peshkov={
+		name=SAF_zivony_peshkov
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_4"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SAF_zivony_peshkov
+			allowed  = {
+				original_tag  = SAF
+			}
+			traits  = {
+				war_industrialist 
+			}
+			on_add  = {
+			}
+			do_effect  = {
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+	}
+
+	SAF_rene_massigli={
+		name=SAF_rene_massigli
+		portraits={
+			army={
+				small="GFX_idea_rene_massigli"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = rene_massigli
+			allowed  = {
+				original_tag  = SAF
+			}
+			available  = {
+			}
+			cost  = 150
+			traits  = {
+				hawk 
+			}
+			do_effect  = {
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+	}
+
+	SAF_vincent_auriol={
+		name=SAF_vincent_auriol
+		portraits={
+			army={
+				small="GFX_idea_FRA_vincent_auriol"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SAF_vincent_auriol
+			allowed  = {
+				original_tag  = SAF
+			}
+			available  = {
+				has_completed_focus  = SAF_celebrate_the_great_trek
+			}
+			traits  = {
+				financial_specialist
+			}
+			on_add  = {
+			}
+			do_effect  = {
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+	}
+
+
+	SAF_joseph_auriol={
+		name=SAF_joseph_auriol
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_2"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SAF_joseph_auriol
+			allowed  = {
+				original_tag  = SAF
+			}
+			available  = {
+				has_completed_focus  = SAF_housing 
+			}
+			traits  = {
+				financial_expert
+			}
+			on_add  = {
+			}
+			do_effect  = {
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
 	}
 	
 

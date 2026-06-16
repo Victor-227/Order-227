@@ -1,0 +1,426 @@
+add_namespace = SAF_segregation
+
+country_event = {
+    id = SAF_segregation.14
+    title = SAF_segregation.14.t
+    desc = SAF_segregation.14.d
+    picture = GFX_report_event_civil_war
+    
+
+    trigger = {
+        tag = SAF
+        check_variable = { SAF_segregation_dissatisfaction > 12.5 }
+        check_variable = { SAF_segregation_dissatisfaction < 25}
+        has_idea = SAF_unrest_level_1
+    }
+
+    
+    
+    
+    option = {
+        name = SAF_segregation.14.a
+        swap_ideas = {
+                remove_idea = SAF_unrest_level_1
+                add_idea = SAF_unrest_level_2
+            }
+    }
+}
+
+
+country_event = {
+    id = SAF_segregation.13
+    title = SAF_segregation.13.t
+    desc = SAF_segregation.13.d
+    picture = GFX_report_event_civil_war
+    
+
+    trigger = {
+        tag = SAF
+        check_variable = { SAF_segregation_dissatisfaction > 25 }
+        check_variable = { SAF_segregation_dissatisfaction < 37.5 }
+        has_idea = SAF_unrest_level_2
+    }
+
+    
+    
+    
+    option = {
+        name = SAF_segregation.13.a
+        swap_ideas = {
+                remove_idea = SAF_unrest_level_2
+                add_idea = SAF_unrest_level_3
+            }
+    }
+}
+
+
+
+
+
+country_event = {
+    id = SAF_segregation.12
+    title = SAF_segregation.12.t
+    desc = SAF_segregation.12.d
+    picture = GFX_report_event_civil_war
+    
+
+    trigger = {
+        tag = SAF
+        check_variable = { SAF_segregation_dissatisfaction > 37.5 }
+        check_variable = { SAF_segregation_dissatisfaction < 50 }
+        has_idea = SAF_unrest_level_3
+    }
+
+    
+    
+    
+    option = {
+        name = SAF_segregation.12.a
+        swap_ideas = {
+                remove_idea = SAF_unrest_level_3
+                add_idea = SAF_unrest_level_4
+            }
+    }
+}
+
+
+
+
+
+
+
+country_event = {
+    id = SAF_segregation.1
+    title = SAF_segregation.1.t
+    desc = SAF_segregation.1.d
+    picture = GFX_report_event_civil_war
+    
+
+    trigger = {
+        tag = SAF
+        check_variable = { SAF_segregation_dissatisfaction > 50 }
+        check_variable = { SAF_segregation_dissatisfaction < 62.5 }
+        has_idea = SAF_unrest_level_4
+    }
+
+    
+    
+    
+    option = {
+        name = SAF_segregation.1.a
+        swap_ideas = {
+                remove_idea = SAF_unrest_level_4
+                add_idea = SAF_unrest_level_5
+            }
+    }
+}
+
+
+
+
+
+
+country_event = {
+    id = SAF_segregation.2
+    title = SAF_segregation.2.t
+    desc = SAF_segregation.2.d
+    picture = GFX_report_event_civil_war
+    
+
+    trigger = {
+        tag = SAF
+        check_variable = { SAF_segregation_dissatisfaction > 62.5 }
+        check_variable = { SAF_segregation_dissatisfaction < 75 }
+        has_idea = SAF_unrest_level_5
+    }
+
+    
+    
+    
+    option = {
+        name = SAF_segregation.2.a
+        swap_ideas = {
+                remove_idea = SAF_unrest_level_5
+                add_idea = SAF_unrest_level_6
+            }
+    }
+}
+
+
+
+
+
+country_event = {
+    id = SAF_segregation.3
+    title = SAF_segregation.3.t
+    desc = SAF_segregation.3.d
+    picture = GFX_report_event_civil_war
+    
+
+    trigger = {
+        tag = SAF
+        check_variable = { SAF_segregation_dissatisfaction > 75 }
+        check_variable = { SAF_segregation_dissatisfaction < 87.5 }
+        has_idea = SAF_unrest_level_6
+    }
+
+    
+    
+    
+    option = {
+        name = SAF_segregation.3.a
+        swap_ideas = {
+                remove_idea = SAF_unrest_level_6
+                add_idea = SAF_unrest_level_7
+            }
+    }
+}
+
+
+
+
+
+country_event = {
+    id = SAF_segregation.4
+    title = SAF_segregation.4.t
+    desc = SAF_segregation.4.d
+    picture = GFX_report_event_civil_war
+    
+
+    trigger = {
+        tag = SAF
+        check_variable = { SAF_segregation_dissatisfaction > 87.5 }
+        check_variable = {
+                    var = SAF_segregation_dissatisfaction
+                    value = 100
+                    compare = less_than_or_equals
+                }
+        has_idea = SAF_unrest_level_7
+    }
+
+    
+    
+    
+    option = {
+        name = SAF_segregation.4.a
+        swap_ideas = {
+                remove_idea = SAF_unrest_level_7
+                add_idea = SAF_unrest_level_8
+            }
+    }
+}
+
+########################################################################################################################################################################################################
+########################################################################################################################################################################################################
+########################################################################################################################################################################################################
+########################################################################################################################################################################################################
+########################################################################################################################################################################################################
+
+country_event = {
+    id = SAF_segregation.5
+    title = SAF_segregation.5.t
+    desc = SAF_segregation.5.d
+    picture = GFX_report_event_civil_war
+    
+
+    trigger = {
+        tag = SAF
+        check_variable = { SAF_segregation_dissatisfaction < 87.5 }
+    
+        has_idea = SAF_unrest_level_8
+    }
+
+    
+    
+    
+    option = {
+        name = SAF_segregation.5.a
+        swap_ideas = {
+                remove_idea = SAF_unrest_level_8
+                add_idea = SAF_unrest_level_7
+            }
+    }
+}
+
+
+
+
+
+
+country_event = {
+    id = SAF_segregation.6
+    title = SAF_segregation.6.t
+    desc = SAF_segregation.6.d
+    picture = GFX_report_event_civil_war
+    
+
+    trigger = {
+        tag = SAF
+        check_variable = { SAF_segregation_dissatisfaction < 75 }
+        
+        has_idea = SAF_unrest_level_7
+    }
+
+    
+    
+    
+    option = {
+        name = SAF_segregation.6.a
+        swap_ideas = {
+                remove_idea = SAF_unrest_level_7
+                add_idea = SAF_unrest_level_6
+            }
+    }
+}
+
+country_event = {
+    id = SAF_segregation.7
+    title = SAF_segregation.7.t
+    desc = SAF_segregation.7.d
+    picture = GFX_report_event_civil_war
+    
+
+    trigger = {
+        tag = SAF
+        check_variable = { SAF_segregation_dissatisfaction < 62.5 }
+        
+        has_idea = SAF_unrest_level_6
+    }
+
+    
+    
+    
+    option = {
+        name = SAF_segregation.7.a
+        swap_ideas = {
+                remove_idea = SAF_unrest_level_6
+                add_idea = SAF_unrest_level_5
+            }
+    }
+}
+
+
+
+
+country_event = {
+    id = SAF_segregation.8
+    title = SAF_segregation.8.t
+    desc = SAF_segregation.8.d
+    picture = GFX_report_event_civil_war
+    
+
+    trigger = {
+        tag = SAF
+        check_variable = { SAF_segregation_dissatisfaction < 50 }
+        
+        has_idea = SAF_unrest_level_5
+    }
+
+    
+    
+    
+    option = {
+        name = SAF_segregation.8.a
+        swap_ideas = {
+                remove_idea = SAF_unrest_level_5
+                add_idea = SAF_unrest_level_4
+            }
+    }
+}
+
+
+
+
+
+
+country_event = {
+    id = SAF_segregation.9
+    title = SAF_segregation.9.t
+    desc = SAF_segregation.9.d
+    picture = GFX_report_event_civil_war
+    
+
+    trigger = {
+        tag = SAF
+        check_variable = { SAF_segregation_dissatisfaction < 37.5 }
+        
+        has_idea = SAF_unrest_level_4
+    }
+
+    
+    
+    
+    option = {
+        name = SAF_segregation.9.a
+        swap_ideas = {
+                remove_idea = SAF_unrest_level_4
+                add_idea = SAF_unrest_level_3
+            }
+    }
+}
+
+
+
+
+
+
+country_event = {
+    id = SAF_segregation.10
+    title = SAF_segregation.10.t
+    desc = SAF_segregation.10.d
+    picture = GFX_report_event_civil_war
+    
+
+    trigger = {
+        tag = SAF
+        check_variable = { SAF_segregation_dissatisfaction < 25 }
+        
+        has_idea = SAF_unrest_level_3
+    }
+
+    
+    
+    
+    option = {
+        name = SAF_segregation.10.a
+        swap_ideas = {
+                remove_idea = SAF_unrest_level_3
+                add_idea = SAF_unrest_level_2
+            }
+    }
+}
+
+
+
+
+
+country_event = {
+    id = SAF_segregation.11
+    title = SAF_segregation.11.t
+    desc = SAF_segregation.11.d
+    picture = GFX_report_event_civil_war
+    
+
+    trigger = {
+        tag = SAF
+        check_variable = { SAF_segregation_dissatisfaction < 12.5 }
+        
+        has_idea = SAF_unrest_level_2
+    }
+
+    
+    
+    
+    option = {
+        name = SAF_segregation.11.a
+        swap_ideas = {
+                remove_idea = SAF_unrest_level_2
+                add_idea = SAF_unrest_level_1
+            }
+    }
+}
+
+
+
+
+

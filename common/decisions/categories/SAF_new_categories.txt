@@ -1,0 +1,12 @@
+SAF_segregation_management = {
+	name = SAF_segregation_management
+	icon = icon_generic_oppression
+	picture = SOV_civil_puppet_interaction 
+
+	priority = 100
+	
+	allowed = {
+		tag = SAF
+	}
+	
+}

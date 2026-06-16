@@ -1,0 +1,36 @@
+#on_actions = {
+    #on_monthly_pulse = {
+       # effect = {
+           # if = {
+               # limit = {
+                   # tag = SAF
+                    #check_variable = { saf_segregation_dissatisfaction > 0 }
+               # }
+               # change_variable = { saf_segregation_dissatisfaction = 5 }
+               # clamp_variable = { var = saf_segregation_dissatisfaction min = 0 max = 100 }
+            #}
+        #}
+    #}
+#}
+
+on_actions = {
+   on_monthly_SAF = {
+		effect = {
+			if = {
+				limit = { any_country = { tag = SAF } }
+				SAF = {
+					add_to_variable = { SAF_segregation_dissatisfaction = 3 }
+					clamp_variable = { var = SAF_segregation_dissatisfaction min = 0 max = 100 }
+
+            
+
+                    }
+                    
+                }
+                
+            }
+            
+        }
+}        
+					
+
