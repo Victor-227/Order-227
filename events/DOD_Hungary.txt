@@ -1416,30 +1416,33 @@ country_event = {
 	
 	is_triggered_only = yes
 
-	option = { #yes 
-		name = DOD_hungary.50.a
-		ai_chance = {
-			base = 10
-			modifier = {
-				ROM_is_on_historical_plan_trigger = yes
-				factor = 0
-			}
-			modifier = {
-				strength_ratio = { tag = HUN ratio < 0.8 }
-				factor = 2
-			}
-		}
-		HUN = { 
-			country_event = { 
-				id = DOD_hungary.51 
-				days = 1
-				random_days = 2
-			} 
-		}
-		add_stability = -0.25
-		add_war_support = -0.10
-
-	}
+###
+#	>retard proofing - unteryj
+#	option = { #yes 
+#		name = DOD_hungary.50.a
+#		ai_chance = {
+#			base = 10
+#			modifier = {
+#				ROM_is_on_historical_plan_trigger = yes
+#				factor = 0
+#			}
+#			modifier = {
+#				strength_ratio = { tag = HUN ratio < 0.8 }
+#				factor = 2
+#			}
+#		}
+#		HUN = { 
+#			country_event = { 
+#				id = DOD_hungary.51 
+#				days = 1
+#				random_days = 2
+#			} 
+#		}
+#		add_stability = -0.25
+#		add_war_support = -0.10
+#
+#	}
+###
 
 	option = { #no 
 		name = DOD_hungary.50.b
@@ -1539,36 +1542,33 @@ country_event = {
 	
 	is_triggered_only = yes
 
-	option = {# Let it go
-		name = DOD_hungary.52.a
-		ai_chance = {
-			base = 20
-			modifier = {
-				strength_ratio = { tag = ROM ratio < 1 } #weaker than Romania
-				factor = 2
-			}
-			modifier = {
-				HUN_is_on_historical_plan_trigger = yes
-				factor = 0
-			}
-		}
-		add_stability = -0.20
-		add_war_support = -0.10
-		remove_state_claim = 76
-		remove_state_claim = 83
-		remove_state_claim = 84
-		add_threat = -1
-	}
+###
+#	>retard proofing - unteryj
+#	option = {# Let it go
+#		name = DOD_hungary.52.a
+#		ai_chance = {
+#			base = 20
+#			modifier = {
+#				strength_ratio = { tag = ROM ratio < 1 } #weaker than Romania
+#				factor = 2
+#			}
+#			modifier = {
+#				HUN_is_on_historical_plan_trigger = yes
+#				factor = 0
+#			}
+#		}
+#		add_stability = -0.20
+#		add_war_support = -0.10
+#		remove_state_claim = 76
+#		remove_state_claim = 83
+#		remove_state_claim = 84
+#		add_threat = -1
+#	}
+###
 
 	option = {# Prepare for war!
 		name = DOD_hungary.52.b
-		ai_chance = {
-			base = 80
-			modifier = {
-				strength_ratio = { tag = ROM ratio > 1.2 }
-				factor = 3
-			}
-		}
+
 		ROM = { 
 			country_event = { 
 				id = DOD_hungary.53 
@@ -1576,8 +1576,8 @@ country_event = {
 			} 
 		}
 		add_ideas = HUN_war_preparation
-		add_war_support = 0.10
-		add_threat = 1
+		#	add_war_support = 0.10
+		#	add_threat = 1
 		hidden_effect = {
 			news_event = { 
 				id = news.302 
@@ -1596,33 +1596,35 @@ country_event = {
 	
 	is_triggered_only = yes
 
-	option = { # Back down
-		name = DOD_hungary.53.a
-		ai_chance = {
-			base = 35
-			modifier = { 
-				strength_ratio = { tag = HUN ratio < 0.8 }
-				factor = 0.5
-			}
-			modifier = { 
-				ROM_is_on_historical_plan_trigger = yes 
-				factor = 0
-			}
-			modifier = {
-				is_in_faction = yes
-				factor = 0 #we got friends
-			}
-		}
-		add_stability = -0.15
-		add_war_support = -0.05
-		HUN = {
-			country_event = { 
-				id = DOD_hungary.51 
-				hours = 6
-			}
-		}
-	}
-
+###
+#	>retard proofing - unteryj
+#	option = { # Back down
+#		name = DOD_hungary.53.a
+#		ai_chance = {
+#			base = 35
+#			modifier = { 
+#				strength_ratio = { tag = HUN ratio < 0.8 }
+#				factor = 0.5
+#			}
+#			modifier = { 
+#				ROM_is_on_historical_plan_trigger = yes 
+#				factor = 0
+#			}
+#			modifier = {
+#				is_in_faction = yes
+#				factor = 0 #we got friends
+#			}
+#		}
+#		add_stability = -0.15
+#		add_war_support = -0.05
+#		HUN = {
+#			country_event = { 
+#				id = DOD_hungary.51 
+#				hours = 6
+#			}
+#		}
+#	}
+###
 
 	option = { # Prepare for war!
 		name = DOD_hungary.53.b
@@ -1643,8 +1645,8 @@ country_event = {
 			}
 		}
 		add_ideas = ROM_war_preparation
-		add_war_support = 0.1
-		add_threat = 1
+		#	add_war_support = 0.1
+		#	add_threat = 1
 ###
 #	disallow intervention - untermenscj
 #		if = {
@@ -1743,33 +1745,36 @@ country_event = {
 	
 	is_triggered_only = yes
 
-	option = {# Back down
-		name = DOD_hungary.54.a
-		ai_chance = {
-			base = 35
-			modifier = {
-				strength_ratio = { tag = ROM ratio < 0.5 } #weaker than Romania
-				factor = 2
-			}
-			modifier = { 
-				HUN_is_on_historical_plan_trigger = yes 
-				factor = 0
-			}
-		}
-		add_stability = -0.15
-		remove_state_claim = 76
-		remove_state_claim = 83
-		remove_state_claim = 84
-		add_threat = -1
-		ROM = {	
-			country_event = { 
-				id = DOD_hungary.57 
-				hours = 4
-			} 
-		}
-		remove_ideas = HUN_war_preparation
-		
-	}
+###
+#	>retard proofing - unteryj
+#	option = {# Back down
+#		name = DOD_hungary.54.a
+#		ai_chance = {
+#			base = 35
+#			modifier = {
+#				strength_ratio = { tag = ROM ratio < 0.5 } #weaker than Romania
+#				factor = 2
+#			}
+#			modifier = { 
+#				HUN_is_on_historical_plan_trigger = yes 
+#				factor = 0
+#			}
+#		}
+#		add_stability = -0.15
+#		remove_state_claim = 76
+#		remove_state_claim = 83
+#		remove_state_claim = 84
+#		add_threat = -1
+#		ROM = {	
+#			country_event = { 
+#				id = DOD_hungary.57 
+#				hours = 4
+#			} 
+#		}
+#		remove_ideas = HUN_war_preparation
+#		
+#	}
+###
 
 ###
 #	>not allowed - untermenscj

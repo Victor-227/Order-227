@@ -316,12 +316,10 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_a_mobile_army
 		icon = GFX_focus_generic_mechanized
-		prerequisite = { focus = wuw_HUN_the_turan }
-		prerequisite = { focus = wuw_HUN_assault_gun_focus }
 		prerequisite = { focus = wuw_HUN_form_the_gyorshadtest }
-		x = 1
-		y = 4
-		relative_position_id = wuw_HUN_quantity_over_quality
+		x = 0
+		y = 2
+		relative_position_id = wuw_HUN_form_the_gyorshadtest
 
 		cost = 10
 
@@ -349,9 +347,8 @@ focus_tree = {
 
 			add_mastery_bonus = {
 				name = wuw_HUN_a_mobile_army
-				bonus = 0.1
+				bonus = 0.10
 				days = 180
-				grand_doctrine = new_mobile_warfare
 			}
 
 			add_doctrine_cost_reduction = {
@@ -6968,6 +6965,30 @@ focus_tree = {
 	}
 
 	focus = {
+		id = HUN_armored_doctrine
+		icon = GFX_focus_generic_tank_assault
+		prerequisite = { focus = HUN_the_tigris focus = wuw_HUN_the_turan focus = wuw_HUN_assault_gun_focus }
+		x = 0
+		y = 1
+		relative_position_id = wuw_HUN_the_turan
+
+		cost = 5
+
+		completion_reward = {
+			add_ideas = HUN_armored_doctrine_idea
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_mastery = {
+				amount = 100
+				track = armor
+			}
+
+		}
+
+	}
+
+	focus = {
 		id = wuw_HUN_expand_the_army
 		icon = GFX_focus_HUN_expand_the_army
 		prerequisite = { focus = wuw_HUN_doctrinal_studies }
@@ -7525,25 +7546,27 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = HUN_marine_experiments_mt
-				bonus = 1
+				bonus = 1.00
 				uses = 1
 				category = marine_tech
 			}
 			add_tech_bonus = {
 				name = HUN_marine_experiments_tp
-				bonus = 1
+				bonus = 1.00
 				uses = 1
 				category = tp_tech
 			}
 
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			add_doctrine_cost_reduction = {
-				name = HUN_army_maneuvers
-				cost_reduction = 0.5
-				uses = 2
-				category = cat_marines_doctrine
-			}
+			
+			#	custom_effect_tooltip = generic_skip_one_line_tt
+			#
+			#	add_doctrine_cost_reduction = {
+			#		name = HUN_army_maneuvers
+			#		cost_reduction = 0.5
+			#		uses = 2
+			#		category = cat_marines_doctrine
+			#	}
+			
 		}
 	}
 
@@ -7799,8 +7822,8 @@ focus_tree = {
 
 			add_tech_bonus = {
 				name = wuw_HUN_transylvanian_mountaineers
-				bonus = 1
-				uses = 1
+				bonus = 1.00
+				uses = 2
 				category = mountaineers_tech
 			}
 

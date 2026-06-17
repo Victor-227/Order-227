@@ -771,6 +771,19 @@ ideas = {
 			}
 		}
 
+		HUN_armored_doctrine_idea = {
+			picture  = generic_armor
+
+			allowed = {
+				original_tag = HUN
+			}
+
+			modifier = {
+				army_armor_attack_factor = 0.05
+				army_armor_defence_factor = 0.05
+			}
+		}
+
 		HUN_mobile_army_efforts_idea = {
 			allowed = {
 				original_tag = HUN
@@ -778,11 +791,9 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_armor
+			picture = generic_supply_line
 
 			modifier = {
-				army_armor_attack_factor = 0.05
-				army_armor_defence_factor = 0.05
 				motorized_attack_factor = 0.05
 				motorized_defence_factor = 0.05
 				mechanized_attack_factor = 0.05
@@ -1317,7 +1328,7 @@ ideas = {
 
 			modifier = {
 				army_speed_factor = 0.02
-				army_attack_against_major_factor = 0.10
+				army_attack_against_major_factor = 0.08
 				supply_consumption_factor = -0.05
 				fascism_drift = 0.04
 			}

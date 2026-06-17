@@ -1,7 +1,7 @@
 ﻿l_english:
 
- HUN_status: "Ver0.7.2"
- HUN_status_desc: "Patch Notes: IM TOUCHING THE BALANCE IM ADDING 50 RESOURCES TO HUNGARY ARGHHHHH. Designer: unteryj"
+ HUN_status: "Ver0.7.3"
+ HUN_status_desc: "Patch Notes: Adjusted some stuff"
 
  HUN_the_regent_supreme: "The Regent Supreme"
  HUN_the_regent_supreme_desc: "W.I.P."
@@ -35,6 +35,11 @@
 
  HUN_the_tigris: "The Tigris"
  HUN_the_tigris_desc: "WIP"
+
+ HUN_armored_doctrine: "Adopt Armored Doctrine"
+ HUN_armored_doctrine_desc: "WIP"
+
+ HUN_armored_doctrine_idea: "Armored Tactics"
 
  gyordshadtest_division_mot_tt: "Gain two §YMotorized§! units"
 
