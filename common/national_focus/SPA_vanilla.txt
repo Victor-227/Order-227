@@ -10,7 +10,7 @@
 ### search_filters = {FOCUS_FILTER_SPA_ANARCHIST_UPRISING}
 
 focus_tree = {
-	id = spanish_republic_focus
+	id = spanish_republic_focus_dep
 	
 	country = {
 		factor = 0
