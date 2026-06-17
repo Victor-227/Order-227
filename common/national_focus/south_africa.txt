@@ -394,6 +394,7 @@ focus = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			add_ideas = partial_economic_mobilisation
+			add_war_support = 0.10
 		}
 	}
 
@@ -469,6 +470,7 @@ focus = {
 			add_to_variable = { SAF_segregation_dissatisfaction = 5 }
             clamp_variable = { var = SAF_segregation_dissatisfaction min = 0 max = 100 }
 			add_ideas = war_economy
+			add_war_support = 0.10
 			custom_effect_tooltip = SAF_dissatisfaction_plus_5
 		}
 
@@ -1100,6 +1102,11 @@ focus = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
+		completion_reward = {
+			add_political_power = 50
+			
+		}
+
 
 		
 
@@ -1708,6 +1715,14 @@ focus = {
 				SAF_Right_side
 					}
 					custom_effect_tooltip = SAF_dissatisfaction_plus_5
+				create_country_leader = {
+				name = "Jan Smuts"
+				desc = "Jan_Smuts"
+				picture = GFX_portrait_SAF_jan_smuts
+				expire = "1965.1.1"
+				ideology = conservatism
+				
+			}
 			
 		}
 
@@ -2383,7 +2398,7 @@ focus = {
 
 	focus = {
 		id = SAF_the_cape_defense_institutese
-		icon = GFX_focus_generic_electrification
+		icon = GFX_focus_CONGO_ccci
 		prerequisite = { focus = SAF_fascistkl }
 		prerequisite = {focus = SAF_the_cape_defense_institutes }
 		x = 1
@@ -2858,7 +2873,7 @@ focus = {
 
 	focus = {
 		id = SAF_Quantity_over_quality
-		icon = GFX_goal_generic_military_sphere
+		icon = GFX_focus_FIN_foreign_anti_air
 		prerequisite = { focus = SAF_Fund_Military_college }
 		mutually_exclusive = { focus = SAF_Quality_over_quantity }
 		x = 9
@@ -2876,7 +2891,7 @@ focus = {
 
 	focus = {
 		id = SAF_Quality_over_quantity
-		icon = GFX_goal_generic_military_sphere
+		icon = GFX_focus_generic_heavy_tank
 		prerequisite = { focus = SAF_Fund_Military_college }
 		mutually_exclusive = { focus = SAF_Quantity_over_quality }
 		x = 11
@@ -2931,7 +2946,7 @@ focus = {
 
 	focus = {
 		id = SAF_sa_engineer_corps
-		icon = GFX_goal_generic_allies_build_infantry
+		icon = GFX_focus_CZE_army_reform
 		prerequisite = { focus = SAF_q_services_corps }
 		x = 11
 		y = 2

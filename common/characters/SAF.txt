@@ -97,7 +97,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ desert_fox }
+			traits={ desert_fox armor_officer media_personality}
 			skill=4
 			attack_skill=4
 			defense_skill=3
@@ -106,6 +106,45 @@ characters={
 			legacy_id=-1
 		}
 	}
+
+	SAF_horace_robertson={
+		name=SAF_horace_robertson
+		portraits={
+			army={
+				large=GFX_portrait_SAF_jan_smuts
+			}
+		}
+		field_marshal={
+			traits = { brilliant_strategist career_officer trait_reckless offensive_doctrine }
+			skill=3
+			attack_skill=2
+			defense_skill=4
+			planning_skill=3
+			logistics_skill=4
+			legacy_id=-1
+		}
+	}
+
+	SAF_matias_jones = {
+		name = SAF_matias_jones
+		portraits = {
+			army = {
+				large = GFX_AST_john_northcott
+			}
+		}
+		corps_commander = {
+			traits = { trait_reckless infantry_officer }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 1
+			logistics_skill = 3
+			legacy_id = 0
+			
+		}
+	}
+
+	
 
 	########Admiral########
 
@@ -780,7 +819,7 @@ characters={
 				original_tag  = SAF
 			}
 			available  = {
-				has_completed_focus  = SAF_housing 
+				has_completed_focus  = SAF_Foreign_experts
 			}
 			traits  = {
 				financial_expert

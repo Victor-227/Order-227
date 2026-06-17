@@ -239,6 +239,8 @@ recruit_character = SAF_vincent_auriol
 recruit_character = SAF_joseph_auriol
 recruit_character = SAF_ferdinand_schorner
 recruit_character = SAF_werner_von_fritsch
+recruit_character = SAF_horace_robertson
+recruit_character = SAF_matias_jones
 
 1939.1.1 = {
 	set_politics = {

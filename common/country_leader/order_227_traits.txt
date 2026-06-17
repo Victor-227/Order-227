@@ -200,4 +200,13 @@ leader_traits = {
 		global_building_slots_factor = 0.12
 		production_speed_infrastructure_factor = 0.15
 	}
+
+	SAF_industrial_conglomerate = {
+		random = no
+
+		production_speed_buildings_factor = 0.15
+		consumer_goods_expected_value = -0.05
+	}
+
+	
 }

@@ -4,7 +4,7 @@ country_event = {
     id = SAF_segregation.14
     title = SAF_segregation.14.t
     desc = SAF_segregation.14.d
-    picture = GFX_report_event_civil_war
+    picture = GFX_report_event_generic_riot
     
 
     trigger = {
@@ -15,8 +15,7 @@ country_event = {
     }
 
     
-    
-    
+
     option = {
         name = SAF_segregation.14.a
         swap_ideas = {
@@ -31,7 +30,7 @@ country_event = {
     id = SAF_segregation.13
     title = SAF_segregation.13.t
     desc = SAF_segregation.13.d
-    picture = GFX_report_event_civil_war
+    picture = GFX_report_event_generic_riot
     
 
     trigger = {
@@ -61,7 +60,7 @@ country_event = {
     id = SAF_segregation.12
     title = SAF_segregation.12.t
     desc = SAF_segregation.12.d
-    picture = GFX_report_event_civil_war
+    picture = GFX_report_event_generic_riot
     
 
     trigger = {
@@ -93,7 +92,7 @@ country_event = {
     id = SAF_segregation.1
     title = SAF_segregation.1.t
     desc = SAF_segregation.1.d
-    picture = GFX_report_event_civil_war
+    picture = GFX_report_event_generic_riot
     
 
     trigger = {
@@ -124,7 +123,7 @@ country_event = {
     id = SAF_segregation.2
     title = SAF_segregation.2.t
     desc = SAF_segregation.2.d
-    picture = GFX_report_event_civil_war
+    picture = GFX_report_event_generic_riot
     
 
     trigger = {
@@ -154,7 +153,7 @@ country_event = {
     id = SAF_segregation.3
     title = SAF_segregation.3.t
     desc = SAF_segregation.3.d
-    picture = GFX_report_event_civil_war
+    picture = GFX_report_event_generic_riot
     
 
     trigger = {
@@ -184,7 +183,7 @@ country_event = {
     id = SAF_segregation.4
     title = SAF_segregation.4.t
     desc = SAF_segregation.4.d
-    picture = GFX_report_event_civil_war
+    picture = GFX_report_event_generic_riot
     
 
     trigger = {
@@ -220,7 +219,7 @@ country_event = {
     id = SAF_segregation.5
     title = SAF_segregation.5.t
     desc = SAF_segregation.5.d
-    picture = GFX_report_event_civil_war
+    picture = GFX_report_event_generic_riot
     
 
     trigger = {
@@ -251,7 +250,7 @@ country_event = {
     id = SAF_segregation.6
     title = SAF_segregation.6.t
     desc = SAF_segregation.6.d
-    picture = GFX_report_event_civil_war
+    picture = GFX_report_event_generic_riot
     
 
     trigger = {
@@ -277,7 +276,7 @@ country_event = {
     id = SAF_segregation.7
     title = SAF_segregation.7.t
     desc = SAF_segregation.7.d
-    picture = GFX_report_event_civil_war
+    picture = GFX_report_event_generic_riot
     
 
     trigger = {
@@ -306,7 +305,7 @@ country_event = {
     id = SAF_segregation.8
     title = SAF_segregation.8.t
     desc = SAF_segregation.8.d
-    picture = GFX_report_event_civil_war
+    picture = GFX_report_event_generic_riot
     
 
     trigger = {
@@ -337,7 +336,7 @@ country_event = {
     id = SAF_segregation.9
     title = SAF_segregation.9.t
     desc = SAF_segregation.9.d
-    picture = GFX_report_event_civil_war
+    picture = GFX_report_event_generic_riot
     
 
     trigger = {
@@ -368,7 +367,7 @@ country_event = {
     id = SAF_segregation.10
     title = SAF_segregation.10.t
     desc = SAF_segregation.10.d
-    picture = GFX_report_event_civil_war
+    picture = GFX_report_event_generic_riot
     
 
     trigger = {
@@ -398,7 +397,7 @@ country_event = {
     id = SAF_segregation.11
     title = SAF_segregation.11.t
     desc = SAF_segregation.11.d
-    picture = GFX_report_event_civil_war
+    picture = GFX_report_event_generic_riot
     
 
     trigger = {

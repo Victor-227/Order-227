@@ -2,7 +2,7 @@ state = {
 	id = 981
 	name = "STATE_981" # Barotseland
 	
-	state_category = rural
+	state_category = pastoral
 	manpower = 690043
 
 	resources = {

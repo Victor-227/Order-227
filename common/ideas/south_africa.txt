@@ -14,7 +14,7 @@ ideas = {
 			removal cost = -1
 
             name = "Steal everything"
-			picture = GFX_focus_ARG_women_in_industry
+			picture = CHI_corruption_armed_forces
 
 			modifier= { equipment_capture = 0.05 }
 		}
@@ -26,7 +26,7 @@ ideas = {
 			}	 
 			removal_cost = -1
 
-			picture = saf_history_of_segregation
+			picture = SWE_per_albin_bus
 
 			equipment_bonus = {
 				mechanized = {
@@ -41,7 +41,7 @@ ideas = {
 			removal cost = -1
 
 			name = "Mobilization"
-			picture = GFX_focus
+			picture = ETH_peacekeeping_forces
 
 			modifier= { conscription_factor = 0.05 }
 			
@@ -55,7 +55,7 @@ ideas = {
 			}	 
 			removal_cost = -1
 
-			picture = saf_history_of_segregation
+			picture = NORDIC_industry_democratic
 
 			equipment_bonus = {
 				armor = {
@@ -73,7 +73,7 @@ ideas = {
 			}	 
 			removal_cost = -1
 
-			picture = saf_history_of_segregation
+			picture = NORDIC_industry_communist
 
 			equipment_bonus = {
 				armor = {
@@ -90,7 +90,7 @@ ideas = {
 			}	 
 			removal_cost = -1
 
-			picture = saf_history_of_segregation
+			picture = SWE_ga_pa_tactics
 			modifier = {
 			army_experience_gain_factor = 0.10
 			special_forces_attack_factor = 0.10
@@ -128,7 +128,7 @@ ideas = {
 			picture = saf_soviet_advisers
 
 			modifier = {
-				army_org_Factor = 0.05
+				army_org_Factor = 0.02
 				planning_speed = 0.05
 			}
 		}
@@ -199,7 +199,7 @@ ideas = {
 		SAF_unrest_level_0 = {
 			allowed = { tag = SAF }
 			removal_cost = -1
-			picture = s
+			picture = BEL_legacy_of_the_great_war
 			
 			modifier= {stability_factor = 0.15       
 			political_power_gain = 0.05
@@ -321,7 +321,7 @@ ideas = {
 			removal cost = -1
 
 
-			picture = SOV_third_five_year_plan
+			picture = generic_improved_industries
 
 			modifier= {	production_factory_efficiency_gain_factor = 0.10
 		                production_factory_max_efficiency_factor = 0.08 }
@@ -382,7 +382,7 @@ ideas = {
 			removal cost = -1
 
             
-			picture = GFX_focus_ARG_women_in_industry
+			picture = CZE_industrialists_veto
 
 			modifier = {
 				consumer_goods_expected_value = 0.10
@@ -412,7 +412,7 @@ ideas = {
 			removal cost = -1
 
             name = "SAF_Right_side_benefits"
-			picture = GFX_focus_ARG_women_in_industry
+			picture = CZE_industrialists_veto
 
 			modifier = {
 				consumer_goods_expected_value = -0.05
@@ -425,7 +425,7 @@ ideas = {
 		allowed = {always = yes}
         removal_cost = -1
 
-		picture = SAF_csir
+		picture = jap_supremacy_of_will
 
         modifier = {
 		research_speed_factor = 0.10
@@ -446,7 +446,7 @@ ideas = {
 			picture = ETH_joint_african_development_program
 
 			modifier = {
-				production_speed_infrastructure_factor = 0.15
+				production_speed_infrastructure_factor = 0.20
 			}
 		}
 
@@ -523,7 +523,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = triumphant_will
+			picture = JAP_senbu_organizations
 
 			modifier = {
 				stability_factor = 0.10
@@ -541,7 +541,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = triumphant_will
+			picture = GER_wirtschaftswunder
 
 			modifier = {
             industrial_capacity_factory = 0.075
@@ -586,7 +586,7 @@ ideas = {
 		allowed = {always = yes}
         removal_cost = -1
 
-		picture = GFX_goal_generic_secret_weapon
+		picture = SWE_neither_death_nor_dishonor
 			
 	    targeted_modifier = {
         tag = ITA
@@ -602,7 +602,7 @@ ideas = {
 		allowed = {always = yes}
         removal_cost = -1
 
-		picture = GFX_goal_generic_secret_weapon
+		picture = SWE_varnplikt
 			
 	    modifier = {
         initiative_factor = 0.03
@@ -616,7 +616,7 @@ ideas = {
 		allowed = {always = yes}
         removal_cost = -1
 
-		picture = GFX_goal_generic_secret_weapon
+		picture = SWE_hodgepodge_of_equipment
 			
 	    modifier = {
         army_speed_factor = 0.10
@@ -632,7 +632,7 @@ ideas = {
 		allowed = {always = yes}
         removal_cost = -1
 
-		picture = GFX_goal_generic_secret_weapon
+		picture = RAJ_private_military_complex
 			
 
 		targeted_modifier = {
@@ -915,7 +915,25 @@ ideas = {
 
 		aioc_1 = {
 			name = "AIOC"
-			picture = aioc
+			picture = aioc 
+
+			allowed = {
+				original_tag = SAF
+			}
+
+			available  = {
+				has_completed_focus  = SAF_Foreign_experts
+			}
+
+			traits = { SAF_industrial_conglomerate }
+		}
+	}
+
+	industrial_output = {
+
+		idc_1 = {
+			name = "IDC"
+			picture = aioc 
 
 			allowed = {
 				original_tag = SAF

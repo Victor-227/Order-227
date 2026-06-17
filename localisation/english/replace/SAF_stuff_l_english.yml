@@ -23,8 +23,8 @@ SAF_tank_kei:0 "Tank reform"
 SAF_tank_rtgujk:0 "Cannon prototypes"
 SAF_Military_college:0 "Military College"
 SAF_Fund_Military_college:0 "Fund Military College"
-SAF_Quantity_over_quality:0 "Quantity over Quality"
-SAF_Quality_over_quantity:0 "Quality over Quantity"
+SAF_Quantity_over_quality:0 "Austerity Pattern Chassis"
+SAF_Quality_over_quantity:0 "Pretoria Heavy Specifications"
 SAF_improve_the_three_oh_three:0 "Meat grinder"
 SAF_Improve_support_companies:0 "Support Companies"
 SAF_Infrantry_1:0 "Call up the Blacks"
@@ -151,3 +151,72 @@ SAF_SCW:0"Intervention in Spain"
 SAF_SCW_veterans:0"Civil War Veterans"
 SAF_Soviexpe:0"Soviet Experts"
 SAF_commonwealth_strategic_cooperation:0"Commonwealth Strategic Cooperation"
+
+SAF_horace_robertson:0"Jan Smuts"
+SAF_matias_jones:0 "John Northcott"
+SAF_cheap_mechanized_equipment:0 "Cheap Mech"
+SAF_Quantity_bonus:0"Austerity Pattern Chassis"
+SAF_Quality_bonus:0 "Pretoria Heavy Specifications"
+
+
+
+SAF_segregation.14.t:0 "Minor Discontent"
+SAF_segregation.14.d:0 "Reports from the local prefectures indicate minor grumblings over recent segregation policies. While mostly quiet, a low hum of frustration is building in the working-class districts."
+SAF_segregation.14.a:0 "Minor Discontent"
+
+SAF_segregation.13.t:0"Organized Murmurs"
+SAF_segregation.13.d:0"Dissatisfaction is noticeably climbing. Underground leaflets are beginning to circulate, and community leaders are openly questioning our latest legislative updates."
+SAF_segregation.13.a:0"Organized Murmurs"
+
+SAF_segregation.12.t:0"Visible Friction"
+SAF_segregation.12.d:0"The situation is heating up. Minor boycotts of state-run transport have begun, and local police forces report an increased need for street patrols to keep the peace."
+SAF_segregation.12.a:0"Visible Friction"
+
+SAF_segregation.1.t:0"Widespread Unrest"
+SAF_segregation.1.d:0"We have crossed a dangerous threshold. Wildcat strikes are paralyzing municipal infrastructure, and dissatisfaction is spreading rapidly through the urban centers."
+SAF_segregation.1.a:0"Widespread Unrest"
+
+SAF_segregation.2.t:0"The Boiling Point"
+SAF_segregation.2.d:0"Public anger is reaching critical levels. Massive protest marches are defying local curfews, and clashes between citizens and authorities are turning bloody."
+SAF_segregation.2.a:0"The Boiling Point"
+
+SAF_segregation.3.t:0"Open Defiance"
+SAF_segregation.3.d:0"The state is losing its grip on public order. Large sectors of the population are engaging in coordinated civil disobedience, flatly refusing to obey segregation mandates."
+SAF_segregation.3.a:0"Open Defiance"
+
+SAF_segregation.4.t:0"Imminent Insurgency"
+SAF_segregation.4.d:0"Riots have completely overtaken several major cities. Rioting and sabotage of industrial lines are reported hourly. We are on the absolute brink of total collapse."
+SAF_segregation.4.a:0"Imminent Insurgency"
+
+SAF_segregation.5.t:0"The Riot Act Enforced"
+SAF_segregation.5.d:0"Though we were at the precipice of ruin, the absolute peak of violence has broken. Dissatisfaction has dropped slightly from its maximum, though the embers of revolt still glow red hot."
+SAF_segregation.5.a:0"The Riot Act Enforced"
+
+SAF_segregation.6.t:0"Restoring Order"
+SAF_segregation.6.d:0"Curfews and concessions are beginning to take effect. The immediate threat of an anarchic collapse is receding as the population slowly retreats from open warfare in the streets."
+SAF_segregation.6.a:0"Restoring Order"
+
+SAF_segregation.7.t:0"A Fragile De-escalation"
+SAF_segregation.7.d:0"The heavy-handed rioting is subsiding into tense, quiet anger. While the population is still deeply resentful, organized physical defense against state forces has slowed down."
+SAF_segregation.7.a:0"A Fragile De-escalation"
+
+SAF_segregation.8.t:0"Temperatures Cooling"
+SAF_segregation.8.d:0"The major city boycotts are losing their momentum. Workers are gradually returning to the factories, indicating that our latest adjustments have successfully bled off the worst of the rage."
+SAF_segregation.8.a:0"Temperatures Cooling"
+
+SAF_segregation.9.t:0"Return to Containment"
+SAF_segregation.9.d:0"Dissatisfaction continues its downward trend. The streets are largely clear of protestors again, moving the crisis away from a national emergency and back to manageable societal friction."
+SAF_segregation.9.a:0"Return to Containment"
+
+SAF_segregation.10.t:0"The Grievances Recede"
+SAF_segregation.10.d:0"Public tension has lowered significantly. The underground printing presses have gone quiet, and our security forces report that standard regional laws are being followed without incident."
+SAF_segregation.10.a:0"The Grievances Recede"
+
+SAF_segregation.11.t:0"Pacification Achieved"
+SAF_segregation.11.d:0"The population has largely settled. Dissatisfaction is hovering near baseline levels, with only isolated political cells still attempting to stoke the old flames."
+SAF_segregation.11.a:0"Pacification Achieved"
+
+SAF_Right_side_benefits:0 "Short term plan"
+SAF_Left_side_benefits:0 "Long term plan"
+
+SAF_industrial_conglomerate:0 "British Experts"
