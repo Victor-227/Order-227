@@ -21,12 +21,14 @@ state={
 
 	}
 
+	#	added 7196, 4065, 11956, 12038 from 173-Granada
 	provinces={
-		832 1093 3835 4195 7111 9903 10024 10109 11807 11812 11884 
+		832 1093 3835 4195 7111 9903 10024 10109 11807 11812 11884 7196 4065 11956 12038
 	}
 	manpower=1007605
 	buildings_max_level_factor=1.000
 	state_category=town
 
-	local_supplies=0.0 
+	#	set local_supplies to 3.0 from 0.0
+	local_supplies=3.0
 }

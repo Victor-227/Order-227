@@ -591,3 +591,17 @@ instant_effect = {
 		amount = 1
 	}
 }
+
+###	Air
+air_wings = {
+	# Arma de Aviación -- Sevilla (and Barcelona)
+	169 = {
+		# Grupo n.3 de Caza FARE 'Malraux'
+		small_plane_airframe_0 = {
+			owner = "SPR" 
+			amount = 24
+			creator = "FRA"
+			version_name = "NiD 62"
+		}
+	}
+}

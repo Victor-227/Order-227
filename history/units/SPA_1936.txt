@@ -517,3 +517,27 @@ instant_effect = {
 		amount = 1
 	}
 }
+
+### Air Wings
+air_wings = {
+	# Arma de Aviación -- Madrid (Getafe)
+	41 = { 
+		# Grupo n.1 de Caza FARE 'Alas Rojas'
+		small_plane_airframe_0 = {
+			owner = "SPA" 
+			amount = 36
+			creator = "FRA"
+			version_name = "NiD 62"
+		}
+	}
+	
+	# Aeronáutica Naval -- Murcia
+	168 = {
+		small_plane_naval_bomber_airframe_0 = {
+			owner = "SPA" 
+			amount = 27
+			creator = "ENG"
+			version_name = "Vickers Vildebeest"
+		}
+	}
+}
