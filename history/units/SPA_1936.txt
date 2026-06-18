@@ -27,419 +27,493 @@
 	engineer = { x = 0 y = 0 } 
 	}
 }
+
 units = {
-	division= {	
+	division= {
 		division_name = {
 			is_name_ordered = yes
 			name_order = 1
 		}
 		location = 3938
 		division_template = "Convert"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.30
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 3938
+		division_template = "Convert"
+		start_experience_factor = 0.30
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 3938
+		division_template = "Convert"
+		start_experience_factor = 0.30
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 3938
+		division_template = "Convert"
+		start_experience_factor = 0.30
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 3938
+		division_template = "Convert"
+		start_experience_factor = 0.30
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = 3938
+		division_template = "Convert"
+		start_experience_factor = 0.30
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 7
+		}
+		location = 3938
+		division_template = "Convert"
+		start_experience_factor = 0.30
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 8
+		}
+		location = 3938
+		division_template = "Convert"
+		start_experience_factor = 0.30
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = 3938
+		division_template = "Convert"
+		start_experience_factor = 0.30
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 10
+		}
+		location = 3938
+		division_template = "Convert"
+		start_experience_factor = 0.30
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 11
+		}
+		location = 3938
+		division_template = "Convert"
+		start_experience_factor = 0.30
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 12
+		}
+		location = 3938
+		division_template = "Convert"
+		start_experience_factor = 0.30
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 13
+		}
+		location = 3938
+		division_template = "Convert"
+		start_experience_factor = 0.30
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 14
+		}
+		location = 3938
+		division_template = "Convert"
+		start_experience_factor = 0.30
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 15
+		}
+		location = 3938
+		division_template = "Convert"
+		start_experience_factor = 0.30
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 16
+		}
+		location = 3938
+		division_template = "Convert"
+		start_experience_factor = 0.30
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 17
+		}
+		location = 3938
+		division_template = "Convert"
+		start_experience_factor = 0.30
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 18
+		}
+		location = 3938
+		division_template = "Convert"
+		start_experience_factor = 0.30
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 19
+		}
+		location = 3938
+		division_template = "Convert"
+		start_experience_factor = 0.30
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 20
+		}
+		location = 3938
+		division_template = "Convert"
+		start_experience_factor = 0.30
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 21
+		}
+		location = 3938
+		division_template = "Convert"
+		start_experience_factor = 0.30
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 22
+		}
+		location = 3938
+		division_template = "Convert"
+		start_experience_factor = 0.30
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 23
+		}
+		location = 3938
+		division_template = "Convert"
+		start_experience_factor = 0.30
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 24
+		}
+		location = 3938
+		division_template = "Convert"
+		start_experience_factor = 0.30
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 25
+		}
+		location = 3938
+		division_template = "Convert"
+		start_experience_factor = 0.30
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 26
+		}
+		location = 3938
+		division_template = "Convert"
+		start_experience_factor = 0.30
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 27
+		}
+		location = 3938
+		division_template = "Convert"
+		start_experience_factor = 0.30
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 28
+		}
+		location = 3938
+		division_template = "Convert"
+		start_experience_factor = 0.30
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 29
+		}
+		location = 3938
+		division_template = "Convert"
+		start_experience_factor = 0.30
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 30
+		}
+		location = 3938
+		division_template = "Convert"
+		start_experience_factor = 0.30
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 31
+		}
+		location = 3938
+		division_template = "Convert"
+		start_experience_factor = 0.30
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 32
+		}
+		location = 3938
+		division_template = "Convert"
+		start_experience_factor = 0.30
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 33
+		}
+		location = 3938
+		division_template = "Convert"
+		start_experience_factor = 0.30
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 34
+		}
+		location = 3938
+		division_template = "Convert"
+		start_experience_factor = 0.30
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 35
+		}
+		location = 3938
+		division_template = "Convert"
+		start_experience_factor = 0.30
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 36
+		}
+		location = 3938
+		division_template = "Convert"
+		start_experience_factor = 0.30
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 37
+		}
+		location = 3938
+		division_template = "Convert"
+		start_experience_factor = 0.30
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 38
+		}
+		location = 3938
+		division_template = "Convert"
+		start_experience_factor = 0.30
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 39
+		}
+		location = 3938
+		division_template = "Convert"
+		start_experience_factor = 0.30
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 40
+		}
+		location = 3938
+		division_template = "Convert"
+		start_experience_factor = 0.30
 	}
 }
-units = {
-	division= {	
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
+
+#	Historically most of the navy sided with the Republic - unteryj
+
+units= {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Base Naval El Ferrol"
+		naval_base = 10024  #Cartagena/Murcia
+		task_force = {
+			name = "Escuadrón de El Ferrol"
+			location = 10024  #Cartagena/Murcia
+			ship = { name = "ARE Jaime I" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = SPR version_name = "España Class" } } }
+			ship = { name = "ARE Libertad" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = SPR version_name = "Príncipe Alfonso Class" } } }
+			ship = { name = "ARE Miguel de Cervantes" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = SPR version_name = "Príncipe Alfonso Class" } } }
+			# Flotilla de Destructores de El Ferrol
+			ship = { name = "ARE Alsedo" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SPR version_name = "Alsedo Class" } } }
+			ship = { name = "ARE Lazaga" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SPR version_name = "Alsedo Class" } } }
 		}
-		location = 3938
-		division_template = "Convert"
-		start_experience_factor = 0.3
 	}
-}units = {
-	division= {	
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
+		
+	fleet = {
+		name = "Base Naval Cádiz"
+		naval_base = 10024  #Cartagena/Murcia
+		task_force = {
+			name = "Escuadrón de Cádiz"
+			location = 10024  #Cartagena/Murcia
+			ship = { name = "ARE Méndez Núñez" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SPR version_name = "Méndez Núñes Class" } } }
 		}
-		location = 3938
-		division_template = "Convert"
-		start_experience_factor = 0.3
+		task_force = {
+			name = "Grupo de Cádiz"
+			location = 10024  #Cartagena/Murcia
+			# S103 Flotilla
+			ship = { name = "ARE B1" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SPR version_name = "B Class" } } }
+			ship = { name = "ARE B2" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SPR version_name = "B Class" } } }
+			ship = { name = "ARE B3" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SPR version_name = "B Class" } } }
+			ship = { name = "ARE B4" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SPR version_name = "B Class" } } }
+		}
 	}
-}units = {
-	division= {	
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
+		
+	fleet = {
+		name = "Base Naval Cartagena"
+		naval_base = 10024  #Cartagena/Murcia
+		task_force = {
+			name = "Escuadrón de Cartagena"
+			location = 10024  #Cartagena/Murcia
+			ship = { name = "ARE Almirante Miranda" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = SPR version_name = "Churucca Class" } } }
+			# Flotilla de Destructores n.1
+			ship = { name = "ARE Almirante Ferrándiz" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = SPR version_name = "Churucca Class" } } }
+			ship = { name = "ARE Sánchez Barcáiztegui" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = SPR version_name = "Churucca Class" } } }
+			ship = { name = "ARE Alcalá Galiano" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = SPR version_name = "Churucca Class" } } }
+			ship = { name = "ARE Almirante Valdés" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = SPR version_name = "Churucca Class" } } }
+			# Flotilla de Destructores n.2
+			ship = { name = "ARE Churucca" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = SPR version_name = "Churucca Class" } } }
+			ship = { name = "ARE José Luis Díez" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = SPR version_name = "Churucca Class" } } }
+			ship = { name = "ARE Lepanto" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = SPR version_name = "Churucca Class" } } }
+			ship = { name = "ARE Almirante Antequera" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = SPR version_name = "Churucca Class" } } }
 		}
-		location = 3938
-		division_template = "Convert"
-		start_experience_factor = 0.3
+		task_force = {
+			name = "Grupo de Cartagena"
+			location = 10024  #Cartagena/Murcia
+			# S101 Flotilla
+			ship = { name = "ARE B5" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SPR version_name = "B Class" } } }
+			ship = { name = "ARE B6" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SPR version_name = "B Class" } } }
+			ship = { name = "ARE C1" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = SPR version_name = "C Class" } } }
+			ship = { name = "ARE C2" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = SPR version_name = "C Class" } } }
+			ship = { name = "ARE C3" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = SPR version_name = "C Class" } } }
+			ship = { name = "ARE C4" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = SPR version_name = "C Class" } } }
+			ship = { name = "ARE C5" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = SPR version_name = "C Class" } } }
+			ship = { name = "ARE C6" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = SPR version_name = "C Class" } } }
+		}
 	}
-}units = {
-	division= {	
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
+} 
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+instant_effect = {
+
+	# DD: Churucca class (x6) ("ARE Gravina" "ARE Escaño" "ARE Císcar" "ARE Jorge Juan" "ARE Ulloa")
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_2
+			creator = "SPA"
+			version_name = "Churucca Class"
 		}
-		location = 3938
-		division_template = "Convert"
-		start_experience_factor = 0.3
+		name = "ARE Gravina" 
+		requested_factories = 1
+		progress = 0.50
+		amount = 1
 	}
-}
-units = {
-	division= {	
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_2
+			creator = "SPA"
+			version_name = "Churucca Class"
 		}
-		location = 3938
-		division_template = "Convert"
-		start_experience_factor = 0.3
+		name = "ARE Escaño" 
+		requested_factories = 1
+		progress = 0.50
+		amount = 1
 	}
-}
-units = {
-	division= {	
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_2
+			creator = "SPA"
+			version_name = "Churucca Class"
 		}
-		location = 3938
-		division_template = "Convert"
-		start_experience_factor = 0.3
+		name = "ARE Jorge Juan" 
+		requested_factories = 1
+		progress = 0.20
+		amount = 1
 	}
-}units = {
-	division= {	
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_2
+			creator = "SPA"
+			version_name = "Churucca Class"
 		}
-		location = 3938
-		division_template = "Convert"
-		start_experience_factor = 0.3
-	}
-}units = {
-	division= {	
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		}
-		location = 3938
-		division_template = "Convert"
-		start_experience_factor = 0.3
-	}
-}units = {
-	division= {	
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		}
-		location = 3938
-		division_template = "Convert"
-		start_experience_factor = 0.3
-	}
-}
-units = {
-	division= {	
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		}
-		location = 3938
-		division_template = "Convert"
-		start_experience_factor = 0.3
-	}
-}
-units = {
-	division= {	
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		}
-		location = 3938
-		division_template = "Convert"
-		start_experience_factor = 0.3
-	}
-}units = {
-	division= {	
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		}
-		location = 3938
-		division_template = "Convert"
-		start_experience_factor = 0.3
-	}
-}units = {
-	division= {	
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		}
-		location = 3938
-		division_template = "Convert"
-		start_experience_factor = 0.3
-	}
-}units = {
-	division= {	
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		}
-		location = 3938
-		division_template = "Convert"
-		start_experience_factor = 0.3
-	}
-}
-units = {
-	division= {	
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		}
-		location = 3938
-		division_template = "Convert"
-		start_experience_factor = 0.3
-	}
-}
-units = {
-	division= {	
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		}
-		location = 3938
-		division_template = "Convert"
-		start_experience_factor = 0.3
-	}
-}units = {
-	division= {	
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		}
-		location = 3938
-		division_template = "Convert"
-		start_experience_factor = 0.3
-	}
-}units = {
-	division= {	
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		}
-		location = 3938
-		division_template = "Convert"
-		start_experience_factor = 0.3
-	}
-}units = {
-	division= {	
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		}
-		location = 3938
-		division_template = "Convert"
-		start_experience_factor = 0.3
-	}
-}
-units = {
-	division= {	
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		}
-		location = 3938
-		division_template = "Convert"
-		start_experience_factor = 0.3
-	}
-}
-units = {
-	division= {	
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		}
-		location = 3938
-		division_template = "Convert"
-		start_experience_factor = 0.3
-	}
-}units = {
-	division= {	
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		}
-		location = 3938
-		division_template = "Convert"
-		start_experience_factor = 0.3
-	}
-}units = {
-	division= {	
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		}
-		location = 3938
-		division_template = "Convert"
-		start_experience_factor = 0.3
-	}
-}units = {
-	division= {	
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		}
-		location = 3938
-		division_template = "Convert"
-		start_experience_factor = 0.3
-	}
-}
-units = {
-	division= {	
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		}
-		location = 3938
-		division_template = "Convert"
-		start_experience_factor = 0.3
-	}
-}
-units = {
-	division= {	
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		}
-		location = 3938
-		division_template = "Convert"
-		start_experience_factor = 0.3
-	}
-}units = {
-	division= {	
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		}
-		location = 3938
-		division_template = "Convert"
-		start_experience_factor = 0.3
-	}
-}units = {
-	division= {	
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		}
-		location = 3938
-		division_template = "Convert"
-		start_experience_factor = 0.3
-	}
-}units = {
-	division= {	
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		}
-		location = 3938
-		division_template = "Convert"
-		start_experience_factor = 0.3
-	}
-}
-units = {
-	division= {	
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		}
-		location = 3938
-		division_template = "Convert"
-		start_experience_factor = 0.3
-	}
-}
-units = {
-	division= {	
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		}
-		location = 3938
-		division_template = "Convert"
-		start_experience_factor = 0.3
-	}
-}units = {
-	division= {	
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		}
-		location = 3938
-		division_template = "Convert"
-		start_experience_factor = 0.3
-	}
-}units = {
-	division= {	
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		}
-		location = 3938
-		division_template = "Convert"
-		start_experience_factor = 0.3
-	}
-}units = {
-	division= {	
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		}
-		location = 3938
-		division_template = "Convert"
-		start_experience_factor = 0.3
-	}
-}
-units = {
-	division= {	
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		}
-		location = 3938
-		division_template = "Convert"
-		start_experience_factor = 0.3
-	}
-}
-units = {
-	division= {	
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		}
-		location = 3938
-		division_template = "Convert"
-		start_experience_factor = 0.3
-	}
-}units = {
-	division= {	
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		}
-		location = 3938
-		division_template = "Convert"
-		start_experience_factor = 0.3
-	}
-}units = {
-	division= {	
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		}
-		location = 3938
-		division_template = "Convert"
-		start_experience_factor = 0.3
-	}
-}units = {
-	division= {	
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		}
-		location = 3938
-		division_template = "Convert"
-		start_experience_factor = 0.3
+		name = "ARE Ulloa" 
+		requested_factories = 1
+		progress = 0.20
+		amount = 1
 	}
 }

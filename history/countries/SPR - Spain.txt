@@ -2,13 +2,9 @@
 
 oob = "SPR_1936"
 
-if = {
-	limit = { has_dlc = "Man the Guns" }
-		set_naval_oob = "SPR_1936_naval_mtg"
-	else = {
-		set_naval_oob = "SPR_1936_naval_legacy"
-	}
-}
+#	to offset convert division manpower - unteryj
+add_manpower = 500000
+
 if = {
 	limit = { has_dlc = "By Blood Alone" }
 		set_air_oob = "SPR_1936_air_bba"
@@ -102,11 +98,14 @@ if = {
 		set_variable = { var = SPR_civil_war_divisions_counter_var value = 17 }
 		set_variable = { var = spr_civil_war_divisions_counter_var value = 50 }
 	}
-	for_each_scope_loop = {
-	    array = core_states
-	    
-	    set_state_flag = SPR_original_core
-	}
+###
+#	>pretty sure this is what is setting the nationalist spain cores - unteryj
+#	for_each_scope_loop = {
+#	    array = core_states
+#	    
+#	    set_state_flag = SPR_original_core
+#	}
+###
 	add_ideas = {
 		SPR_carlism_1
 		SPR_military_disloyalty
@@ -325,7 +324,7 @@ set_stability = 0.5
 		limit = {
 			has_dlc = "La Resistance"
 		}
-		add_manpower = -250000
+		#	add_manpower = -250000
 		remove_ideas = {
 			SPR_military_disloyalty
 			SPR_political_violence
@@ -435,7 +434,8 @@ set_stability = 0.5
 		dispersed_industry3 = 1
 	}
 
-set_grand_doctrine = grand_battleplan
+
+	set_grand_doctrine = grand_battleplan
 set_grand_doctrine = new_fleet_in_being
 set_grand_doctrine = new_strategic_destruction
 

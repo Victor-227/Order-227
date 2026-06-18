@@ -27,7 +27,7 @@ focus_tree = {
 	continuous_focus_position = { x = 50 y = 2500 }
 
 	initial_show_position = {
-		x = 33
+		x = 0
 		y = 0
 		offset = {
 			x = -16
@@ -97,7 +97,7 @@ focus_tree = {
 		}
 		
 		icon = GFX_goal_generic_national_unity
-		x = 33
+		x = 15
 		y = 0
 		offset = {
 			x = -19
