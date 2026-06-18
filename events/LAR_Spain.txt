@@ -12,6 +12,8 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
+		#	prevent this event from firing - unterjy
+		always = no
 		tag = SPR
 		has_dlc = "La Resistance"
 	}
@@ -183,23 +185,41 @@ country_event = {
 	picture = GFX_report_event_spain_civil_war_soldiers
 	
 	is_triggered_only = yes
-		option = {
+
+	option = {
 		name = spain.1.a
 		if = {
 			limit = { original_tag = SPR }
 
-				set_global_flag = spanish_civil_war
-				
-				SPR = {
-					declare_war_on = {
-						target = SPA
-						type = annex_everything
-					}
+			set_global_flag = spanish_civil_war
+
+			SPR = {
+				declare_war_on = {
+					target = SPA
+					type = annex_everything
 				}
 			}
-			}
-			custom_effect_tooltip = nationalists_chosen
 		}
+	}
+	custom_effect_tooltip = nationalists_chosen
+
+	option = {
+		name = "GG"
+		if = {
+			limit = { original_tag = SPA }
+
+			set_global_flag = spanish_civil_war
+
+			SPR = {
+				declare_war_on = {
+					target = SPA
+					type = annex_everything
+				}
+			}
+		}
+	}
+	
+}
 
 
 # Mission Generator simulating Republican government working against the Nationalists
@@ -207,6 +227,8 @@ country_event = {
 	id = lar_spain.3
 
 	trigger = {
+		#	prevent this from firing, i think it is for the AI - unteryj
+		always = no
 		NOT = { has_global_flag = spanish_civil_war }
 	}
 	
@@ -257,6 +279,8 @@ country_event = {
 	id = lar_spain.4
 
 	trigger = {
+		#	prevent this, i think it's for AI - unteryj
+		always = no
 		NOT = { has_global_flag = spanish_civil_war }
 	}
 	
@@ -301,6 +325,8 @@ country_event = {
 	id = lar_spain.5
 
 	trigger = {
+		#	prevent this, i believe this is for AI - unteryj
+		always = no
 		NOT = { has_global_flag = spanish_civil_war }
 	}
 
@@ -927,6 +953,11 @@ country_event = {
 	picture = GFX_report_event_spr_spanish_civil_war2
 	
 	is_triggered_only = yes
+
+	#	we dont want this to happen - unteryj
+	trigger = {
+		always = no
+	}
 
 	immediate = {
 		hidden_effect = {

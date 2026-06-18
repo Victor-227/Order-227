@@ -6,7 +6,7 @@ ideas = {
 			name = SPR_death_before_surrender
 
 			allowed = {
-				original_tag = SPR
+				original_tag = SPA
 				NOT = { has_government = fascism }
 			}
 
