@@ -1,25 +1,32 @@
 
 focus_tree = {
-    id = spanish_republican_focus
+    id = spanish_republican_focus_real
 	
 	country = {
 		factor = 0
 		
 		modifier = {
-			add = 100
+			add = 20
 			tag = SPA
-			has_dlc = "La Resistance"
 		}
 	}
 
 	default = no
     reset_on_civilwar = no
 
-	continuous_focus_position = { x = 50 y = 500 }
+	continuous_focus_position = { x = 50 y = 250 }
 
 	initial_show_position = {
 		x = 5
 		y = 5
+	}
+
+	focus = {
+		id = SPA_status
+		available = {
+			always = no
+		}
+		cost = 9.6
 	}
 
     focus = {
@@ -90,20 +97,20 @@ focus_tree = {
 
 	focus = {
 		id = SPA_secure_the_guardia_de_asalto
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = SPA_the_popular_front }
+		mutually_exclusive = { focus = SPA_secure_the_guardia_civil }
+		x = -1
+		y = 1
+		relative_position_id = SPA_the_popular_front
+
+		cost = 5
+		
 		available = {
 		}
 		bypass = {
 			has_global_flag = spanish_civil_war
 		}
-		prerequisite = { focus = SPA_the_popular_front }
-		mutually_exclusive = { focus = SPA_secure_the_guardia_civil }
-		
-		icon = GFX_goal_generic_political_pressure
-		x = -1
-		y = 1
-
-		relative_position_id = SPA_the_popular_front
-		cost = 10
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_SPA_CIVIL_WAR}
@@ -131,19 +138,21 @@ focus_tree = {
 
 	focus = {
 		id = SPA_secure_the_guardia_civil
-		available = {
-		}
-		bypass = {
-		}
+		icon = GFX_focus_generic_support_the_left_right
 		prerequisite = { focus = SPA_the_popular_front }
 		mutually_exclusive = { focus = SPA_secure_the_guardia_de_asalto }
-		
-		icon = GFX_focus_generic_support_the_left_right
 		x = 1
 		y = 1
 		relative_position_id = SPA_the_popular_front
 
-		cost = 10
+		cost = 5
+
+		available = {
+
+		}
+		bypass = {
+			has_global_flag = spanish_civil_war
+		}
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_SPA_CIVIL_WAR}
@@ -273,6 +282,39 @@ focus_tree = {
 			set_country_flag = SPR_disband_the_army_flag
 			custom_effect_tooltip = SPR_disband_the_army_tt
 			hidden_effect = { country_event = lar_spain.2 }
+		}
+	}
+
+
+	### Maintain the Republic ###
+
+	focus = {
+		id = SPA_maintain_the_second_republic
+		icon = GFX_focus_spr_maintain_the_republic
+		prerequisite = { focus = SPA_disband_the_army }
+		#	mutually_exclusive = { focus = SPR_regional_defense_council_of_aragon focus = SPR_the_anti_fascist_workers_revolution }
+		x = 0
+		y = 2
+		relative_position_id = SPA_disband_the_army
+
+		cost = 5
+
+		available = {
+			has_global_flag = spanish_civil_war
+			hidden_trigger = { always = no }
+		}
+		bypass = {
+
+		}
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT}
+		completion_reward = {
+			add_political_power = 60
+			add_war_support = 0.05
+			activate_mission = SPR_anarchist_uprising_mission
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = SPR_antonio_escobar_huerta
 		}
 	}
 
