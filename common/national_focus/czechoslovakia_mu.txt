@@ -619,11 +619,14 @@ focus_tree = {
 		prerequisite = {
 			focus = CZE_revive_the_december_bloc
 		}
+		prerequisite = {
+			focus = CZE_pro_rearmament_propaganda
+		}
 
 		cost = 5
 
 		relative_position_id = CZE_revert_1926_anti_military_laws
-		x = -1
+		x = -2
 		y = 1
 
 		available = {
