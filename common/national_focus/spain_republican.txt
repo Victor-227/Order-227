@@ -31,45 +31,25 @@ focus_tree = {
 
     focus = {
 		id = SPA_the_popular_front
+		icon = GFX_goal_generic_national_unity
+		x = 16
+		y = 0
+
+		cost = 5
+
 		available = {
 			NOT = {
 				has_country_flag = SPR_spanish_elections_flag
 			}
 		}
-		
 		bypass = {
 			has_global_flag = spanish_civil_war
 		}
-		mutually_exclusive = { focus = SPA_a_great_spain }
+
 		cancel_if_invalid = yes
-		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				OR = {
-					NOT = {
-						has_global_flag = spanish_civil_war
-					}
-					AND = {
-						NOT = { has_completed_focus = SPA_a_great_spain }
-						has_global_flag = spanish_civil_war
-					}
-				}
-			}
-		}
-		
-		icon = GFX_goal_generic_national_unity
-		x = 20
-		y = 0
-
-		cost = 5
-
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL}
+
 		completion_reward = {
 			add_popularity = {
 			    ideology = communism
@@ -115,7 +95,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_SPA_CIVIL_WAR}
 		completion_reward = {
-			army_experience = 5
+			
 			if = {
 				limit = {
 					difficulty > 1
@@ -133,6 +113,56 @@ focus_tree = {
 			set_country_flag = SPR_secure_the_guardia_de_asalto_flag
 			custom_effect_tooltip = SPR_secure_the_guardia_get_both_types_tt
 			custom_effect_tooltip = SPR_remove_after_civil_war_tt
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = "For now ignore everything above."
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			army_experience = 5
+
+			hidden_effect = {
+				delete_unit_template_and_units = {
+					division_template = "Guardia de Asalto"
+					disband = yes #if yes, will refund equipment/manpower.
+				}
+
+				division_template = {
+					name = "Guardia de Asalto"
+					#	division_names_group
+					role = infantry
+					is_locked = no
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 1 y = 3 }
+						infantry = { x = 1 y = 4 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+					}
+				}
+
+				random_state = {
+					limit = {
+						is_fully_controlled_by = ROOT
+						is_owned_by = ROOT
+						is_core_of = ROOT
+					}
+					create_unit = {
+					    division = "name = \"Guardia de Asalto\" division_template = \"Guardia de Asalto\" start_experience_factor = 0.8 start_equipment_factor = 1"
+					    owner = ROOT
+						count = 5
+					}
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = "Gain five seasoned infantry divisions."
 		}
 	}
 
@@ -158,7 +188,6 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_SPA_CIVIL_WAR}
 
 		completion_reward = {
-			add_stability = 0.05
 			if = {
 				limit = {
 					difficulty > 1
@@ -176,87 +205,252 @@ focus_tree = {
 			set_country_flag = SPR_secure_the_guardia_civil_flag
 			custom_effect_tooltip = SPR_secure_the_guardia_get_both_types_tt
 			custom_effect_tooltip = SPR_remove_after_civil_war_tt
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = "For now ignore everything above."
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_stability = 0.05
+
+			hidden_effect = {
+				delete_unit_template_and_units = {
+					division_template = "Guardia Civil"
+					disband = yes #if yes, will refund equipment/manpower.
+				}
+
+				division_template = {
+					name = "Guardia Civil"
+					#	division_names_group
+					role = infantry
+					is_locked = no
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 1 y = 3 }
+						infantry = { x = 1 y = 4 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+					}
+				}
+
+				random_state = {
+					limit = {
+						is_fully_controlled_by = ROOT
+						is_owned_by = ROOT
+						is_core_of = ROOT
+					}
+					create_unit = {
+					    division = "name = \"Guardia Civil\" division_template = \"Guardia Civil\" start_experience_factor = 0.3 start_equipment_factor = 1"
+					    owner = ROOT
+						count = 8
+					}
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = "Gain eight recruit infantry divisions."
 		}
 	}
 
 	focus = {
 		id = SPA_train_the_union_youth
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = SPA_secure_the_guardia_de_asalto focus = SPA_secure_the_guardia_civil }
+		x = 1
+		y = 1
+		relative_position_id = SPA_secure_the_guardia_de_asalto
+
+		cost = 10
+
 		available = {
 		}
 		bypass = {
 			has_global_flag = spanish_civil_war
 		}
-		prerequisite = { focus = SPA_secure_the_guardia_de_asalto focus = SPA_secure_the_guardia_civil }
-		
-		icon = GFX_goal_generic_more_territorial_claims
-		x = 1
-		y = 1
-		relative_position_id = SPA_secure_the_guardia_de_asalto
-		cost = 10
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_SPA_CIVIL_WAR}
 		completion_reward = {
+			add_to_variable = { var = spr_civil_war_divisions_counter_var value = 5 }
+			custom_effect_tooltip = SPR_train_the_union_youth_tt
+			custom_effect_tooltip = SPR_remove_after_civil_war_tt
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = "For now ignore everything above."
+			custom_effect_tooltip = generic_skip_one_line_tt
+
 			add_popularity = {
 			    ideology = communism
 			    popularity = 0.05
 			}
-			add_to_variable = { var = spr_civil_war_divisions_counter_var value = 5 }
-			custom_effect_tooltip = SPR_train_the_union_youth_tt
-			custom_effect_tooltip = SPR_remove_after_civil_war_tt
+
+			hidden_effect = {
+				delete_unit_template_and_units = {
+					division_template = "Child Soldiers"
+					disband = yes #if yes, will refund equipment/manpower.
+				}
+
+				division_template = {
+					name = "Child Soldiers"
+					#	division_names_group
+					role = infantry
+					is_locked = no
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 1 y = 3 }
+						infantry = { x = 1 y = 4 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+					}
+				}
+
+				random_state = {
+					limit = {
+						is_fully_controlled_by = ROOT
+						is_owned_by = ROOT
+						is_core_of = ROOT
+					}
+					create_unit = {
+					    division = "name = \"Child Soldiers\" division_template = \"Child Soldiers\" start_experience_factor = 0.3 start_equipment_factor = 1"
+					    owner = ROOT
+						count = 10
+					}
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = "Gain ten trained infantry divisions."
 		}
 	}
 
 	focus = {
 		id = SPA_enlarge_the_weapon_caches
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = SPA_train_the_union_youth }
+		x = 0
+		y = 1
+		relative_position_id = SPA_train_the_union_youth
+
+		cost = 10
+
 		available = {
 		}
 		bypass = {
 			has_global_flag = spanish_civil_war
 		}
-		prerequisite = { focus = SPA_train_the_union_youth }
-		
-		icon = GFX_goal_generic_military_sphere
-		x = 0
-		y = 1
-		relative_position_id = SPA_train_the_union_youth
-		cost = 10
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_SPA_CIVIL_WAR}
 		completion_reward = {
 			army_experience = 5
-			custom_effect_tooltip = SPR_enlarge_the_weapon_caches_tt
+			#	custom_effect_tooltip = SPR_enlarge_the_weapon_caches_tt
 			add_political_power = 50
+
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 5000
+				producer = SPA
+			}
+
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 200
+				producer = SPA
+			}
 		}
 	}
 
 	focus = {
 		id = SPA_distribute_arms_to_the_people
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = SPA_enlarge_the_weapon_caches }
+		x = 0
+		y = 1
+		relative_position_id = SPA_enlarge_the_weapon_caches
+
+		cost = 5
+
 		available = {
 		}
 		bypass = {
 			has_global_flag = spanish_civil_war
 		}
-		prerequisite = { focus = SPA_enlarge_the_weapon_caches }
-		
-		icon = GFX_goal_generic_small_arms
-		x = 0
-		y = 1
-		relative_position_id = SPA_enlarge_the_weapon_caches
-		cost = 10
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_SPA_CIVIL_WAR}
 		completion_reward = {
+			
+			add_to_variable = { var = spr_civil_war_divisions_counter_var value = 10 }
+			custom_effect_tooltip = SPR_distribute_arms_to_the_people_tt
+			custom_effect_tooltip = SPR_remove_after_civil_war_tt
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = "For now ignore everything above."
+			custom_effect_tooltip = generic_skip_one_line_tt
+
 			add_popularity = {
 			    ideology = neutrality
 			    popularity = 0.05
 			}
 			add_political_power = 75
-			add_to_variable = { var = spr_civil_war_divisions_counter_var value = 10 }
-			custom_effect_tooltip = SPR_distribute_arms_to_the_people_tt
-			custom_effect_tooltip = SPR_remove_after_civil_war_tt
+
+			hidden_effect = {
+				delete_unit_template_and_units = {
+					division_template = "Republican Militia"
+					disband = yes #if yes, will refund equipment/manpower.
+				}
+
+				division_template = {
+					name = "Republican Militia"
+					#	division_names_group
+					role = infantry
+					is_locked = no
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 1 y = 3 }
+						infantry = { x = 1 y = 4 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+					}
+				}
+
+				random_state = {
+					limit = {
+						is_fully_controlled_by = ROOT
+						is_owned_by = ROOT
+						is_core_of = ROOT
+					}
+					create_unit = {
+					    division = "name = \"Republican Militia\" division_template = \"Republican Militia\" start_experience_factor = 0.1 start_equipment_factor = 1"
+					    owner = ROOT
+						count = 16
+					}
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = "Gain sixteen recruit infantry divisions."
+
 		}
 	}
 
@@ -278,13 +472,23 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_SPA_CIVIL_WAR}
 		completion_reward = {
-			add_political_power = 200
+			
 			set_country_flag = SPR_disband_the_army_flag
 			custom_effect_tooltip = SPR_disband_the_army_tt
-			hidden_effect = { country_event = lar_spain.2 }
+
+			SPR = {
+				country_event = lar_spain.2
+			}
+			
+			#	hidden_effect = {  }
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = "For now ignore everything above."
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = "I don't think it is reachable at this state."
+			add_political_power = 200
 		}
 	}
-
 
 	### Maintain the Republic ###
 
@@ -297,11 +501,10 @@ focus_tree = {
 		y = 2
 		relative_position_id = SPA_disband_the_army
 
-		cost = 5
+		cost = 2
 
 		available = {
 			has_global_flag = spanish_civil_war
-			hidden_trigger = { always = no }
 		}
 		bypass = {
 
@@ -309,12 +512,308 @@ focus_tree = {
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT}
+
 		completion_reward = {
 			add_political_power = 60
 			add_war_support = 0.05
-			activate_mission = SPR_anarchist_uprising_mission
-			custom_effect_tooltip = available_military_high_command
-			show_ideas_tooltip = SPR_antonio_escobar_huerta
+			
+			#	activate_mission = SPR_anarchist_uprising_mission
+			#	custom_effect_tooltip = available_military_high_command
+			#	show_ideas_tooltip = SPR_antonio_escobar_huerta
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_equipment_to_stockpile = {
+				type = convoy_1
+				amount = 200
+				producer = SPA
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			remove_ideas = {
+				SPA_carlism_1
+				SPR_military_disloyalty
+				SPR_political_violence
+				SPR_national_strikes_3
+			}
+			
+			add_ideas = {
+				SPR_death_before_surrender
+			}
+		}
+	}
+
+	focus = {
+		id = SPA_petition_for_french_aid
+		icon = GFX_focus_chi_reach_out_to_france
+		prerequisite = { focus = SPA_maintain_the_second_republic }
+		x = -2
+		y = 1
+		relative_position_id = SPA_maintain_the_second_republic
+
+		cost = 5
+
+		available = {
+			has_global_flag = spanish_civil_war
+		}
+		bypass = {
+		}
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+
+		completion_reward = {
+	#		effect_tooltip = {
+	#			add_war_support = 0.15
+	#			FRA = {
+	#				add_timed_idea = { idea = SPR_equipment_shipments days = 730 }
+	#				add_opinion_modifier = { target = ROOT modifier = SPA_spanish_civil_war_commitments }
+	#			}
+	#		}
+	#		custom_effect_tooltip = SPR_petition_for_french_aid_tt
+	#		FRA = { country_event = { id = lar_spain.64 hours = 6 random_hours = 6 } }
+			
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 8000
+				producer = FRA
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = 200
+				producer = FRA
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 100
+				producer = FRA
+			}
+			add_equipment_to_stockpile = {
+				type = anti_air_equipment_1
+				amount = 100
+				producer = FRA
+			}
+		}
+	}
+
+	focus = {
+		id = SPA_international_brigades
+		icon = GFX_focus_intervention_spain_republic
+		prerequisite = { focus = SPA_maintain_the_second_republic }
+		x = 0
+		y = 1
+		relative_position_id = SPA_maintain_the_second_republic
+
+		cost = 5
+
+		available = {
+			has_global_flag = spanish_civil_war
+		}
+
+		completion_reward = {
+			hidden_effect = {
+				delete_unit_template_and_units = {
+					division_template = "International Brigade"
+					disband = yes #if yes, will refund equipment/manpower.
+				}
+
+				division_template = {
+					name = "International Brigade"
+					#	division_names_group
+					role = infantry
+					is_locked = no
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 1 y = 3 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						infantry = { x = 2 y = 2 }
+						infantry = { x = 2 y = 3 }
+						infantry = { x = 3 y = 0 }
+						infantry = { x = 3 y = 1 }
+						infantry = { x = 3 y = 2 }
+						infantry = { x = 3 y = 3 }
+						infantry = { x = 4 y = 0 }
+						infantry = { x = 4 y = 1 }
+						infantry = { x = 4 y = 2 }
+						infantry = { x = 4 y = 3 }
+					}
+					support = {
+						anti_air = { x = 0 y = 0 }
+						engineer = { x = 0 y = 0 }
+					}
+				}
+
+				random_state = {
+					limit = {
+						is_fully_controlled_by = ROOT
+						is_owned_by = ROOT
+						is_core_of = ROOT
+					}
+					create_unit = {
+					    division = "name = \"International Brigade\" division_template = \"International Brigade\" start_experience_factor = 0.3 start_equipment_factor = 1"
+					    owner = ROOT
+						count = 10
+					}
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = "Gain ten trained infantry divisions."
+		}
+	}
+
+	focus = {
+		id = SPA_soviet_arms_deliveries
+		icon = GFX_focus_generic_join_comintern
+		prerequisite = { focus = SPA_maintain_the_second_republic }
+		x = 20
+		y = 8
+
+		cost = 5
+
+		available = {
+			has_global_flag = spanish_civil_war
+		}
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 10000
+				producer = SOV
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = 200
+				producer = SOV
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 250
+				producer = SOV
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment_1
+				amount = 200
+				producer = SOV
+			}
+		}
+	}
+
+	focus = {
+		id = SPA_summa_this
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = SPA_soviet_arms_deliveries }
+		x = -1
+		y = 1
+		relative_position_id = SPA_soviet_arms_deliveries
+
+		cost = 5
+
+		completion_reward = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 4
+			}
+		}
+	}
+
+	focus = {
+		id = SPA_summa_that
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = SPA_soviet_arms_deliveries }
+		x = 1
+		y = 1
+		relative_position_id = SPA_soviet_arms_deliveries
+
+		cost = 5
+
+		completion_reward = {
+			add_offsite_building = {
+				type = arms_factory
+				level = 4
+			}
+		}
+	}
+
+	focus = {
+		id = SPA_soviet_aircraft
+		icon = GFX_focus_generic_air_partners
+		prerequisite = { focus = SPA_summa_this focus = SPA_summa_that }
+		prerequisite = { focus = SPA_soviet_arms_deliveries }
+		x = 0
+		y = 2
+		relative_position_id = SPA_soviet_arms_deliveries
+
+		cost = 5
+
+		completion_reward = {
+
+			create_equipment_variant = {
+    			name = "I-15"
+    			type = small_plane_airframe_0
+				modules = {
+					fixed_main_weapon_slot = light_mg_2x
+					engine_type_slot = engine_1_1x
+				}
+				icon = GFX_SOV_early_fighter_medium
+				model = SOV_fighter_equipment_0_entity
+				allow_without_tech = yes
+			}
+
+			create_equipment_variant = {
+    			name = "I-16"
+    			type = small_plane_airframe_1
+				modules = {
+					fixed_main_weapon_slot = light_mg_4x
+					engine_type_slot = engine_1_1x
+				}
+    			icon = GFX_SOV_fighter1_medium
+				model = SOV_fighter_equipment_1_entity
+				allow_without_tech = yes
+			}
+
+			create_equipment_variant = {
+    			name = "ANT-40"
+    			type = medium_plane_airframe_1
+				modules = {
+					fixed_main_weapon_slot = medium_bomb_bay
+					fixed_auxiliary_weapon_slot_1 = light_mg_2x
+					engine_type_slot = engine_2_2x
+					special_type_slot_1 = lmg_defense_turrent_2x
+				}
+    			icon = GFX_SOV_tactical_bomber1_medium
+				model = SOV_tac_bomber_equipment_1_entity
+				allow_without_tech = yes
+			}
+
+			add_equipment_to_stockpile = {
+				type = small_plane_airframe_0
+				amount = 32
+				producer = SOV
+				variant_name = "I-15"
+			}
+
+			add_equipment_to_stockpile = {
+				type = small_plane_airframe_1
+				amount = 68
+				producer = SOV
+				variant_name = "I-16"
+			}
+
+			add_equipment_to_stockpile = {
+				type = medium_plane_airframe_1
+				amount = 31
+				producer = SOV
+				variant_name = "ANT-40"
+			}
+
 		}
 	}
 

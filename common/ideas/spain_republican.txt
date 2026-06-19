@@ -64,8 +64,7 @@ ideas = {
 			picture = generic_disjointed_gov
 
 			allowed = {
-				original_tag = SPR
-				NOT = { has_government = fascism }
+				original_tag = SPA
 			}
 
 			allowed_civil_war = {
@@ -82,8 +81,7 @@ ideas = {
 			picture = SPA_maquis
 
 			allowed = {
-				original_tag = SPR
-				NOT = { has_government = fascism }
+				original_tag = SPA
 			}
 
 			allowed_civil_war = {
@@ -101,7 +99,7 @@ ideas = {
 			picture = SPR_political_violence
 
 			allowed = {
-				original_tag = SPR
+				original_tag = SPA
 				NOT = { has_global_flag = spanish_civil_war }
 			}
 
@@ -122,7 +120,7 @@ ideas = {
 			picture = FRA_factory_strikes
 
 			allowed = {
-				original_tag = SPR
+				original_tag = SPA
 				NOT = { has_global_flag = spanish_civil_war }
 			}
 
@@ -143,7 +141,7 @@ ideas = {
 			picture = FRA_factory_strikes
 
 			allowed = {
-				original_tag = SPR
+				original_tag = SPA
 				NOT = { has_global_flag = spanish_civil_war }
 			}
 
@@ -167,7 +165,7 @@ ideas = {
 			picture = FRA_factory_strikes
 
 			allowed = {
-				original_tag = SPR
+				original_tag = SPA
 				NOT = { has_global_flag = spanish_civil_war }
 			}
 
@@ -191,7 +189,7 @@ ideas = {
 			picture = FRA_factory_strikes
 
 			allowed = {
-				original_tag = SPR
+				original_tag = SPA
 				NOT = { has_global_flag = spanish_civil_war }
 			}
 
@@ -216,7 +214,7 @@ ideas = {
 			picture = FRA_factory_strikes
 
 			allowed = {
-				original_tag = SPR
+				original_tag = SPA
 				NOT = { has_global_flag = spanish_civil_war }
 			}
 
@@ -240,7 +238,7 @@ ideas = {
 			picture = FRA_factory_strikes
 
 			allowed = {
-				original_tag = SPR
+				original_tag = SPA
 				NOT = { has_global_flag = spanish_civil_war }
 			}
 
@@ -262,7 +260,7 @@ ideas = {
 			picture = FRA_factory_strikes
 
 			allowed = {
-				original_tag = SPR
+				original_tag = SPA
 				NOT = { has_global_flag = spanish_civil_war }
 			}
 
@@ -287,7 +285,7 @@ ideas = {
 			picture = FRA_factory_strikes
 
 			allowed = {
-				original_tag = SPR
+				original_tag = SPA
 				NOT = { has_global_flag = spanish_civil_war }
 			}
 
@@ -312,7 +310,7 @@ ideas = {
 			picture = FRA_factory_strikes
 
 			allowed = {
-				original_tag = SPR
+				original_tag = SPA
 				NOT = { has_global_flag = spanish_civil_war }
 			}
 
@@ -334,7 +332,7 @@ ideas = {
 			picture = chi_war_of_resistance
 
 			allowed = {
-				original_tag = SPR
+				original_tag = SPA
 				NOT = { has_global_flag = spanish_civil_war }
 			}
 
@@ -355,8 +353,7 @@ ideas = {
 			picture = SPR_disbanded_army
 
 			allowed = {
-				original_tag = SPR
-				NOT = { has_government = fascism }
+				original_tag = SPA
 			}
 
 			allowed_civil_war = {

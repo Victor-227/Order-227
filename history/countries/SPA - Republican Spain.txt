@@ -101,9 +101,9 @@ if = {
 
 	add_ideas = {
 		SPA_carlism_1
-		SPA_military_disloyalty
-		SPA_political_violence
-		SPA_national_strikes_3
+		SPR_military_disloyalty
+		SPR_political_violence
+		SPR_national_strikes_3
 	}
 	
 	recruit_character = SPA_niceto_alcala_zamora
@@ -274,7 +274,7 @@ set_politics = {
 	elections_allowed = yes
 }
 
-set_convoys = 150
+set_convoys = 5
 set_stability = 0.5
 
 if = {

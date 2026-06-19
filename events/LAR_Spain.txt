@@ -202,22 +202,6 @@ country_event = {
 		}
 	}
 	custom_effect_tooltip = nationalists_chosen
-
-	option = {
-		name = "GG"
-		if = {
-			limit = { original_tag = SPA }
-
-			set_global_flag = spanish_civil_war
-
-			SPR = {
-				declare_war_on = {
-					target = SPA
-					type = annex_everything
-				}
-			}
-		}
-	}
 	
 }
 

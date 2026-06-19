@@ -1,9 +1,11 @@
 ﻿l_english:
  
  SPA: "Republican Spain"
+ SPA_democratic: "Republican Spain"
+ SPA_communist: "Republican_Spain"
  
- SPA_status: "SPA ver0.0.2"
- SPA_status_desc: "Patch Notes: just started"
+ SPA_status: "SPA ver0.1.0"
+ SPA_status_desc: "Patch Notes: very scuffed"
  
  SPA_the_popular_front: "The Popular Front"
  SPA_the_popular_front_desc: "The danger posed by Fascism and religious superstitions to our personal liberties is paramount, and we must establish a broad front of political parties that are united in their opposition to the Right. Only if we band together will we be able to halt their advance and save our republic."
@@ -29,6 +31,24 @@
  SPA_disband_the_army_desc: "We can no longer ignore the signs of disloyalty in the military. Even if it may spark the plotters into action, we have no choice but to attempt to disband the army with immediate effect, and seize the initiative."
  
  
- SPA_maintain_the_second_republic: "Maintain the Second Republic"
+ SPA_maintain_the_second_republic: "Save the Second Republic!"
  SPA_maintain_the_second_republic_desc: "The rebellious military has not succeeded in its coup attempt, and our government maintains its ability to rule in freedom. The Second Republic shall prevail against the threat of the Right, just as it prevailed over the miners' strike in 1934."
+ 
+ SPA_petition_for_french_aid: "Petition for French Aid"
+ SPA_petition_for_french_aid_desc: "Our neighbors to the north hesitate in their desire to lend us aid, cowed by the prospect of internal unrest should they take any action at all. We cannot allow them to remain so indecisive; our very survival depends on their willingness to act."
+
+ SPA_international_brigades: "International Brigades"
+ SPA_international_brigades_desc: "WIP"
+ 
+ SPA_soviet_arms_deliveries: "Soviet Arms Deliveries"
+ SPA_soviet_arms_deliveries_desc: "WIP"
+ 
+ SPA_summa_this: "summa this"
+ SPA_suuma_this_desc: "WIP"
+
+ SPA_summa_that: "summa that"
+ SPA_summa_that_desc: "WIP"
+ 
+ SPA_soviet_aircraft: "Soviet Aircraft"
+ SPA_soviet_aircraft_dsec: "WIP"
  
