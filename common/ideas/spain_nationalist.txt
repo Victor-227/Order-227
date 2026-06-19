@@ -21,6 +21,83 @@ ideas = {
 	}
 
 	country = {
+
+			SPA_recoverstockpiles = {
+
+		name = SPA_recuperar_el_aliento 
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+             modifier = {
+             industrial_capacity_factory = 0.125
+			 compliance_gain = 0.05
+
+
+			 }
+			}
+
+			SPA_acabar_la_guerra = {
+
+		name = SPA_offensive1 
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+             modifier = {
+             army_core_attack_factor = 0.05
+			 army_core_defence_factor = 0.05
+			 }
+			}
+
+
+	SPA_offensive1 = {
+
+		name = SPA_offensive1 
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPR
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			    targeted_modifier = {
+			tag = SPA 
+              attack_bonus_against = 0.10 
+			  defense_bonus_against = -0.05 
+             }
+
+
+			}
+
 			SPA_kill_allies = {
 
 		name = SPA_kill_allies

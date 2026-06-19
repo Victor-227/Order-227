@@ -61,59 +61,281 @@ focus_tree = {
 #  # #  #  #   #  #  # #  # #  # #    #    #  #      #  # #  #  #  #   #  #    #  # #    
 #  # #  #  #  ###  ##  #  # #  # ### ### ##   #      ###   ##  ### ### ###      ##  #    
 
+	focus = {
+		id = SPA_cw1
+
+		available = {
+
+		}		
+		icon = GFX_focus_PHI_reconciliation_with_spain
+		x = 40
+		y = 0
+
+		cost = 5
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_political_power = 75 
+		}
+	}
+
+		focus = {
+		id = SPA_cw2
+		prerequisite = { focus = SPA_cw1}
+		mutually_exclusive = { focus = SPA_cw3 }
+		available = {
+	    has_war = yes 
+		}	
+		bypass = {
+		has_war = no 
+		}
+		icon = GFX_goal_generic_demand_territory
+		x = -1
+		y = 1
+		relative_position_id = SPA_cw1
+
+		cost = 5
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+        				division_template = {
+					name = "Royal Guards Division"
+					priority = 2
+					division_names_group = SPA_INF_01
+					regiments = {
+						irregular_infantry = { x = 0 y = 0 }
+						irregular_infantry = { x = 0 y = 1 }
+						irregular_infantry = { x = 0 y = 2 }
+						irregular_infantry = { x = 0 y = 3 }
+				   	 	irregular_infantry = { x = 1 y = 0 }
+						irregular_infantry = { x = 1 y = 1 }
+						irregular_infantry = { x = 1 y = 2 }
+						irregular_infantry = { x = 1 y = 3 }
+				   		irregular_infantry = { x = 2 y = 0 }
+						irregular_infantry = { x = 2 y = 1 }
+						irregular_infantry = { x = 2 y = 2 }
+						irregular_infantry = { x = 2 y = 3 }
+						irregular_infantry = { x = 3 y = 0 }
+						irregular_infantry = { x = 3 y = 1 }
+						irregular_infantry = { x = 3 y = 2 }
+						irregular_infantry = { x = 4 y = 0 }
+						irregular_infantry = { x = 4 y = 1 }
+						artillery_brigade = { x = 4 y = 2 }
+						artillery_brigade = { x = 4 y = 3 }
+						artillery_brigade = { x = 4 y = 4 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+						recon = { x = 0 y = 1 }
+						artillery = { x = 0 y = 2 }
+
+					}
+				}
+		random_owned_controlled_state = {
+					prioritize = { 171 }
+					create_unit = {
+						division = "name = \"Royal Guards Division\" division_template = \"Royal Guards Division\" start_experience_factor = 0.5" 
+						owner = SPR
+						count = 15
+					}
+
+				}
+		}
+	}
+
+		focus = {
+		id = SPA_cw3
+		prerequisite = { focus = SPA_cw1}
+		mutually_exclusive = { focus = SPA_cw2 }
+		available = {
+	    has_war = yes 
+		}		
+		bypass = {
+		has_war = no 
+		}
+		icon = GFX_goal_generic_demand_territory
+		x = 1
+		y = 1
+		relative_position_id = SPA_cw1
+		cost = 5
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+        				division_template = {
+					name = "Royal Guards Division"
+					priority = 2
+					division_names_group = SPA_INF_01
+					regiments = {
+						mountaineers = { x = 0 y = 0 }
+						mountaineers = { x = 0 y = 1 }
+						mountaineers = { x = 0 y = 2 }
+						mountaineers = { x = 0 y = 3 }
+				   	 	mountaineers = { x = 1 y = 0 }
+						mountaineers = { x = 1 y = 1 }
+						mountaineers = { x = 1 y = 2 }
+						mountaineers = { x = 1 y = 3 }
+				   		mountaineers = { x = 2 y = 0 }
+						mountaineers = { x = 2 y = 1 }
+						mountaineers = { x = 2 y = 2 }
+						mountaineers = { x = 2 y = 3 }
+						mountaineers = { x = 3 y = 0 }
+						mountaineers = { x = 3 y = 1 }
+						mountaineers = { x = 3 y = 2 }
+						artillery_brigade = { x = 4 y = 0 }
+						artillery_brigade = { x = 4 y = 1 }
+						artillery_brigade = { x = 4 y = 2 }
+						artillery_brigade = { x = 4 y = 3 }
+						artillery_brigade = { x = 4 y = 4 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+						recon = { x = 0 y = 1 }
+						artillery = { x = 0 y = 2 }
+					}
+				}
+		random_owned_controlled_state = {
+					prioritize = { 171 }
+					create_unit = {
+						division = "name = \"Royal Guards Division\" division_template = \"Royal Guards Division\" start_experience_factor = 0.5" 
+						owner = SPR
+					}
+					create_unit = {
+						division = "name = \"Royal Guards Division\" division_template = \"Royal Guards Division\" start_experience_factor = 0.5" 
+						owner = SPR 
+					}
+					create_unit = {
+						division = "name = \"Royal Guards Division\" division_template = \"Royal Guards Division\" start_experience_factor = 0.5" 
+						owner = SPR 
+					}
+                    create_unit = {
+						division = "name = \"Royal Guards Division\" division_template = \"Royal Guards Division\" start_experience_factor = 0.5" 
+						owner = SPR 
+					}
+				}
+		}
+	}
+
+		focus = {
+		id = SPA_cw4
+		prerequisite = { focus = SPA_cw3 focus = SPA_cw2 }
+		available = {
+	    has_war = yes 
+		}
+		bypass = {
+		has_war = no 
+		}
+		icon = GFX_focus_generic_attack_republican_spain
+		x = 0
+		y = 2
+		relative_position_id = SPA_cw1
+		cost = 5
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_timed_idea = { idea = SPA_offensive1 days = 50 }
+		}
+	}
+
+		focus = {
+		id = SPA_cw5
+		prerequisite = { focus = SPA_cw4}
+		available = {
+	    has_war = yes 
+		}			
+				bypass = {
+		has_war = no 
+		}
+		icon = GFX_focus_CZE_army_reform
+		x = 1
+		y = 3
+		relative_position_id = SPA_cw1
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+        add_stability = 0.1
+		add_war_support = 0.15
+		add_political_power = 100
+		}
+	}
+
+		focus = {
+		id = SPA_cw6
+		prerequisite = { focus = SPA_cw5}
+
+		available = {
+	    has_war = yes 
+		}	
+				bypass = {
+		has_war = no 
+		}
+		icon = GFX_focus_generic_attack_communist_spain
+		x = 1
+		y = 4
+		relative_position_id = SPA_cw1
+		cost = 15
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+	    add_political_power = 50
+		add_ideas = {  SPA_acabar_la_guerra }
+		}
+	}
+
+		focus = {
+		id = SPA_cw7
+ 		prerequisite = { focus = SPA_cw4}
+		available = {
+	    has_war = yes 
+		}	
+		bypass = {
+		has_war = no 
+		}
+		icon = GFX_focus_generic_stockpile_currency
+		x = -1
+		y = 4
+		relative_position_id = SPA_cw1
+		cost = 5
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+
+
+			add_political_power = 50
+		add_timed_idea = { idea = SPA_recoverstockpiles days = 90 }
+		}
+	}
 
 	focus = {
 		id = SPA_a_great_spain
-
+        prerequisite = { focus = SPA_cw6}
+		prerequisite = { focus = SPA_cw7}
 		available = {
-			NOT = {
-				has_country_flag = SPR_spanish_elections_flag
-			}
+	    has_war = no
 		}
 		cancel_if_invalid = yes
 		
-		bypass = {
-			has_global_flag = spanish_civil_war
-		}
+
 		mutually_exclusive = { focus = SPR_the_popular_front }
 
-		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				OR = {
-					NOT = {
-						has_global_flag = spanish_civil_war
-					}
-					AND = {
-						NOT = { has_completed_focus = SPR_the_popular_front }
-						has_global_flag = spanish_civil_war
-					}
-				}
-			}
-		}
 		
 		
 		icon = GFX_goal_generic_demand_territory
-		x = 0
-		y = 0
+		x = 40
+		y = 5
 		offset = {
 			x = -14
 			y = 0
-			trigger = {
-				has_completed_focus = SPA_a_great_spain
-				has_global_flag = spanish_civil_war
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-			}
+
 		}
-		cost = 5
+		cost = 0
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL}
@@ -132,7 +354,6 @@ focus_tree = {
 		available = {
 		}
 		bypass = {
-			has_global_flag = spanish_civil_war
 		}
 		prerequisite = { focus = SPA_a_great_spain }
 				mutually_exclusive = { focus = SPA_sin_paquito focus = SPA_con_paquito}
@@ -140,7 +361,7 @@ focus_tree = {
 		icon = GFX_goal_generic_military_deal
 		x = 2
 		y = 1
-		relative_position_id = SPA_hand_over_the_ceda_campaign_chest
+		relative_position_id = SPA_a_great_spain
 		cost = 4
 
 		available_if_capitulated = yes
@@ -170,7 +391,7 @@ focus_tree = {
 		icon = GFX_goal_generic_forceful_treaty
 		x = 0
 		y = 1
-		relative_position_id = SPA_secure_the_northern_garrisons
+		relative_position_id = SPA_a_great_spain
 		cost = 4
 
 		available_if_capitulated = yes
@@ -187,7 +408,6 @@ focus_tree = {
 		available = {
 		}
 		bypass = {
-			has_global_flag = spanish_civil_war
 		}
 		prerequisite = { focus = SPA_a_great_spain }
 		mutually_exclusive = { focus = SPA_sin_paquito focus = SPA_negotiate_carlist_support}
@@ -195,7 +415,7 @@ focus_tree = {
 		icon = GFX_goal_generic_dangerous_deal
 		x = -2
 		y = 1
-		relative_position_id = SPA_secure_the_northern_garrisons
+		relative_position_id = SPA_a_great_spain
 		cost = 3
 
 		available_if_capitulated = yes
@@ -231,6 +451,9 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
+					GER = {
+		add_to_faction = SPR 
+		}
 
            	drop_cosmetic_tag = yes
 				set_cosmetic_tag = SPA_directory
@@ -915,13 +1138,17 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-									 165 = {
-													remove_dynamic_modifier = { modifier = autonomous_state } }
-						171 = {
-										remove_dynamic_modifier = { modifier = autonomous_state } }
-						792 = {
-				remove_dynamic_modifier = { modifier = autonomous_state } }
-			add_ideas = SPA_embrace_the_spanish_destiny
+
+		every_owned_state = {
+        add_core_of = SPR
+        }
+		165 = {
+		remove_dynamic_modifier = { modifier = autonomous_state } }
+		171 = {
+		remove_dynamic_modifier = { modifier = autonomous_state } }
+		792 = {
+		remove_dynamic_modifier = { modifier = autonomous_state } }
+		add_ideas = SPA_embrace_the_spanish_destiny
 		}
 	}
 
@@ -1545,6 +1772,9 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_STABILITY}
 		completion_reward = {
+		GER = {
+		add_to_faction = SPR 
+		}
 		set_politics = {
         ruling_party = fascism}
 
@@ -1557,16 +1787,16 @@ focus_tree = {
 			add_stability = 0.15
 
 			add_country_leader_role = {
-				character = "SPA_francisco_franco"
+				character = "SPR_francisco_franco"
 				country_leader = {
-				  ideology=despotism
+				  ideology = despotism
 				  traits = { caudillo_1 }
 				  expire="1965.1.1"
 				}
 				promote_leader = yes
 			}
 			add_country_leader_role = {
-				character = "SPA_francisco_franco"
+				character = "SPR_francisco_franco"
 				country_leader = {
 				  ideology=fascism_ideology
 				  traits = { caudillo_1 }
@@ -1899,6 +2129,8 @@ focus_tree = {
 		}
 	}
 
+
+
 	focus = {
 		id = SPA_adopt_the_26_points
 		available = {
@@ -1916,7 +2148,10 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			add_popularity = {
+					every_owned_state = {
+        add_core_of = SPR
+        }
+		add_popularity = {
 			    ideology = fascism
 			    popularity = 0.1
 			}
@@ -1937,6 +2172,8 @@ focus_tree = {
 				792 = {
 				remove_dynamic_modifier = { modifier = autonomous_state } }
 			}
+
+			
 		}
 	}
 
@@ -2707,6 +2944,12 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
 		completion_reward = {
+		every_owned_state = {
+        add_core_of = SPR
+        }
+		GER = {
+		add_to_faction = SPR 
+		}
 		set_politics = {
         ruling_party = neutrality }
 			hidden_effect = {
@@ -2715,7 +2958,7 @@ focus_tree = {
 				}
 			create_field_marshal = {
 				name = "Manuel Fal Conde"
-				gfx = "GFX_portrait_SPA_manuel_fal_conde"
+				gfx = "GFX_portrait_SPR_manuel_fal_conde"
 				traits = { trait_SPA_carlist_loyalties }
 				skill = 3
 			    attack_skill = 4
@@ -3671,7 +3914,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
 
     	completion_reward = {
-			add_ideas = SPA_Economic_cannibalism
+		add_ideas = SPA_Economic_cannibalism
+		remove_ideas = SPR_national_strikes_3
 		swap_ideas = {
 			remove_idea = SPA_recovering_from_civil_war
 			add_idea = SPA_Larraz_plan
