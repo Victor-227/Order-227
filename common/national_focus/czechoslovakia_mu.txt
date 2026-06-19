@@ -2447,6 +2447,11 @@ focus_tree = {
 	focus = {
 		id = CZE_strike_at_the_heart_of_bolshevism
 
+		prerequisite = {
+			focus = CZE_aggressive_foreign_policy
+			focus = CZE_stabilize_the_protectorate
+		}
+
 		icon = {
 			trigger = {
 				SOV = {
@@ -2461,8 +2466,9 @@ focus_tree = {
 
 		dynamic = yes
 
-		relative_position_id = CZE_negotiations_with_the_autonomous_bloc
-		x = 5
+		relative_position_id = CZE_aggressive_foreign_policy
+		x = 1
+		y = 1
 	
 		cost = 5
 	
@@ -2495,17 +2501,9 @@ focus_tree = {
 		will_lead_to_war_with = SOV
 
 		completion_reward = {
-			create_wargoal = {
-				type = puppet_wargoal_focus
-				target = SOV
-			}
-
+			add_ideas = CZE_strike_at_the_heart_of_bolshevism_idea
 			custom_effect_tooltip = generic_skip_one_line_tt
-
-			add_timed_idea = { 
-				idea = CZE_strike_at_the_heart_of_bolshevism_idea
-				days = 365 
-			}
+			
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
