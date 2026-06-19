@@ -2,8 +2,7 @@
 
 oob = "SPR_1936"
 
-#	to offset convert division manpower - unteryj
-add_manpower = 500000
+complete_national_focus = SPA_a_great_spain
 
 if = {
 	limit = {
