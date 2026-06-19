@@ -269,7 +269,7 @@ ideas = {
 			}
 
 			modifier = {
-				
+				war_support_factor = 0.01
 			}
 		}
 
@@ -953,7 +953,7 @@ ideas = {
 			}
 
 			equipment_bonus = {
-				cat_anti_tank = {
+				category_anti_tank = {
 					ap_attack = 0.10
 					hard_attack = 0.10
 				}
