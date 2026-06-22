@@ -24,7 +24,7 @@ ideas = {
 
 			modifier = {
 				production_factory_efficiency_gain_factor = -0.15
-				production_factory_max_efficiency_factor = 0.05
+				production_factory_max_efficiency_factor = 0.02
 				consumer_goods_expected_value = 0.05
 				production_speed_industrial_complex_factor = 0.05
 			}
@@ -3595,18 +3595,6 @@ ideas = {
 		}
 	}
 
-
-
-##     ## #### ########  ########  ######## ##    ##    #### ########  ########    ###     ######
-##     ##  ##  ##     ## ##     ## ##       ###   ##     ##  ##     ## ##         ## ##   ##    ##
-##     ##  ##  ##     ## ##     ## ##       ####  ##     ##  ##     ## ##        ##   ##  ##
-#########  ##  ##     ## ##     ## ######   ## ## ##     ##  ##     ## ######   ##     ##  ######
-##     ##  ##  ##     ## ##     ## ##       ##  ####     ##  ##     ## ##       #########       ##
-##     ##  ##  ##     ## ##     ## ##       ##   ###     ##  ##     ## ##       ##     ## ##    ##
-##     ## #### ########  ########  ######## ##    ##    #### ########  ######## ##     ##  ######
-
-
-
 	hidden_ideas = {
 		SOV_non_communism_aversion_ns = {
 			removal_cost = -1
@@ -4057,18 +4045,6 @@ ideas = {
 		}
 	}
 
-
-
-
-##     ##    ###    ##    ## #### ##       ##          ###
-##     ##   ## ##   ###   ##  ##  ##       ##         ## ##
-##     ##  ##   ##  ####  ##  ##  ##       ##        ##   ##
-##     ## ##     ## ## ## ##  ##  ##       ##       ##     ##
- ##   ##  ######### ##  ####  ##  ##       ##       #########
-  ## ##   ##     ## ##   ###  ##  ##       ##       ##     ##
-   ###    ##     ## ##    ## #### ######## ######## ##     ##
-
-
 	country = {
 
 		comintern_influence = { #Apparently not used
@@ -4102,570 +4078,9 @@ ideas = {
 				armor = -0.75
 			}
 		}
-
-#		militarized_schools = {
-#
-#			removal_cost = -1
-#
-#			allowed = {
-#				always = no # Added via focus
-#			}
-#
-#			allowed_civil_war = {
-#				NOT = {
-#					has_government = democratic
-#				}
-#			}
-#
-#			picture = generic_manpower_bonus
-#
-#			modifier = {
-#				conscription = 0.005
-#			}
-#		}
-#
-#		workers_culture = {
-#
-#			removal_cost = -1
-#
-#			allowed = {
-#				always = no # Added via focus
-#			}
-#
-#			allowed_civil_war = {
-#				has_government = communism
-#			}
-#
-#			picture = generic_production_bonus
-#
-#			modifier = {
-#				production_speed_buildings_factor = 0.10
-#			}
-#		}
-#
-#		partisan_suppression_focus = {
-#
-#			removal_cost = -1
-#
-#			allowed = {
-#				always = no # Added via focus
-#			}
-#
-#			allowed_civil_war = {
-#				NOT = {
-#					has_government = democratic
-#				}
-#			}
-#
-#			picture = generic_intel_bonus
-#
-#			modifier = {
-#				resistance_damage_to_garrison = -0.25
-#			}
-#		}
-#
-#
-#		nkvd = {
-#			removal_cost = -1
-#
-#			allowed = {
-#				always = no # Added via focus
-#			}
-#
-#			allowed_civil_war = {
-#				has_government = communism
-#			}
-#
-#			modifier = {
-#				subversive_activites_upkeep = -0.5
-#				operative_slot = 1
-#			}
-#		}
-#
-#		nkvd_2 = {
-#			removal_cost = -1
-#
-#			allowed = {
-#				always = no # Added via focus
-#			}
-#
-#			allowed_civil_war = {
-#				has_government = communism
-#			}
-#
-#			modifier = {
-#				subversive_activites_upkeep = -0.5
-#				operative_slot = 1
-#				land_reinforce_rate = 0.05
-#			}
-#		}
-#
-#		progress_cult_focus = {
-#			removal_cost = -1
-#
-#			allowed = {
-#				always = no # Added via focus
-#			}
-#
-#			allowed_civil_war = {
-#				always = yes
-#			}
-#
-#			picture = generic_research_bonus
-#
-#			modifier = {
-#				research_speed_factor = 0.10
-#			}
-#		}
-#
-#		socialist_science_focus = {
-#			removal_cost = -1
-#
-#			allowed = {
-#				always = no # Added via focus
-#			}
-#
-#			allowed_civil_war = {
-#				has_government = communism
-#			}
-#
-#			picture = generic_manpower_bonus
-#
-#			modifier = {
-#				conscription = 0.03
-#			}
-#		}
-#
-#		peoples_commissariat_focus = {
-#			allowed = {
-#				always = no
-#			}
-#
-#			removal_cost = -1
-#
-#			picture = generic_production_bonus
-#
-#			allowed_civil_war = {
-#				has_government = communism
-#			}
-#
-#			modifier = {
-#				conversion_cost_civ_to_mil_factor= -0.2
-#			}
-#		}
-#
-#		trotskyite_plot = {
-#			removal_cost = -1
-#
-#			allowed = {
-#				always = no # Added via focus
-#			}
-#
-#			allowed_civil_war = {
-#				has_government = communism
-#			}
-#
-#			modifier = {
-#				stability_factor = -0.2
-#			}
-#		}
-#
-#
-#		officers_purged = {
-#			removal_cost = -1
-#
-#			allowed = {
-#				always = no # Added via focus
-#			}
-#
-#			allowed_civil_war = {
-#				has_government = communism
-#			}
-#
-#			modifier = {
-#				army_org_factor = -0.5
-#				send_volunteer_factor = -0.8
-#				industrial_capacity_factory = -0.2
-#				training_time_factor = 0.5
-#				land_doctrine_cost_factor = 0.1
-#				naval_doctrine_cost_factor = 0.1
-#				air_doctrine_cost_factor = 0.1
-#			}
-#		}
-#
-#		officers_purged_2 = {
-#			removal_cost = -1
-#
-#			picture = officers_purged
-#
-#			allowed = {
-#				always = no # Added via focus
-#			}
-#
-#			allowed_civil_war = {
-#				has_government = communism
-#			}
-#
-#			modifier = {
-#				army_org_factor = -0.45
-#				send_volunteer_factor = -0.74
-#				industrial_capacity_factory = -0.18
-#				training_time_factor = 0.45
-#				land_doctrine_cost_factor = 0.09
-#				naval_doctrine_cost_factor = 0.09
-#				air_doctrine_cost_factor = 0.09
-#			}
-#		}
-#		officers_purged_3 = {
-#			removal_cost = -1
-#
-#			picture = officers_purged
-#
-#			allowed = {
-#				always = no # Added via focus
-#			}
-#
-#			allowed_civil_war = {
-#				has_government = communism
-#			}
-#
-#			modifier = {
-#				army_org_factor = -0.4
-#				send_volunteer_factor = -0.68
-#				industrial_capacity_factory = -0.16
-#				training_time_factor = 0.4
-#				land_doctrine_cost_factor = 0.08
-#				naval_doctrine_cost_factor = 0.08
-#				air_doctrine_cost_factor = 0.08
-#			}
-#		}
-#		officers_purged_4 = {
-#			removal_cost = -1
-#
-#			picture = officers_purged
-#
-#			allowed = {
-#				always = no # Added via focus
-#			}
-#
-#			allowed_civil_war = {
-#				has_government = communism
-#			}
-#
-#			modifier = {
-#				army_org_factor = -0.35
-#				send_volunteer_factor = -0.62
-#				industrial_capacity_factory = -0.14
-#				training_time_factor = 0.35
-#				land_doctrine_cost_factor = 0.07
-#				naval_doctrine_cost_factor = 0.07
-#				air_doctrine_cost_factor = 0.07
-#			}
-#		}
-#		officers_purged_5 = {
-#			removal_cost = -1
-#
-#			picture = officers_purged
-#
-#			allowed = {
-#				always = no # Added via focus
-#			}
-#
-#			allowed_civil_war = {
-#				has_government = communism
-#			}
-#
-#			modifier = {
-#				army_org_factor = -0.30
-#				send_volunteer_factor = -0.56
-#				industrial_capacity_factory = -0.12
-#				training_time_factor = 0.3
-#				land_doctrine_cost_factor = 0.06
-#				naval_doctrine_cost_factor = 0.06
-#				air_doctrine_cost_factor = 0.06
-#			}
-#		}
-#		officers_purged_6 = {
-#			removal_cost = -1
-#
-#			picture = officers_purged
-#
-#			allowed = {
-#				always = no # Added via focus
-#			}
-#
-#			allowed_civil_war = {
-#				has_government = communism
-#			}
-#
-#			modifier = {
-#				army_org_factor = -0.25
-#				send_volunteer_factor = -0.5
-#				industrial_capacity_factory = -0.10
-#				training_time_factor = 0.25
-#				land_doctrine_cost_factor = 0.05
-#				naval_doctrine_cost_factor = 0.05
-#				air_doctrine_cost_factor = 0.05
-#			}
-#		}
-#		officers_purged_7 = {
-#			removal_cost = -1
-#
-#			picture = officers_purged
-#
-#			allowed = {
-#				always = no # Added via focus
-#			}
-#
-#			allowed_civil_war = {
-#				has_government = communism
-#			}
-#
-#			modifier = {
-#				army_org_factor = -0.20
-#				send_volunteer_factor = -0.44
-#				industrial_capacity_factory = -0.08
-#				training_time_factor = 0.2
-#				land_doctrine_cost_factor = 0.04
-#				naval_doctrine_cost_factor = 0.04
-#				air_doctrine_cost_factor = 0.04
-#			}
-#		}
-#		officers_purged_8 = {
-#			removal_cost = -1
-#
-#			picture = officers_purged
-#
-#			allowed = {
-#				always = no # Added via focus
-#			}
-#
-#			allowed_civil_war = {
-#				has_government = communism
-#			}
-#
-#			modifier = {
-#				army_org_factor = -0.15
-#				send_volunteer_factor = -0.38
-#				industrial_capacity_factory = -0.06
-#				training_time_factor = 0.15
-#				land_doctrine_cost_factor = 0.03
-#				naval_doctrine_cost_factor = 0.03
-#				air_doctrine_cost_factor = 0.03
-#			}
-#		}
-#		officers_purged_9 = {
-#			removal_cost = -1
-#
-#			picture = officers_purged
-#
-#			allowed = {
-#				always = no # Added via focus
-#			}
-#
-#			allowed_civil_war = {
-#				has_government = communism
-#			}
-#
-#			modifier = {
-#				army_org_factor = -0.10
-#				send_volunteer_factor = -0.32
-#				industrial_capacity_factory = -0.04
-#				training_time_factor = 0.1
-#				land_doctrine_cost_factor = 0.02
-#				naval_doctrine_cost_factor = 0.02
-#				air_doctrine_cost_factor = 0.02
-#			}
-#		}
-#		officers_purged_10 = {
-#			removal_cost = -1
-#
-#			picture = officers_purged
-#
-#			allowed = {
-#				always = no # Added via focus
-#			}
-#
-#			allowed_civil_war = {
-#				has_government = communism
-#			}
-#
-#			modifier = {
-#				army_org_factor = -0.05
-#				send_volunteer_factor = -0.26
-#				industrial_capacity_factory = -0.02
-#				training_time_factor = 0.05
-#				land_doctrine_cost_factor = 0.01
-#				naval_doctrine_cost_factor = 0.01
-#				air_doctrine_cost_factor = 0.01
-#			}
-#		}
-#
-#		SOV_great_patriotic_war = {
-#			removal_cost = -1
-#
-#			picture = generic_intel_bonus
-#
-#			allowed = {
-#				always = no # Added via event
-#			}
-#
-#			allowed_civil_war = {
-#				has_government = communism
-#			}
-#
-#			modifier = {
-#				army_org_factor = 0.45
-#				war_support_factor = 0.2
-#				land_doctrine_cost_factor = -0.05
-#				naval_doctrine_cost_factor = -0.05
-#				air_doctrine_cost_factor = -0.05
-#			}
-#		}
-#
-#		SOV_great_patriotic_war_2 = {
-#			removal_cost = -1
-#
-#			picture = generic_intel_bonus
-#
-#			allowed = {
-#				always = no # Added via event
-#			}
-#
-#			allowed_civil_war = {
-#				has_government = communism
-#			}
-#
-#			research_bonus = {
-#
-#			}
-#
-#			modifier = {
-#				army_org_factor = 0.35
-#				war_support_factor = 0.15
-#				land_doctrine_cost_factor = -0.04
-#				naval_doctrine_cost_factor = -0.04
-#				air_doctrine_cost_factor = -0.04
-#			}
-#		}
-#
-#		SOV_great_patriotic_war_3 = {
-#			removal_cost = -1
-#
-#			picture = generic_intel_bonus
-#
-#			allowed = {
-#				always = no # Added via event
-#			}
-#
-#			allowed_civil_war = {
-#				has_government = communism
-#			}
-#
-#			modifier = {
-#				army_org_factor = 0.25
-#				war_support_factor = 0.1
-#				land_doctrine_cost_factor = -0.03
-#				naval_doctrine_cost_factor = -0.03
-#				air_doctrine_cost_factor = -0.03
-#			}
-#		}
-#
-#		SOV_great_patriotic_war_4 = {
-#			removal_cost = -1
-#
-#			picture = generic_intel_bonus
-#
-#			allowed = {
-#				always = no # Added via event
-#			}
-#
-#			allowed_civil_war = {
-#				has_government = communism
-#			}
-#
-#			modifier = {
-#				army_org_factor = 0.15
-#				war_support_factor = 0.05
-#				land_doctrine_cost_factor = -0.02
-#				naval_doctrine_cost_factor = -0.02
-#				air_doctrine_cost_factor = -0.02
-#			}
-#		}
-#
-#		SOV_great_patriotic_war_5 = {
-#			removal_cost = -1
-#
-#			picture = generic_intel_bonus
-#
-#			allowed = {
-#				always = no # Added via event
-#			}
-#
-#			allowed_civil_war = {
-#				has_government = communism
-#			}
-#
-#			modifier = {
-#				army_org_factor = 0.05
-#				land_doctrine_cost_factor = -0.01
-#				naval_doctrine_cost_factor = -0.01
-#				air_doctrine_cost_factor = -0.01
-#			}
-#		}
-#
-#
-#		SOV_collectivist_propaganda = {
-#			removal_cost = -1
-#
-#			picture = generic_communism_drift_bonus
-#
-#			allowed = {
-#				always = no # Added via focus
-#			}
-#
-#			allowed_civil_war = {
-#				has_government = communism
-#			}
-#
-#			modifier = {
-#				stability_factor = 0.2
-#			}
-#
-#		}
 	}
 
-
-########  ########  ######  ####  ######   ##    ## ######## ########   ######
-##     ## ##       ##    ##  ##  ##    ##  ###   ## ##       ##     ## ##    ##
-##     ## ##       ##        ##  ##        ####  ## ##       ##     ## ##
-##     ## ######    ######   ##  ##   #### ## ## ## ######   ########   ######
-##     ## ##             ##  ##  ##    ##  ##  #### ##       ##   ##         ##
-##     ## ##       ##    ##  ##  ##    ##  ##   ### ##       ##    ##  ##    ##
-########  ########  ######  ####  ######   ##    ## ######## ##     ##  ######
-
-
-########    ###    ##    ## ##    ##  ######
-   ##      ## ##   ###   ## ##   ##  ##    ##
-   ##     ##   ##  ####  ## ##  ##   ##
-   ##    ##     ## ## ## ## #####     ######
-   ##    ######### ##  #### ##  ##         ##
-   ##    ##     ## ##   ### ##   ##  ##    ##
-   ##    ##     ## ##    ## ##    ##  ######
-
-
 	tank_research = {
-
-		### NSB ###
-
-
- #    #   ####   #####    ####   ######   ####   #    #
- ##  ##  #    #  #    #  #    #      #   #    #  #    #
- # ## #  #    #  #    #  #    #     #    #    #  #    #
- #    #  #    #  #####   #    #    #     #    #  #    #
- #    #  #    #  #   #   #    #   #      #    #   #  #
- #    #   ####   #    #   ####   ######   ####     ##
-
 
 		SOV_morozov_design_bureau = {
 			name = morozov_design_bureau
@@ -4673,864 +4088,18 @@ ideas = {
 			picture = morozov_design_bureau
 
 			allowed = {
-				OR = {
-					original_tag = SOV
-					AND = {
-						OR = {
-							is_literally_china = yes
-							tag = MAN
-						}
-						has_dlc = "Waking the Tiger"
-					}
-				}
-			}
-
-			visible = {
-				hidden_trigger = {
-					NOT = { has_country_flag = SOV_merge_tank_morozov_1_flag }
-					NOT = { has_country_flag = SOV_merge_tank_morozov_2_flag }
-					NOT = { has_country_flag = SOV_merge_tank_morozov_3_flag }
-				}
-				IF = {
-					limit = {
-						has_dlc = "No Compromise, No Surrender"
-						FROM = { original_tag = CHI }
-					}
-					FROM = { 
-						has_completed_focus = CHI_secure_the_soviet_border 
-						NOT = {
-							has_country_flag = SOV_accepted_Astrov
-							has_country_flag = SOV_accepted_OKMO
-						}
-					}
-				}	
-			}
-
-			available = {
-				IF = {
-					limit = {
-						NOT = { has_dlc = "No Compromise, No Surrender" }
-						OR = {
-							is_literally_china = yes
-							tag = MAN
-						}
-					}
-					has_completed_focus = CHI_hire_soviet_designer
-					NOT = {
-						has_war_with = SOV
-					}
-				}
-				IF = {
-					limit = {
-						has_dlc = "No Compromise, No Surrender" 
-						original_tag = CHI
-					}
-					has_country_flag = SOV_accepted_Morozov
-				}
+				original_tag = SOV
 			}
 
 			research_bonus = {
-				armor = 0.15
+				armor = 0.1
 			}
 
-			traits = { fast_tank_manufacturer }
+			traits = { tank_designer }
 
 			modifier = {
 			}
 		}
-
-		SOV_morozov_design_bureau_1 = {
-			name = morozov_design_bureau
-
-			picture = morozov_design_bureau
-
-			allowed = {
-				original_tag = SOV
-
-			}
-
-			visible = {
-				hidden_trigger = {
-					has_country_flag = SOV_merge_tank_morozov_1_flag
-					NOT = { has_country_flag = SOV_merge_tank_morozov_2_flag }
-					NOT = { has_country_flag = SOV_merge_tank_morozov_3_flag }
-				}
-			}
-
-			research_bonus = {
-				armor = 0.15
-			}
-
-			traits = { fast_tank_manufacturer }
-
-			equipment_bonus = {
-				armor = {
-					maximum_speed = 0.03
-				}
-			}
-		}
-
-		SOV_morozov_design_bureau_2 = {
-			name = morozov_design_bureau
-
-			picture = morozov_design_bureau
-
-			allowed = {
-				original_tag = SOV
-			}
-
-			visible = {
-				hidden_trigger = {
-					has_country_flag = SOV_merge_tank_morozov_2_flag
-					NOT = { has_country_flag = SOV_merge_tank_morozov_1_flag }
-					NOT = { has_country_flag = SOV_merge_tank_morozov_3_flag }
-				}
-			}
-
-			research_bonus = {
-				armor = 0.15
-			}
-
-			traits = { fast_tank_manufacturer }
-
-			modifier = {
-			}
-
-			equipment_bonus = {
-				armor = {
-					build_cost_ic = -0.05
-				}
-			}
-		}
-
-		SOV_morozov_design_bureau_3 = {
-			name = morozov_design_bureau
-
-			picture = morozov_design_bureau
-
-			allowed = {
-				original_tag = SOV
-			}
-
-			visible = {
-				hidden_trigger = {
-					has_country_flag = SOV_merge_tank_morozov_3_flag
-					NOT = { has_country_flag = SOV_merge_tank_morozov_1_flag }
-					NOT = { has_country_flag = SOV_merge_tank_morozov_2_flag }
-				}
-			}
-
-			research_bonus = {
-				armor = 0.15
-			}
-
-			traits = { fast_tank_manufacturer }
-
-			equipment_bonus = {
-				armor = {
-					soft_attack = 0.03
-				}
-			}
-		}
-
-		SOV_morozov_design_bureau_1_2 = {
-			name = morozov_design_bureau
-
-			picture = morozov_design_bureau
-
-			allowed = {
-				original_tag = SOV
-			}
-
-			visible = {
-				hidden_trigger = {
-					has_country_flag = SOV_merge_tank_morozov_1_flag
-					has_country_flag = SOV_merge_tank_morozov_2_flag
-					NOT = { has_country_flag = SOV_merge_tank_morozov_3_flag }
-				}
-			}
-
-			research_bonus = {
-				armor = 0.15
-			}
-
-			traits = { fast_tank_manufacturer }
-
-			equipment_bonus = {
-				armor = {
-					maximum_speed = 0.03
-					build_cost_ic = -0.05
-				}
-			}
-		}
-
-		SOV_morozov_design_bureau_1_3 = {
-			name = morozov_design_bureau
-
-			picture = morozov_design_bureau
-
-			allowed = {
-				original_tag = SOV
-			}
-
-			visible = {
-				hidden_trigger = {
-					has_country_flag = SOV_merge_tank_morozov_1_flag
-					has_country_flag = SOV_merge_tank_morozov_3_flag
-					NOT = { has_country_flag = SOV_merge_tank_morozov_2_flag }
-				}
-			}
-
-			research_bonus = {
-				armor = 0.15
-			}
-
-			traits = { fast_tank_manufacturer }
-
-			equipment_bonus = {
-				armor = {
-					maximum_speed = 0.03
-					soft_attack = 0.03
-				}
-			}
-		}
-
-		SOV_morozov_design_bureau_2_3 = {
-			name = morozov_design_bureau
-
-			picture = morozov_design_bureau
-
-			allowed = {
-				original_tag = SOV
-			}
-
-			visible = {
-				hidden_trigger = {
-					has_country_flag = SOV_merge_tank_morozov_2_flag
-					has_country_flag = SOV_merge_tank_morozov_3_flag
-					NOT = { has_country_flag = SOV_merge_tank_morozov_1_flag }
-				}
-			}
-
-			research_bonus = {
-				armor = 0.15
-			}
-
-			traits = { fast_tank_manufacturer }
-
-			equipment_bonus = {
-				armor = {
-					build_cost_ic = -0.05
-					soft_attack = 0.03
-				}
-			}
-		}
-
-		SOV_morozov_design_bureau_final = {
-			name = morozov_design_bureau
-
-			picture = morozov_design_bureau
-
-			allowed = {
-				original_tag = SOV
-			}
-
-			visible = {
-				hidden_trigger = {
-					has_country_flag = SOV_merge_tank_morozov_1_flag
-					has_country_flag = SOV_merge_tank_morozov_2_flag
-					has_country_flag = SOV_merge_tank_morozov_3_flag
-				}
-			}
-
-			research_bonus = {
-				armor = 0.15
-			}
-
-			traits = { fast_tank_manufacturer }
-
-			equipment_bonus = {
-				armor = {
-					maximum_speed = 0.03
-					build_cost_ic = -0.05
-					soft_attack = 0.03
-				}
-			}
-		}
-
-
-   ##     ####   #####  #####    ####   #    #
-  #  #   #         #    #    #  #    #  #    #
- #    #   ####     #    #    #  #    #  #    #
- ######       #    #    #####   #    #  #    #
- #    #  #    #    #    #   #   #    #   #  #
- #    #   ####     #    #    #   ####     ##
-
-
-		SOV_astrov_design_bureau = {
-			name = astrov_design_bureau
-
-			picture = astrov_design_bureau
-
-			allowed = {
-				OR = {
-					original_tag = SOV
-					AND = {
-						tag = CHI
-						has_dlc = "No Compromise, No Surrender"
-					}
-				}
-			}
-
-			visible = {
-				hidden_trigger = {
-					NOT = { has_country_flag = SOV_merge_tank_astrov_1_flag }
-					NOT = { has_country_flag = SOV_merge_tank_astrov_2_flag }
-					NOT = { has_country_flag = SOV_merge_tank_astrov_3_flag }
-				}
-				IF = {
-					limit = {
-						has_dlc = "No Compromise, No Surrender"
-						FROM = { original_tag = CHI }
-					}
-					FROM = { 
-						has_completed_focus = CHI_secure_the_soviet_border 
-						NOT = {
-							has_country_flag = SOV_accepted_Morozov
-							has_country_flag = SOV_accepted_OKMO
-						}
-					}
-				}
-			}
-			available = {
-				IF = {
-					limit = {
-						has_dlc = "No Compromise, No Surrender" 
-						original_tag = CHI
-					}
-					has_country_flag = SOV_accepted_Astrov
-				}
-			}
-
-			research_bonus = {
-				armor = 0.15
-			}
-
-			traits = { medium_tank_manufacturer }
-
-			modifier = {
-			}
-		}
-
-		SOV_astrov_design_bureau_1 = {
-			name = astrov_design_bureau
-
-			picture = astrov_design_bureau
-
-			allowed = {
-				original_tag = SOV
-			}
-
-			visible = {
-				hidden_trigger = {
-					has_country_flag = SOV_merge_tank_astrov_1_flag
-					NOT = { has_country_flag = SOV_merge_tank_astrov_2_flag }
-					NOT = { has_country_flag = SOV_merge_tank_astrov_3_flag }
-				}
-			}
-
-			research_bonus = {
-				armor = 0.15
-			}
-
-			traits = { medium_tank_manufacturer }
-
-			equipment_bonus = {
-				armor = {
-					maximum_speed = 0.03
-				}
-			}
-		}
-
-		SOV_astrov_design_bureau_2 = {
-			name = astrov_design_bureau
-
-			picture = astrov_design_bureau
-
-			allowed = {
-				original_tag = SOV
-			}
-
-			visible = {
-				hidden_trigger = {
-					has_country_flag = SOV_merge_tank_astrov_2_flag
-					NOT = { has_country_flag = SOV_merge_tank_astrov_1_flag }
-					NOT = { has_country_flag = SOV_merge_tank_astrov_3_flag }
-				}
-			}
-
-			research_bonus = {
-				armor = 0.15
-			}
-
-			traits = { medium_tank_manufacturer }
-
-			modifier = {
-			}
-
-			equipment_bonus = {
-				armor = {
-					build_cost_ic = -0.05
-				}
-			}
-		}
-
-		SOV_astrov_design_bureau_3 = {
-			name = astrov_design_bureau
-
-			picture = astrov_design_bureau
-
-			allowed = {
-				original_tag = SOV
-			}
-
-			visible = {
-				hidden_trigger = {
-					has_country_flag = SOV_merge_tank_astrov_3_flag
-					NOT = { has_country_flag = SOV_merge_tank_astrov_1_flag }
-					NOT = { has_country_flag = SOV_merge_tank_astrov_2_flag }
-				}
-			}
-
-			research_bonus = {
-				armor = 0.15
-			}
-
-			traits = { medium_tank_manufacturer }
-
-			equipment_bonus = {
-				armor = {
-					soft_attack = 0.03
-				}
-			}
-		}
-
-		SOV_astrov_design_bureau_1_2 = {
-			name = astrov_design_bureau
-
-			picture = astrov_design_bureau
-
-			allowed = {
-				original_tag = SOV
-			}
-
-			visible = {
-				hidden_trigger = {
-					has_country_flag = SOV_merge_tank_astrov_1_flag
-					has_country_flag = SOV_merge_tank_astrov_2_flag
-					NOT = { has_country_flag = SOV_merge_tank_astrov_3_flag }
-				}
-			}
-
-			research_bonus = {
-				armor = 0.15
-			}
-
-			traits = { medium_tank_manufacturer }
-
-			equipment_bonus = {
-				armor = {
-					maximum_speed = 0.03
-					build_cost_ic = -0.05
-				}
-			}
-		}
-
-		SOV_astrov_design_bureau_1_3 = {
-			name = astrov_design_bureau
-
-			picture = astrov_design_bureau
-
-			allowed = {
-				original_tag = SOV
-			}
-
-			visible = {
-				hidden_trigger = {
-					has_country_flag = SOV_merge_tank_astrov_1_flag
-					has_country_flag = SOV_merge_tank_astrov_3_flag
-					NOT = { has_country_flag = SOV_merge_tank_astrov_2_flag }
-				}
-			}
-
-			research_bonus = {
-				armor = 0.15
-			}
-
-			traits = { medium_tank_manufacturer }
-
-			equipment_bonus = {
-				armor = {
-					maximum_speed = 0.03
-					soft_attack = 0.03
-				}
-			}
-		}
-
-		SOV_astrov_design_bureau_2_3 = {
-			name = astrov_design_bureau
-
-			picture = astrov_design_bureau
-
-			allowed = {
-				original_tag = SOV
-			}
-
-			visible = {
-				hidden_trigger = {
-					has_country_flag = SOV_merge_tank_astrov_2_flag
-					has_country_flag = SOV_merge_tank_astrov_3_flag
-					NOT = { has_country_flag = SOV_merge_tank_astrov_1_flag }
-				}
-			}
-
-			research_bonus = {
-				armor = 0.15
-			}
-
-			traits = { medium_tank_manufacturer }
-
-			equipment_bonus = {
-				armor = {
-					build_cost_ic = -0.05
-					soft_attack = 0.03
-				}
-			}
-		}
-
-		SOV_astrov_design_bureau_final = {
-			name = astrov_design_bureau
-
-			picture = astrov_design_bureau
-
-			allowed = {
-				original_tag = SOV
-			}
-
-			visible = {
-				hidden_trigger = {
-					has_country_flag = SOV_merge_tank_astrov_1_flag
-					has_country_flag = SOV_merge_tank_astrov_2_flag
-					has_country_flag = SOV_merge_tank_astrov_3_flag
-				}
-			}
-
-			research_bonus = {
-				armor = 0.15
-			}
-
-			traits = { medium_tank_manufacturer }
-
-			equipment_bonus = {
-				armor = {
-					maximum_speed = 0.03
-					build_cost_ic = -0.05
-					soft_attack = 0.03
-				}
-			}
-		}
-
-
-  ####   #    #  #    #   ####
- #    #  #   #   ##  ##  #    #
- #    #  ####    # ## #  #    #
- #    #  #  #    #    #  #    #
- #    #  #   #   #    #  #    #
-  ####   #    #  #    #   ####
-
-
-		SOV_okmo = {
-			name = okmo
-
-			picture = okmo
-
-			allowed = {
-				OR = {
-					original_tag = SOV
-					AND = {
-						tag = CHI
-						has_dlc = "No Compromise, No Surrender"
-					}
-				}
-			}
-
-			visible = {
-				hidden_trigger = {
-					NOT = { has_country_flag = SOV_merge_tank_okmo_1_flag }
-					NOT = { has_country_flag = SOV_merge_tank_okmo_2_flag }
-					NOT = { has_country_flag = SOV_merge_tank_okmo_3_flag }
-				}
-				IF = {
-					limit = {
-						has_dlc = "No Compromise, No Surrender"
-						FROM = { original_tag = CHI }
-					}
-					FROM = { 
-						has_completed_focus = CHI_secure_the_soviet_border 
-						NOT = {
-							has_country_flag = SOV_accepted_Morozov
-							has_country_flag = SOV_accepted_Astrov
-						}
-					}
-				}
-			}
-
-			available = {
-				IF = {
-					limit = {
-						has_dlc = "No Compromise, No Surrender" 
-						original_tag = CHI
-					}
-					has_country_flag = SOV_accepted_OKMO
-				}
-			}
-
-			research_bonus = {
-				armor = 0.15
-			}
-
-			traits = { infantry_tank_manufacturer }
-
-			modifier = {
-			}
-		}
-
-		SOV_okmo_1 = {
-			name = okmo
-
-			picture = okmo
-
-			allowed = {
-				original_tag = SOV
-			}
-
-			visible = {
-				hidden_trigger = {
-					has_country_flag = SOV_merge_tank_okmo_1_flag
-					NOT = { has_country_flag = SOV_merge_tank_okmo_2_flag }
-					NOT = { has_country_flag = SOV_merge_tank_okmo_3_flag }
-				}
-			}
-
-			research_bonus = {
-				armor = 0.15
-			}
-
-			traits = { infantry_tank_manufacturer }
-
-			equipment_bonus = {
-				armor = {
-					maximum_speed = 0.03
-				}
-			}
-		}
-
-		SOV_okmo_2 = {
-			name = okmo
-
-			picture = okmo
-
-			allowed = {
-				original_tag = SOV
-			}
-
-			visible = {
-				hidden_trigger = {
-					has_country_flag = SOV_merge_tank_okmo_2_flag
-					NOT = { has_country_flag = SOV_merge_tank_okmo_1_flag }
-					NOT = { has_country_flag = SOV_merge_tank_okmo_3_flag }
-				}
-			}
-
-			research_bonus = {
-				armor = 0.15
-			}
-
-			traits = { infantry_tank_manufacturer }
-
-			modifier = {
-			}
-
-			equipment_bonus = {
-				armor = {
-					build_cost_ic = -0.05
-				}
-			}
-		}
-
-		SOV_okmo_3 = {
-			name = okmo
-
-			picture = okmo
-
-			allowed = {
-				original_tag = SOV
-			}
-
-			visible = {
-				hidden_trigger = {
-					has_country_flag = SOV_merge_tank_okmo_3_flag
-					NOT = { has_country_flag = SOV_merge_tank_okmo_1_flag }
-					NOT = { has_country_flag = SOV_merge_tank_okmo_2_flag }
-				}
-			}
-
-			research_bonus = {
-				armor = 0.15
-			}
-
-			traits = { infantry_tank_manufacturer }
-
-			equipment_bonus = {
-				armor = {
-					soft_attack = 0.03
-				}
-			}
-		}
-
-		SOV_okmo_1_2 = {
-			name = okmo
-
-			picture = okmo
-
-			allowed = {
-				original_tag = SOV
-			}
-
-			visible = {
-				hidden_trigger = {
-					has_country_flag = SOV_merge_tank_okmo_1_flag
-					has_country_flag = SOV_merge_tank_okmo_2_flag
-					NOT = { has_country_flag = SOV_merge_tank_okmo_3_flag }
-				}
-			}
-
-			research_bonus = {
-				armor = 0.15
-			}
-
-			traits = { infantry_tank_manufacturer }
-
-			equipment_bonus = {
-				armor = {
-					maximum_speed = 0.03
-					build_cost_ic = -0.05
-				}
-			}
-		}
-
-		SOV_okmo_1_3 = {
-			name = okmo
-
-			picture = okmo
-
-			allowed = {
-				original_tag = SOV
-			}
-
-			visible = {
-				hidden_trigger = {
-					has_country_flag = SOV_merge_tank_okmo_1_flag
-					has_country_flag = SOV_merge_tank_okmo_3_flag
-					NOT = { has_country_flag = SOV_merge_tank_okmo_2_flag }
-				}
-			}
-
-			research_bonus = {
-				armor = 0.15
-			}
-
-			traits = { infantry_tank_manufacturer }
-
-			equipment_bonus = {
-				armor = {
-					maximum_speed = 0.03
-					soft_attack = 0.03
-				}
-			}
-		}
-
-		SOV_okmo_2_3 = {
-			name = okmo
-
-			picture = okmo
-
-			allowed = {
-				original_tag = SOV
-			}
-
-			visible = {
-				hidden_trigger = {
-					has_country_flag = SOV_merge_tank_okmo_2_flag
-					has_country_flag = SOV_merge_tank_okmo_3_flag
-					NOT = { has_country_flag = SOV_merge_tank_okmo_1_flag }
-				}
-			}
-
-			research_bonus = {
-				armor = 0.15
-			}
-
-			traits = { infantry_tank_manufacturer }
-
-			equipment_bonus = {
-				armor = {
-					build_cost_ic = -0.05
-					soft_attack = 0.03
-				}
-			}
-		}
-
-		SOV_okmo_final = {
-			name = okmo
-
-			picture = okmo
-
-			allowed = {
-				original_tag = SOV
-			}
-
-			visible = {
-				hidden_trigger = {
-					has_country_flag = SOV_merge_tank_okmo_1_flag
-					has_country_flag = SOV_merge_tank_okmo_2_flag
-					has_country_flag = SOV_merge_tank_okmo_3_flag
-				}
-			}
-
-			research_bonus = {
-				armor = 0.15
-			}
-
-			traits = { infantry_tank_manufacturer }
-
-			equipment_bonus = {
-				armor = {
-					maximum_speed = 0.03
-					build_cost_ic = -0.05
-					soft_attack = 0.03
-				}
-			}
-		}
-
-
- #    #  #   #  #####  #   ####   #    #   ####   #    #  #
- ##  ##   # #     #    #  #       #    #  #    #  #    #  #
- # ## #    #      #    #   ####   ######  #       ######  #
- #    #    #      #    #       #  #    #  #       #    #  #
- #    #    #      #    #  #    #  #    #  #    #  #    #  #
- #    #    #      #    #   ####   #    #   ####   #    #  #
-
 
 		SOV_mytishchy_machine_building_plant = {
 
@@ -5540,552 +4109,19 @@ ideas = {
 				original_tag = SOV
 			}
 
-			visible = {
-				hidden_trigger = {
-					NOT = { has_country_flag = SOV_merge_tank_mytishchy_1_flag }
-					NOT = { has_country_flag = SOV_merge_tank_mytishchy_2_flag }
-					NOT = { has_country_flag = SOV_merge_tank_mytishchy_3_flag }
-				}
-			}
-
 			research_bonus = {
-				armor = 0.1
+				tank_modules = 0.15
 			}
 
-			traits = { tank_refurbishment_plant }
+			traits = { tank_module_designer }
 
 			modifier = {
-				equipment_conversion_speed = 0.15
-				equipment_capture_factor = 0.15
-				land_equipment_upgrade_xp_cost = -0.1
-			}
-		}
-
-		SOV_mytishchy_machine_building_plant_1 = {
-			name = SOV_mytishchy_machine_building_plant
-
-			picture = SOV_mytishchy_machine_building_plant
-
-			allowed = {
-				original_tag = SOV
-			}
-
-			visible = {
-				hidden_trigger = {
-					has_country_flag = SOV_merge_tank_mytishchy_1_flag
-					NOT = { has_country_flag = SOV_merge_tank_mytishchy_2_flag }
-					NOT = { has_country_flag = SOV_merge_tank_mytishchy_3_flag }
-				}
-			}
-
-			research_bonus = {
-				armor = 0.1
-			}
-
-			traits = { tank_refurbishment_plant }
-
-			modifier = {
-				equipment_conversion_speed = 0.15
-				equipment_capture_factor = 0.15
-				land_equipment_upgrade_xp_cost = -0.1
-			}
-
-			equipment_bonus = {
-				armor = {
-					maximum_speed = 0.03
-				}
-			}
-		}
-
-		SOV_mytishchy_machine_building_plant_2 = {
-			name = SOV_mytishchy_machine_building_plant
-
-			picture = SOV_mytishchy_machine_building_plant
-
-			allowed = {
-				original_tag = SOV
-			}
-
-			visible = {
-				hidden_trigger = {
-					has_country_flag = SOV_merge_tank_mytishchy_2_flag
-					NOT = { has_country_flag = SOV_merge_tank_mytishchy_1_flag }
-					NOT = { has_country_flag = SOV_merge_tank_mytishchy_3_flag }
-				}
-			}
-
-			research_bonus = {
-				armor = 0.1
-			}
-
-			traits = { tank_refurbishment_plant }
-
-			modifier = {
-				equipment_conversion_speed = 0.15
-				equipment_capture_factor = 0.15
-				land_equipment_upgrade_xp_cost = -0.1
-			}
-
-			equipment_bonus = {
-				armor = {
-					build_cost_ic = -0.05
-				}
-			}
-		}
-
-		SOV_mytishchy_machine_building_plant_3 = {
-			name = SOV_mytishchy_machine_building_plant
-
-			picture = SOV_mytishchy_machine_building_plant
-
-			allowed = {
-				original_tag = SOV
-			}
-
-			visible = {
-				hidden_trigger = {
-					has_country_flag = SOV_merge_tank_mytishchy_3_flag
-					NOT = { has_country_flag = SOV_merge_tank_mytishchy_1_flag }
-					NOT = { has_country_flag = SOV_merge_tank_mytishchy_2_flag }
-				}
-			}
-
-			research_bonus = {
-				armor = 0.1
-			}
-
-			traits = { tank_refurbishment_plant }
-
-			modifier = {
-				equipment_conversion_speed = 0.15
-				equipment_capture_factor = 0.15
-				land_equipment_upgrade_xp_cost = -0.1
-			}
-
-			equipment_bonus = {
-				armor = {
-					soft_attack = 0.03
-				}
-			}
-		}
-
-		SOV_mytishchy_machine_building_plant_1_2 = {
-			name = SOV_mytishchy_machine_building_plant
-
-			picture = SOV_mytishchy_machine_building_plant
-
-			allowed = {
-				original_tag = SOV
-			}
-
-			visible = {
-				hidden_trigger = {
-					has_country_flag = SOV_merge_tank_mytishchy_1_flag
-					has_country_flag = SOV_merge_tank_mytishchy_2_flag
-					NOT = { has_country_flag = SOV_merge_tank_mytishchy_3_flag }
-				}
-			}
-
-			research_bonus = {
-				armor = 0.1
-			}
-
-			traits = { tank_refurbishment_plant }
-
-			modifier = {
-				equipment_conversion_speed = 0.15
-				equipment_capture_factor = 0.15
-				land_equipment_upgrade_xp_cost = -0.1
-			}
-
-			equipment_bonus = {
-				armor = {
-					maximum_speed = 0.03
-					build_cost_ic = -0.05
-				}
-			}
-		}
-
-		SOV_mytishchy_machine_building_plant_1_3 = {
-			name = SOV_mytishchy_machine_building_plant
-
-			picture = SOV_mytishchy_machine_building_plant
-
-			allowed = {
-				original_tag = SOV
-			}
-
-			visible = {
-				hidden_trigger = {
-					has_country_flag = SOV_merge_tank_mytishchy_1_flag
-					has_country_flag = SOV_merge_tank_mytishchy_3_flag
-					NOT = { has_country_flag = SOV_merge_tank_mytishchy_2_flag }
-				}
-			}
-
-			research_bonus = {
-				armor = 0.1
-			}
-
-			traits = { tank_refurbishment_plant }
-
-			modifier = {
-				equipment_conversion_speed = 0.15
-				equipment_capture_factor = 0.15
-				land_equipment_upgrade_xp_cost = -0.1
-			}
-
-			equipment_bonus = {
-				armor = {
-					maximum_speed = 0.03
-					soft_attack = 0.03
-				}
-			}
-		}
-
-		SOV_mytishchy_machine_building_plant_2_3 = {
-			name = SOV_mytishchy_machine_building_plant
-
-			picture = SOV_mytishchy_machine_building_plant
-
-			allowed = {
-				original_tag = SOV
-			}
-
-			visible = {
-				hidden_trigger = {
-					has_country_flag = SOV_merge_tank_mytishchy_2_flag
-					has_country_flag = SOV_merge_tank_mytishchy_3_flag
-					NOT = { has_country_flag = SOV_merge_tank_mytishchy_1_flag }
-				}
-			}
-
-			research_bonus = {
-				armor = 0.1
-			}
-
-			traits = { tank_refurbishment_plant }
-
-			modifier = {
-				equipment_conversion_speed = 0.15
-				equipment_capture_factor = 0.15
-				land_equipment_upgrade_xp_cost = -0.1
-			}
-
-			equipment_bonus = {
-				armor = {
-					build_cost_ic = -0.05
-					soft_attack = 0.03
-				}
-			}
-		}
-
-		SOV_mytishchy_machine_building_plant_final = {
-			name = SOV_mytishchy_machine_building_plant
-
-			picture = SOV_mytishchy_machine_building_plant
-
-			allowed = {
-				original_tag = SOV
-			}
-
-			visible = {
-				hidden_trigger = {
-					has_country_flag = SOV_merge_tank_mytishchy_1_flag
-					has_country_flag = SOV_merge_tank_mytishchy_2_flag
-					has_country_flag = SOV_merge_tank_mytishchy_3_flag
-				}
-			}
-
-			research_bonus = {
-				armor = 0.1
-			}
-
-			traits = { tank_refurbishment_plant }
-
-			modifier = {
-				equipment_conversion_speed = 0.15
-				equipment_capture_factor = 0.15
-				land_equipment_upgrade_xp_cost = -0.1
-			}
-
-			equipment_bonus = {
-				armor = {
-					maximum_speed = 0.03
-					build_cost_ic = -0.05
-					soft_attack = 0.03
-				}
-			}
-		}
-
-
-
- #    #  #  #####    ####   #    #
- #   #   #  #    #  #    #  #    #
- ####    #  #    #  #    #  #    #
- #  #    #  #####   #    #  #    #
- #   #   #  #   #   #    #   #  #
- #    #  #  #    #   ####     ##
-
-
-		SOV_kirov = {
-
-			picture = SOV_kirov
-
-			allowed = {
-				original_tag = SOV
-			}
-
-			visible = {
-				hidden_trigger = {
-					NOT = { has_country_flag = SOV_merge_tank_kirov_1_flag }
-					NOT = { has_country_flag = SOV_merge_tank_kirov_2_flag }
-					NOT = { has_country_flag = SOV_merge_tank_kirov_3_flag }
-				}
-			}
-
-			research_bonus = {
-				armor = 0.15
-			}
-
-			traits = { heavy_tank_manufacturer }
-
-			modifier = {
-			}
-		}
-
-		SOV_kirov_1 = {
-			name = SOV_kirov
-
-			picture = SOV_kirov
-
-			allowed = {
-				original_tag = SOV
-			}
-
-			visible = {
-				hidden_trigger = {
-					has_country_flag = SOV_merge_tank_kirov_1_flag
-					NOT = { has_country_flag = SOV_merge_tank_kirov_2_flag }
-					NOT = { has_country_flag = SOV_merge_tank_kirov_3_flag }
-				}
-			}
-
-			research_bonus = {
-				armor = 0.15
-			}
-
-			traits = { heavy_tank_manufacturer }
-
-			equipment_bonus = {
-				armor = {
-					maximum_speed = 0.03
-				}
-			}
-		}
-
-		SOV_kirov_2 = {
-			name = SOV_kirov
-
-			picture = SOV_kirov
-
-			allowed = {
-				original_tag = SOV
-			}
-
-			visible = {
-				hidden_trigger = {
-					has_country_flag = SOV_merge_tank_kirov_2_flag
-					NOT = { has_country_flag = SOV_merge_tank_kirov_1_flag }
-					NOT = { has_country_flag = SOV_merge_tank_kirov_3_flag }
-				}
-			}
-
-			research_bonus = {
-				armor = 0.15
-			}
-
-			traits = { heavy_tank_manufacturer }
-
-			modifier = {
-			}
-
-			equipment_bonus = {
-				armor = {
-					build_cost_ic = -0.05
-				}
-			}
-		}
-
-		SOV_kirov_3 = {
-			name = SOV_kirov
-
-			picture = SOV_kirov
-
-			allowed = {
-				original_tag = SOV
-			}
-
-			visible = {
-				hidden_trigger = {
-					has_country_flag = SOV_merge_tank_kirov_3_flag
-					NOT = { has_country_flag = SOV_merge_tank_kirov_1_flag }
-					NOT = { has_country_flag = SOV_merge_tank_kirov_2_flag }
-				}
-			}
-
-			research_bonus = {
-				armor = 0.15
-			}
-
-			traits = { heavy_tank_manufacturer }
-
-			equipment_bonus = {
-				armor = {
-					soft_attack = 0.03
-				}
-			}
-		}
-
-		SOV_kirov_1_2 = {
-			name = SOV_kirov
-
-			picture = SOV_kirov
-
-			allowed = {
-				original_tag = SOV
-			}
-
-			visible = {
-				hidden_trigger = {
-					has_country_flag = SOV_merge_tank_kirov_1_flag
-					has_country_flag = SOV_merge_tank_kirov_2_flag
-					NOT = { has_country_flag = SOV_merge_tank_kirov_3_flag }
-				}
-			}
-
-			research_bonus = {
-				armor = 0.15
-			}
-
-			traits = { heavy_tank_manufacturer }
-
-			equipment_bonus = {
-				armor = {
-					maximum_speed = 0.03
-					build_cost_ic = -0.05
-				}
-			}
-		}
-
-		SOV_kirov_1_3 = {
-			name = SOV_kirov
-
-			picture = SOV_kirov
-
-			allowed = {
-				original_tag = SOV
-			}
-
-			visible = {
-				hidden_trigger = {
-					has_country_flag = SOV_merge_tank_kirov_1_flag
-					has_country_flag = SOV_merge_tank_kirov_3_flag
-					NOT = { has_country_flag = SOV_merge_tank_kirov_2_flag }
-				}
-			}
-
-			research_bonus = {
-				armor = 0.15
-			}
-
-			traits = { heavy_tank_manufacturer }
-
-			equipment_bonus = {
-				armor = {
-					maximum_speed = 0.03
-					soft_attack = 0.03
-				}
-			}
-		}
-
-		SOV_kirov_2_3 = {
-			name = SOV_kirov
-
-			picture = SOV_kirov
-
-			allowed = {
-				original_tag = SOV
-			}
-
-			visible = {
-				hidden_trigger = {
-					has_country_flag = SOV_merge_tank_kirov_2_flag
-					has_country_flag = SOV_merge_tank_kirov_3_flag
-					NOT = { has_country_flag = SOV_merge_tank_kirov_1_flag }
-				}
-			}
-
-			research_bonus = {
-				armor = 0.15
-			}
-
-			traits = { heavy_tank_manufacturer }
-
-			equipment_bonus = {
-				armor = {
-					build_cost_ic = -0.05
-					soft_attack = 0.03
-				}
-			}
-		}
-
-		SOV_kirov_final = {
-			name = SOV_kirov
-
-			picture = SOV_kirov
-
-			allowed = {
-				original_tag = SOV
-			}
-
-			visible = {
-				hidden_trigger = {
-					has_country_flag = SOV_merge_tank_kirov_1_flag
-					has_country_flag = SOV_merge_tank_kirov_2_flag
-					has_country_flag = SOV_merge_tank_kirov_3_flag
-				}
-			}
-
-			research_bonus = {
-				armor = 0.15
-			}
-
-			traits = { heavy_tank_manufacturer }
-
-			equipment_bonus = {
-				armor = {
-					maximum_speed = 0.03
-					build_cost_ic = -0.05
-					soft_attack = 0.03
-				}
+				
 			}
 		}
 	}
 
 	naval_research = {
-
-		### NSB ###
-
-
- #     #
- ##    #  ######  #    #   ####   #    #   ####   #   #  ######
- # #   #  #       #    #  #       #   #   #    #   # #   #
- #  #  #  #####   #    #   ####   ####    #    #    #    #####
- #   # #  #       #    #       #  #  #    #    #    #    #
- #    ##  #        #  #   #    #  #   #   #    #    #    #
- #     #  ######    ##     ####   #    #   ####     #    ######
-
 
 		SOV_nevskoye_design_bureau = {
 			name = nevskoye_design_bureau
@@ -6100,23 +4136,54 @@ ideas = {
 				naval_equipment = 0.1
 			}
 
-			traits = { }
+			traits = { ship_designer }
 
 			modifier = {
+			}
+		}
+
+		SOV_sergey_gorshkov = {
+			name = SOV_sergey_gorshkov
+
+			ledger = navy
+
+			allowed = {
+				original_tag = SOV
+			}
+
+			available = {
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+
+			traits = { naval_theorist }
+			ai_will_do = {
+				base = 0
+			}
+		}
+
+		vladimir_tributs = {
+			name = SOV_vladimir_tributs
+
+			ledger = navy
+			allowed = {
+				original_tag = SOV
+			}
+
+			traits = {
+				grand_fleet_proponent
+			}
+			ai_will_do = {
+				base = 0
 			}
 		}
 	}
 
 	aircraft_research = {
-
- #     #  ###   #####
- ##   ##   #   #     #
- # # # #   #   #
- #  #  #   #   #  ####
- #     #   #   #     #
- #     #   #   #     #
- #     #  ###   #####
-
 
 		SOV_mig_design_bureau = {
 			name = mig_design_bureau
@@ -6131,25 +4198,43 @@ ideas = {
 				air_equipment = 0.1
 			}
 
-			traits = { }
+			traits = { aircraft_designer }
 
 			modifier = {
 			}
 		}
+
+		alexander_golovanov = {
+			name = SOV_aleksandr_golovanov
+
+			ledger = air
+			allowed = {
+				original_tag = SOV
+			}
+			traits = { air_warfare_theorist }
+			ai_will_do = {
+				base = 0.5
+			}
+		}
+
+		sergei_rudenko = {
+			name = SOV_sergey_rudenko
+	
+			ledger = air
+			allowed = {
+				original_tag = SOV
+			}
+
+			traits = {
+				close_air_support_proponent
+			}
+			ai_will_do = {
+				base = 0
+			}
+		}
 	}
 
-
 	materiel_research = {
-
-		### NSB ###
-
-  #####
- #     #  #####     ##    #####   #  #    #
- #        #    #   #  #   #    #  #  ##   #
- #  ####  #    #  #    #  #####   #  # #  #
- #     #  #####   ######  #    #  #  #  # #
- #     #  #   #   #    #  #    #  #  #   ##
-  #####   #    #  #    #  #####   #  #    #
 
 		SOV_grabin_design_bureau = {
 			name = grabin_design_bureau
@@ -6170,14 +4255,6 @@ ideas = {
 			}
 		}
 
- #######
-    #     #    #  #         ##
-    #     #    #  #        #  #
-    #     #    #  #       #    #
-    #     #    #  #       ######
-    #     #    #  #       #    #
-    #      ####   ######  #    #
-
 		SOV_tula_arms_plant = {
 			name = tula_arms_plant
 
@@ -6196,15 +4273,6 @@ ideas = {
 			modifier = {
 			}
 		}
-
-
-  #####      #     #######
- #     #    # #         #
- #         #   #       #
- #  ####  #     #     #
- #     #  #######    #
- #     #  #     #   #
-  #####   #     #  #######
 
 		SOV_gaz = {
 			name = gaz
@@ -6229,15 +4297,6 @@ ideas = {
 
 	industrial_research = {
 
-  #####                                                                         #######
- #     #  #####    ##    #       #  #    #   ####   #####     ##    #####          #     #####     ##    #    #  #####   ####   #####
- #          #     #  #   #       #  ##   #  #    #  #    #   #  #   #    #         #     #    #   #  #   #   #     #    #    #  #    #
-  #####     #    #    #  #       #  # #  #  #       #    #  #    #  #    #         #     #    #  #    #  ####      #    #    #  #    #
-       #    #    ######  #       #  #  # #  #  ###  #####   ######  #    #         #     #####   ######  #  #      #    #    #  #####
- #     #    #    #    #  #       #  #   ##  #    #  #   #   #    #  #    #         #     #   #   #    #  #   #     #    #    #  #   #
-  #####     #    #    #  ######  #  #    #   ####   #    #  #    #  #####          #     #    #  #    #  #    #    #     ####   #    #
-
-
 		stalingrad_tractor_factory = {
 
 			allowed = {
@@ -6255,7 +4314,7 @@ ideas = {
 			traits = { industrial_concern }
 
 			modifier = {
-				custom_modifier_tooltip = SOV_industrial_concern_upgrade_tt
+
 			}
 		}
 
@@ -6291,16 +4350,6 @@ ideas = {
 			}
 		}
 
-
- #                                                                       ######
- #        ######  #    #  #  #    #   ####   #####     ##    #####       #     #   ####   #       #   #  #####  ######   ####   #    #  #    #  #   ####     ##    #
- #        #       ##   #  #  ##   #  #    #  #    #   #  #   #    #      #     #  #    #  #        # #     #    #       #    #  #    #  ##   #  #  #    #   #  #   #
- #        #####   # #  #  #  # #  #  #       #    #  #    #  #    #      ######   #    #  #         #      #    #####   #       ######  # #  #  #  #       #    #  #
- #        #       #  # #  #  #  # #  #  ###  #####   ######  #    #      #        #    #  #         #      #    #       #       #    #  #  # #  #  #       ######  #
- #        #       #   ##  #  #   ##  #    #  #   #   #    #  #    #      #        #    #  #         #      #    #       #    #  #    #  #   ##  #  #    #  #    #  #
- #######  ######  #    #  #  #    #   ####   #    #  #    #  #####       #         ####   ######    #      #    ######   ####   #    #  #    #  #   ####   #    #  ######
-
-
 		leningrad_polytechnical_institute = {
 
 			allowed = {
@@ -6318,7 +4367,7 @@ ideas = {
 			traits = { electronics_concern }
 
 			modifier = {
-				custom_modifier_tooltip = SOV_industrial_concern_upgrade_tt
+
 			}
 		}
 
@@ -6346,16 +4395,6 @@ ideas = {
 			}
 		}
 
-
-  #####                                         ######
- #     #   ####   #    #  #  ######  #####      #     #    ##    #  #       #    #    ##    #   #   ####
- #        #    #  #    #  #  #         #        #     #   #  #   #  #       #    #   #  #    # #   #
-  #####   #    #  #    #  #  #####     #        ######   #    #  #  #       #    #  #    #    #     ####
-       #  #    #  #    #  #  #         #        #   #    ######  #  #       # ## #  ######    #         #
- #     #  #    #   #  #   #  #         #        #    #   #    #  #  #       ##  ##  #    #    #    #    #
-  #####    ####     ##    #  ######    #        #     #  #    #  #  ######  #    #  #    #    #     ####
-
-
 		SOV_soviet_railways = { #NSB
 
 			picture = SOV_soviet_railways
@@ -6381,8 +4420,38 @@ ideas = {
 
 			traits = { railway_company }
 
+			on_add = {
+				add_to_variable = {
+					SOV_evacuation_trains_cost = 10
+				}
+
+				add_to_variable = {
+					SOV_evacuation_trains_full_refund = -10
+				}
+
+				add_to_variable = {
+					SOV_evacuation_trains_refund = -5
+				}
+			}
+
+			on_remove = {
+				custom_effect_tooltip = SOV_you_cannot_exploit_this_tt
+
+				add_to_variable = {
+					SOV_evacuation_trains_cost = -10
+				}
+
+				add_to_variable = {
+					SOV_evacuation_trains_full_refund = 10
+				}
+
+				add_to_variable = {
+					SOV_evacuation_trains_refund = 5
+				}
+			}
+
 			modifier = {
-				custom_modifier_tooltip = SOV_industrial_concern_upgrade_tt
+				custom_modifier_tooltip = SOV_soviet_railways_train_cost_reduction_tt
 			}
 		}
 
@@ -6412,22 +4481,52 @@ ideas = {
 
 			traits = { railway_company }
 
+			on_add = {
+				subtract_from_variable = {
+					SOV_evacuation_days = 3
+				}
+
+				add_to_variable = {
+					SOV_evacuation_trains_cost = 16
+				}
+
+				add_to_variable = {
+					SOV_evacuation_trains_full_refund = -16
+				}
+
+				add_to_variable = {
+					SOV_evacuation_trains_refund = -8
+				}
+			}
+
+			on_remove = {
+				custom_effect_tooltip = SOV_you_cannot_exploit_this_tt
+
+				subtract_from_variable = {
+					SOV_evacuation_days = -3
+				}
+
+				add_to_variable = {
+					SOV_evacuation_trains_cost = -16
+				}
+
+				add_to_variable = {
+					SOV_evacuation_trains_full_refund = 16
+				}
+
+				add_to_variable = {
+					SOV_evacuation_trains_refund = 8
+				}
+			}
+
 			modifier = {
 				mobilization_speed = 0.07
+				custom_modifier_tooltip = SOV_soviet_railways_improved_train_cost_reduction_and_faster_evacuations_tt
 			}
 		}
 	}
 
 	industrial_output = {
-
-  #####
- #     #   ####    ####   #####   #####    ####   #   #  ######  #    #  #####   ####   #####  #####    ####   #   #
- #        #    #  #       #    #  #    #  #    #   # #   #       #   #     #    #         #    #    #  #    #   # #
- #  ####  #    #   ####   #    #  #    #  #    #    #    #####   ####      #     ####     #    #    #  #    #    #
- #     #  #    #       #  #####   #####   #    #    #    #       #  #      #         #    #    #####   #    #    #
- #     #  #    #  #    #  #       #   #   #    #    #    #       #   #     #    #    #    #    #   #   #    #    #
-  #####    ####    ####   #       #    #   ####     #    ######  #    #    #     ####     #    #    #   ####     #
-
 
 		SOV_gosproyektstroy_1 = {
 
@@ -6906,7 +5005,7 @@ ideas = {
 
 		SOV_gosplan = {
 
-			name = "Gosplan Initiative"
+			name = "Gosplan Commission"
 
 			allowed = {
 				original_TAG = SOV

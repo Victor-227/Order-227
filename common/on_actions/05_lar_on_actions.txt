@@ -272,6 +272,7 @@ on_actions = {
 						date < 1936.1.2
 						has_dlc = "La Resistance"
 					}
+					country_lock_all_division_template = yes
 					every_state = {
 						limit = {
 							is_core_of = SPR
@@ -575,8 +576,13 @@ on_actions = {
 						}
 					}
 				}
-
-				country_event = { id = lar_news.28 hours = 2}
+				SOV = {
+					change_tag_from = SPD
+				}
+				set_global_flag = nationalist_victory
+				set_global_flag = scw_over
+	
+				country_event = { id = lar_news.1 hours = 2}
 			}
 			if = { # Republican victory SCW
 				limit = {
@@ -600,8 +606,18 @@ on_actions = {
 						}
 					}
 				}
-
-				country_event = { id = lar_news.29 hours = 2}
+				SOV = {
+					change_tag_from = SPD
+				}
+				set_global_flag = nationalist_victory
+				set_global_flag = scw_over
+				SPR = {
+					annex_country = {
+						target = ROOT
+						transfer_troops = yes
+					}
+					country_event = { id = lar_news.1 hours = 2}
+				}
 			}
 			if = { # Nationalist victory SCW
 				limit = {
@@ -627,6 +643,9 @@ on_actions = {
 							has_war = yes # in case they for some reason peace out....
 						}
 					}
+				}
+				SOV = {
+					change_tag_from = SPD
 				}
 				set_global_flag = nationalist_victory
 				set_global_flag = scw_over
@@ -656,11 +675,19 @@ on_actions = {
 						}
 					}
 				}
-				set_global_flag = republican_victory
+				SOV = {
+					change_tag_from = SPD
+				}
+				set_global_flag = nationalist_victory
 				set_global_flag = scw_over
+				SPR = {
+					annex_country = {
+						target = ROOT
+						transfer_troops = yes
+					}
+					country_event = { id = lar_news.1 hours = 2}
+				}
 
-
-				country_event = { id = lar_news.2 hours = 2}
 				if = { #If SPD has Portuguese mutineers, send them back
 					limit = {
 						tag = SPD

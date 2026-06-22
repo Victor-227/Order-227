@@ -15,8 +15,9 @@ SPR_the_inevitable_civil_war = {
 		fire_only_once = yes
 
 		activation = {
-			has_country_flag = SPR_spanish_elections_flag
-			NOT = { has_global_flag = spanish_civil_war }
+			#has_country_flag = SPR_spanish_elections_flag
+			#NOT = { has_global_flag = spanish_civil_war }
+			always = no
 		}
 
 		visible = {
@@ -56,12 +57,13 @@ SPR_the_inevitable_civil_war = {
 		fire_only_once = yes
 
 		activation = {
-			has_country_flag = SPR_spanish_elections_flag
-			NOT = { has_global_flag = spanish_civil_war }
+			#has_country_flag = SPR_spanish_elections_flag
+			#NOT = { has_global_flag = spanish_civil_war }
+			always = no
 		}
 
 		visible = {
-			tag = SPR
+			tag = SPD
 			has_completed_focus = SPR_the_popular_front
 			has_country_flag = SPR_spanish_elections_flag
 			NOT = { has_global_flag = spanish_civil_war }
@@ -72,7 +74,7 @@ SPR_the_inevitable_civil_war = {
 		is_good = no
 
 		timeout_effect = {
-			country_event = lar_spain.2
+			#country_event = lar_spain.2
 		}
 	}
 
@@ -87,7 +89,8 @@ SPR_the_inevitable_civil_war = {
 		icon = eng_propaganda_campaigns
 
 		allowed = {
-			tag = SPR
+			#tag = SPR
+			always = no
 		}
 
 		available = {
@@ -146,7 +149,8 @@ SPR_the_inevitable_civil_war = {
 		icon = generic_independence
 
 		allowed = {
-			tag = SPR
+			#tag = SPR
+			always = no
 		}
 
 		available = {
@@ -232,6 +236,9 @@ SPR_the_inevitable_civil_war = {
 
 		complete_effect = {
 			set_country_flag = SPR_inevitable_civil_war_in_progress_flag
+			SPD = {
+				activate_mission = SPR_political_assassination_mission
+			}
 		}
 
 		remove_effect = {
@@ -252,7 +259,7 @@ SPR_the_inevitable_civil_war = {
 		icon = generic_independence
 
 		allowed = {
-			tag = SPR
+			tag = SPD
 		}
 
 		available = {
@@ -284,6 +291,9 @@ SPR_the_inevitable_civil_war = {
 
 		complete_effect = {
 			set_country_flag = SPR_inevitable_civil_war_in_progress_flag
+			SPR = {
+				activate_mission = SPA_political_arrest_mission
+			}
 		}
 
 		remove_effect = {
@@ -304,7 +314,8 @@ SPR_the_inevitable_civil_war = {
 		icon = generic_army_support
 
 		allowed = {
-			tag = SPR
+			#tag = SPR
+			always = no
 		}
 
 		available = {
@@ -361,7 +372,8 @@ SPR_the_inevitable_civil_war = {
 		icon = generic_army_support
 
 		allowed = {
-			tag = SPR
+			#tag = SPR
+			always = no
 		}
 
 		available = {
@@ -420,7 +432,8 @@ SPR_the_inevitable_civil_war = {
 		icon = generic_army_support
 
 		allowed = {
-			tag = SPR
+			#tag = SPR
+			always = no
 		}
 
 		available = {
@@ -482,7 +495,8 @@ SPR_the_inevitable_civil_war = {
 		icon = oppression
 
 		allowed = {
-			tag = SPR
+			#tag = SPR
+			always = no
 		}
 
 		available = {
@@ -537,7 +551,8 @@ SPR_the_inevitable_civil_war = {
 		icon = eng_trade_unions_support
 
 		allowed = {
-			tag = SPR
+			#tag = SPR
+			always = no
 		}
 
 		available = {
@@ -604,7 +619,7 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spa_garrison_control_weak
+			key = spa_garrison_control_weak2
 			trigger = {
 				has_completed_focus = SPA_a_great_spain
 				171 = {
@@ -624,7 +639,7 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spa_garrison_control_strong
+			key = spa_garrison_control_strong2
 			trigger = {
 				has_completed_focus = SPA_a_great_spain
 				171 = {
@@ -658,7 +673,7 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spr_garrison_control_weak
+			key = spa_garrison_control_strong
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				171 = {
@@ -668,7 +683,7 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spr_garrison_control_weak2
+			key = spa_garrison_control_strong
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				171 = {
@@ -678,7 +693,7 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spr_garrison_control_strong
+			key = spa_garrison_control_weak
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				171 = {
@@ -688,7 +703,7 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spr_garrison_control_strong2
+			key = spa_garrison_control_weak
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				171 = {
@@ -706,7 +721,7 @@ SPR_the_inevitable_civil_war = {
 		}
 
 		available = {
-			has_full_control_of_state = 171
+			#has_full_control_of_state = 171
 			if = {
 				limit = {
 					has_completed_focus = SPA_a_great_spain
@@ -751,6 +766,22 @@ SPR_the_inevitable_civil_war = {
 
 		complete_effect = {
 			set_country_flag = SPA_already_expanding_influence_flag
+			if = {
+				limit = {
+					tag = SPD
+				}
+				SPR = {
+					activate_mission = SPA_expand_influence_in_the_galicia_garrison_mission
+				}
+			}
+			if = {
+				limit = {
+					tag = SPR
+				}
+				SPD = {
+					activate_mission = SPA_expand_influence_in_the_galicia_garrison_mission
+				}
+			}
 		}
 
 		remove_effect = {
@@ -830,14 +861,14 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spa_garrison_control_weak
+			key = spa_garrison_control_weak2
 			trigger = {
 				has_completed_focus = SPA_a_great_spain
 				790 = { check_variable = { var = SPA_garrison_control value = 2 compare = equals } }
 			}
 		}
 		icon = {
-			key = spa_garrison_control_strong
+			key = spa_garrison_control_strong2
 			trigger = {
 				has_completed_focus = SPA_a_great_spain
 				790 = { check_variable = { var = SPA_garrison_control value = 3 compare = equals } }
@@ -858,14 +889,14 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spr_garrison_control_weak
+			key = spa_garrison_control_strong
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				790 = { check_variable = { var = SPA_garrison_control value = 2 compare = equals } }
 			}
 		}
 		icon = {
-			key = spr_garrison_control_strong
+			key = spa_garrison_control_weak
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				790 = { check_variable = { var = SPA_garrison_control value = 3 compare = equals } }
@@ -880,7 +911,7 @@ SPR_the_inevitable_civil_war = {
 		}
 
 		available = {
-			has_full_control_of_state = 790
+			#has_full_control_of_state = 790
 			if = {
 				limit = {
 					has_completed_focus = SPA_a_great_spain
@@ -925,6 +956,22 @@ SPR_the_inevitable_civil_war = {
 
 		complete_effect = {
 			set_country_flag = SPA_already_expanding_influence_flag
+			if = {
+				limit = {
+					tag = SPD
+				}
+				SPR = {
+					activate_mission = SPA_expand_influence_in_the_asturias_garrison_mission
+				}
+			}
+			if = {
+				limit = {
+					tag = SPR
+				}
+				SPD = {
+					activate_mission = SPA_expand_influence_in_the_asturias_garrison_mission
+				}
+			}
 		}
 
 		remove_effect = {
@@ -1001,7 +1048,7 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spa_garrison_control_weak
+			key = spa_garrison_control_weak2
 			trigger = {
 				has_completed_focus = SPA_a_great_spain
 				174 = {
@@ -1021,7 +1068,7 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spa_garrison_control_strong
+			key = spa_garrison_control_strong2
 			trigger = {
 				has_completed_focus = SPA_a_great_spain
 				174 = {
@@ -1055,7 +1102,7 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spr_garrison_control_weak
+			key = spa_garrison_control_strong
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				174 = {
@@ -1065,7 +1112,7 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spr_garrison_control_weak2
+			key = spa_garrison_control_strong
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				174 = {
@@ -1075,7 +1122,7 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spr_garrison_control_strong
+			key = spa_garrison_control_weak
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				174 = {
@@ -1085,7 +1132,7 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spr_garrison_control_strong2
+			key = spa_garrison_control_weak
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				174 = {
@@ -1103,7 +1150,7 @@ SPR_the_inevitable_civil_war = {
 		}
 
 		available = {
-			has_full_control_of_state = 174
+			#has_full_control_of_state = 174
 			if = {
 				limit = {
 					has_completed_focus = SPA_a_great_spain
@@ -1148,6 +1195,22 @@ SPR_the_inevitable_civil_war = {
 
 		complete_effect = {
 			set_country_flag = SPA_already_expanding_influence_flag
+			if = {
+				limit = {
+					tag = SPD
+				}
+				SPR = {
+					activate_mission = SPA_expand_influence_in_the_leon_garrison_mission
+				}
+			}
+			if = {
+				limit = {
+					tag = SPR
+				}
+				SPD = {
+					activate_mission = SPA_expand_influence_in_the_leon_garrison_mission
+				}
+			}
 		}
 
 		remove_effect = {
@@ -1229,7 +1292,7 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spa_garrison_control_weak
+			key = spa_garrison_control_weak2
 			trigger = {
 				has_completed_focus = SPA_a_great_spain
 				791 = {
@@ -1249,7 +1312,7 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spa_garrison_control_strong
+			key = spa_garrison_control_strong2
 			trigger = {
 				has_completed_focus = SPA_a_great_spain
 				791 = {
@@ -1283,7 +1346,7 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spr_garrison_control_weak
+			key = spa_garrison_control_strong
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				791 = {
@@ -1293,7 +1356,7 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spr_garrison_control_weak2
+			key = spa_garrison_control_strong
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				791 = {
@@ -1303,7 +1366,7 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spr_garrison_control_strong
+			key = spa_garrison_control_weak
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				791 = {
@@ -1313,7 +1376,7 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spr_garrison_control_strong2
+			key = spa_garrison_control_weak
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				791 = {
@@ -1331,7 +1394,7 @@ SPR_the_inevitable_civil_war = {
 		}
 
 		available = {
-			has_full_control_of_state = 791
+			#has_full_control_of_state = 791
 			if = {
 				limit = {
 					has_completed_focus = SPA_a_great_spain
@@ -1376,6 +1439,22 @@ SPR_the_inevitable_civil_war = {
 
 		complete_effect = {
 			set_country_flag = SPA_already_expanding_influence_flag
+			if = {
+				limit = {
+					tag = SPD
+				}
+				SPR = {
+					activate_mission = SPA_expand_influence_in_the_valladolid_garrison_mission
+				}
+			}
+			if = {
+				limit = {
+					tag = SPR
+				}
+				SPD = {
+					activate_mission = SPA_expand_influence_in_the_valladolid_garrison_mission
+				}
+			}
 		}
 
 		remove_effect = {
@@ -1457,7 +1536,7 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spa_garrison_control_weak
+			key = spa_garrison_control_weak2
 			trigger = {
 				has_completed_focus = SPA_a_great_spain
 				176 = {
@@ -1477,7 +1556,7 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spa_garrison_control_strong
+			key = spa_garrison_control_strong2
 			trigger = {
 				has_completed_focus = SPA_a_great_spain
 				176 = {
@@ -1511,7 +1590,7 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spr_garrison_control_weak
+			key = spa_garrison_control_strong
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				176 = {
@@ -1521,7 +1600,7 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spr_garrison_control_weak2
+			key = spa_garrison_control_strong
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				176 = {
@@ -1531,7 +1610,7 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spr_garrison_control_strong
+			key = spa_garrison_control_weak
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				176 = {
@@ -1541,7 +1620,7 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spr_garrison_control_strong2
+			key = spa_garrison_control_weak
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				176 = {
@@ -1559,7 +1638,7 @@ SPR_the_inevitable_civil_war = {
 		}
 
 		available = {
-			has_full_control_of_state = 176
+			#has_full_control_of_state = 176
 			if = {
 				limit = {
 					has_completed_focus = SPA_a_great_spain
@@ -1604,6 +1683,22 @@ SPR_the_inevitable_civil_war = {
 
 		complete_effect = {
 			set_country_flag = SPA_already_expanding_influence_flag
+			if = {
+				limit = {
+					tag = SPD
+				}
+				SPR = {
+					activate_mission = SPA_expand_influence_in_the_burgos_garrison_mission
+				}
+			}
+			if = {
+				limit = {
+					tag = SPR
+				}
+				SPD = {
+					activate_mission = SPA_expand_influence_in_the_burgos_garrison_mission
+				}
+			}
 		}
 
 		remove_effect = {
@@ -1685,14 +1780,14 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spa_garrison_control_weak
+			key = spa_garrison_control_weak2
 			trigger = {
 				has_completed_focus = SPA_a_great_spain
 				792 = { check_variable = { var = SPA_garrison_control value = 2 compare = equals } }
 			}
 		}
 		icon = {
-			key = spa_garrison_control_strong
+			key = spa_garrison_control_strong2
 			trigger = {
 				has_completed_focus = SPA_a_great_spain
 				792 = { check_variable = { var = SPA_garrison_control value = 3 compare = equals } }
@@ -1713,14 +1808,14 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spr_garrison_control_weak
+			key = spa_garrison_control_strong
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				792 = { check_variable = { var = SPA_garrison_control value = 2 compare = equals } }
 			}
 		}
 		icon = {
-			key = spr_garrison_control_strong
+			key = spa_garrison_control_weak
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				792 = { check_variable = { var = SPA_garrison_control value = 3 compare = equals } }
@@ -1735,7 +1830,7 @@ SPR_the_inevitable_civil_war = {
 		}
 
 		available = {
-			has_full_control_of_state = 792
+			#has_full_control_of_state = 792
 			if = {
 				limit = {
 					has_completed_focus = SPA_a_great_spain
@@ -1780,6 +1875,22 @@ SPR_the_inevitable_civil_war = {
 
 		complete_effect = {
 			set_country_flag = SPA_already_expanding_influence_flag
+			if = {
+				limit = {
+					tag = SPD
+				}
+				SPR = {
+					activate_mission = SPA_expand_influence_in_the_pais_vasco_garrison_mission
+				}
+			}
+			if = {
+				limit = {
+					tag = SPR
+				}
+				SPD = {
+					activate_mission = SPA_expand_influence_in_the_pais_vasco_garrison_mission
+				}
+			}
 		}
 
 		remove_effect = {
@@ -1856,7 +1967,7 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spa_garrison_control_weak
+			key = spa_garrison_control_weak2
 			trigger = {
 				has_completed_focus = SPA_a_great_spain
 				172 = {
@@ -1876,7 +1987,7 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spa_garrison_control_strong
+			key = spa_garrison_control_strong2
 			trigger = {
 				has_completed_focus = SPA_a_great_spain
 				172 = {
@@ -1910,7 +2021,7 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spr_garrison_control_weak
+			key = spa_garrison_control_strong
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				172 = {
@@ -1920,7 +2031,7 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spr_garrison_control_weak2
+			key = spa_garrison_control_strong
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				172 = {
@@ -1930,7 +2041,7 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spr_garrison_control_strong
+			key = spa_garrison_control_weak
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				172 = {
@@ -1940,7 +2051,7 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spr_garrison_control_strong2
+			key = spa_garrison_control_weak
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				172 = {
@@ -1958,7 +2069,7 @@ SPR_the_inevitable_civil_war = {
 		}
 
 		available = {
-			has_full_control_of_state = 172
+			#has_full_control_of_state = 172
 			if = {
 				limit = {
 					has_completed_focus = SPA_a_great_spain
@@ -2003,6 +2114,22 @@ SPR_the_inevitable_civil_war = {
 
 		complete_effect = {
 			set_country_flag = SPA_already_expanding_influence_flag
+			if = {
+				limit = {
+					tag = SPD
+				}
+				SPR = {
+					activate_mission = SPA_expand_influence_in_the_navarra_garrison_mission
+				}
+			}
+			if = {
+				limit = {
+					tag = SPR
+				}
+				SPD = {
+					activate_mission = SPA_expand_influence_in_the_navarra_garrison_mission
+				}
+			}
 		}
 
 		remove_effect = {
@@ -2084,7 +2211,7 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spa_garrison_control_weak
+			key = spa_garrison_control_weak2
 			trigger = {
 				has_completed_focus = SPA_a_great_spain
 				166 = {
@@ -2104,7 +2231,7 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spa_garrison_control_strong
+			key = spa_garrison_control_strong2
 			trigger = {
 				has_completed_focus = SPA_a_great_spain
 				166 = {
@@ -2138,7 +2265,7 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spr_garrison_control_weak
+			key = spa_garrison_control_strong
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				166 = {
@@ -2148,7 +2275,7 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spr_garrison_control_weak2
+			key = spa_garrison_control_strong
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				166 = {
@@ -2158,7 +2285,7 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spr_garrison_control_strong
+			key = spa_garrison_control_weak
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				166 = {
@@ -2168,7 +2295,7 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spr_garrison_control_strong2
+			key = spa_garrison_control_weak
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				166 = {
@@ -2186,7 +2313,7 @@ SPR_the_inevitable_civil_war = {
 		}
 
 		available = {
-			has_full_control_of_state = 166
+			#has_full_control_of_state = 166
 			if = {
 				limit = {
 					has_completed_focus = SPA_a_great_spain
@@ -2231,6 +2358,22 @@ SPR_the_inevitable_civil_war = {
 
 		complete_effect = {
 			set_country_flag = SPA_already_expanding_influence_flag
+			if = {
+				limit = {
+					tag = SPD
+				}
+				SPR = {
+					activate_mission = SPA_expand_influence_in_the_western_aragon_garrison_mission
+				}
+			}
+			if = {
+				limit = {
+					tag = SPR
+				}
+				SPD = {
+					activate_mission = SPA_expand_influence_in_the_western_aragon_garrison_mission
+				}
+			}
 		}
 
 		remove_effect = {
@@ -2312,14 +2455,14 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spa_garrison_control_weak
+			key = spa_garrison_control_weak2
 			trigger = {
 				has_completed_focus = SPA_a_great_spain
 				794 = { check_variable = { var = SPA_garrison_control value = 2 compare = equals } }
 			}
 		}
 		icon = {
-			key = spa_garrison_control_strong
+			key = spa_garrison_control_strong2
 			trigger = {
 				has_completed_focus = SPA_a_great_spain
 				794 = { check_variable = { var = SPA_garrison_control value = 3 compare = equals } }
@@ -2340,14 +2483,14 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spr_garrison_control_weak
+			key = spa_garrison_control_strong
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				794 = { check_variable = { var = SPA_garrison_control value = 2 compare = equals } }
 			}
 		}
 		icon = {
-			key = spr_garrison_control_strong
+			key = spa_garrison_control_weak
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				794 = { check_variable = { var = SPA_garrison_control value = 3 compare = equals } }
@@ -2362,7 +2505,7 @@ SPR_the_inevitable_civil_war = {
 		} 
 
 		available = {
-			has_full_control_of_state = 794
+			#has_full_control_of_state = 794
 			if = {
 				limit = {
 					has_completed_focus = SPA_a_great_spain
@@ -2407,6 +2550,22 @@ SPR_the_inevitable_civil_war = {
 
 		complete_effect = {
 			set_country_flag = SPA_already_expanding_influence_flag
+			if = {
+				limit = {
+					tag = SPD
+				}
+				SPR = {
+					activate_mission = SPA_expand_influence_in_the_eastern_aragon_garrison_mission
+				}
+			}
+			if = {
+				limit = {
+					tag = SPR
+				}
+				SPD = {
+					activate_mission = SPA_expand_influence_in_the_eastern_aragon_garrison_mission
+				}
+			}
 		}
 
 		remove_effect = {
@@ -2483,14 +2642,14 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spa_garrison_control_weak
+			key = spa_garrison_control_weak2
 			trigger = {
 				has_completed_focus = SPA_a_great_spain
 				165 = { check_variable = { var = SPA_garrison_control value = 2 compare = equals } }
 			}
 		}
 		icon = {
-			key = spa_garrison_control_strong
+			key = spa_garrison_control_strong2
 			trigger = {
 				has_completed_focus = SPA_a_great_spain
 				165 = { check_variable = { var = SPA_garrison_control value = 3 compare = equals } }
@@ -2511,14 +2670,14 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spr_garrison_control_weak
+			key = spa_garrison_control_strong
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				165 = { check_variable = { var = SPA_garrison_control value = 2 compare = equals } }
 			}
 		}
 		icon = {
-			key = spr_garrison_control_strong
+			key = spa_garrison_control_weak
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				165 = { check_variable = { var = SPA_garrison_control value = 3 compare = equals } }
@@ -2533,7 +2692,7 @@ SPR_the_inevitable_civil_war = {
 		}
 
 		available = {
-			has_full_control_of_state = 165
+			#has_full_control_of_state = 165
 			if = {
 				limit = {
 					has_completed_focus = SPA_a_great_spain
@@ -2578,6 +2737,22 @@ SPR_the_inevitable_civil_war = {
 
 		complete_effect = {
 			set_country_flag = SPA_already_expanding_influence_flag
+			if = {
+				limit = {
+					tag = SPD
+				}
+				SPR = {
+					activate_mission = SPA_expand_influence_in_the_catalunya_garrison_mission
+				}
+			}
+			if = {
+				limit = {
+					tag = SPR
+				}
+				SPD = {
+					activate_mission = SPA_expand_influence_in_the_catalunya_garrison_mission
+				}
+			}
 		}
 
 		remove_effect = {
@@ -2654,7 +2829,7 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spa_garrison_control_weak
+			key = spa_garrison_control_weak2
 			trigger = {
 				has_completed_focus = SPA_a_great_spain
 				788 = {
@@ -2674,7 +2849,7 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spa_garrison_control_strong
+			key = spa_garrison_control_strong2
 			trigger = {
 				has_completed_focus = SPA_a_great_spain
 				788 = {
@@ -2708,7 +2883,7 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spr_garrison_control_weak
+			key = spa_garrison_control_strong
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				788 = {
@@ -2718,7 +2893,7 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spr_garrison_control_weak2
+			key = spa_garrison_control_strong
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				788 = {
@@ -2728,7 +2903,7 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spr_garrison_control_strong
+			key = spa_garrison_control_weak
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				788 = {
@@ -2738,7 +2913,7 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spr_garrison_control_strong2
+			key = spa_garrison_control_weak
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				788 = {
@@ -2756,7 +2931,7 @@ SPR_the_inevitable_civil_war = {
 		}
 
 		available = {
-			has_full_control_of_state = 788
+			#has_full_control_of_state = 788
 			if = {
 				limit = {
 					has_completed_focus = SPA_a_great_spain
@@ -2801,6 +2976,22 @@ SPR_the_inevitable_civil_war = {
 
 		complete_effect = {
 			set_country_flag = SPA_already_expanding_influence_flag
+			if = {
+				limit = {
+					tag = SPD
+				}
+				SPR = {
+					activate_mission = SPA_expand_influence_in_the_salamanca_garrison_mission
+				}
+			}
+			if = {
+				limit = {
+					tag = SPR
+				}
+				SPD = {
+					activate_mission = SPA_expand_influence_in_the_salamanca_garrison_mission
+				}
+			}
 		}
 
 		remove_effect = {
@@ -2882,14 +3073,14 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spa_garrison_control_weak
+			key = spa_garrison_control_weak2
 			trigger = {
 				has_completed_focus = SPA_a_great_spain
 				41 = { check_variable = { var = SPA_garrison_control value = 2 compare = equals } }
 			}
 		}
 		icon = {
-			key = spa_garrison_control_strong
+			key = spa_garrison_control_strong2
 			trigger = {
 				has_completed_focus = SPA_a_great_spain
 				41 = { check_variable = { var = SPA_garrison_control value = 3 compare = equals } }
@@ -2910,14 +3101,14 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spr_garrison_control_weak
+			key = spa_garrison_control_strong
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				41 = { check_variable = { var = SPA_garrison_control value = 2 compare = equals } }
 			}
 		}
 		icon = {
-			key = spr_garrison_control_strong
+			key = spa_garrison_control_weak
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				41 = { check_variable = { var = SPA_garrison_control value = 3 compare = equals } }
@@ -2932,7 +3123,7 @@ SPR_the_inevitable_civil_war = {
 		}
 
 		available = {
-			has_full_control_of_state = 41
+			#has_full_control_of_state = 41
 			if = {
 				limit = {
 					has_completed_focus = SPA_a_great_spain
@@ -2977,6 +3168,22 @@ SPR_the_inevitable_civil_war = {
 
 		complete_effect = {
 			set_country_flag = SPA_already_expanding_influence_flag
+			if = {
+				limit = {
+					tag = SPD
+				}
+				SPR = {
+					activate_mission = SPA_expand_influence_in_the_madrid_garrison_mission
+				}
+			}
+			if = {
+				limit = {
+					tag = SPR
+				}
+				SPD = {
+					activate_mission = SPA_expand_influence_in_the_madrid_garrison_mission
+				}
+			}
 		}
 
 		remove_effect = {
@@ -3047,14 +3254,14 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spa_garrison_control_weak
+			key = spa_garrison_control_weak2
 			trigger = {
 				has_completed_focus = SPA_a_great_spain
 				793 = { check_variable = { var = SPA_garrison_control value = 2 compare = equals } }
 			}
 		}
 		icon = {
-			key = spa_garrison_control_strong
+			key = spa_garrison_control_strong2
 			trigger = {
 				has_completed_focus = SPA_a_great_spain
 				793 = { check_variable = { var = SPA_garrison_control value = 3 compare = equals } }
@@ -3075,14 +3282,14 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spr_garrison_control_weak
+			key = spa_garrison_control_strong
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				793 = { check_variable = { var = SPA_garrison_control value = 2 compare = equals } }
 			}
 		}
 		icon = {
-			key = spr_garrison_control_strong
+			key = spa_garrison_control_weak
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				793 = { check_variable = { var = SPA_garrison_control value = 3 compare = equals } }
@@ -3097,7 +3304,7 @@ SPR_the_inevitable_civil_war = {
 		}
 
 		available = {
-			has_full_control_of_state = 793
+			#has_full_control_of_state = 793
 			if = {
 				limit = {
 					has_completed_focus = SPA_a_great_spain
@@ -3142,6 +3349,22 @@ SPR_the_inevitable_civil_war = {
 
 		complete_effect = {
 			set_country_flag = SPA_already_expanding_influence_flag
+			if = {
+				limit = {
+					tag = SPD
+				}
+				SPR = {
+					activate_mission = SPA_expand_influence_in_the_guadalajara_garrison_mission
+				}
+			}
+			if = {
+				limit = {
+					tag = SPR
+				}
+				SPD = {
+					activate_mission = SPA_expand_influence_in_the_guadalajara_garrison_mission
+				}
+			}
 		}
 
 		remove_effect = {
@@ -3218,14 +3441,14 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spa_garrison_control_weak
+			key = spa_garrison_control_weak2
 			trigger = {
 				has_completed_focus = SPA_a_great_spain
 				167 = { check_variable = { var = SPA_garrison_control value = 2 compare = equals } }
 			}
 		}
 		icon = {
-			key = spa_garrison_control_strong
+			key = spa_garrison_control_strong2
 			trigger = {
 				has_completed_focus = SPA_a_great_spain
 				167 = { check_variable = { var = SPA_garrison_control value = 3 compare = equals } }
@@ -3246,14 +3469,14 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spr_garrison_control_weak
+			key = spa_garrison_control_strong
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				167 = { check_variable = { var = SPA_garrison_control value = 2 compare = equals } }
 			}
 		}
 		icon = {
-			key = spr_garrison_control_strong
+			key = spa_garrison_control_weak
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				167 = { check_variable = { var = SPA_garrison_control value = 3 compare = equals } }
@@ -3268,7 +3491,7 @@ SPR_the_inevitable_civil_war = {
 		}
 
 		available = {
-			has_full_control_of_state = 167
+			#has_full_control_of_state = 167
 			if = {
 				limit = {
 					has_completed_focus = SPA_a_great_spain
@@ -3313,6 +3536,22 @@ SPR_the_inevitable_civil_war = {
 
 		complete_effect = {
 			set_country_flag = SPA_already_expanding_influence_flag
+			if = {
+				limit = {
+					tag = SPD
+				}
+				SPR = {
+					activate_mission = SPA_expand_influence_in_the_valencia_garrison_mission
+				}
+			}
+			if = {
+				limit = {
+					tag = SPR
+				}
+				SPD = {
+					activate_mission = SPA_expand_influence_in_the_valencia_garrison_mission
+				}
+			}
 		}
 
 		remove_effect = {
@@ -3389,14 +3628,14 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spa_garrison_control_weak
+			key = spa_garrison_control_weak2
 			trigger = {
 				has_completed_focus = SPA_a_great_spain
 				170 = { check_variable = { var = SPA_garrison_control value = 2 compare = equals } }
 			}
 		}
 		icon = {
-			key = spa_garrison_control_strong
+			key = spa_garrison_control_strong2
 			trigger = {
 				has_completed_focus = SPA_a_great_spain
 				170 = { check_variable = { var = SPA_garrison_control value = 3 compare = equals } }
@@ -3417,14 +3656,14 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spr_garrison_control_weak
+			key = spa_garrison_control_strong
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				170 = { check_variable = { var = SPA_garrison_control value = 2 compare = equals } }
 			}
 		}
 		icon = {
-			key = spr_garrison_control_strong
+			key = spa_garrison_control_weak
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				170 = { check_variable = { var = SPA_garrison_control value = 3 compare = equals } }
@@ -3439,7 +3678,7 @@ SPR_the_inevitable_civil_war = {
 		}
 
 		available = {
-			has_full_control_of_state = 170
+			#has_full_control_of_state = 170
 			if = {
 				limit = {
 					has_completed_focus = SPA_a_great_spain
@@ -3484,6 +3723,22 @@ SPR_the_inevitable_civil_war = {
 
 		complete_effect = {
 			set_country_flag = SPA_already_expanding_influence_flag
+			if = {
+				limit = {
+					tag = SPD
+				}
+				SPR = {
+					activate_mission = SPA_expand_influence_in_the_extremadura_garrison_mission
+				}
+			}
+			if = {
+				limit = {
+					tag = SPR
+				}
+				SPD = {
+					activate_mission = SPA_expand_influence_in_the_extremadura_garrison_mission
+				}
+			}
 		}
 
 		remove_effect = {
@@ -3560,14 +3815,14 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spa_garrison_control_weak
+			key = spa_garrison_control_weak2
 			trigger = {
 				has_completed_focus = SPA_a_great_spain
 				175 = { check_variable = { var = SPA_garrison_control value = 2 compare = equals } }
 			}
 		}
 		icon = {
-			key = spa_garrison_control_strong
+			key = spa_garrison_control_strong2
 			trigger = {
 				has_completed_focus = SPA_a_great_spain
 				175 = { check_variable = { var = SPA_garrison_control value = 3 compare = equals } }
@@ -3588,14 +3843,14 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spr_garrison_control_weak
+			key = spa_garrison_control_strong
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				175 = { check_variable = { var = SPA_garrison_control value = 2 compare = equals } }
 			}
 		}
 		icon = {
-			key = spr_garrison_control_strong
+			key = spa_garrison_control_weak
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				175 = { check_variable = { var = SPA_garrison_control value = 3 compare = equals } }
@@ -3610,7 +3865,7 @@ SPR_the_inevitable_civil_war = {
 		}
 
 		available = {
-			has_full_control_of_state = 175
+			#has_full_control_of_state = 175
 			if = {
 				limit = {
 					has_completed_focus = SPA_a_great_spain
@@ -3655,6 +3910,22 @@ SPR_the_inevitable_civil_war = {
 
 		complete_effect = {
 			set_country_flag = SPA_already_expanding_influence_flag
+			if = {
+				limit = {
+					tag = SPD
+				}
+				SPR = {
+					activate_mission = SPA_expand_influence_in_the_ciudad_real_garrison_mission
+				}
+			}
+			if = {
+				limit = {
+					tag = SPR
+				}
+				SPD = {
+					activate_mission = SPA_expand_influence_in_the_ciudad_real_garrison_mission
+				}
+			}
 		}
 
 		remove_effect = {
@@ -3731,14 +4002,14 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spa_garrison_control_weak
+			key = spa_garrison_control_weak2
 			trigger = {
 				has_completed_focus = SPA_a_great_spain
 				168 = { check_variable = { var = SPA_garrison_control value = 2 compare = equals } }
 			}
 		}
 		icon = {
-			key = spa_garrison_control_strong
+			key = spa_garrison_control_strong2
 			trigger = {
 				has_completed_focus = SPA_a_great_spain
 				168 = { check_variable = { var = SPA_garrison_control value = 3 compare = equals } }
@@ -3759,14 +4030,14 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spr_garrison_control_weak
+			key = spa_garrison_control_strong
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				168 = { check_variable = { var = SPA_garrison_control value = 2 compare = equals } }
 			}
 		}
 		icon = {
-			key = spr_garrison_control_strong
+			key = spa_garrison_control_weak
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				168 = { check_variable = { var = SPA_garrison_control value = 3 compare = equals } }
@@ -3781,7 +4052,7 @@ SPR_the_inevitable_civil_war = {
 		}
 
 		available = {
-			has_full_control_of_state = 168
+			#has_full_control_of_state = 168
 			if = {
 				limit = {
 					has_completed_focus = SPA_a_great_spain
@@ -3826,6 +4097,22 @@ SPR_the_inevitable_civil_war = {
 
 		complete_effect = {
 			set_country_flag = SPA_already_expanding_influence_flag
+			if = {
+				limit = {
+					tag = SPD
+				}
+				SPR = {
+					activate_mission = SPA_expand_influence_in_the_murcia_garrison_mission
+				}
+			}
+			if = {
+				limit = {
+					tag = SPR
+				}
+				SPD = {
+					activate_mission = SPA_expand_influence_in_the_murcia_garrison_mission
+				}
+			}
 		}
 
 		remove_effect = {
@@ -3902,14 +4189,14 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spa_garrison_control_weak
+			key = spa_garrison_control_weak2
 			trigger = {
 				has_completed_focus = SPA_a_great_spain
 				169 = { check_variable = { var = SPA_garrison_control value = 2 compare = equals } }
 			}
 		}
 		icon = {
-			key = spa_garrison_control_strong
+			key = spa_garrison_control_strong2
 			trigger = {
 				has_completed_focus = SPA_a_great_spain
 				169 = { check_variable = { var = SPA_garrison_control value = 3 compare = equals } }
@@ -3930,14 +4217,14 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spr_garrison_control_weak
+			key = spa_garrison_control_strong
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				169 = { check_variable = { var = SPA_garrison_control value = 2 compare = equals } }
 			}
 		}
 		icon = {
-			key = spr_garrison_control_strong
+			key = spa_garrison_control_weak
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				169 = { check_variable = { var = SPA_garrison_control value = 3 compare = equals } }
@@ -3952,7 +4239,7 @@ SPR_the_inevitable_civil_war = {
 		}
 
 		available = {
-			has_full_control_of_state = 169
+			#has_full_control_of_state = 169
 			if = {
 				limit = {
 					has_completed_focus = SPA_a_great_spain
@@ -3997,6 +4284,22 @@ SPR_the_inevitable_civil_war = {
 
 		complete_effect = {
 			set_country_flag = SPA_already_expanding_influence_flag
+			if = {
+				limit = {
+					tag = SPD
+				}
+				SPR = {
+					activate_mission = SPA_expand_influence_in_the_sevilla_garrison_mission
+				}
+			}
+			if = {
+				limit = {
+					tag = SPR
+				}
+				SPD = {
+					activate_mission = SPA_expand_influence_in_the_sevilla_garrison_mission
+				}
+			}
 		}
 
 		remove_effect = {
@@ -4073,14 +4376,14 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spa_garrison_control_weak
+			key = spa_garrison_control_weak2
 			trigger = {
 				has_completed_focus = SPA_a_great_spain
 				789 = { check_variable = { var = SPA_garrison_control value = 2 compare = equals } }
 			}
 		}
 		icon = {
-			key = spa_garrison_control_strong
+			key = spa_garrison_control_strong2
 			trigger = {
 				has_completed_focus = SPA_a_great_spain
 				789 = { check_variable = { var = SPA_garrison_control value = 3 compare = equals } }
@@ -4101,14 +4404,14 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spr_garrison_control_weak
+			key = spa_garrison_control_strong
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				789 = { check_variable = { var = SPA_garrison_control value = 2 compare = equals } }
 			}
 		}
 		icon = {
-			key = spr_garrison_control_strong
+			key = spa_garrison_control_weak
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				789 = { check_variable = { var = SPA_garrison_control value = 3 compare = equals } }
@@ -4123,7 +4426,7 @@ SPR_the_inevitable_civil_war = {
 		}
 
 		available = {
-			has_full_control_of_state = 789
+			#has_full_control_of_state = 789
 			if = {
 				limit = {
 					has_completed_focus = SPA_a_great_spain
@@ -4168,6 +4471,22 @@ SPR_the_inevitable_civil_war = {
 
 		complete_effect = {
 			set_country_flag = SPA_already_expanding_influence_flag
+			if = {
+				limit = {
+					tag = SPD
+				}
+				SPR = {
+					activate_mission = SPA_expand_influence_in_the_cordoba_garrison_mission
+				}
+			}
+			if = {
+				limit = {
+					tag = SPR
+				}
+				SPD = {
+					activate_mission = SPA_expand_influence_in_the_cordoba_garrison_mission
+				}
+			}
 		}
 
 		remove_effect = {
@@ -4244,14 +4563,14 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spa_garrison_control_weak
+			key = spa_garrison_control_weak2
 			trigger = {
 				has_completed_focus = SPA_a_great_spain
 				173 = { check_variable = { var = SPA_garrison_control value = 2 compare = equals } }
 			}
 		}
 		icon = {
-			key = spa_garrison_control_strong
+			key = spa_garrison_control_strong2
 			trigger = {
 				has_completed_focus = SPA_a_great_spain
 				173 = { check_variable = { var = SPA_garrison_control value = 3 compare = equals } }
@@ -4272,14 +4591,14 @@ SPR_the_inevitable_civil_war = {
 			}
 		}
 		icon = {
-			key = spr_garrison_control_weak
+			key = spa_garrison_control_strong
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				173 = { check_variable = { var = SPA_garrison_control value = 2 compare = equals } }
 			}
 		}
 		icon = {
-			key = spr_garrison_control_strong
+			key = spa_garrison_control_weak
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				173 = { check_variable = { var = SPA_garrison_control value = 3 compare = equals } }
@@ -4294,7 +4613,7 @@ SPR_the_inevitable_civil_war = {
 		}
 
 		available = {
-			has_full_control_of_state = 173
+			#has_full_control_of_state = 173
 			if = {
 				limit = {
 					has_completed_focus = SPA_a_great_spain
@@ -4339,6 +4658,22 @@ SPR_the_inevitable_civil_war = {
 
 		complete_effect = {
 			set_country_flag = SPA_already_expanding_influence_flag
+			if = {
+				limit = {
+					tag = SPD
+				}
+				SPR = {
+					activate_mission = SPA_expand_influence_in_the_granada_garrison_mission
+				}
+			}
+			if = {
+				limit = {
+					tag = SPR
+				}
+				SPD = {
+					activate_mission = SPA_expand_influence_in_the_granada_garrison_mission
+				}
+			}
 		}
 
 		remove_effect = {
@@ -5105,7 +5440,7 @@ SPR_opposition_civil_war_preparations = {
 		}
 
 		visible = {
-			tag = SPR
+			tag = SPD
 			has_country_flag = SPR_spanish_elections_flag
 			has_completed_focus = SPR_the_popular_front
 			NOT = { has_global_flag = spanish_civil_war }
@@ -5115,7 +5450,7 @@ SPR_opposition_civil_war_preparations = {
 			add_stability = -0.1
 			add_days_mission_timeout = {
 				mission = SPR_military_plot_republicans
-				days = -25
+				days = -36
 			}
 			set_country_flag = SPA_political_assassination_flag
 			hidden_effect = {
@@ -5159,7 +5494,7 @@ SPR_opposition_civil_war_preparations = {
 		timeout_effect = {
 			add_days_mission_timeout = {
 				mission = SPA_military_plot_nationalists
-				days = 15
+				days = 37
 			}
 			add_popularity = {
 			    ideology = communism
@@ -5378,7 +5713,10 @@ SPR_opposition_civil_war_preparations = {
 		icon = generic_prepare_civil_war
 
 		allowed = {
-			tag = SPR
+			OR = {
+				tag = SPR
+				tag = SPD 
+			}
 		}
 
 		available = {
@@ -5404,7 +5742,10 @@ SPR_opposition_civil_war_preparations = {
 		}
 
 		visible = {
-			tag = SPR
+			OR = {
+				tag = SPR
+				tag = SPD 
+			}
 			has_country_flag = SPR_spanish_elections_flag
 			NOT = { has_global_flag = spanish_civil_war }
 		}
@@ -5472,37 +5813,6 @@ SPR_opposition_civil_war_preparations = {
 					custom_effect_tooltip = SPA_expand_influence_nationalists_tt
 					SPA_garrison_control_tooltip = yes
 				}
-				hidden_effect = {
-					171 = {
-						if = {
-							limit = { check_variable = { SPA_garrison_control < 4 } }
-							
-							add_to_variable = { var = SPA_garrison_control value = 1 }
-							SPR = { add_to_variable = { var = spa_civil_war_divisions_counter_var value = 1 } }
-							SPR = { subtract_from_variable = { var = spr_civil_war_divisions_counter_var value = 1 } }
-						}
-						SPR_garrison_control_cost_calculation = yes
-					}
-					if = {
-						limit = {
-							date < 1936.7.20
-						}
-						country_event = { id = lar_spain.5 }
-					}
-					if = {
-						limit = {
-							date > 1936.7.19
-							date < 1936.9.16
-						}
-						country_event = { id = lar_spain.5 days = 5 random_days = 10 }
-					}
-					if = {
-						limit = {
-							date > 1936.9.15
-						}
-						country_event = { id = lar_spain.5 days = 15 random_days = 15 }
-					}
-				}
 			}
 			if = {
 				limit = {
@@ -5512,40 +5822,6 @@ SPR_opposition_civil_war_preparations = {
 					custom_effect_tooltip = SPR_expand_influence_republicans_tt
 					SPA_garrison_control_tooltip = yes
 					SPA_garrison_control_cost_calculation = yes
-				}
-				hidden_effect = {
-					171 = {
-						subtract_from_variable = { var = SPA_garrison_control value = 1 }
-						SPR = { subtract_from_variable = { var = spa_civil_war_divisions_counter_var value = 1 } }
-						SPR = { add_to_variable = { var = spr_civil_war_divisions_counter_var value = 1 } }
-						SPA_garrison_control_cost_calculation = yes
-					}
-					if = {
-						limit = {
-							date < 1936.5.2
-						}
-						country_event = { id = lar_spain.5 days = 20 random_days = 10 }
-					}
-					if = {
-						limit = {
-							date > 1936.5.1
-							date < 1936.8.10
-						}
-						country_event = { id = lar_spain.5 days = 6 random_days = 9 }
-					}
-					if = {
-						limit = {
-							date > 1936.8.9
-							date < 1936.10.2
-						}
-						country_event = { id = lar_spain.5 days = 1 random_days = 5 }
-					}
-					if = {
-						limit = {
-							date > 1936.10.1
-						}
-						country_event = { id = lar_spain.5 }
-					}
 				}
 			}
 		}
@@ -5557,7 +5833,10 @@ SPR_opposition_civil_war_preparations = {
 		icon = generic_prepare_civil_war
 
 		allowed = {
-			tag = SPR
+			OR = {
+				tag = SPR
+				tag = SPD 
+			}
 		}
 
 		available = {
@@ -5583,7 +5862,10 @@ SPR_opposition_civil_war_preparations = {
 		}
 
 		visible = {
-			tag = SPR
+			OR = {
+				tag = SPR
+				tag = SPD 
+			}
 			has_country_flag = SPR_spanish_elections_flag
 			NOT = { has_global_flag = spanish_civil_war }
 		}
@@ -5651,37 +5933,6 @@ SPR_opposition_civil_war_preparations = {
 					custom_effect_tooltip = SPA_expand_influence_nationalists_tt
 					SPA_garrison_control_tooltip = yes
 				}
-				hidden_effect = {
-					790 = {
-						if = {
-							limit = { check_variable = { SPA_garrison_control < 4 } }
-							
-							add_to_variable = { var = SPA_garrison_control value = 1 }
-							SPR = { add_to_variable = { var = spa_civil_war_divisions_counter_var value = 1 } }
-							SPR = { subtract_from_variable = { var = spr_civil_war_divisions_counter_var value = 1 } }
-						}
-						SPR_garrison_control_cost_calculation = yes
-					}
-					if = {
-						limit = {
-							date < 1936.7.20
-						}
-						country_event = { id = lar_spain.5 }
-					}
-					if = {
-						limit = {
-							date > 1936.7.19
-							date < 1936.9.16
-						}
-						country_event = { id = lar_spain.5 days = 5 random_days = 10 }
-					}
-					if = {
-						limit = {
-							date > 1936.9.15
-						}
-						country_event = { id = lar_spain.5 days = 15 random_days = 15 }
-					}
-				}
 			}
 			if = {
 				limit = {
@@ -5691,40 +5942,6 @@ SPR_opposition_civil_war_preparations = {
 					custom_effect_tooltip = SPR_expand_influence_republicans_tt
 					SPA_garrison_control_tooltip = yes
 					SPA_garrison_control_cost_calculation = yes
-				}
-				hidden_effect = {
-					790 = {
-						subtract_from_variable = { var = SPA_garrison_control value = 1 }
-						SPR = { subtract_from_variable = { var = spa_civil_war_divisions_counter_var value = 1 } }
-						SPR = { add_to_variable = { var = spr_civil_war_divisions_counter_var value = 1 } }
-						SPA_garrison_control_cost_calculation = yes
-					}
-					if = {
-						limit = {
-							date < 1936.5.2
-						}
-						country_event = { id = lar_spain.5 days = 20 random_days = 10 }
-					}
-					if = {
-						limit = {
-							date > 1936.5.1
-							date < 1936.8.10
-						}
-						country_event = { id = lar_spain.5 days = 6 random_days = 9 }
-					}
-					if = {
-						limit = {
-							date > 1936.8.9
-							date < 1936.10.2
-						}
-						country_event = { id = lar_spain.5 days = 1 random_days = 5 }
-					}
-					if = {
-						limit = {
-							date > 1936.10.1
-						}
-						country_event = { id = lar_spain.5 }
-					}
 				}
 			}
 		}
@@ -5736,7 +5953,10 @@ SPR_opposition_civil_war_preparations = {
 		icon = generic_prepare_civil_war
 
 		allowed = {
-			tag = SPR
+			OR = {
+				tag = SPR
+				tag = SPD 
+			}
 		}
 
 		available = {
@@ -5762,7 +5982,10 @@ SPR_opposition_civil_war_preparations = {
 		}
 
 		visible = {
-			tag = SPR
+			OR = {
+				tag = SPR
+				tag = SPD 
+			}
 			has_country_flag = SPR_spanish_elections_flag
 			NOT = { has_global_flag = spanish_civil_war }
 		}
@@ -5830,37 +6053,6 @@ SPR_opposition_civil_war_preparations = {
 					custom_effect_tooltip = SPA_expand_influence_nationalists_tt
 					SPA_garrison_control_tooltip = yes
 				}
-				hidden_effect = {
-					174 = {
-						if = {
-							limit = { check_variable = { SPA_garrison_control < 4 } }
-							
-							add_to_variable = { var = SPA_garrison_control value = 1 }
-							SPR = { add_to_variable = { var = spa_civil_war_divisions_counter_var value = 1 } }
-							SPR = { subtract_from_variable = { var = spr_civil_war_divisions_counter_var value = 1 } }
-						}
-						SPR_garrison_control_cost_calculation = yes
-					}
-					if = {
-						limit = {
-							date < 1936.7.20
-						}
-						country_event = { id = lar_spain.5 }
-					}
-					if = {
-						limit = {
-							date > 1936.7.19
-							date < 1936.9.16
-						}
-						country_event = { id = lar_spain.5 days = 5 random_days = 10 }
-					}
-					if = {
-						limit = {
-							date > 1936.9.15
-						}
-						country_event = { id = lar_spain.5 days = 15 random_days = 15 }
-					}
-				}
 			}
 			if = {
 				limit = {
@@ -5870,40 +6062,6 @@ SPR_opposition_civil_war_preparations = {
 					custom_effect_tooltip = SPR_expand_influence_republicans_tt
 					SPA_garrison_control_tooltip = yes
 					SPA_garrison_control_cost_calculation = yes
-				}
-				hidden_effect = {
-					174 = {
-						subtract_from_variable = { var = SPA_garrison_control value = 1 }
-						SPR = { subtract_from_variable = { var = spa_civil_war_divisions_counter_var value = 1 } }
-						SPR = { add_to_variable = { var = spr_civil_war_divisions_counter_var value = 1 } }
-						SPA_garrison_control_cost_calculation = yes
-					}
-					if = {
-						limit = {
-							date < 1936.5.2
-						}
-						country_event = { id = lar_spain.5 days = 20 random_days = 10 }
-					}
-					if = {
-						limit = {
-							date > 1936.5.1
-							date < 1936.8.10
-						}
-						country_event = { id = lar_spain.5 days = 6 random_days = 9 }
-					}
-					if = {
-						limit = {
-							date > 1936.8.9
-							date < 1936.10.2
-						}
-						country_event = { id = lar_spain.5 days = 1 random_days = 5 }
-					}
-					if = {
-						limit = {
-							date > 1936.10.1
-						}
-						country_event = { id = lar_spain.5 }
-					}
 				}
 			}
 		}
@@ -5915,7 +6073,10 @@ SPR_opposition_civil_war_preparations = {
 		icon = generic_prepare_civil_war
 
 		allowed = {
-			tag = SPR
+			OR = {
+				tag = SPR
+				tag = SPD 
+			}
 		}
 
 		available = {
@@ -5941,7 +6102,10 @@ SPR_opposition_civil_war_preparations = {
 		}
 
 		visible = {
-			tag = SPR
+			OR = {
+				tag = SPR
+				tag = SPD 
+			}
 			has_country_flag = SPR_spanish_elections_flag
 			NOT = { has_global_flag = spanish_civil_war }
 		}
@@ -6009,37 +6173,6 @@ SPR_opposition_civil_war_preparations = {
 					custom_effect_tooltip = SPA_expand_influence_nationalists_tt
 					SPA_garrison_control_tooltip = yes
 				}
-				hidden_effect = {
-					791 = {
-						if = {
-							limit = { check_variable = { SPA_garrison_control < 4 } }
-							
-							add_to_variable = { var = SPA_garrison_control value = 1 }
-							SPR = { add_to_variable = { var = spa_civil_war_divisions_counter_var value = 1 } }
-							SPR = { subtract_from_variable = { var = spr_civil_war_divisions_counter_var value = 1 } }
-						}
-						SPR_garrison_control_cost_calculation = yes
-					}
-					if = {
-						limit = {
-							date < 1936.7.20
-						}
-						country_event = { id = lar_spain.5 }
-					}
-					if = {
-						limit = {
-							date > 1936.7.19
-							date < 1936.9.16
-						}
-						country_event = { id = lar_spain.5 days = 5 random_days = 10 }
-					}
-					if = {
-						limit = {
-							date > 1936.9.15
-						}
-						country_event = { id = lar_spain.5 days = 15 random_days = 15 }
-					}
-				}
 			}
 			if = {
 				limit = {
@@ -6049,40 +6182,6 @@ SPR_opposition_civil_war_preparations = {
 					custom_effect_tooltip = SPR_expand_influence_republicans_tt
 					SPA_garrison_control_tooltip = yes
 					SPA_garrison_control_cost_calculation = yes
-				}
-				hidden_effect = {
-					791 = {
-						subtract_from_variable = { var = SPA_garrison_control value = 1 }
-						SPR = { subtract_from_variable = { var = spa_civil_war_divisions_counter_var value = 1 } }
-						SPR = { add_to_variable = { var = spr_civil_war_divisions_counter_var value = 1 } }
-						SPA_garrison_control_cost_calculation = yes
-					}
-					if = {
-						limit = {
-							date < 1936.5.2
-						}
-						country_event = { id = lar_spain.5 days = 20 random_days = 10 }
-					}
-					if = {
-						limit = {
-							date > 1936.5.1
-							date < 1936.8.10
-						}
-						country_event = { id = lar_spain.5 days = 6 random_days = 9 }
-					}
-					if = {
-						limit = {
-							date > 1936.8.9
-							date < 1936.10.2
-						}
-						country_event = { id = lar_spain.5 days = 1 random_days = 5 }
-					}
-					if = {
-						limit = {
-							date > 1936.10.1
-						}
-						country_event = { id = lar_spain.5 }
-					}
 				}
 			}
 		}
@@ -6094,7 +6193,10 @@ SPR_opposition_civil_war_preparations = {
 		icon = generic_prepare_civil_war
 
 		allowed = {
-			tag = SPR
+			OR = {
+				tag = SPR
+				tag = SPD 
+			}
 		}
 
 		available = {
@@ -6120,7 +6222,10 @@ SPR_opposition_civil_war_preparations = {
 		}
 
 		visible = {
-			tag = SPR
+			OR = {
+				tag = SPR
+				tag = SPD 
+			}
 			has_country_flag = SPR_spanish_elections_flag
 			NOT = { has_global_flag = spanish_civil_war }
 		}
@@ -6188,37 +6293,6 @@ SPR_opposition_civil_war_preparations = {
 					custom_effect_tooltip = SPA_expand_influence_nationalists_tt
 					SPA_garrison_control_tooltip = yes
 				}
-				hidden_effect = {
-					176 = {
-						if = {
-							limit = { check_variable = { SPA_garrison_control < 4 } }
-							
-							add_to_variable = { var = SPA_garrison_control value = 1 }
-							SPR = { add_to_variable = { var = spa_civil_war_divisions_counter_var value = 1 } }
-							SPR = { subtract_from_variable = { var = spr_civil_war_divisions_counter_var value = 1 } }
-						}
-						SPR_garrison_control_cost_calculation = yes
-					}
-					if = {
-						limit = {
-							date < 1936.7.20
-						}
-						country_event = { id = lar_spain.5 }
-					}
-					if = {
-						limit = {
-							date > 1936.7.19
-							date < 1936.9.16
-						}
-						country_event = { id = lar_spain.5 days = 5 random_days = 10 }
-					}
-					if = {
-						limit = {
-							date > 1936.9.15
-						}
-						country_event = { id = lar_spain.5 days = 15 random_days = 15 }
-					}
-				}
 			}
 			if = {
 				limit = {
@@ -6228,40 +6302,6 @@ SPR_opposition_civil_war_preparations = {
 					custom_effect_tooltip = SPR_expand_influence_republicans_tt
 					SPA_garrison_control_tooltip = yes
 					SPA_garrison_control_cost_calculation = yes
-				}
-				hidden_effect = {
-					176 = {
-						subtract_from_variable = { var = SPA_garrison_control value = 1 }
-						SPR = { subtract_from_variable = { var = spa_civil_war_divisions_counter_var value = 1 } }
-						SPR = { add_to_variable = { var = spr_civil_war_divisions_counter_var value = 1 } }
-						SPA_garrison_control_cost_calculation = yes
-					}
-					if = {
-						limit = {
-							date < 1936.5.2
-						}
-						country_event = { id = lar_spain.5 days = 20 random_days = 10 }
-					}
-					if = {
-						limit = {
-							date > 1936.5.1
-							date < 1936.8.10
-						}
-						country_event = { id = lar_spain.5 days = 6 random_days = 9 }
-					}
-					if = {
-						limit = {
-							date > 1936.8.9
-							date < 1936.10.2
-						}
-						country_event = { id = lar_spain.5 days = 1 random_days = 5 }
-					}
-					if = {
-						limit = {
-							date > 1936.10.1
-						}
-						country_event = { id = lar_spain.5 }
-					}
 				}
 			}
 		}
@@ -6273,7 +6313,10 @@ SPR_opposition_civil_war_preparations = {
 		icon = generic_prepare_civil_war
 
 		allowed = {
-			tag = SPR
+			OR = {
+				tag = SPR
+				tag = SPD 
+			}
 		}
 
 		available = {
@@ -6299,7 +6342,10 @@ SPR_opposition_civil_war_preparations = {
 		}
 
 		visible = {
-			tag = SPR
+			OR = {
+				tag = SPR
+				tag = SPD 
+			}
 			has_country_flag = SPR_spanish_elections_flag
 			NOT = { has_global_flag = spanish_civil_war }
 		}
@@ -6367,37 +6413,6 @@ SPR_opposition_civil_war_preparations = {
 					custom_effect_tooltip = SPA_expand_influence_nationalists_tt
 					SPA_garrison_control_tooltip = yes
 				}
-				hidden_effect = {
-					792 = {
-						if = {
-							limit = { check_variable = { SPA_garrison_control < 4 } }
-							
-							add_to_variable = { var = SPA_garrison_control value = 1 }
-							SPR = { add_to_variable = { var = spa_civil_war_divisions_counter_var value = 1 } }
-							SPR = { subtract_from_variable = { var = spr_civil_war_divisions_counter_var value = 1 } }
-						}
-						SPR_garrison_control_cost_calculation = yes
-					}
-					if = {
-						limit = {
-							date < 1936.7.20
-						}
-						country_event = { id = lar_spain.5 }
-					}
-					if = {
-						limit = {
-							date > 1936.7.19
-							date < 1936.9.16
-						}
-						country_event = { id = lar_spain.5 days = 5 random_days = 10 }
-					}
-					if = {
-						limit = {
-							date > 1936.9.15
-						}
-						country_event = { id = lar_spain.5 days = 15 random_days = 15 }
-					}
-				}
 			}
 			if = {
 				limit = {
@@ -6407,40 +6422,6 @@ SPR_opposition_civil_war_preparations = {
 					custom_effect_tooltip = SPR_expand_influence_republicans_tt
 					SPA_garrison_control_tooltip = yes
 					SPA_garrison_control_cost_calculation = yes
-				}
-				hidden_effect = {
-					792 = {
-						subtract_from_variable = { var = SPA_garrison_control value = 1 }
-						SPR = { subtract_from_variable = { var = spa_civil_war_divisions_counter_var value = 1 } }
-						SPR = { add_to_variable = { var = spr_civil_war_divisions_counter_var value = 1 } }
-						SPA_garrison_control_cost_calculation = yes
-					}
-					if = {
-						limit = {
-							date < 1936.5.2
-						}
-						country_event = { id = lar_spain.5 days = 20 random_days = 10 }
-					}
-					if = {
-						limit = {
-							date > 1936.5.1
-							date < 1936.8.10
-						}
-						country_event = { id = lar_spain.5 days = 6 random_days = 9 }
-					}
-					if = {
-						limit = {
-							date > 1936.8.9
-							date < 1936.10.2
-						}
-						country_event = { id = lar_spain.5 days = 1 random_days = 5 }
-					}
-					if = {
-						limit = {
-							date > 1936.10.1
-						}
-						country_event = { id = lar_spain.5 }
-					}
 				}
 			}
 		}
@@ -6452,7 +6433,10 @@ SPR_opposition_civil_war_preparations = {
 		icon = generic_prepare_civil_war
 
 		allowed = {
-			tag = SPR
+			OR = {
+				tag = SPR
+				tag = SPD 
+			}
 		}
 
 		available = {
@@ -6478,7 +6462,10 @@ SPR_opposition_civil_war_preparations = {
 		}
 
 		visible = {
-			tag = SPR
+			OR = {
+				tag = SPR
+				tag = SPD 
+			}
 			has_country_flag = SPR_spanish_elections_flag
 			NOT = { has_global_flag = spanish_civil_war }
 		}
@@ -6546,37 +6533,6 @@ SPR_opposition_civil_war_preparations = {
 					custom_effect_tooltip = SPA_expand_influence_nationalists_tt
 					SPA_garrison_control_tooltip = yes
 				}
-				hidden_effect = {
-					172 = {
-						if = {
-							limit = { check_variable = { SPA_garrison_control < 4 } }
-							
-							add_to_variable = { var = SPA_garrison_control value = 1 }
-							SPR = { add_to_variable = { var = spa_civil_war_divisions_counter_var value = 1 } }
-							SPR = { subtract_from_variable = { var = spr_civil_war_divisions_counter_var value = 1 } }
-						}
-						SPR_garrison_control_cost_calculation = yes
-					}
-					if = {
-						limit = {
-							date < 1936.7.20
-						}
-						country_event = { id = lar_spain.5 }
-					}
-					if = {
-						limit = {
-							date > 1936.7.19
-							date < 1936.9.16
-						}
-						country_event = { id = lar_spain.5 days = 5 random_days = 10 }
-					}
-					if = {
-						limit = {
-							date > 1936.9.15
-						}
-						country_event = { id = lar_spain.5 days = 15 random_days = 15 }
-					}
-				}
 			}
 			if = {
 				limit = {
@@ -6586,40 +6542,6 @@ SPR_opposition_civil_war_preparations = {
 					custom_effect_tooltip = SPR_expand_influence_republicans_tt
 					SPA_garrison_control_tooltip = yes
 					SPA_garrison_control_cost_calculation = yes
-				}
-				hidden_effect = {
-					172 = {
-						subtract_from_variable = { var = SPA_garrison_control value = 1 }
-						SPR = { subtract_from_variable = { var = spa_civil_war_divisions_counter_var value = 1 } }
-						SPR = { add_to_variable = { var = spr_civil_war_divisions_counter_var value = 1 } }
-						SPA_garrison_control_cost_calculation = yes
-					}
-					if = {
-						limit = {
-							date < 1936.5.2
-						}
-						country_event = { id = lar_spain.5 days = 20 random_days = 10 }
-					}
-					if = {
-						limit = {
-							date > 1936.5.1
-							date < 1936.8.10
-						}
-						country_event = { id = lar_spain.5 days = 6 random_days = 9 }
-					}
-					if = {
-						limit = {
-							date > 1936.8.9
-							date < 1936.10.2
-						}
-						country_event = { id = lar_spain.5 days = 1 random_days = 5 }
-					}
-					if = {
-						limit = {
-							date > 1936.10.1
-						}
-						country_event = { id = lar_spain.5 }
-					}
 				}
 			}
 		}
@@ -6631,7 +6553,10 @@ SPR_opposition_civil_war_preparations = {
 		icon = generic_prepare_civil_war
 
 		allowed = {
-			tag = SPR
+			OR = {
+				tag = SPR
+				tag = SPD 
+			}
 		}
 
 		available = {
@@ -6657,7 +6582,10 @@ SPR_opposition_civil_war_preparations = {
 		}
 
 		visible = {
-			tag = SPR
+			OR = {
+				tag = SPR
+				tag = SPD 
+			}
 			has_country_flag = SPR_spanish_elections_flag
 			NOT = { has_global_flag = spanish_civil_war }
 		}
@@ -6725,37 +6653,6 @@ SPR_opposition_civil_war_preparations = {
 					custom_effect_tooltip = SPA_expand_influence_nationalists_tt
 					SPA_garrison_control_tooltip = yes
 				}
-				hidden_effect = {
-					166 = {
-						if = {
-							limit = { check_variable = { SPA_garrison_control < 4 } }
-							
-							add_to_variable = { var = SPA_garrison_control value = 1 }
-							SPR = { add_to_variable = { var = spa_civil_war_divisions_counter_var value = 1 } }
-							SPR = { subtract_from_variable = { var = spr_civil_war_divisions_counter_var value = 1 } }
-						}
-						SPR_garrison_control_cost_calculation = yes
-					}
-					if = {
-						limit = {
-							date < 1936.7.20
-						}
-						country_event = { id = lar_spain.5 }
-					}
-					if = {
-						limit = {
-							date > 1936.7.19
-							date < 1936.9.16
-						}
-						country_event = { id = lar_spain.5 days = 5 random_days = 10 }
-					}
-					if = {
-						limit = {
-							date > 1936.9.15
-						}
-						country_event = { id = lar_spain.5 days = 15 random_days = 15 }
-					}
-				}
 			}
 			if = {
 				limit = {
@@ -6765,40 +6662,6 @@ SPR_opposition_civil_war_preparations = {
 					custom_effect_tooltip = SPR_expand_influence_republicans_tt
 					SPA_garrison_control_tooltip = yes
 					SPA_garrison_control_cost_calculation = yes
-				}
-				hidden_effect = {
-					166 = {
-						subtract_from_variable = { var = SPA_garrison_control value = 1 }
-						SPR = { subtract_from_variable = { var = spa_civil_war_divisions_counter_var value = 1 } }
-						SPR = { add_to_variable = { var = spr_civil_war_divisions_counter_var value = 1 } }
-						SPA_garrison_control_cost_calculation = yes
-					}
-					if = {
-						limit = {
-							date < 1936.5.2
-						}
-						country_event = { id = lar_spain.5 days = 20 random_days = 10 }
-					}
-					if = {
-						limit = {
-							date > 1936.5.1
-							date < 1936.8.10
-						}
-						country_event = { id = lar_spain.5 days = 6 random_days = 9 }
-					}
-					if = {
-						limit = {
-							date > 1936.8.9
-							date < 1936.10.2
-						}
-						country_event = { id = lar_spain.5 days = 1 random_days = 5 }
-					}
-					if = {
-						limit = {
-							date > 1936.10.1
-						}
-						country_event = { id = lar_spain.5 }
-					}
 				}
 			}
 		}
@@ -6810,7 +6673,10 @@ SPR_opposition_civil_war_preparations = {
 		icon = generic_prepare_civil_war
 
 		allowed = {
-			tag = SPR
+			OR = {
+				tag = SPR
+				tag = SPD 
+			}
 		}
 
 		available = {
@@ -6836,7 +6702,10 @@ SPR_opposition_civil_war_preparations = {
 		}
 
 		visible = {
-			tag = SPR
+			OR = {
+				tag = SPR
+				tag = SPD 
+			}
 			has_country_flag = SPR_spanish_elections_flag
 			NOT = { has_global_flag = spanish_civil_war }
 		}
@@ -6904,37 +6773,6 @@ SPR_opposition_civil_war_preparations = {
 					custom_effect_tooltip = SPA_expand_influence_nationalists_tt
 					SPA_garrison_control_tooltip = yes
 				}
-				hidden_effect = {
-					794 = {
-						if = {
-							limit = { check_variable = { SPA_garrison_control < 4 } }
-							
-							add_to_variable = { var = SPA_garrison_control value = 1 }
-							SPR = { add_to_variable = { var = spa_civil_war_divisions_counter_var value = 1 } }
-							SPR = { subtract_from_variable = { var = spr_civil_war_divisions_counter_var value = 1 } }
-						}
-						SPR_garrison_control_cost_calculation = yes
-					}
-					if = {
-						limit = {
-							date < 1936.7.20
-						}
-						country_event = { id = lar_spain.5 }
-					}
-					if = {
-						limit = {
-							date > 1936.7.19
-							date < 1936.9.16
-						}
-						country_event = { id = lar_spain.5 days = 5 random_days = 10 }
-					}
-					if = {
-						limit = {
-							date > 1936.9.15
-						}
-						country_event = { id = lar_spain.5 days = 15 random_days = 15 }
-					}
-				}
 			}
 			if = {
 				limit = {
@@ -6944,40 +6782,6 @@ SPR_opposition_civil_war_preparations = {
 					custom_effect_tooltip = SPR_expand_influence_republicans_tt
 					SPA_garrison_control_tooltip = yes
 					SPA_garrison_control_cost_calculation = yes
-				}
-				hidden_effect = {
-					794 = {
-						subtract_from_variable = { var = SPA_garrison_control value = 1 }
-						SPR = { subtract_from_variable = { var = spa_civil_war_divisions_counter_var value = 1 } }
-						SPR = { add_to_variable = { var = spr_civil_war_divisions_counter_var value = 1 } }
-						SPA_garrison_control_cost_calculation = yes
-					}
-					if = {
-						limit = {
-							date < 1936.5.2
-						}
-						country_event = { id = lar_spain.5 days = 20 random_days = 10 }
-					}
-					if = {
-						limit = {
-							date > 1936.5.1
-							date < 1936.8.10
-						}
-						country_event = { id = lar_spain.5 days = 6 random_days = 9 }
-					}
-					if = {
-						limit = {
-							date > 1936.8.9
-							date < 1936.10.2
-						}
-						country_event = { id = lar_spain.5 days = 1 random_days = 5 }
-					}
-					if = {
-						limit = {
-							date > 1936.10.1
-						}
-						country_event = { id = lar_spain.5 }
-					}
 				}
 			}
 		}
@@ -6989,7 +6793,10 @@ SPR_opposition_civil_war_preparations = {
 		icon = generic_prepare_civil_war
 
 		allowed = {
-			tag = SPR
+			OR = {
+				tag = SPR
+				tag = SPD 
+			}
 		}
 
 		available = {
@@ -7015,7 +6822,10 @@ SPR_opposition_civil_war_preparations = {
 		}
 
 		visible = {
-			tag = SPR
+			OR = {
+				tag = SPR
+				tag = SPD 
+			}
 			has_country_flag = SPR_spanish_elections_flag
 			NOT = { has_global_flag = spanish_civil_war }
 		}
@@ -7083,37 +6893,6 @@ SPR_opposition_civil_war_preparations = {
 					custom_effect_tooltip = SPA_expand_influence_nationalists_tt
 					SPA_garrison_control_tooltip = yes
 				}
-				hidden_effect = {
-					165 = {
-						if = {
-							limit = { check_variable = { SPA_garrison_control < 4 } }
-							
-							add_to_variable = { var = SPA_garrison_control value = 1 }
-							SPR = { add_to_variable = { var = spa_civil_war_divisions_counter_var value = 1 } }
-							SPR = { subtract_from_variable = { var = spr_civil_war_divisions_counter_var value = 1 } }
-						}
-						SPR_garrison_control_cost_calculation = yes
-					}
-					if = {
-						limit = {
-							date < 1936.7.20
-						}
-						country_event = { id = lar_spain.5 }
-					}
-					if = {
-						limit = {
-							date > 1936.7.19
-							date < 1936.9.16
-						}
-						country_event = { id = lar_spain.5 days = 5 random_days = 10 }
-					}
-					if = {
-						limit = {
-							date > 1936.9.15
-						}
-						country_event = { id = lar_spain.5 days = 15 random_days = 15 }
-					}
-				}
 			}
 			if = {
 				limit = {
@@ -7123,40 +6902,6 @@ SPR_opposition_civil_war_preparations = {
 					custom_effect_tooltip = SPR_expand_influence_republicans_tt
 					SPA_garrison_control_tooltip = yes
 					SPA_garrison_control_cost_calculation = yes
-				}
-				hidden_effect = {
-					165 = {
-						subtract_from_variable = { var = SPA_garrison_control value = 1 }
-						SPR = { subtract_from_variable = { var = spa_civil_war_divisions_counter_var value = 1 } }
-						SPR = { add_to_variable = { var = spr_civil_war_divisions_counter_var value = 1 } }
-						SPA_garrison_control_cost_calculation = yes
-					}
-					if = {
-						limit = {
-							date < 1936.5.2
-						}
-						country_event = { id = lar_spain.5 days = 20 random_days = 10 }
-					}
-					if = {
-						limit = {
-							date > 1936.5.1
-							date < 1936.8.10
-						}
-						country_event = { id = lar_spain.5 days = 6 random_days = 9 }
-					}
-					if = {
-						limit = {
-							date > 1936.8.9
-							date < 1936.10.2
-						}
-						country_event = { id = lar_spain.5 days = 1 random_days = 5 }
-					}
-					if = {
-						limit = {
-							date > 1936.10.1
-						}
-						country_event = { id = lar_spain.5 }
-					}
 				}
 			}
 		}
@@ -7168,7 +6913,10 @@ SPR_opposition_civil_war_preparations = {
 		icon = generic_prepare_civil_war
 
 		allowed = {
-			tag = SPR
+			OR = {
+				tag = SPR
+				tag = SPD 
+			}
 		}
 
 		available = {
@@ -7194,7 +6942,10 @@ SPR_opposition_civil_war_preparations = {
 		}
 
 		visible = {
-			tag = SPR
+			OR = {
+				tag = SPR
+				tag = SPD 
+			}
 			has_country_flag = SPR_spanish_elections_flag
 			NOT = { has_global_flag = spanish_civil_war }
 		}
@@ -7262,37 +7013,6 @@ SPR_opposition_civil_war_preparations = {
 					custom_effect_tooltip = SPA_expand_influence_nationalists_tt
 					SPA_garrison_control_tooltip = yes
 				}
-				hidden_effect = {
-					788 = {
-						if = {
-							limit = { check_variable = { SPA_garrison_control < 4 } }
-							
-							add_to_variable = { var = SPA_garrison_control value = 1 }
-							SPR = { add_to_variable = { var = spa_civil_war_divisions_counter_var value = 1 } }
-							SPR = { subtract_from_variable = { var = spr_civil_war_divisions_counter_var value = 1 } }
-						}
-						SPR_garrison_control_cost_calculation = yes
-					}
-					if = {
-						limit = {
-							date < 1936.7.20
-						}
-						country_event = { id = lar_spain.5 }
-					}
-					if = {
-						limit = {
-							date > 1936.7.19
-							date < 1936.9.16
-						}
-						country_event = { id = lar_spain.5 days = 5 random_days = 10 }
-					}
-					if = {
-						limit = {
-							date > 1936.9.15
-						}
-						country_event = { id = lar_spain.5 days = 15 random_days = 15 }
-					}
-				}
 			}
 			if = {
 				limit = {
@@ -7302,40 +7022,6 @@ SPR_opposition_civil_war_preparations = {
 					custom_effect_tooltip = SPR_expand_influence_republicans_tt
 					SPA_garrison_control_tooltip = yes
 					SPA_garrison_control_cost_calculation = yes
-				}
-				hidden_effect = {
-					788 = {
-						subtract_from_variable = { var = SPA_garrison_control value = 1 }
-						SPR = { subtract_from_variable = { var = spa_civil_war_divisions_counter_var value = 1 } }
-						SPR = { add_to_variable = { var = spr_civil_war_divisions_counter_var value = 1 } }
-						SPA_garrison_control_cost_calculation = yes
-					}
-					if = {
-						limit = {
-							date < 1936.5.2
-						}
-						country_event = { id = lar_spain.5 days = 20 random_days = 10 }
-					}
-					if = {
-						limit = {
-							date > 1936.5.1
-							date < 1936.8.10
-						}
-						country_event = { id = lar_spain.5 days = 6 random_days = 9 }
-					}
-					if = {
-						limit = {
-							date > 1936.8.9
-							date < 1936.10.2
-						}
-						country_event = { id = lar_spain.5 days = 1 random_days = 5 }
-					}
-					if = {
-						limit = {
-							date > 1936.10.1
-						}
-						country_event = { id = lar_spain.5 }
-					}
 				}
 			}
 		}
@@ -7347,7 +7033,10 @@ SPR_opposition_civil_war_preparations = {
 		icon = generic_prepare_civil_war
 
 		allowed = {
-			tag = SPR
+			OR = {
+				tag = SPR
+				tag = SPD 
+			}
 		}
 
 		available = {
@@ -7373,7 +7062,10 @@ SPR_opposition_civil_war_preparations = {
 		}
 
 		visible = {
-			tag = SPR
+			OR = {
+				tag = SPR
+				tag = SPD 
+			}
 			has_country_flag = SPR_spanish_elections_flag
 			NOT = { has_global_flag = spanish_civil_war }
 		}
@@ -7441,37 +7133,6 @@ SPR_opposition_civil_war_preparations = {
 					custom_effect_tooltip = SPA_expand_influence_nationalists_tt
 					SPA_garrison_control_tooltip = yes
 				}
-				hidden_effect = {
-					41 = {
-						if = {
-							limit = { check_variable = { SPA_garrison_control < 4 } }
-							
-							add_to_variable = { var = SPA_garrison_control value = 1 }
-							SPR = { add_to_variable = { var = spa_civil_war_divisions_counter_var value = 1 } }
-							SPR = { subtract_from_variable = { var = spr_civil_war_divisions_counter_var value = 1 } }
-						}
-						SPR_garrison_control_cost_calculation = yes
-					}
-					if = {
-						limit = {
-							date < 1936.7.20
-						}
-						country_event = { id = lar_spain.5 }
-					}
-					if = {
-						limit = {
-							date > 1936.7.19
-							date < 1936.9.16
-						}
-						country_event = { id = lar_spain.5 days = 5 random_days = 10 }
-					}
-					if = {
-						limit = {
-							date > 1936.9.15
-						}
-						country_event = { id = lar_spain.5 days = 15 random_days = 15 }
-					}
-				}
 			}
 			if = {
 				limit = {
@@ -7481,40 +7142,6 @@ SPR_opposition_civil_war_preparations = {
 					custom_effect_tooltip = SPR_expand_influence_republicans_tt
 					SPA_garrison_control_tooltip = yes
 					SPA_garrison_control_cost_calculation = yes
-				}
-				hidden_effect = {
-					41 = {
-						subtract_from_variable = { var = SPA_garrison_control value = 1 }
-						SPR = { subtract_from_variable = { var = spa_civil_war_divisions_counter_var value = 1 } }
-						SPR = { add_to_variable = { var = spr_civil_war_divisions_counter_var value = 1 } }
-						SPA_garrison_control_cost_calculation = yes
-					}
-					if = {
-						limit = {
-							date < 1936.5.2
-						}
-						country_event = { id = lar_spain.5 days = 20 random_days = 10 }
-					}
-					if = {
-						limit = {
-							date > 1936.5.1
-							date < 1936.8.10
-						}
-						country_event = { id = lar_spain.5 days = 6 random_days = 9 }
-					}
-					if = {
-						limit = {
-							date > 1936.8.9
-							date < 1936.10.2
-						}
-						country_event = { id = lar_spain.5 days = 1 random_days = 5 }
-					}
-					if = {
-						limit = {
-							date > 1936.10.1
-						}
-						country_event = { id = lar_spain.5 }
-					}
 				}
 			}
 		}
@@ -7526,7 +7153,10 @@ SPR_opposition_civil_war_preparations = {
 		icon = generic_prepare_civil_war
 
 		allowed = {
-			tag = SPR
+			OR = {
+				tag = SPR
+				tag = SPD 
+			}
 		}
 
 		available = {
@@ -7552,7 +7182,10 @@ SPR_opposition_civil_war_preparations = {
 		}
 
 		visible = {
-			tag = SPR
+			OR = {
+				tag = SPR
+				tag = SPD 
+			}
 			has_country_flag = SPR_spanish_elections_flag
 			NOT = { has_global_flag = spanish_civil_war }
 		}
@@ -7620,37 +7253,6 @@ SPR_opposition_civil_war_preparations = {
 					custom_effect_tooltip = SPA_expand_influence_nationalists_tt
 					SPA_garrison_control_tooltip = yes
 				}
-				hidden_effect = {
-					793 = {
-						if = {
-							limit = { check_variable = { SPA_garrison_control < 4 } }
-							
-							add_to_variable = { var = SPA_garrison_control value = 1 }
-							SPR = { add_to_variable = { var = spa_civil_war_divisions_counter_var value = 1 } }
-							SPR = { subtract_from_variable = { var = spr_civil_war_divisions_counter_var value = 1 } }
-						}
-						SPR_garrison_control_cost_calculation = yes
-					}
-					if = {
-						limit = {
-							date < 1936.7.20
-						}
-						country_event = { id = lar_spain.5 }
-					}
-					if = {
-						limit = {
-							date > 1936.7.19
-							date < 1936.9.16
-						}
-						country_event = { id = lar_spain.5 days = 5 random_days = 10 }
-					}
-					if = {
-						limit = {
-							date > 1936.9.15
-						}
-						country_event = { id = lar_spain.5 days = 15 random_days = 15 }
-					}
-				}
 			}
 			if = {
 				limit = {
@@ -7660,40 +7262,6 @@ SPR_opposition_civil_war_preparations = {
 					custom_effect_tooltip = SPR_expand_influence_republicans_tt
 					SPA_garrison_control_tooltip = yes
 					SPA_garrison_control_cost_calculation = yes
-				}
-				hidden_effect = {
-					793 = {
-						subtract_from_variable = { var = SPA_garrison_control value = 1 }
-						SPR = { subtract_from_variable = { var = spa_civil_war_divisions_counter_var value = 1 } }
-						SPR = { add_to_variable = { var = spr_civil_war_divisions_counter_var value = 1 } }
-						SPA_garrison_control_cost_calculation = yes
-					}
-					if = {
-						limit = {
-							date < 1936.5.2
-						}
-						country_event = { id = lar_spain.5 days = 20 random_days = 10 }
-					}
-					if = {
-						limit = {
-							date > 1936.5.1
-							date < 1936.8.10
-						}
-						country_event = { id = lar_spain.5 days = 6 random_days = 9 }
-					}
-					if = {
-						limit = {
-							date > 1936.8.9
-							date < 1936.10.2
-						}
-						country_event = { id = lar_spain.5 days = 1 random_days = 5 }
-					}
-					if = {
-						limit = {
-							date > 1936.10.1
-						}
-						country_event = { id = lar_spain.5 }
-					}
 				}
 			}
 		}
@@ -7705,7 +7273,10 @@ SPR_opposition_civil_war_preparations = {
 		icon = generic_prepare_civil_war
 
 		allowed = {
-			tag = SPR
+			OR = {
+				tag = SPR
+				tag = SPD 
+			}
 		}
 
 		available = {
@@ -7731,7 +7302,10 @@ SPR_opposition_civil_war_preparations = {
 		}
 
 		visible = {
-			tag = SPR
+			OR = {
+				tag = SPR
+				tag = SPD 
+			}
 			has_country_flag = SPR_spanish_elections_flag
 			NOT = { has_global_flag = spanish_civil_war }
 		}
@@ -7799,37 +7373,6 @@ SPR_opposition_civil_war_preparations = {
 					custom_effect_tooltip = SPA_expand_influence_nationalists_tt
 					SPA_garrison_control_tooltip = yes
 				}
-				hidden_effect = {
-					167 = {
-						if = {
-							limit = { check_variable = { SPA_garrison_control < 4 } }
-							
-							add_to_variable = { var = SPA_garrison_control value = 1 }
-							SPR = { add_to_variable = { var = spa_civil_war_divisions_counter_var value = 1 } }
-							SPR = { subtract_from_variable = { var = spr_civil_war_divisions_counter_var value = 1 } }
-						}
-						SPR_garrison_control_cost_calculation = yes
-					}
-					if = {
-						limit = {
-							date < 1936.7.20
-						}
-						country_event = { id = lar_spain.5 }
-					}
-					if = {
-						limit = {
-							date > 1936.7.19
-							date < 1936.9.16
-						}
-						country_event = { id = lar_spain.5 days = 5 random_days = 10 }
-					}
-					if = {
-						limit = {
-							date > 1936.9.15
-						}
-						country_event = { id = lar_spain.5 days = 15 random_days = 15 }
-					}
-				}
 			}
 			if = {
 				limit = {
@@ -7839,40 +7382,6 @@ SPR_opposition_civil_war_preparations = {
 					custom_effect_tooltip = SPR_expand_influence_republicans_tt
 					SPA_garrison_control_tooltip = yes
 					SPA_garrison_control_cost_calculation = yes
-				}
-				hidden_effect = {
-					167 = {
-						subtract_from_variable = { var = SPA_garrison_control value = 1 }
-						SPR = { subtract_from_variable = { var = spa_civil_war_divisions_counter_var value = 1 } }
-						SPR = { add_to_variable = { var = spr_civil_war_divisions_counter_var value = 1 } }
-						SPA_garrison_control_cost_calculation = yes
-					}
-					if = {
-						limit = {
-							date < 1936.5.2
-						}
-						country_event = { id = lar_spain.5 days = 20 random_days = 10 }
-					}
-					if = {
-						limit = {
-							date > 1936.5.1
-							date < 1936.8.10
-						}
-						country_event = { id = lar_spain.5 days = 6 random_days = 9 }
-					}
-					if = {
-						limit = {
-							date > 1936.8.9
-							date < 1936.10.2
-						}
-						country_event = { id = lar_spain.5 days = 1 random_days = 5 }
-					}
-					if = {
-						limit = {
-							date > 1936.10.1
-						}
-						country_event = { id = lar_spain.5 }
-					}
 				}
 			}
 		}
@@ -7884,7 +7393,10 @@ SPR_opposition_civil_war_preparations = {
 		icon = generic_prepare_civil_war
 
 		allowed = {
-			tag = SPR
+			OR = {
+				tag = SPR
+				tag = SPD 
+			}
 		}
 
 		available = {
@@ -7910,7 +7422,10 @@ SPR_opposition_civil_war_preparations = {
 		}
 
 		visible = {
-			tag = SPR
+			OR = {
+				tag = SPR
+				tag = SPD 
+			}
 			has_country_flag = SPR_spanish_elections_flag
 			NOT = { has_global_flag = spanish_civil_war }
 		}
@@ -7978,37 +7493,6 @@ SPR_opposition_civil_war_preparations = {
 					custom_effect_tooltip = SPA_expand_influence_nationalists_tt
 					SPA_garrison_control_tooltip = yes
 				}
-				hidden_effect = {
-					170 = {
-						if = {
-							limit = { check_variable = { SPA_garrison_control < 4 } }
-							
-							add_to_variable = { var = SPA_garrison_control value = 1 }
-							SPR = { add_to_variable = { var = spa_civil_war_divisions_counter_var value = 1 } }
-							SPR = { subtract_from_variable = { var = spr_civil_war_divisions_counter_var value = 1 } }
-						}
-						SPR_garrison_control_cost_calculation = yes
-					}
-					if = {
-						limit = {
-							date < 1936.7.20
-						}
-						country_event = { id = lar_spain.5 }
-					}
-					if = {
-						limit = {
-							date > 1936.7.19
-							date < 1936.9.16
-						}
-						country_event = { id = lar_spain.5 days = 5 random_days = 10 }
-					}
-					if = {
-						limit = {
-							date > 1936.9.15
-						}
-						country_event = { id = lar_spain.5 days = 15 random_days = 15 }
-					}
-				}
 			}
 			if = {
 				limit = {
@@ -8018,40 +7502,6 @@ SPR_opposition_civil_war_preparations = {
 					custom_effect_tooltip = SPR_expand_influence_republicans_tt
 					SPA_garrison_control_tooltip = yes
 					SPA_garrison_control_cost_calculation = yes
-				}
-				hidden_effect = {
-					170 = {
-						subtract_from_variable = { var = SPA_garrison_control value = 1 }
-						SPR = { subtract_from_variable = { var = spa_civil_war_divisions_counter_var value = 1 } }
-						SPR = { add_to_variable = { var = spr_civil_war_divisions_counter_var value = 1 } }
-						SPA_garrison_control_cost_calculation = yes
-					}
-					if = {
-						limit = {
-							date < 1936.5.2
-						}
-						country_event = { id = lar_spain.5 days = 20 random_days = 10 }
-					}
-					if = {
-						limit = {
-							date > 1936.5.1
-							date < 1936.8.10
-						}
-						country_event = { id = lar_spain.5 days = 6 random_days = 9 }
-					}
-					if = {
-						limit = {
-							date > 1936.8.9
-							date < 1936.10.2
-						}
-						country_event = { id = lar_spain.5 days = 1 random_days = 5 }
-					}
-					if = {
-						limit = {
-							date > 1936.10.1
-						}
-						country_event = { id = lar_spain.5 }
-					}
 				}
 			}
 		}
@@ -8063,7 +7513,10 @@ SPR_opposition_civil_war_preparations = {
 		icon = generic_prepare_civil_war
 
 		allowed = {
-			tag = SPR
+			OR = {
+				tag = SPR
+				tag = SPD 
+			}
 		}
 
 		available = {
@@ -8089,7 +7542,10 @@ SPR_opposition_civil_war_preparations = {
 		}
 
 		visible = {
-			tag = SPR
+			OR = {
+				tag = SPR
+				tag = SPD 
+			}
 			has_country_flag = SPR_spanish_elections_flag
 			NOT = { has_global_flag = spanish_civil_war }
 		}
@@ -8157,37 +7613,6 @@ SPR_opposition_civil_war_preparations = {
 					custom_effect_tooltip = SPA_expand_influence_nationalists_tt
 					SPA_garrison_control_tooltip = yes
 				}
-				hidden_effect = {
-					175 = {
-						if = {
-							limit = { check_variable = { SPA_garrison_control < 4 } }
-							
-							add_to_variable = { var = SPA_garrison_control value = 1 }
-							SPR = { add_to_variable = { var = spa_civil_war_divisions_counter_var value = 1 } }
-							SPR = { subtract_from_variable = { var = spr_civil_war_divisions_counter_var value = 1 } }
-						}
-						SPR_garrison_control_cost_calculation = yes
-					}
-					if = {
-						limit = {
-							date < 1936.7.20
-						}
-						country_event = { id = lar_spain.5 }
-					}
-					if = {
-						limit = {
-							date > 1936.7.19
-							date < 1936.9.16
-						}
-						country_event = { id = lar_spain.5 days = 5 random_days = 10 }
-					}
-					if = {
-						limit = {
-							date > 1936.9.15
-						}
-						country_event = { id = lar_spain.5 days = 15 random_days = 15 }
-					}
-				}
 			}
 			if = {
 				limit = {
@@ -8197,40 +7622,6 @@ SPR_opposition_civil_war_preparations = {
 					custom_effect_tooltip = SPR_expand_influence_republicans_tt
 					SPA_garrison_control_tooltip = yes
 					SPA_garrison_control_cost_calculation = yes
-				}
-				hidden_effect = {
-					175 = {
-						subtract_from_variable = { var = SPA_garrison_control value = 1 }
-						SPR = { subtract_from_variable = { var = spa_civil_war_divisions_counter_var value = 1 } }
-						SPR = { add_to_variable = { var = spr_civil_war_divisions_counter_var value = 1 } }
-						SPA_garrison_control_cost_calculation = yes
-					}
-					if = {
-						limit = {
-							date < 1936.5.2
-						}
-						country_event = { id = lar_spain.5 days = 20 random_days = 10 }
-					}
-					if = {
-						limit = {
-							date > 1936.5.1
-							date < 1936.8.10
-						}
-						country_event = { id = lar_spain.5 days = 6 random_days = 9 }
-					}
-					if = {
-						limit = {
-							date > 1936.8.9
-							date < 1936.10.2
-						}
-						country_event = { id = lar_spain.5 days = 1 random_days = 5 }
-					}
-					if = {
-						limit = {
-							date > 1936.10.1
-						}
-						country_event = { id = lar_spain.5 }
-					}
 				}
 			}
 		}
@@ -8242,7 +7633,10 @@ SPR_opposition_civil_war_preparations = {
 		icon = generic_prepare_civil_war
 
 		allowed = {
-			tag = SPR
+			OR = {
+				tag = SPR
+				tag = SPD 
+			}
 		}
 
 		available = {
@@ -8268,7 +7662,10 @@ SPR_opposition_civil_war_preparations = {
 		}
 
 		visible = {
-			tag = SPR
+			OR = {
+				tag = SPR
+				tag = SPD 
+			}
 			has_country_flag = SPR_spanish_elections_flag
 			NOT = { has_global_flag = spanish_civil_war }
 		}
@@ -8336,37 +7733,6 @@ SPR_opposition_civil_war_preparations = {
 					custom_effect_tooltip = SPA_expand_influence_nationalists_tt
 					SPA_garrison_control_tooltip = yes
 				}
-				hidden_effect = {
-					168 = {
-						if = {
-							limit = { check_variable = { SPA_garrison_control < 4 } }
-							
-							add_to_variable = { var = SPA_garrison_control value = 1 }
-							SPR = { add_to_variable = { var = spa_civil_war_divisions_counter_var value = 1 } }
-							SPR = { subtract_from_variable = { var = spr_civil_war_divisions_counter_var value = 1 } }
-						}
-						SPR_garrison_control_cost_calculation = yes
-					}
-					if = {
-						limit = {
-							date < 1936.7.20
-						}
-						country_event = { id = lar_spain.5 }
-					}
-					if = {
-						limit = {
-							date > 1936.7.19
-							date < 1936.9.16
-						}
-						country_event = { id = lar_spain.5 days = 5 random_days = 10 }
-					}
-					if = {
-						limit = {
-							date > 1936.9.15
-						}
-						country_event = { id = lar_spain.5 days = 15 random_days = 15 }
-					}
-				}
 			}
 			if = {
 				limit = {
@@ -8376,40 +7742,6 @@ SPR_opposition_civil_war_preparations = {
 					custom_effect_tooltip = SPR_expand_influence_republicans_tt
 					SPA_garrison_control_tooltip = yes
 					SPA_garrison_control_cost_calculation = yes
-				}
-				hidden_effect = {
-					168 = {
-						subtract_from_variable = { var = SPA_garrison_control value = 1 }
-						SPR = { subtract_from_variable = { var = spa_civil_war_divisions_counter_var value = 1 } }
-						SPR = { add_to_variable = { var = spr_civil_war_divisions_counter_var value = 1 } }
-						SPA_garrison_control_cost_calculation = yes
-					}
-					if = {
-						limit = {
-							date < 1936.5.2
-						}
-						country_event = { id = lar_spain.5 days = 20 random_days = 10 }
-					}
-					if = {
-						limit = {
-							date > 1936.5.1
-							date < 1936.8.10
-						}
-						country_event = { id = lar_spain.5 days = 6 random_days = 9 }
-					}
-					if = {
-						limit = {
-							date > 1936.8.9
-							date < 1936.10.2
-						}
-						country_event = { id = lar_spain.5 days = 1 random_days = 5 }
-					}
-					if = {
-						limit = {
-							date > 1936.10.1
-						}
-						country_event = { id = lar_spain.5 }
-					}
 				}
 			}
 		}
@@ -8421,7 +7753,10 @@ SPR_opposition_civil_war_preparations = {
 		icon = generic_prepare_civil_war
 
 		allowed = {
-			tag = SPR
+			OR = {
+				tag = SPR
+				tag = SPD 
+			}
 		}
 
 		available = {
@@ -8447,7 +7782,10 @@ SPR_opposition_civil_war_preparations = {
 		}
 
 		visible = {
-			tag = SPR
+			OR = {
+				tag = SPR
+				tag = SPD 
+			}
 			has_country_flag = SPR_spanish_elections_flag
 			NOT = { has_global_flag = spanish_civil_war }
 		}
@@ -8515,37 +7853,6 @@ SPR_opposition_civil_war_preparations = {
 					custom_effect_tooltip = SPA_expand_influence_nationalists_tt
 					SPA_garrison_control_tooltip = yes
 				}
-				hidden_effect = {
-					169 = {
-						if = {
-							limit = { check_variable = { SPA_garrison_control < 4 } }
-							
-							add_to_variable = { var = SPA_garrison_control value = 1 }
-							SPR = { add_to_variable = { var = spa_civil_war_divisions_counter_var value = 1 } }
-							SPR = { subtract_from_variable = { var = spr_civil_war_divisions_counter_var value = 1 } }
-						}
-						SPR_garrison_control_cost_calculation = yes
-					}
-					if = {
-						limit = {
-							date < 1936.7.20
-						}
-						country_event = { id = lar_spain.5 }
-					}
-					if = {
-						limit = {
-							date > 1936.7.19
-							date < 1936.9.16
-						}
-						country_event = { id = lar_spain.5 days = 5 random_days = 10 }
-					}
-					if = {
-						limit = {
-							date > 1936.9.15
-						}
-						country_event = { id = lar_spain.5 days = 15 random_days = 15 }
-					}
-				}
 			}
 			if = {
 				limit = {
@@ -8555,40 +7862,6 @@ SPR_opposition_civil_war_preparations = {
 					custom_effect_tooltip = SPR_expand_influence_republicans_tt
 					SPA_garrison_control_tooltip = yes
 					SPA_garrison_control_cost_calculation = yes
-				}
-				hidden_effect = {
-					169 = {
-						subtract_from_variable = { var = SPA_garrison_control value = 1 }
-						SPR = { subtract_from_variable = { var = spa_civil_war_divisions_counter_var value = 1 } }
-						SPR = { add_to_variable = { var = spr_civil_war_divisions_counter_var value = 1 } }
-						SPA_garrison_control_cost_calculation = yes
-					}
-					if = {
-						limit = {
-							date < 1936.5.2
-						}
-						country_event = { id = lar_spain.5 days = 20 random_days = 10 }
-					}
-					if = {
-						limit = {
-							date > 1936.5.1
-							date < 1936.8.10
-						}
-						country_event = { id = lar_spain.5 days = 6 random_days = 9 }
-					}
-					if = {
-						limit = {
-							date > 1936.8.9
-							date < 1936.10.2
-						}
-						country_event = { id = lar_spain.5 days = 1 random_days = 5 }
-					}
-					if = {
-						limit = {
-							date > 1936.10.1
-						}
-						country_event = { id = lar_spain.5 }
-					}
 				}
 			}
 		}
@@ -8600,7 +7873,10 @@ SPR_opposition_civil_war_preparations = {
 		icon = generic_prepare_civil_war
 
 		allowed = {
-			tag = SPR
+			OR = {
+				tag = SPR
+				tag = SPD 
+			}
 		}
 
 		available = {
@@ -8626,7 +7902,10 @@ SPR_opposition_civil_war_preparations = {
 		}
 
 		visible = {
-			tag = SPR
+			OR = {
+				tag = SPR
+				tag = SPD 
+			}
 			has_country_flag = SPR_spanish_elections_flag
 			NOT = { has_global_flag = spanish_civil_war }
 		}
@@ -8694,37 +7973,6 @@ SPR_opposition_civil_war_preparations = {
 					custom_effect_tooltip = SPA_expand_influence_nationalists_tt
 					SPA_garrison_control_tooltip = yes
 				}
-				hidden_effect = {
-					789 = {
-						if = {
-							limit = { check_variable = { SPA_garrison_control < 4 } }
-							
-							add_to_variable = { var = SPA_garrison_control value = 1 }
-							SPR = { add_to_variable = { var = spa_civil_war_divisions_counter_var value = 1 } }
-							SPR = { subtract_from_variable = { var = spr_civil_war_divisions_counter_var value = 1 } }
-						}
-						SPR_garrison_control_cost_calculation = yes
-					}
-					if = {
-						limit = {
-							date < 1936.7.20
-						}
-						country_event = { id = lar_spain.5 }
-					}
-					if = {
-						limit = {
-							date > 1936.7.19
-							date < 1936.9.16
-						}
-						country_event = { id = lar_spain.5 days = 5 random_days = 10 }
-					}
-					if = {
-						limit = {
-							date > 1936.9.15
-						}
-						country_event = { id = lar_spain.5 days = 15 random_days = 15 }
-					}
-				}
 			}
 			if = {
 				limit = {
@@ -8734,40 +7982,6 @@ SPR_opposition_civil_war_preparations = {
 					custom_effect_tooltip = SPR_expand_influence_republicans_tt
 					SPA_garrison_control_tooltip = yes
 					SPA_garrison_control_cost_calculation = yes
-				}
-				hidden_effect = {
-					789 = {
-						subtract_from_variable = { var = SPA_garrison_control value = 1 }
-						SPR = { subtract_from_variable = { var = spa_civil_war_divisions_counter_var value = 1 } }
-						SPR = { add_to_variable = { var = spr_civil_war_divisions_counter_var value = 1 } }
-						SPA_garrison_control_cost_calculation = yes
-					}
-					if = {
-						limit = {
-							date < 1936.5.2
-						}
-						country_event = { id = lar_spain.5 days = 20 random_days = 10 }
-					}
-					if = {
-						limit = {
-							date > 1936.5.1
-							date < 1936.8.10
-						}
-						country_event = { id = lar_spain.5 days = 6 random_days = 9 }
-					}
-					if = {
-						limit = {
-							date > 1936.8.9
-							date < 1936.10.2
-						}
-						country_event = { id = lar_spain.5 days = 1 random_days = 5 }
-					}
-					if = {
-						limit = {
-							date > 1936.10.1
-						}
-						country_event = { id = lar_spain.5 }
-					}
 				}
 			}
 		}
@@ -8779,7 +7993,10 @@ SPR_opposition_civil_war_preparations = {
 		icon = generic_prepare_civil_war
 
 		allowed = {
-			tag = SPR
+			OR = {
+				tag = SPR
+				tag = SPD 
+			}
 		}
 
 		available = {
@@ -8805,7 +8022,10 @@ SPR_opposition_civil_war_preparations = {
 		}
 
 		visible = {
-			tag = SPR
+			OR = {
+				tag = SPR
+				tag = SPD 
+			}
 			has_country_flag = SPR_spanish_elections_flag
 			NOT = { has_global_flag = spanish_civil_war }
 		}
@@ -8873,37 +8093,6 @@ SPR_opposition_civil_war_preparations = {
 					custom_effect_tooltip = SPA_expand_influence_nationalists_tt
 					SPA_garrison_control_tooltip = yes
 				}
-				hidden_effect = {
-					173 = {
-						if = {
-							limit = { check_variable = { SPA_garrison_control < 4 } }
-							
-							add_to_variable = { var = SPA_garrison_control value = 1 }
-							SPR = { add_to_variable = { var = spa_civil_war_divisions_counter_var value = 1 } }
-							SPR = { subtract_from_variable = { var = spr_civil_war_divisions_counter_var value = 1 } }
-						}
-						SPR_garrison_control_cost_calculation = yes
-					}
-					if = {
-						limit = {
-							date < 1936.7.20
-						}
-						country_event = { id = lar_spain.5 }
-					}
-					if = {
-						limit = {
-							date > 1936.7.19
-							date < 1936.9.16
-						}
-						country_event = { id = lar_spain.5 days = 5 random_days = 10 }
-					}
-					if = {
-						limit = {
-							date > 1936.9.15
-						}
-						country_event = { id = lar_spain.5 days = 15 random_days = 15 }
-					}
-				}
 			}
 			if = {
 				limit = {
@@ -8913,40 +8102,6 @@ SPR_opposition_civil_war_preparations = {
 					custom_effect_tooltip = SPR_expand_influence_republicans_tt
 					SPA_garrison_control_tooltip = yes
 					SPA_garrison_control_cost_calculation = yes
-				}
-				hidden_effect = {
-					173 = {
-						subtract_from_variable = { var = SPA_garrison_control value = 1 }
-						SPR = { subtract_from_variable = { var = spa_civil_war_divisions_counter_var value = 1 } }
-						SPR = { add_to_variable = { var = spr_civil_war_divisions_counter_var value = 1 } }
-						SPA_garrison_control_cost_calculation = yes
-					}
-					if = {
-						limit = {
-							date < 1936.5.2
-						}
-						country_event = { id = lar_spain.5 days = 20 random_days = 10 }
-					}
-					if = {
-						limit = {
-							date > 1936.5.1
-							date < 1936.8.10
-						}
-						country_event = { id = lar_spain.5 days = 6 random_days = 9 }
-					}
-					if = {
-						limit = {
-							date > 1936.8.9
-							date < 1936.10.2
-						}
-						country_event = { id = lar_spain.5 days = 1 random_days = 5 }
-					}
-					if = {
-						limit = {
-							date > 1936.10.1
-						}
-						country_event = { id = lar_spain.5 }
-					}
 				}
 			}
 		}

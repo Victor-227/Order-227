@@ -96,7 +96,41 @@ country_event = {
 		add_to_variable = {
 			SOV_evacuation_trains_refund = -5
 		}
-		
+
 		custom_effect_tooltip = SOV_cheaper_evacuations_tt
+	}
+}
+
+country_event = {
+	id = soviet.new.army
+	title = soviet.new.army.t
+	desc = soviet.new.army.desc
+	picture = GFX_report_event_SOV_purge_administration
+
+	is_triggered_only = yes
+
+	option = {
+		name = soviet.new.army.a	#tukhachevsky
+		SOV = {
+			complete_national_focus = tukhachevsky
+		}
+	}
+
+	option = {
+		name = soviet.new.army.b	#rokossovsky
+		SOV = {
+			complete_national_focus = rokossovsky
+		}
+
+		retire_character = SOV_mikhail_tukhachevsky
+	}
+
+	option = {
+		name = soviet.new.army.c	#zhukov
+		SOV = {
+			complete_national_focus = zhukov
+		}
+
+		retire_character = SOV_mikhail_tukhachevsky
 	}
 }

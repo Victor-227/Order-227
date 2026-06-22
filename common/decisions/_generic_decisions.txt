@@ -136,6 +136,18 @@ political_actions = {
 			}
 		}
 	}
+
+	switch = {
+		allowed = {
+			tag = BLT
+		}
+
+		complete_effect = {
+			SPD = {
+				change_tag_from = BLT
+			}
+		}
+	}
 }
 
 economy_decisions = {

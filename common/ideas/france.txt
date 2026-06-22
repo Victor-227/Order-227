@@ -1811,7 +1811,7 @@ ideas = {
 			}
 						
 			research_bonus = {
-				tank_modules = 0.1
+				tank_modules = 0.15
 			}
 			
 

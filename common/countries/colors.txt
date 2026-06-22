@@ -59,10 +59,6 @@ SPR = {
 	color = rgb { 117 55 12 }
 	color_ui = rgb { 186 96 17 }
 }
-SPA = {
-	color = rgb { 99 11 87 }
-	color_ui = rgb { 255 255 122 }
-}
 ITA = {
 	color = rgb { 48 108 45 }
 	color_ui = rgb { 48 108 45 }

@@ -400,4 +400,119 @@ SpriteTypes = {
 		name = "GFX_focus_SOV_command_economy"
 		texturefile = "gfx/interface/goals/SOV/focus_SOV_command_economy.dds"
 	}
+
+	SpriteType = {
+		name = "GFX_focus_SOV_tukhachevsky"
+		texturefile = "gfx/interface/goals/SOV/focus_SOV_tukhachevsky.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_SOV_tukhachevsky_1"
+		texturefile = "gfx/interface/goals/SOV/focus_SOV_tukhachevsky_1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_SOV_tukhachevsky_2"
+		texturefile = "gfx/interface/goals/SOV/focus_SOV_tukhachevsky_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_SOV_tukhachevsky_4"
+		texturefile = "gfx/interface/goals/SOV/focus_SOV_tukhachevsky_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_SOV_tukhachevsky_5"
+		texturefile = "gfx/interface/goals/SOV/focus_SOV_tukhachevsky_5.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_SOV_tukhachevsky_6"
+		texturefile = "gfx/interface/goals/SOV/focus_SOV_tukhachevsky_6.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_SOV_tukhachevsky_7"
+		texturefile = "gfx/interface/goals/SOV/afocus_SOV_tukhachevsky_7.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_SOV_rokossovsky"
+		texturefile = "gfx/interface/goals/SOV/focus_SOV_rokossovsky.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_SOV_rokossovsky_1"
+		texturefile = "gfx/interface/goals/SOV/focus_SOV_rokossovsky_1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_SOV_rokossovsky_2"
+		texturefile = "gfx/interface/goals/SOV/focus_SOV_rokossovsky_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_SOV_rokossovsky_3"
+		texturefile = "gfx/interface/goals/SOV/focus_SOV_rokossovsky_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_SOV_rokossovsky_4"
+		texturefile = "gfx/interface/goals/SOV/focus_SOV_rokossovsky_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_SOV_rokossovsky_5"
+		texturefile = "gfx/interface/goals/SOV/focus_SOV_rokossovsky_5.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_SOV_rokossovsky_6"
+		texturefile = "gfx/interface/goals/SOV/focus_SOV_rokossovsky_6.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_SOV_zhukov"
+		texturefile = "gfx/interface/goals/SOV/focus_SOV_zhukov.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_SOV_zhukov_1"
+		texturefile = "gfx/interface/goals/SOV/focus_SOV_zhukov_1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_SOV_zhukov_2"
+		texturefile = "gfx/interface/goals/SOV/focus_SOV_zhukov_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_SOV_zhukov_3"
+		texturefile = "gfx/interface/goals/SOV/focus_SOV_zhukov_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_SOV_zhukov_4"
+		texturefile = "gfx/interface/goals/SOV/focus_SOV_zhukov_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_SOV_zhukov_5"
+		texturefile = "gfx/interface/goals/SOV/focus_SOV_zhukov_5.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_SOV_zhukov_6"
+		texturefile = "gfx/interface/goals/SOV/focus_SOV_zhukov_6.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_SOV_zhukov_7"
+		texturefile = "gfx/interface/goals/SOV/focus_SOV_zhukov_7.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_focus_on_factories_focus"
+		texturefile = "gfx/interface/goals/SOV/SOV_focus_on_factories_focus.dds"
+	}
 }

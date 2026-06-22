@@ -23,6 +23,11 @@
  tank_modules_folder_desc:0 "Main guns, special modules, engines, armor & radios."
  modifier_production_cost_arms_factory_factor:0 "Military Factory Construction Cost"
  modifier_production_cost_industrial_complex_factor:0 "Civilian Factory Construction Cost"
+ tank_designer:0 "Tank Designer"
+ tank_module_designer:0 "Tank Module Designer"
+ ship_designer:0 "Ship Designer"
+ aircraft_designer:0 "Aircraft Designer"
+ industrial_research_cost_factor:0 "£industrial_concern_cost_texticon  Industrial Concern Cost"
 
  # Machine Guns & Anti-Air
  additional_machine_guns_tech:0 "Additional Machineguns"

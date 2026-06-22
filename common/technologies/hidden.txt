@@ -1,10 +1,9 @@
 technologies = {
-
- Can_freaks = {
-	research_cost = -1
-	allow = {
-	always = no
-	}
+	Can_freaks = {
+		research_cost = -1
+		allow = {
+			always = no
+		}
 		motorized = {
 			combat_width = -0.4
 			max_strength = -1.5
@@ -18,5 +17,16 @@ technologies = {
 				motorized_equipment = -7
 			}
 		}
- }
+	}
+
+	tuka_test = {
+		maintenance_company = {
+			supply_consumption = -0.01
+			battalion_mult = {
+				category = category_tanks
+				reliability = 0.05
+				strength = 0.05
+			}
+		}
+	}
 }

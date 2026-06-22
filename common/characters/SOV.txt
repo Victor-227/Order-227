@@ -165,7 +165,7 @@ characters = {
 
 		portraits = {
 			army = {
-				small = "GFX_idea_georgy_zhukov"
+				small = "GFX_idea_SOV_gregory_zhukov"
 				large = GFX_portrait_SOV_georgy_zhukov
 			}
 		}
@@ -184,13 +184,13 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = theorist
-			idea_token = georgy_zhukov
+			idea_token = georgy_zhukov_theorist
 			ledger = army
 			allowed = {
 				original_tag = SOV
 			}
 			available = {
-				has_completed_focus = SOV_positive_heroism
+				has_completed_focus = zhukov
 				if = {
 					limit = {
 						has_character_flag = SOV_exiled_flag
@@ -204,7 +204,26 @@ characters = {
 			ai_will_do = {
 				base = 2
 			}
-		}		
+		}
+
+		advisor = {
+			cost = 150
+			slot = army_chief
+			idea_token = georgy_zhukov
+			ledger = army
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+				has_completed_focus = zhukov
+			}
+			traits = {
+				SOV_zhukov
+			}
+			ai_will_do = {
+				base = 2
+			}
+		}
 	}
 
 	SOV_konstantin_rokossovsky = {
@@ -229,7 +248,35 @@ characters = {
 		}
 
 		advisor = {
-			slot = high_command
+			slot = theorist
+			idea_token = konstantin_rokossovsky_theorist
+			ledger = army
+			allowed = {
+				original_tag = SOV
+				hidden_trigger = {
+					NOT = {
+						any_other_country = {
+							has_war_with = SOV
+							original_tag = SOV
+							has_unit_leader = 403.000
+						}
+					}
+				}
+			}
+			available = {
+				has_completed_focus = rokossovsky
+			}
+			traits = {
+				grand_battle_plan_expert
+			}
+			cost = 150
+			ai_will_do = {
+				base = 2
+			}
+		}
+
+		advisor = {
+			slot = army_chief
 			idea_token = konstantin_rokossovsky
 			ledger = army
 			allowed = {
@@ -245,22 +292,16 @@ characters = {
 				}
 			}
 			available = {
-				has_completed_focus = SOV_positive_heroism
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
+				has_completed_focus = rokossovsky
 			}
 			traits = {
-				army_armored_3
+				SOV_rokossovsky
 			}
-			cost = 200
+			cost = 150
 			ai_will_do = {
 				base = 2
 			}
-		}		
+		}
 	}
 
 	SOV_aleksandr_vasilevsky = {
@@ -309,7 +350,7 @@ characters = {
 			traits = {
 				army_regrouping_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				base = 2
 			}
@@ -325,7 +366,7 @@ characters = {
 			}
 		}
 		advisor = {
-			cost = 100
+			cost = 150
 			slot = theorist
 			idea_token = boris_shaposhnikov
 			ledger = army
@@ -388,8 +429,7 @@ characters = {
 				original_tag = SOV
 			}
 			available = {
-				custom_trigger_tooltip = {
-					tooltip = SOV_konev_civil_war
+				hidden_trigger = {
 					NOT = {
 						any_other_country = {
 							has_war_with = SOV
@@ -408,7 +448,7 @@ characters = {
 			traits = {
 				army_concealment_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				base = 1
 			}
@@ -460,7 +500,7 @@ characters = {
 			traits = {
 				army_chief_reform_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				base = 4
 			}
@@ -513,7 +553,7 @@ characters = {
 			traits = {
 				army_chief_drill_1
 			}
-			cost = 50
+			cost = 100
 			ai_will_do = {
 				base = 1
 				modifier = {
@@ -544,23 +584,37 @@ characters = {
 			}
 		}
 		advisor = {
-			cost = 150
+			cost = 200
 			slot = theorist
+			idea_token = mikhail_tukhachevsky_theorist
+			ledger = army
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+				has_completed_focus = tukhachevsky
+			}
+			traits = {
+				deep_battle_theorist
+			}
+			ai_will_do = {
+				base = 1
+			}
+		}
+
+		advisor = {
+			cost = 150
+			slot = army_chief
 			idea_token = mikhail_tukhachevsky
 			ledger = army
 			allowed = {
 				original_tag = SOV
 			}
 			available = {
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
+				has_completed_focus = tukhachevsky
 			}
 			traits = {
-				mass_assault_expert
+				SOV_tukhachevsky
 			}
 			ai_will_do = {
 				base = 1
@@ -1271,7 +1325,7 @@ characters = {
 			traits = {
 				navy_capital_ship_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				base = 0.200
 			}
@@ -1326,7 +1380,7 @@ characters = {
 			traits = {
 				navy_amphibious_assault_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				base = 0.200
 			}
@@ -1381,7 +1435,7 @@ characters = {
 			traits = {
 				navy_submarine_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				base = 0.200
 			}
@@ -1417,7 +1471,7 @@ characters = {
 			traits = {
 				air_air_combat_training_2
 			}
-				cost = 100
+				cost = 150
 			ai_will_do = {
 				base = 1
 			}
@@ -1467,7 +1521,7 @@ characters = {
 			traits = {
 				air_close_air_support_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				base = 1
 			}
@@ -1491,7 +1545,7 @@ characters = {
 			traits = {
 				air_chief_ground_support_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				base = 1
 			}
@@ -1542,7 +1596,7 @@ characters = {
 			traits = {
 				navy_chief_decisive_battle_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				base = 0.200
 			}
@@ -1566,7 +1620,7 @@ characters = {
 			traits = {
 				navy_chief_reform_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				base = 0.200
 			}
@@ -1590,7 +1644,7 @@ characters = {
 			traits = {
 				air_chief_safety_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				base = 1
 			}
@@ -1614,7 +1668,7 @@ characters = {
 			traits = {
 				air_chief_all_weather_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				base = 1
 			}
@@ -1661,7 +1715,7 @@ characters = {
 			traits = {
 				navy_chief_commerce_raiding_1
 			}
-			cost = 50
+			cost = 100
 			ai_will_do = {
 				base = 0.200
 			}
@@ -1686,7 +1740,7 @@ characters = {
 			traits = {
 				air_airborne_1
 			}
-			cost = 50
+			cost = 100
 			ai_will_do = {
 				base = 0
 			}
@@ -1707,15 +1761,10 @@ characters = {
 			allowed = {
 				original_tag = SOV
 			}
-			available = {
-				NOT = {
-					has_country_flag = purge_1_group_a
-				}
-			}
 			traits = {
 				navy_chief_naval_aviation_1
 			}
-			cost = 50
+			cost = 100
 			ai_will_do = {
 				base = 0.200
 			}
@@ -1739,7 +1788,7 @@ characters = {
 			traits = {
 				army_chief_defensive_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				base = 0.5
 				modifier = {
@@ -1778,7 +1827,7 @@ characters = {
 			traits = {
 				army_chief_maneuver_2
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				base = 1
 				modifier = {

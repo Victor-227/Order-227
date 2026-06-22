@@ -192,6 +192,54 @@ leader_traits = {
 		}
 	}
 
+	SOV_tukhachevsky = {
+		sprite = 7
+		random = no
+
+		army_attack_factor = 0.03
+		army_strength_factor = -0.02
+		army_speed_factor = 0.04
+		org_loss_when_moving = 0.05
+	}
+
+	SOV_rokossovsky = {
+		sprite = 18
+		random = no
+
+		max_planning = 0.05
+		planning_speed = 0.08
+		land_reinforce_rate = -0.05
+		initiative_factor = 0.1
+	}
+
+	SOV_zhukov = {
+		sprite = 16
+		random = no
+
+		army_artillery_attack_factor = 0.06
+		army_infantry_defence_factor = 0.05
+		army_strength_factor = 0.02
+		experience_loss_factor = 0.08
+	}
+
+	deep_battle_theorist = {
+		sprite = 14
+
+		equipment_bonus = {
+			armor = {
+				instant = yes
+				maximum_speed = 0.10
+			}
+		}
+		new_mobile_warfare_mastery_gain_factor = 0.15
+		experience_gain_army = @experience_gain_medium
+		custom_modifier_tooltip = military_theorist_mastery_tt
+
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
 	gosplan = {
 		random = no
 
@@ -208,5 +256,19 @@ leader_traits = {
 		consumer_goods_expected_value = -0.05
 	}
 
-	
+	tank_designer = {
+		random = no
+	}
+
+	tank_module_designer = {
+		random = no
+	}
+
+	ship_designer = {
+		random = no
+	}
+
+	aircraft_designer = {
+		random = no
+	}
 }

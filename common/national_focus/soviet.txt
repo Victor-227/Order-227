@@ -87,7 +87,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_focus_on_progression_focus
-		icon = GFX_SOV_infrastructure_effort_nsb_ccp_2d_sov_compatibility
+		icon = GFX_focus_SIA_prepare_for_a_long_war
 		prerequisite = { focus = SOV_infrastructure_effort_nsb }
 		prerequisite = { focus = SOV_heavy_industry }
 		x = 1
@@ -151,7 +151,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_focus_on_factories_focus
-		icon = GFX_SOV_heavy_industry_ccp_2d_sov_compatibility
+		icon = GFX_SOV_focus_on_factories_focus
 		prerequisite = { focus = SOV_infrastructure_effort_nsb }
 		prerequisite = { focus = SOV_heavy_industry }
 		x = 3
@@ -917,12 +917,30 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
+			hidden_effect = {
+				add_to_variable = { SOV_fyp_industrial_concern_cost_factor = -0.5 }
+			}
 			custom_effect_tooltip = SOV_national_specialists_tt
 
-			SOV_replace_industrial_designer = yes #"National" Industrial Designers get +5% research bonus
-			hidden_effect = {
-				add_ideas = SOV_national_specialists_ns
+			if = {
+				limit = {
+					has_idea = SOV_soviet_railways
+				}
+
+				add_to_variable = {
+					SOV_evacuation_trains_cost = 10
+				}
+
+				add_to_variable = {
+					SOV_evacuation_trains_full_refund = -10
+				}
+
+				add_to_variable = {
+					SOV_evacuation_trains_refund = -5
+				}
 			}
+
+			SOV_replace_industrial_designer = yes #"National" Industrial Designers get +5% research bonus
 		}
 	}
 
@@ -1103,18 +1121,6 @@ focus_tree = {
 
 		available = {
 			has_completed_focus = SOV_national_academies_of_sciences
-			196 = {
-				is_controlled_by_ROOT_or_subject = yes
-			}
-			251 = {
-				is_controlled_by_ROOT_or_subject = yes
-			}
-			217 = {
-				is_controlled_by_ROOT_or_subject = yes
-			}
-			245 = {
-				is_controlled_by_ROOT_or_subject = yes
-			}
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -1242,7 +1248,7 @@ focus_tree = {
 		id = SOV_transpolar_flights
 
 		icon = GFX_SOV_transpolar_flights_ccp_2d_sov_compatibility
-		x = 63
+		x = 68
 		y = 0
 		relative_position_id = SOV_infrastructure_effort_nsb
 		cost = 5
@@ -1805,7 +1811,7 @@ focus_tree = {
 		id = SOV_expand_the_red_fleet
 
 		icon = GFX_SOV_expand_the_red_fleet_ccp_2d_sov_compatibility
-		x = 7
+		x = 8
 		y = 0
 		relative_position_id = SOV_transpolar_flights
 		cost = 5
@@ -3331,7 +3337,7 @@ focus_tree = {
 		id = SOV_found_the_pcdi
 
 		icon = GFX_SOV_found_the_pcdi_ccp_2d_sov_compatibility
-		x = 43
+		x = 42
 		y = 0
 		relative_position_id = SOV_heavy_industry
 		cost = 5
@@ -3716,8 +3722,8 @@ focus_tree = {
 	focus = {
 		id = SOV_strengthen_the_mobilization_plan
 		icon = GFX_SOV_strengthen_the_mobilization_plan_ccp_2d_sov_compatibility
-		x = 7
-		y = 0
+		x = 13
+		y = 5
 		relative_position_id = SOV_found_the_pcdi
 		cost = 5
 
@@ -3747,14 +3753,13 @@ focus_tree = {
 		id = SOV_military_engineering_university
 		icon = GFX_SOV_military_engineering_university_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_found_the_pcdi }
-		prerequisite = { focus = SOV_strengthen_the_mobilization_plan }
 		x = 2
 		y = 1
 		relative_position_id = SOV_found_the_pcdi
 		cost = 5
 
 		available = {
-
+			has_completed_focus = SOV_strengthen_the_mobilization_plan
 		}
 		
 		search_filters = {}
@@ -6433,7 +6438,7 @@ focus_tree = {
 		relative_position_id = SOV_tractor_plants
 		x = 0
 		y = 4
-		cost = 7.2
+		cost = 5
 
 		available = {
 
@@ -6497,7 +6502,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_tractor_plants
-		cost = 1.5
+		cost = 5
 
 		available = {
 
@@ -6669,17 +6674,17 @@ focus_tree = {
 			SOV_paranoia_high_increase_effect = yes
 
 			#Historical
-			if = {
-				limit = {
-					has_character = SOV_mikhail_tukhachevsky
-				}
-				SOV_mikhail_tukhachevsky = {
-					set_character_flag = SOV_targeted_for_purge_flag
-				}
-			}
-			else = {
+			#if = {
+			#	limit = {
+			#		has_character = SOV_mikhail_tukhachevsky
+			#	}
+			#	SOV_mikhail_tukhachevsky = {
+			#		set_character_flag = SOV_targeted_for_purge_flag
+			#	}
+			#}
+			#else = {
 				SOV_add_random_character_to_purge_targets_effect = yes
-			}
+			#}
 			#NOT-SO-HISTORICAL
 			#Yegorov
 			if = {
@@ -6732,15 +6737,22 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			if = {
-				limit = { NOT = { has_completed_focus = SOV_lessons_of_war } }
+			#if = {
+			#	limit = { NOT = { has_completed_focus = SOV_lessons_of_war } }
 				
-				custom_effect_tooltip = modify_the_red_army_tt
-				add_to_variable = { SOV_the_red_army_mastery_loss_factor = -0.05 tooltip = land_mastery_gain_factor_tt }
+			#	custom_effect_tooltip = modify_the_red_army_tt
+			#	add_to_variable = { SOV_the_red_army_mastery_loss_factor = -0.05 tooltip = land_mastery_gain_factor_tt }
 
 				#Need for tooltip
-				set_variable = { SOV_the_red_army_mastery_loss_factor_inverted = SOV_the_red_army_mastery_loss_factor }
-				multiply_variable = { SOV_the_red_army_mastery_loss_factor_inverted = -1 }
+			#	set_variable = { SOV_the_red_army_mastery_loss_factor_inverted = SOV_the_red_army_mastery_loss_factor }
+			#	multiply_variable = { SOV_the_red_army_mastery_loss_factor_inverted = -1 }
+			#}
+
+			SOV = {
+				country_event = {
+					id = soviet.new.army
+					days = 5
+				}
 			}
 		}
 	}
@@ -6819,17 +6831,17 @@ focus_tree = {
 				SOV_add_random_character_to_purge_targets_effect = yes
 			}
 			#Litvinov
-			if = {
-				limit = {
-					has_character = SOV_maksim_litvinov
-				}
-				SOV_maksim_litvinov = {
-					set_character_flag = SOV_targeted_for_purge_flag
-				}
-			}
-			else = {
+			#if = {
+			#	limit = {
+			#		has_character = SOV_maksim_litvinov
+			#	}
+			#	SOV_maksim_litvinov = {
+			#		set_character_flag = SOV_targeted_for_purge_flag
+			#	}
+			#}
+			#else = {
 				SOV_add_random_character_to_purge_targets_effect = yes
-			}
+			#}
 
 			custom_effect_tooltip = SOV_will_trigger_a_great_purge_tt
 			hidden_effect = {
@@ -7405,7 +7417,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 25
 			custom_effect_tooltip = available_military_high_command
-			show_ideas_tooltip = konstantin_rokossovsky 
+			show_ideas_tooltip = konstantin_rokossovsky
 			custom_effect_tooltip = available_theorist
 			show_ideas_tooltip = georgy_zhukov
 
@@ -9385,5 +9397,303 @@ focus_tree = {
 
 			custom_effect_tooltip = SOV_recover_the_kuril_islands_decisions_tt
 		}
+	}
+
+	focus = {
+		id = tukhachevsky
+		icon = GFX_focus_SOV_tukhachevsky
+		mutually_exclusive = { focus = rokossovsky focus = zhukov }
+		x = 53
+		y = 0
+
+		cost = 5
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = military_conspiracy_focus_completion_tt
+				always = no
+			}
+		}
+
+		completion_reward = {
+			add_stability = -0.1
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = modify_the_red_army_tt
+
+			add_to_variable = { 
+				SOV_the_red_army_army_org_factor = -0.06
+				tooltip = army_org_factor_tt 
+			}
+
+			add_to_variable = { 
+				SOV_the_red_army_mastery_loss_factor = -0.09
+				tooltip = land_mastery_gain_factor_tt 
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = available_theorist
+			show_ideas_tooltip = mikhail_tukhachevsky_theorist
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = available_chief_of_army
+			show_ideas_tooltip = mikhail_tukhachevsky
+		}
+	}
+
+	focus = {
+		id = tukhachevsky_1
+		icon = GFX_focus_SOV_tukhachevsky_1
+		mutually_exclusive = { focus = tukhachevsky_2 }
+		prerequisite = { focus = tukhachevsky }
+		x = 52
+		y = 1
+
+		completion_reward = {
+			set_technology = {
+				tuka_test = 1
+			}
+			custom_effect_tooltip = tech_effect|tuka_test
+		}
+	}
+
+	focus = {
+		id = tukhachevsky_2
+		icon = GFX_focus_SOV_tukhachevsky_2
+		mutually_exclusive = { focus = tukhachevsky_1 }
+		prerequisite = { focus = tukhachevsky }
+		x = 54
+		y = 1
+	}
+
+	focus = {
+		id = tukhachevsky_3
+		icon = GFX_focus_SMB_special_forces_option_3
+		prerequisite = { focus = tukhachevsky_2}
+		x = 54
+		y = 2
+	}
+
+	focus = {
+		id = tukhachevsky_4
+		icon = GFX_focus_SOV_tukhachevsky_4
+		prerequisite = { focus = tukhachevsky_1 focus = tukhachevsky_2 }
+		x = 53
+		y = 3
+	}
+
+	focus = {
+		id = tukhachevsky_5
+		icon = GFX_focus_SOV_tukhachevsky_5
+		prerequisite = { focus = tukhachevsky_4 }
+		x = 52
+		y = 4
+	}
+
+	focus = {
+		id = tukhachevsky_6
+		icon = GFX_focus_SOV_tukhachevsky_6
+		prerequisite = { focus = tukhachevsky_4 }
+		x = 54
+		y = 4
+	}
+
+	focus = {
+		id = tukhachevsky_7
+		icon = GFX_focus_SOV_tukhachevsky_7
+		prerequisite = { focus = tukhachevsky_5 }
+		prerequisite = { focus = tukhachevsky_6 }
+		x = 53
+		y = 5
+	}
+
+	focus = {
+		id = rokossovsky
+		icon = GFX_focus_SOV_rokossovsky
+		mutually_exclusive = { focus = tukhachevsky focus = zhukov }
+		x = 57
+		y = 0
+
+		cost = 5
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = military_conspiracy_focus_completion_tt
+				always = no
+			}
+		}
+
+		completion_reward = {
+			add_stability = -0.05
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = modify_the_red_army_tt
+
+			add_to_variable = { 
+				SOV_the_red_army_army_org_factor = -0.03
+				tooltip = army_org_factor_tt 
+			}
+
+			add_to_variable = { 
+				SOV_the_red_army_mastery_loss_factor = -0.06
+				tooltip = land_mastery_gain_factor_tt 
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = available_theorist
+			show_ideas_tooltip = konstantin_rokossovsky_theorist
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = available_chief_of_army
+			show_ideas_tooltip = konstantin_rokossovsky
+		}
+	}
+
+	focus = {
+		id = rokossovsky_1
+		icon = GFX_focus_SOV_rokossovsky_1
+		prerequisite = { focus = rokossovsky }
+		x = 56
+		y = 1
+	}
+
+	focus = {
+		id = rokossovsky_2
+		icon = GFX_focus_SOV_rokossovsky_2
+		prerequisite = { focus = rokossovsky }
+		x = 58
+		y = 1
+	}
+
+	focus = {
+		id = rokossovsky_3
+		icon = GFX_focus_SOV_rokossovsky_3
+		prerequisite = { focus = rokossovsky_1 focus = rokossovsky_2 }
+		x = 57
+		y = 2
+	}
+
+	focus = {
+		id = rokossovsky_4
+		icon = GFX_focus_SOV_rokossovsky_4
+		prerequisite = { focus = rokossovsky_3 }
+		x = 56
+		y = 3
+	}
+
+	focus = {
+		id = rokossovsky_5
+		icon = GFX_focus_SOV_rokossovsky_5
+		prerequisite = { focus = rokossovsky_3 }
+		x = 58
+		y = 3
+	}
+
+	focus = {
+		id = rokossovsky_6
+		icon = GFX_focus_SOV_rokossovsky_6
+		prerequisite = { focus = rokossovsky_5 }
+		x = 58
+		y = 4
+	}
+
+	focus = {
+		id = zhukov
+		icon = GFX_focus_SOV_zhukov
+		mutually_exclusive = { focus = tukhachevsky focus = rokossovsky }
+		x = 61
+		y = 0
+
+		cost = 5
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = military_conspiracy_focus_completion_tt
+				always = no
+			}
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = modify_the_red_army_tt
+
+			add_to_variable = { 
+				SOV_the_red_army_mastery_loss_factor = -0.03
+				tooltip = land_mastery_gain_factor_tt 
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = available_theorist
+			show_ideas_tooltip = georgy_zhukov_theorist
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = available_chief_of_army
+			show_ideas_tooltip = georgy_zhukov
+		}
+	}
+
+	focus = {
+		id = zhukov_1
+		icon = GFX_focus_SOV_zhukov_1
+		prerequisite = { focus = zhukov }
+		x = 61
+		y = 1
+	}
+
+	focus = {
+		id = zhukov_2
+		icon = GFX_focus_SOV_zhukov_2
+		prerequisite = { focus = zhukov_1 }
+		x = 60
+		y = 2
+	}
+
+	focus = {
+		id = zhukov_3
+		icon = GFX_focus_SOV_zhukov_3
+		prerequisite = { focus = zhukov_1 }
+		x = 63
+		y = 2
+	}
+
+	focus = {
+		id = zhukov_4
+		icon = GFX_focus_SOV_zhukov_4
+		prerequisite = { focus = zhukov_2 }
+		x = 60
+		y = 3
+	}
+
+	focus = {
+		id = zhukov_5
+		icon = GFX_focus_SOV_zhukov_5
+		mutually_exclusive = { focus = zhukov_6 }
+		prerequisite = { focus = zhukov_3 }
+		x = 62
+		y = 3
+	}
+
+	focus = {
+		id = zhukov_6
+		icon = GFX_focus_SOV_zhukov_6
+		mutually_exclusive = { focus = zhukov_5 }
+		prerequisite = { focus = zhukov_3 }
+		x = 64
+		y = 3
+	}
+
+	focus = {
+		id = zhukov_7
+		icon = GFX_focus_SOV_zhukov_7
+		prerequisite = { focus = zhukov_5 focus = zhukov_6}
+		x = 63
+		y = 4
 	}
 }

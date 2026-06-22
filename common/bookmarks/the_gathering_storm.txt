@@ -108,9 +108,9 @@ bookmarks = {
 				SOV_politicized_military
 			}
 			focuses = {
-				SOV_behead_the_snake
-				SOV_the_supreme_soviet
-				SOV_reconvene_the_zemsky_sobor
+				SOV_focus_on_factories_focus
+				urals
+				tukhachevsky
 			}	
 		}
 		"---"={

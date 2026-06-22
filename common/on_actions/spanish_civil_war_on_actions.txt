@@ -1,0 +1,254 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			SPR = {
+				set_country_flag = SPR_spanish_elections_flag
+				complete_national_focus = SPA_a_great_spain
+				activate_mission = SPA_military_plot_nationalists
+			}
+			SPA = { # Switch the tag alias for SPA - it now becomes SPD - the republicans
+				clr_country_flag = SPR_nationalist_spain_flag
+				drop_cosmetic_tag = yes
+				set_country_flag = SPR_republican_spain_flag
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = spr_fragmentation_status
+							option = SPR_EU4
+						}
+					}
+					set_cosmetic_tag = SPR_republican_castille
+				}
+				else = {
+					set_cosmetic_tag = SPR_republican_spain
+				}
+				set_politics = {
+					ruling_party = democratic
+				}
+				set_popularities = {
+					democratic = 50
+					neutrality = 11
+					communism = 39
+				}
+				#retire_ideology_leader = democratic
+				retire_ideology_leader = neutrality
+				retire_ideology_leader = communism
+			}
+
+			SPD = { # Remove Carlist/Falangist country leaders for new SPD tag
+				retire_ideology_leader = fascism
+				retire_ideology_leader = neutrality
+				every_possible_country = {
+					limit = {
+						has_character = SPR_manuel_azana	
+					}
+					SPR_manuel_azana = { set_nationality = SPD }
+				}
+				IF = {
+					limit = {
+						NOT = {
+							has_country_leader = {
+								character = SPR_manuel_azana
+								ruling_only = yes
+								}
+							}
+						}
+					IF = {
+						limit = {
+							NOT = {
+								can_be_country_leader = SPR_manuel_azana
+							}
+						}
+						add_country_leader_role = {
+							character = SPR_manuel_azana
+							country_leader = {
+							 	ideology = conservatism
+							 	traits = { figurehead_president }
+							 	expire = "1965.1.1"
+							}
+							promote_leader = yes
+						}
+					}
+					ELSE = {
+						promote_character = {
+							character = SPR_manuel_azana
+							ideology = conservatism
+						}
+					}
+				}
+				set_country_flag = SPR_spanish_elections_flag
+				activate_mission = SPR_military_plot_republicans
+				load_focus_tree = spanish_focus
+				complete_national_focus = SPR_the_popular_front
+			}
+
+			SPR = {
+				# Switch the tag alias for the player's country - the player goes from SPR to SPA
+				set_country_flag = SPR_nationalist_spain_flag
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = spr_fragmentation_status
+							option = SPR_EU4
+						}
+					}
+					set_cosmetic_tag = SPR_nationalist_castille
+				}
+				else = {
+					set_cosmetic_tag = SPR_nationalist_spain
+				}
+				set_politics = {
+					ruling_party = neutrality
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = -0.25
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = -0.1
+				}
+				kill_country_leader = yes
+				create_country_leader = {
+					name = "José Sanjurjo"
+					desc = "POLITICS_JOSE_SANJURJO_DESC"
+					picture = "GFX_portrait_SPA_jose_sanjurjo"
+					expire = "1965.1.1"
+					ideology = despotism
+					traits = {
+						the_lion_of_the_rif
+					}
+				}
+				# Add Nationalist and Republican Garrison division templates
+				division_template = {
+					name = "Guarnición Nacionalista"
+					is_locked = yes
+					template_counter = 6
+					division_names_group = SPR_INF_02
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+					}
+				}
+			}
+
+			SPD = {
+				division_template = {
+					name = "Guarnición Republicana"
+					is_locked = yes
+					template_counter = 6
+					division_names_group = SPD_INF_01
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+					}
+				}
+			}
+
+			SPD = {
+				transfer_state = 41
+				transfer_state = 165
+				transfer_state = 167
+				transfer_state = 168
+				transfer_state = 170
+				transfer_state = 173
+				transfer_state = 175
+				transfer_state = 789
+				transfer_state = 790
+				transfer_state = 792
+				transfer_state = 793
+				transfer_state = 794
+			}
+
+			SPD = {
+				every_state = {
+					limit = {
+						is_core_of = SPR
+					}
+					add_core_of = SPD
+				}
+				inherit_technology = SPA
+				add_political_power = 1000
+			}
+
+			SPR = {
+				every_owned_state = {
+					limit = {
+						NOT = {
+							state = 177
+							state = 178
+							state = 290
+							state = 699
+							state = 783
+							state = 297
+						}
+					}
+					add_to_variable = { var = SPA_garrison_control value = 3 }
+					SPA_garrison_control_cost_calculation = yes
+				}
+				add_political_power = 1000
+
+				transfer_units_fraction = {
+					target = SPD
+					size = 0.5
+					stockpile_ratio = 0.5
+					army_ratio = 0.5
+					navy_ratio = 0.5
+					air_ratio = 0.5
+				}
+
+				delete_unit_template_and_units = {
+					division_template = "División de Infantería"
+					disband = yes
+				}
+				delete_unit_template_and_units = {
+					division_template = "División de Caballería"
+					disband = yes
+				}
+				delete_unit_template_and_units = {
+					division_template = "Brigada Montaña"
+					disband = yes
+				}
+				delete_unit_template_and_units = {
+					division_template = "Brigada de Infantería"
+					disband = yes
+				}
+			}
+
+			SPD = {
+				delete_unit_template_and_units = {
+					division_template = "División de Infantería"
+					disband = yes
+				}
+				delete_unit_template_and_units = {
+					division_template = "División de Caballería"
+					disband = yes
+				}
+				delete_unit_template_and_units = {
+					division_template = "Brigada Montaña"
+					disband = yes
+				}
+				delete_unit_template_and_units = {
+					division_template = "Brigada de Infantería"
+					disband = yes
+				}
+				delete_unit_template_and_units = {
+					division_template = "Guarnición Nacionalista"
+					disband = yes
+				}
+				delete_unit_template_and_units = {
+					division_template = "Mountaineer-Division"
+					disband = yes
+				}
+				country_lock_all_division_template = yes
+				add_ideas = {
+					SPR_military_disloyalty
+					SPR_political_violence
+					SPR_national_strikes_3
+				}
+			}
+		}
+	}
+}

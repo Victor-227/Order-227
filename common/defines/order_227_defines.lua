@@ -89,3 +89,5 @@ NDefines.NMilitary.BASE_LEADER_TRAIT_GAIN_XP = 0.45 -- Base xp gain for traits p
 
 NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_DEFENSE_STEEPNESS = 425 -- how quickly defense approaches the max impact diminishing returns curve 932
 NDefines.NMilitary.ANTI_AIR_ATTACK_TO_AMOUNT = 0.001 -- Balancing value to convert equipment stat anti_air_attack to the random % value of airplanes being hit. 936
+
+NDefines.NCountry.EVENT_PROCESS_OFFSET = 10
