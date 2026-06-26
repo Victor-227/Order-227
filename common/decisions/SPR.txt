@@ -263,7 +263,7 @@ SPR_the_inevitable_civil_war = {
 		}
 
 		available = {
-			has_country_flag = SPA_political_assassination_flag
+			#has_country_flag = SPA_political_assassination_flag
 			NOT = {
 				has_country_flag = SPR_inevitable_civil_war_in_progress_flag
 			}

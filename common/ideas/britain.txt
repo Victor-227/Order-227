@@ -6,11 +6,11 @@ ideas = {
 			name = ENG_the_kings_path_war
 
 			allowed = {
-				always = no
+				original_tag = ENG
 			}
 
 			available = {
-				has_government = neutrality
+
 			}
 
 			allowed_civil_war = {
@@ -33,11 +33,11 @@ ideas = {
 			name = ENG_containment_path_war_idea
 
 			allowed = {
-				always = no
+				original_tag = ENG
 			}
 
 			available = {
-				has_government = neutrality
+
 			}
 
 			allowed_civil_war = {
@@ -60,7 +60,7 @@ ideas = {
 			name = ENG_peace_time_construction
 
 			allowed = {
-				always = no
+				original_tag = ENG
 			}
 
 			available = {
@@ -87,7 +87,7 @@ ideas = {
 			name = ENG_peace_time_construction
 
 			allowed = {
-				always = no
+				original_tag = ENG
 			}
 
 			available = {
@@ -114,7 +114,7 @@ ideas = {
 			name = ENG_peace_time_construction_1
 
 			allowed = {
-				always = no
+				original_tag = ENG
 			}
 
 			available = {
@@ -141,11 +141,11 @@ ideas = {
 			name = ENG_appeasement_path_war_idea
 
 			allowed = {
-				always = no
+				original_tag = ENG
 			}
 
 			available = {
-				has_government = neutrality
+
 			}
 
 			allowed_civil_war = {
@@ -1538,11 +1538,11 @@ ideas = {
 			name = ENG_the_kings_party
 
 			allowed = {
-				always = no
+				original_tag = ENG
 			}
 
 			available = {
-				has_government = neutrality
+
 			}
 
 			allowed_civil_war = {

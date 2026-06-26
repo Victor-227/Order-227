@@ -78,7 +78,7 @@ on_actions = {
 				}
 				set_country_flag = SPR_spanish_elections_flag
 				activate_mission = SPR_military_plot_republicans
-				load_focus_tree = spanish_focus
+				load_focus_tree = republican_spain_focus
 				complete_national_focus = SPR_the_popular_front
 			}
 
@@ -129,6 +129,9 @@ on_actions = {
 						infantry = { x = 0 y = 0 }
 						infantry = { x = 0 y = 1 }
 						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
 					}
 				}
 			}
@@ -143,6 +146,9 @@ on_actions = {
 						infantry = { x = 0 y = 0 }
 						infantry = { x = 0 y = 1 }
 						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
 					}
 				}
 			}
@@ -170,7 +176,7 @@ on_actions = {
 					add_core_of = SPD
 				}
 				inherit_technology = SPA
-				add_political_power = 1000
+				add_political_power = 150
 			}
 
 			SPR = {
@@ -188,7 +194,7 @@ on_actions = {
 					add_to_variable = { var = SPA_garrison_control value = 3 }
 					SPA_garrison_control_cost_calculation = yes
 				}
-				add_political_power = 1000
+				add_political_power = 150
 
 				transfer_units_fraction = {
 					target = SPD
@@ -197,6 +203,12 @@ on_actions = {
 					army_ratio = 0.5
 					navy_ratio = 0.5
 					air_ratio = 0.5
+				}
+
+				add_equipment_to_stockpile = {
+					type = train_equipment_1
+					amount = 6
+					producer = SPR
 				}
 
 				delete_unit_template_and_units = {
@@ -215,9 +227,15 @@ on_actions = {
 					division_template = "Brigada de Infantería"
 					disband = yes
 				}
+				add_stability = 0.20
 			}
 
 			SPD = {
+				add_equipment_to_stockpile = {
+					type = train_equipment_1
+					amount = 7
+					producer = SPR
+				}
 				delete_unit_template_and_units = {
 					division_template = "División de Infantería"
 					disband = yes
@@ -248,6 +266,31 @@ on_actions = {
 					SPR_political_violence
 					SPR_national_strikes_3
 				}
+				add_stability = 0.20
+			}
+		}
+	}
+
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					FROM = SPD
+					ROOT = SPR
+				}
+
+				SOV = {
+					change_tag_from = SPD
+				}
+				SPR = {
+					annex_country = {
+						target = SPD
+						transfer_troops = yes
+					}
+					country_event = { id = lar_news.1 hours = 2}
+				}
+				set_global_flag = nationalist_victory
+				set_global_flag = scw_over
 			}
 		}
 	}

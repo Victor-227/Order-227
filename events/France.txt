@@ -190,7 +190,7 @@ country_event = {
 		16 = { is_controlled_by = GER }
 		is_in_faction_with = ENG
 		ENG = { has_war_with = GER }
-		surrender_progress > 0.7
+		############################surrender_progress > 0.7
 		GER = {
 			OR = {
 				is_faction_leader = yes
@@ -245,6 +245,7 @@ country_event = {
 				has_war_with = GER 
 			}
 		}
+		has_capitulated = yes
 	}
 	mean_time_to_happen = { days = 2 }
 	immediate = {

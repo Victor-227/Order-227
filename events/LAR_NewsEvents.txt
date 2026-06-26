@@ -154,6 +154,24 @@ news_event = {
 				}
 				if = {
 					limit = {
+						has_template = "Euzko Gudarosteko Eskuadroia"
+					}
+					delete_unit_template_and_units = {
+						division_template = "Euzko Gudarosteko Eskuadroia"
+						disband = yes
+					}
+				}
+				if = {
+					limit = {
+						has_template = "Carabineros"
+					}
+					delete_unit_template_and_units = {
+						division_template = "Carabineros"
+						disband = yes
+					}
+				}
+				if = {
+					limit = {
 						tag = SPA
 					}
 					every_state = {
@@ -237,7 +255,7 @@ news_event = {
 					}
 				}
 				remove_ideas = SPA_death_before_surrender
-				add_timed_idea = { idea = SPA_recovering_from_civil_war days = 2190 }
+				add_ideas = SPA_recovering_from_civil_war
 				if = {
 					limit = {
 						has_idea = SPA_foreign_training_staff

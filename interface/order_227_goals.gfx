@@ -312,6 +312,50 @@ SpriteTypes = {
 		texturefile = "gfx/interface/goals/ENG/focus_ENG_UK_secret_focus.dds"
 	}
 
+	### typing to remember something
+
+	SpriteType = {
+		name = "GFX_advanced_industry"
+		texturefile = "gfx/interface/goals/ENG/advanced_industry.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_AST_appeasement"
+		texturefile = "gfx/interface/goals/ENG/AST_appeasement.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_supply"
+		texturefile = "gfx/interface/goals/ENG/supply.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_economic_warfare"
+		texturefile = "gfx/interface/goals/ENG/economic_warfare.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_stonks"
+		texturefile = "gfx/interface/goals/ENG/stonks.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_housing_boom"
+		texturefile = "gfx/interface/goals/ENG/housing_boom.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_suburban_industry"
+		texturefile = "gfx/interface/goals/ENG/suburban_industry.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_holidays_paid"
+		texturefile = "gfx/interface/goals/ENG/holidays_paid.dds"
+	}
+
+	### typing to remember something
+
 	### NEW GERMANY ICONS
 
 	SpriteType = {

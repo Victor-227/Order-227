@@ -1,5 +1,20 @@
 ideas = {
+	hidden_ideas = {
+		FRA_surrender_limit = {
 
+			allowed = {
+				original_tag = FRA
+			}
+
+			removal_cost = -1
+
+			picture = generic_tank_bonus
+			
+			modifier = {
+				surrender_limit = -0.1
+			}
+		}
+	}
 	country = {
 		FRA_tank_focus = {
 

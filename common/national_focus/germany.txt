@@ -423,7 +423,7 @@ focus_tree = {
 
 			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GER_industrial_production_factory_max_efficiency_factor = 0.03
+				GER_industrial_production_factory_max_efficiency_factor = 0.02
 				tooltip = production_factory_max_efficiency_factor_tt
 			}
 			add_to_variable = { 
@@ -431,7 +431,7 @@ focus_tree = {
 				tooltip = line_change_production_efficiency_factor_tt
 			}
 			add_to_variable = { 
-				GER_industrial_industrial_capacity_factory = -0.05
+				GER_industrial_industrial_capacity_factory = -0.04
 				tooltip = industrial_capacity_factory_tt
 			}
 		}
@@ -789,11 +789,11 @@ focus_tree = {
 
 			custom_effect_tooltip = GER_replace_recovering_economy_with_wirtschaftswunder_tt
 			add_to_variable = { 
-				GER_industrial_consumer_goods_expected_value = -0.05
+				GER_industrial_consumer_goods_expected_value = -0.04
 				tooltip = consumer_goods_expected_value_tt
 			}
 			add_to_variable = { 
-				GER_industrial_production_speed_buildings_factor = 0.1
+				GER_industrial_production_speed_buildings_factor = 0.08
 				tooltip = production_speed_buildings_factor_tt
 			}
 			
@@ -900,7 +900,7 @@ focus_tree = {
 
 			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GER_industrial_production_factory_max_efficiency_factor = 0.03
+				GER_industrial_production_factory_max_efficiency_factor = 0.02
 				tooltip = production_factory_max_efficiency_factor_tt
 			}
 			add_to_variable = { 
@@ -968,7 +968,7 @@ focus_tree = {
 			}
 			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GER_industrial_production_factory_max_efficiency_factor = 0.04
+				GER_industrial_production_factory_max_efficiency_factor = 0.03
 				tooltip = production_factory_max_efficiency_factor_tt
 			}
 			add_to_variable = { 
@@ -8087,6 +8087,7 @@ focus_tree = {
 				}
 				add_state_core = 976
 			}
+			add_named_threat = { threat = 15 name = GER_demand_sudetenland_threat }
 		}
 	}
 
@@ -9311,7 +9312,7 @@ focus_tree = {
 		continue_if_invalid = yes
 
 		available = {
-
+			has_completed_focus = GER_treaty_with_the_ussr
 		}
 
 		ai_will_do = {
@@ -9741,7 +9742,7 @@ focus_tree = {
 				GER_add_or_modify_military_intelligence_service = yes
 			}
 			add_to_variable = {
-				GER_military_intelligence_service_consumer_goods_expected_value = -0.02
+				GER_military_intelligence_service_consumer_goods_expected_value = -0.03
 				tooltip =  consumer_goods_expected_value_tt
 			}
 			if = {
@@ -10294,7 +10295,7 @@ focus_tree = {
 		will_lead_to_war_with = YUG
 		
 		available = {
-
+			has_war_with = GRE
 		}
 
 		ai_will_do = {

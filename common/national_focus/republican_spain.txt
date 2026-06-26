@@ -1,0 +1,1702 @@
+﻿### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+### search_filters = {FOCUS_FILTER_SPA_CIVIL_WAR}
+### search_filters = {FOCUS_FILTER_SPA_CARLIST_UPRISING}
+### search_filters = {FOCUS_FILTER_SPA_ANARCHIST_UPRISING}
+
+focus_tree = {
+	id = republican_spain_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = SPD
+			has_dlc = "La Resistance"
+		}
+	}
+
+	default = no
+
+	continuous_focus_position = { x = 50 y = 2000 }
+
+###  ### ###  #  # ###  #   ###  ##   ##  #  #     ###  #  # ### #   ###     #  # ###  
+#  # #   #  # #  # #  # #    #  #  # #  # ## #     #  # #  #  #  #   #  #    #  # #  # 
+###  ##  ###  #  # ###  #    #  #    #### # ##     ###  #  #  #  #   #  # ## #  # ###  
+#  # #   #    #  # #  # #    #  #  # #  # #  #     #  # #  #  #  #   #  #    #  # #    
+#  # ### #     ##  ###  ### ###  ##  #  # #  #     ###   ##  ### ### ###      ##  #    
+
+	focus = {
+		id = SPR_the_popular_front
+		available = {
+			NOT = {
+				has_country_flag = SPR_spanish_elections_flag
+			}
+		}
+		
+		bypass = {
+			has_global_flag = spanish_civil_war
+		}
+
+		cancel_if_invalid = yes
+		
+		icon = GFX_goal_generic_national_unity
+		x = 0
+		y = 0
+
+		cost = 5
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_popularity = {
+			    ideology = communism
+			    popularity = 0.1
+			}
+			add_popularity = {
+			    ideology = neutrality
+			    popularity = 0.05
+			}
+			hidden_effect = {
+				every_owned_state = {
+					limit = {
+						NOT = {
+							state = 290
+							state = 699
+							state = 783
+							state = 297
+						}
+					}
+					SPR_garrison_control_cost_calculation = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SPR_secure_the_guardia_de_asalto
+		available = {
+		}
+		bypass = {
+			has_global_flag = spanish_civil_war
+		}
+		prerequisite = { focus = SPR_the_popular_front }
+		mutually_exclusive = { focus = SPR_secure_the_guardia_civil }
+		
+		icon = GFX_goal_generic_political_pressure
+		x = -1
+		y = 1
+
+		relative_position_id = SPR_the_popular_front
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_SPA_CIVIL_WAR}
+		completion_reward = {
+			army_experience = 5
+			if = {
+				limit = {
+					difficulty > 1
+					is_ai = no
+				}
+				custom_effect_tooltip = SPR_secure_the_guardia_de_asalto_tt_2
+				add_to_variable = { var = spa_civil_war_divisions_counter_var value = -10 }
+				add_to_variable = { var = spr_civil_war_divisions_counter_var value = 5 }
+			}
+			else = {
+				custom_effect_tooltip = SPR_secure_the_guardia_de_asalto_tt
+				add_to_variable = { var = spa_civil_war_divisions_counter_var value = -6 }
+				add_to_variable = { var = spr_civil_war_divisions_counter_var value = 3 }
+			}
+			set_country_flag = SPR_secure_the_guardia_de_asalto_flag
+			custom_effect_tooltip = SPR_secure_the_guardia_get_both_types_tt
+			custom_effect_tooltip = SPR_remove_after_civil_war_tt
+		}
+	}
+
+	focus = {
+		id = SPR_secure_the_guardia_civil
+		available = {
+		}
+		bypass = {
+		}
+		prerequisite = { focus = SPR_the_popular_front }
+		mutually_exclusive = { focus = SPR_secure_the_guardia_de_asalto }
+		
+		icon = GFX_focus_generic_support_the_left_right
+		x = 1
+		y = 1
+
+		relative_position_id = SPR_the_popular_front
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_SPA_CIVIL_WAR}
+		completion_reward = {
+			add_stability = 0.05
+			if = {
+				limit = {
+					difficulty > 1
+					is_ai = no
+				}
+				custom_effect_tooltip = SPR_secure_the_guardia_civil_tt_2
+				add_to_variable = { var = spa_civil_war_divisions_counter_var value = -5 }
+				add_to_variable = { var = spr_civil_war_divisions_counter_var value = 10 }
+			}
+			else = {
+				custom_effect_tooltip = SPR_secure_the_guardia_civil_tt
+				add_to_variable = { var = spa_civil_war_divisions_counter_var value = -3 }
+				add_to_variable = { var = spr_civil_war_divisions_counter_var value = 6 }
+			}
+			set_country_flag = SPR_secure_the_guardia_civil_flag
+			custom_effect_tooltip = SPR_secure_the_guardia_get_both_types_tt
+			custom_effect_tooltip = SPR_remove_after_civil_war_tt
+		}
+	}
+
+	focus = {
+		id = SPR_train_the_union_youth
+		available = {
+		}
+		bypass = {
+			has_global_flag = spanish_civil_war
+		}
+		prerequisite = { focus = SPR_secure_the_guardia_de_asalto focus = SPR_secure_the_guardia_civil }
+		
+		icon = GFX_goal_generic_more_territorial_claims
+		x = 1
+		y = 1
+		relative_position_id = SPR_secure_the_guardia_de_asalto
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_SPA_CIVIL_WAR}
+		completion_reward = {
+			add_popularity = {
+			    ideology = communism
+			    popularity = 0.05
+			}
+			add_to_variable = { var = spr_civil_war_divisions_counter_var value = 5 }
+			custom_effect_tooltip = SPR_train_the_union_youth_tt
+			custom_effect_tooltip = SPR_remove_after_civil_war_tt
+		}
+	}
+
+	focus = {
+		id = SPR_enlarge_the_weapon_caches
+		available = {
+		}
+		bypass = {
+			has_global_flag = spanish_civil_war
+		}
+		prerequisite = { focus = SPR_train_the_union_youth }
+		
+		icon = GFX_goal_generic_military_sphere
+		x = 0
+		y = 1
+		relative_position_id = SPR_train_the_union_youth
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_SPA_CIVIL_WAR}
+		completion_reward = {
+			army_experience = 5
+			add_political_power = 50
+
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 3000
+				producer = SPR
+			}
+			
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 40
+				producer = SPR
+			}
+
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = 100
+				producer = SPR
+			}
+
+			add_equipment_to_stockpile = {
+				type = train_equipment_1
+				amount = 4
+				producer = SPR
+			}
+
+			SPR = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = -3000
+					producer = SPR
+				}
+
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = -40
+					producer = SPR
+				}
+
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = -100
+					producer = SPR
+				}
+				
+				add_equipment_to_stockpile = {
+					type = train_equipment_1
+					amount = -4
+					producer = SPR
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SPR_distribute_arms_to_the_people
+		available = {
+		}
+		bypass = {
+			has_global_flag = spanish_civil_war
+		}
+		prerequisite = { focus = SPR_enlarge_the_weapon_caches }
+		
+		icon = GFX_goal_generic_small_arms
+		x = 0
+		y = 1
+		relative_position_id = SPR_enlarge_the_weapon_caches
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_SPA_CIVIL_WAR}
+		completion_reward = {
+			add_popularity = {
+			    ideology = neutrality
+			    popularity = 0.05
+			}
+			add_political_power = 75
+			add_to_variable = { var = spr_civil_war_divisions_counter_var value = 10 }
+			custom_effect_tooltip = SPR_distribute_arms_to_the_people_tt
+			custom_effect_tooltip = SPR_remove_after_civil_war_tt
+		}
+	}
+
+	focus = {
+		id = SPR_disband_the_army
+		available = {
+		}
+		bypass = {
+			has_global_flag = spanish_civil_war
+		}
+		prerequisite = { focus = SPR_distribute_arms_to_the_people }
+		
+		icon = GFX_goal_generic_forceful_treaty
+		x = 0
+		y = 1
+		relative_position_id = SPR_distribute_arms_to_the_people
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_SPA_CIVIL_WAR}
+		completion_reward = {
+			add_political_power = 200
+			set_country_flag = SPR_disband_the_army_flag
+			custom_effect_tooltip = SPR_disband_the_army_tt
+			hidden_effect = {
+				SPR = {
+					country_event = lar_spain.2
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = SPR_international_brigades
+		available = {
+			NOT = { has_global_flag = scw_over }
+		}
+		bypass = {
+		}
+		prerequisite = { focus = SPR_arm_the_workers_militias }
+		
+		icon = GFX_goal_generic_allies_build_infantry
+		x = -1
+		y = 1
+		relative_position_id = SPR_arm_the_workers_militias
+		cost = 5
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+			if = {
+				limit = {
+					has_completed_focus = SPR_the_anti_fascist_workers_revolution
+					has_character = SPR_mate_zalka
+				}
+				custom_effect_tooltip = SPR_international_brigades_tt
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = SPR_the_anti_fascist_workers_revolution
+					NOT = {
+						has_character = SPR_mate_zalka
+					}
+				}
+				create_field_marshal = {
+					name = "Máté Zalka"
+					gfx = "GFX_portrait_SPR_mate_zalka"
+					traits = {  }
+					skill = 2
+				    attack_skill = 2
+				    defense_skill = 1
+				    planning_skill = 2
+				    logistics_skill = 2
+				}
+			}
+			add_ideas = SPR_international_brigades
+			custom_effect_tooltip = SPR_seize_public_transport_tt
+		}
+	}
+
+	focus = {
+		id = SPR_seize_the_gold_reserves
+		available = {
+		}
+		bypass = {
+			OR = {
+				has_global_flag = scw_over
+				has_global_flag = SPR_anarchist_uprising_flag
+				has_global_flag = SPR_gold_reserves_flag
+			}
+		}
+		prerequisite = { focus = SPR_demand_ministerial_positions }
+		
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		x = -2
+		y = 0
+		relative_position_id = SPR_international_brigades
+		cost = 5
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			add_timed_idea = { idea = SPR_seized_gold_reserves  days = 730 }
+			set_global_flag = SPR_gold_reserves_flag
+		}
+	}
+
+	focus = {
+		id = SPR_foreign_arms_purchases
+		available = {
+
+		}
+		bypass = {
+		}
+		prerequisite = { focus = SPR_seize_the_gold_reserves }
+		
+		icon = GFX_goal_generic_small_arms
+		x = -2
+		y = 1
+		relative_position_id = SPR_seize_the_gold_reserves
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = SPR_foreign_arms_purchases_tt
+		}
+	}
+
+	focus = {
+		id = SPR_masters_of_our_own_fate
+		available = {
+
+		}
+		bypass = {
+			OR = {
+				has_war_with = SPD
+				has_global_flag = SPR_anarchist_uprising_flag
+				has_global_flag = scw_over
+			}
+		}
+		prerequisite = { focus = SPR_seize_the_gold_reserves }
+		
+		icon = GFX_focus_spr_masters_of_our_own_fate
+		x = 0
+		y = 1
+		relative_position_id = SPR_seize_the_gold_reserves
+		cost = 5
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_SPA_CIVIL_WAR}
+		completion_reward = {
+			effect_tooltip = {
+				if = {
+					limit = {
+						#has_completed_focus = SPR_the_anti_fascist_workers_revolution
+					}
+					set_politics = {
+						ruling_party = communism
+					}
+					set_party_name = { ideology = communism long_name = SPR_communism_independent_party_long name = SPR_communism_independent_party }
+					create_country_leader = {
+						name = "Julián Gorkin"
+						desc = "POLITICS_JULIAN_GORKIN_DESC"
+						picture = "GFX_portrait_SPR_julian_gorkin"
+						expire = "1965.1.1"
+						ideology = anarchist_communism
+						traits = {
+							militant_socialist
+						}
+					}
+					create_field_marshal = {
+						name = "José Rovira"
+						portrait_path = GFX_portrait_Jose_Rovira
+						traits = { infantry_officer politically_connected }
+						skill = 3
+					    attack_skill = 2
+					    defense_skill = 2
+					    planning_skill = 2
+					    logistics_skill = 3
+					}
+					create_corps_commander = {
+						name = "Carmel Rosa Baserba"
+						portrait_path = GFX_portrait_Carmel_Rosa_Baserba
+						traits = { trait_cautious infantry_officer }
+						skill = 3
+					    attack_skill = 2
+					    defense_skill = 2
+					    planning_skill = 2
+					    logistics_skill = 2
+					}
+					create_corps_commander = {
+						name = "Luis Rastrollo"
+						portrait_path = GFX_portrait_Luis_Rastrollo
+						traits = { politically_connected }
+						skill = 1
+					    attack_skill = 1
+					    defense_skill = 2
+					    planning_skill = 1
+					    logistics_skill = 1
+					}
+					custom_effect_tooltip = SPR_masters_of_our_own_fate_tt_4
+					add_popularity = {
+					    ideology = fascism
+					    popularity = -1
+					}
+					add_popularity = {
+					    ideology = communism
+					    popularity = -0.05
+					}
+					if = {
+						limit = {
+							democratic > 0.01
+						}
+						set_political_party = {
+						    ideology = democratic
+						    popularity = 1
+						}
+					}
+					drop_cosmetic_tag = yes
+					set_cosmetic_tag = SPC_poum
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_global_flag = spanish_civil_war }
+				}
+				effect_tooltip = { add_timed_idea = { idea = SPR_masters_of_our_own_fate_tooltip days = 60 } }
+			}
+			else = {
+				add_timed_idea = { idea = SPR_masters_of_our_own_fate days = 60 }
+			}
+			custom_effect_tooltip = SPR_masters_of_our_own_fate_tt_3
+
+			custom_effect_tooltip = SPR_masters_of_our_own_fate_tt
+		}
+	}
+
+	
+
+###  ### ###  #  # ###  #   ###  ##   ##  #  #  ##             ##   ##  #   # #   # #  # #  # ###  ## ###  ## 
+#  # #   #  # #  # #  # #    #  #  # #  # ## # #              #  # #  # ## ## ## ## #  # ## #  #  #    #  #   
+###  ##  ###  #  # ###  #    #  #    #### # ##  #      ##     #    #  # # # # # # # #  # # ##  #   #   #   #  
+#  # #   #    #  # #  # #    #  #  # #  # #  #   #            #  # #  # #   # #   # #  # #  #  #    #  #    # 
+#  # ### #     ##  ###  ### ###  ##  #  # #  # ##              ##   ##  #   # #   #  ##  #  # ### ##   #  ##  
+
+	focus = {
+		id = SPR_the_anti_fascist_workers_revolution
+		available = {
+			has_global_flag = spanish_civil_war
+		}
+		bypass = {
+		}
+		prerequisite = { focus = SPR_disband_the_army }
+		mutually_exclusive = { focus = SPR_regional_defense_council_of_aragon focus = SPR_maintain_the_second_republic }
+		
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		x = -4
+		y = 1
+		relative_position_id = SPR_disband_the_army
+		cost = 5
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
+		}
+	}
+
+	focus = {
+		id = SPR_strengthen_the_euzko_gudarostea
+		available = {
+			has_full_control_of_state = 792
+		}
+		bypass = {
+		}
+		prerequisite = { focus = SPR_the_anti_fascist_workers_revolution focus = SPR_maintain_the_second_republic }
+		
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 4
+		y = 1
+		relative_position_id = SPR_the_anti_fascist_workers_revolution
+		cost = 5
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_SPA_CIVIL_WAR}
+		completion_reward = {
+			custom_effect_tooltip = SPR_strengthen_the_euzko_gudarostea_tt
+			hidden_effect = {
+				division_template = {
+					name = "Euzko Gudarosteko Eskuadroia"
+					priority = 1
+					division_names_group = SPD_INF_05
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+					}
+				}
+				# Basque
+				792 = {
+					create_unit = {
+						division = "division_template = \"Euzko Gudarosteko Eskuadroia\" start_experience_factor = 0.1" 
+						owner = ROOT
+					}
+					create_unit = {
+						division = "division_template = \"Euzko Gudarosteko Eskuadroia\" start_experience_factor = 0.1" 
+						owner = ROOT
+					}
+					create_unit = {
+						division = "division_template = \"Euzko Gudarosteko Eskuadroia\" start_experience_factor = 0.1" 
+						owner = ROOT
+					}
+					create_unit = {
+						division = "division_template = \"Euzko Gudarosteko Eskuadroia\" start_experience_factor = 0.1" 
+						owner = ROOT
+					}
+					create_unit = {
+						division = "division_template = \"Euzko Gudarosteko Eskuadroia\" start_experience_factor = 0.1" 
+						owner = ROOT
+					}
+					create_unit = {
+						division = "division_template = \"Euzko Gudarosteko Eskuadroia\" start_experience_factor = 0.1" 
+						owner = ROOT
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SPR_fortify_the_iron_ring
+		available = {
+			has_full_control_of_state = 792
+		}
+		bypass = {
+		}
+		prerequisite = { focus = SPR_strengthen_the_euzko_gudarostea }
+		
+		icon = GFX_goal_generic_fortify_city
+		x = 0
+		y = 1
+		relative_position_id = SPR_strengthen_the_euzko_gudarostea
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_timed_idea = { idea = SPR_fortify_the_iron_ring days = 730 }
+			792 = {
+				add_building_construction = {
+					type = bunker
+					province = {
+						id = 740
+					}
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SPR_arm_the_workers_militias
+		available = {
+		}
+		bypass = {
+			OR = {
+				has_global_flag = scw_over
+				has_global_flag = SPR_anarchist_uprising_flag
+			}
+		}
+		prerequisite = { focus = SPR_the_anti_fascist_workers_revolution }
+		
+		icon = GFX_goal_generic_military_sphere
+		x = -1
+		y = 1
+		relative_position_id = SPR_the_anti_fascist_workers_revolution
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+		completion_reward = {
+			add_war_support = 0.1
+			swap_ideas = {
+				remove_idea = SPR_disbanded_army_1
+				add_idea = SPR_disbanded_army_2
+			}
+		}
+	}
+
+	focus = {
+		id = SPR_demand_ministerial_positions
+		available = {
+		}
+		bypass = {
+			OR = {
+				has_global_flag = scw_over
+				has_global_flag = SPR_anarchist_uprising_flag
+			}
+		}
+		prerequisite = { focus = SPR_the_anti_fascist_workers_revolution }
+		
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		x = 1
+		y = 1
+		relative_position_id = SPR_the_anti_fascist_workers_revolution
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_ideas = SPR_demand_ministerial_positions
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = SPR_dolores_ibarruri
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = SPR_jesus_hernandez_tomas
+		}
+	}
+
+	focus = {
+		id = SPR_the_stalinist_doctrine
+		available = {
+		}
+		bypass = {
+			has_global_flag = scw_over
+		}
+		prerequisite = { focus = SPR_demand_ministerial_positions }
+		prerequisite = { focus = SPR_arm_the_workers_militias }
+		mutually_exclusive = { focus = SPR_hinder_nkvd_interference }
+		
+		icon = GFX_focus_generic_soviet_politics
+		x = -1
+		y = 1
+		relative_position_id = SPR_demand_ministerial_positions
+		cost = 5
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_stability = -0.1
+			add_political_power = 120
+			SOV = { add_opinion_modifier = { target = ROOT modifier = SPR_the_stalinist_doctrine } }
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = SPR_wilhelm_zaisser
+		}
+	}
+
+	focus = {
+		id = SPR_an_army_of_all_classes
+		available = {
+		}
+		bypass = {
+		}
+		prerequisite = { focus = SPR_the_stalinist_doctrine }
+		
+		icon = GFX_focus_YUG_pan_slavic_congress
+		x = 0
+		y = 1
+		relative_position_id = SPR_the_stalinist_doctrine
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+			add_ideas = SPR_an_army_of_all_classes_1
+		}
+	}
+
+	focus = {
+		id = SPR_relocate_the_gold_reserves
+		available = {
+		}
+		bypass = {
+			OR = {
+				has_global_flag = scw_over
+				has_global_flag = SPR_gold_reserves_flag
+			}
+		}
+		prerequisite = { focus = SPR_the_anti_fascist_workers_revolution focus = SPR_maintain_the_second_republic }
+		
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		x = 3
+		y = 2
+		relative_position_id = SPR_the_stalinist_doctrine
+		cost = 5
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			add_stability = -0.05
+			add_ideas = SPR_relocate_the_gold_reserves
+			custom_effect_tooltip = SPR_relocate_the_gold_reserves_tt
+			country_event = lar_spain.51
+			set_global_flag = SPR_gold_reserves_flag
+		}
+	}
+
+	focus = {
+		id = SPR_reaffirm_the_popular_front_strategy
+		available = {
+		}
+		bypass = {
+			OR = {
+				has_global_flag = SPR_anarchist_uprising_flag
+				has_global_flag = scw_over
+			}
+		}
+		prerequisite = { focus = SPR_the_anti_fascist_workers_revolution focus = SPR_maintain_the_second_republic }
+		
+		icon = GFX_goal_generic_propaganda
+		x = 5
+		y = 1
+		relative_position_id = SPR_the_stalinist_doctrine
+		cost = 5
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_war_support = 0.05
+			add_timed_idea = { idea = SPR_popular_front_1 days = 730 }
+		}
+	}
+
+
+	focus = {
+		id = SPR_crush_the_revolution
+		available = {
+		}
+		bypass = {
+			OR = {
+				has_war_with = SPC
+				has_global_flag = SPR_anarchist_uprising_flag
+				has_global_flag = scw_over
+			}
+		}
+		prerequisite = { focus = SPR_reaffirm_the_popular_front_strategy }
+		
+		icon = GFX_focus_spr_crush_the_revolution
+		x = 0
+		y = 1
+		relative_position_id = SPR_reaffirm_the_popular_front_strategy
+		cost = 5
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_SPA_CIVIL_WAR}
+		completion_reward = {
+			custom_effect_tooltip = remove_political_advisor
+			show_ideas_tooltip = SPR_jesus_hernandez_tomas
+			swap_ideas = {
+				remove_idea = SPR_popular_front_1
+				add_idea = SPR_popular_front_2
+			}
+		}
+	}
+
+	focus = {
+		id = SPR_solidify_government_control
+		available = {
+		}
+		bypass = {
+		}
+		prerequisite = { focus = SPR_an_army_of_all_classes }
+		
+		icon = GFX_focus_generic_self_management
+		x = 0
+		y = 1
+		relative_position_id = SPR_an_army_of_all_classes
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_STABILITY}
+		completion_reward = {
+			set_politics = {
+				ruling_party = communism
+			}
+			add_stability = 0.1
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 165
+						state = 171
+						state = 792
+					}
+				}
+				remove_dynamic_modifier = { modifier = autonomous_state }
+				add_dynamic_modifier = { modifier = semi_autonomous_state }
+			}
+		}
+	}
+
+	focus = {
+		id = SPR_the_spanish_red_army
+		available = {
+		}
+		bypass = {
+		}
+		prerequisite = { focus = SPR_solidify_government_control }
+		
+		icon = GFX_goal_generic_army_doctrines
+		x = 0
+		y = 1
+		relative_position_id = SPR_solidify_government_control
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+			army_experience = 25
+			remove_ideas = SPR_disbanded_army_2
+			add_tech_bonus = {
+				name = SPR_the_spanish_red_army
+				bonus = 1
+				uses = 1
+				category = motorized_equipment
+			}
+			add_doctrine_cost_reduction = {
+				name = SPR_the_spanish_red_army
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = SPR_expand_soviet_aid
+		available = {
+			NOT = { has_war_with = SOV }
+			NOT = { has_global_flag = scw_over }
+			SOV = { has_government = communism }
+			has_volunteers_amount_from = {
+			    tag = SOV
+			    count > 0
+			}
+		}
+		bypass = {
+			AND = {
+				has_completed_focus = SPR_the_stalinist_doctrine
+				has_global_flag = scw_over
+			}
+		}
+		prerequisite = { focus = SPR_relocate_the_gold_reserves }
+		prerequisite = { focus = SPR_crush_the_revolution }
+		
+		icon = GFX_goal_support_communism
+		x = 1
+		y = 1
+		relative_position_id = SPR_relocate_the_gold_reserves
+		cost = 5
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 3
+				is_historical_focus_on = no
+				SOV = {
+					is_ai = no
+				}
+			}
+			modifier = {
+				factor = 3
+				surrender_progress > 0.4
+				is_historical_focus_on = no
+			}
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+				SOV = {
+					is_ai = yes
+				}
+			}
+			modifier = {
+				factor = 0
+				surrender_progress < 0.4
+				any_country = {
+					NOT = { tag = SOV }
+					ROOT = {
+						has_volunteers_amount_from = {
+						    tag = PREV
+						    count > 0
+						}
+					}
+				}
+			}
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_popularity = {
+			    ideology = communism
+			    popularity = 0.05
+			}
+			SOV = {
+				add_timed_idea = { idea = SPA_spanish_civil_war_commitments days = 730 }
+				add_opinion_modifier = { target = ROOT modifier = SPA_spanish_civil_war_commitments }
+			}
+			custom_effect_tooltip = SPR_expand_soviet_aid_tt
+		}
+	}
+
+	focus = {
+		id = SPR_soviet_equipment_shipments
+		available = {
+			NOT = { has_war_with = SOV }
+			SOV = { has_government = communism }
+		}
+		bypass = {
+			has_global_flag = scw_over
+		}
+		prerequisite = { focus = SPR_expand_soviet_aid }
+
+		icon = GFX_goal_generic_build_tank
+		x = -1
+		y = 1
+		relative_position_id = SPR_expand_soviet_aid
+		cost = 5
+
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = SPR_soviet_equipment_shipments_1mil }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			add_popularity = {
+			    ideology = communism
+			    popularity = 0.05
+			}
+			SOV = {
+				add_timed_idea = { idea = SPR_equipment_shipments days = 730 }
+				add_ai_strategy = { type = send_lend_lease_desire id = SPR value = 200 }
+			}
+			add_timed_idea = { idea = SPR_equipment_shipments_spain days = 730 }
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+					}
+					is_core_of = ROOT
+				}
+				set_state_flag = SPR_soviet_equipment_shipments_1mil
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+					}
+					is_core_of = ROOT
+					NOT = { has_state_flag = SPR_soviet_equipment_shipments_1mil }
+				}
+				set_state_flag = SPR_soviet_equipment_shipments_1mil
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+					}
+					is_core_of = ROOT
+					NOT = { has_state_flag = SPR_soviet_equipment_shipments_1mil }
+				}
+				set_state_flag = SPR_soviet_equipment_shipments_1mil
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SPR_soviet_military_advisors
+		available = {
+			NOT = { has_war_with = SOV }
+			SOV = { has_government = communism }
+		}
+		bypass = {
+			has_global_flag = scw_over
+		}
+		prerequisite = { focus = SPR_expand_soviet_aid }
+
+		icon = GFX_focus_generic_military_mission
+		x = 1
+		y = 1
+		relative_position_id = SPR_expand_soviet_aid
+		cost = 5
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			army_experience = 25
+			add_war_support = 0.1
+			add_ideas = SPR_soviet_military_advisors
+			custom_effect_tooltip = SPR_seize_public_transport_tt
+		}
+	}
+
+	focus = {
+		id = SPR_soviet_industrial_aid
+		available = {
+			NOT = { has_war_with = SOV }
+			SOV = { has_government = communism }
+		}
+		bypass = {
+			has_global_flag = scw_over
+		}
+		prerequisite = { focus = SPR_soviet_equipment_shipments focus = SPR_soviet_military_advisors }
+
+		icon = GFX_focus_generic_join_comintern
+		x = 0
+		y = 1
+		relative_position_id = SPR_soviet_equipment_shipments
+		cost = 5
+
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = SPR_soviet_industrial_aid_2civ }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			add_tech_bonus = {
+				name = SPR_soviet_industrial_aid
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+			add_timed_idea = { idea = SPR_soviet_industrial_aid days = 730 }
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+					}
+					is_core_of = ROOT
+				}
+				set_state_flag = SPR_soviet_industrial_aid_2civ
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SPR_soviet_technological_advancements
+		available = {
+			NOT = { has_war_with = SOV }
+			SOV = { has_government = communism }
+		}
+		bypass = {
+			has_global_flag = scw_over
+		}
+		prerequisite = { focus = SPR_soviet_equipment_shipments focus = SPR_soviet_military_advisors }
+
+		icon = GFX_focus_generic_socialist_science
+		x = 2
+		y = 1
+		relative_position_id = SPR_soviet_equipment_shipments
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_popularity = {
+			    ideology = communism
+			    popularity = 0.05
+			}
+			add_to_tech_sharing_group = spr_research
+			SOV = { add_to_tech_sharing_group = spr_research }
+			add_tech_bonus = {
+				name = SPR_soviet_technological_advancements
+				bonus = 1
+				uses = 1
+				category = infantry_weapons
+			}
+			add_tech_bonus = {
+				name = SPR_soviet_technological_advancements
+				bonus = 1
+				uses = 1
+				category = armor
+			}
+		}
+	}
+
+###  ### ###  #  # ###  #   ###  ##   ##  #  #  ##            ###  ### #   #  ##   ##  ###   ##  ###  ## 
+#  # #   #  # #  # #  # #    #  #  # #  # ## # #              #  # #   ## ## #  # #  # #  # #  #  #  #   
+###  ##  ###  #  # ###  #    #  #    #### # ##  #      ##     #  # ##  # # # #  # #    ###  ####  #   #  
+#  # #   #    #  # #  # #    #  #  # #  # #  #   #            #  # #   #   # #  # #  # #  # #  #  #    # 
+#  # ### #     ##  ###  ### ###  ##  #  # #  # ##             ###  ### #   #  ##   ##  #  # #  #  #  ##  
+
+	focus = {
+		id = SPR_maintain_the_second_republic
+		available = {
+			has_global_flag = spanish_civil_war
+		}
+		bypass = {
+		}
+		prerequisite = { focus = SPR_disband_the_army }
+		mutually_exclusive = { focus = SPR_regional_defense_council_of_aragon focus = SPR_the_anti_fascist_workers_revolution }
+		
+		icon = GFX_focus_spr_maintain_the_republic
+		x = 4
+		y = 1
+		relative_position_id = SPR_disband_the_army
+		cost = 5
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT}
+		completion_reward = {
+			add_political_power = 60
+			add_war_support = 0.05
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = SPR_antonio_escobar_huerta
+		}
+	}
+
+	focus = {
+		id = SPR_petition_for_french_aid
+		available = {
+			NOT = { has_war_with = FRA }
+			NOT = { has_global_flag = scw_over }
+			FRA = {
+				OR = {
+					has_government = democratic
+					has_government = communism
+				}
+			}
+		}
+		bypass = {
+		}
+		prerequisite = { focus = SPR_maintain_the_second_republic }
+
+		icon = GFX_focus_chi_reach_out_to_france
+		x = -2
+		y = 1
+		relative_position_id = SPR_maintain_the_second_republic
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+
+		completion_reward = {
+			effect_tooltip = {
+				add_war_support = 0.15
+				FRA = {
+					add_timed_idea = { idea = SPR_equipment_shipments days = 730 }
+					add_opinion_modifier = { target = ROOT modifier = SPA_spanish_civil_war_commitments }
+				}
+			}
+			custom_effect_tooltip = SPR_petition_for_french_aid_tt
+			FRA = { country_event = { id = lar_spain.64 hours = 6 random_hours = 6 } }
+		}
+	}
+
+	focus = {
+		id = SPR_enlist_the_carabineros
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = has_hired_juan_negrin_tt
+				OR = {
+					SPR_juan_negrin = {
+						is_hired_as_advisor = yes
+					}
+					has_idea_with_trait = gran_carabinero
+				}
+			}
+				
+		}
+		bypass = {
+			has_global_flag = scw_over
+		}
+		prerequisite = { focus = SPR_maintain_the_second_republic }
+
+		icon = GFX_goal_generic_military_sphere
+		x = 0
+		y = 1
+		relative_position_id = SPR_maintain_the_second_republic
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = SPR_enlist_the_carabineros_tt
+			custom_effect_tooltip = SPR_remove_after_civil_war_tt
+			hidden_effect = {
+				division_template = {
+					name = "Carabineros"
+					template_counter = 3
+					priority = 1
+					division_names_group = SPR_INF_01
+					is_locked = yes
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_in_home_area = yes
+					}
+					create_unit = {
+						division = "name = \"1. Carabineros\" division_template = \"Carabineros\" start_experience_factor = 0.1" 
+						owner = ROOT
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_in_home_area = yes
+					}
+					create_unit = {
+						division = "name = \"2. Carabineros\" division_template = \"Carabineros\" start_experience_factor = 0.1" 
+						owner = ROOT
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_in_home_area = yes
+					}
+					create_unit = {
+						division = "name = \"3. Carabineros\" division_template = \"Carabineros\" start_experience_factor = 0.1" 
+						owner = ROOT
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_in_home_area = yes
+					}
+					create_unit = {
+						division = "name = \"4. Carabineros\" division_template = \"Carabineros\" start_experience_factor = 0.1" 
+						owner = ROOT
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_in_home_area = yes
+					}
+					create_unit = {
+						division = "name = \"5. Carabineros\" division_template = \"Carabineros\" start_experience_factor = 0.1" 
+						owner = ROOT
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SPR_the_popular_army
+		available = {
+		}
+		bypass = {
+		}
+		prerequisite = { focus = SPR_ensure_loyalty }
+		prerequisite = { focus = SPR_enlist_the_carabineros }
+
+		icon = GFX_focus_generic_support_the_left_right
+		x = 0
+		y = 1
+		relative_position_id = SPR_enlist_the_carabineros
+		cost = 10
+
+		available_if_capitulated = yes
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {
+			remove_ideas = SPR_disbanded_army_1
+			add_tech_bonus = {
+				name = SPR_the_popular_army
+				bonus = 1
+				uses = 1
+				category = infantry_weapons
+			}
+			add_doctrine_cost_reduction = {
+				name = SPR_the_popular_army
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = SPR_take_the_initiative
+		available = {
+			NOT = { has_global_flag = scw_over }
+		}
+		bypass = {
+		}
+		prerequisite = { focus = SPR_the_popular_army }
+
+		icon = GFX_goal_generic_major_war
+		x = 2
+		y = 1
+		relative_position_id = SPR_the_popular_army
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = SPA_tackle_the_vulnerable_fronts_tt
+		}
+	}
+
+	focus = {
+		id = SPR_no_pasaran
+		available = {
+			SPR_scw_in_progress = yes
+		}
+		bypass = {
+			has_global_flag = scw_over
+		}
+		prerequisite = { focus = SPR_the_popular_army }
+
+		icon = GFX_focus_spr_no_pasaran
+		x = 0
+		y = 1
+		relative_position_id = SPR_the_popular_army
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = SPR_no_pasaran_tt
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_controlled_by = ROOT
+					}
+					add_building_construction = {
+						type = bunker
+						province = {
+							all_provinces = yes
+							limit_to_victory_point = yes
+						}
+						level = 1
+						instant_build = yes
+					}
+				}
+				every_state = {
+					limit = {
+						is_controlled_by = ROOT
+					}
+					add_building_construction = {
+						type = bunker
+						province = {
+							all_provinces = yes
+							limit_to_victory_point > 2
+						}
+						level = 1
+						instant_build = yes
+					}
+				}
+				every_state = {
+					limit = {
+						is_controlled_by = ROOT
+					}
+					add_building_construction = {
+						type = bunker
+						province = {
+							all_provinces = yes
+							limit_to_victory_point > 9
+						}
+						level = 1
+						instant_build = yes
+					}
+				}
+				every_state = {
+					limit = {
+						is_controlled_by = ROOT
+					}
+					add_building_construction = {
+						type = bunker
+						province = {
+							all_provinces = yes
+							limit_to_victory_point > 29
+						}
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SPR_strengthen_the_anti_fascist_coalition
+		available = {
+		}
+		bypass = {
+			has_global_flag = scw_over
+		}
+		prerequisite = { focus = SPR_crush_the_revolution }
+		prerequisite = { focus = SPR_no_pasaran }
+
+		icon = GFX_goal_generic_national_unity
+		x = 3
+		y = 1
+		relative_position_id = SPR_crush_the_revolution
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT}
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.1
+		}
+	}
+
+	focus = {
+		id = SPR_oppose_the_communists
+		available = {
+			has_country_leader = {
+				character = SPR_manuel_azana
+				ruling_only = yes
+			}
+		}
+		bypass = {
+		}
+		prerequisite = { focus = SPR_strengthen_the_anti_fascist_coalition }
+		mutually_exclusive = { focus = SPR_end_fascism_at_all_costs }
+
+		icon = GFX_goal_anti_comintern_pact
+		x = -1
+		y = 1
+		relative_position_id = SPR_strengthen_the_anti_fascist_coalition
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY}
+		completion_reward = {
+			add_popularity = {
+			    ideology = communism
+			    popularity = -0.1
+			}
+			remove_ideas = SPR_popular_front_2
+			add_timed_idea = { idea = SPR_oppose_the_communists days = 730 }
+			remove_country_leader_trait = figurehead_president
+			add_country_leader_trait = great_survivor
+		}
+	}
+
+	focus = {
+		id = SPR_end_fascism_at_all_costs
+		available = {
+		}
+		bypass = {
+		}
+		prerequisite = { focus = SPR_strengthen_the_anti_fascist_coalition }
+		mutually_exclusive = { focus = SPR_oppose_the_communists }
+
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		x = 1
+		y = 1
+		relative_position_id = SPR_strengthen_the_anti_fascist_coalition
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SPR_popular_front_2
+				add_idea = SPR_popular_front_3
+			}
+		}
+	}
+
+	focus = {
+		id = SPR_communists_in_the_government
+		available = {
+		}
+		bypass = {
+		}
+		prerequisite = { focus = SPR_end_fascism_at_all_costs }
+
+		icon = GFX_focus_generic_soviet_politics
+		x = 0
+		y = 1
+		relative_position_id = SPR_end_fascism_at_all_costs
+		cost = 10
+
+		available_if_capitulated = yes
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			set_politics = {
+				ruling_party = communism
+			}
+			swap_ideas = {
+				remove_idea = SPR_popular_front_3
+				add_idea = SPR_popular_front_4
+			}
+			unlock_national_focus = SPR_red_bulwark_in_the_west
+			unlock_national_focus = SPR_increase_arms_production
+			custom_effect_tooltip = SPR_communists_in_the_government_tt
+			# Stalinist
+			# SPR_ignacio_hidalgo_de_cisneros
+			# SPR_etelvino_vega
+			# SPR_francisco_ciutat_de_miguel
+			# SPR_dolores_ibarruri
+			####
+			# Democratic
+			# SPR_domenec_batet
+			# SPR_toribio_martinez_cabrera
+			# SPR_antonio_azarola_y_gresillon
+			# SPR_luis_gonzalez_ubieta
+			# SPR_indalegio_prieto
+			# SPR_nicolas_molero
+			# SPR_juan_negrin
+			# SPR_francisco_largo_caballero
+			# SPR_augusto_barcia_trelles
+			# SPR_diego_martinez_barrio
+		}
+	}
+
+	focus = {
+		id = SPR_reprofessionalize_the_military
+		available = {
+		}
+		bypass = {
+		}
+		prerequisite = { focus = SPR_strengthen_the_anti_fascist_coalition }
+
+		icon = GFX_goal_generic_army_artillery2
+		x = 3
+		y = 1
+		relative_position_id = SPR_strengthen_the_anti_fascist_coalition
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+			add_ideas = SPR_professional_military_1
+		}
+	}
+
+	focus = {
+		id = SPR_experiences_from_the_civil_war
+		available = {
+		}
+		bypass = {
+		}
+		prerequisite = { focus = SPR_reprofessionalize_the_military }
+
+		icon = GFX_goal_generic_army_doctrines
+		x = 0
+		y = 1
+		relative_position_id = SPR_reprofessionalize_the_military
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {
+			army_experience = 15
+			add_doctrine_cost_reduction = {
+				name = SPR_engineering_advances
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+}
