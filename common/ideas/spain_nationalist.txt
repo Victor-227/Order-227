@@ -1608,7 +1608,7 @@ ideas = {
 			modifier = {
 				surrender_limit = 1
 				max_surrender_limit_offset = 0.15
-				army_strength_factor = 0.25
+				army_strength_factor = 0.3
 				army_core_attack_factor = -0.05
 				army_core_defence_factor = -0.05
 			}
@@ -1945,9 +1945,7 @@ ideas = {
 			}
 
 			modifier = {
-				send_volunteer_size = 3
-				send_volunteer_divisions_required = -1
-				lend_lease_tension = -0.30
+				send_volunteer_size = 2
 			}
 		}
 
@@ -2653,9 +2651,7 @@ ideas = {
 		}
 	}
 
-	naval_research = { 			
-		
-		designer = yes
+	naval_research = {
 
 		### Vanilla ###
 
@@ -2696,6 +2692,9 @@ ideas = {
 			allowed = {
 				has_dlc = "La Resistance"
 				original_tag = SPR
+				NOT = {
+					tag = SPD
+				}
 			}
 			
 			research_bonus = {
@@ -2721,6 +2720,9 @@ ideas = {
 			allowed = {
 				has_dlc = "La Resistance"
 				original_tag = SPR
+				NOT = {
+					tag = SPD
+				}
 			}
 
 			available = {
@@ -2749,9 +2751,7 @@ ideas = {
 		}
 	}
 	
-	aircraft_research = { 		
-			
-		designer = yes
+	aircraft_research = {
 
 		### Vanilla ###
 
@@ -2792,6 +2792,9 @@ ideas = {
 			allowed = {
 				has_dlc = "La Resistance"
 				original_tag = SPR
+				NOT = {
+					tag = SPD
+				}
 			}
 
 			available = {
@@ -2831,8 +2834,10 @@ ideas = {
 						original_tag = SPR
 					}
 					SWI_bba_lar = yes
-				}						
-									
+				}
+				NOT = {
+					tag = SPD
+				}
 			}
 
 			available = {
@@ -2867,8 +2872,6 @@ ideas = {
 	}
 
 	materiel_research = {
-		
-		designer = yes
 
 		SPR_star_bonifacio_echeverria = {
 			
@@ -2877,6 +2880,9 @@ ideas = {
 			allowed = {
 				has_dlc = "La Resistance"
 				original_tag = SPR
+				NOT = {
+					tag = SPD
+				}
 			}
 
 			available = {
@@ -2906,6 +2912,9 @@ ideas = {
 			allowed = {
 				has_dlc = "La Resistance"
 				original_tag = SPR
+				NOT = {
+					tag = SPD
+				}
 			}
 
 			available = {
@@ -2935,6 +2944,9 @@ ideas = {
 			allowed = {
 				has_dlc = "La Resistance"
 				original_tag = SPR
+				NOT = {
+					tag = SPD
+				}
 			}
 
 			available = {
@@ -2968,6 +2980,9 @@ ideas = {
 						original_tag = SPR						
 					}
 					SWI_bba_lar = yes 
+				}
+				NOT = {
+					tag = SPD
 				}
 			}
 
@@ -3012,6 +3027,9 @@ ideas = {
 			allowed = {
 				has_dlc = "La Resistance"
 				original_tag = SPR
+				NOT = {
+					tag = SPD
+				}
 			}
 
 			available = {
@@ -3041,6 +3059,9 @@ ideas = {
 			allowed = {
 				has_dlc = "La Resistance"
 				original_tag = SPR
+				NOT = {
+					tag = SPD
+				}
 			}
 
 			available = {
@@ -3069,6 +3090,9 @@ ideas = {
 			allowed = {
 				has_dlc = "La Resistance"
 				original_tag = SPR
+				NOT = {
+					tag = SPD
+				}
 			}
 
 			available = {
@@ -3098,6 +3122,9 @@ ideas = {
 			allowed = {
 				has_dlc = "La Resistance"
 				original_tag = SPR
+				NOT = {
+					tag = SPD
+				}
 			}
 
 			available = {
@@ -3120,19 +3147,18 @@ ideas = {
 			modifier = {
 			}
 		}
-
-
-		
-
 	}
 
-		industrial_output = {
+	industrial_output = {
 		SPR_altos_hornos_de_vizcaya = {
 
 			picture = SPR_altos_hornos_de_vizcaya
 			
 			allowed = {
 				original_tag = SPR
+				NOT = {
+					tag = SPD
+				}
 			}
 			
 			cost = 150
@@ -3152,6 +3178,9 @@ ideas = {
 
 			allowed = {
 				original_tag = SPR
+				NOT = {
+					tag = SPD
+				}
 			}
 
 			ai_will_do = {
@@ -3172,11 +3201,15 @@ ideas = {
 			
 			removal_cost = -1		
 		}
-			SPR_Diego_Hidalgo = {
+
+		SPR_Diego_Hidalgo = {
 			name = SPR_Diego_Hidalgo
 
 			allowed = {
 				original_tag = SPR
+				NOT = {
+					tag = SPD
+				}
 			}
 
 			ai_will_do = {
@@ -3197,20 +3230,22 @@ ideas = {
 			
 			removal_cost = -1		
 		}
-		}
+	}
 
 	tank_research = { 
 
 		SPR_Trubia_arms = {
+			name = TrubiaArms
 
 			picture = GER_MAN
 			
 			allowed = {
 				original_tag = SPR
+				NOT = {
+					tag = SPD
+				}
 			}
 
-			
-			
 			research_bonus = {
 				armor = 0.1
 			}

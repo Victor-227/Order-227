@@ -227,21 +227,23 @@ country_event = {
 							infantry = { x = 0 y = 1 }
 							infantry = { x = 0 y = 2 }
 							infantry = { x = 0 y = 3 }
-							infantry = { x = 0 y = 4 }
 							infantry = { x = 1 y = 0 }
 							infantry = { x = 1 y = 1 }
 							infantry = { x = 1 y = 2 }
 							infantry = { x = 1 y = 3 }
-							infantry = { x = 1 y = 4 }
 							infantry = { x = 2 y = 0 }
 							infantry = { x = 2 y = 1 }
 							infantry = { x = 2 y = 2 }
 							infantry = { x = 2 y = 3 }
+							infantry = { x = 3 y = 0 }
+							infantry = { x = 3 y = 1 }
+							infantry = { x = 3 y = 2 }
+							infantry = { x = 3 y = 3 }
 
-							artillery_brigade = { x = 3 y = 0 }
-							artillery_brigade = { x = 3 y = 1 }
-							artillery_brigade = { x = 3 y = 2 }
-							artillery_brigade = { x = 3 y = 3 }
+							artillery_brigade = { x = 4 y = 0 }
+							artillery_brigade = { x = 4 y = 1 }
+							artillery_brigade = { x = 4 y = 2 }
+							artillery_brigade = { x = 4 y = 3 }
 						}
 						support = {
 							recon = { x = 0 y = 0 }
@@ -1315,7 +1317,7 @@ country_event = {
 							NOT = {
 								state = 790
 								state = 792
-								}
+							}
 						}
 						create_unit = {
 							division = "division_template = \"Brigada Popular\" start_experience_factor = 0" 
@@ -6236,53 +6238,6 @@ country_event = {
 	
 	is_triggered_only = yes
 
-	immediate = {
-		hidden_effect = {
-			random_other_country = {
-				limit = {
-					ROOT = {
-						has_volunteers_amount_from = {
-						    tag = PREV
-						    count > 0
-						}
-					}
-					NOT = { tag = SOV }
-				}
-				set_country_flag = SPR_relocated_gold_reserves_selection_flag1
-				save_event_target_as = SPR_relocated_gold_reserves_selection_1
-			}
-			random_other_country = {
-				limit = {
-					ROOT = {
-						has_volunteers_amount_from = {
-						    tag = PREV
-						    count > 0
-						}
-					}
-					NOT = { tag = SOV }
-					NOT = { has_country_flag = SPR_relocated_gold_reserves_selection_flag1 }
-				}
-				set_country_flag = SPR_relocated_gold_reserves_selection_flag2
-				save_event_target_as = SPR_relocated_gold_reserves_selection_2
-			}
-			random_other_country = {
-				limit = {
-					ROOT = {
-						has_volunteers_amount_from = {
-						    tag = PREV
-						    count > 0
-						}
-					}
-					NOT = { tag = SOV }
-					NOT = { has_country_flag = SPR_relocated_gold_reserves_selection_flag1 }
-					NOT = { has_country_flag = SPR_relocated_gold_reserves_selection_flag2 }
-				}
-				set_country_flag = SPR_relocated_gold_reserves_selection_flag3
-				save_event_target_as = SPR_relocated_gold_reserves_selection_3
-			}
-		}
-	}
-	
 	option = { # Send to SOV
 		name = lar_spain.51.a
 		ai_chance = {
@@ -6304,59 +6259,45 @@ country_event = {
 		SOV = { set_country_flag = SPR_relocated_gold_reserves_selection_flag_sov }
 		SOV = { country_event = { id = lar_spain.52 hours = 6 random_hours = 6 } }
 	}
-	option = { # Send to #1
+	option = { # Send to ENG
 		name = lar_spain.51.b
 		ai_chance = {
 			base = 25
 			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
+				factor = 2
+				has_volunteers_amount_from = {
+				    tag = ENG
+				    count > 0
+				}
 			}
 		}
 		trigger = {
-			any_other_country = {
-				has_country_flag = SPR_relocated_gold_reserves_selection_flag1
+			ENG = {
+				exists = yes
 			}
 		}
-		event_target:SPR_relocated_gold_reserves_selection_1 = {
-			country_event = { id = lar_spain.52 hours = 6 random_hours = 6 }
-		}
+		ENG = { set_country_flag = SPR_relocated_gold_reserves_selection_flag_eng }
+		ENG = { country_event = { id = lar_spain.52 hours = 6 random_hours = 6 } }
 	}
-	option = { # Send to #2
+	option = { # Send to FRA
 		name = lar_spain.51.c
 		ai_chance = {
 			base = 25
 			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
+				factor = 2
+				has_volunteers_amount_from = {
+				    tag = FRA
+				    count > 0
+				}
 			}
 		}
 		trigger = {
-			any_other_country = {
-				has_country_flag = SPR_relocated_gold_reserves_selection_flag2
+			FRA = {
+				exists = yes
 			}
 		}
-		event_target:SPR_relocated_gold_reserves_selection_2 = {
-			country_event = { id = lar_spain.52 hours = 6 random_hours = 6 }
-		}
-	}
-	option = { # Send to #3
-		name = lar_spain.51.d
-		ai_chance = {
-			base = 25
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		trigger = {
-			any_other_country = {
-				has_country_flag = SPR_relocated_gold_reserves_selection_flag3
-			}
-		}
-		event_target:SPR_relocated_gold_reserves_selection_3 = {
-			country_event = { id = lar_spain.52 hours = 6 random_hours = 6 }
-		}
+		FRA = { set_country_flag = SPR_relocated_gold_reserves_selection_flag_fra }
+		FRA = { country_event = { id = lar_spain.52 hours = 6 random_hours = 6 } }
 	}
 }
 
@@ -6391,17 +6332,12 @@ country_event = {
 				has_government = democratic
 				has_government = communism
 			}
-			has_volunteers_amount_from = {
-			    tag = ROOT
-			    count > 0
-			}
 			has_completed_focus = SPR_relocate_the_gold_reserves
 		}
 		OR = {
 			has_country_flag = SPR_relocated_gold_reserves_selection_flag_sov
-			has_country_flag = SPR_relocated_gold_reserves_selection_flag1
-			has_country_flag = SPR_relocated_gold_reserves_selection_flag2
-			has_country_flag = SPR_relocated_gold_reserves_selection_flag3
+			has_country_flag = SPR_relocated_gold_reserves_selection_flag_eng
+			has_country_flag = SPR_relocated_gold_reserves_selection_flag_fra
 		}
 		NOT = { has_country_flag = SPR_relocate_the_gold_reserves_timer_flag }
 	}
@@ -6433,6 +6369,8 @@ country_event = {
 				is_historical_focus_on = yes
 			}
 		}
+		add_stability = 0.05
+		add_war_support = 0.05
 	}
 }
 
@@ -6792,9 +6730,37 @@ country_event = {
 			ideology = communism
 			popularity = 0.1
 		}
-		add_timed_idea = { idea = SPR_equipment_shipments days = 730 }
-		add_opinion_modifier = { target = FROM modifier = SPA_spanish_civil_war_commitments }
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = -5000
+			producer = FRA
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment_1
+			amount = -400
+			producer = FRA
+		}
+		add_equipment_to_stockpile = {
+			type = artillery_equipment_1
+			amount = -150
+			producer = FRA
+		}
 		FROM = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 5000
+				producer = FRA
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = 400
+				producer = FRA
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 150
+				producer = FRA
+			}
 			add_war_support = 0.15
 		}
 		add_ai_strategy = { type = send_lend_lease_desire id = SPR value = 100 }
@@ -6836,8 +6802,24 @@ country_event = {
 	is_triggered_only = yes
 	option = { # Ok
 		name = lar_spain.65.a
-		effect_tooltip = { FROM = { add_opinion_modifier = { target = ROOT modifier = SPA_spanish_civil_war_commitments } } }
-		add_war_support = 0.15
+		effect_tooltip = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 5000
+				producer = FRA
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = 400
+				producer = FRA
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 150
+				producer = FRA
+			}
+			add_war_support = 0.15
+		}
 	}
 }
 
@@ -7913,50 +7895,5 @@ country_event = {
 			set_party_name = { ideology = neutrality long_name = SPR_neutrality_anarchism_party_long name = SPR_neutrality_anarchism_party }
 		}
 		complete_national_focus = SPR_maintain_the_second_republic
-	}
-	option = { # Option for Republicans - Communism
-		name = lar_spain.91.b
-		trigger = { has_completed_focus = SPR_the_popular_front }
-		ai_chance = {
-			base = 30
-			modifier = {
-				factor = 0
-				OR = {
-					has_country_flag = SPR_AI_RANDOM_ANARCHIST
-					has_game_rule = {
-						rule = SPR_ai_behavior 
-						option = ANARCHIST
-					}
-				}
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					has_country_flag = SPR_AI_RANDOM_SECOND_REPUBLIC
-					has_game_rule = {
-						rule = SPR_ai_behavior 
-						option = SECOND_REPUBLIC
-					}
-				}
-			}
-			modifier = {
-				add = 30
-				has_global_flag = SOV_covert_support_for_poum_flag #Soviet Right Opposition is providing support to the POUM
-			}
-		}
-		# Remove Spirits that will no longer be relevant
-		custom_effect_tooltip = republicans_chosen
-		remove_ideas = SPR_military_disloyalty
-		remove_ideas = SPR_political_violence
-		SPR_clr_national_strikes = yes
-		effect_tooltip = {
-			add_ideas = SPR_disbanded_army_1
-		}
-		effect_tooltip = {
-			add_timed_idea = { idea = SPR_death_before_surrender days = 900 }
-			SPA = { add_timed_idea = { idea = SPA_death_before_surrender days = 900 } }
-			set_party_name = { ideology = neutrality long_name = SPR_neutrality_anarchism_party_long name = SPR_neutrality_anarchism_party }
-		}
-		complete_national_focus = SPR_the_anti_fascist_workers_revolution
 	}
 }

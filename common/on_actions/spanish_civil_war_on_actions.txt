@@ -176,7 +176,7 @@ on_actions = {
 					add_core_of = SPD
 				}
 				inherit_technology = SPA
-				add_political_power = 150
+				add_political_power = 100
 			}
 
 			SPR = {
@@ -194,7 +194,7 @@ on_actions = {
 					add_to_variable = { var = SPA_garrison_control value = 3 }
 					SPA_garrison_control_cost_calculation = yes
 				}
-				add_political_power = 150
+				add_political_power = 100
 
 				transfer_units_fraction = {
 					target = SPD
@@ -275,8 +275,13 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
-					FROM = SPD
-					ROOT = SPR
+					NOT = {
+						has_global_flag = scw_over
+					}
+					tag = SPR
+					FROM = {
+						tag = SPD
+					}
 				}
 
 				SOV = {

@@ -242,7 +242,7 @@ SPR_the_inevitable_civil_war = {
 		}
 
 		remove_effect = {
-			add_stability = -0.05
+			add_stability = -0.04
 			add_war_support = 0.1
 			add_days_mission_timeout = {
 				mission = SPA_military_plot_nationalists
@@ -3199,8 +3199,8 @@ SPR_the_inevitable_civil_war = {
 							limit = { check_variable = { SPA_garrison_control < 4 } }
 							
 							add_to_variable = { var = SPA_garrison_control value = 1 }
-							SPR = { add_to_variable = { var = spa_civil_war_divisions_counter_var value = 1 } }
-							SPR = { subtract_from_variable = { var = spr_civil_war_divisions_counter_var value = 1 } }
+							SPR = { add_to_variable = { var = spa_civil_war_divisions_counter_var value = 3 } }
+							SPR = { subtract_from_variable = { var = spr_civil_war_divisions_counter_var value = 3 } }
 						}
 					}
 					SPA_garrison_control_tooltip = yes
@@ -3216,8 +3216,8 @@ SPR_the_inevitable_civil_war = {
 					set_state_flag = { flag = SPR_recently_expanded_influence_flag value = 1 days = 15 }
 					hidden_effect = {
 						subtract_from_variable = { var = SPA_garrison_control value = 1 }
-						SPR = { subtract_from_variable = { var = spa_civil_war_divisions_counter_var value = 1 } }
-						SPR = { add_to_variable = { var = spr_civil_war_divisions_counter_var value = 1 } }
+						SPR = { subtract_from_variable = { var = spa_civil_war_divisions_counter_var value = 3 } }
+						SPR = { add_to_variable = { var = spr_civil_war_divisions_counter_var value = 3 } }
 					}
 					SPA_garrison_control_tooltip = yes
 					SPR_garrison_control_cost_calculation = yes
@@ -4828,7 +4828,15 @@ SPR_opposition_civil_war_preparations = {
 				add_to_variable = { var = spa_civil_war_divisions_counter_var value = 5 }
 			}
 			set_country_flag = SPA_negotiate_carlist_support_flag
-			hidden_effect = { activate_mission = SPA_the_army_of_africa_mission }
+			if = {
+				limit = {
+					owns_state = 290
+				}
+				hidden_effect = { activate_mission = SPA_the_army_of_africa_mission }
+			}
+			else = {
+				hidden_effect = { activate_mission = SPA_secure_the_northern_garrisons_mission }
+			}
 		}
 	}
 
@@ -5447,7 +5455,7 @@ SPR_opposition_civil_war_preparations = {
 		}
 
 		timeout_effect = {
-			add_stability = -0.1
+			add_stability = -0.08
 			add_days_mission_timeout = {
 				mission = SPR_military_plot_republicans
 				days = -36

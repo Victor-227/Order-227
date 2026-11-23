@@ -63,17 +63,10 @@ every_possible_country = {
 				}
 			}
 			available = {
-				has_completed_focus = SPR_demand_ministerial_positions
-				NOT = {
-					has_completed_focus = SPR_crush_the_revolution
-				}
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
+
 			}
-			traits = { army_logistics_1 }
-			cost =  50
+			traits = { army_logistics_2 }
+			cost =  150
 		}
 	}
 
@@ -722,7 +715,7 @@ every_possible_country = {
 			}
 		}
 		advisor={
-			cost = 100
+			cost = 150
 			slot = theorist
 			idea_token = SPR_nicolas_molero
 			ledger = army
@@ -737,14 +730,7 @@ every_possible_country = {
 				}
 			}
 			available = {
-				NOT = {
-					has_completed_focus = SPR_masters_of_our_own_fate
-					has_completed_focus = SPR_communists_in_the_government
-				}
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
+
 			}
 			traits = { military_theorist }
 		}		
@@ -771,6 +757,7 @@ every_possible_country = {
 				NOT = {
 					tag = SPA
 					tag = SPB
+					tag = SPD
 				}
 			}
 			available = {
@@ -805,6 +792,7 @@ every_possible_country = {
 				NOT = {
 					tag = SPA
 					tag = SPB
+					tag = SPD
 				}
 			}
 			available = {
@@ -873,17 +861,10 @@ every_possible_country = {
 				}
 			}
 			available = {
-				NOT = {
-					has_completed_focus = SPR_masters_of_our_own_fate
-					has_completed_focus = SPR_communists_in_the_government
-				}
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
+
 			}
 			traits = { army_chief_morale_2 }
-			cost = 100
+			cost = 150
 		}
 	}
 
@@ -910,20 +891,10 @@ every_possible_country = {
 				}
 			}
 			available = {
-				OR = {
-					has_completed_focus = SPR_demand_ministerial_positions
-					has_completed_focus = SPR_communists_in_the_government
-				}
-				NOT = {
-					has_completed_focus = SPR_masters_of_our_own_fate
-				}
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
+
 			}
 			traits = { army_chief_defensive_2 }
-			cost = 100
+			cost = 150
 		}
 	}
 
@@ -950,17 +921,10 @@ every_possible_country = {
 				}
 			}
 			available = {
-				has_completed_focus = SPR_demand_ministerial_positions
-				NOT = {
-					has_completed_focus = SPR_crush_the_revolution
-				}
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
+				
 			}
 			traits = { army_chief_offensive_2 }
-			cost = 100
+			cost = 150
 		}
 	}
 
@@ -1092,6 +1056,7 @@ every_possible_country = {
 				NOT = {
 					tag = SPA
 					tag = SPB
+					tag = SPD
 				}
 			}
 			available = {
@@ -1128,6 +1093,7 @@ every_possible_country = {
 				NOT = {
 					tag = SPA
 					tag = SPB
+					tag = SPD
 				}
 			}
 			available = {
@@ -1164,6 +1130,7 @@ every_possible_country = {
 				NOT = {
 					tag = SPA
 					tag = SPB
+					tag = SPD
 				}
 			}
 			available = {
@@ -1273,6 +1240,7 @@ every_possible_country = {
 				NOT = {
 					tag = SPA
 					tag = SPB
+					tag = SPD
 				}
 			}
 			available = {
@@ -1309,6 +1277,7 @@ every_possible_country = {
 				NOT = {
 					tag = SPA
 					tag = SPB
+					tag = SPD
 				}
 			}
 			available = {
@@ -1419,17 +1388,10 @@ every_possible_country = {
 				}
 			}
 			available = {
-				NOT = {
-					has_completed_focus = SPR_masters_of_our_own_fate
-					has_completed_focus = SPR_communists_in_the_government
-				}
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
+
 			}
 			traits = { army_artillery_2 }
-			cost = 100
+			cost = 150
 		}
 	}
 
@@ -1456,21 +1418,10 @@ every_possible_country = {
 				}
 			}
 			available = {
-				OR = {
-					has_completed_focus = SPR_demand_ministerial_positions
-					has_completed_focus = SPR_communists_in_the_government
-				}
-				NOT = {
-					has_completed_focus = SPR_masters_of_our_own_fate
-					has_completed_focus = SPR_oppose_the_communists
-				}
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
+
 			}
 			traits = { army_infantry_2 }
-			cost = 100
+			cost = 150
 		}
 	}
 
@@ -1497,17 +1448,10 @@ every_possible_country = {
 				}
 			}
 			available = {
-				NOT = {
-					has_completed_focus = SPR_masters_of_our_own_fate
-					has_completed_focus = SPR_oppose_the_communists
-				}
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
+
 			}
 			traits = { army_entrenchment_2 }
-			cost = 100
+			cost = 150
 		}
 	}
 
@@ -1531,6 +1475,7 @@ every_possible_country = {
 				NOT = {
 					tag = SPA
 					tag = SPB
+					tag = SPD
 				}
 			}
 			available = {
@@ -1569,6 +1514,7 @@ every_possible_country = {
 				NOT = {
 					tag = SPA
 					tag = SPB
+					tag = SPD
 				}
 			}
 			available = {
@@ -1605,6 +1551,7 @@ every_possible_country = {
 				NOT = {
 					tag = SPA
 					tag = SPB
+					tag = SPD
 				}
 			}
 			available = {
@@ -1643,17 +1590,10 @@ every_possible_country = {
 				}
 			}
 			available = {
-				OR = {
-					has_completed_focus = SPR_the_stalinist_doctrine
-					has_completed_focus = SPR_communists_in_the_government
-				}
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
+				
 			}	
 			traits = { army_regrouping_2 }
-			cost = 100
+			cost = 150
 		}
 	}
 
@@ -1677,6 +1617,7 @@ every_possible_country = {
 				NOT = {
 					tag = SPA
 					tag = SPB
+					tag = SPD
 				}
 			}
 			available = {
@@ -1966,6 +1907,7 @@ every_possible_country = {
 				NOT = {
 					tag = SPA 
 					tag = SPB 
+					tag = SPD
 				}
 			}
 			available = {
@@ -2031,6 +1973,7 @@ every_possible_country = {
 				NOT = {
 					tag = SPA 
 					tag = SPB 
+					tag = SPD
 				}
 			}
 			available = {
@@ -2085,6 +2028,7 @@ every_possible_country = {
 				NOT = {
 					tag = SPA 
 					tag = SPB 
+					tag = SPD
 				}
 			}
 			available = {
@@ -2150,6 +2094,7 @@ every_possible_country = {
 				NOT = {
 					tag = SPA 
 					tag = SPB 
+					tag = SPD
 				}
 			}
 			available = {
@@ -2204,6 +2149,7 @@ every_possible_country = {
 				NOT = {
 					tag = SPA 
 					tag = SPB 
+					tag = SPD
 				}
 			}
 			available = {
@@ -2253,6 +2199,7 @@ every_possible_country = {
 				NOT = {
 					tag = SPA 
 					tag = SPB 
+					tag = SPD
 				}
 			}
 			available = {
@@ -2302,6 +2249,7 @@ every_possible_country = {
 				NOT = {
 					tag = SPA 
 					tag = SPB 
+					tag = SPD
 				}
 			}
 			available = {
@@ -2356,6 +2304,7 @@ every_possible_country = {
 				NOT = {
 					tag = SPA 
 					tag = SPB 
+					tag = SPD
 				}
 			}
 			available = {
@@ -2408,6 +2357,7 @@ every_possible_country = {
 				NOT = {
 					tag = SPA 
 					tag = SPB 
+					tag = SPD
 				}
 			}
 			available = {
@@ -2474,6 +2424,7 @@ every_possible_country = {
 				NOT = {
 					tag = SPA 
 					tag = SPB 
+					tag = SPD
 				}
 			}
 			available = {
@@ -2524,6 +2475,7 @@ every_possible_country = {
 				NOT = {
 					tag = SPA 
 					tag = SPB 
+					tag = SPD
 				}
 			}
 			available = {
@@ -2576,6 +2528,7 @@ every_possible_country = {
 				NOT = {
 					tag = SPA 
 					tag = SPB 
+					tag = SPD
 				}
 			}
 			available = {
@@ -2632,6 +2585,7 @@ every_possible_country = {
 				NOT = {
 					tag = SPA 
 					tag = SPB 
+					tag = SPD
 				}
 			}
 			available = {

@@ -94,6 +94,6 @@ NDefines.NCountry.EVENT_PROCESS_OFFSET = 10
 
 NDefines.NDiplomacy.VOLUNTEERS_PER_TARGET_PROVINCE = 0		-- Each province owned by the target country contributes this amount of volunteers to the limit.
 NDefines.NDiplomacy.VOLUNTEERS_PER_COUNTRY_ARMY = 0			-- Each army unit owned by the source country contributes this amount of volunteers to the limit.
-NDefines.NDiplomacy.VOLUNTEERS_RETURN_EQUIPMENT = 0.95			-- Returning volunteers keep this much equipment
+NDefines.NDiplomacy.VOLUNTEERS_RETURN_EQUIPMENT = 0.95		-- Returning volunteers keep this much equipment
 NDefines.NDiplomacy.VOLUNTEERS_TRANSFER_SPEED = 14			-- days to transfer a unit to another nation
 NDefines.NDiplomacy.VOLUNTEERS_DIVISIONS_REQUIRED = 0		-- This many divisons are required for the country to be able to send volunteers.

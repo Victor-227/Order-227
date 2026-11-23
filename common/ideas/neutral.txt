@@ -1,8 +1,7 @@
 ideas = {
 	hidden_ideas = {
 		ai_nation = {
-			name = "AI Nation"
-			allowed = { 
+			allowed = {
 				always = yes
 			}
 			modifier = {
@@ -17,17 +16,24 @@ ideas = {
 		}
 
 		ai_nation_that_has_war = {
-			name = "AI Nation With Troops"
-			allowed = { 
-				always = yes 
+			allowed = {
+				always = yes
 			}
-
 			modifier = {
 				production_speed_buildings_factor = -1.0
 				consumer_goods_expected_value = 1.0
 				research_speed_factor = -1
 				training_time_factor = 10.0
 				political_power_gain = -2
+			}
+		}
+
+		volunteers_scw = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				send_volunteer_size = 1
 			}
 		}
 	}

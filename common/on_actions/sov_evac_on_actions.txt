@@ -112,6 +112,10 @@ on_actions = {
 						level = 10
 					}
 				}
+
+				every_country = {
+					add_ideas = volunteers_scw
+				}
 			}
 		}
 	}
