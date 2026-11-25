@@ -1,0 +1,41 @@
+spriteTypes = {
+		spriteType = {
+        name = GFX_Portrait_BRA_Getulio_Vargas_KX
+        texturefile = "gfx/leaders/BRA/BRA_Getulio_Vargas_KX.dds"
+    }
+
+    spriteType = {
+        name = GFX_Portrait_tertuliano_de_albuquerque
+        texturefile = "gfx/leaders/BRA/BRA_tertuliano_de_albuquerque_potiguara.dds"
+    }
+    spriteType = {
+        name = GFX_Portrait_newton_cavalcanti
+        texturefile = "gfx/leaders/BRA/BRA_newton_de_andrade_cavalcanti.dds"
+    }
+
+    spriteType = {
+        name = GFX_Portrait_BRA_eurico_dutra_2
+        texturefile = "gfx/leaders/BRA/BRA_eurico_gaspar_dutra.dds"
+    }
+
+    spriteType = {
+        name = GFX_Portrait_BRA_candido_rondon 
+        texturefile = "gfx/leaders/BRA/BRA_candido_mariano_da_silva_rondon.dds"
+    }
+
+     spriteType = {
+        name = GFX_Portrait_BRA_mascarenhas_de_morais_uno
+        texturefile = "gfx/leaders/BRA/BRA_joao_batista_mascarenhas_de_morais.dds"
+    }
+
+    spriteType = {
+        name = GFX_Portrait_pedro_henrique
+        texturefile = "gfx/leaders/BRA/BRA_pedro_henrique_de_orleans_braganca.dds"
+    }
+    
+    spriteType = {
+        name = GFX_Portrait_maximilian_veers
+        texturefile = "gfx/leaders/BRA/veers2.dds"
+    }
+   
+}

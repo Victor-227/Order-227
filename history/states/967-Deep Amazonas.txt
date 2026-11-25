@@ -3,11 +3,19 @@ state={
 	id=967
 	name="STATE_967"
 
-	history={}
+	history={
+		owner = BRA
+		add_core_of = BRA
+
+	}
 
 	provinces={
 		13285 
 	}
-	manpower=1
-	state_category=pastoral
+	manpower=10342
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	impassable = yes
+	force_link_ownership_to = 495 # Amazonas
+	local_supplies=0.000
 }

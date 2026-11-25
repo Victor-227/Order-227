@@ -1,0 +1,356 @@
+﻿l_english:
+
+BRA_tribunal_nacional: "Tribunal de Segurança Nacional"
+BRA_tribunal_nacional_desc: "Tribunal de Segurança Nacional"
+
+BRA_cohenplan: "The Cohen Plan"
+BRA_cohenplan_desc: "With elections on the horizon and our support among the electorate waning, we need to ensure the continuation of our regime by other means. By forging plans for another communist coup, we can reinvigorate support for ourselves whilst suspending the elections for the sake of national security."
+
+BRA_polaca: "The Polaca"
+BRA_polaca_desc: "While there are few left who have the capacity to mount a serious threat to our regime, it would increase our legitimacy if we drafted a new constitution which outlines the powers of the president. Perhaps we can look to the recently enacted 1935 Polish constitution for inspiration."
+
+BRA_tenentism_legacy: "Legacy of Tenentism"
+BRA_cohenplan_desc: "If we are to modernize the Brazilian nation, it will be beneficial for us to work with and use the legacy of the remaining tenentists to achieve social reforms."
+
+BRA_towards_autarky: "Towards Autarky"
+BRA_towards_autarky_desc: "Economic turmoil following the Wall Street Crash rippled across the globe and destroyed our economy. From the consumption of coffee to the production of steel, we must become self-sufficient in all things and insulate ourselves from any future foreign crisis."
+
+BRA_DASP: "Establish DASP"
+BRA_DASP_desc: "The machinery of state that allows our government's policies to be implemented has become antiquated and stale. We shall establish the Departamento Administrativo do Serviço Público (DASP) to help us more effectively govern the nation and maintain economic efficiency."
+
+BRA_decree_37: "Decree No. 37"
+BRA_decree_37_desc: "The previous regime was riddled with corruption and domestic squabbles due to some states having an out of proportion influence over national politics. We should therefore crack down on any expressions of regionalism and concentrate power in the national government."
+
+BRA_queremos_vargas: "Queremos Getúlio!"
+BRA_decree_37_desc: "Queremos Getúlio, Queremos Vargas, the people chant  , not only is the power of our regime within brazil solidified but the brazilian people have come to embrace it with popular popularity as well!"
+
+BRA_consolidation_labor: "Consolidation of Labor Laws"
+BRA_consolidation_labor_desc: "Our labor laws offer little protection for workers, which inevitably leads to disagreements with business owners and ultimately strikes. At such a perilous time, we can not afford such strikes or the risk of Bolshevik infiltration. We will therefore consolidate our laws and find a balance between the workers and the capitalists."
+
+BRA_duce: "The Heavy Hand of Our Duce"
+BRA_duce_desc: "Heavy is the hand that wears the crown, and heavy is the hand that leads the nation into a new state, in the hands of Vargas is now full dictatorial power comparable to the one of right-wing european dictators."
+
+BRA_departmento_de_propaganda: "Departamento de Propaganda"
+BRA_departmento_de_propaganda_desc: "The recent decade of political turmoil shows all too well what can happen when the government and the people are not aligned in their views. To prevent any further turmoil, we shall establish a department of propaganda to nudge the people into alignment with our policies."
+
+BRA_crush_communists: "Crush Communism"
+RA_crush_communists_desc: "In fallout of the 1935 revolution, many urban workers are still loyal to the cause of socialism, this conflicts with our current plans of a new state modeled after nationalist europan dictatorships."
+
+BRA_ban_parties: "Ban Political Parties"
+BRA_ban_parties_desc: "Political parties have proven to be nothing more than tools for division and disruption. By banning and eliminating them, we can curtail the ability of radicals to organize against us."
+
+BRA_a_nation_to_the_immigrant: "A Nation To The Immigrant"
+BRA_ban_parties_desc: "Brazil is a diverse nation with people whose ancestry stretches across the globe. With our economy growing once more and an abundance of resources waiting to be tapped, it’s time we encourage more people to move here and call themselves Brazilian too."
+
+BRA_rural_literacy: "Rural Literacy Programmes"
+BRA_rural_literacy_desc: "How can we administer propaganda to the people if they cannot read? The oligarchic first republic allowed people who followed a large set of requirements to vote, with one of those requirements being literacy, however the literacy of our nation is horrendous for a 20th century country especially within rural Brazil, we need government programs to increase the literacy of the rural nrazilians"
+
+BRA_university_sao_paulo: "University of Sao Paulo"
+BRA_university_sao_paulo_desc: "The University of São Paulo was only recently established, yet the benefits of it are already being felt throughout the Brazilian economy. We should capitalize on this by investing more into this burgeoning institution."
+
+BRA_the_centralization_of_power: "The Centralization of Power"
+BRA_the_centralization_of_power_desc: "Brazil is a nation of many cultures spread across a vast territory. If we don’t do more to unite the diverse states of the nation, we run the risk of fragmentation or even military incursions from our neighbors. Only through a strong central government can we hope to protect our nation."
+
+BRA_true_education: "True Education"
+BRA_true_education_desc: "placeholder"
+
+BRA_youth_league: "Brazilian Youth League"
+BRA_youth_league_desc: "placeholder"
+
+BRA_expand_the_national_security_council: "Expand the National Security Council"
+BRA_expand_the_national_security_council_desc: "placeholder"
+
+BRA_limit_dangerous_activities: "Limit Dangerous Activities"
+BRA_limit_dangerous_activities_desc: "placeholder"
+
+BRA_federal_police_inspectorate: "Federal Police Inspectorate"
+BRA_federal_police_inspectorate_desc: "placeholder"
+
+BRA_new_police_regulations: "New Police Regulations"
+BRA_new_police_regulations_desc: "placeholder"
+
+BRA_church_support: "Ensure Church Support"
+BRA_church_support_desc: "placeholder"
+
+BRA_Ensure_Military_Support: "Work With the Military"
+BRA_Ensure_Military_Support_desc: "placeholder"
+
+BRA_convervative_party: "PSD"
+BRA_democratic_party_long: "Partido Social Democrático"
+
+BRA_vargas_regime: "Vargas Regime"
+BRA_vargas_regime_long: "Vargas Regime"
+
+BRA_economy_shortcut: "Economy"
+
+BRA_military_shortcut: "Military"
+
+BRA_end_the_state_of_emergency_shortcut: "Politics: Patrianovismo"
+
+BRA_tribunal_nacional_shortcut: "Politics: Getulism"
+
+BRA_restore_democracy: "Military Coup D'état"
+BRA_restore_democracy_desc: "   "
+
+BRA_war_in_europe: "Brazil and the War in Europe"
+BRA_war_in_europe_desc: "   " 
+
+BRA_first_brazilians: "Protect the First Brazilians"
+BRA_first_brazilians_desc: "   " 
+
+BRA_corporate_power: "Corporate Power"
+BRA_corporate_power_desc: "   " 
+
+BRA_municipalism_2: "True Municipalism"
+BRA_municipalism_2_desc: "   " 
+
+BRA_one_nation: "One Nation"
+BRA_one_nation_desc: "   " 
+
+BRA_christian_trade_unions: "Christian Trade Unions"
+BRA_christian_trade_unions_desc: "   " 
+
+BRA_organic_empire: "An Organic Empire"
+BRA_organic_empire_desc: "   " 
+
+BRA_honor: "Restore Brazilian Honor"
+BRA_honor_desc: "   " 
+
+BRA_seize_portuguese_colonies: "Seize Portuguese Colonies"
+BRA_seize_portuguese_colonies_desc: "   " 
+
+BRA_angola_e_nossa: "Angola e Nossa"
+BRA_angola_e_nossa_desc: "   " 
+
+BRA_develop_mozambique: "Develop Mozambique"
+BRA_develop_mozambique_desc: "   "  
+
+BRA_holy_struggle: "Holy BRA_holy_struggle"
+BRA_holy_struggle_desc: "   "  
+
+BRA_potenji_river_conferance: "Potenji River Conference"
+BRA_potenji_river_conferance_desc: "   "
+
+BRA_mobilization: "100,000 Strong"
+BRA_mobilization_desc: "   "
+
+BRA_defence_budget_increase: "Increase Defense Budget"
+BRA_defence_budget_increase_desc: "   "
+
+BRA_joint_american_exercises: "Joint American-Brazilian Exercises"
+BRA_joint_american_exercises_desc: "   "
+
+BRA_brazilians_in_the_east: "Brazilians in the East"
+BRA_brazilians_in_the_east_desc: "   "
+
+BRA_american_equipment_in_brazilian_hands: "American Equipment in Brazilian Hands"
+BRA_american_equipment_in_brazilian_hands_desc: "   "
+
+BRA_american_CSN_fund: "American CSN Funding"
+BRA_brazilians_in_the_east_desc: "   "
+
+BRA_tech_exchange: "Brazilian-American Tech Exchange"
+BRA_tech_exchange_desc: "   "
+
+BRA_military: "Reform the Exército Brasileiro"
+BRA_military_desc: "   "
+
+BRA_common_soldier: "The Common Soldier"
+BRA_common_soldier_desc: "   "
+
+BRA_state_arsenals: "Build State Arsenals"
+BRA_state_arsenals_desc: "   "
+
+BRA_artillery_renewal: "Artillery Renewal"
+BRA_artillery_renewal_desc: "   "
+
+BRA_companhia_de_cartuchos_munitions2: "Companhia de Cartuchos Munitions"
+BRA_companhia_de_cartuchos_munitions2_desc: "   "
+
+BRA_cult_of_the_iron_duke: "Cult of the Iron Duke"
+BRA_cult_of_the_iron_duke_desc: "   "
+
+BRA_modernize_the_fuzileiros_navais: "Modernize the Fuzileiros Navais"
+BRA_modernize_the_fuzileiros_navais_desc: "   "
+
+BRA_departmento_de_artilharia: "Departmento de Artilharia"
+BRA_departmento_de_artilharia_desc: "   "
+
+
+BRA_cada_brasileiro_tera_um_fuzil: "Cada Brasileiro Tera um Fuzil"
+BRA_cada_brasileiro_tera_um_fuzil_desc: "   "
+
+BRA_Bethlehem_Steel_177mm: "Bethlehem Steel 177mm"
+BRA_Bethlehem_Steel_177mm_desc: "   "
+
+BRA_vitoria_vitoria: "Vitoria Vitoria! Queremos Cantar"
+BRA_vitoria_vitoria_desc: "   "
+
+BRA_invite_foreign_advisors: "Invite Foreign Advisors"
+BRA_invite_foreign_advisors_desc: "   "
+
+BRA_mountain_exercises: "Mantiqueira Mountains Exercises"
+BRA_mountain_exercises_desc: "   "
+
+BRA_combat_in_the_mountains: "Combat in the Hills"
+BRA_combat_in_the_mountains_desc: "   "
+
+BRA_mountain_artillery: "Mountain Artillery"
+BRA_mountain_artillery_desc: "   "
+
+BRA_mountain_artillery: "Mountain Artillery"
+BRA_mountain_artillery_desc: "   "
+
+BRA_jungle_warfare_training: "Amazon Jungle Warfare Training"
+BRA_mountain_artillery_desc: "   "
+
+BRA_aftermath_of_the_coffee_crisis: "Aftermath of the Coffee Crisis"
+BRA_aftermath_of_the_coffee_crisis_desc: "     "
+
+BRA_Desenvolvimento: "Desenvolvimento"
+BRA_Desenvolvimento_desc: "     "
+
+BRA_brazilian_industrialists: "Ally Brazilian Industrialists"
+BRA_brazilian_industrialists_desc: "     "
+
+BRA_rural_investments: "Rural Investments"
+BRA_rural_investments_desc: "     "
+
+BRA_international_loan: "International Loan"
+BRA_international_loan_desc: "     "
+
+BRA_Conselho: "Conselho Técnico de Economia e Finanças"
+BRA_Conselho_desc: "     "
+
+BRA_curtail_coffee_baron_influence: "Curtail Coffee Baron Influence"
+BRA_curtail_coffee_baron_influence_desc: "     "
+
+BRA_heighten_the_poor: "Heighten the Poor"
+BRA_heighten_the_poor_desc: "     "
+
+BRA_to_modernize_the_nation: "To Modernize the Nation"
+BRA_to_modernize_the_nation_desc: "     "
+
+BRA_developmentalism: "Adopt Developmentalism"
+BRA_developmentalism_desc: "     "
+
+BRA_american_corporations: "Work With American Businesses"
+BRA_american_corporation_desc: "     "
+
+BRA_deal_with_cangaco: "Deal With the Cangaco"
+BRA_deal_with_cangaco_desc: "    
+
+BRA_adopt_the_cruzeiro: "Adopt the Cruzeiro"
+BRA_adopt_the_cruzeiro_desc: "     "
+
+BRA_infrastructure_modernization: "Infrastructure Modernization"
+BRA_infrastructure_modernization_desc: "     "
+
+
+BRA_companhia_Vale_do_Rio_Doce: "Companhia Vale do Rio Doce"
+BRA_companhia_Vale_do_Rio_Doce_desc: "     "
+
+BRA_steel: "Companhia Siderúrgica Nacional"
+BRA_steel_desc: "     "
+
+BRA_rubber_army: "The Rubber Army"
+BRA_rubber_army_desc: " "
+
+
+BRA_petroleum_council: "National Petroleum Council"
+BRA_petroleum_council_desc: " "
+
+BRA_expand_rossi_arms: "Expand Rossi Arms"
+BRA_expand_rossi_arms_desc: " "
+
+
+BRA_urbanize: "Rapid Urbanization"
+BRA_urbanize_desc: " "
+
+BRA_light_manufacturing_expansion: "Light Manufacturing Expansion"
+BRA_light_manufacturing_expansion_desc: " "
+
+BRA_transnordestina_highway: "Transnordestina Highway"
+BRA_transnordestina_highway_desc: " "
+
+
+BRA_a_radio_in_every_home: "A Radio in Every Home"
+BRA_a_radio_in_every_home_desc: " "
+
+BRA_klabin_paper_mills: "Klabin Paper Mills"
+BRA_klabin_paper_mills_desc: " "
+
+BRA_expand_textile_industry: "Expand Textile Industry"
+BRA_expand_textile_industry_desc: " "
+
+BRA_modern_life: "Modern Life"
+BRA_modern_life_desc: " "
+
+BRA_expand_cinedia_studio: "Expand Cinedia Studio"
+BRA_expand_cinedia_studio_desc: " "
+
+BRA_increase_education_and_public_health_funding: "Increase Education and Public Health Funding"
+BRA_increase_education_and_public_health_fundingo_desc: " "
+
+BRA_caloi_factory: "Caloi Factory"
+BRA_caloi_factory_desc: " "
+
+BRA_from_plantations_to_factories: "From Plantations to Factories"
+BRA_from_plantations_to_factories_desc: " "
+
+
+BRA_from_villages_to_cities: "From Villages to Cities"
+BRA_from_villages_to_cities_desc: " "
+
+BRA_march_to_the_west: "The March to the West"
+BRA_march_to_the_west_desc: " "
+
+BRA_tank_assembly: "Construct Tank Assemblies"
+BRA_tank_assembly_desc: " "
+
+BRA_study_american_designs: "Study American Tanks"
+BRA_study_american_designs_desc: " "
+
+BRA_a_mechanized_army: "A Mechanized Army"
+BRA_a_mechanized_army_desc: " "
+
+BRA_Modern_maneuver_warfare: "Modern Maneuver Warfare"
+BRA_Modern_maneuver_warfare_desc: " "
+
+BRA_agulhas_negras_military_academy: "Agulhas Negras Military Academy"
+BRA_agulhas_negras_military_academy_desc: " "
+
+BRA_Brazilian_Designs: "Brazilian Designs"
+BRA_Brazilian_Designs_desc: " "
+
+BRA_armor_officers: "Armor Officers"
+BRA_armor_officers_desc: " " 
+
+BRA_motorize_the_army: "Motorize the Army"
+BRA_motorize_the_army_desc: " " 
+
+BRA_doctrinal_developments: "Doctrinal Developments"
+BRA_doctrinal_developments_desc: " " 
+
+BRA_jungle_tactics: "Jungle Tactics"
+BRA_jungle_tactics_desc: " " 
+
+BRA_rangers_of_the_amazonas: "Rangers of the Amazonas"
+BRA_rangers_of_the_amazonas_desc: " " 
+
+BRA_para_defender_o_nosso_brasil: "Para Defender o Nosso Brasil!"
+
+
+
+
+
+BRA_pedro_henrique: "Pedro III"
+
+BRA_weak_government_2 : "Weak Government"
+
+BRA_modify_weak_government_intro: "Modify $BRA_weak_government_2$ by:"
+
+BRA_modify_one_nation_intro: "Modify $BRA_one_nation_modifier$ by:"
+
+BRA_modify__rural_society_intro : "Modify $BRA_rural_society$ by:"
+

@@ -1,0 +1,100 @@
+spriteTypes = {
+		spriteType = {
+        name = GFX_Portrait_BRA_Newton_Cavalcanti_small
+        texturefile = "gfx/interface/ideas/BRA/Portrait_BRA_Newton_Cavalcanti_small.dds"
+    }
+    spriteType = {
+        name = GFX_Portrait_tertuliano_de_albuquerque_small
+        texturefile = "gfx/leaders/BRA/BRA_tertuliano_de_albuquerque_potiguara_small_baby.dds"
+    }
+
+    spriteType = {
+        name = GFX_idea_BRA_feb
+        texturefile = "gfx/interface/ideas/BRA/r56_idea_BRA_company_feb_pic.dds"
+    }
+
+    spriteType = {
+        name = GFX_Portrait_BRA_helder_pessoa_camara
+        texturefile = "gfx/interface/ideas/BRA/Portrait_BRA_helder_pessoa_camara.dds"
+    }
+
+    spriteType = {
+        name = GFX_idea_BRA_emergency
+        texturefile = "gfx/interface/ideas/BRA/NFA_against_communards.dds"
+    }
+
+    spriteType = {
+        name = GFX_idea_BRA_honor_guard
+        texturefile = "gfx/interface/ideas/BRA/BRA/BEL_Royal_Legion.dds"
+    }
+
+    spriteType = {
+        name = GFX_idea_BRA_one_nation
+        texturefile = "gfx/interface/ideas/BRA/NFA_social_catholic.dds"
+    }
+     spriteType = {
+        name = GFX_idea_BRA_catholic_corporatism
+        texturefile = "gfx/interface/ideas/BRA/generic_catholic_corporatism_spirit.dds"
+    }
+
+    spriteType = {
+        name = GFX_idea_BRA_brazilian_autarky
+        texturefile = "gfx/interface/ideas/BRA/generic_autarky.dds"
+    }
+
+    spriteType = {
+        name = GFX_idea_BRA_milice_state
+        texturefile = "gfx/interface/ideas/BRA/NFA_milice_state.dds"
+    }
+
+    spriteType = {
+        name = GFX_idea_BRA_officers
+        texturefile = "gfx/interface/ideas/BRA/advisors_brazil.dds"
+    }
+    
+    spriteType = {
+        name = GFX_idea_BRA_rangers
+        texturefile = "gfx/interface/ideas/BRA/VIN_Vietnamese_Special_Forces.dds"
+    }
+    
+    spriteType = {
+        name = GFX_idea_BRA_rangers
+        texturefile = "gfx/interface/ideas/BRA/VIN_Vietnamese_Special_Forces.dds"
+    }
+
+    spriteType = {
+        name = GFX_idea_BRA_mountaineers
+        texturefile = "gfx/interface/ideas/BRA/BRA_personal_milities.dds"
+    }
+
+    spriteType = {
+        name = GFX_idea_BRA_corporatism
+        texturefile = "gfx/interface/ideas/BRA/SER_corporatism.dds"
+    }
+
+    spriteType = {
+        name = GFX_idea_BRA_politechnico
+        texturefile = "gfx/interface/ideas/BRA/r56_idea_BRA_company_ep.dds"
+    }
+
+    spriteType = {
+        name = GFX_idea_BRA_ultra
+        texturefile = "gfx/interface/ideas/BRA/ultra_brazil.dds"
+    }
+    
+     spriteType = {
+        name = GFX_idea_BRA_ultra
+        texturefile = "gfx/interface/ideas/BRA/ultra_brazil.dds"
+    }
+
+    spriteType = {
+        name = GFX_idea_BRA_henry_ford 
+        texturefile = "gfx/interface/ideas/BRA/BRA_henry_ford_small.dds"
+    }
+
+    spriteType = {
+        name = GFX_idea_BRA_companhia_siderurgica_nacional
+        texturefile = "gfx/interface/ideas/BRA/companhia_siderurgica_nacional.dds"
+    }
+    
+}

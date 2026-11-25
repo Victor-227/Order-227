@@ -2,13 +2,29 @@
 state = {
 	id = 944
 	name = "STATE_944"
-	manpower = 1
+	manpower = 961350
 	
-	state_category = pastoral
+	state_category = rural
 
-	history = {}
+	history = {
+
+		owner = BRA
+		add_core_of = BRA
+
+		buildings = {
+			infrastructure = 4
+			air_base = 1
+		}
+
+		victory_points = {
+			8181 2 
+		}
+		
+	}
 
 	provinces = {
 		2109 4533 4587 5156 5178 8181 8239
 	}
+
+	local_supplies = 0.0 
 }
